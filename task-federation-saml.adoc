@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: task-federation-saml.html 
+keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: '与您的 SAML 2.0 IdP 提供商联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
+---
+= 与 SAML 身份提供商联合
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+与您的 SAML 2.0 IdP 提供商联合，为 NEtApp 控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。
+
+.所需角色
+需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+
+NOTE: 您可以与您的企业 IdP 或NetApp支持站点联合。你不能与两者结成联盟。
+
+NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先配置身份提供者以信任NetApp作为服务提供商。然后，您可以在控制台中创建使用身份提供者配置的连接。
+
+您可以与 SAML 2.0 提供商建立联合连接，以便为控制台启用单点登录 (SSO)。该过程涉及配置您的提供商以信任NetApp作为服务提供商，然后在控制台中创建连接。
+
+.开始之前
+* 需要具有管理权限的 IdP 帐户。与您的 IdP 管理员协调以完成这些步骤。
+* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp控制台中验证您的域"]话题。
+
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”以查看“*Federations*”页面。
+. 选择*配置新联合*。
+. 输入您的域名详细信息：
++
+.. 选择您是否要使用已验证的域名或您的电子邮件域名。电子邮件域是与您登录的帐户关联的域。
+.. 输入您正在配置的联盟的名称。
+.. 如果您选择已验证的域，请从列表中选择该域。
+
+
+. 选择“下一步”。
+. 对于您的连接方法，选择*协议*，然后选择*SAML 身份提供者*。
+. 选择“下一步”。
+. 配置您的 SAML 身份提供商以信任NetApp作为服务提供商。您需要在 SAML 提供商服务器上执行此步骤。
++
+.. 确保您的 IdP 具有属性 `email`设置为用户的电子邮件地址。这是控制台正确识别用户所必需的：
++
+[source, xml]
+----
+<saml:AttributeStatement xmlns:x500="urn:oasis:names:tc:SAML:2.0:profiles:attribute:X500" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">
+        <saml:AttributeValue xsi:type="xs:string">email@domain.com</saml:AttributeValue>
+    </saml:Attribute>
+</saml:AttributeStatement>
+----
+.. 在控制台中注册 SAML 应用程序时，请使用以下值：
++
+*** 对于 *回复 URL* 或 *断言消费者服务 (ACS) URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
+*** 对于*注销 URL*，使用 `https://netapp-cloud-account.auth0.com/logout`
+*** 对于*受众/实体 ID*，使用 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`其中 <fed-domain-name-saml> 是您想要用于联合的域名。例如，如果您的域名是 `example.com`，受众/实体 ID 将是 `urn:auth0:netapp-cloud-account:fed-example-com-samlp`。
+
+
+.. 创建信任后，从 SAML 提供商服务器复制以下值：
++
+*** 登录网址
+*** 退出 URL（可选）
+
+
+.. 从您的 SAML 提供商服务器下载 X.509 证书。它需要采用 PEM、CER 或 CRT 格式。
+
+
+. 返回控制台，然后选择“下一步”来创建连接。
+. 使用 SAML 创建连接。
++
+.. 输入您的 SAML 服务器的 *登录 URL*。
+.. 上传从 SAML 提供商服务器下载的 X.509 证书。
+.. 或者，输入您的 SAML 服务器的 *退出 URL*。
+
+
+. 选择*创建连接*。系统在几秒钟内建立连接。
+. 选择“下一步”。
+. 选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的 IdP 凭据登录以完成测试并返回控制台以启用连接。
+. 选择“下一步”。
+. 在“启用联合”页面上，查看联合详细信息，然后选择“启用联合”。
+. 选择“*完成*”以完成该过程。
+
+
+启用联合后，用户可以使用其公司凭据登录NetApp控制台。

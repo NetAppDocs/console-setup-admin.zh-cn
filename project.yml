@@ -1,0 +1,281 @@
+---
+settings:
+  name: NetApp Console setup and administration
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: zh-cn,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-tw
+sidebar:
+  entries:
+  - title: NetApp控制台设置和管理
+    url: "/index.html"
+  - title: 发行说明
+    entries:
+    - title: 什么是新的
+      url: "/whats-new.html"
+    - title: 已知限制
+      url: "/reference-limitations.html"
+    - title: 受支持的 Linux 操作系统的变更
+      url: "/reference-connector-operating-system-changes.html"
+  - title: 开始使用
+    entries:
+    - title: 学习基础知识
+      entries:
+      - title: NetApp控制台
+        url: "/concept-overview.html"
+      - title: 控制台代理
+        url: "/concept-connectors.html"
+      - title: 部署模式
+        url: "/concept-modes.html"
+    - title: 开始使用NetApp助手
+      entries:
+      - title: 使用NetApp助手
+        url: "/task-console-assistant.html"
+    - title: 开始使用标准模式
+      entries:
+      - title: 入门工作流程
+        url: "/task-quick-start-standard-mode.html"
+      - title: 准备NetApp控制台的网络访问
+        url: "/reference-networking-saas-console.html"
+      - title: 注册NetApp控制台
+        url: "/task-sign-up-saas.html"
+      - title: 创建控制台代理
+        entries:
+        - title: AWS
+          entries:
+          - title: 控制台代理安装选项
+            url: "/concept-install-options-aws.html"
+          - title: 从NetApp控制台创建控制台代理
+            url: "/task-install-connector-aws-bluexp.html"
+          - title: 从市场创建控制台代理
+            url: "/task-install-connector-aws-marketplace.html"
+          - title: 手动安装控制台代理
+            url: "/task-install-connector-aws-manual.html"
+        - title: Azure
+          entries:
+          - title: 控制台代理安装选项
+            url: "/concept-install-options-azure.html"
+          - title: 从NetApp控制台创建控制台代理
+            url: "/task-install-connector-azure-bluexp.html"
+          - title: 从市场创建控制台代理
+            url: "/task-install-connector-azure-marketplace.html"
+          - title: 手动安装控制台代理
+            url: "/task-install-connector-azure-manual.html"
+        - title: Google Cloud
+          entries:
+          - title: 控制台代理安装选项
+            url: "/concept-install-options-google.html"
+          - title: 从NetApp控制台创建控制台代理
+            url: "/task-install-connector-google-bluexp-gcloud.html"
+          - title: 从 Google Cloud 创建控制台代理
+            url: "/task-install-agent-google-gcloud.html"
+          - title: 手动安装控制台代理
+            url: "/task-install-connector-google-manual.html"
+        - title: 在本地安装代理
+          entries:
+          - title: 手动在本地安装代理
+            url: "/task-install-connector-on-prem.html"
+          - title: 在 VCenter 中安装本地代理
+            url: "/task-install-agent-on-prem-ova.html"
+      - title: 订阅NetApp智能服务
+        url: "/task-subscribe-standard-mode.html"
+      - title: 接下来可以做什么
+        url: "/reference-whats-next.html"
+    - title: 开始使用受限模式
+      entries:
+      - title: 入门工作流程
+        url: "/task-quick-start-restricted-mode.html"
+      - title: 准备部署
+        url: "/task-prepare-restricted-mode.html"
+      - title: 部署控制台代理
+        url: "/task-install-restricted-mode.html"
+      - title: 订阅NetApp智能服务
+        url: "/task-subscribe-restricted-mode.html"
+      - title: 接下来可以做什么
+        url: "/reference-whats-next-restricted-mode.html"
+    - title: 开始使用BlueXP旧版界面（私人模式）
+      entries:
+      - title: BlueXP旧版界面入门（私人模式）
+        url: "/task-quick-start-private-mode.html"
+  - title: 使用NetApp控制台
+    entries:
+    - title: 登录NetApp控制台
+      url: "/task-logging-in.html"
+    - title: 查看NetApp控制台主页上的指标
+      url: "/task-dashboard.html"
+    - title: 管理您的NetApp控制台用户设置
+      url: "/task-user-settings.html"
+  - title: 管理NetApp控制台
+    entries:
+    - title: 身份和访问管理
+      entries:
+      - title: 了解如何管理身份和访问
+        url: "/concept-identity-and-access-management.html"
+      - title: 开始使用身份和访问权限
+        url: "/task-iam-get-started.html"
+      - title: 使用文件夹和项目组织您的资源
+        url: "/task-iam-manage-folders-projects.html"
+      - title: 管理会员和服务帐户
+        url: "/task-iam-manage-members-permissions.html"
+      - title: 使用角色控制成员对资源的访问
+        url: "/task-iam-manage-roles.html"
+      - title: 管理资源层次结构
+        url: "/task-iam-manage-resources.html"
+      - title: 将控制台代理与其他文件夹和项目关联
+        url: "/task-iam-associate-connectors.html"
+      - title: 在组织、项目和控制台代理之间切换
+        url: "/task-iam-switch-organizations-projects.html"
+      - title: 组织和项目 ID
+        url: "/task-iam-rename-organization.html"
+      - title: 监控或审计 IAM 活动
+        url: "/task-iam-audit-actions-timeline.html"
+      - title: NetApp控制台访问角色
+        entries:
+        - title: 了解NetApp控制台访问角色
+          url: "/reference-iam-predefined-roles.html"
+        - title: 平台角色
+          url: "/reference-iam-platform-roles.html"
+        - title: 应用程序角色
+          entries:
+          - title: Google Cloud NetApp Volumes角色
+            url: "/reference-iam-gcnv-roles.html"
+          - title: Keystone角色
+            url: "/reference-iam-keystone-roles.html"
+          - title: 运营支持分析师
+            url: "/reference-iam-analyst-roles.html"
+          - title: 存储角色
+            url: "/reference-iam-storage-roles.html"
+        - title: 数据服务角色
+          entries:
+          - title: 备份和恢复角色
+            url: "/reference-iam-backup-rec-roles.html"
+          - title: 灾难恢复角色
+            url: "/reference-iam-disaster-rec-roles.html"
+          - title: 勒索软件防护角色
+            url: "/reference-iam-ransomware-roles.html"
+    - title: 合作组织
+      entries:
+      - title: 了解组织合作关系
+        url: "/concept-org-partnerships.html"
+      - title: 建立组织伙伴关系
+        url: "/task-partnerships-create.html"
+      - title: 管理合作组织的成员
+        url: "/task-partnerships-assign-users.html"
+      - title: 管理合作组织的资源访问
+        url: "/task-partnerships-resource-access.html"
+      - title: 在合作组织工作
+        url: "/task-partnerships-work.html"
+    - title: 身份联合
+      entries:
+      - title: 了解身份联合
+        url: "/concept-federation.html"
+      - title: 域验证
+        entries:
+        - title: 验证您的域名
+          url: "/task-federation-verify-domain.html"
+      - title: 配置联合
+        entries:
+        - title: 与 Active Directory 联合身份验证服务 (AD FS) 提供程序联合
+          url: "/task-federation-adfs.html"
+        - title: 与 Microsoft Entra ID 提供商联合
+          url: "/task-federation-entra-id.html"
+        - title: 与 PingFederate 联合
+          url: "/task-federation-ping.html"
+        - title: 与 SAML 身份提供商联合
+          url: "/task-federation-saml.html"
+      - title: 管理联盟
+        url: "/task-federation-manage.html"
+      - title: 导入现有的联合连接
+        url: "/task-federation-import.html"
+    - title: 控制台代理
+      entries:
+      - title: 维护虚拟机和操作系统
+        url: "/task-maintain-connectors.html"
+      - title: 维护 VCenter 安装的代理
+        url: "/task-agent-vm-config.html"
+      - title: 安装 CA 签名证书以访问 Web 控制台
+        url: "/task-installing-https-cert.html"
+      - title: 配置控制台代理以使用代理服务器
+        url: "/task-configuring-proxy.html"
+      - title: 要求在 EC2 实例上使用 IMDSv2
+        url: "/task-require-imdsv2.html"
+      - title: 管理连接器升级
+        url: "/task-upgrade-connector.html"
+      - title: 使用多个控制台代理
+        url: "/task-manage-multiple-connectors.html"
+      - title: 控制台代理故障排除
+        url: "/task-troubleshoot-connector.html"
+      - title: 卸载并删除控制台代理
+        url: "/task-uninstall-connector.html"
+      - title: 默认配置
+        url: "/reference-connector-default-config.html"
+      - title: 在NetApp控制台中强制执行ONTAP权限
+        url: "/task-ontap-access-connector.html"
+    - title: 凭证和订阅
+      entries:
+      - title: AWS
+        entries:
+        - title: 了解凭证和权限
+          url: "/concept-accounts-aws.html"
+        - title: 管理凭据和订阅
+          url: "/task-adding-aws-accounts.html"
+      - title: Azure
+        entries:
+        - title: 了解凭证和权限
+          url: "/concept-accounts-azure.html"
+        - title: 管理凭据和订阅
+          url: "/task-adding-azure-accounts.html"
+      - title: Google Cloud
+        entries:
+        - title: 了解项目和权限
+          url: "/concept-accounts-gcp.html"
+        - title: 管理凭据和订阅
+          url: "/task-adding-gcp-accounts.html"
+      - title: 管理与NetApp控制台组织或帐户关联的 NSS 凭据
+        url: "/task-adding-nss-accounts.html"
+      - title: 管理与您的NetApp控制台登录关联的凭据
+        url: "/task-manage-user-credentials.html"
+    - title: 监控NetApp控制台操作
+      url: "/task-monitor-cm-operations.html"
+  - title: 参考
+    entries:
+    - title: 代理维护控制台
+      entries:
+      - title: 代理维护控制台
+        url: "/reference-connector-maint-console.html"
+    - title: 权限
+      entries:
+      - title: 权限摘要
+        url: "/reference-permissions.html"
+      - title: 控制台代理的 AWS 权限
+        url: "/reference-permissions-aws.html"
+      - title: 控制台代理的 Azure 权限
+        url: "/reference-permissions-azure.html"
+      - title: 控制台代理的 Google Cloud 权限
+        url: "/reference-permissions-gcp.html"
+    - title: 端口
+      entries:
+      - title: AWS 中的控制台代理安全组规则
+        url: "/reference-ports-aws.html"
+      - title: Azure 中的控制台代理安全组规则
+        url: "/reference-ports-azure.html"
+      - title: Google Cloud 中的控制台代理防火墙规则
+        url: "/reference-ports-gcp.html"
+      - title: 本地控制台代理的端口
+        url: "/reference-ports-on-prem.html"
+    - title: 控制台网络访问（旧版）
+      url: "/reference-networking-saas-console-previous.html"
+  - title: 知识和支持
+    entries:
+    - title: 注册以获得支持
+      url: "/task-support-registration.html"
+    - title: 获取帮助
+      url: "/task-get-help.html"
+  - title: 法律声明
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Console
+  repo: console-family

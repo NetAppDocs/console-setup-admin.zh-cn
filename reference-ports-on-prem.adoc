@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-on-prem.html 
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp 
+summary: 当在本地 Linux 主机上手动安装时，控制台代理使用_入站_端口。请参考这些端口以进行规划。 
+---
+= 本地控制台代理的端口
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当在本地 Linux 主机上手动安装时，控制台代理使用_入站_端口。请参考这些端口以进行规划。
+
+这些入站规则适用于所有NetApp控制台部署模式。
+
+[cols="10,10,80"]
+|===
+| 协议 | 端口 | 目的 
+
+
+| HTTP | 80  a| 
+* 提供从客户端 Web 浏览器到本地用户界面的 HTTP 访问
+* 在Cloud Volumes ONTAP升级过程中使用
+
+
+
+
+| HTTPS | 443 | 提供从客户端 Web 浏览器到本地用户界面的 HTTPS 访问 
+|===

@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
+summary: 已知限制标识了该产品的此版本不支持或不能与其正确互操作的平台、设备或功能。仔细审查这些限制。 
+---
+= NetApp控制台的已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制标识了该产品的此版本不支持或不能与其正确互操作的平台、设备或功能。仔细审查这些限制。
+
+这些限制特定于 NEtApp 控制台和管理的设置：代理、软件即服务 (SaaS) 平台等等。
+
+
+
+== 控制台代理限制
+
+
+
+=== 可能与 172 范围内的 IP 地址冲突
+
+NetApp控制台部署了一个具有两个接口的代理，这两个接口的 IP 地址分别在 172.17.0.0/16 和 172.18.0.0/16 范围内。
+
+如果您的网络具有配置了这些范围之一的子网，那么您可能会遇到控制台连接失败的情况。例如，在控制台中发现本地ONTAP集群可能会失败。
+
+请参阅知识库文章link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Manager/Cloud_Manager_shows_inactive_as_Connector_IP_range_in_172.x.x.x_conflict_with_docker_network["代理IP与现有网络冲突"]有关如何更改代理接口的 IP 地址的说明。
+
+
+
+=== 不支持 SSL 解密
+
+控制台不支持启用 SSL 解密的防火墙配置。如果启用了 SSL 解密，控制台中会出现错误消息，并且代理实例显示为非活动状态。
+
+为了增强安全性，您可以选择link:task-installing-https-cert.html["安装由证书颁发机构 (CA) 签名的 HTTPS 证书"]。
+
+
+
+=== 加载本地 UI 时出现空白页
+
+如果您加载在代理上运行的基于 Web 的控制台，界面有时可能无法显示，而只会显示空白页。
+
+此问题与缓存问题有关。解决方法是使用隐身或私人网络浏览器会话。
+
+
+
+=== 不支持共享 Linux 主机
+
+与其他应用程序共享的虚拟机不支持该代理。  VM 必须专用于代理软件。
+
+
+
+=== 第三方代理和扩展
+
+代理虚拟机不支持第三方代理或虚拟机扩展。

@@ -1,0 +1,52 @@
+= 
+:allow-uri-read: 
+
+
+如果您使用共享 VPC 将资源部署到服务项目中，则需要准备好您的权限。
+
+此表仅供参考，当 IAM 配置完成时，您的环境应该反映权限表。
+
+.查看共享 VPC 权限
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| 身份 | 创造者 | 主办地点 | 服务项目权限 | 宿主项目权限 | 目的 
+
+
+| Google 帐户部署代理 | 自定义 | 服务项目  a| 
+link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["代理部署策略"]
+ a| 
+计算.网络用户
+| 在服务项目中部署代理 
+
+
+| 代理服务账户 | 自定义 | 服务项目  a| 
+link:reference-permissions-gcp.html["代理服务帐户策略"]
+| 计算.网络用户部署管理器.编辑器 | 部署和维护服务项目中的Cloud Volumes ONTAP和服务 
+
+
+| Cloud Volumes ONTAP服务帐户 | 自定义 | 服务项目 | storage.admin 成员： NetApp Console 服务帐户作为 serviceAccount.user | 不适用 | （可选）适用于NetApp Cloud Tiering 和NetApp Backup and Recovery 
+
+
+| Google API 服务代理 | Google Cloud | 服务项目  a| 
+（默认）编辑器
+ a| 
+计算.网络用户
+| 代表部署与 Google Cloud API 进行交互。允许控制台使用共享网络。 
+
+
+| Google Compute Engine 默认服务帐户 | Google Cloud | 服务项目  a| 
+（默认）编辑器
+ a| 
+计算.网络用户
+| 代表部署部署 Google Cloud 实例和计算基础架构。允许控制台使用共享网络。 
+|===
+注：
+
+. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp控制台将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
+. 仅当您未将防火墙规则传递给部署并选择让控制台为您创建它们时，才需要firewall.create 和firewall.delete。这些权限位于控制台帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于为 VPC0 创建规则。
+. 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 serviceAccount.user 角色，而不仅仅是在项目级别。目前，如果您在项目级别分配 serviceAccount.user，则使用 getIAMPolicy 查询服务帐户时不会显示权限。
+
+
+====

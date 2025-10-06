@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-gcnv-roles.html 
+keywords: gcp, google cloud, Google Cloud NetApp Volumes, gcnv, permissions, access control, role-based access control, rbac, role-based access 
+summary: NetApp控制台身份和访问管理提供了管理员角色，您可以将其分配给需要访问Google Cloud NetApp Volumes 的组织成员。 
+---
+= NetApp控制台中的Google Cloud NetApp Volumes角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以为用户分配以下角色，以便他们能够访问NetApp控制台中的Google Cloud NetApp Volumes。
+
+Google Cloud NetApp Volumes使用以下角色：
+
+* * Google Cloud NetApp Volumes管理员*：在控制台中发现和管理Google Cloud NetApp Volumes 。
+

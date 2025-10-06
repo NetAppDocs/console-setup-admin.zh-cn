@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task-manage-multiple-connectors.html 
+keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
+summary: 如果您使用多个控制台代理，则可以直接从控制台在这些代理之间切换。您还可以使用多个控制台代理来管理单个系统。 
+---
+= 使用多个控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您使用多个控制台代理，则可以直接从控制台在这些控制台代理之间切换以查看相关系统。
+
+
+
+== 在控制台代理之间切换
+
+如果您有多个控制台代理，您可以在它们之间切换以查看与特定代理关联的系统。
+
+例如，在多云环境中，您可能在 AWS 中有一个代理，在 Google Cloud 中有一个代理。在这些代理之间切换以管理各自云环境中的Cloud Volumes ONTAP系统。
+
+
+NOTE: 从代理的本地 UI 查看NetApp控制台时，此选项不可用
+
+.步骤
+. 选择控制台代理图标 (image:icon-agent.png["代理图标"] ) 查看可用代理的列表。
++
+image:screenshot-connector-switch.png["屏幕截图显示了标题栏中的代理图标和切换操作。"]
+
+
+
+.结果
+控制台刷新并显示与所选代理关联的系统。
+
+
+
+== 设置灾难恢复配置
+
+您可以同时使用多个控制台代理来管理系统，以实现灾难恢复。如果一个控制台代理出现故障，您可以切换到另一个代理来立即管理系统。
+
+.步骤
+. 切换到您想要使用控制台代理管理的其他控制台代理。
+. 发现现有系统。
++
+** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-adding-systems.html["将现有的Cloud Volumes ONTAP系统添加到控制台"^]
+** https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["发现ONTAP集群"^]
+
+
+. 如果您正在管理Cloud Volumes ONTAP系统，请将容量管理模式调整为*手动模式*。
++
+为了避免争用问题，只有主控制台代理应设置为*自动模式*。
+
++
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html["了解有关容量管理模式的更多信息"^]
+
+

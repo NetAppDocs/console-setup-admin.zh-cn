@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-restricted-mode.html 
+keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
+summary: 通过准备环境和部署控制台代理，开始以受限模式使用NetApp控制台。 
+---
+= 入门工作流程（受限模式）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过准备环境和部署控制台代理，开始以受限模式使用NetApp控制台。
+
+受限模式通常由州和地方政府以及受监管的公司使用，包括在 AWS GovCloud 和 Azure Government 区域中的部署。在开始之前，请确保您了解link:concept-connectors.html["控制台代理"]和link:concept-modes.html["部署模式"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] link:task-prepare-restricted-mode.html["准备部署"]
+https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png[]
+
+[role="quick-margin-list"]
+. 准备一个满足 CPU、RAM、磁盘空间、容器编排工具等要求的专用 Linux 主机。
+. 设置提供对目标网络的访问、用于手动安装的出站互联网访问以及用于日常访问的出站互联网的网络。
+. 在您的云提供商中设置权限，以便您可以在部署控制台代理实例后将这些权限与控制台代理实例关联。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] link:task-install-restricted-mode.html["部署控制台代理"]
+[role="quick-margin-list"]
+. 从云提供商的市场安装控制台代理，或者在您自己的 Linux 主机上手动安装该软件。
+. 通过打开 Web 浏览器并输入 Linux 主机的 IP 地址来设置NetApp控制台。
+. 向控制台代理提供您之前设置的权限。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:task-subscribe-restricted-mode.html["订阅NetApp智能服务（可选）"]
+[role="quick-margin-para"]
+可选：从云提供商的市场订阅NetApp智能服务，以按小时费率（PAYGO）或通过年度合同支付数据服务费用。  NetApp智能服务包括NetApp备份和恢复、 Cloud Volumes ONTAP、 NetApp云分层、 NetApp勒索软件恢复和NetApp灾难恢复。  NetApp数据分类包含在您的订阅中，无需额外付费。

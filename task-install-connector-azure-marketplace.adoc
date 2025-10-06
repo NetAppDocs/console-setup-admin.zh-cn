@@ -1,0 +1,508 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-azure-marketplace.html 
+keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace 
+summary: 要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。 
+---
+= 从 Azure 市场创建控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以直接从 Azure 市场在 Azure 中创建控制台代理。要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。
+
+.开始之前
+* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 审查link:reference-limitations.html["控制台代理限制"]。
+
+
+
+
+== 步骤 1：设置网络
+
+确保您计划安装控制台代理的网络位置支持以下要求。这些要求使控制台代理能够管理混合云中的资源。
+
+Azure 区域:: 如果您使用Cloud Volumes ONTAP，则控制台代理应部署在与其管理的Cloud Volumes ONTAP系统相同的 Azure 区域中，或者部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]适用于Cloud Volumes ONTAP系统。此要求确保在Cloud Volumes ONTAP及其关联的存储帐户之间使用 Azure Private Link 连接。
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解Cloud Volumes ONTAP如何使用 Azure Private Link"^]
+
+--
+
+
+VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和子网。
+
+
+连接到目标网络:: 控制台代理需要与您计划创建和管理系统的位置建立网络连接。例如，您计划在本地环境中创建Cloud Volumes ONTAP系统或存储系统的网络。
+
+
+出站互联网访问:: 部署控制台代理的网络位置必须具有出站互联网连接才能联系特定端点。
+
+
+从控制台代理联系的端点:: 控制台代理需要出站互联网访问来联系以下端点，以管理公共云环境中的资源和流程以进行日常操作。
++
+--
+下面列出的端点都是 CNAME 条目。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+ a| 
+管理 Azure 公共区域中的资源。
+
+
+
+ a| 
+\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+ a| 
+管理 Azure 中国区域的资源。
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+在NetApp控制台中提供功能和服务。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+获取控制台代理升级的图像。
+
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
++
+尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
+
+* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
+
+
+|===
+--
+
+
+代理服务器:: NetApp支持显式和透明代理配置。如果您使用透明代理，则只需要提供代理服务器的证书。如果您使用显式代理，您还需要 IP 地址和凭据。
++
+--
+* IP 地址
+* 凭据
+* HTTPS 证书
+
+
+--
+
+
+端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
+* 仅当需要连接到主机进行故障排除时才需要 SSH（22）。
+* 如果您在没有出站互联网连接的子网中部署Cloud Volumes ONTAP系统，则需要通过端口 3128 建立入站连接。
++
+如果Cloud Volumes ONTAP系统没有出站互联网连接来发送AutoSupport消息，控制台会自动配置这些系统以使用控制台代理附带的代理服务器。唯一的要求是确保控制台代理的安全组允许通过端口 3128 进行入站连接。部署控制台代理后，您需要打开此端口。
+
+
+
+--
+
+
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
++
+--
+创建控制台代理后实现网络要求。
+
+--
+
+
+
+
+== 步骤 2：查看 VM 要求
+
+创建控制台代理时，请选择满足以下要求的虚拟机类型。
+
+CPU:: 8 个核心或 8 个 vCPU
+RAM:: 32 GB
+Azure VM 大小:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 Standard_D8s_v3。
+
+
+
+
+== 步骤 3：设置权限
+
+您可以通过以下方式提供权限：
+
+* 选项 1：使用系统分配的托管标识为 Azure VM 分配自定义角色。
+* 选项 2：向控制台提供具有所需权限的 Azure 服务主体的凭据。
+
+
+按照以下步骤设置控制台的权限。
+
+[role="tabbed-block"]
+====
+.自定义角色
+--
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+
+.步骤
+. 如果您计划在自己的主机上手动安装该软件，请在 VM 上启用系统分配的托管标识，以便您可以通过自定义角色提供所需的 Azure 权限。
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure 文档：使用 Azure 门户为 VM 上的 Azure 资源配置托管标识"^]
+
+. 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
+. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
++
+您应该为想要与NetApp控制台一起使用的每个 Azure 订阅添加 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. 使用 JSON 文件在 Azure 中创建自定义角色。
++
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
+
++
+.. 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+.. 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+.. 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+
+
+--
+.服务主体
+--
+在 Microsoft Entra ID 中创建并设置服务主体，并获取控制台所需的 Azure 凭据。
+
+.创建用于基于角色的访问控制的 Microsoft Entra 应用程序
+. 确保您在 Azure 中拥有创建 Active Directory 应用程序并将该应用程序分配给角色的权限。
++
+有关详细信息，请参阅 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 文档：所需权限"^]
+
+. 从 Azure 门户打开 *Microsoft Entra ID* 服务。
++
+image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory 服务。"]
+
+. 在菜单中，选择*应用程序注册*。
+. 选择*新注册*。
+. 指定有关应用程序的详细信息：
++
+** *名称*：输入应用程序的名称。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *重定向 URI*：您可以将此字段留空。
+
+
+. 选择*注册*。
++
+您已创建 AD 应用程序和服务主体。
+
+
+
+.将应用程序分配给角色
+. 创建自定义角色：
++
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+
++
+.. 复制link:reference-permissions-azure.html["控制台代理的自定义角色权限"]并将它们保存在 JSON 文件中。
+.. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
++
+您应该为用户将从中创建Cloud Volumes ONTAP系统的每个 Azure 订阅添加 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. 使用 JSON 文件在 Azure 中创建自定义角色。
++
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
+
++
+*** 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+*** 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+*** 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+现在您应该有一个名为“控制台操作员”的自定义角色，可以将其分配给控制台代理虚拟机。
+
+
+
+
+
+. 将应用程序分配给角色：
++
+.. 从 Azure 门户打开 *Subscriptions* 服务。
+.. 选择订阅。
+.. 选择“访问控制 (IAM)”>“添加”>“添加角色分配”。
+.. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
+.. 在“*成员*”选项卡中，完成以下步骤：
++
+*** 保持选中“*用户、组或服务主体*”。
+*** 选择*选择成员*。
++
+image:screenshot-azure-service-principal-role.png["向应用程序添加角色时显示“成员”页面的 Azure 门户屏幕截图。"]
+
+*** 搜索应用程序的名称。
++
+以下是一个例子：
+
++
+image:screenshot_azure_service_principal_role.png["Azure 门户的屏幕截图，显示了 Azure 门户中的“添加角色分配”表单。"]
+
+*** 选择应用程序并选择*选择*。
+*** 选择“下一步”。
+
+
+.. 选择*审阅+分配*。
++
+服务主体现在具有部署控制台代理所需的 Azure 权限。
+
++
+如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp控制台中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
+
+
+
+
+
+.添加 Windows Azure 服务管理 API 权限
+. 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
+. 选择*API 权限 > 添加权限*。
+. 在“Microsoft API”下，选择“Azure 服务管理”。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure 门户的屏幕截图，显示了 Azure 服务管理 API 权限。"]
+
+. 选择*以组织用户身份访问 Azure 服务管理*，然后选择*添加权限*。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，显示添加 Azure 服务管理 API。"]
+
+
+
+.获取应用程序的应用程序ID和目录ID
+. 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
+. 复制*应用程序（客户端）ID*和*目录（租户）ID*。
++
+image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+
++
+将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
+
+
+
+.创建客户端机密
+. 开启*Microsoft Entra ID*服务。
+. 选择*应用程序注册*并选择您的应用程序。
+. 选择*证书和机密>新客户端机密*。
+. 提供秘密的描述和持续时间。
+. 选择“*添加*”。
+. 复制客户端机密的值。
++
+image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示了 Microsoft Entra 服务主体的客户端机密。"]
+
+
+
+--
+====
+
+
+== 步骤 4：创建控制台代理
+
+直接从 Azure 市场启动控制台代理。
+
+.关于此任务
+从 Azure 市场创建控制台代理会设置具有默认配置的虚拟机。link:reference-connector-default-config.html["了解控制台代理的默认配置"] 。
+
+.开始之前
+您应该具有以下内容：
+
+* Azure 订阅。
+* 您选择的 Azure 区域中的 VNet 和子网。
+* 如果您的组织需要代理来处理所有传出的互联网流量，请提供关于代理服务器的详细信息：
++
+** IP 地址
+** 凭据
+** HTTPS 证书
+
+
+* 如果您想对控制台代理虚拟机使用该身份验证方法，则需要 SSH 公钥。身份验证方法的另一种选择是使用密码。
++
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何连接到 Azure 中的 Linux VM"^]
+
+* 如果您不希望控制台自动为控制台代理创建 Azure 角色，则需要创建自己的link:reference-permissions-azure.html["使用此页面上的政策"]。
++
+这些权限适用于控制台代理实例本身。这与您之前为部署控制台代理虚拟机而设置的权限不同。
+
+
+
+.步骤
+. 转到 Azure 市场中的NetApp控制台代理 VM 页面。
++
+https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商业区域的 Azure 市场页面"^]
+
+. 选择*立即获取*，然后选择*继续*。
+. 从 Azure 门户中，选择“*创建*”并按照步骤配置虚拟机。
++
+配置虚拟机时请注意以下事项：
+
++
+** *VM 大小*：选择满足 CPU 和 RAM 要求的 VM 大小。我们推荐 Standard_D8s_v3。
+** *磁盘*：控制台代理可以通过 HDD 或 SSD 磁盘实现最佳性能。
+** *网络安全组*：控制台代理需要使用 SSH、HTTP 和 HTTPS 的入站连接。
++
+link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
+
+** 身份*：在*管理*下，选择*启用系统分配的托管身份*。
++
+此设置很重要，因为托管身份允许控制台代理虚拟机向 Microsoft Entra ID 标识自己，而无需提供任何凭据。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["详细了解 Azure 资源的托管标识"^] 。
+
+
+
+. 在“*审查 + 创建*”页面上，审查您的选择并选择“*创建*”以开始部署。
++
+Azure 使用指定的设置部署虚拟机。您应该会在大约十分钟内看到虚拟机和控制台代理软件运行。
+
++
+
+NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+
+. 从连接到控制台代理虚拟机的主机打开 Web 浏览器并输入以下 URL：
++
+https://_ipaddress_[]
+
+. 登录后，设置控制台代理：
++
+.. 指定与控制台代理关联的控制台组织。
+.. 输入系统的名称。
+.. 在*您是否在安全环境中运行？*下保持限制模式处于禁用状态。
++
+保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤开始在受限模式下使用控制台"] 。
+
+.. 选择*让我们开始吧*。
+
+
+
+
+.结果
+现在您已经安装了控制台代理并将其与您的控制台组织一起设置。
+
+如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何从控制台管理 Azure Blob 存储"^]
+
+
+
+== 步骤 5：向控制台代理提供权限
+
+现在您已经创建了控制台代理，您需要为其提供之前设置的权限。提供权限使控制台代理能够管理 Azure 中的数据和存储基础结构。
+
+[role="tabbed-block"]
+====
+.自定义角色
+--
+转到 Azure 门户并将 Azure 自定义角色分配给一个或多个订阅的控制台代理虚拟机。
+
+.步骤
+. 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
++
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp控制台内完成操作的能力将受到影响。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
+
+. 选择*访问控制 (IAM)* > *添加* > *添加角色分配*。
+. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
++
+
+NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色选择了不同的名称，则选择该名称。
+
+. 在“*成员*”选项卡中，完成以下步骤：
++
+.. 分配对*托管身份*的访问权限。
+.. 选择“选择成员”，选择创建控制台代理虚拟机的订阅，在“托管标识”下，选择“虚拟机”，然后选择控制台代理虚拟机。
+.. 选择*选择*。
+.. 选择“下一步”。
+.. 选择*审阅+分配*。
+.. 如果要管理其他 Azure 订阅中的资源，请切换到该订阅，然后重复这些步骤。
+
+
+
+
+.下一步是什么？
+前往 https://console.netapp.com["NetApp控制台"^]开始使用控制台代理。
+
+--
+.服务主体
+--
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Microsoft Azure > 代理*。
+.. *定义凭据*：输入有关授予所需权限的 Microsoft Entra 服务主体的信息：
++
+*** 应用程序（客户端）ID
+*** 目录（租户）ID
+*** 客户端机密
+
+
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+.结果
+控制台现在具有代表您在 Azure 中执行操作所需的权限。
+
+--
+====

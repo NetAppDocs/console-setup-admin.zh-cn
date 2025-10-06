@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall-connector.html 
+keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
+summary: 卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。 
+---
+= 卸载并删除控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。
+
+link:concept-modes.html["了解NetApp控制台部署模式"] 。
+
+
+
+== 使用标准或受限模式时卸载代理
+
+如果您使用的是标准模式或受限模式（换句话说，代理主机具有出站连接），那么您应该按照以下步骤卸载代理。
+
+.步骤
+. 连接到代理的 Linux VM。
+. 从 Linux 主机运行卸载脚本：
++
+`/opt/application/netapp/service-manager-2/uninstall.sh [silent]`
+
++
+_silent_ 运行脚本而不提示您确认。
+
+
+
+
+
+== 从控制台中删除控制台代理
+
+如果控制台代理处于非活动状态，您可以将其从代理列表中删除。如果您删除代理虚拟机或卸载代理软件，则可能会执行此操作。
+
+删除控制台代理时请注意以下事项：
+
+* 此操作不会删除虚拟机。
+* 此操作无法恢复 - 一旦删除控制台代理，就无法将其添加回来。
+
+
+.步骤
+. 选择“*管理 > 代理*”。
+. 在*概览*页面上，选择非活动代理的操作菜单，然后选择*删除代理*。
+. 输入代理人的姓名进行确认，然后选择*删除*。
+

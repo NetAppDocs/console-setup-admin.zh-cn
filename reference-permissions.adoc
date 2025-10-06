@@ -1,0 +1,247 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions.html 
+keywords: permissions, actions 
+summary: 要使用NetApp控制台功能和服务，您需要提供权限，以便控制台可以在您的云环境中执行操作。使用此页面上的链接可以根据您的目标快速访问所需的权限。 
+---
+= NetApp控制台的权限摘要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+要使用NetApp控制台功能和服务，您需要提供权限，以便控制台可以在您的云环境中执行操作。使用此页面上的链接可以根据您的目标快速访问所需的权限。
+
+
+
+== AWS 权限
+
+NetApp控制台需要控制台代理和各个服务的 AWS 权限。
+
+
+
+=== 控制台代理
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 从控制台部署控制台代理 | 从控制台创建控制台代理的用户需要特定权限才能在 AWS 中部署实例。 | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["设置 AWS 权限"] 
+
+
+| 为控制台代理提供权限 | 当控制台部署控制台代理时，它会将一个策略附加到实例，该实例提供管理 AWS 账户中的资源和流程所需的权限。如果您从 AWS Marketplace 部署控制台代理、手动安装控制台代理，或者link:task-adding-aws-accounts.html#add-credentials-agent-aws["向控制台代理添加更多 AWS 凭证"]。您还需要确保策略是最新的，因为后续版本中会添加新的权限。 | link:reference-permissions-aws.html["控制台代理的 AWS 权限"] 
+|===
+
+
+=== NetApp备份和恢复
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 使用NetApp备份和恢复将本地ONTAP集群备份到 Amazon S3 | 在ONTAP卷上激活备份时， NetApp Backup and Recovery 会提示您输入具有特定权限的 IAM 用户的访问密钥和密码。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-aws.html["设置备份的 S3 权限"^] 
+|===
+
+
+=== Cloud Volumes ONTAP
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 为Cloud Volumes ONTAP节点提供权限 | 必须将 IAM 角色附加到 AWS 中的每个Cloud Volumes ONTAP节点。对于 HA 调解员来说也是如此。默认选项是让控制台为您创建 IAM 角色，但您可以在控制台中创建系统时使用自己的角色。 | https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html["了解如何自行设置 IAM 角色"^] 
+|===
+
+
+=== NetApp复制和同步
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 在 AWS 中部署数据代理 | 用于部署数据代理的 AWS 用户帐户必须具有特定权限。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["在 AWS 中部署数据代理所需的权限"^] 
+
+
+| 为数据经纪人提供权限 | 当NetApp Copy and Sync 部署数据代理时，它会为数据代理实例创建一个 IAM 角色。如果您愿意，您可以使用自己的 IAM 角色部署数据代理。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["使用您自己的 IAM 角色与 AWS 数据代理的要求"^] 
+
+
+| 为手动安装的数据代理启用 AWS 访问 | 如果您使用包含 S3 存储桶的同步关系的数据代理，那么您应该准备好 Linux 主机以供 AWS 访问。安装数据代理时，您需要为具有编程访问权限和特定权限的 IAM 用户提供 AWS 密钥。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-aws["启用对 AWS 的访问"^] 
+|===
+
+
+=== 适用于ONTAP的 FSx
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 创建和管理 FSx for ONTAP | 要创建或管理Amazon FSx for NetApp ONTAP系统，您需要通过提供 IAM 角色的 ARN（为控制台提供所需的权限）将 AWS 凭证添加到控制台。 | https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何为 FSx 设置 AWS 凭证"^] 
+|===
+
+
+=== NetApp云分层
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 将本地ONTAP集群分层到 Amazon S3 | 当您启用NetApp Cloud Tiering 到 AWS 时，向导会提示您输入访问密钥和密钥。这些凭证被传递到ONTAP集群，以便ONTAP可以将数据分层到 S3 存储桶。 | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["设置 S3 分层权限"^] 
+|===
+
+
+== Azure 权限
+
+控制台需要控制台代理和各个服务的 Azure 权限。
+
+
+
+=== 控制台代理
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 从控制台部署控制台代理 | 从控制台部署控制台代理时，您需要使用具有在 Azure 中部署控制台代理 VM 的权限的 Azure 帐户或服务主体。 | link:task-install-connector-azure-bluexp.html#connector-custom-role["设置 Azure 权限"] 
+
+
+| 为控制台代理提供权限  a| 
+当控制台在 Azure 中部署控制台代理 VM 时，它会创建一个自定义角色，该角色提供管理该 Azure 订阅中的资源和流程所需的权限。
+
+如果您从市场启动控制台代理，如果您手动安装控制台代理，或者如果您link:task-adding-azure-accounts.html#add-credentials-azure["向控制台代理添加更多 Azure 凭据"]。
+
+您还需要确保策略是最新的，因为后续版本中会添加新的权限。
+ a| 
+link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
+
+|===
+
+
+=== NetApp备份和恢复
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 将Cloud Volumes ONTAP备份到 Azure Blob 存储  a| 
+使用NetApp Backup and Recovery 备份Cloud Volumes ONTAP时，您需要在以下情况下向控制台代理添加权限：
+
+* 您想使用“搜索和恢复”功能
+* 您想要使用客户管理的加密密钥 (CMEK)
+
+ a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-azure.html["使用备份和恢复将Cloud Volumes ONTAP数据备份到 Azure Blob 存储"^]
+
+
+
+
+| 将本地ONTAP集群备份到 Azure Blob 存储 | 使用NetApp Backup and Recovery 备份本地 ONTAP 集群时，您需要向控制台代理添加权限才能使用“搜索和恢复”功能。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-azure.html["使用备份和恢复将本地ONTAP数据备份到 Azure Blob 存储"^] 
+|===
+
+
+=== NetApp复制和同步
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 在 Azure 中部署数据代理 | 用于部署数据代理的 Azure 用户帐户必须具有所需的权限。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure["在 Azure 中部署数据代理所需的权限"^] 
+|===
+
+
+== Google Cloud 权限
+
+控制台需要控制台代理和各个服务的 Google Cloud 权限。
+
+
+
+=== 控制台代理
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 从控制台部署控制台代理 | 从控制台部署控制台代理的 Google Cloud 用户需要特定权限才能在 Google Cloud 中部署控制台代理。 | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["设置权限以创建控制台代理"] 
+
+
+| 为控制台代理提供权限 | 控制台代理 VM 实例的服务帐户必须具有日常操作的特定权限。您需要在部署期间将服务帐户与控制台代理关联。您还需要确保策略是最新的，因为后续版本中会添加新的权限。 | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["设置控制台代理的权限"] 
+|===
+
+
+=== NetApp备份和恢复
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 将Cloud Volumes ONTAP备份到 Google Cloud  a| 
+使用NetApp Backup and Recovery 备份Cloud Volumes ONTAP时，您需要在以下情况下向控制台代理添加权限：
+
+* 您想使用“搜索和恢复”功能
+* 您想要使用客户管理的加密密钥 (CMEK)
+
+ a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["使用备份和恢复将Cloud Volumes ONTAP数据备份到 Google Cloud Storage"^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["CMEK 的权限"^]
+
+
+
+
+| 将本地ONTAP集群备份到 Google Cloud | 使用NetApp Backup and Recovery 备份本地 ONTAP 集群时，您需要向控制台代理添加权限才能使用“搜索和恢复”功能。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-gcp.html["使用备份和恢复将本地ONTAP数据备份到 Google Cloud Storage"^] 
+|===
+
+
+=== NetApp复制和同步
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 在 Google Cloud 中部署数据代理 | 确保部署数据代理的 Google Cloud 用户具有所需的权限。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud["在 Google Cloud 中部署数据代理所需的权限"^] 
+
+
+| 为手动安装的数据代理启用 Google Cloud 访问权限 | 如果您计划使用包含 Google Cloud Storage 存储桶的同步关系的数据代理，那么您应该准备 Linux 主机以供 Google Cloud 访问。安装数据代理时，您需要为具有特定权限的服务帐户提供密钥。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud["启用对 Google Cloud 的访问"^] 
+|===
+
+
+== StorageGRID权限
+
+控制台需要两项服务的StorageGRID权限。
+
+
+
+=== NetApp备份和恢复
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 将本地ONTAP集群备份到StorageGRID | 当您准备将StorageGRID作为ONTAP集群的备份目标时， NetApp Backup and Recovery 会提示您输入具有特定权限的 IAM 用户的访问密钥和密码。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["准备StorageGRID作为备份目标"^] 
+|===
+
+
+=== NetApp云分层
+
+[cols="20,60,20"]
+|===
+| 目标 | 描述 | 链路 
+
+
+| 将本地ONTAP集群分层到StorageGRID | 当您将NetApp Cloud Tiering 设置为StorageGRID时，您需要向 Cloud Tiering 提供 S3 访问密钥和密钥。云分层使用密钥来访问您的存储桶。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["准备分层到StorageGRID"^] 
+|===

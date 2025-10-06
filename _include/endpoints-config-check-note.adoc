@@ -1,0 +1,11 @@
+= 
+:allow-uri-read: 
+
+
+[IMPORTANT]
+====
+* 对于新代理部署， NetApp会检查以下端点：link:reference-networking-saas-console.html["此处列出"^] 。如果您使用之前用于升级的端点，则此配置检查将失败并出现错误，link:reference-networking-saas-console-previous.html["此处列出"] 。  NetApp建议您尽快更新防火墙规则，以允许访问当前端点并阻止访问以前的端点link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新您的网络"]。
+* 如果您更新防火墙中的端点，您现有的代理将继续工作。
+
+
+====

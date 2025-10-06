@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+. 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
+. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
++
+您应该为想要与NetApp控制台一起使用的每个 Azure 订阅添加 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. 使用 JSON 文件在 Azure 中创建自定义角色。
++
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
+
++
+.. 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+.. 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+.. 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+

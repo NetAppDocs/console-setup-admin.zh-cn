@@ -1,0 +1,85 @@
+= BlueXP身份和访问管理
+:allow-uri-read: 
+
+
+
+
+=== BlueXP身份和访问管理
+
+BlueXP身份和访问管理 (IAM) 是一种新的资源和访问管理模型，它取代并增强了在标准模式下使用BlueXP时BlueXP帐户提供的先前功能。
+
+BlueXP IAM 提供更精细的资源和权限管理：
+
+* 顶级_组织_使您能够管理各个_项目_的访问权限。
+* _文件夹_使您能够将相关项目分组在一起。
+* 增强的资源管理使您能够将资源与一个或多个文件夹或项目关联。
++
+例如，您可以将一个Cloud Volumes ONTAP系统与多个项目关联。
+
+* 增强的访问管理使您能够为组织层次结构不同级别的成员分配角色。
+
+
+这些增强功能可以更好地控制用户可以执行的操作和可以访问的资源。
+
+.BlueXP IAM 如何影响您的现有帐户
+当您登录BlueXP时，您会注意到以下变化：
+
+* 您的_帐户_现在称为_组织_
+* 您的_工作区_现在称为_项目_
+* 用户角色的名称已更改：
++
+** _帐户管理员_ 现为 _组织管理员_
+** _工作区管理员_现在是_文件夹或项目管理员_
+** _合规性查看器_现为_分类查看器_
+
+
+* 在“设置”下，您可以访问BlueXP身份和访问管理以利用这些增强功能
+
+
+请注意以下事项：
+
+* 您的现有用户或工作环境没有任何变化。
+* 虽然角色的名称已经改变，但从权限的角度来看并没有什么区别。用户将继续可以访问与以前相同的工作环境。
+* 您登录BlueXP的方式没有任何变化。  BlueXP IAM 与NetApp云登录、 NetApp支持站点凭证和联合连接配合使用，就像BlueXP帐户一样。
+* 如果您有多个BlueXP帐户，那么您现在就有多个BlueXP组织。
+
+
+.BlueXP IAM 的 API
+此更改为BlueXP IAM 引入了一个新的 API，但它与以前的租赁 API 向后兼容。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
+
+.支持的部署模式
+在标准模式下使用BlueXP时支持BlueXP IAM。如果您在受限模式或私人模式下使用BlueXP ，那么您将继续使用BlueXP _帐户_来管理工作区、用户和资源。
+
+.下一步
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["了解BlueXP IAM"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["开始使用BlueXP IAM"]
+
+
+
+
+=== 连接器 3.9.45
+
+此版本包括扩展的操作系统支持和错误修复。
+
+3.9.45 版本适用于标准模式和限制模式。
+
+.支持 Ubuntu 24.04 LTS
+从 3.9.45 版本开始， BlueXP现在支持在标准模式或受限模式下使用BlueXP时在 Ubuntu 24.04 LTS 主机上新安装 Connector。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["查看连接器主机要求"] 。
+
+
+
+=== RHEL 主机支持 SELinux
+
+BlueXP现在支持在强制模式或许可模式下启用 SELinux 的 Red Hat Enterprise Linux 主机的连接器。
+
+对 SELinux 的支持从 3.9.40 版本开始适用于标准模式和限制模式，从 3.9.42 版本开始适用于私有模式。
+
+请注意以下限制：
+
+* BlueXP不支持 Ubuntu 主机的 SELinux。
+* 操作系统上启用了 SELinux 的连接器不支持对Cloud Volumes ONTAP系统的管理。
+
+
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["了解有关 SELinux 的更多信息"^]

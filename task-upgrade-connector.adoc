@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-upgrade-connector.html 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
+summary: 当您使用标准模式或受限模式时，只要控制台代理具有出站互联网访问权限以获取软件更新， NetApp控制台就会自动将您的控制台代理升级到最新版本。 
+---
+= 管理控制台代理升级
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当您使用标准模式或受限模式时，只要控制台代理具有出站互联网访问权限以获取软件更新， NetApp控制台就会自动将您的控制台代理升级到最新版本。
+
+如果您需要手动管理控制台代理的升级时间，您可以禁用标准模式或受限模式的自动升级。
+
+
+
+== 禁用自动升级
+
+禁用控制台代理的自动升级包括两个步骤。首先，您需要确保您的控制台代理健康且是最新的。然后编辑配置文件以关闭自动升级。
+
+
+NOTE: 仅当您拥有控制台代理版本 3.9.48 或更高版本时，您才可以禁用自动升级。
+
+
+
+=== 验证代理的健康状况
+
+您应该验证您的代理是否稳定，以及代理虚拟机上运行的所有容器是否健康且正在运行。禁用自动升级后，代理虚拟机将停止检查新服务或升级包。
+
+使用以下命令之一来验证您的控制台代理。所有服务的状态都应为“正在运行”。如果不是这种情况，请在禁用自动升级之前联系NetApp支持。
+
+Docker（用于 Ubuntu 和 VCenter 部署）::
++
+--
+[source, cli]
+----
+docker ps -a
+----
+--
+Podman::
++
+--
+[source, cli]
+----
+podman ps -a
+----
+--
+
+
+
+
+=== 禁用代理的自动升级
+
+您可以通过在 _com/opt/application/netapp/service-manager-2/config.json_ 文件中设置 _isUpgradeDisabled_ 标志来禁用自动升级。默认情况下，此标志设置为 false，并且您的代理会自动升级。您可以将此标志设置为 true 以禁用自动升级。在完成此步骤之前，您应该熟悉 JSON 语法。
+
+要重新启用自动升级，请使用以下步骤并将 _isUpgradeDisabled_ 标志设置为 false。
+
+.步骤
+. 确保您已验证您的代理是最新的并且健康。
+. 创建 _/opt/application/netapp/service-manager-2/config.json_ 文件的备份副本，以确保您可以恢复更改。
+. 编辑 _/opt/application/netapp/service-manager-2/config.json_ 文件并将 _isUpgradeDisabled_ 标志的值更改为 true。
++
+[source, json]
+----
+  "isUpgradeDisabled": true,
+----
+. 保存您的文件。
+. 通过运行以下命令重新启动服务管理器 2 服务：
++
+[source, cli]
+----
+systemctl restart netapp-service-manager.service
+----
+. 运行以下命令并验证代理的状态是否显示为_active(running)_：_
++
+[source, cli]
+----
+systemctl status netapp-service-manager.service
+_
+----
+
+
+
+
+== 升级控制台代理
+
+控制台代理需要在升级过程中重新启动，因此NetApp控制台在升级期间将不可用。
+
+.步骤
+. 从下载控制台代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]。
+. 将安装程序复制到 Linux 主机。
+. 分配运行脚本的权限。
++
+[source, cli]
+----
+chmod +x /path/NetApp-Console-Agent-Offline-<version>
+----
++
+其中 <version> 是您下载的控制台代理的版本。
+
+. 运行安装脚本：
++
+[source, cli]
+----
+sudo /path/NetApp-Console-Agent-Offline-<version>
+----
++
+其中 <version> 是您下载的代理的版本。
+
+. 升级完成后，您可以前往*管理>支持>代理*来验证代理的版本。
+

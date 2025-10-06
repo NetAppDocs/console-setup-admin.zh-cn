@@ -1,0 +1,190 @@
+= 
+:allow-uri-read: 
+
+
+专用主机:: 与其他应用程序共享的主机不支持控制台代理。该主机必须是专用主机。主机可以是满足以下大小要求的任何架构：
++
+--
+* CPU：8 核或 8 个 vCPU
+* 内存：32 GB
+* 磁盘空间：建议主机预留165GB空间，分区要求如下：
++
+** `/opt`：必须有 120 GiB 可用空间
++
+代理使用 `/opt`安装 `/opt/application/netapp`目录及其内容。
+
+** `/var`：必须有 40 GiB 可用空间
++
+控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+
+
+
+
+
+--
+
+
+* CPU：8 核或 8 个 vCPU
+* 内存：32 GB
+* 磁盘空间：165 GB（厚置备）
+* vSphere 7.0 或更高版本
+* ESXi 主机 7.03 或更高版本
+
+
+
+NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范围是固定的，不能修改。如果主机上的任何第三方软件使用此范围内的 UID 或 GID，则代理安装将失败。  NetApp建议使用没有第三方软件的主机以避免冲突。
+
+虚拟机管理程序:: 需要经过认证可运行受支持的操作系统的裸机或托管虚拟机管理程序。
+
+
+[[podman-versions]]操作系统和容器要求:: 在标准模式或受限模式下使用控制台时，控制台代理支持以下操作系统。安装代理之前需要一个容器编排工具。
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| 操作系统 | 支持的操作系统版本 | 支持的代理版本 | 所需的容器工具 | SELinux 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9.1 至 9.4
+
+8.6 至 8.10
+
+* 仅限英语版本。
+* 主机必须在 Red Hat 订阅管理中注册。如果未注册，主机将无法在代理安装期间访问存储库来更新所需的第三方软件。
+
+ a| 
+3.9.50 或更高版本，控制台处于标准模式或受限模式
+ a| 
+Podman 版本 4.6.1 或 4.9.4
+
+<<podman-configuration,查看 Podman 配置要求>> 。
+ a| 
+在强制模式或宽容模式下受支持
+
+* 操作系统上启用了 SELinux 的代理不支持对Cloud Volumes ONTAP系统的管理。
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24.04 LTS
+ a| 
+3.9.45 或更高版本， NetApp控制台处于标准模式或受限模式
+ a| 
+Docker Engine 23.06 至 28.0.0。
+ a| 
+不支持
+
+
+
+ a| 
+22.04 LTS
+ a| 
+3.9.50 或更高版本
+ a| 
+Docker Engine 23.0.6 至 28.0.0。
+ a| 
+不支持
+
+|===
+--
+
+
+[[podman-versions]]操作系统和容器要求:: 在私人模式下使用控制台时，以下操作系统支持控制台代理。安装代理之前需要一个容器编排工具。
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| 操作系统 | 支持的操作系统版本 | 支持的代理版本 | 所需的容器工具 | SELinux 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9.1 至 9.4
+
+8.6 至 8.10
+ a| 
+3.9.42 或更高版本，控制台处于私人模式
+ a| 
+Podman 版本 4.6.1 或 4.9.4
+
+<<podman-configuration,查看 Podman 配置要求>> 。
+ a| 
+在强制模式或宽容模式下受支持^1^
+
+
+
+ a| 
+Ubuntu
+ a| 
+22.04 LTS
+ a| 
+3.9.29 或更高版本
+ a| 
+Docker Engine 23.0.6 至 26.0.0
+
+26.0.0 支持 _new_ agent 3.9.44 或更高版本的安装
+ a| 
+不支持
+
+|===
+注：
+
+. 操作系统上启用了 SELinux 的代理不支持对Cloud Volumes ONTAP系统的管理。
+. 这些操作系统的英语版本支持控制台代理。
+. 对于 RHEL，主机必须在 Red Hat 订阅管理中注册。如果未注册，主机将无法在代理安装期间访问存储库来更新所需的第三方软件。
+
+
+--
+
+
+CPU:: 8 个核心或 8 个 vCPU
+RAM:: 32 GB
+
+
+AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 t3.2xlarge。
+
+
+密钥对:: 创建控制台代理时，您需要选择一个 EC2 密钥对来与实例一起使用。
+
+
+使用 IMDSv2 时的 PUT 响应跳数限制:: 如果在 EC2 实例上启用了 IMDSv2（这是新 EC2 实例的默认设置），则必须将实例上的 PUT 响应跳数限制更改为 3。如果您不更改 EC2 实例的限制，则在尝试设置代理时会收到 UI 初始化错误。
++
+--
+* link:task-require-imdsv2.html["要求在 Amazon EC2 实例上使用 IMDSv2"]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS 文档：更改 PUT 响应跳数限制"^]
+
+
+--
+
+
+Azure VM 大小:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 Standard_D8s_v3。
+
+
+Google Cloud 机器类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 n2-standard-8。
++
+--
+Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["受防护的虚拟机功能"^]
+
+--
+
+
+/opt 中的磁盘空间:: 必须有 100 GiB 可用空间
++
+--
+代理使用 `/opt`安装 `/opt/application/netapp`目录及其内容。
+
+--
+/var 中的磁盘空间:: 必须有 20 GiB 可用空间
++
+--
+控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+
+--
+

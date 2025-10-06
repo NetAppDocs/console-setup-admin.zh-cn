@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-iam-associate-connectors.html 
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
+summary: 如果您组织的成员需要在另一个项目中使用控制台代理，则需要将该控制台代理与相应的项目关联。 
+---
+= 将控制台代理与其他文件夹和项目关联
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当“组织管理员”创建控制台代理时，该控制台代理会自动与组织内当前选定的项目相关联。尽管具有“组织管理员”角色的人可以从组织中的任何地方访问该控制台代理。除非您将该控制台代理与其他项目关联，否则您组织中的其他成员只能从创建该控制台代理的项目访问该控制台代理。
+
+.开始之前
+回顾控制台代理关联的工作原理。link:concept-identity-and-access-management.html#associate-agents["了解如何将控制台代理与身份和访问结合使用"] 。
+
+.关于此任务
+文件夹或项目管理员可以在代理页面上查看所有控制台代理，但只能将控制台代理与他们有权限的文件夹和项目关联。link:reference-iam-predefined-roles.html["详细了解文件夹或项目管理员可以完成的操作"] 。
+
+.步骤
+. 选择*管理>身份和访问*>*代理*。
+. 从表中，找到要关联的控制台代理。
++
+使用表格上方的搜索功能查找特定的控制台代理或按资源层次结构过滤表格。
+
+. 要查看链接到控制台代理的文件夹和项目，请选择image:icon-action.png["三个点图标"]然后选择*查看详细信息*。
++
+该页面显示与控制台代理关联的文件夹和项目的详细信息。
+
+. 选择*关联到文件夹或项目*。
+. 选择一个文件夹或项目，然后选择*接受*。
+. 要将控制台代理与其他文件夹或项目关联，请选择*添加文件夹或项目*，然后选择该文件夹或项目。
+. 选择*关联代理*。
+
+
+.完成后
+将控制台代理的资源与“资源”页面中的相同文件夹和项目关联。
+
+link:task-iam-manage-resources.html#associate-resource["了解如何将资源与文件夹和项目关联"] 。
+
+.相关信息
+* link:concept-connectors.html["了解NetApp控制台代理"]
+* link:concept-identity-and-access-management.html["了解NetApp控制台身份和访问管理"]
+* link:task-iam-get-started.html["开始使用身份和访问权限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身份和访问管理的 API"^]
+

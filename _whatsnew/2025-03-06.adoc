@@ -1,0 +1,34 @@
+= 连接器 3.9.49 更新
+:allow-uri-read: 
+
+
+
+
+=== 连接器 3.9.49 更新
+
+
+
+==== BlueXP使用连接器时ONTAP系统管理器访问
+
+BlueXP管理员（具有组织管理员角色的用户）可以配置BlueXP以提示用户输入其ONTAP凭据以访问ONTAP系统管理器。启用此设置后，用户每次都需要输入其ONTAP凭据，因为它们不存储在BlueXP中。
+
+此功能在连接器版本 3.9.49 及更高版本中可用。link:https://docs.netapp.com/us-en/bluexp-setup-admin//task-ontap-access-connector.html["了解如何配置凭据设置。"^] 。
+
+
+
+=== 连接器 3.9.48 更新
+
+
+
+==== 能够禁用连接器的自动升级设置
+
+您可以禁用连接器的自动升级功能。
+
+当您在标准模式或受限模式下使用BlueXP时，只要连接器具有出站互联网访问权限以获取软件更新， BlueXP就会自动将您的连接器升级到最新版本。如果您需要手动管理连接器的升级时间，现在可以禁用标准模式或受限模式的自动升级。
+
+
+NOTE: 此更改不会影响BlueXP私人模式，在该模式下您必须始终自行升级连接器。
+
+此功能在连接器版本 3.9.48 及更高版本中可用。
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["了解如何禁用连接器的自动升级。"^]

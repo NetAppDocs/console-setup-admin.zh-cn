@@ -1,0 +1,31 @@
+= 私人模式发布（3.9.50）
+:allow-uri-read: 
+
+
+
+
+=== 私人模式发布（3.9.50）
+
+新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
+
+3.9.50 版本包括以下BlueXP组件和服务的更新。
+
+[cols="3*"]
+|===
+| 组件或服务 | 此版本中包含的版本 | 自上次私人模式发布以来的变化 
+
+
+| 连接器 | 3.9.50, 3.9.49 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXP连接器页面中的新功能"]并参考版本 3.9.50 和 3.9.49 所包含的更改。 
+
+
+| 备份和恢复 | 2025年3月17日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2024 年 3 月版本中包含的更改。 
+
+
+| 分类 | 2025 年 3 月 10 日（版本 1.41） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.38 至 1.371.41 版本中包含的更改。 
+|===
+有关私人模式的更多详细信息，包括如何升级，请参阅以下内容：
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解私人模式"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["了解如何在私人模式下开始使用BlueXP"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["了解如何在使用私有模式时升级连接器"]
+

@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: task-federation-manage.html 
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
+summary: 添加联合连接后，您可以在NetApp控制台中对其进行管理。您可以查看连接的状态，根据需要启用或禁用它。 
+---
+= 在NetApp控制台中管理联合
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在NetApp控制台中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要它时禁用它。
+
+
+NOTE: 如果您使用NetApp Cloud Central 配置了联合，请通过 *Federation* 页面导入它以在控制台中进行管理。link:task-federation-import.html["了解如何导入您的联盟"]
+
+您还可以将已验证的域添加到现有联合中，这允许您使用多个域进行联合连接。
+
+
+NOTE: 联合管理事件（例如启用、禁用和更新联合）显示在时间轴中。link:task-monitor-cm-operations.html["了解有关在NetApp控制台中监控操作的更多信息。"]
+
+.必需角色
+需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+
+
+== 启用联盟
+
+如果您已经创建了联盟但尚未启用，您可以通过*联盟*页面启用它。启用联合允许与联合关联的用户使用其公司凭据登录控制台。在启用联合之前，请先成功创建并测试联合。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”选项卡。
+. 选择操作菜单image:icon-action.png["带有三个垂直点的图标"]旁边的您想要启用的联盟并选择*启用*。
+
+
+
+
+== 将已验证的域添加到现有联合
+
+您可以在控制台中将已验证的域添加到现有联合，以便使用具有相同身份提供商 (IdP) 的多个域。
+
+您必须先在控制台中验证该域，然后才能将其添加到联合中。如果您尚未验证域名，可以按照以下步骤进行验证link:task-federation-verify-domain.html["在控制台中验证您的域"]。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”选项卡。
+. 选择操作菜单image:button_3_vert_dots.png["带有三个垂直点的图标"]在您要添加已验证域的联盟旁边，然后选择*更新域*。  *更新域*对话框显示已与此联合关联的域。
+. 从可用域列表中选择一个已验证的域。
+. 选择*更新*。新域用户可以在 30 秒内获得联合控制台访问权限。
+
+
+
+
+== 更新即将到期的联合连接
+
+您可以在控制台中更新联合的详细信息。例如，如果证书或客户端密钥等凭证过期，则需要更新联合。在需要时，更新通知日期以提醒您在连接到期之前更新连接。
+
+
+IMPORTANT: 在更新您的 IdP 之前，请先更新控制台以避免登录问题。在此过程中保持登录控制台。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”选项卡。
+. 选择要更新的联合旁边的操作菜单（三个垂直点），然后选择*更新联合*。
+. 根据需要更新联盟的详细信息。
+. 选择*更新*。
+
+
+
+
+== 测试现有的联盟
+
+测试现有联合的连接以验证其是否正常工作。这可以帮助您识别联盟中的任何问题并进行故障排除。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”选项卡。
+. 选择操作菜单image:button_3_vert_dots.png["带有三个垂直点的图标"]旁边的您想要添加已验证域的联盟，然后选择*测试连接*。
+. 选择*测试*。系统提示您使用公司凭证登录。如果连接成功，您将被重定向到NetApp控制台。如果连接失败，您会看到一条错误消息，表明联合存在问题。
+. 选择“*完成*”返回“*联合*”选项卡。
+
+
+
+
+== 禁用联合
+
+如果您不再需要联合，您可以禁用它。这可以防止与联盟关联的用户使用其公司凭证登录控制台。如果需要，您可以稍后重新启用联合。
+
+在删除联合之前，请先禁用它，例如在停用 IdP 或停止联合时。如果需要的话，您可以稍后重新启用它。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”选项卡。
+. 选择操作菜单image:button_3_vert_dots.png["带有三个垂直点的图标"]在您要添加已验证域的联盟旁边，然后选择*禁用*。
+
+
+
+
+== 删除联盟
+
+如果您不再需要联盟，您可以将其删除。这将删除联合并阻止与联合关联的任何用户使用其公司凭据登录控制台。例如，如果 IdP 被停用或者不再需要联合。
+
+删除联合后，您将无法恢复它。您必须创建一个新的联盟。
+
+
+IMPORTANT: 您必须先禁用联合，然后才能删除它。一旦删除联盟，就无法恢复删除。
+
+.步骤
+. 选择“管理”>“身份和访问”。
+. 选择“*Federations*”以查看“*Federations*”页面。
+. 选择操作菜单image:button_3_vert_dots.png["带有三个垂直点的图标"]在您要添加已验证域的联盟旁边，然后选择*删除*。
+

@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-org-partnerships.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: 通过在NetApp控制台中建立组织之间的合作伙伴关系，组织合作伙伴可以跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。 
+---
+= NetApp控制台中的合作伙伴关系
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过在组织之间建立合作伙伴关系， NetApp控制台可让合作伙伴跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。
+
+.必需角色
+合作伙伴管理员link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+合作伙伴关系允许使用控制台中的角色驱动关系跨组织安全地管理NetApp资源。发起组织授予对其资源的访问权限，而接受组织提供被授予访问权限的用户或服务帐户。合作伙伴关系是通过自助服务工作流程建立的，使发起组织能够完全控制共享的资源、分配的角色以及根据需要加入、管理或撤销合作伙伴访问权限的能力。
+
+客户可以授权 MSP 或经销商来管理NetApp环境，而无需复杂的设置。客户可以控制合作伙伴可以访问哪些集群以及他们拥有哪些角色，并且可以随时撤销访问权限以维护安全性和合规性。
+
+作为合作伙伴，您可以获得跨客户环境的集中可见性和控制力。您可以轻松切换到客户的组织来管理资源、运行数据服务并在定义的边界内监控健康状况，从而减少自定义工具并确保与每个客户的政策保持一致。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]为一个或多个用户分配合作伙伴管理员角色
+为发起组织和接收组织中的一个或多个用户分配合作伙伴管理员角色来创建和管理合作伙伴关系。您可以将合作伙伴查看器角色分配给只需要查看合作伙伴关系而不需要管理的用户。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]与发起组织共享您的组织 ID
+[role="quick-margin-para"]
+要发起合作关系，发起者必须知道目标组织的组织 ID。只有相应的组织可以访问此组织 ID。通过电子邮件或其他方式直接与NetApp控制台之外的发起组织共享。
+
+发起组织是授予其资源访问权限的组织。
+
+image:diagram-partnership-org-id.png["显示初始组织的图表"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在NetApp控制台内建立合作关系
+[role="quick-margin-para"]
+发起合作关系的组织通过从NetApp控制台发送合作关系请求来发起合作关系。
+
+image:diagram-partnership-accept.png["显示伙伴关系接受度的图表"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]批准合作
+[role="quick-margin-para"]
+接收组织必须接受该请求。
+
+接收组织是被授予资源访问权限的组织。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]将用户分配到合作关系
+[role="quick-margin-para"]
+接收组织将您组织中的特定用户或服务帐户分配给合作伙伴关系。发起组织为这些用户分配角色。
+
+image:diagram-partnership-add-user.png["显示用户分配的图表"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]授予指定用户对资源的访问权限
+[role="quick-margin-para"]
+如果您是发起组织，您可以向分配给合作关系的用户授予特定资源的访问权限。您可以随时撤销访问权限。
+
+您可以通过为组织内的特定项目或文件夹分配角色来实现此目的。
+
+image:diagram-partnership-resources.png["显示资源共享的图表"]

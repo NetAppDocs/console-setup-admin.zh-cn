@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-federation-entra-id.html 
+keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
+summary: '与您的 Microsoft Entra ID IdP 提供商联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
+---
+= 将NetApp控制台与 Microsoft Entra ID 联合起来
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+与您的 Microsoft Entra ID IdP 提供商联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。
+
+.必需角色
+需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+
+NOTE: 您可以与您的企业 IdP 或NetApp支持站点联合。  NetApp建议选择其中一个，但不要同时选择两者。
+
+NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先配置身份提供者以信任NetApp作为服务提供商。然后，您可以在控制台中创建使用身份提供者配置的连接。
+
+您可以与 Microsoft Entra ID 建立联合连接，以启用控制台的单点登录 (SSO)。该过程涉及配置您的 Microsoft Entra ID 以信任控制台作为服务提供商，然后在控制台中创建连接。
+
+.开始之前
+* 需要具有管理权限的 IdP 帐户。与您的 IdP 管理员协调以完成这些步骤。
+* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp控制台中验证您的域"]话题。
+
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”以查看“*Federations*”页面。
+. 选择*配置新联合*。
+
+
+[discrete]
+====== 域名详细信息
+
+. 输入您的域名详细信息：
++
+.. 选择您是否要使用已验证的域名或您的电子邮件域名。电子邮件域是与您登录的帐户关联的域。
+.. 输入您正在配置的联盟的名称。
+.. 如果您选择已验证的域，请从列表中选择该域。
+
+
+. 选择“下一步”。
+
+
+[discrete]
+====== 连接方法
+
+. 对于您的连接方法，选择*提供商*，然后选择*Microsoft Entra ID*。
+. 选择“下一步”。
+
+
+[discrete]
+====== 配置说明
+
+. 配置您的 Microsoft Entra ID 以信任NetApp作为服务提供商。您需要在 Microsoft Entra ID 服务器上执行此步骤。
++
+.. 注册 Microsoft Entra ID 应用程序以信任控制台时，请使用以下值：
++
+*** 对于 *重定向 URL* ，使用 `https://services.cloud.netapp.com`
+*** 对于 *回复 URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
+
+
+.. 为您的 Microsoft Entra ID 应用创建客户端机密。您需要提供客户端 ID、客户端密钥和 Entra ID 域名来完成联合。
+
+
+. 返回控制台，然后选择“下一步”来创建连接。
+
+
+[discrete]
+====== 创建连接
+
+. 使用 Microsoft Entra ID 创建连接
++
+.. 输入您在上一步中创建的客户端 ID 和客户端密钥。
+.. 输入 Microsoft Entra ID 域名。
+
+
+. 选择*创建连接*。系统在几秒钟内建立连接。
+
+
+[discrete]
+====== 测试并启用连接
+
+. 选择“下一步”。
+. 选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的 IdP 凭据登录以完成测试并返回控制台以启用连接。
+. 选择“下一步”。
+. 在“启用联合”页面上，查看联合详细信息，然后选择“启用联合”。
+. 选择“*完成*”以完成该过程。
+
+
+启用联合后，用户可以使用其公司凭据登录NetApp控制台。

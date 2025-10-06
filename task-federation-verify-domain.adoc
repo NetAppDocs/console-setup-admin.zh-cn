@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-federation-verify-domain.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: 您只能使用已验证的域进行联合。如果您想与不同于您的电子邮件域的域联合，您必须首先验证您拥有该域。您只能使用已验证的域进行联合。 
+---
+= 验证联合连接的电子邮件域
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您想要与不同于您的电子邮件域的域联合，您必须首先验证您拥有该域。您只能使用已验证的域进行联合。
+
+.必需角色
+需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+验证您的域名涉及向您的域名的 DNS 设置添加 TXT 记录。此记录用于证明您拥有该域并允许NetApp控制台信任该域进行联合。您可能需要与您的 IT 或网络管理员协调来完成此步骤。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”以查看“*Federations*”页面。
+. 选择*配置新联合*。
+. 选择*验证域名所有权*。
+. 输入您要验证的域名并选择*继续*。
+. 复制提供的 TXT 记录。
+. 转到您域的 DNS 设置并配置作为您域的 TXT 记录提供的 TXT 值。如果需要，请与您的 IT 或网络管理员合作。
+. 添加TXT记录后，返回控制台并选择*验证*。
+

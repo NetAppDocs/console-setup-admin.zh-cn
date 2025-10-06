@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: reference-whats-next-restricted-mode.html 
+keywords: restricted mode, what you can do 
+summary: 在限制模式下启动并运行NetApp控制台后，您可以开始使用限制模式支持的服务。 
+---
+= 接下来可以做什么（受限模式）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在限制模式下启动并运行NetApp控制台后，您可以开始使用限制模式支持的服务。
+
+如需帮助，请参阅以下服务的文档：
+
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files文档"^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["备份和恢复文档"^]
+* https://docs.netapp.com/us-en/bluexp-classification/index.html["分类文档"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP文档"^]
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/index.html["数字钱包文档"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["本地ONTAP集群文档"^]
+* https://docs.netapp.com/us-en/bluexp-replication/index.html["复制文档"^]
+
+
+.相关信息
+link:concept-modes.html["NetApp控制台部署模式"]

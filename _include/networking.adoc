@@ -1,0 +1,74 @@
+= 
+:allow-uri-read: 
+
+
+专用主机:: 与其他应用程序共享的主机不支持该代理。该主机必须是专用主机。
+
+
+VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和子网。
+
+
+VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和子网。
+
+
+连接到目标网络:: 控制台代理需要与您计划创建和管理系统的位置建立网络连接。例如，您计划在本地环境中创建Cloud Volumes ONTAP系统或存储系统的网络。
+
+
+出站互联网访问:: 部署控制台代理的网络位置必须具有出站互联网连接才能联系特定端点。
+
+
+从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp控制台时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
++
+--
+link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
+
+--
+
+
+Azure 区域:: 如果您使用Cloud Volumes ONTAP，则控制台代理应部署在与其管理的Cloud Volumes ONTAP系统相同的 Azure 区域中，或者部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]适用于Cloud Volumes ONTAP系统。此要求确保在Cloud Volumes ONTAP及其关联的存储帐户之间使用 Azure Private Link 连接。
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解Cloud Volumes ONTAP如何使用 Azure Private Link"^]
+
+--
+
+
+端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
+* 仅当需要连接到主机进行故障排除时才需要 SSH（22）。
+* 如果您在没有出站互联网连接的子网中部署Cloud Volumes ONTAP系统，则需要通过端口 3128 建立入站连接。
++
+如果Cloud Volumes ONTAP系统没有出站互联网连接来发送AutoSupport消息，控制台会自动配置这些系统以使用控制台代理附带的代理服务器。唯一的要求是确保控制台代理的安全组允许通过端口 3128 进行入站连接。部署控制台代理后，您需要打开此端口。
+
+
+
+--
+
+
+代理服务器:: NetApp支持显式和透明代理配置。如果您使用透明代理，则只需要提供代理服务器的证书。如果您使用显式代理，您还需要 IP 地址和凭据。
++
+--
+* IP 地址
+* 凭据
+* HTTPS 证书
+
+
+--
+
+
+Azure 中的公共 IP 地址:: 如果要在 Azure 中将公共 IP 地址与控制台代理 VM 一起使用，则该 IP 地址必须使用基本 SKU 以确保控制台使用此公共 IP 地址。
++
+--
+image:screenshot-azure-sku.png["Azure 中创建新 IP 地址的屏幕截图，可让您在 SKU 字段下选择“基本”。"]
+
+如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果您用于访问控制台的机器无法访问该私有 IP 地址，则控制台中的操作将会失败。
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文档：公共 IP SKU"^]
+
+--
+
+
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+

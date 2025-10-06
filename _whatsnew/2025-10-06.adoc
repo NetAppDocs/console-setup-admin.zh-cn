@@ -1,0 +1,213 @@
+= BlueXP现在是NetApp控制台
+:allow-uri-read: 
+
+
+
+
+== BlueXP现在是NetApp控制台
+
+NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。
+
+
+
+=== 导航菜单和页面
+
+NetApp将大多数菜单选项移至左侧导航窗格，并重新组织菜单以便在NetApp控制台中更轻松地导航。
+
+
+
+==== 画布被系统页面取代
+
+NetApp将 Canvas 重命名为 *Systems* 页面。从“*存储 > 管理*”菜单导航到“*系统*”页面。
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["系统页面的屏幕截图。"]
+
+
+
+==== 扩展存储菜单
+
+*存储*菜单还包括*警报*以查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*）以识别未使用或未充分利用的资源。
+
+NetApp还将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。
+
+image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["存储菜单的屏幕截图。"]
+
+
+
+==== 管理菜单
+
+使用集中式*管理*菜单来管理NetApp控制台、支持案例、许可证和订阅（以前称为数字钱包）。
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png["管理菜单的屏幕截图。"]
+
+
+
+==== 健康菜单
+
+高效的*健康*菜单包括*软件更新*（您可以在其中管理ONTAP软件更新）、*可持续性*（您可以在其中监控对环境的影响）和*Digital Advisor*（您可以在其中获得主动建议以优化您的存储环境）。
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-health-menu.png["健康菜单的屏幕截图。"]
+
+
+
+==== 治理菜单
+
+*治理*菜单包括*数据分类*，您可以在其中管理数据分类和合规性，以及*自动化中心*，您可以在其中创建和管理自动化工作流程。
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-governance-menu.png["治理菜单的屏幕截图。"]
+
+
+
+=== 元素、数据服务和功能的命名更加直观
+
+NetApp重命名了几个元素、数据服务和功能以明确其用途。主要变化包括：
+
+[cols="10,24"]
+|===
+| *曾用名* | * NetApp控制台名称* 
+
+
+| 连接器  a| 
+控制台代理。
+
+从*管理>代理*菜单查看、添加和管理您的代理。
+
+
+
+| 时间线页面  a| 
+审计页面
+
+从*管理>审计*菜单查看审计控制台活动。
+
+
+
+| 工作环境  a| 
+系统
+
+从*存储>管理*菜单查看、添加和管理您的系统。
+
+
+
+| BlueXP勒索软件防护  a| 
+NetApp勒索软件恢复能力。
+
+勒索软件恢复能力可帮助您保护数据并从勒索软件攻击中快速恢复。
+
+
+
+| BlueXP经济效率  a| 
+生命周期规划。
+
+生命周期规划可帮助您识别未使用和未充分利用的资源来优化存储成本。
+
+从*存储>生命周期规划*菜单访问生命周期规划。
+
+
+
+| BlueXP digital wallet  a| 
+许可证和订阅
+
+从*管理>许可证和订阅*菜单访问您的许可证和订阅。
+
+|===
+
+
+=== 控制台代理
+
+从*管理>代理*菜单访问和管理您的控制台代理。  NetApp已更改了为“*系统*”页面（以前称为“Canvas”）选择控制台代理的方式。  NetApp已将连接器菜单名称替换为图标image:icon-agent.png["代理图标"]，允许您选择要查看系统的控制台代理。
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-icon-menu.png["显示选择控制台代理的图标的屏幕截图。"]
+
+您还可以从*管理>代理*菜单管理您的代理。
+
+
+
+== 控制台代理 4.0.0
+
+此版本的控制台代理包括安全改进、错误修复和以下新功能。
+
+4.0.0 版本适用于标准模式和限制模式。
+
+
+
+=== 整合并减少所需的网络端点
+
+NetApp减少了控制台和控制台代理所需的网络端点，增强了安全性并简化了部署。重要的是，4.0.0 版本之前的所有部署都将继续得到全面支持。虽然以前的端点仍然可供现有代理使用，但NetApp强烈建议在确认代理升级成功后将防火墙规则更新到当前端点。
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["了解有关所需端点的更多信息。"]
+
+
+
+
+=== 支持 VCenter 部署控制台代理
+
+您可以使用 OVA 文件在 VMware 环境中部署控制台代理。 OVA 文件包含一个预配置的 VM 映像，其中包含控制台代理软件和用于连接到NetApp控制台的设置。可直接从NetApp控制台下载文件或部署 URL。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["了解如何在 VMware 环境中部署控制台代理。"]
+
+VMware 的控制台代理 OVA 提供了预配置的 VM 映像以便快速部署。
+
+
+
+=== 失败代理部署的验证报告
+
+当您从NetApp控制台部署控制台代理时，您现在可以选择验证代理配置。如果控制台无法部署代理，它会提供可下载的报告来帮助您排除故障。
+
+
+
+=== 改进了控制台代理的故障排除
+
+控制台代理已改进错误消息，可帮助您更好地了解问题。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html["了解如何排除控制台代理故障。"]
+
+
+
+== NetApp控制台
+
+NetApp控制台管理包括以下新功能：
+
+
+
+=== 主页仪表板
+
+NetApp控制台的主页仪表板提供存储基础设施的实时可见性，包括健康状况、容量、许可证状态和数据服务等指标。link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html["了解有关主页的更多信息。"]
+
+
+
+=== NetApp助手
+
+具有组织管理员角色的新用户可以使用NetApp助手配置控制台，包括添加代理、链接NetApp支持帐户以及添加存储系统。link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html["了解NetApp助手。"]
+
+
+
+=== 服务帐户身份验证
+
+NetApp控制台支持使用系统生成的客户端 ID 和密钥或客户管理的 JWT 进行服务帐户身份验证，从而允许组织选择最适合其安全要求和集成工作流程的方法。私钥 JWT 客户端身份验证使用非对称加密，比传统的客户端 ID 和秘密方法提供更强的安全性。私钥 JWT 客户端身份验证使用非对称加密，在客户环境中保证私钥的安全，降低凭证被盗风险，并提高自动化堆栈和客户端应用程序的安全性。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["了解如何添加服务帐户。"]
+
+
+
+=== 会话超时
+
+系统会在 24 小时后或用户关闭网络浏览器时注销用户。
+
+
+
+=== 支持组织之间的伙伴关系
+
+您可以在NetApp控制台中创建合作伙伴关系，让合作伙伴跨组织边界安全地管理NetApp资源，从而使协作更轻松、安全性更强。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["学习如何管理合作关系"] 。
+
+
+
+=== 超级管理员和超级查看者角色
+
+添加了*超级管理员*和*超级查看者*角色。  *超级管理员*授予对控制台功能、存储和数据服务的完全管理访问权限。 *超级查看器*为审计员和利益相关者提供只读可见性。这些角色对于高级成员较少、访问权限较广的小型团队很有用。为了提高安全性和可审计性，鼓励组织谨慎使用*超级管理员*访问权限，并尽可能分配细粒度的角色。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+
+
+=== 勒索软件抵御能力的额外作用
+
+添加了*勒索软件弹性用户行为管理员*角色和*勒索软件弹性用户行为查看器*角色。这些角色分别允许用户配置和查看用户行为和分析数据。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+
+
+=== 删除了支持聊天
+
+NetApp已从NetApp控制台中删除了支持聊天功能。使用“管理”>“支持”页面来创建和管理支持案例。

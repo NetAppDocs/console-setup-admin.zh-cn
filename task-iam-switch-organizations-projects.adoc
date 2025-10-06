@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-organizations-projects.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: 您可能属于多个控制台组织，或者有权访问组织内的多个项目或代理。需要时，您可以轻松地在组织、项目和控制台代理之间切换，以访问与该组织、项目或代理相关的资源。 
+---
+= 在控制台组织、项目和代理之间切换
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可能属于多个控制台组织，或者有权访问组织内的多个项目或代理。需要时，您可以轻松地在组织、项目和控制台代理之间切换，以访问与该组织、项目或代理相关的资源。
+
+
+TIP: 如果其他组织邀请您加入或者您自己创建一个组织，那么您可能属于多个组织。您可以使用 API 创建其他组织。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["了解如何创建新组织"^]
+
+
+
+== 在组织之间切换
+
+如果您是多个组织的成员，您可以随时在它们之间切换。
+
+.步骤
+. 在控制台的顶部标题中，选择*组织*。
++
+image:screenshot-iam-switch-organizations.png["顶部横幅的屏幕截图，您可以在其中选择组织下拉菜单，然后选择另一个组织。"]
+
+. 如果您有任何合作组织，请选择“*合作伙伴关系*”选项卡来查看可用的合作伙伴组织。
+
+
++ 如果您没有任何合作伙伴组织，则不会显示“合作伙伴关系”选项卡。
+
+. 选择另一个组织，然后选择*切换*。
+
+
++ 如果您有任何合作组织，请选择“合作伙伴关系”选项卡来查看可用的合作伙伴组织。
+
+
+
+== 在项目之间切换
+
+如果您的组织包含多个项目并且您有权访问这些项目，则您可以随时在它们之间切换。
+
+
+NOTE: 在查看任何*身份和访问*页面时，您无法切换到另一个项目。
+
+.步骤
+. 在控制台的顶部标题中，选择*项目*。
+. 浏览您组织中的文件夹和项目，选择您想要的项目，然后选择*切换*。
++
+image:screenshot-iam-switch-projects-select.png["范围菜单的屏幕截图，您可以在其中选择一个新项目。"]
+
+
+
+
+
+== 在控制台代理之间切换
+
+如果您有多个控制台代理，您可以在它们之间切换以查看与特定代理关联的系统。
+
+.步骤
+. 在控制台的顶部标题中，选择代理图标。
+. 选择另一个代理，然后选择*切换*。
+
+
+.相关信息
+link:task-iam-associate-connectors.html["将代理与文件夹和项目关联"] 。
+
+
+
+== 相关信息
+
+* link:concept-identity-and-access-management.html["了解NetApp控制台中的身份和访问权限"]
+* link:task-iam-get-started.html["开始使用身份和访问权限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身份和访问 API"^]
+

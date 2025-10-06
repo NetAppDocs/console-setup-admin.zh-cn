@@ -1,0 +1,822 @@
+---
+sidebar: sidebar 
+permalink: task-prepare-restricted-mode.html 
+keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
+summary: 在受限模式下部署NetApp控制台之前，请准备好您的环境。您需要查看主机要求、准备网络、设置权限等。 
+---
+= 准备在受限模式下部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在受限模式下部署NetApp控制台之前，请准备好您的环境。您需要查看主机要求、准备网络、设置权限等。
+
+
+
+== 步骤 1：了解受限模式的工作原理
+
+在开始之前了解NetApp控制台在受限模式下的工作方式。
+
+使用已安装的NetApp控制台代理本地提供的基于浏览器的界面。您无法从通过 SaaS 层提供的基于 Web 的控制台访问NetApp控制台。
+
+此外，并非所有控制台功能和NetApp数据服务都可用。
+
+link:concept-modes.html["了解限制模式的工作原理"] 。
+
+
+
+== 第 2 步：查看安装选项
+
+在受限模式下，您只能在云中安装控制台代理。有以下安装选项可用：
+
+* 来自 AWS Marketplace
+* 来自 Azure 市场
+* 在 AWS、Azure 或 Google Cloud 中运行的 Linux 主机上手动安装控制台代理
+
+
+
+
+== 步骤 3：查看主机要求
+
+主机必须满足特定的操作系统、RAM 和端口要求才能运行控制台代理。
+
+当您从 AWS 或 Azure 市场部署控制台代理时，映像包含所需的操作系统和软件组件。您只需选择满足 CPU 和 RAM 要求的实例类型。
+
+专用主机:: 与其他应用程序共享的主机不支持控制台代理。该主机必须是专用主机。主机可以是满足以下大小要求的任何架构：
++
+--
+* CPU：8 核或 8 个 vCPU
+* 内存：32 GB
+* 磁盘空间：建议主机预留165GB空间，分区要求如下：
++
+** `/opt`：必须有 120 GiB 可用空间
++
+代理使用 `/opt`安装 `/opt/application/netapp`目录及其内容。
+
+** `/var`：必须有 40 GiB 可用空间
++
+控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+
+
+
+
+
+--
+虚拟机管理程序:: 需要经过认证可运行受支持的操作系统的裸机或托管虚拟机管理程序。
+[[podman-versions]]操作系统和容器要求:: 在标准模式或受限模式下使用控制台时，控制台代理支持以下操作系统。安装代理之前需要一个容器编排工具。
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| 操作系统 | 支持的操作系统版本 | 支持的代理版本 | 所需的容器工具 | SELinux 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9.1 至 9.4
+
+8.6 至 8.10
+
+* 仅限英语版本。
+* 主机必须在 Red Hat 订阅管理中注册。如果未注册，主机将无法在代理安装期间访问存储库来更新所需的第三方软件。
+
+ a| 
+3.9.50 或更高版本，控制台处于标准模式或受限模式
+ a| 
+Podman 版本 4.6.1 或 4.9.4
+
+<<podman-configuration,查看 Podman 配置要求>> 。
+ a| 
+在强制模式或宽容模式下受支持
+
+* 操作系统上启用了 SELinux 的代理不支持对Cloud Volumes ONTAP系统的管理。
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24.04 LTS
+ a| 
+3.9.45 或更高版本， NetApp控制台处于标准模式或受限模式
+ a| 
+Docker Engine 23.06 至 28.0.0。
+ a| 
+不支持
+
+
+
+ a| 
+22.04 LTS
+ a| 
+3.9.50 或更高版本
+ a| 
+Docker Engine 23.0.6 至 28.0.0。
+ a| 
+不支持
+
+|===
+--
+AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 t3.2xlarge。
+Azure VM 大小:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 Standard_D8s_v3。
+Google Cloud 机器类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 n2-standard-8。
++
+--
+Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["受防护的虚拟机功能"^]
+
+--
+/opt 中的磁盘空间:: 必须有 100 GiB 可用空间
++
+--
+代理使用 `/opt`安装 `/opt/application/netapp`目录及其内容。
+
+--
+/var 中的磁盘空间:: 必须有 20 GiB 可用空间
++
+--
+控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+
+--
+
+
+
+
+== 步骤 4：安装 Podman 或 Docker Engine
+
+要手动安装控制台代理，请通过安装 Podman 或 Docker Engine 来准备主机。
+
+根据您的操作系统，安装代理之前需要 Podman 或 Docker Engine。
+
+* Red Hat Enterprise Linux 8 和 9 需要 Podman。
++
+<<podman-versions,查看支持的 Podman 版本>> 。
+
+* Ubuntu 需要 Docker 引擎。
++
+<<podman-versions,查看支持的 Docker Engine 版本>> 。
+
+
+
+.步骤
+[role="tabbed-block"]
+====
+.Podman
+--
+按照以下步骤安装和配置 Podman：
+
+* 启用并启动 podman.socket 服务
+* 安装python3
+* 安装 podman-compose 软件包版本 1.0.6
+* 将 podman-compose 添加到 PATH 环境变量
+* 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
+
+
+
+NOTE: 安装代理后调整 aardvark-dns 端口（默认值：53），以避免 DNS 端口冲突。按照说明配置端口。
+
+.步骤
+. 如果主机上安装了 podman-docker 包，请将其删除。
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. 安装 Podman。
++
+您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。
+
++
+对于 Red Hat Enterprise Linux 9：
+
++
+[source, cli]
+----
+sudo dnf install podman-2:<version>
+----
++
+其中 <version> 是您正在安装的 Podman 支持的版本。<<podman-versions,查看支持的 Podman 版本>> 。
+
++
+对于 Red Hat Enterprise Linux 8：
+
++
+[source, cli]
+----
+sudo dnf install podman-3:<version>
+----
++
+其中 <version> 是您正在安装的 Podman 支持的版本。<<podman-versions,查看支持的 Podman 版本>> 。
+
+. 启用并启动 podman.socket 服务。
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. 安装 python3。
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. 如果您的系统上还没有 EPEL 存储库包，请安装它。
+. 如果使用 Red Hat Enterprise：
++
+此步骤是必需的，因为 podman-compose 可从 Extra Packages for Enterprise Linux (EPEL) 存储库中获得。
+
++
+对于 Red Hat Enterprise Linux 9：
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+对于 Red Hat Enterprise Linux 8：
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+. 安装 podman-compose 包 1.0.6。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: 使用 `dnf install`命令满足将 podman-compose 添加到 PATH 环境变量的要求。安装命令将 podman-compose 添加到 /usr/bin，它已经包含在 `secure_path`主机上的选项。
+
+. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
++
+.. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+.. 如果 networkBackend 设置为 `CNI`，你需要将其更改为 `netavark`。
+.. 安装 `netavark`和 `aardvark-dns`使用以下命令：
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+.. 打开 `/etc/containers/containers.conf`文件并修改 network_backend 选项以使用“netavark”而不是“cni”。
+
+
++
+如果 `/etc/containers/containers.conf`不存在，请将配置更改为 `/usr/share/containers/containers.conf`。
+
+. 重新启动 podman。
++
+[source, cli]
+----
+systemctl restart podman
+----
+. 使用以下命令确认 networkBackend 现在已更改为“netavark”：
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+--
+.Docker 引擎
+--
+按照 Docker 的文档安装 Docker Engine。
+
+.步骤
+. https://docs.docker.com/engine/install/["查看 Docker 的安装说明"^]
++
+按照步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为控制台不支持它。
+
+. 验证 Docker 是否已启用并正在运行。
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+== 步骤 5：准备网络访问
+
+设置网络访问，以便控制台代理可以管理公共云中的资源。除了为控制台代理提供虚拟网络和子网之外，您还需要确保满足以下要求。
+
+连接到目标网络:: 确保控制台代理与存储位置有网络连接。例如，您计划部署Cloud Volumes ONTAP 的VPC 或 VNet，或者您的本地ONTAP集群所在的数据中心。
+准备网络以供用户访问NetApp控制台:: 在受限模式下，用户从控制台代理 VM 访问控制台。控制台代理联系几个端点来完成数据管理任务。当从控制台完成特定操作时，将从用户的计算机联系这些端点。
+
+
+
+NOTE: 4.0.0 版本之前的控制台代理需要额外的端点。如果您升级到 4.0.0 或更高版本，则可以从允许列表中删除旧端点。link:reference-networking-saas-console-previous.html["了解有关 4.0.0 之前版本所需的网络访问的更多信息。"]
+
++
+
+[cols="2*"]
+|===
+| 端点 | 目的 
+
+
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服务。 
+
+
+| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | 您的 Web 浏览器通过NetApp控制台连接到这些端点以进行集中用户身份验证。 
+|===
+用于日常运营的出站互联网访问:: 控制台代理的网络位置必须具有出站互联网访问权限。它需要能够访问NetApp控制台的 SaaS 服务以及各自公共云环境中的端点。
++
+--
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+AWS 环境
+
+
+
+ a| 
+AWS 服务（amazonaws.com）：
+
+* 云形成
+* 弹性计算云（EC2）
+* 身份和访问管理 (IAM)
+* 密钥管理服务（KMS）
+* 安全令牌服务 (STS)
+* 简单存储服务（S3）
+
+ a| 
+管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
+
+
+
+ a| 
+Azure 环境
+
+
+
+ a| 
+\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+ a| 
+管理 Azure 公共区域中的资源。
+
+
+
+ a| 
+\ https://management.usgovcloudapi.net \ https://login.microsoftonline.us \ https://blob.core.usgovcloudapi.net \ https://core.usgovcloudapi.net
+ a| 
+管理 Azure 政府区域中的资源。
+
+
+
+ a| 
+\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+ a| 
+管理 Azure 中国区域的资源。
+
+
+
+ a| 
+*Google Cloud 环境*
+
+
+
+ a| 
+\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+ a| 
+管理 Google Cloud 中的资源。
+
+
+
+ a| 
+* NetApp控制台端点*
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+在NetApp控制台中提供功能和服务。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+获取控制台代理升级的图像。
+
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
++
+尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
+
+* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
+
+
+|===
+--
+
+
+Azure 中的公共 IP 地址:: 如果要在 Azure 中将公共 IP 地址与控制台代理 VM 一起使用，则该 IP 地址必须使用基本 SKU 以确保控制台使用此公共 IP 地址。
++
+--
+image:screenshot-azure-sku.png["Azure 中创建新 IP 地址的屏幕截图，可让您在 SKU 字段下选择“基本”。"]
+
+如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果您用于访问控制台的机器无法访问该私有 IP 地址，则控制台中的操作将会失败。
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文档：公共 IP SKU"^]
+
+--
+
+
+代理服务器:: NetApp支持显式和透明代理配置。如果您使用透明代理，则只需要提供代理服务器的证书。如果您使用显式代理，您还需要 IP 地址和凭据。
++
+--
+* IP 地址
+* 凭据
+* HTTPS 证书
+
+
+--
+
+
+端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
+* 仅当需要连接到主机进行故障排除时才需要 SSH（22）。
+* 如果您在没有出站互联网连接的子网中部署Cloud Volumes ONTAP系统，则需要通过端口 3128 建立入站连接。
++
+如果Cloud Volumes ONTAP系统没有出站互联网连接来发送AutoSupport消息，控制台会自动配置这些系统以使用控制台代理附带的代理服务器。唯一的要求是确保控制台代理的安全组允许通过端口 3128 进行入站连接。部署控制台代理后，您需要打开此端口。
+
+
+
+--
+
+
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
++
+--
+如果您计划从云提供商的市场创建控制台代理，请在创建控制台代理后实现此网络要求。
+
+--
+
+
+
+
+== 步骤 6：准备云权限
+
+控制台代理需要云提供商的权限才能在虚拟网络中部署Cloud Volumes ONTAP并使用NetApp数据服务。您需要在云提供商中设置权限，然后将这些权限与控制台代理关联。
+
+要查看所需的步骤，请选择用于云提供商的身份验证选项。
+
+[role="tabbed-block"]
+====
+.AWS IAM 角色
+--
+使用 IAM 角色为控制台代理提供权限。
+
+如果您从 AWS Marketplace 创建控制台代理，则在启动 EC2 实例时系统会提示您选择该 IAM 角色。
+
+如果您在自己的 Linux 主机上手动安装控制台代理，请将角色附加到 EC2 实例。
+
+.步骤
+. 登录 AWS 控制台并导航到 IAM 服务。
+. 创建策略：
++
+.. 选择“策略”>“创建策略”。
+.. 选择 *JSON* 并复制并粘贴内容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+.. 完成剩余步骤以创建策略。
+
+
+. 创建 IAM 角色：
++
+.. 选择*角色 > 创建角色*。
+.. 选择 *AWS 服务 > EC2*。
+.. 通过附加刚刚创建的策略来添加权限。
+.. 完成剩余步骤以创建角色。
+
+
+
+
+.结果
+您现在拥有控制台代理 EC2 实例的 IAM 角色。
+
+--
+.AWS 访问密钥
+--
+为 IAM 用户设置权限和访问密钥。安装控制台代理并设置控制台后，您需要向控制台提供 AWS 访问密钥。
+
+.步骤
+. 登录 AWS 控制台并导航到 IAM 服务。
+. 创建策略：
++
+.. 选择“策略”>“创建策略”。
+.. 选择 *JSON* 并复制并粘贴内容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+.. 完成剩余步骤以创建策略。
++
+根据您计划使用的NetApp数据服务，您可能需要创建第二个策略。
+
++
+对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，因此需要两个策略。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"] 。
+
+
+
+. 将策略附加到 IAM 用户。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文档：创建 IAM 角色"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文档：添加和删除 IAM 策略"^]
+
+
+. 确保用户拥有访问密钥，您可以在安装控制台代理后将其添加到NetApp控制台。
+
+
+--
+.Azure 角色
+--
+创建具有所需权限的 Azure 自定义角色。您将把此角色分配给控制台代理 VM。
+
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+
+.步骤
+. 如果您计划在自己的主机上手动安装该软件，请在 VM 上启用系统分配的托管标识，以便您可以通过自定义角色提供所需的 Azure 权限。
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure 文档：使用 Azure 门户为 VM 上的 Azure 资源配置托管标识"^]
+
+. 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
+. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
++
+您应该为想要与NetApp控制台一起使用的每个 Azure 订阅添加 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. 使用 JSON 文件在 Azure 中创建自定义角色。
++
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
+
++
+.. 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+.. 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+.. 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+
+
+--
+.Azure 服务主体
+--
+在 Microsoft Entra ID 中创建并设置服务主体，并获取控制台所需的 Azure 凭据。安装控制台代理后，您需要向控制台提供这些凭据。
+
+.创建用于基于角色的访问控制的 Microsoft Entra 应用程序
+. 确保您在 Azure 中拥有创建 Active Directory 应用程序并将该应用程序分配给角色的权限。
++
+有关详细信息，请参阅 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 文档：所需权限"^]
+
+. 从 Azure 门户打开 *Microsoft Entra ID* 服务。
++
+image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory 服务。"]
+
+. 在菜单中，选择*应用程序注册*。
+. 选择*新注册*。
+. 指定有关应用程序的详细信息：
++
+** *名称*：输入应用程序的名称。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *重定向 URI*：您可以将此字段留空。
+
+
+. 选择*注册*。
++
+您已创建 AD 应用程序和服务主体。
+
+
+
+.将应用程序分配给角色
+. 创建自定义角色：
++
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+
++
+.. 复制link:reference-permissions-azure.html["控制台代理的自定义角色权限"]并将它们保存在 JSON 文件中。
+.. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
++
+您应该为用户将从中创建Cloud Volumes ONTAP系统的每个 Azure 订阅添加 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. 使用 JSON 文件在 Azure 中创建自定义角色。
++
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
+
++
+*** 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+*** 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+*** 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+现在您应该有一个名为“控制台操作员”的自定义角色，可以将其分配给控制台代理虚拟机。
+
+
+
+
+
+. 将应用程序分配给角色：
++
+.. 从 Azure 门户打开 *Subscriptions* 服务。
+.. 选择订阅。
+.. 选择“访问控制 (IAM)”>“添加”>“添加角色分配”。
+.. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
+.. 在“*成员*”选项卡中，完成以下步骤：
++
+*** 保持选中“*用户、组或服务主体*”。
+*** 选择*选择成员*。
++
+image:screenshot-azure-service-principal-role.png["向应用程序添加角色时显示“成员”页面的 Azure 门户屏幕截图。"]
+
+*** 搜索应用程序的名称。
++
+以下是一个例子：
+
++
+image:screenshot_azure_service_principal_role.png["Azure 门户的屏幕截图，显示了 Azure 门户中的“添加角色分配”表单。"]
+
+*** 选择应用程序并选择*选择*。
+*** 选择“下一步”。
+
+
+.. 选择*审阅+分配*。
++
+服务主体现在具有部署控制台代理所需的 Azure 权限。
+
++
+如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp控制台中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
+
+
+
+
+
+.添加 Windows Azure 服务管理 API 权限
+. 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
+. 选择*API 权限 > 添加权限*。
+. 在“Microsoft API”下，选择“Azure 服务管理”。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure 门户的屏幕截图，显示了 Azure 服务管理 API 权限。"]
+
+. 选择*以组织用户身份访问 Azure 服务管理*，然后选择*添加权限*。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，显示添加 Azure 服务管理 API。"]
+
+
+
+.获取应用程序的应用程序ID和目录ID
+. 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
+. 复制*应用程序（客户端）ID*和*目录（租户）ID*。
++
+image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+
++
+将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
+
+
+
+.创建客户端机密
+. 开启*Microsoft Entra ID*服务。
+. 选择*应用程序注册*并选择您的应用程序。
+. 选择*证书和机密>新客户端机密*。
+. 提供秘密的描述和持续时间。
+. 选择“*添加*”。
+. 复制客户端机密的值。
++
+image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示了 Microsoft Entra 服务主体的客户端机密。"]
+
+
+
+.结果
+您的服务主体现已设置完毕，您应该已经复制了应用程序（客户端）ID、目录（租户）ID 和客户端机密的值。添加 Azure 帐户时，您需要在控制台中输入此信息。
+
+--
+.Google Cloud 服务帐号
+--
+创建一个角色并将其应用于您将用于控制台代理 VM 实例的服务帐户。
+
+.步骤
+. 在 Google Cloud 中创建自定义角色：
++
+.. 创建一个 YAML 文件，其中包含在link:reference-permissions-gcp.html["Google Cloud 的控制台代理政策"]。
+.. 从 Google Cloud 激活云壳。
+.. 上传包含控制台代理所需权限的 YAML 文件。
+.. 使用创建自定义角色 `gcloud iam roles create`命令。
++
+以下示例在项目级别创建一个名为“connector”的角色：
+
++
+[source, gcloud]
+----
+gcloud iam roles create connector --project=myproject --file=connector.yaml
+----
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
+
+
+
+. 在 Google Cloud 中创建服务帐号：
++
+.. 从 IAM 和管理服务中，选择 *服务帐户 > 创建服务帐户*。
+.. 输入服务帐户详细信息并选择*创建并继续*。
+.. 选择您刚刚创建的角色。
+.. 完成剩余步骤以创建角色。
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文档：创建服务帐号"^]
+
+
+
+
+
+.结果
+您现在拥有一个可以分配给控制台代理 VM 实例的服务帐户。
+
+--
+====
+
+
+== 步骤 7：启用 Google Cloud API
+
+在 Google Cloud 中部署Cloud Volumes ONTAP需要多个 API。
+
+.步骤
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis["在您的项目中启用以下 Google Cloud API"^]
++
+** 云部署管理器 V2 API
+** 云日志 API
+** 云资源管理器 API
+** 计算引擎 API
+** 身份和访问管理 (IAM) API
+** 云密钥管理服务 (KMS) API
++
+（仅当您计划将NetApp Backup and Recovery 与客户管理加密密钥 (CMEK) 结合使用时才需要）
+
+
+
+

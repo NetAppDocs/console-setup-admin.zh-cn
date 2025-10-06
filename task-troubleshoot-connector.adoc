@@ -1,0 +1,280 @@
+---
+sidebar: sidebar 
+permalink: task-troubleshoot-connector.html 
+keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot connector, download failure, cloud volumes ontap download failure, agent 
+summary: 要解决控制台代理的问题，您可以与NetApp支持人员合作，他们可能会询问您的系统 ID、代理版本或最新的AutoSupport消息。您还可以查看NetApp知识库来自行解决问题。 
+---
+= 控制台代理故障排除
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+要解决控制台代理的问题，您可以自行验证问题或与NetApp支持人员合作，他们可能会询问您的系统 ID、代理版本或最新的AutoSupport消息。
+
+如果您有NetApp支持站点帐户，您还可以查看link:https://kb.netapp.com/Cloud/BlueXP["NetApp知识库。"]
+
+
+
+== 常见错误消息和解决方法
+
+下表列出了常见的错误信息及其解决建议：
+
+[cols="19,27,27"]
+|===
+| 错误消息 | 说明 | 该怎么办 
+
+
+ a| 
+无法加载控制台代理 UI
+ a| 
+代理安装失败
+ a| 
+* 验证服务管理器服务是否处于活动状态。
+* 验证所有容器是否正在运行。
+* 确保您的防火墙允许访问端口 8888 的服务。
+* 如果问题仍然存在，请联系支持人员。
+
+
+
+
+ a| 
+无法访问NetApp代理 UI
+ a| 
+尝试访问代理的 IP 地址时会出现此消息。如果代理没有正确的网络访问权限或不稳定，则代理可能无法初始化。
+ a| 
+* 连接到控制台代理。
+* 验证 Service Manager 服务
+* 验证代理是否具有所需的网络访问权限。link:reference-networking-saas-console.html["了解有关所需网络访问端点的更多信息。"]
+
+
+
+
+ a| 
+无法加载代理设置
+ a| 
+当您尝试访问代理设置页面时，控制台会显示此消息。
+ a| 
+* 检查 OCCM 容器是否正在运行并正常工作。
+* 如果问题仍然存在，请联系支持人员。
+
+
+
+
+ a| 
+无法加载代理的支持信息。
+ a| 
+如果代理无法访问您的支持帐户，则会显示此消息。
+ a| 
+* *。
+
+|===
+
+
+== 检查控制台代理状态
+
+使用以下命令之一来验证您的控制台代理。所有服务的状态都应为“正在运行”。如果不是这种情况，请联系NetApp支持。
+
+[NOTE]
+====
+有关访问控制台代理诊断的详细信息，请参阅以下主题：
+
+* link:task-maintain-connectors.html#connect-linux-host["检查控制台代理状态（适用于 Linux 主机部署）"]
+* link:task-agent-vm-config.html#connect-vcenter-host["检查控制台代理状态（针对 VCenter 部署）"]
+
+
+====
+Docker（用于 Ubuntu 和 VCenter 部署）::
++
+--
+[source, cli]
+----
+docker ps -a
+----
+--
+Podman（用于 RedHat Enterprise Linux 部署）::
++
+--
+[source, cli]
+----
+podman ps -a
+----
+--
+
+
+
+
+== 查看控制台代理版本
+
+查看控制台代理版本以确认升级或与您的NetApp代表共享。
+
+.步骤
+. 选择*管理>支持>代理*。
++
+控制台在页面顶部显示版本。
+
+
+
+
+
+== 验证网络访问
+
+确保控制台代理具有所需的网络访问权限。link:reference-networking-saas-console.html["了解有关所需网络接入点的更多信息。"]
+
+
+
+== 控制台代理安装问题
+
+如果安装失败，请查看报告和日志以解决问题。
+
+您还可以直接从以下目录中的控制台代理主机访问 JSON 格式的验证报告和配置日志：
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----
+[IMPORTANT]
+====
+* 对于新代理部署， NetApp会检查以下端点：link:reference-networking-saas-console.html["此处列出"^] 。如果您使用之前用于升级的端点，则此配置检查将失败并出现错误，link:reference-networking-saas-console-previous.html["此处列出"] 。  NetApp建议您尽快更新防火墙规则，以允许访问当前端点并阻止访问以前的端点link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新您的网络"]。
+* 如果您更新防火墙中的端点，您现有的代理将继续工作。
+
+
+====
+
+
+=== 禁用手动安装的配置检查
+
+有时您可能需要禁用在安装期间验证出站连接的配置检查。例如：
+
+* 在政府云环境中手动安装代理时，您需要禁用配置检查，否则安装将失败。
+* 如果您继续使用以前的端点列表进行代理升级，您可能还需要禁用这些检查。
+
+
+.步骤
+您可以通过在 _com/opt/application/netapp/service-manager-2/config.json_ 文件中设置 _skipConfigCheck_ 标志来禁用配置检查。默认情况下，此标志设置为 false，并且配置检查会验证代理的出站访问。将此标志设置为 true 以禁用检查。在完成此步骤之前，您应该熟悉 JSON 语法。
+
+要重新启用配置检查，请使用以下步骤并将_skipConfigCheck_标志设置为false。
+
+.步骤
+. 以 root 身份或使用 sudo 权限访问控制台代理主机。
+. 创建 _/opt/application/netapp/service-manager-2/config.json_ 文件的备份副本，以确保您可以恢复更改。
+. 通过运行以下命令停止服务管理器 2 服务：
+
+
+[source, cli]
+----
+systemctl stop netapp-service-manager.service
+----
+. 编辑 _/opt/application/netapp/service-manager-2/config.json_ 文件并将 _skipConfigCheck_ 标志的值更改为 true。
++
+[source, json]
+----
+  "skipConfigCheck": true,
+----
+. 保存您的文件。
+. 通过运行以下命令重新启动服务管理器 2 服务：
++
+[source, cli]
+----
+systemctl restart netapp-service-manager.service
+----
+
+
+
+
+=== 用于升级的端点安装失败
+
+如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为避免这种情况，请在安装到 VCenter 时取消选中 *验证代理配置* 复选框或跳过配置检查。
+
+NetApp建议更新防火墙规则以允许访问link:reference-networking-saas-console.html["当前端点"]尽早。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新您的端点"] 。
+
+请务必验证唯一的错误是否与前面的端点有关：
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+如果存在其他错误，您需要先解决它们，然后才能继续。
+
+
+
+== 与NetApp支持部门合作
+
+如果您无法解决控制台代理的问题，您可能需要联系NetApp支持。  NetApp支持人员可能会要求您提供控制台代理 ID，或者如果他们还没有控制台代理日志，则要求您将控制台代理日志发送给他们。
+
+
+
+=== 查找控制台代理 ID
+
+为了帮助您入门，您可能需要控制台代理的系统 ID。该 ID 通常用于许可和故障排除目的。
+
+.步骤
+. 选择*管理>支持>代理*。
++
+您可以在页面顶部找到系统 ID。
+
++
+*例子*
+
++
+image:screenshot-system-id.png["显示支持仪表板中出现的系统 ID 的屏幕截图。"]
+
+. 将鼠标悬停在 ID 上并单击即可复制它。
+
+
+
+
+=== 下载或发送AutoSupport消息
+
+如果您遇到问题， NetApp可能会要求您向NetApp支持发送AutoSupport消息以进行故障排除。
+
+
+NOTE: 由于负载平衡， NetApp控制台最多需要五个小时才能发送AutoSupport消息。对于紧急通信，请下载文件并手动发送。
+
+.步骤
+. 选择*管理>支持>代理*。
+. 根据您需要向NetApp支持发送信息的方式，选择以下选项之一：
++
+.. 选择将AutoSupport消息下载到本地计算机的选项。然后，您可以使用首选方法将其发送给NetApp支持。
+.. 选择“发送AutoSupport”以将消息直接发送给NetApp支持。
+
+
+
+
+
+
+== 修复使用 Google Cloud NAT 网关时下载失败的问题
+
+控制台代理会自动下载Cloud Volumes ONTAP 的软件更新。如果您的配置使用 Google Cloud NAT 网关，则可能导致下载失败。您可以通过限制软件映像划分的部分数来解决此问题。此步骤必须使用 API 完成。
+
+.步骤
+. 向 /occm/config 提交 PUT 请求，并将以下 JSON 作为正文：
++
+[source]
+----
+{
+  "maxDownloadSessions": 32
+}
+----
++
+_maxDownloadSessions_ 的值可以是 1 或任何大于 1 的整数。如果值为1，则下载的图像不会被分割。
+
++
+请注意，32 是一个示例值。该值取决于您的 NAT 配置和同时会话的数量。
+
+
+
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#occmconfig["了解有关 /occm/config API 调用的更多信息"^]
+
+
+
+== 从NetApp知识库获取帮助
+
+https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki["查看NetApp支持团队创建的故障排除信息"] 。

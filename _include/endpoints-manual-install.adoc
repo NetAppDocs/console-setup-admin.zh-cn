@@ -1,0 +1,124 @@
+= 
+:allow-uri-read: 
+
+
+手动安装期间联系的端点:: 当您在自己的 Linux 主机上手动安装控制台代理时，控制台代理的安装程序在安装过程中需要访问以下 URL：
+
+
+[cols="2*"]
+|===
+| 端点 | 目的 
+
+
+| \ https://mysupport.netapp.com |  
+
+
+| \ https://signin.b2c.netapp.com | （此端点是https://mysupport.netapp.com的 CNAME URL） 
+
+
+| \ https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+ a| 
+* 选项 1（推荐）：
++
+** \ https://bluexpinfraprod.eastus2.data.azurecr.io
+** \ https://bluexpinfraprod.azurecr.io
+
+
+* 选项 2:
++
+** \https://*.blob.core.windows.net
+** \ https://cloudmanagerinfraprod.azurecr.io
+
+
+
+ a| 
+为了获取图像，安装程序需要访问这两组端点中的一组。 ^1^ 建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：
+
+* 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。
+* 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。
+* 如果您将控制台代理与NetApp Backup and Recovery 或NetApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
+
+
+|===
+手动安装期间联系的端点:: 当您在自己的 Linux 主机上手动安装控制台代理时，控制台代理的安装程序在安装过程中需要访问多个 URL。
+
+
+[cols="2*"]
+|===
+| 端点 | 目的 
+
+
+| \ https://mysupport.netapp.com |  
+
+
+| \ https://signin.b2c.netapp.com | 此端点是 \ https://mysupport.netapp.com的 CNAME URL 
+
+
+| \ https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+2+| *AWS 政府区域* 如果您在 AWS 政府区域安装控制台代理，则安装程序还需要访问以下端点： 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\ https://cloudmanagerinfraprod.azurecr.io
+ a| 
+
+
+
+2+| *Azure 政府区域* 如果在 Azure 政府区域中安装控制台代理，则安装程序还需要访问以下端点： 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\ https://occmclientinfragov.azurecr.us
+ a| 
+
+
+
+2+| *商业或主权区域* 如果您在商业区域或主权区域安装控制台代理，则可以在两组端点之间进行选择： 
+
+
+ a| 
+**选项 1（推荐）：** * \ https://bluexpinfraprod.eastus2.data.azurecr.io * \ https://bluexpinfraprod.azurecr.io
+
+**选项 2：** * \https://*.blob.core.windows.net * \ https://cloudmanagerinfraprod.azurecr.io
+ a| 
+建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：
+
+* 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。
+* 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。
+* 如果您将控制台代理与NetApp Backup and Recovery 或NetApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
+
+
+|===
++
+
+建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：** 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。 ** 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。 ** 如果您将控制台代理与NetApp Backup and Recovery 或 NetpApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
+
+主机可能会在安装期间尝试更新操作系统包。主机可以联系不同的镜像站点来获取这些操作系统包。

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-iam-audit-actions-timeline.html 
+keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
+summary: 从审计页面监控或审计NetApp控制台身份和访问管理操作。 
+---
+= 监控或审计 IAM 活动
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您需要监控或审计与身份和访问相关的已完成的操作，您可以从审计页面查看详细信息。例如，您可能想要验证谁向组织添加了成员或者项目是否已成功删除。
+
+.步骤
+. 选择“管理”>“审计”。
+. 在*审计*页面上，使用过滤器缩小结果范围。选择*服务*，然后选择*租赁*。
+. 使用任何其他过滤器来更改表中显示的操作。
++
+例如，您可以使用*用户*过滤器来显示与特定用户帐户相关的操作。
+
+

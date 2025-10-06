@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+使用基于 Web 的NetApp控制台时从计算机联系的端点::
++
+--
+从 Web 浏览器访问控制台的计算机必须能够联系多个端点。您需要使用控制台来设置控制台代理并进行控制台的日常使用。
+
+link:reference-networking-saas-console.html["为NetApp控制台准备网络"] 。
+
+--
+

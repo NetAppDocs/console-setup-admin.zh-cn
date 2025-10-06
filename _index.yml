@@ -1,0 +1,86 @@
+---
+indexpage:
+  title: NetApp控制台设置和管理文档
+  summary: 开始使用NetApp Console，以便您可以开始在本地和云环境中构建、保护和管理数据。设置完成后，您可以使用身份和访问管理 (IAM) 控制对资源的访问、管理控制台代理、云提供商帐户等。
+  keywords: bluexp, netapp console, Console agents, accounts, get started, setup,
+    administration, sign up, log in, login, permissions
+  lead: 开始使用NetApp Console，以便您可以开始在本地和云环境中构建、保护和管理数据。设置完成后，您可以使用身份和访问管理 (IAM) 控制对资源的访问、管理控制台代理、云提供商帐户等。
+  tiles:
+  - title: 开始使用
+    links:
+    - title: 了解NetApp控制台
+      url: concept-overview.html
+    - title: 了解部署模式
+      url: concept-modes.html
+    - title: 开始使用标准模式
+      url: task-quick-start-standard-mode.html
+    - title: 开始使用受限模式
+      url: "/task-quick-start-restricted-mode.html"
+  - title: 设置身份和访问权限
+    links:
+    - title: 了解控制台身份和访问管理 (IAM)
+      url: concept-identity-and-access-management.html
+    - title: 开始使用身份和访问权限
+      url: task-iam-get-started.html
+    - title: 使用文件夹和项目组织您的资源
+      url: task-iam-manage-folders-projects.html
+    - title: 添加成员和服务帐户
+      url: task-iam-manage-members-permissions.html
+    - title: 使用角色控制成员对资源的访问
+      url: task-iam-manage-roles.html
+  - title: 控制台代理
+    links:
+    - title: 了解控制台代理
+      url: concept-connectors.html
+    - title: 查看 AWS 权限
+      url: reference-permissions-aws.html
+    - title: 查看 Azure 权限
+      url: reference-permissions-azure.html
+    - title: 查看 Google Cloud 权限
+      url: reference-permissions-gcp.html
+  - title: AWS
+    links:
+    - title: 在标准 AWS 区域开始使用
+      url: task-quick-start-standard-mode.html
+    - title: 在 AWS GovCloud 区域开始使用
+      url: task-quick-start-restricted-mode.html
+    - title: 开始使用 AWS Secret 或 Top Secret Cloud
+      url: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html
+    - title: 查看控制台代理的 IAM 策略
+      url: reference-permissions-aws.html
+    - title: 管理凭据和订阅
+      url: task-adding-aws-accounts.html
+  - title: Azure
+    links:
+    - title: 在标准 Azure 区域中开始使用
+      url: task-quick-start-standard-mode.html
+    - title: 在 Azure 政府区域开始使用
+      url: task-quick-start-restricted-mode.html
+    - title: Azure IL6 入门
+      url: task-quick-start-private-mode.html
+    - title: 查看控制台代理的自定义角色
+      url: reference-permissions-azure.html
+    - title: 管理凭据和订阅
+      url: task-adding-azure-accounts.html
+  - title: Google Cloud
+    links:
+    - title: 在标准 Google Cloud 区域开始使用
+      url: task-quick-start-standard-mode.html
+    - title: 查看控制台代理的服务帐户
+      url: reference-permissions-gcp.html
+    - title: 管理凭据和订阅
+      url: task-adding-gcp-accounts.html
+  - title: 本地
+    links:
+    - title: 在标准模式下手动安装和设置控制台代理
+      url: task-install-connector-on-prem.html
+    - title: 在 VCenter 中安装并设置控制台代理
+      url: task-install-agent-on-prem-ova.html
+  - title: 博客和社区
+    links:
+    - title: NetApp控制台
+      url: https://www.netapp.com/console
+    - title: NetApp数据服务
+      url: https://www.netapp.com/data-services/
+    - title: NetApp 社区
+      url: https://community.netapp.com/

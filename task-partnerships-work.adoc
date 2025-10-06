@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-work.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: 一旦您在合作伙伴组织中被赋予角色，您就可以切换到该组织并执行您有权执行的操作。 
+---
+= 在合作组织工作
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+一旦您在合作伙伴组织中被赋予角色，您就可以切换到该组织并执行您有权执行的操作。
+
+使用组织菜单在您的组织和您有权访问的任何合作伙伴组织之间切换。link:task-iam-switch-organizations-projects.html["了解有关切换组织和项目的更多信息。"]
+
+您将能够看到合作伙伴组织中与您共享的资源，并根据分配给您的角色执行操作。与您的合作伙伴管理员合作，确保您拥有需要访问的资源的适当角色。

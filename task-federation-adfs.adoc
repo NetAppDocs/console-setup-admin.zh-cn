@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-federation-adfs.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: '与您的 Active Directory 联合身份验证服务 (AD FS) 联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
+---
+= 将NetApp控制台与 Active Directory 联合服务 (AD FS) 联合起来
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+将您的 Active Directory 联合身份验证服务 (AD FS) 与NetApp控制台联合起来，以便为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录控制台。
+
+.必需角色
+需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+
+NOTE: 您可以与您的企业 IdP 或NetApp支持站点联合。  NetApp建议选择其中一个，但不要同时选择两者。
+
+NetApp仅支持服务提供商发起的（SP发起的） SSO。首先，配置身份提供者以信任NetApp控制台作为服务提供者。然后，使用您的身份提供商的配置在控制台中创建连接。
+
+您可以与 AD FS 服务器建立联合，以启用NetApp控制台的单点登录 (SSO)。该过程涉及配置您的 AD FS 以信任控制台作为服务提供商，然后在NetApp控制台中创建连接。
+
+.开始之前
+* 需要具有管理权限的 IdP 帐户。与您的 IdP 管理员协调以完成这些步骤。
+* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp控制台中验证您的域"]话题。
+
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择“*Federation*”以查看“*Federations*”页面。
+. 选择*配置新联合*。
+. 输入您的域名详细信息：
++
+.. 选择您是否要使用已验证的域名或您的电子邮件域名。电子邮件域是与您登录的帐户关联的域。
+.. 输入您正在配置的联盟的名称。
+.. 如果您选择已验证的域，请从列表中选择该域。
+
+
+. 选择“下一步”。
+. 对于您的连接方法，选择*协议*，然后选择*Active Directory 联合身份验证服务 (AD FS)*。
+. 选择“下一步”。
+. 在您的 AD FS 服务器中创建依赖方信任。您可以使用 PowerShell 或在 AD FS 服务器上手动配置它。有关如何创建信赖方信任的详细信息，请参阅 AD FS 文档。
++
+.. 使用以下脚本通过 PowerShell 创建信任：
++
+[source, powershell]
+----
+(new-object Net.WebClient -property @{Encoding = [Text.Encoding]::UTF8}).DownloadString("https://raw.github.com/auth0/AD FS-auth0/master/AD FS.ps1") | iex
+AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.auth0.com/login/callback"
+----
+.. 或者，您可以在 AD FS 管理控制台中手动创建信任。创建信任时使用以下NetApp控制台值：
++
+*** 创建依赖信任标识符时，使用 **YOUR_TENANT** 值： `netapp-cloud-account`
+*** 当您选择 *启用对 WS-Federation 的支持* 时，请使用 **YOUR_AUTH0_DOMAIN** 值： `netapp-cloud-account.auth0.com`
+
+
+.. 创建信任后，从 AD FS 服务器复制元数据 URL 或下载联合元数据文件。您需要此 URL 或文件来完成控制台中的连接。
+
+
++
+NetApp建议使用元数据 URL 让NetApp控制台自动检索最新的 AD FS 配置。如果您下载联合元数据文件，则每当 AD FS 配置发生更改时，都需要在NetApp控制台中手动更新它。
+
+. 返回控制台，然后选择“下一步”来创建连接。
+. 创建与 AD FS 的连接。
++
+.. 输入您在上一步中从 AD FS 服务器复制的 *AD FS URL* 或上传您从 AD FS 服务器下载的联合元数据文件。
+
+
+. 选择*创建连接*。建立连接可能需要几秒钟。
+. 选择“下一步”。
+. 选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的 IdP 凭据登录以完成测试并返回控制台以启用连接。
+. 选择“下一步”。
+. 在“启用联合”页面上，查看联合详细信息，然后选择“启用联合”。
+. 选择“*完成*”以完成该过程。
+
+
+启用联合后，用户可以使用其公司凭据登录NetApp控制台。

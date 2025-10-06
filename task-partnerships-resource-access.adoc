@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-resource-access.html 
+keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+summary: 您可以通过为合作伙伴用户分配组织内文件夹和项目的特定角色来授予他们访问权限。 
+---
+= 为合作伙伴用户提供资源访问
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以通过为合作伙伴用户分配组织内文件夹和项目的特定角色来授予他们访问权限。
+
+.必需角色
+合伙管理员。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+合作伙伴组织必须先将成员添加到合作伙伴关系中，然后您才能为他们分配组织中资源的角色。link:task-partnerships-assign-users.html["了解如何向合作关系添加成员。"]
+
+
+
+== 了解合作伙伴用户的角色
+
+您可以按照管理自己的角色的方式来管理合作伙伴组织成员的角色。然而，并非所有角色都适合合作伙伴用户。特别是，您不能授予合作伙伴用户允许软件更新的角色。更新ONTAP软件通常需要直接网络访问。
+
+您可以为合作伙伴用户分配以下角色：
+
+* link:reference-iam-platform-roles.html#organization-admin-roles["组织管理员"]
+* link:reference-iam-platform-roles.html#organization-admin-roles["文件夹或项目管理员"]
+* link:reference-iam-platform-roles.html#federation-roles["联盟管理员"]
+* link:reference-iam-platform-roles.html#federation-roles["联邦查看器"]
+* link:reference-iam-backup-rec-roles.html["备份和恢复管理员"]
+* link:reference-iam-backup-rec-roles.html["备份查看器"]
+* link:reference-iam-backup-rec-roles.html["恢复管理员"]
+* link:reference-iam-backup-rec-roles.html["克隆管理员"]
+* link:reference-iam-disaster-rec-roles.html["灾难恢复管理员"]
+* link:reference-iam-disaster-rec-roles.html["灾难恢复故障转移管理员"]
+* link:reference-iam-disaster-rec-roles.html["灾难恢复应用程序管理员"]
+* link:reference-iam-disaster-rec-roles.html["灾难恢复查看器"]
+* link:reference-iam-storage-roles.html["运营支持分析师"]
+* link:reference-iam-predefined-roles.html["分类查看器"]
+
+
+link:reference-iam-predefined-roles.html["了解有关预定义角色的更多信息"]
+
+
+
+== 向合作伙伴用户添加角色
+
+您可以通过向成员添加角色来提供对组织资源的访问权限。分配角色时，您指定一个资源和一个角色。您可以为一个用户分配多个角色。
+
+例如，如果您有两个项目，并且希望同一个用户同时拥有这两个项目的备份和恢复管理员角色，则您需要为每个项目的用户提供该角色。同样，如果您想为同一个项目的用户提供两个不同的角色，则需要分别分配每个角色。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择*合作伙伴关系*。
+. 选择*合作伙伴关系已启动*选项卡。
+. 选择操作菜单image:icon-action.png["带有三个垂直点的图标"]在您想要查看的已建立的合作关系旁边，选择“查看详细信息”。
++
+*成员*列表显示合作伙伴组织已添加到合作伙伴关系的成员。
+
+. 选择操作菜单image:icon-action.png["带有三个垂直点的图标"]在您想要分配角色的成员旁边，选择“添加角色”。
+. 要添加角色，请完成对话框中的步骤：
++
+** *选择组织、文件夹或项目*：选择成员应具有权限的资源层次结构级别。
++
+如果您选择组织或文件夹，则该成员将拥有该组织或文件夹内所有内容的权限。
+
+** *选择类别*：选择角色类别。link:reference-iam-predefined-roles.html["了解访问角色"^] 。
+** 选择*角色*：选择一个角色，该角色为成员提供与您选择的组织、文件夹或项目相关的资源的权限。
+** *添加角色*：如果您想提供对组织内其他文件夹或项目的访问权限，请选择*添加角色*，指定另一个文件夹或项目或角色类别，然后选择一个角色类别和相应的角色。
+
+
+. 选择*添加新角色*。
+
+
+
+
+== 更改或删除合作伙伴用户的角色
+
+您可以更改或删除分配给合作伙伴组织成员的角色。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择*合作伙伴关系*。
+. 选择*合作伙伴关系已启动*选项卡。
+. 选择操作菜单image:icon-action.png["带有三个垂直点的图标"]在您想要查看的已建立的合作关系旁边，选择“查看详细信息”。
++
+*成员*列表显示合作伙伴组织已添加到合作伙伴关系的成员。
+
+. 从“成员”页面，导航到表中的成员，选择image:icon-action.png["三个并排的点组成的图标"]然后选择*查看详细信息*。
+. 在表格中，展开要更改成员分配角色的组织、文件夹或项目的相应行，然后在“*角色*”列中选择“*查看*”以查看分配给该成员的角色。
+. 您可以更改成员的现有角色或删除角色。
++
+.. 要更改成员的角色，请选择要更改的角色旁边的“*更改*”。您只能将角色更改为同一角色类别内的角色。例如，您可以从一个数据服务角色更改为另一个数据服务角色。确认更改。
+.. 要取消分配成员的角色，请选择image:icon-delete.png["类似垃圾桶的图标"]取消为该成员分配相应的角色。系统会要求您确认删除。
+
+
+

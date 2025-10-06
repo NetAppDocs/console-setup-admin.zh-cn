@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-keystone-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: NetApp控制台身份和访问管理提供了两个Keystone角色，您可以将其分配给组织成员。 
+---
+= NetApp控制台中的Keystone访问角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Keystone角色提供对Keystone仪表板的访问权限，并允许用户查看和管理他们的Keystone订阅。 Keystone角色有两种： Keystone管理员和Keystone查看者。这两个角色的主要区别在于他们在Keystone中可以采取的行动。  Keystone管理员角色是唯一允许创建服务请求或修改订阅的角色。
+
+.NetApp控制台中的Keystone角色示例
+XYZ 公司有四名来自不同部门的存储工程师查看Keystone订阅信息。虽然所有这些用户都需要监控Keystone订阅，但只有团队负责人才被允许提出服务请求。团队中的三名成员被赋予 * Keystone查看者* 角色，而团队负责人被赋予 * Keystone管理员* 角色，以便对公司的服务请求进行控制。
+
+下表列出了每个Keystone角色可以执行的操作。
+
+[cols="40,20a,20a"]
+|===
+| 特征和动作 | Keystone管理员 | Keystone查看器 
+
+
+| 查看以下选项卡：订阅、资产、监控和管理  a| 
+是
+ a| 
+是
+
+
+
+3+| * Keystone订阅页面*： 
+
+
+| 查看订阅  a| 
+是
+ a| 
+是
+
+
+
+| 修改或续订  a| 
+是
+ a| 
+否
+
+
+
+3+| * Keystone资产页面*： 
+
+
+| 查看资产  a| 
+是
+ a| 
+是
+
+
+
+| 管理资产  a| 
+是
+ a| 
+否
+
+
+
+3+| * Keystone警报页面*： 
+
+
+| 查看警报  a| 
+是
+ a| 
+否
+
+
+
+| 管理警报  a| 
+是
+ a| 
+否
+
+
+
+| 为自己创建提醒  a| 
+是
+ a| 
+是
+
+
+
+3+| *许可证和订阅*： 
+
+
+| 可以查看许可证和订阅  a| 
+是
+ a| 
+是
+
+
+
+3+| * Keystone报告页面*： 
+
+
+| 下载报告  a| 
+是
+ a| 
+是
+
+
+
+| 管理报告  a| 
+是
+ a| 
+是
+
+
+
+| 为自己创建报告  a| 
+是
+ a| 
+是
+
+
+
+3+| *服务请求*： 
+
+
+| 创建服务请求  a| 
+是
+ a| 
+否
+
+
+
+| 查看组织内任何用户创建的服务请求  a| 
+是
+ a| 
+是
+
+|===

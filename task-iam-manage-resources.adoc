@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-resources.html 
+keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
+summary: 通过将资源与特定项目和文件夹关联来管理组织的资源层次结构。 
+---
+= 管理NetApp控制台组织中的资源层次结构
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当您将成员与您的组织关联时，您会在组织、文件夹或项目级别提供权限。为了确保这些成员有权访问正确的资源，您需要通过将资源与特定项目和文件夹关联来管理组织的资源层次结构。  _资源_是控制台已经管理或知道的存储系统或控制台代理。
+
+
+
+== 查看组织中的资源
+
+您可以查看与您的组织相关的已发现和未发现的资源。未发现的资源是已识别但尚未添加到控制台的存储资源。
+
+
+NOTE: 注意：资源页面不包括Amazon FSx for NetApp ONTAP资源，因为用户无法将它们与角色关联。在系统页面或工作负载中查看它们。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择*资源*。
+. 选择*高级搜索和过滤*。
+. 使用任何可用选项来查找您正在寻找的资源：
++
+** *按资源名称搜索*：输入文本字符串并选择*添加*。
+** *平台*：选择一个或多个平台，例如 Amazon Web Services。
+** *资源*：选择一个或多个资源，例如Cloud Volumes ONTAP。
+** *组织、文件夹或项目*：选择整个组织、特定文件夹或特定项目。
+
+
+. 选择*搜索*。
+
+
+
+
+== 将资源与文件夹和项目关联
+
+将资源与文件夹或项目关联以使其可用。
+
+.开始之前
+您应该了解资源关联是如何工作的。link:concept-identity-and-access-management.html#resources["了解资源，包括何时将资源与文件夹关联"] 。
+
+.步骤
+. 从“资源”页面，导航到表中的资源，选择image:icon-action.png["三个并排的点组成的图标"]然后选择*关联到文件夹或项目*。
+. 选择一个文件夹或项目，然后选择*接受*。
+. 要关联其他文件夹或项目，请选择*添加文件夹或项目*，然后选择该文件夹或项目。
++
+请注意，您只能从您拥有管理员权限的文件夹和项目中进行选择。
+
+. 选择*关联资源*。
++
+** 如果您将资源与项目关联，则拥有这些项目权限的成员现在可以从控制台访问该资源。
+** 如果您将资源与文件夹关联，则_文件夹或项目管理员_现在可以访问该资源并将其与文件夹内的项目关联。link:concept-identity-and-access-management.html#resources["了解如何将资源与文件夹关联"] 。
+
+
+
+
+.完成后
+如果您使用控制台代理发现资源，请将控制台代理与项目关联以授予访问权限。否则，没有“组织管理员”角色的成员将无法访问控制台代理及其相关资源。
+
+link:task-iam-associate-connectors.html["了解如何将控制台代理与文件夹或项目关联"] 。
+
+
+
+== 查看与资源关联的文件夹和项目
+
+您可以查看与特定资源关联的文件夹和项目。
+
+
+NOTE: 如果您需要了解哪些组织成员有权访问该资源，您可以link:task-iam-manage-folders-projects.html#view-associated-resources-members["查看有权访问与资源关联的文件夹和项目的成员"]。
+
+.步骤
+. 从“资源”页面，导航到表中的资源，选择image:icon-action.png["三个并排的点组成的图标"]然后选择*查看详细信息*。
+
+
+以下示例显示了与一个项目关联的资源。
+
+image:screenshot-iam-resource-details.png["资源详细信息页面的屏幕截图，显示与组织下属项目关联的资源。"]
+
+
+NOTE: 如果您需要确定哪些组织成员有权访问该资源，您可以link:task-iam-manage-folders-projects.html#view-associated-resources-members["查看有权访问与资源关联的文件夹和项目的成员"]。
+
+
+
+== 从文件夹或项目中删除资源
+
+要从文件夹或项目中删除资源，您需要删除文件夹或项目与资源之间的关联。当您删除关联时，它会阻止成员管理文件夹或项目中的资源。
+
+
+NOTE: 要从整个组织中删除已发现的资源，请从“*系统*”页面中删除该系统。
+
+.步骤
+. 从“资源”页面，导航到表中的资源，选择image:icon-action.png["三个并排的点组成的图标"]然后选择*查看详细信息*。
+. 对于要删除资源的文件夹或项目，选择image:icon-delete.png["垃圾桶的图标"]
+. 通过选择“*删除*”确认您要删除关联。
+
+
+
+
+== 相关信息
+
+* link:concept-identity-and-access-management.html["了解NetApp控制台中的身份和访问权限"]
+* link:task-iam-get-started.html["开始在NetApp控制台中使用身份和访问权限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身份和访问 API"^]
+

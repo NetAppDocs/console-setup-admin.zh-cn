@@ -1,0 +1,285 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-backup-rec-roles.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
+summary: 您可以为用户分配以下角色，以便他们访问控制台内的NetApp Backup and Recovery。备份和恢复角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。 
+---
+= NetApp控制台中的NetApp备份和恢复角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以为用户分配以下角色，以便他们访问控制台内的NetApp Backup and Recovery。备份和恢复角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。
+
+备份和恢复使用以下角色：
+
+* *备份和恢复超级管理员*：执行任何操作。
+* *备份和恢复管理*：执行本地快照备份、复制到二级存储以及备份到对象存储。
+* *备份和恢复恢复管理员*：恢复工作负载。
+* *备份和恢复克隆管理员*：克隆应用程序和数据。
+* *备份和恢复查看器*：查看备份和恢复信息。
+
+
+下表列出了每个角色可以执行的操作。
+
+[cols="20,20,15,15a,15a,15a"]
+|===
+| 特征和动作 | 备份和恢复超级管理员 | 备份管理员 | 恢复管理员 | 克隆管理员 | 查看器 
+
+
+| 添加、编辑或删除主机 | 是 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 安装插件 | 是 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 添加凭据（主机、实例、vCenter） | 是 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 查看仪表板和所有选项卡 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 开始免费试用 | 是 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 启动工作负载发现 | 否 | 是  a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+| 查看许可证信息 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 激活许可证 | 是 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 查看主机 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+6+| *时间表*： 
+
+
+| 激活计划 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+| 暂停时间表 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+6+| *政策与保护*： 
+
+
+| 查看保护计划 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 创建、修改或删除保护计划 | 是 | 是  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 恢复工作负载 | 是 | 否  a| 
+是
+ a| 
+否
+ a| 
+否
+
+
+
+| 创建、拆分或删除克隆 | 是 | 否  a| 
+否
+ a| 
+是
+ a| 
+否
+
+
+
+| 创建、修改或删除策略 | 是 | 是  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *报告*： 
+
+
+| 查看报告 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 创建报告 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+| 删除报告 | 是 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *从SnapCenter导入并管理主机*： 
+
+
+| 查看导入的SnapCenter数据 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 从SnapCenter导入数据 | 是 | 是  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 管理（迁移）主机 | 是 | 是  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *配置设置*： 
+
+
+| 配置日志目录 | 是 | 是  a| 
+是
+ a| 
+否
+ a| 
+否
+
+
+
+| 关联或删除实例凭证 | 是 | 是  a| 
+是
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *桶*： 
+
+
+| 查看存储桶 | 是 | 是  a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+| 创建、编辑或删除存储桶 | 是 | 是  a| 
+否
+ a| 
+否
+ a| 
+否
+
+|===

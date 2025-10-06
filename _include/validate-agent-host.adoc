@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+您还可以直接从以下目录中的控制台代理主机访问 JSON 格式的验证报告和配置日志：
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----

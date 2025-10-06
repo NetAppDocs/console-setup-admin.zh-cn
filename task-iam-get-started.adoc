@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-iam-get-started.html 
+keywords: iam, quick start, get started, get started with iam, identity and access management 
+summary: 要在NetApp控制台中开始身份和访问管理，请自定义组织的层次结构、添加其他成员、添加或发现资源，并将这些资源与项目关联。 
+---
+= 开始在NetApp控制台中使用身份和访问权限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当您注册NetApp控制台时，系统会提示您创建一个新的组织。该组织包括一名成员（组织管理员）和一个默认项目。要设置身份和访问管理 (IAM) 来满足您的业务需求，您需要自定义组织的层次结构、添加其他成员、添加或发现资源，并在整个层次结构中关联这些资源。
+
+您必须拥有*组织管理员*权限才能管理整个组织的身份和访问权限。如果您具有*文件夹或项目管理员*权限，则您只能管理您有权限的文件夹和项目。
+
+按照以下步骤建立一个新组织。该顺序可能会根据您组织的需求而有所不同。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]编辑默认项目或添加到组织的层次结构
+[role="quick-margin-para"]
+使用默认项目或创建与您的业务层次结构相匹配的其他项目和文件夹。
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-projects.html["了解如何使用文件夹和项目来组织资源"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]将成员与您的组织关联
+[role="quick-margin-para"]
+将用户帐户链接到您的组织并分配权限。您还可以选择向您的组织添加服务帐户。
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html["了解如何管理成员及其权限"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]添加或发现资源
+[role="quick-margin-para"]
+向控制台添加或发现资源（系统）。组织成员从项目内部管理系统。
+
+[role="quick-margin-para"]
+了解如何创建或发现资源：
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/index.html["Amazon FSx for NetApp ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-e-series/index.html["E系列系统"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["本地ONTAP集群"^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/index.html["StorageGRID"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]将资源与其他项目关联
+[role="quick-margin-para"]
+在控制台中添加或发现系统会自动将资源与当前选定的项目关联。要使该资源可用于组织中的另一个项目，请将其与相应的项目关联。如果使用控制台代理来管理资源，请将控制台代理与相应的项目关联。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html["了解如何管理组织的资源层次结构"] 。
+* link:task-iam-associate-connectors.html["了解如何将控制台代理与文件夹或项目关联"] 。
+
+
+.相关信息
+* link:concept-identity-and-access-management.html["了解NetApp控制台中的身份和访问管理"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身份和访问 API"^]
+

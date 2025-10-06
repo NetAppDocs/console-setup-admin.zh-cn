@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-default-config.html 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+summary: 在部署控制台代理之前，请详细了解它。 
+---
+= 控制台代理的默认配置
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在部署控制台代理之前，请了解有关其配置的更多信息。
+
+
+
+== 可访问互联网的默认配置
+
+如果您从NetApp控制台、云提供商的市场部署了控制台代理，或者在具有 Internet 访问权限的本地 Linux 主机上手动安装了控制台代理，则以下配置详细信息适用。
+
+
+
+=== AWS 详细信息
+
+如果您从控制台或云提供商的市场部署了控制台代理，请注意以下事项：
+
+* EC2 实例类型为 t3.2xlarge。
+* 该图像的操作系统是 Ubuntu 22.04 LTS。
++
+该操作系统不包含 GUI。您必须使用终端来访问系统。
+
+* 安装包括 Docker Engine，它是必需的容器编排工具。
+* EC2 Linux 实例的用户名是 ubuntu（对于 2023 年 5 月之前创建的代理，用户名是 ec2-user）。
+* 默认系统磁盘是 100 GiB gp2 磁盘。
+
+
+
+
+=== Azure 详细信息
+
+如果您从控制台或云提供商的市场部署了控制台代理，请注意以下事项：
+
+* VM 类型为 Standard_D8s_v3。
+* 该图像的操作系统是 Ubuntu 22.04 LTS。
++
+该操作系统不包含 GUI。您必须使用终端来访问系统。
+
+* 安装包括 Docker Engine，它是必需的容器编排工具。
+* 默认系统盘为100GiB高级SSD盘。
+
+
+
+
+=== Google Cloud 详细信息
+
+如果您从控制台部署了控制台代理，请注意以下事项：
+
+* VM 实例是 n2-standard-8。
+* 该图像的操作系统是 Ubuntu 22.04 LTS。
++
+该操作系统不包含 GUI。您必须使用终端来访问系统。
+
+* 安装包括 Docker Engine，它是必需的容器编排工具。
+* 默认系统磁盘是 100 GiB SSD 持久磁盘。
+
+
+
+
+=== 安装文件夹
+
+代理安装文件夹位于以下位置：
+
+/opt/应用程序/netapp/cloudmanager
+
+
+
+=== 日志文件
+
+日志文件包含在以下文件夹中：
+
+* /opt/application/netapp/cloudmanager/log 或
+* /opt/application/netapp/service-manager-2/logs（从新的 3.9.23 安装开始）
++
+这些文件夹中的日志提供了有关控制台代理的详细信息。
+
+* /opt/应用程序/netapp/cloudmanager/docker_occm/数据/日志
++
+此文件夹中的日志提供有关云服务和在控制台代理上运行的控制台服务的详细信息。
+
+
+
+
+
+=== 控制台代理服务
+
+* 控制台代理服务名为 occm。
+* occm 服务依赖于 MySQL 服务。
++
+如果 MySQL 服务关闭，那么 occm 服务也会关闭。
+
+
+
+
+
+=== 端口
+
+代理在 Linux 主机上使用以下端口：
+
+* 80 用于 HTTP 访问
+* 443 用于 HTTPS 访问
+
+
+
+
+== 无需互联网访问的默认配置
+
+如果您在没有互联网访问权限的本地 Linux 主机上手动安装了控制台代理，则适用以下配置。link:task-quick-start-private-mode.html["了解有关此安装选项的更多信息"] 。
+
+* 代理安装文件夹位于以下位置：
++
+/opt/应用程序/netapp/ds
+
+* 日志文件包含在以下文件夹中：
++
+/var/lib/docker/volumes/ds_occmdata/_data/log
+
++
+此文件夹中的日志提供有关控制台代理和 Docker 映像的详细信息。
+
+* 所有服务都在docker容器内运行
++
+这些服务依赖于docker运行时服务的运行
+
+* 代理在 Linux 主机上使用以下端口：
++
+** 80 用于 HTTP 访问
+** 443 用于 HTTPS 访问
+
+
+

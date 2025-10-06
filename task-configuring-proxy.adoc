@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: task-configuring-proxy.html 
+keywords: proxy, proxy server, proxy, internet, HTTP, http, https, bluexp 
+summary: 如果您的公司政策要求您使用代理服务器进行所有与互联网的通信，那么您需要配置您的代理以使用该代理服务器。如果您在安装期间没有将控制台代理配置为使用代理服务器，那么您可以随时将控制台代理配置为使用该代理服务器。 
+---
+= 配置控制台代理以使用代理服务器
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您的公司政策要求您使用代理服务器进行所有与互联网的通信，那么您需要配置您的代理以使用该代理服务器。如果您在安装期间没有将控制台代理配置为使用代理服务器，那么您可以随时将控制台代理配置为使用该代理服务器。
+
+代理的代理服务器无需公共 IP 或 NAT 网关即可实现出站互联网访问。代理服务器仅为控制台代理提供出站连接，而不为Cloud Volumes ONTAP系统提供出站连接。
+
+如果Cloud Volumes ONTAP系统缺少出站互联网访问，控制台会将其配置为使用控制台代理的代理服务器。您必须确保控制台代理的安全组允许通过端口 3128 进行入站连接。部署控制台代理后打开此端口。
+
+如果控制台代理本身没有出站互联网连接， Cloud Volumes ONTAP系统将无法使用配置的代理服务器。
+
+
+
+== 支持的配置
+
+* 为Cloud Volumes ONTAP系统提供服务的代理支持透明代理服务器。如果您将NetApp数据服务与Cloud Volumes ONTAP一起使用，请为Cloud Volumes ONTAP创建专用代理，您可以在其中使用透明代理服务器。
+* 所有代理都支持显式代理服务器，包括管理Cloud Volumes ONTAP系统的代理和管理NetApp数据服务的代理。
+* HTTP 和 HTTPS。
+* 代理服务器可以位于云端或您的网络中。
+
+
+
+IMPORTANT: 一旦配置了代理，您就无法更改代理类型。如果需要更改代理类型，请删除控制台代理并添加具有新代理类型的新代理。
+
+
+
+== 在控制台代理上启用显式代理
+
+当您将控制台代理配置为使用代理服务器时，该代理及其管理的Cloud Volumes ONTAP系统（包括任何 HA 中介）都会使用代理服务器。
+
+此操作重新启动控制台代理。在继续之前，请验证控制台代理是否空闲。
+
+.步骤
+. 选择“*管理 > 代理*”。
+. 在*概览*页面上，选择控制台代理的操作菜单，然后选择*编辑代理*。
++
+控制台代理必须处于活动状态才能对其进行编辑。
+
+. 选择*HTTP代理配置*。
+. 在配置类型字段中选择*显式代理*。
+. 选择*启用代理*。
+. 使用语法指定服务器 http://_address:port_[]或者 https://_address:port_[]
+. 如果服务器需要基本身份验证，请指定用户名和密码。
++
+请注意以下事项：
+
++
+** 用户可以是本地用户或域用户。
+** 对于域用户，您必须输入 \ 的 ASCII 代码，如下所示：domain-name%92user-name
++
+例如：netapp%92proxy
+
+** 控制台不支持包含 @ 字符的密码。
+
+
+. 选择*保存*。
+
+
+
+
+== 为控制台代理启用透明代理
+
+仅Cloud Volumes ONTAP支持在控制台代理上使用透明代理。如果您除了Cloud Volumes ONTAP之外还使用NetApp数据服务，则应创建一个单独的代理来用于数据服务或用于Cloud Volumes ONTAP。
+
+启用透明代理前，请确保满足以下要求：
+
+* 代理与透明代理服务器安装在同一网络上。
+* 代理服务器上启用了 TLS 检查。
+* 您有一个 PEM 格式的证书，与透明代理服务器上使用的证书相匹配。
+* 您不要将控制台代理用于除Cloud Volumes ONTAP之外的任何NetApp数据服务。
+
+
+要将现有代理配置为使用透明代理服务器，请使用可通过控制台代理主机上的命令行获取的控制台代理维护工具。
+
+当您配置代理服务器时，控制台代理将重新启动。在继续之前，请验证控制台代理是否空闲。
+
+.步骤
+确保您拥有代理服务器的 PEM 格式的证书文件。如果您没有证书，请联系您的网络管理员获取证书。
+
+. 在控制台代理主机上打开命令行界面。
+. 导航到控制台代理维护工具目录： `/opt/application/netapp/service-manager-2/agent-maint-console`
+. 运行以下命令启用透明代理，其中 `/home/ubuntu/<certificate-file>.pem`是您拥有的代理服务器证书文件的目录和名称：
++
+[source, CLI]
+----
+./agent-maint-console proxy add -c /home/ubuntu/<certificate-file>.pem
+----
++
+确保证书文件为 PEM 格式并与命令位于同一目录中，或者指定证书文件的完整路径。
+
++
+[source, CLI]
+----
+./agent-maint-console proxy add -c /home/ubuntu/<certificate-file>.pem
+----
+
+
+
+
+=== 修改控制台代理的透明代理
+
+您可以使用 `proxy update`命令或使用 `proxy remove`命令。有关详细信息，请参阅link:reference-connector-maint-console.html["代理维护控制台"]。
+
+
+IMPORTANT: 一旦配置了代理，您就无法更改代理类型。如果需要更改代理类型，请删除控制台代理并添加具有新代理类型的新代理。
+
+
+
+== 如果控制台代理无法访问互联网，请更新它
+
+如果您的网络代理配置发生变化，您的代理可能会失去对互联网的访问权限。例如，如果有人更改了代理服务器的密码或更新了证书。在这种情况下，您需要直接从控制台代理主机访问 UI 并更新设置。确保您可以通过网络访问控制台代理主机，并且可以登录控制台。
+
+
+
+== 启用直接 API 流量
+
+如果您将控制台代理配置为使用代理服务器，则可以在控制台代理上启用直接 API 流量，以便将 API 调用直接发送到云提供商服务，而无需通过代理。在 AWS、Azure 或 Google Cloud 中运行的代理支持此选项。
+
+如果您禁用带有Cloud Volumes ONTAP 的Azure Private Links 并使用服务端点，请启用直接 API 流量。否则，流量将无法正确路由。
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解有关将 Azure Private Link 或服务端点与Cloud Volumes ONTAP结合使用的更多信息"^]
+
+.步骤
+. 选择“*管理 > 代理*”。
+. 在*概览*页面上，选择控制台代理的操作菜单，然后选择*编辑代理*。
++
+控制台代理必须处于活动状态才能对其进行编辑。
+
+. 选择*支持直接 API 流量*。
+. 选中复选框以启用该选项，然后选择*保存*。
+

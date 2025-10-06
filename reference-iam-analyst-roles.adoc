@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: NetApp控制台身份和访问管理提供支持分析师角色来协助监控和支持案例。 
+---
+= NetApp控制台的运营支持分析师访问角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以为用户分配以下角色，以便他们访问警报和监控。具有此角色的用户还可以打开支持案例。
+
+
+
+== 运营支持分析师
+
+[cols="1,2"]
+|===
+| 任务 | 可以执行 
+
+
+| 从“设置”>“凭证”管理自己的用户凭证 | 是 
+
+
+| 查看发现的资源 | 是 
+
+
+| 通过控制台注册支持并提交案例 | 是 
+
+
+| 是 | 查看审核页面和通知 
+
+
+| 是 | 查看、下载和配置警报 
+|===

@@ -1,0 +1,14 @@
+= 
+:allow-uri-read: 
+
+
+* 云部署管理器 V2 API
+* 云日志 API
+* 云资源管理器 API
+* 计算引擎 API
+* 身份和访问管理 (IAM) API
+* 云密钥管理服务 (KMS) API
++
+（仅当您计划将NetApp Backup and Recovery 与客户管理加密密钥 (CMEK) 结合使用时才需要）
+
+

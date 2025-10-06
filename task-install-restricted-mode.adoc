@@ -1,0 +1,496 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode.html 
+keywords: government region, gov, govcloud, connector, sovereign cloud 
+summary: 以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp控制台。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。 
+---
+= 在限制模式下部署控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp控制台。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。
+
+
+
+== 步骤 1：安装控制台代理
+
+从云提供商的市场安装控制台代理或在 Linux 主机上手动安装。
+
+[role="tabbed-block"]
+====
+.AWS 商业市场
+--
+.开始之前
+您应该具有以下内容：
+
+* 满足组网需求的VPC及子网。
++
+link:task-prepare-restricted-mode.html["了解网络要求"]
+
+* 具有附加策略的 IAM 角色，其中包含控制台代理所需的权限。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何设置 AWS 权限"]
+
+* 您的 IAM 用户订阅和取消订阅 AWS Marketplace 的权限。
+* 了解实例的 CPU 和 RAM 要求。
++
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["审查实例要求"] 。
+
+* EC2 实例的密钥对。
+
+
+.步骤
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp控制台代理列表"^]
+. 在市场页面上，选择*继续订阅*。
+. 要订阅该软件，请选择*接受条款*。
++
+订阅过程可能需要几分钟。
+
+. 订阅过程完成后，选择*继续配置*。
+. 在*配置此软件*页面上，确保您选择了正确的区域，然后选择*继续启动*。
+. 在*启动此软件*页面的*选择操作*下，选择*通过 EC2 启动*，然后选择*启动*。
++
+使用 EC2 控制台启动实例并附加 IAM 角色。使用“从网站启动”操作无法实现这一点。
+
+. 按照提示配置并部署实例：
++
+** *名称和标签*：输入实例的名称和标签。
+** *应用程序和操作系统映像*：跳过此部分。控制台代理 AMI 已被选中。
+** *实例类型*：根据区域可用性，选择满足 RAM 和 CPU 要求的实例类型（预先选择并推荐 t3.2xlarge）。
+** *密钥对（登录）*：选择您想要用来安全连接到实例的密钥对。
+** *网络设置*：根据需要编辑网络设置：
++
+*** 选择所需的 VPC 和子网。
+*** 指定实例是否应具有公共 IP 地址。
+*** 指定安全组设置，为控制台代理实例启用所需的连接方法：SSH、HTTP 和 HTTPS。
++
+link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
+
+
+
+** *配置存储*：保留根卷的默认大小和磁盘类型。
++
+如果要在根卷上启用 Amazon EBS 加密，请选择 *高级*，展开 *卷 1*，选择 *加密*，然后选择一个 KMS 密钥。
+
+** *高级详细信息*：在 *IAM 实例配置文件* 下，选择包含控制台代理所需权限的 IAM 角色。
+** *摘要*：查看摘要并选择*启动实例*。
+
+
+
+
+.结果
+AWS 使用指定的设置启动软件。控制台代理实例和软件运行大约需要五分钟。
+
+.下一步是什么？
+设置NetApp控制台。
+
+--
+.AWS 政府市场
+--
+.开始之前
+您应该具有以下内容：
+
+* 满足组网需求的VPC及子网。
++
+link:task-prepare-restricted-mode.html["了解网络要求"]
+
+* 具有附加策略的 IAM 角色，其中包含控制台代理所需的权限。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何设置 AWS 权限"]
+
+* 您的 IAM 用户订阅和取消订阅 AWS Marketplace 的权限。
+* EC2 实例的密钥对。
+
+
+.步骤
+. 转到 AWS Marketplace 中提供的NetApp控制台代理。
++
+.. 打开 EC2 服务并选择 *启动实例*。
+.. 选择 *AWS Marketplace*。
+.. 搜索NetApp Console 并选择产品。
++
+image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜索NetApp控制台后显示的屏幕截图"]
+
+.. 选择*继续*。
+
+
+. 按照提示配置并部署实例：
++
+** *选择实例类型*：根据区域可用性，选择一种受支持的实例类型（建议使用 t3.2xlarge）。
++
+link:task-prepare-restricted-mode.html["查看实例要求"] 。
+
+** *配置实例详细信息*：选择 VPC 和子网，选择您在步骤 1 中创建的 IAM 角色，启用终止保护（推荐），并选择任何其他符合您要求的配置选项。
++
+image:screenshot_aws_iam_role.gif["显示 AWS 中配置实例页面上的字段的屏幕截图。选择了您应该在步骤 1 中创建的 IAM 角色。"]
+
+** *添加存储*：保留默认存储选项。
+** *添加标签*：如果需要，输入实例的标签。
+** *配置安全组*：指定控制台代理实例所需的连接方法：SSH、HTTP 和 HTTPS。
+** *审查*：审查您的选择并选择*启动*。
+
+
+
+
+.结果
+AWS 使用指定的设置启动软件。控制台代理实例和软件运行大约需要五分钟。
+
+.下一步是什么？
+设置控制台。
+
+--
+.Azure 政府市场
+--
+.开始之前
+您应该具有以下内容：
+
+* 满足网络要求的 VNet 和子网。
++
+link:task-prepare-restricted-mode.html["了解网络要求"]
+
+* 包含控制台代理所需权限的 Azure 自定义角色。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何设置 Azure 权限"]
+
+
+
+.步骤
+. 转到 Azure 市场中的NetApp控制台代理 VM 页面。
++
+** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商业区域的 Azure 市场页面"^]
+** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure 政府区域的 Azure 市场页面"^]
+
+
+. 选择*立即获取*，然后选择*继续*。
+. 从 Azure 门户中，选择“*创建*”并按照步骤配置虚拟机。
++
+配置虚拟机时请注意以下事项：
+
++
+** *VM 大小*：选择满足 CPU 和 RAM 要求的 VM 大小。我们推荐 Standard_D8s_v3。
+** *磁盘*：控制台代理可以通过 HDD 或 SSD 磁盘实现最佳性能。
+** *公共 IP*：如果您想将公共 IP 地址与控制台代理 VM 一起使用，则该 IP 地址必须使用基本 SKU 以确保控制台使用此公共 IP 地址。
++
+image:screenshot-azure-sku.png["Azure 中创建新 IP 地址的屏幕截图，可让您在 SKU 字段下选择“基本”。"]
+
++
+如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果您用于访问控制台的机器无法访问该私有 IP 地址，则控制台中的操作将会失败。
+
++
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文档：公共 IP SKU"^]
+
+** *网络安全组*：控制台代理需要使用 SSH、HTTP 和 HTTPS 的入站连接。
++
+link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
+
+** *身份*：在*管理*下，选择*启用系统分配的托管身份*。
++
+此设置很重要，因为托管身份允许控制台代理虚拟机向 Microsoft Entra ID 标识自己，而无需提供任何凭据。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["详细了解 Azure 资源的托管标识"^] 。
+
+
+
+. 在“*审查 + 创建*”页面上，审查您的选择并选择“*创建*”以开始部署。
+
+
+.结果
+Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件应在大约五分钟内运行。
+
+.下一步是什么？
+设置NetApp控制台。
+
+--
+.手动安装
+--
+.开始之前
+您应该具有以下内容：
+
+* 安装控制台代理的 root 权限。
+* 如果控制台代理需要代理才能访问互联网，则提供有关代理服务器的详细信息。
++
+您可以选择在安装后配置代理服务器，但这样做需要重新启动控制台代理。
+
+* 如果代理服务器使用 HTTPS 或代理是拦截代理，则需要 CA 签名的证书。
+
+
+
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-connector-maint-console.html["代理维护控制台"]。
+
+* 您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。link:task-troubleshoot-connector.html["了解如何禁用手动安装的配置检查。"]
+* 根据您的操作系统，在安装控制台代理之前需要 Podman 或 Docker Engine。
+
+
+.关于此任务
+NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。
+
+.步骤
+. 如果主机上设置了 _http_proxy_ 或 _https_proxy_ 系统变量，请将其删除：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+如果不删除这些系统变量，安装将失败。
+
+. 从下载控制台代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]，然后将其复制到Linux主机上。
++
+您应该下载适用于您的网络或云中的“在线”代理安装程序。
+
+. 分配运行脚本的权限。
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+其中 <version> 是您下载的控制台代理的版本。
+
+. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-connector.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
+. 运行安装脚本。
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+如果您的网络需要代理来访问互联网，则需要添加代理信息。您可以添加透明或显式代理。 --proxy 和 --cacert 参数是可选的，系统不会提示您添加它们。如果您有代理服务器，则需要输入所示的参数。
+
++
+以下是使用 CA 签名证书配置显式代理服务器的示例：
+
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`使用以下格式之一将控制台代理配置为使用 HTTP 或 HTTPS 代理服务器：
+
++
+** \http://地址:端口
+** \http://用户名:密码@地址:端口
+** \http://域名%92用户名:密码@地址:端口
+** \https://地址:端口
+** \https://用户名:密码@地址:端口
+** \https://域名%92用户名:密码@地址:端口
++
+请注意以下事项：
+
++
+*** 用户可以是本地用户或域用户。
+*** 对于域用户，您必须使用 \ 的 ASCII 代码，如上所示。
+*** 控制台代理不支持包含 @ 字符的用户名或密码。
+*** 如果密码包含以下任何特殊字符，则必须在该特殊字符前面加上反斜杠来转义该特殊字符：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@地址:3128
+
+
+
+
+
+
+
+`--cacert`指定用于控制台代理和代理服务器之间的 HTTPS 访问的 CA 签名证书。  HTTPS代理服务器、拦截代理服务器、透明代理服务器都需要此参数。
+
++ 下面是配置透明代理服务器的示例。配置透明代理时，不需要定义代理服务器。您只需将 CA 签名的证书添加到控制台代理主机：
+
++
+
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. 如果您使用 Podman，则需要调整 aardvark-dns 端口。
++
+.. 通过 SSH 连接到控制台代理虚拟机。
+.. 打开 podman _/usr/share/containers/containers.conf_ 文件并修改 Aardvark DNS 服务的选定端口。例如，将其更改为54。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. 重新启动控制台代理虚拟机。
+
+
+
+
+.结果
+控制台代理现已安装。安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。
+
+.下一步是什么？
+设置NetApp控制台。
+
+--
+====
+
+
+== 第 2 步：设置NetApp控制台
+
+首次访问控制台时，系统会提示您为控制台代理选择一个组织，并需要启用受限模式。
+
+.开始之前
+设置控制台代理的人员必须使用尚不属于控制台组织的登录名登录控制台。
+
+如果您的登录信息与其他组织相关联，则您需要使用新的登录信息进行注册。否则，您将不会在设置屏幕上看到启用受限模式的选项。
+
+.步骤
+. 从与控制台代理实例有连接的主机打开 Web 浏览器，然后输入您安装的控制台代理的以下 URL。
+. 注册或登录NetApp控制台。
+. 登录后，设置控制台：
++
+.. 输入控制台代理的名称。
+.. 输入新控制台组织的名称。
+.. 选择*您是否在安全环境中运行？*
+.. 选择*在此帐户上启用受限模式*。
++
+请注意，帐户创建后您无法更改此设置。您以后无法启用受限模式，也无法禁用它。
+
++
+如果您在政府区域部署了控制台代理，则该复选框已启用且无法更改。这是因为限制模式是政府区域唯一支持的模式。
+
+.. 选择*让我们开始吧*。
+
+
+
+
+.结果
+控制台代理现已安装并设置到您的控制台组织。所有用户都需要使用控制台代理实例的 IP 地址访问控制台。
+
+.下一步是什么？
+向控制台提供您之前设置的权限。
+
+
+
+== 步骤 3：提供对NetApp控制台的权限
+
+如果您从 Azure 市场部署了控制台代理，或者手动安装了控制台代理软件，则需要提供之前设置的权限。
+
+如果您从 AWS Marketplace 部署了控制台代理，则这些步骤不适用，因为您在部署期间选择了所需的 IAM 角色。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何准备云权限"] 。
+
+[role="tabbed-block"]
+====
+.AWS IAM 角色
+--
+将您之前创建的 IAM 角色附加到安装了控制台代理的 EC2 实例。
+
+仅当您在 AWS 中手动安装了控制台代理时，这些步骤才适用。对于 AWS Marketplace 部署，您已将控制台代理实例与包含所需权限的 IAM 角色关联。
+
+.步骤
+. 转到 Amazon EC2 控制台。
+. 选择*实例*。
+. 选择控制台代理实例。
+. 选择*操作 > 安全 > 修改 IAM 角色*。
+. 选择 IAM 角色并选择 *更新 IAM 角色*。
+
+
+--
+.AWS 访问密钥
+--
+向NetApp控制台提供具有所需权限的 IAM 用户的 AWS 访问密钥。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择*组织凭证*。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Amazon Web Services > 代理。
+.. *定义凭证*：输入 AWS 访问密钥和密钥。
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+--
+.Azure 角色
+--
+转到 Azure 门户并将 Azure 自定义角色分配给一个或多个订阅的控制台代理虚拟机。
+
+.步骤
+. 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
++
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp控制台内完成操作的能力将受到影响。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
+
+. 选择*访问控制 (IAM)* > *添加* > *添加角色分配*。
+. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
++
+
+NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色选择了不同的名称，则选择该名称。
+
+. 在“*成员*”选项卡中，完成以下步骤：
++
+.. 分配对*托管身份*的访问权限。
+.. 选择“选择成员”，选择创建控制台代理虚拟机的订阅，在“托管标识”下，选择“虚拟机”，然后选择控制台代理虚拟机。
+.. 选择*选择*。
+.. 选择“下一步”。
+.. 选择*审阅+分配*。
+.. 如果要管理其他 Azure 订阅中的资源，请切换到该订阅，然后重复这些步骤。
+
+
+
+
+--
+.Azure 服务主体
+--
+向NetApp控制台提供您之前设置的 Azure 服务主体的凭据。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Microsoft Azure > 代理*。
+.. *定义凭据*：输入有关授予所需权限的 Microsoft Entra 服务主体的信息：
++
+*** 应用程序（客户端）ID
+*** 目录（租户）ID
+*** 客户端机密
+
+
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+.结果
+NetApp控制台现在具有代表您在 Azure 中执行操作所需的权限。
+
+--
+.Google Cloud 服务帐号
+--
+将服务帐户与控制台代理 VM 关联。
+
+.步骤
+. 转到 Google Cloud 门户并将服务帐户分配给控制台代理 VM 实例。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文档：更改实例的服务帐户和访问范围"^]
+
+. 如果您想管理其他项目中的资源，请通过将具有控制台代理角色的服务帐户添加到该项目来授予访问权限。您需要对每个项目重复此步骤。
+
+
+--
+====

@@ -1,0 +1,258 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-aws-marketplace.html 
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
+summary: 要从 AWS Marketplace 创建控制台代理，您需要设置网络、准备 AWS 权限、查看实例要求，然后创建控制台代理。 
+---
+= 从 AWS Marketplace 创建控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以直接从 AWS Marketplace 在 AWS 中创建控制台代理。要从 AWS Marketplace 创建控制台代理，您需要设置网络、准备 AWS 权限、查看实例要求，然后创建控制台代理。
+
+.开始之前
+* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
+
+
+
+
+== 步骤 1：设置网络
+
+确保控制台代理的网络位置满足以下要求以管理混合云资源。
+
+VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和子网。
+
+
+连接到目标网络:: 控制台代理需要与您计划创建和管理系统的位置建立网络连接。例如，您计划在本地环境中创建Cloud Volumes ONTAP系统或存储系统的网络。
+
+
+出站互联网访问:: 部署控制台代理的网络位置必须具有出站互联网连接才能联系特定端点。
+
+
+从控制台代理联系的端点:: 控制台代理需要出站互联网访问来联系以下端点，以管理公共云环境中的资源和流程以进行日常操作。
++
+--
+下面列出的端点都是 CNAME 条目。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+AWS 服务（amazonaws.com）：
+
+* 云形成
+* 弹性计算云（EC2）
+* 身份和访问管理 (IAM)
+* 密钥管理服务（KMS）
+* 安全令牌服务 (STS)
+* 简单存储服务（S3）
+
+ a| 
+管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+在NetApp控制台中提供功能和服务。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+获取控制台代理升级的图像。
+
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
++
+尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
+
+* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
+
+
+|===
+--
+
+
+代理服务器:: NetApp支持显式和透明代理配置。如果您使用透明代理，则只需要提供代理服务器的证书。如果您使用显式代理，您还需要 IP 地址和凭据。
++
+--
+* IP 地址
+* 凭据
+* HTTPS 证书
+
+
+--
+
+
+端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
+* 仅当需要连接到主机进行故障排除时才需要 SSH（22）。
+* 如果您在没有出站互联网连接的子网中部署Cloud Volumes ONTAP系统，则需要通过端口 3128 建立入站连接。
++
+如果Cloud Volumes ONTAP系统没有出站互联网连接来发送AutoSupport消息，控制台会自动配置这些系统以使用控制台代理附带的代理服务器。唯一的要求是确保控制台代理的安全组允许通过端口 3128 进行入站连接。部署控制台代理后，您需要打开此端口。
+
+
+
+--
+
+
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
++
+--
+创建控制台代理后实现此网络访问。
+
+--
+
+
+
+
+== 步骤 2：设置 AWS 权限
+
+为了准备市场部署，请在 AWS 中创建 IAM 策略并将其附加到 IAM 角色。当您从 AWS Marketplace 创建控制台代理时，系统会提示您选择该 IAM 角色。
+
+.步骤
+. 登录 AWS 控制台并导航到 IAM 服务。
+. 创建策略：
++
+.. 选择“策略”>“创建策略”。
+.. 选择 *JSON* 并复制并粘贴内容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+.. 完成剩余步骤以创建策略。
++
+您可能需要根据计划使用的NetApp数据服务创建第二个策略。对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，因此需要两个策略。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"] 。
+
+
+
+. 创建 IAM 角色：
++
+.. 选择*角色 > 创建角色*。
+.. 选择 *AWS 服务 > EC2*。
+.. 通过附加刚刚创建的策略来添加权限。
+.. 完成剩余步骤以创建角色。
+
+
+
+
+.结果
+现在，您拥有一个 IAM 角色，可以在从 AWS Marketplace 部署期间将其与 EC2 实例关联。
+
+
+
+== 步骤 3：查看实例要求
+
+创建控制台代理时，您需要选择满足以下要求的 EC2 实例类型。
+
+CPU:: 8 个核心或 8 个 vCPU
+RAM:: 32 GB
+AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 t3.2xlarge。
+
+
+
+
+== 步骤 4：创建控制台代理
+
+直接从 AWS Marketplace 创建控制台代理。
+
+.关于此任务
+从 AWS Marketplace 创建控制台代理会使用默认配置在 AWS 中部署 EC2 实例。link:reference-connector-default-config.html["了解控制台代理的默认配置"] 。
+
+.开始之前
+您应该具有以下内容：
+
+* 满足组网需求的VPC及子网。
+* 具有附加策略的 IAM 角色，其中包含控制台代理所需的权限。
+* 您的 IAM 用户订阅和取消订阅 AWS Marketplace 的权限。
+* 了解实例的 CPU 和 RAM 要求。
+* EC2 实例的密钥对。
+
+
+.步骤
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp控制台代理列表"^]
+. 在市场页面上，选择*继续订阅*。
+. 要订阅该软件，请选择*接受条款*。
++
+订阅过程可能需要几分钟。
+
+. 订阅过程完成后，选择*继续配置*。
+. 在*配置此软件*页面上，确保您选择了正确的区域，然后选择*继续启动*。
+. 在*启动此软件*页面的*选择操作*下，选择*通过 EC2 启动*，然后选择*启动*。
++
+使用 EC2 控制台启动实例并附加 IAM 角色。使用“从网站启动”操作无法实现这一点。
+
+. 按照提示配置并部署实例：
++
+** *名称和标签*：输入实例的名称和标签。
+** *应用程序和操作系统映像*：跳过此部分。控制台代理 AMI 已被选中。
+** *实例类型*：根据区域可用性，选择满足 RAM 和 CPU 要求的实例类型（预先选择并推荐 t3.2xlarge）。
+** *密钥对（登录）*：选择您想要用来安全连接到实例的密钥对。
+** *网络设置*：根据需要编辑网络设置：
++
+*** 选择所需的 VPC 和子网。
+*** 指定实例是否应具有公共 IP 地址。
+*** 指定安全组设置，为控制台代理实例启用所需的连接方法：SSH、HTTP 和 HTTPS。
++
+link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
+
+
+
+** *配置存储*：保留根卷的默认大小和磁盘类型。
++
+如果要在根卷上启用 Amazon EBS 加密，请选择 *高级*，展开 *卷 1*，选择 *加密*，然后选择一个 KMS 密钥。
+
+** *高级详细信息*：在 *IAM 实例配置文件* 下，选择包含控制台代理所需权限的 IAM 角色。
+** *摘要*：查看摘要并选择*启动实例*。
++
+AWS 使用指定的设置启动控制台代理，控制台代理将在大约十分钟内运行。
+
+
+
++
+
+NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+
+. 从连接到控制台代理虚拟机并具有控制台代理 URL 的主机打开 Web 浏览器。
+. 登录后，设置控制台代理：
++
+.. 指定与控制台代理关联的控制台组织。
+.. 输入系统的名称。
+.. 在*您是否在安全环境中运行？*下保持限制模式处于禁用状态。
++
+保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤在受限模式下开始使用NetApp控制台"] 。
+
+.. 选择*让我们开始吧*。
+
+
+
+
+.结果
+控制台代理现已安装并设置到您的控制台组织。
+
+打开 Web 浏览器并转到 https://console.netapp.com["NetApp控制台"^]开始将控制台代理与控制台一起使用。
+
+如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["了解如何从NetApp控制台管理 S3 存储桶"^]

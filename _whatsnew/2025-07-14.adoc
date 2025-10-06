@@ -1,0 +1,67 @@
+= 连接器 3.9.54
+:allow-uri-read: 
+
+
+
+
+=== 连接器 3.9.54
+
+此版本的BlueXP Connector 包括安全性改进、错误修复以及以下新功能：
+
+* 支持专用于支持Cloud Volumes ONTAP服务的连接器的透明代理。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["了解有关配置透明代理的更多信息。"]
+* 当连接器部署在 Google Cloud 环境中时，能够使用网络标签来帮助路由连接器流量。
+* 连接器健康监控的附加产品内通知，包括 CPU 和 RAM 使用情况。
+
+
+目前，3.9.54 版本适用于标准模式和限制模式。
+
+
+
+=== BlueXP身份和访问管理（IAM）
+
+BlueXP中的身份和访问管理现在提供以下功能：
+
+* 支持私有模式下的 IAM，允许您管理BlueXP服务和应用程序的用户访问和权限。
+* 简化身份联合的管理，包括更轻松的导航、更清晰的联合连接配置选项以及改进的现有联合的可见性。
+* 访问BlueXP backup and recovery、 BlueXP disaster recovery和联合管理的角色。
+
+
+
+
+==== 支持私有模式下的 IAM
+
+BlueXP现在支持私有模式下的 IAM，允许您管理BlueXP服务和应用程序的用户访问和权限。此增强功能使私人模式客户能够利用基于角色的访问控制 (RBAC) 来获得更好的安全性和合规性。
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#iam["了解有关BlueXP中的 IAM 的更多信息。"]
+
+
+
+==== 简化身份联合管理
+
+BlueXP现在提供了更直观的界面来管理身份联合。这包括更轻松的导航、更清晰的联合连接配置选项以及改进的现有联合可见性。
+
+通过身份联合启用单点登录 (SSO) 允许用户使用其公司凭证登录BlueXP 。这提高了安全性，减少了密码的使用，并简化了入职流程。
+
+系统将提示您将任何现有的联合连接导入新界面以获取对新管理功能的访问权限。这使您能够利用最新的增强功能，而无需重新创建联合连接。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["了解有关将现有联合连接导入BlueXP 的更多信息。"]
+
+改进的联合管理允许您：
+
+* 将多个已验证的域添加到联合连接，允许您将多个域与同一个身份提供商 (IdP) 一起使用。
+* 在需要时禁用或删除联合连接，让您控制用户访问和安全。
+* 使用 IAM 角色控制对联合管理的访问。
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["了解有关BlueXP中的身份联合的更多信息。"]
+
+
+
+==== BlueXP backup and recovery、 BlueXP disaster recovery和联合管理的新访问角色
+
+BlueXP现在支持使用 IAM 角色实现以下功能和数据服务：
+
+* BlueXP backup and recovery
+* BlueXP disaster recovery
+* 联邦
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解有关使用访问角色的更多信息。"]

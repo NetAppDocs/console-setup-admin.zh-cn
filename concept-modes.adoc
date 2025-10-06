@@ -1,0 +1,326 @@
+---
+sidebar: sidebar 
+permalink: concept-modes.html 
+keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
+summary: 'NetApp控制台提供多种部署模式，使您能够满足您的业务和安全需求。_标准模式_利用软件即服务 (SaaS) 层来提供全部功能，而_限制模式_和_私人模式_适用于有连接限制的组织。' 
+---
+= 了解NetApp控制台部署模式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp控制台提供多种部署模式，使您能够满足您的业务和安全需求。
+
+* _标准模式_利用软件即服务 (SaaS) 层来提供完整的功能。用户通过基于 Web 的托管界面访问控制台
+* _限制模式_适用于有连接限制并希望在自己的公共云中安装NetApp控制台的组织。用户通过托管在其云环境中的控制台代理上的基于 Web 的界面访问控制台。
++
+NetApp Console 在受限模式下限制流量、通信和数据，您必须确保您的环境（本地和云端）符合所需的规定。
+
+
+
+
+
+== 概述
+
+每种部署模式在出站连接、位置、安装、身份验证、数据服务和收费方法方面有所不同。
+
+标准模式:: 您可以从基于 Web 的控制台使用 SaaS 服务。根据您计划使用的数据服务和功能，控制台组织管理员将创建一个或多个控制台代理来管理混合云环境中的数据。
++
+--
+此模式使用公共互联网上的加密数据传输。
+
+--
+限制模式:: 您在云中（在政府、主权或商业区域）安装控制台代理，并且它与NetApp控制台 SaaS 层的出站连接有限。
++
+--
+这种模式通常由州和地方政府以及受监管的公司使用。
+
+<<限制模式,了解有关 SaaS 层的出站连接的更多信息>> 。
+
+--
+BlueXP私人模式（仅限旧版BlueXP界面）:: BlueXP私有模式（传统BlueXP接口）通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp继续通过传统的BlueXP界面支持这些环境。link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文档"^]
+
+
+下表提供了NetApp控制台的比较。
+
+[cols="16h,28,28"]
+|===
+|  | 标准模式 | 限制模式 
+
+
+| 需要连接到NetApp Console SaaS 层吗？ | 是 | 仅限出站 
+
+
+| 需要连接到您的云提供商吗？ | 是 | 是的，在该地区 
+
+
+| 控制台代理安装 | 从控制台、云市场或手动安装 | 云市场或手动安装 
+
+
+| 控制台代理升级 | 自动升级 | 自动升级 
+
+
+| UI 访问 | 从控制台 SaaS 层 | 从代理虚拟机本地 
+
+
+| API 端点 | 控制台 SaaS 层 | 控制台代理 
+
+
+| 身份验证 | 通过使用 auth0、NSS 登录或身份联合的 SaaS | 通过使用 auth0 或身份联合的 SaaS 
+
+
+| 多因素身份验证 | 适用于本地用户 | 不可用 
+
+
+| 存储和数据服务 | 全部支持 | 许多人受到支持 
+
+
+| 数据服务许可选项 | 市场订阅和 BYOL | 市场订阅和 BYOL 
+|===
+阅读以下部分以了解有关这些模式的更多信息，包括支持哪些NetApp控制台功能和服务。
+
+
+
+== 标准模式
+
+下图是标准模式部署的示例。
+
+image:diagram-standard-mode.png["概念图显示了提供基于 Web 的控制台、SaaS 层和 auth0 身份验证的公共互联网、运行控制台代理并管理Cloud Volumes ONTAP 的云中虚拟网络以及本地数据中心的AFF集群。"]
+
+控制台在标准模式下的工作方式如下：
+
+出站沟通:: 需要从控制台代理到控制台 SaaS 层、到云提供商的公开可用资源以及到日常操作的其他基本组件的连接。
++
+--
+* link:task-install-connector-aws-bluexp.html#networking-aws-agent["代理在 AWS 中联系的终端节点"]
+* link:task-install-connector-azure-bluexp.html#networking-azure-agent["代理在 Azure 中联系的终结点"]
+* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["代理在 Google Cloud 中联系的端点"]
+
+
+--
+代理支持的位置:: 在标准模式下，代理在云端或您的场所受支持。
+控制台代理安装:: 您可以使用以下方法之一安装代理：
++
+--
+* 从控制台
+* 来自 AWS 或 Azure 市场
+* 来自 Google Cloud SDK
+* 在数据中心或云中的 Linux 主机上手动使用安装程序
+* 在您的 VCenter 环境中使用提供的 OVA。
+
+
+--
+控制台代理升级:: NetApp每月自动升级您的代理。
+用户界面访问:: 可以通过 SaaS 层提供的基于 Web 的控制台访问用户界面。
+API 端点:: API 调用针对以下端点：\ https://api.bluexp.netapp.com
+身份验证:: 使用 auth0 或NetApp支持站点 (NSS) 登录进行身份验证。身份联合可用。
+支持的数据服务:: 支持所有NetApp数据服务。link:https://docs.netapp.com/us-en/data-services-family/index.html["了解有关NetApp数据服务的更多信息"^] 。
+支持的许可选项:: 标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的NetApp数据服务。查看每项服务的文档以了解有关可用许可选项的更多信息。
+如何开始使用标准模式:: 前往 https://console.netapp.com["NetApp控制台"^]并注册。
++
+--
+link:task-quick-start-standard-mode.html["了解如何开始使用标准模式"] 。
+
+--
+
+
+
+
+== 限制模式
+
+下图是限制模式部署的示例。
+
+image:diagram-restricted-mode.png["概念图显示了可使用 SaaS 层和 auth0 身份验证的公共互联网、运行控制台代理并提供基于 Web 的控制台访问的云中的虚拟网络，以及管理本地数据中心中的Cloud Volumes ONTAP和AFF集群。"]
+
+控制台在限制模式下的工作方式如下：
+
+出站沟通:: 代理需要与控制台 SaaS 层建立出站连接，以实现数据服务、软件升级、身份验证和元数据传输。
++
+--
+控制台 SaaS 层不会发起与代理的通信。代理启动与控制台 SaaS 层的所有通信，根据需要提取或推送数据。
+
+还需要与区域内的云提供商资源建立连接。
+
+--
+代理支持的位置:: 在受限模式下，代理在云中受支持：在政府区域、主权区域或商业区域。
+控制台代理安装:: 您可以从 AWS 或 Azure 市场安装，也可以在您自己的 Linux 主机上手动安装，或者在您的 VCenter 环境中使用可下载的 OVA。
+控制台代理升级:: NetApp每月自动更新您的代理软件。
+用户界面访问:: 您可以从部署在云区域中的代理虚拟机访问用户界面。
+API 端点:: 对代理虚拟机进行 API 调用。
+身份验证:: 通过 auth0 提供身份验证。身份联合也可用。
+支持的存储管理和数据服务:: 以下存储和数据服务具有受限模式：
++
+--
+[cols="2*"]
+|===
+| 支持的服务 | 笔记 
+
+
+| Azure NetApp Files | 全力支持 
+
+
+| 备份和恢复 | 在政府区域和商业区域受限制模式支持。不支持在具有限制模式的主权区域使用。在受限模式下， NetApp Backup and Recovery 仅支持ONTAP卷数据的备份和恢复。 https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]不支持应用程序数据和虚拟机数据的备份和恢复。 
+
+
+| NetApp数据分类  a| 
+在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。
+
+
+
+| Cloud Volumes ONTAP | 全力支持 
+
+
+| 许可证和订阅 | 您可以使用下面列出的受限模式支持的许可选项访问许可证和订阅信息。 
+
+
+| 本地ONTAP集群 | 使用控制台代理的发现和不使用控制台代理的发现（直接发现）均受支持。当您发现没有控制台代理的本地集群时，高级视图（系统管理器）不受支持。 
+
+
+| 复制 | 在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。 
+|===
+--
+支持的许可选项:: 限制模式支持以下许可选项：
++
+--
+* 市场订阅（按小时和按年合同）
++
+请注意以下事项：
+
++
+** 对于Cloud Volumes ONTAP，仅支持基于容量的许可。
+** 在 Azure 中，不支持与政府区域签订年度合同。
+
+
+* BYOL
++
+对于Cloud Volumes ONTAP，BYOL 支持基于容量的许可和基于节点的许可。
+
+
+
+--
+如何开始使用受限模式:: 创建NetApp控制台组织时，您需要启用受限模式。
+
+
+如果您还没有组织，当您第一次从手动安装的控制台代理或从云提供商的市场创建的控制台代理登录控制台时，系统会提示您创建组织并启用受限模式。
+
+
+NOTE: 创建组织后，您无法更改限制模式设置。
+
+link:task-quick-start-restricted-mode.html["了解如何开始使用受限模式"] 。
+
+
+
+== 服务和功能比较
+
+下表可以帮助您快速识别受限模式支持哪些服务和功能。
+
+请注意，某些服务可能会受到限制。有关如何在受限模式下支持这些服务的更多详细信息，请参阅上面的部分。
+
+[cols="19,27,27"]
+|===
+| 产品领域 | NetApp数据服务或功能 | 限制模式 
+
+
+.10+| *存储* 表格的此部分列出了对从控制台管理存储系统的支持。它没有指出NetApp Backup and Recovery 支持的备份目标。 | 适用于ONTAP 的Amazon FSx | 否 
+
+
+| Amazon S3 | 否 
+
+
+| Azure Blob | 否 
+
+
+| Azure NetApp Files | 是 
+
+
+| Cloud Volumes ONTAP | 是 
+
+
+| Google Cloud NetApp Volumes | 否 
+
+
+| Google Cloud Storage | 否 
+
+
+| 本地ONTAP集群 | 是 
+
+
+| E 系列 | 否 
+
+
+| StorageGRID | 否 
+
+
+.9+| *数据服务* | NetApp备份和恢复 | 是的https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] 
+
+
+| NetApp数据分类 | 是 
+
+
+| NetApp复制和同步 | 否 
+
+
+| NetApp灾难恢复 | 否 
+
+
+| NetApp勒索软件抵御能力 | 否 
+
+
+| NetApp复制 | 是 
+
+
+| NetApp云分层 | 否 
+
+
+| NetApp卷缓存 | 否 
+
+
+| NetApp工作负载工厂 | 否 
+
+
+.14+| *特征* | 警报 | 否 
+
+
+| Digital Advisor | 否 
+
+
+| 许可证和订阅管理 | 是 
+
+
+| 身份和访问管理 | 是 
+
+
+| 凭据 | 是 
+
+
+| 联邦 | 是 
+
+
+| 生命周期规划 | 否 
+
+
+| 多因素身份验证 | 是 
+
+
+| NSS 账户 | 是 
+
+
+| 通知 | 是 
+
+
+| 搜索 | 是 
+
+
+| 软件更新 | 否 
+
+
+| 可持续性 | 否 
+
+
+| 审核 | 是 
+|===
