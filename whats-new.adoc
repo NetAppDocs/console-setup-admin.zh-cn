@@ -48,7 +48,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 NetApp还将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。
 
-image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["存储菜单的屏幕截图。"]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["存储菜单的屏幕截图。"]
 
 
 

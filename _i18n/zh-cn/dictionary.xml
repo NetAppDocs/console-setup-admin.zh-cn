@@ -979,7 +979,6 @@
   <block id="52f2049d6a6b3b78ceb9820e5ce16a9d" category="paragraph">*存储*菜单还包括*警报*以查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*）以识别未使用或未充分利用的资源。</block>
   <block id="b75b41949ffca5829d6a1887ecf0ebd4" category="paragraph">NetApp还将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。</block>
   <block id="0bc00d5c9372c38aa1f6078843c22005" category="inline-image-macro">存储菜单的屏幕截图。</block>
-  <block id="748eeb353f241e217120dfabd2fa058d" category="paragraph"><block ref="748eeb353f241e217120dfabd2fa058d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e279d1eb32921bbbc940faea63f4db6" category="section-title">管理菜单</block>
   <block id="08386d27df9de73a030b8e5da1f8112b" category="paragraph">使用集中式*管理*菜单来管理NetApp控制台、支持案例、许可证和订阅（以前称为数字钱包）。</block>
   <block id="c952530b2009e9e6caa227e55b2c5e17" category="inline-image-macro">管理菜单的屏幕截图。</block>
@@ -1060,15 +1059,6 @@
   <block id="79c16752c4b3871128ff6761df92be41" category="paragraph">添加了*勒索软件弹性用户行为管理员*角色和*勒索软件弹性用户行为查看器*角色。这些角色分别允许用户配置和查看用户行为和分析数据。<block ref="f4af18406bc0e89aecbeeb674238cfbe" category="inline-link-macro-rx"></block></block>
   <block id="9c1c5b1b2bca352ed0ccb3521d870e14" category="section-title">删除了支持聊天</block>
   <block id="6a6050b7d9c0524d1d41dffdc70d6613" category="paragraph">NetApp已从NetApp控制台中删除了支持聊天功能。使用“管理”&gt;“支持”页面来创建和管理支持案例。</block>
-  <block id="21d0bd94f2b315c59ef7189ffb61d969" category="paragraph">BlueXP现在是NetApp控制台。</block>
-  <block id="d35770c6743fcbecba1feceaea6b1123" category="inline-link-macro">NetApp控制台的新增功能</block>
-  <block id="f61be6aff2cdc3c3e28521d0ce9b6247" category="paragraph">下面列出了NetApp控制台中的导航和术语变化。有关 2025 年 10 月 6 日版本的完整功能列表，请参阅<block ref="279dcb31633ce0736c6a5e54cb6b8de1" category="inline-link-macro-rx"></block>。</block>
-  <block id="016ff55fae5233559b88cc1b1bbb9490" category="paragraph"><block ref="016ff55fae5233559b88cc1b1bbb9490" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9cc1d33a4e3873fd7ca8073a2c86e399" category="paragraph"><block ref="9cc1d33a4e3873fd7ca8073a2c86e399" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0dd307ec00de5c87e7e76a960dc9d785" category="paragraph"><block ref="0dd307ec00de5c87e7e76a960dc9d785" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bac5266b34e23c9bcb8105c495567bfa" category="paragraph">重新设计的*健康*菜单包括*软件更新*（您可以在其中管理ONTAP软件更新）、*可持续性*（您可以在其中监控对环境的影响）和*Digital Advisor*（您可以在其中获得主动建议以优化您的存储环境）。</block>
-  <block id="37757c8f988b8ee80cfe3d2a2282097a" category="section-title">选择和管理控制台代理</block>
-  <block id="b44ee41cd357f83b222bac4b5a96c5a2" category="paragraph"><block ref="b44ee41cd357f83b222bac4b5a96c5a2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d6b258792ff06f82933c74eeb8aef591" category="doc">组织</block>
   <block id="3c4f7accda6c4e5b05c122dfef01bebe" category="paragraph">以下部分描述了在BlueXP中使用 IAM 的不同组件。</block>
   <block id="7d5499ec968e6c97c7264ba95116b2d6" category="paragraph">使用BlueXP IAM 时，您将管理以下组件：</block>
@@ -5543,4 +5533,5 @@
   <block id="abfd94e3956e611a257a32b0f396af25" category="sidebar">Google Cloud 中的控制台代理防火墙规则</block>
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台网络访问（旧版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
+  <block id="f445c6d565697b0932cf841aca945e2a" category="paragraph"><block ref="f445c6d565697b0932cf841aca945e2a" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
