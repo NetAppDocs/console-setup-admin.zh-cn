@@ -46,6 +46,9 @@ NOTE: NetApp减少了控制台和控制台代理所需的网络端点，增强�
 | \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
 
 
+| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
+
+
 | \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。 
 
 

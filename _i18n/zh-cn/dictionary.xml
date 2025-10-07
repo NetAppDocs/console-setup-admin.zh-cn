@@ -179,7 +179,6 @@
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| 管理 Azure 中国区域的资源。</block>
   <block id="1e20d05d6d0ad597892e7e3d08324340" category="paragraph">| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| 管理 Google Cloud 中的资源。</block>
-  <block id="2bd5e73ffa0e07df374303364b1fee7f" category="paragraph">| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。  | \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。</block>
   <block id="c642b24062280a73e940087788371986" category="paragraph">| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服务。</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 获取控制台代理升级的图像。</block>
   <block id="047e3fbb2dcfe77fd82c7af9c6b59cde" category="list-text">当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用<block ref="3f791c7fe5360af04e14756765d7002d" category="inline-link-macro-rx"></block>，验证检查失败。为了避免此失败，请跳过验证检查。</block>
@@ -5534,4 +5533,6 @@
   <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程以及高度安全且合规的简化管理。</block>
   <block id="e4374974e911590511a1add55932606e" category="paragraph">*存储*菜单包括*警报*，用于查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*），用于识别未使用或未充分利用的资源。</block>
   <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">NetApp已将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。</block>
+  <block id="e54f451349319459dd1f9900aebfc23e" category="paragraph">| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。</block>
+  <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\ https://support.netapp.com</block>
 </blocks>

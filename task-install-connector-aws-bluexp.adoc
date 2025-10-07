@@ -69,6 +69,13 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+\ https://support.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息。
+
+
+
+ a| 
 \ https://signin.b2c.netapp.com
  a| 
 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
