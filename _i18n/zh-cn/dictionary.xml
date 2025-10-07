@@ -968,7 +968,6 @@
   <block id="db971a19c27a52f19f1811c52c55dc2d" category="section-title">运营支持的新访问角色</block>
   <block id="9a69bf13bbd4a86f23945e6b153f3913" category="paragraph">BlueXP现在支持运营支持分析师角色。此角色授予用户监控存储警报、查看BlueXP审计时间线以及输入和跟踪NetApp支持案例的权限。</block>
   <block id="bc2fe31b1e2682a9a79513d792e9c721" category="doc">BlueXP现在是NetApp控制台</block>
-  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。</block>
   <block id="0b0a6d9ce7462fc9a218e93ccbee32e7" category="section-title">导航菜单和页面</block>
   <block id="7ceea4a6639fef28fae4477857f229e5" category="paragraph">NetApp将大多数菜单选项移至左侧导航窗格，并重新组织菜单以便在NetApp控制台中更轻松地导航。</block>
   <block id="4fa56c3d158c844dc75b2826ee4c98d0" category="section-title">画布被系统页面取代</block>
@@ -976,8 +975,6 @@
   <block id="ddd56b1479dbec10cfb6fc0a3a8afe57" category="inline-image-macro">系统页面的屏幕截图。</block>
   <block id="028a5defa734a1e5527100ece8ea2e66" category="paragraph"><block ref="028a5defa734a1e5527100ece8ea2e66" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6ee78fd171283b1b449978ae0c73e06" category="section-title">扩展存储菜单</block>
-  <block id="52f2049d6a6b3b78ceb9820e5ce16a9d" category="paragraph">*存储*菜单还包括*警报*以查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*）以识别未使用或未充分利用的资源。</block>
-  <block id="b75b41949ffca5829d6a1887ecf0ebd4" category="paragraph">NetApp还将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。</block>
   <block id="0bc00d5c9372c38aa1f6078843c22005" category="inline-image-macro">存储菜单的屏幕截图。</block>
   <block id="0e279d1eb32921bbbc940faea63f4db6" category="section-title">管理菜单</block>
   <block id="08386d27df9de73a030b8e5da1f8112b" category="paragraph">使用集中式*管理*菜单来管理NetApp控制台、支持案例、许可证和订阅（以前称为数字钱包）。</block>
@@ -5534,4 +5531,7 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台网络访问（旧版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="f445c6d565697b0932cf841aca945e2a" category="paragraph"><block ref="f445c6d565697b0932cf841aca945e2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程以及高度安全且合规的简化管理。</block>
+  <block id="e4374974e911590511a1add55932606e" category="paragraph">*存储*菜单包括*警报*，用于查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*），用于识别未使用或未充分利用的资源。</block>
+  <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">NetApp已将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。</block>
 </blocks>

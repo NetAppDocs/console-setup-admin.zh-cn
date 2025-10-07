@@ -24,7 +24,7 @@ summary: 了解NetApp控制台管理功能的新增功能：IAM、控制台代�
 
 == BlueXP现在是NetApp控制台
 
-NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程和简化的管理，并且高度安全且合规。
+NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程以及高度安全且合规的简化管理。
 
 
 
@@ -44,9 +44,9 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== 扩展存储菜单
 
-*存储*菜单还包括*警报*以查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*）以识别未使用或未充分利用的资源。
+*存储*菜单包括*警报*，用于查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*），用于识别未使用或未充分利用的资源。
 
-NetApp还将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。
+NetApp已将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["存储菜单的屏幕截图。"]
 
