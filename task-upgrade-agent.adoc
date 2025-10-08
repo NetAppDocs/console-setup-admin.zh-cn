@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-upgrade-connector.html 
+permalink: task-upgrade-agent.html 
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
 summary: 当您使用标准模式或受限模式时，只要控制台代理具有出站互联网访问权限以获取软件更新， NetApp控制台就会自动将您的控制台代理升级到最新版本。 
 ---

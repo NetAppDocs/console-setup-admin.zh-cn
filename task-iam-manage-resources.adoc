@@ -67,7 +67,7 @@ NOTE: 注意：资源页面不包括Amazon FSx for NetApp ONTAP资源，因为�
 .完成后
 如果您使用控制台代理发现资源，请将控制台代理与项目关联以授予访问权限。否则，没有“组织管理员”角色的成员将无法访问控制台代理及其相关资源。
 
-link:task-iam-associate-connectors.html["了解如何将控制台代理与文件夹或项目关联"] 。
+link:task-iam-associate-agents.html["了解如何将控制台代理与文件夹或项目关联"] 。
 
 
 

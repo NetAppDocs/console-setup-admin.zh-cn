@@ -30,8 +30,8 @@ summary: 当NetApp控制台在 AWS 中启动代理实例时，它会将一个策
 * 如果需要，您可以使用 IAM 限制 IAM 策略 `Condition`元素。 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["AWS 文档：条件元素"^]
 * 要查看使用这些策略的分步说明，请参阅以下页面：
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["设置 AWS Marketplace 部署的权限"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["设置 AWS Marketplace 部署的权限"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
 
 

@@ -19,7 +19,7 @@ sidebar:
     - title: 已知限制
       url: "/reference-limitations.html"
     - title: 受支持的 Linux 操作系统的变更
-      url: "/reference-connector-operating-system-changes.html"
+      url: "/reference-agent-operating-system-changes.html"
   - title: 开始使用
     entries:
     - title: 学习基础知识
@@ -27,7 +27,7 @@ sidebar:
       - title: NetApp控制台
         url: "/concept-overview.html"
       - title: 控制台代理
-        url: "/concept-connectors.html"
+        url: "/concept-agents.html"
       - title: 部署模式
         url: "/concept-modes.html"
     - title: 开始使用NetApp控制台助手
@@ -49,35 +49,35 @@ sidebar:
           - title: 控制台代理安装选项
             url: "/concept-install-options-aws.html"
           - title: 从NetApp控制台创建控制台代理
-            url: "/task-install-connector-aws-bluexp.html"
+            url: "/task-install-agent-aws-console.html"
           - title: 从市场创建控制台代理
-            url: "/task-install-connector-aws-marketplace.html"
+            url: "/task-install-agent-aws-marketplace.html"
           - title: 手动安装控制台代理
-            url: "/task-install-connector-aws-manual.html"
+            url: "/task-install-agent-aws-manual.html"
         - title: Azure
           entries:
           - title: 控制台代理安装选项
             url: "/concept-install-options-azure.html"
           - title: 从NetApp控制台创建控制台代理
-            url: "/task-install-connector-azure-bluexp.html"
+            url: "/task-install-agent-azure-console.html"
           - title: 从市场创建控制台代理
-            url: "/task-install-connector-azure-marketplace.html"
+            url: "/task-install-agent-azure-marketplace.html"
           - title: 手动安装控制台代理
-            url: "/task-install-connector-azure-manual.html"
+            url: "/task-install-agent-azure-manual.html"
         - title: Google Cloud
           entries:
           - title: 控制台代理安装选项
             url: "/concept-install-options-google.html"
           - title: 从NetApp控制台创建控制台代理
-            url: "/task-install-connector-google-bluexp-gcloud.html"
+            url: "/task-install-agent-google-console-gcloud.html"
           - title: 从 Google Cloud 创建控制台代理
             url: "/task-install-agent-google-gcloud.html"
           - title: 手动安装控制台代理
-            url: "/task-install-connector-google-manual.html"
+            url: "/task-install-agent-google-manual.html"
         - title: 在本地安装代理
           entries:
           - title: 手动在本地安装代理
-            url: "/task-install-connector-on-prem.html"
+            url: "/task-install-agent-on-prem.html"
           - title: 在 VCenter 中安装本地代理
             url: "/task-install-agent-on-prem-ova.html"
       - title: 订阅NetApp智能服务
@@ -125,7 +125,7 @@ sidebar:
       - title: 管理资源层次结构
         url: "/task-iam-manage-resources.html"
       - title: 将控制台代理与其他文件夹和项目关联
-        url: "/task-iam-associate-connectors.html"
+        url: "/task-iam-associate-agents.html"
       - title: 在组织、项目和控制台代理之间切换
         url: "/task-iam-switch-organizations-projects.html"
       - title: 组织和项目 ID
@@ -193,7 +193,7 @@ sidebar:
     - title: 控制台代理
       entries:
       - title: 维护虚拟机和操作系统
-        url: "/task-maintain-connectors.html"
+        url: "/task-maintain-agents.html"
       - title: 维护 VCenter 安装的代理
         url: "/task-agent-vm-config.html"
       - title: 安装 CA 签名证书以访问 Web 控制台
@@ -202,18 +202,18 @@ sidebar:
         url: "/task-configuring-proxy.html"
       - title: 要求在 EC2 实例上使用 IMDSv2
         url: "/task-require-imdsv2.html"
-      - title: 管理连接器升级
-        url: "/task-upgrade-connector.html"
+      - title: 管理代理升级
+        url: "/task-upgrade-agent.html"
       - title: 使用多个控制台代理
-        url: "/task-manage-multiple-connectors.html"
+        url: "/task-manage-multiple-agents.html"
       - title: 控制台代理故障排除
         url: "/task-troubleshoot-agent.html"
       - title: 卸载并删除控制台代理
-        url: "/task-uninstall-connector.html"
+        url: "/task-uninstall-agent.html"
       - title: 默认配置
-        url: "/reference-connector-default-config.html"
+        url: "/reference-agent-default-config.html"
       - title: 在NetApp控制台中强制执行ONTAP权限
-        url: "/task-ontap-access-connector.html"
+        url: "/task-ontap-access-agent.html"
     - title: 凭证和订阅
       entries:
       - title: AWS
@@ -245,7 +245,7 @@ sidebar:
     - title: 代理维护控制台
       entries:
       - title: 代理维护控制台
-        url: "/reference-connector-maint-console.html"
+        url: "/reference-agent-maint-console.html"
     - title: 权限
       entries:
       - title: 权限摘要

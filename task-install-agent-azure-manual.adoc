@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-google-manual.html 
-keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
-summary: 要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 Google Cloud 权限、启用 Google Cloud API、安装控制台，然后提供您准备好的权限。 
+permalink: task-install-agent-azure-manual.html 
+keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
+summary: 要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 Azure 权限、安装控制台代理，然后提供您准备好的权限。 
 ---
-= 在 Google Cloud 中手动安装控制台代理
+= 在 Azure 中手动安装控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 要在您自己的 Linux 主机上手动安装控制台代理，您需�
 
 
 [role="lead"]
-要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 Google Cloud 权限、启用 Google Cloud API、安装控制台，然后提供您准备好的权限。
+要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 Azure 权限、安装控制台代理，然后提供您准备好的权限。
 
 .开始之前
-* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 你应该有一个link:concept-agents.html["了解控制台代理"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -107,12 +107,7 @@ Docker Engine 23.0.6 至 28.0.0。
 
 |===
 --
-Google Cloud 机器类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 n2-standard-8。
-+
---
-Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["受防护的虚拟机功能"^]
-
---
+Azure VM 大小:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 Standard_D8s_v3。
 /opt 中的磁盘空间:: 必须有 100 GiB 可用空间
 +
 --
@@ -296,7 +291,15 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 == 步骤 3：设置网络
 
-设置您的网络，以便控制台代理可以管理混合云环境中的资源和流程。例如，您需要确保可以连接到目标网络并且可以进行出站互联网访问。
+确保您计划安装控制台代理的网络位置支持以下要求。满足这些要求使控制台代理能够管理混合云环境中的资源和流程。
+
+Azure 区域:: 如果您使用Cloud Volumes ONTAP，则控制台代理应部署在与其管理的Cloud Volumes ONTAP系统相同的 Azure 区域中，或者部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]适用于Cloud Volumes ONTAP系统。此要求确保在Cloud Volumes ONTAP及其关联的存储帐户之间使用 Azure Private Link 连接。
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解Cloud Volumes ONTAP如何使用 Azure Private Link"^]
+
+--
+
 
 连接到目标网络:: 控制台代理需要与您计划创建和管理系统的位置建立网络连接。例如，您计划在本地环境中创建Cloud Volumes ONTAP系统或存储系统的网络。
 
@@ -325,9 +328,16 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
 
 
  a| 
-\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
  a| 
-管理 Google Cloud 中的资源。
+管理 Azure 公共区域中的资源。
+
+
+
+ a| 
+\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+ a| 
+管理 Azure 中国区域的资源。
 
 
 
@@ -412,140 +422,216 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
 
 
 
-== 步骤 4：设置控制台代理的权限
+== 步骤 4：设置控制台代理部署权限
 
-需要一个 Google Cloud 服务帐号来向控制台代理提供控制台管理 Google Cloud 中的资源所需的权限。创建控制台代理时，您需要将此服务帐户与控制台代理 VM 关联。
+您需要使用以下选项之一向控制台代理提供 Azure 权限：
 
-在后续版本中添加新权限时，您有责任更新自定义角色。如果需要新的权限，它们将在发行说明中列出。
+* 选项 1：使用系统分配的托管标识为 Azure VM 分配自定义角色。
+* 选项 2：向控制台代理提供具有所需权限的 Azure 服务主体的凭据。
+
+
+按照步骤为控制台代理准备权限。
+
+[role="tabbed-block"]
+====
+.为控制台代理部署创建自定义角色
+--
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
 
 .步骤
-. 在 Google Cloud 中创建自定义角色：
+. 如果您计划在自己的主机上手动安装该软件，请在 VM 上启用系统分配的托管标识，以便您可以通过自定义角色提供所需的 Azure 权限。
 +
-.. 创建一个包含以下内容的 YAML 文件link:reference-permissions-gcp.html["控制台代理的服务帐户权限"]。
-.. 从 Google Cloud 激活云壳。
-.. 上传包含所需权限的 YAML 文件。
-.. 使用创建自定义角色 `gcloud iam roles create`命令。
-+
-以下示例在项目级别创建一个名为“connector”的角色：
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure 文档：使用 Azure 门户为 VM 上的 Azure 资源配置托管标识"^]
 
+. 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
+. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+您应该为想要与NetApp控制台一起使用的每个 Azure 订阅添加 ID。
 
 +
-https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
-
-
-
-. 在 Google Cloud 中创建服务帐号并将角色分配给该服务帐号：
-+
-.. 从 IAM 和管理服务中，选择 *服务帐户 > 创建服务帐户*。
-.. 输入服务帐户详细信息并选择*创建并继续*。
-.. 选择您刚刚创建的角色。
-.. 完成剩余步骤以创建角色。
-+
-https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文档：创建服务帐号"^]
-
-
-
-. 如果您计划在与控制台代理所在项目不同的项目中部署Cloud Volumes ONTAP系统，则需要为控制台代理的服务帐户提供对这些项目的访问权限。
-+
-例如，假设控制台代理位于项目 1 中，而您想要在项目 2 中创建Cloud Volumes ONTAP系统。您需要授予项目 2 中的服务帐户访问权限。
+*例子*
 
 +
-.. 从 IAM 和管理服务中，选择您想要创建Cloud Volumes ONTAP系统的 Google Cloud 项目。
-.. 在 *IAM* 页面上，选择 *授予访问权限* 并提供所需的详细信息。
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. 使用 JSON 文件在 Azure 中创建自定义角色。
 +
-*** 输入控制台代理服务帐户的电子邮件。
-*** 选择控制台代理的自定义角色。
-*** 选择*保存*。
-
-
-
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
 
 +
-有关详细信息，请参阅 https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud 文档"^]
+.. 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+.. 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+.. 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+
+
+--
+.服务主体
+--
+在 Microsoft Entra ID 中创建并设置服务主体，并获取控制台代理所需的 Azure 凭据。
+
+.创建用于基于角色的访问控制的 Microsoft Entra 应用程序
+. 确保您在 Azure 中拥有创建 Active Directory 应用程序并将该应用程序分配给角色的权限。
++
+有关详细信息，请参阅 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 文档：所需权限"^]
+
+. 从 Azure 门户打开 *Microsoft Entra ID* 服务。
++
+image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory 服务。"]
+
+. 在菜单中，选择*应用程序注册*。
+. 选择*新注册*。
+. 指定有关应用程序的详细信息：
++
+** *名称*：输入应用程序的名称。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *重定向 URI*：您可以将此字段留空。
+
+
+. 选择*注册*。
++
+您已创建 AD 应用程序和服务主体。
+
+
+
+.将应用程序分配给角色
+. 创建自定义角色：
++
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+
++
+.. 复制link:reference-permissions-azure.html["控制台代理的自定义角色权限"]并将它们保存在 JSON 文件中。
+.. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
++
+您应该为用户将从中创建Cloud Volumes ONTAP系统的每个 Azure 订阅添加 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. 使用 JSON 文件在 Azure 中创建自定义角色。
++
+以下步骤介绍如何使用 Azure Cloud Shell 中的 Bash 创建角色。
+
++
+*** 开始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 云外壳"^]并选择 Bash 环境。
+*** 上传 JSON 文件。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的屏幕截图，您可以在其中选择上传文件的选项。"]
+
+*** 使用 Azure CLI 创建自定义角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+现在您应该有一个名为“控制台操作员”的自定义角色，可以将其分配给控制台代理虚拟机。
 
 
 
 
 
-== 步骤 5：设置共享 VPC 权限
+. 将应用程序分配给角色：
++
+.. 从 Azure 门户打开 *Subscriptions* 服务。
+.. 选择订阅。
+.. 选择“访问控制 (IAM)”>“添加”>“添加角色分配”。
+.. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
+.. 在“*成员*”选项卡中，完成以下步骤：
++
+*** 保持选中“*用户、组或服务主体*”。
+*** 选择*选择成员*。
++
+image:screenshot-azure-service-principal-role.png["向应用程序添加角色时显示“成员”页面的 Azure 门户屏幕截图。"]
 
-如果您使用共享 VPC 将资源部署到服务项目中，则需要准备好您的权限。
+*** 搜索应用程序的名称。
++
+以下是一个例子：
 
-此表仅供参考，当 IAM 配置完成时，您的环境应该反映权限表。
++
+image:screenshot_azure_service_principal_role.png["Azure 门户的屏幕截图，显示了 Azure 门户中的“添加角色分配”表单。"]
 
-.查看共享 VPC 权限
-[%collapsible]
+*** 选择应用程序并选择*选择*。
+*** 选择“下一步”。
+
+
+.. 选择*审阅+分配*。
++
+服务主体现在具有部署控制台代理所需的 Azure 权限。
+
++
+如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp控制台中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
+
+
+
+
+
+.添加 Windows Azure 服务管理 API 权限
+. 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
+. 选择*API 权限 > 添加权限*。
+. 在“Microsoft API”下，选择“Azure 服务管理”。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure 门户的屏幕截图，显示了 Azure 服务管理 API 权限。"]
+
+. 选择*以组织用户身份访问 Azure 服务管理*，然后选择*添加权限*。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，显示添加 Azure 服务管理 API。"]
+
+
+
+.获取应用程序的应用程序ID和目录ID
+. 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
+. 复制*应用程序（客户端）ID*和*目录（租户）ID*。
++
+image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+
++
+将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
+
+
+
+.创建客户端机密
+. 开启*Microsoft Entra ID*服务。
+. 选择*应用程序注册*并选择您的应用程序。
+. 选择*证书和机密>新客户端机密*。
+. 提供秘密的描述和持续时间。
+. 选择“*添加*”。
+. 复制客户端机密的值。
++
+image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示了 Microsoft Entra 服务主体的客户端机密。"]
+
+
+
+.结果
+您的服务主体现已设置，您应该已经复制了应用程序（客户端）ID、目录（租户）ID 和客户端机密的值。添加 Azure 帐户时，您需要在控制台中输入此信息。
+
+--
 ====
-[cols="10,10,10,18,18,34"]
-|===
-| 身份 | 创造者 | 主办地点 | 服务项目权限 | 宿主项目权限 | 目的 
 
 
-| Google 帐户部署代理 | 自定义 | 服务项目  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["代理部署策略"]
- a| 
-计算.网络用户
-| 在服务项目中部署代理 
-
-
-| 代理服务账户 | 自定义 | 服务项目  a| 
-link:reference-permissions-gcp.html["代理服务帐户策略"]
-| 计算.网络用户部署管理器.编辑器 | 部署和维护服务项目中的Cloud Volumes ONTAP和服务 
-
-
-| Cloud Volumes ONTAP服务帐户 | 自定义 | 服务项目 | storage.admin 成员： NetApp Console 服务帐户作为 serviceAccount.user | 不适用 | （可选）适用于NetApp Cloud Tiering 和NetApp Backup and Recovery 
-
-
-| Google API 服务代理 | Google Cloud | 服务项目  a| 
-（默认）编辑器
- a| 
-计算.网络用户
-| 代表部署与 Google Cloud API 进行交互。允许控制台使用共享网络。 
-
-
-| Google Compute Engine 默认服务帐户 | Google Cloud | 服务项目  a| 
-（默认）编辑器
- a| 
-计算.网络用户
-| 代表部署部署 Google Cloud 实例和计算基础架构。允许控制台使用共享网络。 
-|===
-注：
-
-. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp控制台将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
-. 仅当您未将防火墙规则传递给部署并选择让控制台为您创建它们时，才需要firewall.create 和firewall.delete。这些权限位于控制台帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于为 VPC0 创建规则。
-. 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 serviceAccount.user 角色，而不仅仅是在项目级别。目前，如果您在项目级别分配 serviceAccount.user，则使用 getIAMPolicy 查询服务帐户时不会显示权限。
-
-
-====
-
-
-== 第 6 步：启用 Google Cloud API
-
-在 Google Cloud 中部署Cloud Volumes ONTAP系统之前，必须启用多个 Google Cloud API。
-
-.步骤
-. 在您的项目中启用以下 Google Cloud API：
-+
-** 云部署管理器 V2 API
-** 云日志 API
-** 云资源管理器 API
-** 计算引擎 API
-** 身份和访问管理 (IAM) API
-** 云密钥管理服务 (KMS) API
-+
-（仅当您计划将NetApp Backup and Recovery 与客户管理加密密钥 (CMEK) 结合使用时才需要）
-
-
-
-
-
-https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud 文档：启用 API"^]
-
-
-
-== 步骤 7：安装控制台代理
+== 步骤 5：安装控制台代理
 
 前提条件完成后，您可以在自己的 Linux 主机上手动安装该软件。
 
@@ -561,7 +647,13 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
-NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-connector-maint-console.html["代理维护控制台"]。
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console.html["代理维护控制台"]。
+
+* 在 Azure 中的 VM 上启用托管标识，以便您可以通过自定义角色提供所需的 Azure 权限。
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure 文档：使用 Azure 门户为 VM 上的 Azure 资源配置托管标识"^]
+
+
 
 .关于此任务
 NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。
@@ -693,24 +785,74 @@ https://_ipaddress_[]
 .. 选择*让我们开始吧*。
 
 
-+
-
-NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
 
-
-如果您在创建控制台代理的同一 Google Cloud 帐户中拥有 Google Cloud Storage 存储桶，您将看到 Google Cloud Storage 系统自动出现在 *Systems* 页面上。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["了解如何通过NetApp控制台管理 Google Cloud Storage"^]
+如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp控制台管理 Azure Blob 存储"^]
 
 
 
-== 步骤 8：向控制台代理提供权限
+== 步骤 6：提供对NetApp控制台的权限
 
-您需要向控制台代理提供您之前设置的 Google Cloud 权限。提供权限可使控制台代理管理 Google Cloud 中的数据和存储基础架构。
+现在您已经安装了控制台代理，您需要为控制台代理提供您之前设置的 Azure 权限。提供权限使控制台能够管理 Azure 中的数据和存储基础结构。
+
+[role="tabbed-block"]
+====
+.自定义角色
+--
+转到 Azure 门户并将 Azure 自定义角色分配给一个或多个订阅的控制台代理虚拟机。
 
 .步骤
-. 转到 Google Cloud 门户并将服务帐户分配给控制台代理 VM 实例。
+. 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
 +
-https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文档：更改实例的服务帐户和访问范围"^]
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp控制台内完成操作的能力将受到影响。
 
-. 如果您想管理其他 Google Cloud 项目中的资源，请通过将具有控制台代理角色的服务帐号添加到该项目来授予访问权限。您需要对每个项目重复此步骤。
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
 
+. 选择*访问控制 (IAM)* > *添加* > *添加角色分配*。
+. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
++
+
+NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色选择了不同的名称，则选择该名称。
+
+. 在“*成员*”选项卡中，完成以下步骤：
++
+.. 分配对*托管身份*的访问权限。
+.. 选择“选择成员”，选择创建控制台代理虚拟机的订阅，在“托管标识”下，选择“虚拟机”，然后选择控制台代理虚拟机。
+.. 选择*选择*。
+.. 选择“下一步”。
+.. 选择*审阅+分配*。
+.. 如果要管理其他 Azure 订阅中的资源，请切换到该订阅，然后重复这些步骤。
+
+
+
+
+.下一步是什么？
+前往 https://console.netapp.com["NetApp控制台"^]开始使用控制台代理。
+
+--
+.服务主体
+--
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Microsoft Azure > 代理*。
+.. *定义凭据*：输入有关授予所需权限的 Microsoft Entra 服务主体的信息：
++
+*** 应用程序（客户端）ID
+*** 目录（租户）ID
+*** 客户端机密
+
+
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+.结果
+控制台代理现在具有代表您在 Azure 中执行操作所需的权限。
+
+--
+====

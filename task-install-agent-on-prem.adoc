@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-on-prem.html 
+permalink: task-install-agent-on-prem.html 
 keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
 summary: 在本地安装控制台代理，然后登录并设置它以与您的控制台组织协同工作。 
 ---
@@ -712,7 +712,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 
 
-NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-connector-maint-console.html["代理维护控制台"]。
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console.html["代理维护控制台"]。
 
 .关于此任务
 NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。

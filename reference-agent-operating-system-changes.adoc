@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference-connector-operating-system-changes.html 
+permalink: reference-agent-operating-system-changes.html 
 keywords: connector, operating systems, connector operating systems, os support, supported operating systems, rhel 8, rhel 9, red hat, docker, podman, agent 
 summary: NetApp有时会在特定的 Linux 操作系统上添加和删除对控制台代理的支持，了解此支持如何影响您现有的控制台代理。 
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-bluexp.html 
+permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
 summary: 您可以直接从NetApp控制台在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。 
 ---
@@ -17,7 +17,7 @@ summary: 您可以直接从NetApp控制台在 AWS 中创建控制台代理。在
 您可以直接从NetApp控制台在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。
 
 .开始之前
-* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 你应该有一个link:concept-agents.html["了解控制台代理"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -289,7 +289,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 直接从基于 Web 的控制台创建控制台代理。
 
 .关于此任务
-* 从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。link:reference-connector-default-config.html["了解控制台代理的默认配置"] 。
+* 从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。link:reference-agent-default-config.html["了解控制台代理的默认配置"] 。
 * 当控制台创建控制台代理时，它会为实例创建一个 IAM 角色和一个实例配置文件。此角色包括使控制台代理能够管理 AWS 资源的权限。确保在未来版本中添加新权限时更新角色。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"] 。
 
 

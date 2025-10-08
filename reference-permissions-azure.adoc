@@ -28,8 +28,8 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 * 要查看使用这些策略的分步说明，请参阅以下页面：
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["设置 Azure 市场部署的权限"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["设置 Azure 市场部署的权限"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
 
 

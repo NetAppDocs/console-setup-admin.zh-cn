@@ -18,15 +18,15 @@ summary: 有几种不同的方法可以在 Google Cloud 中创建控制台代理
 
 有以下安装选项可用：
 
-* link:task-install-connector-google-bluexp-gcloud.html["直接从控制台创建控制台代理"]（这是标准选项）
+* link:task-install-agent-google-console-gcloud.html["直接从控制台创建控制台代理"]（这是标准选项）
 +
 此操作将在您选择的 VPC 中启动运行 Linux 和控制台代理软件的 VM 实例。
 
-* link:task-install-connector-google-bluexp-gcloud.html["使用 Google Platform 创建控制台代理"]
+* link:task-install-agent-google-console-gcloud.html["使用 Google Platform 创建控制台代理"]
 +
 此操作还会启动运行 Linux 和控制台代理软件的 VM 实例，但部署直接从 Google Cloud 启动，而不是从控制台启动。
 
-* link:task-install-connector-google-manual.html["在您自己的Linux主机上下载并手动安装软件"]
+* link:task-install-agent-google-manual.html["在您自己的Linux主机上下载并手动安装软件"]
 
 
 您选择的安装选项会影响您如何准备安装。这包括如何向控制台提供验证身份和管理 Google Cloud 中的资源所需的权限。

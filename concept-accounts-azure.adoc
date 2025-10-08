@@ -20,7 +20,7 @@ summary: 了解NetApp控制台如何使用 Azure 凭据代表您执行操作以�
 
 == 初始 Azure 凭据
 
-从控制台部署控制台代理时，您需要使用具有部署控制台代理虚拟机权限的 Azure 帐户或服务主体。所需权限列于link:task-install-connector-azure-bluexp.html#connector-custom-role["Azure 的代理部署策略"]。
+从控制台部署控制台代理时，您需要使用具有部署控制台代理虚拟机权限的 Azure 帐户或服务主体。所需权限列于link:task-install-agent-azure-console.html#agent-custom-role["Azure 的代理部署策略"]。
 
 当控制台在 Azure 中部署控制台代理虚拟机时，它会启用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系统分配的托管标识"^]在虚拟机上，创建自定义角色，并将其分配给虚拟机。该角色为控制台提供管理该 Azure 订阅内的资源和流程所需的权限。link:reference-permissions-azure.html["查看控制台如何使用权限"] 。
 
@@ -108,8 +108,8 @@ link:task-adding-azure-accounts.html#subscribe["了解如何关联 Azure 订阅"
 
 * 标准模式
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["设置 Azure 市场部署的权限"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["设置 Azure 市场部署的权限"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
 
 
 * 限制模式

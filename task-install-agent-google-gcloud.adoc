@@ -17,7 +17,7 @@ summary: 要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您�
 要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。
 
 .开始之前
-* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 你应该有一个link:concept-agents.html["了解控制台代理"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -313,7 +313,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 | Google 帐户部署代理 | 自定义 | 服务项目  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["代理部署策略"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["代理部署策略"]
  a| 
 计算.网络用户
 | 在服务项目中部署代理 
@@ -378,7 +378,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 使用 Google Cloud 创建控制台代理。
 
-创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。link:reference-connector-default-config.html["了解控制台代理的默认配置"] 。
+创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。link:reference-agent-default-config.html["了解控制台代理的默认配置"] 。
 
 .开始之前
 您应该具有以下内容：

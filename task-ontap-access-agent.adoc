@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-ontap-access-connector.html 
+permalink: task-ontap-access-agent.html 
 keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
 summary: 管理员可以配置NetApp控制台以提示用户输入其ONTAP凭据。 
 ---

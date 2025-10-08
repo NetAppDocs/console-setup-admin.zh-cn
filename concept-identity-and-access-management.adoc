@@ -234,7 +234,7 @@ image:diagram-iam-example-hierarchy-advanced.png["概念图显示一个组织有
 * link:task-iam-manage-folders-projects.html["使用文件夹和项目在NetApp控制台中组织您的资源"]
 * link:task-iam-manage-members-permissions.html["管理NetApp控制台成员及其权限"]
 * link:task-iam-manage-resources.html["管理NetApp控制台组织中的资源层次结构"]
-* link:task-iam-associate-connectors.html["将代理与文件夹和项目关联"]
+* link:task-iam-associate-agents.html["将代理与文件夹和项目关联"]
 * link:task-iam-switch-organizations-projects.html["在NetApp控制台项目和组织之间切换"]
 * link:task-iam-rename-organization.html["重命名您的NetApp控制台组织"]
 * link:task-iam-audit-actions-timeline.html["监控或审计 IAM 活动"]

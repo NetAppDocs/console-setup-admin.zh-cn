@@ -304,7 +304,6 @@
   <block id="90589c47f06eb971d548591f23c285af" category="cell">自定义</block>
   <block id="a546c9049428d60032b181f2f82657b4" category="cell">服务项目</block>
   <block id="35294f1b614d05324fe6824b9051c99c" category="inline-link-macro">代理部署策略</block>
-  <block id="42d40e4952b856c8ace120d5f8583eee" category="paragraph"><block ref="42d40e4952b856c8ace120d5f8583eee" category="inline-link-macro-rx"></block></block>
   <block id="40f49838c90873745fc1b1382a2c4b68" category="paragraph">计算.网络用户</block>
   <block id="269096cfe4db81a130833f69a820cb46" category="cell">在服务项目中部署代理</block>
   <block id="14a07ec91e00fe2f922883e7ada7a6ca" category="cell">代理服务账户</block>
@@ -333,7 +332,6 @@
   <block id="4417d966b724524a7dd995ebe740c6cb" category="paragraph">您可以选择在安装后配置代理服务器，但这样做需要重新启动控制台代理。</block>
   <block id="a9f9e821b8a8692181584ef4520bb0f5" category="list-text">如果代理服务器使用 HTTPS 或代理是拦截代理，则需要 CA 签名的证书。</block>
   <block id="f055093e2366ca02aea03df7cfb1248e" category="inline-link-macro">代理维护控制台</block>
-  <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">关于此任务</block>
   <block id="659f0b9a6a18db69662f4738cacedeb4" category="paragraph">NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。</block>
   <block id="16c184ab0a5376cef0ecef7f0da93ac2" category="list-text">如果主机上设置了 _http_proxy_ 或 _https_proxy_ 系统变量，请将其删除：</block>
@@ -1125,7 +1123,6 @@
   <block id="e54158140168d6bfda7951dabc8a0468" category="doc">了解NetApp控制台中的 AWS 凭证和权限</block>
   <block id="64aa23be91006f71d837b2f3d1037b91" category="paragraph">了解NetApp控制台如何使用 AWS 凭证代表您执行操作以及这些凭证如何与市场订阅相关联。了解这些详细信息有助于您在NetApp控制台中管理一个或多个 AWS 帐户的凭据。例如，您可能想了解何时添加额外的 AWS 凭证。</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">初始 AWS 凭证</block>
-  <block id="e6cdf78e0e957711d61016a5e5be0c8e" category="paragraph">从控制台部署控制台代理时，您需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台的权限。所需的权限列在链接中：task-install-connector-aws-the Console.html#console-permissions-aws[AWS 的代理部署策略]。</block>
   <block id="055263949ee2b6bf634a650444f9e58d" category="inline-link-macro">查看控制台如何使用权限</block>
   <block id="9578371ace149ffae484a1e8a558e65f" category="paragraph">当控制台在 AWS 中启动控制台代理实例时，它会为该实例创建一个 IAM 角色和一个实例配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。<block ref="8e59a32a1f99b7e02222756f023f4cdb" category="inline-link-macro-rx"></block> 。</block>
   <block id="873c2fb7e6de1298736591dfc041a312" category="inline-image-macro">显示在 AWS 账户中部署控制台代理的控制台的概念图。  IAM 策略被分配给 IAM 角色，该角色附加到控制台实例。</block>
@@ -1185,9 +1182,7 @@
   <block id="796c918f0fce99224fa4a1b54f518f96" category="paragraph">要了解如何设置权限，请参阅以下页面：</block>
   <block id="53c512e9599c71e1a585d636a5229820" category="list-text">标准模式</block>
   <block id="3f85a7bdf40074d6d7c5e25de7a35f3a" category="inline-link-macro">设置 AWS Marketplace 部署的权限</block>
-  <block id="cd2bf2a9ec0f834a404adb2dff0bbe33" category="list-text"><block ref="cd2bf2a9ec0f834a404adb2dff0bbe33" category="inline-link-macro-rx"></block></block>
   <block id="ce811221f0cf50868c1d57fc933d7fc1" category="inline-link-macro">设置本地部署的权限</block>
-  <block id="6a20f7bea39d709e36e4109960a8e930" category="list-text"><block ref="6a20f7bea39d709e36e4109960a8e930" category="inline-link-macro-rx"></block></block>
   <block id="e429f30641aba9e1fc7f2090cc77ce40" category="list-text">限制模式</block>
   <block id="cb3ffce0d4b8f43b3d9f183b558cca41" category="inline-link-macro">设置限制模式的权限</block>
   <block id="9bf0216383a3ff083b86cdd433d2e65e" category="list-text"><block ref="9bf0216383a3ff083b86cdd433d2e65e" category="inline-link-macro-rx"></block></block>
@@ -1195,7 +1190,6 @@
   <block id="7192f06d0f10fc326466068ebdf43e86" category="doc">了解NetApp控制台中的 Azure 凭据和权限</block>
   <block id="08a6159f6d9d986210470d2ab6dff166" category="section-title">初始 Azure 凭据</block>
   <block id="5c33ea5ded6381ee1c09e63b86ac25ed" category="inline-link-macro">Azure 的代理部署策略</block>
-  <block id="4fabf4035bcfca379eaa6831f4e3d010" category="paragraph">从控制台部署控制台代理时，您需要使用具有部署控制台代理虚拟机权限的 Azure 帐户或服务主体。所需权限列于<block ref="24c609a9fdf68daa95529043263ead79" category="inline-link-macro-rx"></block>。</block>
   <block id="1985b326c07cdcb2a260ae0c0c6fde8d" category="inline-link">系统分配的托管标识</block>
   <block id="fc811f4efa4402b5437649164ea2dbb3" category="paragraph">当控制台在 Azure 中部署控制台代理虚拟机时，它会启用<block ref="3b529d5441a4ea26741352247ca08bac" category="inline-link-rx"></block>在虚拟机上，创建自定义角色，并将其分配给虚拟机。该角色为控制台提供管理该 Azure 订阅内的资源和流程所需的权限。<block ref="4e8f46d45dc9a2f1f1b6f49a05e1acc0" category="inline-link-macro-rx"></block> 。</block>
   <block id="480ce9346b68cbae4cd2960b3765eb04" category="inline-image-macro">概念图显示了控制台在 Azure 帐户和订阅中部署控制台代理。启用系统分配的托管标识，并为控制台代理虚拟机分配自定义角色。</block>
@@ -1231,7 +1225,6 @@
   <block id="c33ac28b474eaf103dc371d4dad649e5" category="paragraph">如果您使用 Marketplace，您可以通过向控制台代理 VM 和系统分配的托管身份分配自定义角色来提供权限，或者您可以使用 Microsoft Entra 服务主体。</block>
   <block id="1f92e407b4c0475a97f268ddf5361a4c" category="paragraph">对于本地部署，您无法为控制台代理设置托管标识，但可以使用服务主体提供权限。</block>
   <block id="f4426e4062930abb33465fb5b79b35dc" category="inline-link-macro">设置 Azure 市场部署的权限</block>
-  <block id="d16dc391acdc52d611958fdd5ca48d52" category="list-text"><block ref="d16dc391acdc52d611958fdd5ca48d52" category="inline-link-macro-rx"></block></block>
   <block id="480c97395bf73b1326ca0221bb84f0ab" category="summary">了解NetApp控制台如何使用 Google Cloud 凭证代表您执行操作以及这些凭证如何与市场订阅相关联。了解这些详细信息有助于您管理一个或多个 Google Cloud 项目的凭据。例如，您可能想要了解与控制台代理 VM 关联的服务帐户。</block>
   <block id="1fd4a2295cad602ba9d73683db88e799" category="doc">了解 Google Cloud 项目和权限</block>
   <block id="7c592b218a390e7d1c8bdbae8fbc794a" category="section-title">NetApp控制台的项目和权限</block>
@@ -1244,7 +1237,6 @@
   <block id="1b33affeaa41a09a9f3a99d38d14376f" category="inline-image-macro">概念图描绘了 Google 和服务帐户部署Cloud Volumes ONTAP 的权限要求。</block>
   <block id="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="paragraph"><block ref="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="392cce9be5aaba5ccc4ab6924ab91b7b" category="inline-link-macro">设置标准模式的 Google Cloud 权限</block>
-  <block id="c82ff510c21e67f73b0d32d9f389a2c8" category="list-text"><block ref="c82ff510c21e67f73b0d32d9f389a2c8" category="inline-link-macro-rx"></block></block>
   <block id="f602ddacd315e97a55613d5d087915db" category="paragraph">当您在 Google Cloud 中部署控制台代理时，控制台会为控制台代理所在项目中的 Google Cloud 服务帐号创建一组默认凭据。这些凭证必须与 Google Cloud Marketplace 订阅相关联，以便您可以支付Cloud Volumes ONTAP和NetApp数据服务的费用。</block>
   <block id="09287a1087bc09afb8b07a6d1a5eae1e" category="inline-link-macro">了解如何关联 Google Cloud Marketplace 订阅</block>
   <block id="7acdafee5614d2da4affd478462c535e" category="paragraph"><block ref="4394d3ef2937eb47839ebd4e9350c4a7" category="inline-link-macro-rx"></block> 。</block>
@@ -1254,7 +1246,6 @@
   <block id="ebd7d1e81a9a2891e260eecaa709adbf" category="section-title">Cloud Volumes ONTAP项目</block>
   <block id="baf581d10362cd2b4a862b9e83d0cfbb" category="paragraph">Cloud Volumes ONTAP可以与控制台代理位于同一项目中，也可以位于不同的项目中。要在不同的项目中部署Cloud Volumes ONTAP ，您需要首先将控制台代理服务帐户和角色添加到该项目。</block>
   <block id="8bee474fd085c11334ab13b9c1a78d9e" category="inline-link-macro">了解如何设置服务帐户</block>
-  <block id="bbba4a0b31f6e371c1e1df3ffeaf2850" category="list-text"><block ref="bbba4a0b31f6e371c1e1df3ffeaf2850" category="inline-link-macro-rx"></block></block>
   <block id="4ec920ccbe2fc417ccd7dcd957eb9653" category="inline-link">了解如何在 Google Cloud 中部署Cloud Volumes ONTAP并选择项目</block>
   <block id="486db18d2aa67b603506d28b5425dc88" category="list-text"><block ref="486db18d2aa67b603506d28b5425dc88" category="inline-link-rx"></block></block>
   <block id="1ffac481825810aa6d8bc2bbd6e9f0d5" category="summary">_控制台代理_是在您的云网络或本地网络上运行的NetApp软件。您可以使用控制台代理将NetApp控制台服务连接到您的存储环境。</block>
@@ -1327,7 +1318,6 @@
   <block id="2c816b9bf7b9b3b6fa614eed25c47bad" category="inline-link-macro">Google Cloud 中的代理安装选项</block>
   <block id="c25970a47753b09b5f368b1a825af136" category="list-text"><block ref="c25970a47753b09b5f368b1a825af136" category="inline-link-macro-rx"></block></block>
   <block id="57d93d5e81bafd40970707a32bf098e7" category="inline-link-macro">为本地部署设置云权限</block>
-  <block id="4534d0aacb9b6c8187f921fbea9e7dcd" category="list-text"><block ref="4534d0aacb9b6c8187f921fbea9e7dcd" category="inline-link-macro-rx"></block></block>
   <block id="4b793f4b507e17e1b9daee24a7d317fe" category="paragraph">要查看控制台代理日常操作所需的确切权限，请参阅以下页面：</block>
   <block id="6f78686bae0992fab2bb708dad824db4" category="inline-link-macro">了解控制台代理如何使用 AWS 权限</block>
   <block id="6800cfbf3754d2e1b8c68543cde59cb1" category="list-text"><block ref="6800cfbf3754d2e1b8c68543cde59cb1" category="inline-link-macro-rx"></block></block>
@@ -1341,7 +1331,6 @@
   <block id="5ae32585fa310b47843d2bd6a91b4832" category="paragraph">在标准或受限模式下，如果控制台代理可以访问互联网，它将自动更新。</block>
   <block id="28d40d49edc5d8557dfa8624f4921f55" category="section-title">操作系统和虚拟机维护</block>
   <block id="09ecb112c1af6628255a4b08c6a7cbed" category="inline-xref">控制台代理必须始终处于运行状态</block>
-  <block id="f8c11c92cf22fcb0495ffbb48fe3b0fb" category="paragraph"><block ref="ffd5178d533700d08d69d42b52b64f9a" category="inline-xref-macro-rx"></block> 。</block>
   <block id="7fcdcdc0f0f8f0d864eab57a6734f577" category="section-title">多系统和代理</block>
   <block id="87e19ab0e91dd93d18077c642263f2d7" category="paragraph">一个代理可以管理多个系统并在控制台中支持数据服务。您可以根据部署规模和使用的数据服务使用单个代理来管理多个系统。</block>
   <block id="d8466ae7920d413f334ecbe2662940d7" category="paragraph">对于大规模部署，请与您的NetApp代表合作来确定您的环境规模。如果遇到问题，请联系NetApp支持。</block>
@@ -1464,7 +1453,6 @@
   <block id="fd345e29cb62c01ba1d4171017902879" category="inline-link-macro">管理NetApp控制台组织中的资源层次结构</block>
   <block id="471aa63a508cd0a524e051c1eee8bb18" category="list-text"><block ref="471aa63a508cd0a524e051c1eee8bb18" category="inline-link-macro-rx"></block></block>
   <block id="15f73bdf087fb0fd54c4481d4dc02d6c" category="inline-link-macro">将代理与文件夹和项目关联</block>
-  <block id="bef5472a56f278957492e0caa5daa6ee" category="list-text"><block ref="bef5472a56f278957492e0caa5daa6ee" category="inline-link-macro-rx"></block></block>
   <block id="fcf7f94bff9ad201c2ad67548361caa3" category="inline-link-macro">在NetApp控制台项目和组织之间切换</block>
   <block id="cb4c504866718434ac51aadba7ecd536" category="list-text"><block ref="cb4c504866718434ac51aadba7ecd536" category="inline-link-macro-rx"></block></block>
   <block id="b2e7e5223ec4cb6c91429bf7de09474b" category="inline-link-macro">重命名您的NetApp控制台组织</block>
@@ -1479,33 +1467,24 @@
   <block id="7ff9f8e2467774df163161a38d2d5040" category="doc">AWS 中的控制台代理安装选项</block>
   <block id="b5afc81c4f24b143224e304b939a3f6c" category="paragraph">有以下安装选项可用：</block>
   <block id="b9dd01a6aae803f666e75d60b5cc37fe" category="inline-link-macro">直接从控制台创建控制台代理</block>
-  <block id="dec60543b3c872bf4678e098bf8b34c0" category="list-text"><block ref="9836dd1a0e880b286ee17f24ef9b72d8" category="inline-link-macro-rx"></block>（这是标准选项）</block>
   <block id="f27c252d931beb3466d3231006b71803" category="paragraph">此操作将在您选择的 VPC 中启动运行 Linux 和控制台代理软件的 EC2 实例。</block>
   <block id="1515391ee07716093ddb994cd9906006" category="inline-link-macro">从 AWS Marketplace 创建控制台代理</block>
-  <block id="63d16e50767121dfdb5571f31cc3fa2f" category="list-text"><block ref="63d16e50767121dfdb5571f31cc3fa2f" category="inline-link-macro-rx"></block></block>
   <block id="b839e2143764191ce8726714fcf0e54c" category="paragraph">此操作还会启动运行 Linux 和控制台代理软件的 EC2 实例，但部署直接从 AWS Marketplace 启动，而不是从控制台启动。</block>
   <block id="7ec389ef03b4378689ec8afd5b977499" category="inline-link-macro">在您自己的Linux主机上下载并手动安装软件</block>
-  <block id="a0d5fffa896034a79c127d53a34685b7" category="list-text"><block ref="a0d5fffa896034a79c127d53a34685b7" category="inline-link-macro-rx"></block></block>
   <block id="a189e78df125d3702fb17473d7a17faa" category="paragraph">您选择的安装选项会影响您如何准备安装。这包括如何向控制台提供验证和管理 AWS 中的资源所需的权限。</block>
   <block id="f67190f28c8f18c6676794f4acd943fc" category="summary">有几种不同的方法可以在 Azure 中创建控制台代理。直接从NetApp控制台是最常见的方式。</block>
   <block id="dcd94e7f09b8c058ae8084e8e5730bbb" category="doc">Azure 中的控制台代理安装选项</block>
   <block id="f73d744dbe9e744eb8f73a3bab9f243e" category="inline-link-macro">直接从NetApp控制台创建控制台代理</block>
-  <block id="3319d8a73f7275d2b326379baa4639b4" category="list-text"><block ref="c1f731be1bc48db64e71cd8627c6e815" category="inline-link-macro-rx"></block>（这是标准选项）</block>
   <block id="079e5f76242a76ddceeb5ae46398071c" category="paragraph">此操作将在您选择的 VNet 中启动运行 Linux 和控制台代理软件的 VM。</block>
   <block id="2dd5916ed68f963e9c5529d69a4de5fa" category="inline-link-macro">从 Azure 市场创建控制台代理</block>
-  <block id="cbfffbec2ccf124f45cb3bf55408a096" category="list-text"><block ref="cbfffbec2ccf124f45cb3bf55408a096" category="inline-link-macro-rx"></block></block>
   <block id="cea96889fec9e311da2265fdf2e92490" category="paragraph">此操作还会启动运行 Linux 和控制台代理软件的 VM，但部署直接从 Azure 市场启动，而不是从控制台启动。</block>
-  <block id="152e6840a2911cc120f143ff657bdc7e" category="list-text"><block ref="152e6840a2911cc120f143ff657bdc7e" category="inline-link-macro-rx"></block></block>
   <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">您选择的安装选项会影响您如何准备安装。这包括如何为控制台代理提供在 Azure 中验证和管理资源所需的权限。</block>
   <block id="011286419a3e5b900c9f64647edebdf7" category="summary">有几种不同的方法可以在 Google Cloud 中创建控制台代理。直接从NetApp控制台是最常见的方式。</block>
   <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Google Cloud 中的控制台代理安装选项</block>
   <block id="0e60cc3f489de1661d16a80c2219b147" category="paragraph">有几种不同的方法可以在 Google Cloud 中创建控制台代理。直接从NetApp控制台是最常见的方式。  ---</block>
-  <block id="3a8fb6214df82cf0b456e76cbe8815f1" category="list-text"><block ref="da24dec5d5f3fc48efd4aac933839211" category="inline-link-macro-rx"></block>（这是标准选项）</block>
   <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">此操作将在您选择的 VPC 中启动运行 Linux 和控制台代理软件的 VM 实例。</block>
   <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">使用 Google Platform 创建控制台代理</block>
-  <block id="7e678f9f1364b817a01c001dcb793c65" category="list-text"><block ref="7e678f9f1364b817a01c001dcb793c65" category="inline-link-macro-rx"></block></block>
   <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">此操作还会启动运行 Linux 和控制台代理软件的 VM 实例，但部署直接从 Google Cloud 启动，而不是从控制台启动。</block>
-  <block id="ab98f632a22cf265a09e9110157eba1f" category="list-text"><block ref="ab98f632a22cf265a09e9110157eba1f" category="inline-link-macro-rx"></block></block>
   <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">您选择的安装选项会影响您如何准备安装。这包括如何向控制台提供验证身份和管理 Google Cloud 中的资源所需的权限。</block>
   <block id="0899f83543ed0bdcc2e1e20f83558546" category="summary">NetApp控制台提供多种部署模式，使您能够满足您的业务和安全需求。_标准模式_利用软件即服务 (SaaS) 层来提供全部功能，而_限制模式_和_私人模式_适用于有连接限制的组织。</block>
   <block id="050bd8a4d093ad9b4ba1572b3fd77d0c" category="paragraph">NetApp控制台提供多种部署模式，使您能够满足您的业务和安全需求。</block>
@@ -1559,11 +1538,8 @@
   <block id="7b0c55f247d6f53c6782615b53af4619" category="list-text">出站沟通</block>
   <block id="c43c363ca98a3640bd064d1c0bd3a413" category="list-text">需要从控制台代理到控制台 SaaS 层、到云提供商的公开可用资源以及到日常操作的其他基本组件的连接。</block>
   <block id="9b5e57dc9b2aa6af73db773c627f993a" category="inline-link-macro">代理在 AWS 中联系的终端节点</block>
-  <block id="c42790e5213a82292976f5c521d384e5" category="list-text"><block ref="c42790e5213a82292976f5c521d384e5" category="inline-link-macro-rx"></block></block>
   <block id="4858f9548af45fc4af93b80950e02dbf" category="inline-link-macro">代理在 Azure 中联系的终结点</block>
-  <block id="38aa2a3a75783061d308417558688769" category="list-text"><block ref="38aa2a3a75783061d308417558688769" category="inline-link-macro-rx"></block></block>
   <block id="01e5b09b5730088f2de0030cdb3a7862" category="inline-link-macro">代理在 Google Cloud 中联系的端点</block>
-  <block id="1ecf84a1ffb6f20d673d2ecabce3da96" category="list-text"><block ref="1ecf84a1ffb6f20d673d2ecabce3da96" category="inline-link-macro-rx"></block></block>
   <block id="d6ec275d37a7d519496b7320d23bf53b" category="list-text">代理支持的位置</block>
   <block id="56818e4b6176dd9fb4526f26aabee766" category="list-text">在标准模式下，代理在云端或您的场所受支持。</block>
   <block id="fbc27e60b0428f5d4d0abe0fcff4f75d" category="list-text">您可以使用以下方法之一安装代理：</block>
@@ -1748,7 +1724,6 @@
   <block id="e386f797f1278a41cbdf60290772a272" category="list-text"><block ref="e386f797f1278a41cbdf60290772a272" category="inline-link-macro-rx"></block></block>
   <block id="b5d4f8f6ade5a4fbfeb3724b7bbc0b5e" category="paragraph">一些附加功能和数据服务需要控制台代理。它使您能够管理本地和云环境中的资源和流程。您需要它来管理一些系统（例如， Cloud Volumes ONTAP）并使用一些NetApp数据服务。</block>
   <block id="919907c49b488683fa1ddd5c9088c12b" category="inline-link-macro">了解有关控制台代理的更多信息</block>
-  <block id="a68642a7ade4333d4219aa580cea3a5c" category="paragraph"><block ref="4b4f0bafbdb20d9d8f8a468fa992856b" category="inline-link-macro-rx"></block> 。</block>
   <block id="05cb21b1c0958252effc11eb9d437f38" category="section-title">部署模式</block>
   <block id="189b4f6eadcbbd36f0feb8dc1b8e1caf" category="paragraph">NetApp为NetApp控制台提供了两种部署模式：_标准模式_使用软件即服务 (SaaS) 层实现全部功能，而_受限模式_限制出站连接。</block>
   <block id="93ed0ac1db1f6b5a46cfc5e5f9034f18" category="inline-link-macro">了解没有互联网连接的站点的BlueXP （私人模式）。</block>
@@ -1790,7 +1765,6 @@
   <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">该图像的操作系统是 Ubuntu 22.04 LTS。</block>
   <block id="953e61420be6157aa122dfd3475d4070" category="paragraph">该操作系统不包含 GUI。您必须使用终端来访问系统。</block>
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">安装包括 Docker Engine，它是必需的容器编排工具。</block>
-  <block id="7f3b93b1ed83b943c21f5d8024ed1444" category="list-text">EC2 Linux 实例的用户名是 ubuntu（对于 2023 年 5 月之前创建的代理，用户名是 ec2-user）。</block>
   <block id="efabd80ebdd217a47d9be936e5f0b8aa" category="list-text">默认系统磁盘是 100 GiB gp2 磁盘。</block>
   <block id="b8c4a5bd8ed4eb470e80955a542dd4bf" category="section-title">Azure 详细信息</block>
   <block id="f637fe372218bb6ee39fd481301dc99f" category="list-text">VM 类型为 Standard_D8s_v3。</block>
@@ -2329,13 +2303,9 @@
   <block id="79ad55cf82aac1a039766a722bd36b49" category="paragraph">控制台代理必须能够访问与NetApp控制台相同的端点，以及根据安装代理的位置而定的其他端点。</block>
   <block id="8e67676c15ae2a94213bdd7971d44506" category="paragraph">在安装控制台代理之前设置网络端点访问。</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">为控制台代理设置 AWS 网络访问</block>
-  <block id="e36ab6f1f66c90a8e643654e4229eea2" category="list-text"><block ref="e36ab6f1f66c90a8e643654e4229eea2" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">为控制台代理设置 Azure 网络访问</block>
-  <block id="3dd2dea866a0ab6a5ae3b75ffb77d9c4" category="list-text"><block ref="3dd2dea866a0ab6a5ae3b75ffb77d9c4" category="inline-link-macro-rx"></block></block>
   <block id="6be29013501c644b088dfb30237d31df" category="inline-link-macro">为控制台代理设置 Google Cloud 网络访问</block>
-  <block id="30dae547cc47aaa0019b4cb49e897579" category="list-text"><block ref="30dae547cc47aaa0019b4cb49e897579" category="inline-link-macro-rx"></block></block>
   <block id="f10bf17567a71d86b25d142d5d98b33b" category="inline-link-macro">为控制台代理设置本地网络访问</block>
-  <block id="71c15c3836e6f6563e5ad9f1ff544d48" category="list-text"><block ref="71c15c3836e6f6563e5ad9f1ff544d48" category="inline-link-macro-rx"></block></block>
   <block id="627545d3fae412b9188d4c9140899c75" category="section-title">为Cloud Volumes ONTAP准备网络</block>
   <block id="fd6e08319e0931b5b5ca23214370bc11" category="paragraph">一些NetApp数据服务以及Cloud Volumes ONTAP要求代理具有额外的出站互联网访问权限。</block>
   <block id="3a10984b52469b032ed6d718a9e2670f" category="section-title">Cloud Volumes ONTAP的端点</block>
@@ -2818,7 +2788,6 @@
   <block id="7c803320cfc8e4215d4d26a0151ba1d0" category="cell">从控制台部署控制台代理</block>
   <block id="6bdd632a69530bf24f9d888defc43d4c" category="cell">从控制台创建控制台代理的用户需要特定权限才能在 AWS 中部署实例。</block>
   <block id="2d3fc94cd0898448a15e6e05f4098b6f" category="inline-link-macro">设置 AWS 权限</block>
-  <block id="95d81e2f68fb04fddeae50ba5e3cb6fc" category="cell"><block ref="95d81e2f68fb04fddeae50ba5e3cb6fc" category="inline-link-macro-rx"></block></block>
   <block id="78b382509bdd4a7b6a4640d195cfbf2a" category="cell">为控制台代理提供权限</block>
   <block id="c9c719cb0217b958ec8c7414fa63880a" category="inline-link-macro">向控制台代理添加更多 AWS 凭证</block>
   <block id="188679009280735826c6ea749302c194" category="cell">当控制台部署控制台代理时，它会将一个策略附加到实例，该实例提供管理 AWS 账户中的资源和流程所需的权限。如果您从 AWS Marketplace 部署控制台代理、手动安装控制台代理，或者<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block>。您还需要确保策略是最新的，因为后续版本中会添加新的权限。</block>
@@ -2858,7 +2827,6 @@
   <block id="e76758412e5a64841b8710e5fb81ab0c" category="section-title">控制台代理</block>
   <block id="5477f97a59a394df9523ff9145698f5e" category="cell">从控制台部署控制台代理时，您需要使用具有在 Azure 中部署控制台代理 VM 的权限的 Azure 帐户或服务主体。</block>
   <block id="4275ae61422c34253a59329bd20a0449" category="inline-link-macro">设置 Azure 权限</block>
-  <block id="97d45041217492c3fe9ac0d49a0674a5" category="cell"><block ref="97d45041217492c3fe9ac0d49a0674a5" category="inline-link-macro-rx"></block></block>
   <block id="610a789ea69218ae2657ee289d3ea1ab" category="paragraph">当控制台在 Azure 中部署控制台代理 VM 时，它会创建一个自定义角色，该角色提供管理该 Azure 订阅中的资源和流程所需的权限。</block>
   <block id="410f33250f13598d6849ceba7b4120a3" category="inline-link-macro">向控制台代理添加更多 Azure 凭据</block>
   <block id="e1e6784eb91937369cc77d605f81165a" category="paragraph">如果您从市场启动控制台代理，如果您手动安装控制台代理，或者如果您<block ref="b386d5f716662b44565e96428cb16fbd" category="inline-link-macro-rx"></block>。</block>
@@ -2884,10 +2852,8 @@
   <block id="29979c57d65e0d9e92c7917a495cdb0b" category="paragraph">控制台需要控制台代理和各个服务的 Google Cloud 权限。</block>
   <block id="e31e5964808968a788e49e50220d6ef1" category="cell">从控制台部署控制台代理的 Google Cloud 用户需要特定权限才能在 Google Cloud 中部署控制台代理。</block>
   <block id="6ba3cdd92c12894a3d208241e1aa4f37" category="inline-link-macro">设置权限以创建控制台代理</block>
-  <block id="fee2266ede7c0f9fc139c34347d8878f" category="cell"><block ref="fee2266ede7c0f9fc139c34347d8878f" category="inline-link-macro-rx"></block></block>
   <block id="fed7c7d3c9febb32111eed3404adf3f6" category="cell">控制台代理 VM 实例的服务帐户必须具有日常操作的特定权限。您需要在部署期间将服务帐户与控制台代理关联。您还需要确保策略是最新的，因为后续版本中会添加新的权限。</block>
   <block id="1b29b6160eb822ba4beffa87a9ffbc2f" category="inline-link-macro">设置控制台代理的权限</block>
-  <block id="e666580d0c3c9a065bf3d7a5ed78f42f" category="cell"><block ref="e666580d0c3c9a065bf3d7a5ed78f42f" category="inline-link-macro-rx"></block></block>
   <block id="b5b529e8dc821910caacb50b880d2487" category="cell">将Cloud Volumes ONTAP备份到 Google Cloud</block>
   <block id="cd84e76d2557bd459057089ba5e1385c" category="inline-link">使用备份和恢复将Cloud Volumes ONTAP数据备份到 Google Cloud Storage</block>
   <block id="3b5162ff96cd00bbd1b1ad424d59bd8f" category="list-text"><block ref="3b5162ff96cd00bbd1b1ad424d59bd8f" category="inline-link-rx"></block></block>
@@ -3072,7 +3038,6 @@
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">查看 FSx for ONTAP所需的权限</block>
   <block id="f36b248a3e4e722bcc9292d2e5151abc" category="list-text"><block ref="f36b248a3e4e722bcc9292d2e5151abc" category="inline-link-rx"></block></block>
   <block id="c19d1741d0fa79c8b012a7f8b068bc6c" category="inline-link-macro">查看代理部署策略</block>
-  <block id="a554577f3ddd7cc055036191d9b710c3" category="list-text"><block ref="a554577f3ddd7cc055036191d9b710c3" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">复制 IAM 角色的角色 ARN，以便您可以在下一步中将其粘贴到控制台中。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">您现在可以将其添加到控制台</block>
   <block id="74b04ca811de14aef84fa666cae52e42" category="paragraph">IAM 角色现在具有所需的权限。<block ref="22c8d50e24c1ac21193395087b881b55" category="inline-xref-macro-rx"></block> 。</block>
@@ -3093,7 +3058,6 @@
   <block id="1fa2cd673301895c14fbffad8568f063" category="list-text">您想要更改配置为 AWS 凭证的 AWS Marketplace 订阅。</block>
   <block id="891c56b3793d8bb2d83dc9db21c81e12" category="paragraph">用新的订阅替换当前的市场订阅会更改任何现有Cloud Volumes ONTAP系统和所有新系统的市场订阅。</block>
   <block id="17e922bee62498071d0b520a708ce7bc" category="inline-link-macro">了解如何创建控制台代理</block>
-  <block id="29813baaaf23132ecd02e348d3c08087" category="paragraph">您需要先创建控制台代理，然后才能配置订阅。<block ref="e389d302df8d551d4b7fea0593f15ba1" category="inline-link-macro-rx"></block> 。</block>
   <block id="d0ecf8e73b6ccfcf921b7f1d7a9f7aab" category="section-title">将现有订阅与您的组织或帐户关联</block>
   <block id="cfc7641b49b25d7474ae90431316dac4" category="paragraph">当您从 AWS Marketplace 订阅时，流程的最后一步是将订阅与您的组织关联。如果您没有完成此步骤，那么您就无法在您的组织或帐户中使用该订阅。</block>
   <block id="de889eba177db53c06a02269626fde94" category="inline-link-macro">了解控制台部署模式</block>
@@ -3188,7 +3152,6 @@
   <block id="dd713f3b590ab5bec2d22f7058e33ab6" category="section-title">将凭据添加到控制台</block>
   <block id="55a1f4f70021eba45bccf8433f293097" category="paragraph">为 Azure 帐户提供所需权限后，您可以将该帐户的凭据添加到控制台。完成此步骤后，您可以使用不同的 Azure 凭据启动Cloud Volumes ONTAP 。</block>
   <block id="2b2280c2ccd1fc263667012c605a13ff" category="paragraph">如果您刚刚在云提供商中创建了这些凭据，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。</block>
-  <block id="50009964278e49ea5cebe0363998055c" category="paragraph">您需要先创建控制台代理，然后才能更改控制台设置。<block ref="e389d302df8d551d4b7fea0593f15ba1" category="inline-link-macro-rx"></block> 。</block>
   <block id="973a970f1b0256e7e155b0658f96de09" category="inline-link">将系统添加到控制台时</block>
   <block id="dc626c8f4884c60a8a8e3e1710f896e4" category="paragraph">您可以从“详细信息和凭证”页面切换到另一组凭证<block ref="e81400213d37156540a01916c36ea9d7" category="inline-link-rx"></block></block>
   <block id="66f9b6c415f38768cbdd702260d9c7a4" category="inline-image-macro">屏幕截图显示在“详细信息和凭证”页面中选择“编辑凭证”后在凭证之间进行选择。</block>
@@ -3382,7 +3345,6 @@
   <block id="b797d654931eeb3fd544b972b537bc1a" category="paragraph">确保证书文件为 PEM 格式并与命令位于同一目录中，或者指定证书文件的完整路径。</block>
   <block id="76fe97fb8546b1f5923f0501c8e25ae0" category="section-title">修改控制台代理的透明代理</block>
   <block id="92621940050d65fc4b47ade313d8f178" category="inline-link-macro">代理维护控制台</block>
-  <block id="f57d507a93c9d29097b93fdd95c0ac8e" category="paragraph">您可以使用<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>命令或使用<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。有关详细信息，请参阅<block ref="eb13597c0b0df7081c8b813033be9948" category="inline-link-macro-rx"></block>。</block>
   <block id="349027440539dc46278ee9e93260025d" category="section-title">如果控制台代理无法访问互联网，请更新它</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">如果您的网络代理配置发生变化，您的代理可能会失去对互联网的访问权限。例如，如果有人更改了代理服务器的密码或更新了证书。在这种情况下，您需要直接从控制台代理主机访问 UI 并更新设置。确保您可以通过网络访问控制台代理主机，并且可以登录控制台。</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">启用直接 API 流量</block>
@@ -3717,7 +3679,6 @@
   <block id="73b33e4d30bd646d12ad3465d1ae8b1b" category="paragraph">将控制台代理的资源与“资源”页面中的相同文件夹和项目关联。</block>
   <block id="b8b0c6cf6f3f89235f0deb7b0c6b01e0" category="inline-link-macro">了解如何将资源与文件夹和项目关联</block>
   <block id="1d0aafa476757723426865415e3ee193" category="paragraph"><block ref="8a5d319849e62944ab4cf141ef41222a" category="inline-link-macro-rx"></block> 。</block>
-  <block id="31d3d82d397fc18c3aaa7057132c469d" category="list-text"><block ref="31d3d82d397fc18c3aaa7057132c469d" category="inline-link-macro-rx"></block></block>
   <block id="1a5a9a56e04bbba24a4b989d5017d535" category="inline-link-macro">开始使用身份和访问权限</block>
   <block id="411ec776ef98d4c711a192a4fe599e3b" category="list-text"><block ref="411ec776ef98d4c711a192a4fe599e3b" category="inline-link-macro-rx"></block></block>
   <block id="3721423bab8a75aede6f2f51e549eaeb" category="inline-link">了解身份和访问管理的 API</block>
@@ -3755,7 +3716,6 @@
   <block id="4430cefb38674d70ef9b7fe67aee23c8" category="inline-link-macro">了解如何管理组织的资源层次结构</block>
   <block id="8387c3b8e8cca04d38e2ed26ff0cf701" category="list-text"><block ref="c02aea27d6ba71f8c3e62cb351aaf61e" category="inline-link-macro-rx"></block> 。</block>
   <block id="b88780515e5cfdc8fbe51c7f44514c7a" category="inline-link-macro">了解如何将控制台代理与文件夹或项目关联</block>
-  <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="list-text"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block> 。</block>
   <block id="0219628965579f3125a85333ababe4a8" category="inline-link-macro">了解NetApp控制台中的身份和访问管理</block>
   <block id="e2a0d9cb668e6b8456f193f9e7481e9e" category="list-text"><block ref="e2a0d9cb668e6b8456f193f9e7481e9e" category="inline-link-macro-rx"></block></block>
   <block id="d74a08d7ee858b57e9e95937c86453c6" category="inline-link">了解身份和访问 API</block>
@@ -3999,11 +3959,9 @@
   <block id="731810cbc475f1eaf952db0bad3000b2" category="paragraph">如果您有多个控制台代理，您可以在它们之间切换以查看与特定代理关联的系统。</block>
   <block id="cf1ee1ecf7dc1f5756e2468d5b602933" category="list-text">在控制台的顶部标题中，选择代理图标。</block>
   <block id="798a2a9b64140e0f8f05fa5695aa1faf" category="list-text">选择另一个代理，然后选择*切换*。</block>
-  <block id="0231bca7fd6141f7407cb9d9d560078a" category="paragraph"><block ref="bef5472a56f278957492e0caa5daa6ee" category="inline-link-macro-rx"></block> 。</block>
   <block id="4c2e9efea94172b6ed2675549b18aa3d" category="summary">要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。</block>
   <block id="133f87cfee7691c59e4aceff51289761" category="doc">从 Google Cloud 创建控制台代理</block>
   <block id="29c7d79b8474c98bbf8600f925dfb317" category="inline-link-macro">了解控制台代理</block>
-  <block id="843066b0b26b01552aee81f7ba5290b4" category="list-text">你应该有一个<block ref="f7d8e9900b5c0fd4ac9f76399f6a4468" category="inline-link-macro-rx"></block>。</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">你应该回顾一下<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block>。</block>
   <block id="70d8bd725ea77c6a4b800edb3d5b9f5f" category="section-title">步骤 1：设置网络</block>
   <block id="eaf8526751222fae318894a8fef05e01" category="paragraph">设置网络以使控制台代理能够管理资源并连接到目标网络和互联网。</block>
@@ -4029,7 +3987,6 @@
   <block id="dcff4284c01f138cf8176af4247c8947" category="section-title">步骤 6：创建控制台代理</block>
   <block id="3b5a2fd55c75af73b67a500b42f38800" category="paragraph">使用 Google Cloud 创建控制台代理。</block>
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">了解控制台代理的默认配置</block>
-  <block id="14c367c6bf7eb4dba010d14b0b178429" category="paragraph">创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="5afba04db223b94ef6f22bee25e70fdc" category="list-text">创建控制台代理所需的 Google Cloud 权限以及控制台代理虚拟机的服务帐号。</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">满足组网需求的VPC及子网。</block>
   <block id="ec2ce152b3b60e3721ae091911de473d" category="list-text">了解 VM 实例要求。</block>
@@ -4144,7 +4101,6 @@
   <block id="24ec0b6e7c909c10633ec52c6523f771" category="section-title">将云提供商凭据添加到控制台</block>
   <block id="3812e8779179a58315ca409176c5ff21" category="summary">您可以直接从NetApp控制台在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">通过NetApp控制台在 AWS 中创建控制台代理</block>
-  <block id="65fcedafc44bafe57ddc9dda9f3916e4" category="list-text">你应该有一个<block ref="f7d8e9900b5c0fd4ac9f76399f6a4468" category="inline-link-macro-rx"></block>。</block>
   <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">步骤 1：设置网络以在 AWS 中部署控制台代理</block>
   <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">确保您计划安装控制台代理的网络位置支持以下要求。这些要求使控制台代理能够管理混合云中的资源和流程。</block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">创建控制台代理后，您需要实现此网络要求。</block>
@@ -4177,7 +4133,6 @@
   <block id="bbba7638debc60d9989ee9d0b3f92713" category="paragraph">您现在应该拥有一个具有所需权限的 IAM 角色或一个具有所需权限的 IAM 用户。从控制台创建控制台代理时，您可以提供有关角色或访问密钥的信息。</block>
   <block id="a5d705a0b67c1b72cfaf22a7b055e724" category="section-title">步骤 3：创建控制台代理</block>
   <block id="7b4df00b5341d82974a20ef2b057b05e" category="paragraph">直接从基于 Web 的控制台创建控制台代理。</block>
-  <block id="3a3ad28d80adde83edab00e55fcdf72b" category="list-text">从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">了解有关控制台代理的 IAM 策略的更多信息</block>
   <block id="8cfa8205571c02f754f7ea3ea367085f" category="list-text">当控制台创建控制台代理时，它会为实例创建一个 IAM 角色和一个实例配置文件。此角色包括使控制台代理能够管理 AWS 资源的权限。确保在未来版本中添加新权限时更新角色。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block> 。</block>
   <block id="aca02eea323174e41d57225a762eb959" category="list-text">AWS 身份验证方法：具有所需权限的 IAM 角色或 IAM 用户的访问密钥。</block>
@@ -4242,7 +4197,6 @@
   <block id="7727085a11ad593ea85a877494c0300d" category="paragraph">创建控制台代理时，您需要选择满足以下要求的 EC2 实例类型。</block>
   <block id="2f5d6361fbfb946bee7b93c607c82dbf" category="section-title">步骤 4：创建控制台代理</block>
   <block id="7ce6d0fa19c62bc73b780577239dfa5c" category="paragraph">直接从 AWS Marketplace 创建控制台代理。</block>
-  <block id="091db0baf055116249f5d476b68a65fe" category="paragraph">从 AWS Marketplace 创建控制台代理会使用默认配置在 AWS 中部署 EC2 实例。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="d2b67faa3e0b0b15c349fce572e8015b" category="list-text">具有附加策略的 IAM 角色，其中包含控制台代理所需的权限。</block>
   <block id="dfcbfa4ce7dbf520f2b737359dfbc591" category="list-text">您的 IAM 用户订阅和取消订阅 AWS Marketplace 的权限。</block>
   <block id="64f210f4d96dcba2f41cec7b537055f7" category="list-text">了解实例的 CPU 和 RAM 要求。</block>
@@ -4291,7 +4245,6 @@
   <block id="7fd3a2f847442f1829a5feb65ce7371f" category="paragraph">如果您想要管理多个 Azure 订阅中的资源，则必须将服务主体绑定到每个订阅。例如，控制台允许您选择部署Cloud Volumes ONTAP时要使用的订阅。</block>
   <block id="83ca0f5121c5559891bda5c75bb2d780" category="paragraph">您的服务主体现已设置，您应该已经复制了应用程序（客户端）ID、目录（租户）ID 和客户端机密的值。创建控制台代理时，您需要在控制台中输入此信息。</block>
   <block id="01ca28b962699e0ada79cd7421185fc0" category="paragraph">直接从NetApp控制台创建控制台代理。</block>
-  <block id="498ccd410a5deaaf8222ace3b4e54701" category="list-text">从控制台创建控制台代理会使用默认配置在 Azure 中部署虚拟机。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="fa6a784a765b60a3f4d7ea2abcd313a9" category="inline-link-macro">了解有关控制台代理的自定义角色的更多信息</block>
   <block id="1e9748fc886eb11aef3357bbc0ff9344" category="list-text">当控制台部署控制台代理时，它会创建一个自定义角色并将其分配给控制台代理 VM。此角色包括使控制台代理能够管理 Azure 资源的权限。您需要确保角色保持最新，因为在后续版本中添加了新的权限。<block ref="4d87df92bbe36cebc9c881eff30738dd" category="inline-link-macro-rx"></block> 。</block>
   <block id="cec61994be2c9633fc4acb202e4b9c41" category="list-text">Azure 订阅。</block>
@@ -4349,7 +4302,6 @@
   <block id="b4e73984d2c68b6a9184a535a057e186" category="list-text">选项 2：向控制台提供具有所需权限的 Azure 服务主体的凭据。</block>
   <block id="b3f9ca2d8c527306b939437d5e906c93" category="paragraph">按照以下步骤设置控制台的权限。</block>
   <block id="c3cfed29f34a317879c52ce038fd0be1" category="paragraph">直接从 Azure 市场启动控制台代理。</block>
-  <block id="c8e8313e02515879db4b39ba9ff2bc2d" category="paragraph">从 Azure 市场创建控制台代理会设置具有默认配置的虚拟机。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="2e3183c78635488e77f6125a1a2ebd13" category="list-text">转到 Azure 市场中的NetApp控制台代理 VM 页面。</block>
   <block id="0c5f74a83e5cbc5c6c230dd0caf096f7" category="inline-link">商业区域的 Azure 市场页面</block>
   <block id="5fb9ace1b2fee444b848b1ad1c5d886c" category="paragraph"><block ref="5fb9ace1b2fee444b848b1ad1c5d886c" category="inline-link-rx"></block></block>
@@ -4381,7 +4333,6 @@
   <block id="f603ec935847895eb8636f656a2ae53f" category="list-text">将此自定义角色分配给将从控制台或使用 gcloud 部署控制台代理的用户。</block>
   <block id="c7a43cd5aa692ccab9fe9ec5162d50ad" category="paragraph">在部署控制台代理和Cloud Volumes ONTAP之前，您必须启用多个 Google Cloud API。</block>
   <block id="061388a938fd64eb5c4e7136956bbd01" category="paragraph">直接从控制台创建控制台代理。</block>
-  <block id="a13efeac37bc729d1b9ca426b28462df" category="paragraph">创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="ee011866b8623b71b582287613b814bc" category="list-text">在“概览”页面上，选择“部署代理”&gt;“Google Cloud”</block>
   <block id="cec29f07fe09b750feee9ec4b4ef3ca7" category="list-text">在*部署代理*页面上，查看您需要的详细信息。您有两个选择：</block>
   <block id="15de410cab5b286c0cff40620cbbc2f8" category="list-text">选择“*继续*”以使用产品内指南准备部署。产品内指南中的每个步骤都包含文档此页面上的信息。</block>
@@ -4569,14 +4520,12 @@
   <block id="6148da760abfb5167327e2dbd67b1724" category="doc">维护控制台代理虚拟机和操作系统</block>
   <block id="5279ec16620bed638d689fb55a687bf8" category="paragraph">维护控制台代理主机上的操作系统是您（客户）的责任。例如，您（客户）应按照贵公司的操作系统分发标准程序对代理主机上的操作系统应用安全更新。</block>
   <block id="32ecd7116f82d32fc86313604d074f12" category="inline-link-macro">受支持的 Linux 操作系统的变更</block>
-  <block id="27e4fc9f9a7de50489293effdbe1fa28" category="admonition">如果您有现成的代理，您应该注意<block ref="bd6e461b9eed09ced9eb75610086f8d1" category="inline-link-macro-rx"></block>。</block>
   <block id="35379aa08313c0fa9274fecfc86b4cc0" category="section-title">操作系统补丁和代理</block>
   <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">无需停止代理主机服务即可应用操作系统安全补丁。</block>
   <block id="d54ab8a1d5dd0b1066137c76d5021844" category="section-title">VM 或实例类型</block>
   <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">如果您从控制台创建控制台代理，它会使用默认配置在您的云提供商中部署 VM 实例。创建代理后，不要切换到具有较少 CPU 或 RAM 的较小 VM 实例。</block>
   <block id="d6ca9eb671a9ff98d68b7f7acaf8ec88" category="paragraph">下表列出了 CPU 和 RAM 要求：</block>
   <block id="a97c9ede934c84f0e97d896b05cd1ae0" category="inline-link-macro">了解代理的默认配置</block>
-  <block id="db5b25e2af4a6cbb3caeea7b25cbe8d1" category="paragraph"><block ref="aa3c75334683a941ae8b4c190e094f84" category="inline-link-macro-rx"></block> 。</block>
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">监控代理</block>
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">当代理虚拟机不健康时，控制台会通知您，包括磁盘空间、RAM 和 CPU 问题。在控制台内的通知中心监控这些通知或配置电子邮件通知。磁盘空间、内存或 CPU 使用率偶尔增加是正常现象，但如果经常发生，则应采取措施解决。</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">例如，当代理资源（CPU、RAM 或磁盘空间）连续 30 分钟超过其总容量的 90% 时，控制台会通知您。之后，如果资源使用率低于该阈值，则通知中心将显示通知已解决（绿色）。</block>
@@ -4594,7 +4543,6 @@
   <block id="0d75592eefb72eac4699a1f49bd7769a" category="section-title">停止和启动代理虚拟机</block>
   <block id="665e5fcb7c888a6273d0761790d05ed5" category="paragraph">如果需要，请使用云提供商的控制台或标准内部部署程序停止并启动代理虚拟机。</block>
   <block id="fab2977be6b57a804b266fd2b7996179" category="inline-link-macro">请注意，控制台代理必须始终处于运行状态</block>
-  <block id="690945cd7ba0bbf602bcb532ed522e1e" category="paragraph"><block ref="c3124849c68d8fc946d5c43e8be73cee" category="inline-link-macro-rx"></block> 。</block>
   <block id="92ca244e2f6af5665f270d0017a9ee62" category="section-title">连接到 Linux VM</block>
   <block id="fa108fef79d6a7f6c45e6265a7c8ce18" category="paragraph">如果您需要连接到代理运行的 Linux VM，请使用云提供商提供的连接选项。</block>
   <block id="31f62e7fcca679aa981e1ea0a7e5abfa" category="list-text">在 AWS 中创建代理实例时，请提供 AWS 访问密钥和密钥。您可以使用此密钥对通过 SSH 连接到实例。对 EC2 Linux 实例使用用户名“ubuntu”。对于 2023 年 5 月之前创建的代理，请使用用户名“ec2-user”。</block>
@@ -4648,7 +4596,6 @@
   <block id="b38724d5be0fd1e27cb2f48b33b593fb" category="paragraph">系统会提示用户输入其ONTAP凭据以访问集群的ONTAP系统管理器。用户可以选择将这些凭据保存在控制台中，这意味着他们不必每次都输入这些凭据。用户凭证仅对相应用户可见，并且可以从用户凭证页面进行管理。</block>
   <block id="bbfd8836af38790512652680bc39a97e" category="paragraph-title">使用控制台代理</block>
   <block id="cad21b2f1f29d6af5059830617c87d42" category="paragraph">默认情况下，不会提示用户输入其ONTAP凭据来访问ONTAP系统管理器。但是，控制台管理员（具有组织管理员角色）可以配置控制台以提示用户输入其ONTAP凭据。启用此设置后，用户每次都需要输入其ONTAP凭据。</block>
-  <block id="efd19a04c99c31329dfaad38a02c2181" category="paragraph"><block ref="efd19a04c99c31329dfaad38a02c2181" category="inline-link-macro-rx"></block></block>
   <block id="4cdcf6b8fd95bbaa7cf27e4443c7681b" category="section-title">NSS 凭证</block>
   <block id="8004db986a284e5dcad9f3e77eaac162" category="paragraph">与您的NetApp控制台登录关联的 NSS 凭据可支持注册、案例管理和访问Digital Advisor。</block>
   <block id="87396783ee7caf6faefec85c9bb63c87" category="list-text">当您访问*支持&gt;资源*并注册支持时，系统会提示您将 NSS 凭据与您的登录名关联。</block>
@@ -4909,7 +4856,6 @@
   <block id="920d0c5e78f6b6572b89d526a296d06b" category="summary">通过准备环境和部署控制台代理，开始以受限模式使用NetApp控制台。</block>
   <block id="af2c4df7e8660cdabd8fc59a2aa0aaf1" category="doc">入门工作流程（受限模式）</block>
   <block id="c31816e89acef282910453c5620f26f4" category="inline-link-macro">部署模式</block>
-  <block id="463607e512069b418940a921afdec8b0" category="paragraph">受限模式通常由州和地方政府以及受监管的公司使用，包括在 AWS GovCloud 和 Azure Government 区域中的部署。在开始之前，请确保您了解<block ref="f3ace5a930cbd0beeeadc55a7b354ad6" category="inline-link-macro-rx"></block>和<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
   <block id="27677c533249219197c5933410713055" category="inline-link-macro">准备部署</block>
   <block id="1308ae14263d9629eb12e11bd10db155" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="f826f61970c0735d0b0624264426b512" category="inline-link-macro-rx"></block></block>
   <block id="eb762959fcc0cce31949abce6f8eb1c1" category="list-text">准备一个满足 CPU、RAM、磁盘空间、容器编排工具等要求的专用 Linux 主机。</block>
@@ -4925,7 +4871,6 @@
   <block id="d1d624aaa80d4b95ecda4ca00906004a" category="paragraph">可选：从云提供商的市场订阅NetApp智能服务，以按小时费率（PAYGO）或通过年度合同支付数据服务费用。  NetApp智能服务包括NetApp备份和恢复、 Cloud Volumes ONTAP、 NetApp云分层、 NetApp勒索软件恢复和NetApp灾难恢复。  NetApp数据分类包含在您的订阅中，无需额外付费。</block>
   <block id="6d4ac1cbd4bd47313400a32115439002" category="summary">通过为控制台准备网络、注册并创建帐户以及（可选）创建控制台代理，以标准模式开始使用NetApp控制台。</block>
   <block id="2c4bc70d5e888213a3bca35048028c96" category="doc">入门工作流程（标准模式）</block>
-  <block id="472f4090016d7915074142e6d5d460f4" category="paragraph">在标准模式下，您可以访问由NetApp作为软件即服务 (SaaS) 产品托管的基于 Web 的控制台。在开始之前，请确保您了解<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>和<block ref="f3ace5a930cbd0beeeadc55a7b354ad6" category="inline-link-macro-rx"></block>。</block>
   <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">准备使用NetApp控制台的网络</block>
   <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
   <block id="6c6992d5903cf814577c44cbe3ed58b0" category="paragraph">访问NetApp控制台的计算机应该与特定端点建立连接。如果您的网络限制出站访问，您应该确保允许这些端点。</block>
@@ -4934,12 +4879,10 @@
   <block id="8859695a85afcf4d196795433a572988" category="inline-link">NetApp控制台</block>
   <block id="a40400c6f5bf51aa4e7aaaedbf791535" category="paragraph">前往<block ref="193ae139051d487c450de046f6bd2645" category="inline-link-rx"></block>并注册。您将可以选择创建一个组织，但如果您的公司已经有现有组织，则应跳过该步骤。</block>
   <block id="d1e788bf754c3b9d70eae673330792e2" category="inline-link-macro">了解没有控制台代理您可以做什么</block>
-  <block id="a5c7973c0be27e7b56c02a85eb3be100" category="paragraph">此时，您已登录并可以开始管理存储和使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服务。<block ref="af44a419176c69e173521af92c5d972c" category="inline-link-macro-rx"></block> 。</block>
   <block id="48700fa46e521cfa608d334472b68ef1" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>创建控制台代理</block>
   <block id="8f012b04ed4896873993ff7252418ca4" category="paragraph">高级存储管理功能和某些NetApp数据服务要求您安装控制台代理。控制台代理使控制台能够管理混合云环境中的资源和流程。</block>
   <block id="ce207d705a8165045c7d26c1fa5fe273" category="paragraph">您可以在云或本地网络中创建控制台代理。</block>
   <block id="380e8dcf837dc4b4a9dfb71ed62ffe17" category="inline-link-macro">详细了解何时需要控制台代理以及它们如何工作</block>
-  <block id="b22dc2a1ee2f65dc4276f3451f89a5d2" category="list-text"><block ref="b22dc2a1ee2f65dc4276f3451f89a5d2" category="inline-link-macro-rx"></block></block>
   <block id="cf4709f0b7fac7a7e67b98f5cea5e8a8" category="inline-link-macro">了解如何在 AWS 中创建控制台代理</block>
   <block id="012b4e372603f0b395e9a87c7432c3b7" category="list-text"><block ref="012b4e372603f0b395e9a87c7432c3b7" category="inline-link-macro-rx"></block></block>
   <block id="60b9309b830edf5f54f76fa4664a972b" category="inline-link-macro">了解如何在 Azure 中创建控制台代理</block>
@@ -4947,7 +4890,6 @@
   <block id="bc618e169a194e52cf3cda45248d2233" category="inline-link-macro">了解如何在 Google Cloud 中创建控制台代理</block>
   <block id="b0a30fdadf738e65e6490f50bac8c5b1" category="list-text"><block ref="b0a30fdadf738e65e6490f50bac8c5b1" category="inline-link-macro-rx"></block></block>
   <block id="01539f3bb82319392680d2729edcc784" category="inline-link-macro">了解如何在本地创建控制台代理</block>
-  <block id="222db7e15c2b2d0d532700022907f63a" category="list-text"><block ref="222db7e15c2b2d0d532700022907f63a" category="inline-link-macro-rx"></block></block>
   <block id="546d7695c99c2937a5bfae3cd6cf8da5" category="paragraph">要使用NetApp智能数据服务管理 Google Cloud 中的存储和数据，请确保控制台代理在 Google Cloud 中运行。</block>
   <block id="f21c11580c94835481d6c035b85f4b79" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
   <block id="3a9162a1dd41f82eb4f6e7242b11328b" category="paragraph">通过您的云提供商注册NetApp智能服务，按小时付费（PAYGO）或通过年度合同付费。  NetApp智能服务包括NetApp备份和恢复、 Cloud Volumes ONTAP、 NetApp云分层、 NetApp勒索软件恢复和NetApp灾难恢复。  NetApp数据分类包含在您的订阅中，无需额外付费。</block>
@@ -5132,7 +5074,6 @@
   <block id="f1250585f9c248976b034c285b91672c" category="paragraph">使用以下命令之一来验证您的控制台代理。所有服务的状态都应为“正在运行”。如果不是这种情况，请联系NetApp支持。</block>
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">有关访问控制台代理诊断的详细信息，请参阅以下主题：</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">检查控制台代理状态（适用于 Linux 主机部署）</block>
-  <block id="9d234fb83c9099ade4512a750ec868b2" category="list-text"><block ref="9d234fb83c9099ade4512a750ec868b2" category="inline-link-macro-rx"></block></block>
   <block id="bf25f8db77ad355d69bc02d42fae9f4d" category="inline-link-macro">检查控制台代理状态（针对 VCenter 部署）</block>
   <block id="8775ad30be432ac72bc04b0163c4716f" category="list-text"><block ref="8775ad30be432ac72bc04b0163c4716f" category="inline-link-macro-rx"></block></block>
   <block id="22e75fa70d8a01a79302df0514996aee" category="list-text">Docker（用于 Ubuntu 和 VCenter 部署）</block>
@@ -5476,7 +5417,6 @@
   <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">维护 VCenter 安装的代理</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">安装 CA 签名证书以访问 Web 控制台</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">要求在 EC2 实例上使用 IMDSv2</block>
-  <block id="71ae02c171873e7af0f7b72300d1da9b" category="sidebar">管理连接器升级</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">卸载并删除控制台代理</block>
   <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">默认配置</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">在NetApp控制台中强制执行ONTAP权限</block>
@@ -5569,4 +5509,64 @@
   <block id="d06ce875f1b2887cbc5d87b38e0d0d44" category="list-text">您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。<block ref="90428b1442632a8a73b6f9660fa083c4" category="inline-link-macro-rx"></block></block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">使用NetApp控制台助手</block>
   <block id="14a5258ed6e53fde9968f99c48b5072e" category="sidebar">开始使用NetApp控制台助手</block>
+  <block id="55b83b7bea13907c0b624a32a6799b79" category="paragraph"><block ref="55b83b7bea13907c0b624a32a6799b79" category="inline-link-macro-rx"></block></block>
+  <block id="4439aaaad475e34c70f12f09ad6165d9" category="admonition">手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解<block ref="0f8b8c9e4ded9a5f5a72925670422347" category="inline-link-macro-rx"></block>。</block>
+  <block id="ba29ba5428e515700911cad0530da473" category="paragraph">从控制台部署控制台代理时，您需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台的权限。所需的权限列在链接中：task-install-agent-aws-the Console.html#console-permissions-aws[AWS 的代理部署策略]。</block>
+  <block id="a137f604e6a7f24aa4c6910a9cf84195" category="list-text"><block ref="a137f604e6a7f24aa4c6910a9cf84195" category="inline-link-macro-rx"></block></block>
+  <block id="245ff1ee18f9fd1fbf4af2b4a03d7c95" category="list-text"><block ref="245ff1ee18f9fd1fbf4af2b4a03d7c95" category="inline-link-macro-rx"></block></block>
+  <block id="bb3fc7e54cf135053eb820e0008efc8b" category="paragraph">从控制台部署控制台代理时，您需要使用具有部署控制台代理虚拟机权限的 Azure 帐户或服务主体。所需权限列于<block ref="ab1809f94c72613cceb39967d5fc5be7" category="inline-link-macro-rx"></block>。</block>
+  <block id="98faa0bd253708350eda28057b888356" category="list-text"><block ref="98faa0bd253708350eda28057b888356" category="inline-link-macro-rx"></block></block>
+  <block id="2565c19f0836899779db19a140e2fada" category="list-text"><block ref="2565c19f0836899779db19a140e2fada" category="inline-link-macro-rx"></block></block>
+  <block id="1833b862078dbb4dc1ea1c935b25b75f" category="list-text"><block ref="1833b862078dbb4dc1ea1c935b25b75f" category="inline-link-macro-rx"></block></block>
+  <block id="2dabf3ef50b23a394a532c8641ffbc97" category="list-text"><block ref="2dabf3ef50b23a394a532c8641ffbc97" category="inline-link-macro-rx"></block></block>
+  <block id="2686a2ef3c47d0e0eafe183d768a5487" category="paragraph"><block ref="f653f7d16df54a3c9e88f23235c315ba" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="list-text"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block></block>
+  <block id="22ca43ce5c5a872fcead2b9795d43ce4" category="list-text"><block ref="4cac40a6f38a644ae4e3211385f3144e" category="inline-link-macro-rx"></block>（这是标准选项）</block>
+  <block id="b0a755c889be10fff38496428b62e124" category="list-text"><block ref="b0a755c889be10fff38496428b62e124" category="inline-link-macro-rx"></block></block>
+  <block id="ce8b5514801557c28339a07e7885738d" category="list-text"><block ref="ce8b5514801557c28339a07e7885738d" category="inline-link-macro-rx"></block></block>
+  <block id="4d116474327ab97148d8a69fd11379ea" category="list-text"><block ref="e0fdd18000ece681beed8a0793eff329" category="inline-link-macro-rx"></block>（这是标准选项）</block>
+  <block id="b54d9f5a24d2e6b2b731b2862685ce97" category="list-text"><block ref="b54d9f5a24d2e6b2b731b2862685ce97" category="inline-link-macro-rx"></block></block>
+  <block id="9e0a66536136cc55db9b005faf3fa26e" category="list-text"><block ref="9e0a66536136cc55db9b005faf3fa26e" category="inline-link-macro-rx"></block></block>
+  <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>（这是标准选项）</block>
+  <block id="952e50ce3636bd2393f109405c59b8c0" category="list-text"><block ref="952e50ce3636bd2393f109405c59b8c0" category="inline-link-macro-rx"></block></block>
+  <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
+  <block id="8339e7865f160190422328b59c08ee1e" category="list-text"><block ref="8339e7865f160190422328b59c08ee1e" category="inline-link-macro-rx"></block></block>
+  <block id="ca2c93873fc0182f513cf7a270f04ef3" category="list-text"><block ref="ca2c93873fc0182f513cf7a270f04ef3" category="inline-link-macro-rx"></block></block>
+  <block id="982bddeed9f81544f50291e3d6a924ce" category="list-text"><block ref="982bddeed9f81544f50291e3d6a924ce" category="inline-link-macro-rx"></block></block>
+  <block id="9e97ec538c2df79d1e5e48262f80e2f3" category="paragraph"><block ref="a0861367aee4f711e39ff50c5df170be" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">EC2 Linux 实例的用户名是 ubuntu（对于 2023 年 5 月之前创建的代理，用户名是 ec2-user）。</block>
+  <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
+  <block id="64594581e02e022dfc201735b71465f0" category="list-text"><block ref="64594581e02e022dfc201735b71465f0" category="inline-link-macro-rx"></block></block>
+  <block id="4b93f2e9726ccb43bb5df85b409d91b3" category="list-text"><block ref="4b93f2e9726ccb43bb5df85b409d91b3" category="inline-link-macro-rx"></block></block>
+  <block id="c918e5911e84e6725906f864a7cf4ed3" category="list-text"><block ref="c918e5911e84e6725906f864a7cf4ed3" category="inline-link-macro-rx"></block></block>
+  <block id="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="cell"><block ref="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="inline-link-macro-rx"></block></block>
+  <block id="7b4bc41ae2fa01b87cf543c93930cc32" category="cell"><block ref="7b4bc41ae2fa01b87cf543c93930cc32" category="inline-link-macro-rx"></block></block>
+  <block id="e33d05694ffbef46c07ae36b71e76f96" category="cell"><block ref="e33d05694ffbef46c07ae36b71e76f96" category="inline-link-macro-rx"></block></block>
+  <block id="ab7e7f2c26e8446e9290f7e7714458a2" category="cell"><block ref="ab7e7f2c26e8446e9290f7e7714458a2" category="inline-link-macro-rx"></block></block>
+  <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
+  <block id="261ff42fc8f9c0d862eeaad9e733fb30" category="paragraph">您需要先创建控制台代理，然后才能配置订阅。<block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> 。</block>
+  <block id="87cbeaae871cc7df1e298bd3bfa87377" category="paragraph">您需要先创建控制台代理，然后才能更改控制台设置。<block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> 。</block>
+  <block id="20257cdf81419bff017c7b16260ebb25" category="paragraph">您可以使用<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>命令或使用<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。有关详细信息，请参阅<block ref="9370e1eb4855e9767e8414447e836404" category="inline-link-macro-rx"></block>。</block>
+  <block id="7e7a15f5baa7bdfc36453fafb5dc4deb" category="list-text"><block ref="7e7a15f5baa7bdfc36453fafb5dc4deb" category="inline-link-macro-rx"></block></block>
+  <block id="d612e8a0318223d9dd349c48eb63e0fc" category="list-text"><block ref="a6db5244ec8666b2e12c38c770923c31" category="inline-link-macro-rx"></block> 。</block>
+  <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> 。</block>
+  <block id="5f551ddf859b1d7525a5d87169b1c520" category="list-text">你应该有一个<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block>。</block>
+  <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="7f7be9819517a18b53d1f2709c7bd3cd" category="paragraph">从 AWS Marketplace 创建控制台代理会使用默认配置在 AWS 中部署 EC2 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8c14986031b117b1d7341aff8d3a3b3f" category="list-text">从控制台创建控制台代理会使用默认配置在 Azure 中部署虚拟机。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8eef864079a40c4447df38dbce0d23d6" category="paragraph">从 Azure 市场创建控制台代理会设置具有默认配置的虚拟机。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d1f00850b9389d111947a36ca0d9068b" category="paragraph">创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="59f043795dea8adedffde70f225f6c29" category="list-text">你应该有一个<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block>。</block>
+  <block id="c3c58c9797adc5c532aba5f3dd5a1887" category="paragraph">创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="b1b07a21d749d47b74e5826a57b17eaf" category="admonition">如果您有现成的代理，您应该注意<block ref="8d716f5c1f2e0c5f076bb39a15dd1a47" category="inline-link-macro-rx"></block>。</block>
+  <block id="4203742da4cdc7c1dd82452f22078923" category="paragraph"><block ref="6644ee05b73ff616838ce63980e80332" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d9ae58af06fdcaab9da3f43fe827c682" category="paragraph"><block ref="b4ea7ed3eae261783526e5f0a6706763" category="inline-link-macro-rx"></block> 。</block>
+  <block id="e6021c3af6909757e25569099fa4e00a" category="paragraph"><block ref="e6021c3af6909757e25569099fa4e00a" category="inline-link-macro-rx"></block></block>
+  <block id="73766a81edee1e1df062cc59ac68494e" category="paragraph">受限模式通常由州和地方政府以及受监管的公司使用，包括在 AWS GovCloud 和 Azure Government 区域中的部署。在开始之前，请确保您了解<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>和<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
+  <block id="f17ca32b513f955e12b0e36662eed21b" category="paragraph">在标准模式下，您可以访问由NetApp作为软件即服务 (SaaS) 产品托管的基于 Web 的控制台。在开始之前，请确保您了解<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>和<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>。</block>
+  <block id="6e4c4444e6f5b58ee31bcd6f7fcef10d" category="paragraph">此时，您已登录并可以开始管理存储和使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服务。<block ref="d15147d8429817c45cc619fa49c43b04" category="inline-link-macro-rx"></block> 。</block>
+  <block id="098431f8f7d03f0246ab27988862dd14" category="list-text"><block ref="098431f8f7d03f0246ab27988862dd14" category="inline-link-macro-rx"></block></block>
+  <block id="bac5c4edb29e43518e1f2b0b721fb1d5" category="list-text"><block ref="bac5c4edb29e43518e1f2b0b721fb1d5" category="inline-link-macro-rx"></block></block>
+  <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
+  <block id="c33d6b870a4603154aa9aca1e2bdc138" category="sidebar">管理代理升级</block>
 </blocks>

@@ -15,7 +15,7 @@
 
 
 | Google 帐户部署代理 | 自定义 | 服务项目  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["代理部署策略"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["代理部署策略"]
  a| 
 计算.网络用户
 | 在服务项目中部署代理 

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-azure-marketplace.html 
+permalink: task-install-agent-azure-marketplace.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace 
 summary: 要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。 
 ---
@@ -17,7 +17,7 @@ summary: 要从 Azure 市场创建控制台代理，您需要设置网络、准�
 您可以直接从 Azure 市场在 Azure 中创建控制台代理。要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。
 
 .开始之前
-* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 你应该有一个link:concept-agents.html["了解控制台代理"]。
 * 审查link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -376,7 +376,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 直接从 Azure 市场启动控制台代理。
 
 .关于此任务
-从 Azure 市场创建控制台代理会设置具有默认配置的虚拟机。link:reference-connector-default-config.html["了解控制台代理的默认配置"] 。
+从 Azure 市场创建控制台代理会设置具有默认配置的虚拟机。link:reference-agent-default-config.html["了解控制台代理的默认配置"] 。
 
 .开始之前
 您应该具有以下内容：

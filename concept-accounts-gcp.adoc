@@ -34,7 +34,7 @@ image:diagram_permissions_gcp.png["概念图描绘了 Google 和服务帐户部�
 
 要了解如何设置权限，请参阅以下页面：
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["设置标准模式的 Google Cloud 权限"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["设置标准模式的 Google Cloud 权限"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
 
 
@@ -59,6 +59,6 @@ link:task-adding-gcp-accounts.html["了解如何关联 Google Cloud Marketplace 
 
 Cloud Volumes ONTAP可以与控制台代理位于同一项目中，也可以位于不同的项目中。要在不同的项目中部署Cloud Volumes ONTAP ，您需要首先将控制台代理服务帐户和角色添加到该项目。
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["了解如何设置服务帐户"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["了解如何设置服务帐户"]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["了解如何在 Google Cloud 中部署Cloud Volumes ONTAP并选择项目"^]
 

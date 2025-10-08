@@ -18,15 +18,15 @@ summary: 有几种不同的方法可以在 AWS 中创建控制台代理。直接
 
 有以下安装选项可用：
 
-* link:task-install-connector-aws-bluexp.html["直接从控制台创建控制台代理"]（这是标准选项）
+* link:task-install-agent-aws-console.html["直接从控制台创建控制台代理"]（这是标准选项）
 +
 此操作将在您选择的 VPC 中启动运行 Linux 和控制台代理软件的 EC2 实例。
 
-* link:task-install-connector-aws-marketplace.html["从 AWS Marketplace 创建控制台代理"]
+* link:task-install-agent-aws-marketplace.html["从 AWS Marketplace 创建控制台代理"]
 +
 此操作还会启动运行 Linux 和控制台代理软件的 EC2 实例，但部署直接从 AWS Marketplace 启动，而不是从控制台启动。
 
-* link:task-install-connector-aws-manual.html["在您自己的Linux主机上下载并手动安装软件"]
+* link:task-install-agent-aws-manual.html["在您自己的Linux主机上下载并手动安装软件"]
 
 
 您选择的安装选项会影响您如何准备安装。这包括如何向控制台提供验证和管理 AWS 中的资源所需的权限。

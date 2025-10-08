@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-manual.html 
+permalink: task-install-agent-aws-manual.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: 您可以在 AWS 中运行的 Linux 主机上手动安装控制台代理。要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 AWS 权限、安装控制台代理，然后提供您准备好的权限。 
 ---
@@ -17,7 +17,7 @@ summary: 您可以在 AWS 中运行的 Linux 主机上手动安装控制台代�
 您可以在 AWS 中运行的 Linux 主机上手动安装控制台代理。要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 AWS 权限、安装控制台代理，然后提供您准备好的权限。
 
 .开始之前
-* 你应该有一个link:concept-connectors.html["了解控制台代理"]。
+* 你应该有一个link:concept-agents.html["了解控制台代理"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -513,7 +513,7 @@ AWS 服务（amazonaws.com）：
 
 
 
-NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-connector-maint-console.html["代理维护控制台"]。
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console.html["代理维护控制台"]。
 
 .关于此任务
 NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。

@@ -276,7 +276,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 如果您刚刚在云提供商中创建了这些凭据，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。
 
 .开始之前
-您需要先创建控制台代理，然后才能更改控制台设置。link:concept-connectors.html#connector-installation["了解如何创建控制台代理"] 。
+您需要先创建控制台代理，然后才能更改控制台设置。link:concept-agents.html#agent-installation["了解如何创建控制台代理"] 。
 
 .步骤
 . 选择“*管理 > 凭证*”。
@@ -323,7 +323,7 @@ image:screenshot_accounts_switch_azure.gif["屏幕截图显示在“详细信息
 
 
 .步骤
-. 选择“*管理>*凭证*”。
+. 选择“*管理 > 凭证*”。
 . 选择*组织凭证*。
 . 选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。
 +

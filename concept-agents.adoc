@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: concept-connectors.html 
+permalink: concept-agents.html 
 keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: _控制台代理_是在您的云网络或本地网络上运行的NetApp软件。您可以使用控制台代理将NetApp控制台服务连接到您的存储环境。 
 ---
@@ -147,7 +147,7 @@ link:concept-modes.html["了解NetApp控制台部署模式"] 。
 ** link:concept-install-options-aws.html["AWS 中的代理安装选项"]
 ** link:concept-install-options-azure.html["Azure 中的代理安装选项"]
 ** link:concept-install-options-google.html["Google Cloud 中的代理安装选项"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["为本地部署设置云权限"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["为本地部署设置云权限"]
 
 
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
@@ -180,7 +180,7 @@ NetApp每月更新代理软件以添加功能并提高稳定性。某些控制�
 
 如果您（客户）需要停止然后启动控制台代理虚拟机，您应该从云提供商的控制台或使用标准的内部管理程序来执行此操作。
 
-<<connectors-must-be-operational-at-all-times,控制台代理必须始终处于运行状态>> 。
+<<agents-must-be-operational-at-all-times,控制台代理必须始终处于运行状态>> 。
 
 
 

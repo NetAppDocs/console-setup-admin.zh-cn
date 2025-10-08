@@ -69,7 +69,7 @@ image:screenshot-iam-switch-projects-select.png["范围菜单的屏幕截图，�
 
 
 .相关信息
-link:task-iam-associate-connectors.html["将代理与文件夹和项目关联"] 。
+link:task-iam-associate-agents.html["将代理与文件夹和项目关联"] 。
 
 
 
