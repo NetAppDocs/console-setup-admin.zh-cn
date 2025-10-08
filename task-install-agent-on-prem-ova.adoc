@@ -127,6 +127,13 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服务。
@@ -195,6 +202,13 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服务。
@@ -241,7 +255,7 @@ AWS 服务（amazonaws.com）：
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 
 
 
@@ -516,7 +530,7 @@ vSphere 任务栏显示控制台代理部署的进度。
 
 
 
-NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
 
 

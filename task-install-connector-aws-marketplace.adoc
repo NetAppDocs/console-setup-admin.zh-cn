@@ -83,6 +83,13 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服务。
@@ -130,7 +137,7 @@ AWS 服务（amazonaws.com）：
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 创建控制台代理后实现此网络访问。
@@ -241,7 +248,7 @@ AWS 使用指定的设置启动控制台代理，控制台代理将在大约十�
 
 +
 
-NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
 . 从连接到控制台代理虚拟机并具有控制台代理 URL 的主机打开 Web 浏览器。
 . 登录后，设置控制台代理：

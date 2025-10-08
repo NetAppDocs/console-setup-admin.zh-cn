@@ -221,7 +221,7 @@ Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件�
 
 NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-connector-maint-console.html["代理维护控制台"]。
 
-* 您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。link:task-troubleshoot-connector.html["了解如何禁用手动安装的配置检查。"]
+* 您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。link:task-troubleshoot-agent.html["了解如何禁用手动安装的配置检查。"]
 * 根据您的操作系统，在安装控制台代理之前需要 Podman 或 Docker Engine。
 
 
@@ -252,7 +252,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 其中 <version> 是您下载的控制台代理的版本。
 
-. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-connector.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
+. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-agent.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
 . 运行安装脚本。
 +
 [source, cli]

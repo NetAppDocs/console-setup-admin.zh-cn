@@ -90,6 +90,13 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服务。
@@ -137,7 +144,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 创建控制台代理后实现网络要求。
@@ -422,7 +429,7 @@ Azure 使用指定的设置部署虚拟机。您应该会在大约十分钟内�
 
 +
 
-NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故障。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
 . 从连接到控制台代理虚拟机的主机打开 Web 浏览器并输入以下 URL：
 +

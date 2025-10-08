@@ -19,8 +19,6 @@ summary: 通过准备环境和部署控制台代理，开始以受限模式使�
 受限模式通常由州和地方政府以及受监管的公司使用，包括在 AWS GovCloud 和 Azure Government 区域中的部署。在开始之前，请确保您了解link:concept-connectors.html["控制台代理"]和link:concept-modes.html["部署模式"]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] link:task-prepare-restricted-mode.html["准备部署"]
-https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png[]
-
 [role="quick-margin-list"]
 . 准备一个满足 CPU、RAM、磁盘空间、容器编排工具等要求的专用 Linux 主机。
 . 设置提供对目标网络的访问、用于手动安装的出站互联网访问以及用于日常访问的出站互联网的网络。

@@ -365,6 +365,13 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服务。
@@ -412,7 +419,7 @@ AWS 服务（amazonaws.com）：
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 
 
 
@@ -535,7 +542,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 其中 <version> 是您下载的控制台代理的版本。
 
-. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-connector.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
+. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-agent.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
 . 运行安装脚本。
 +
 [source, cli]
@@ -621,7 +628,7 @@ Esc:wq
 
 
 
-NOTE: 如果安装失败，您可以查看安装报告和日志来帮助您解决问题。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+NOTE: 如果安装失败，您可以查看安装报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
 . 从连接到控制台代理虚拟机的主机打开 Web 浏览器并输入以下 URL：
 +

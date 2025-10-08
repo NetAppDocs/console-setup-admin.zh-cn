@@ -344,7 +344,6 @@
   <block id="e9b5bbe1e4c19139761534abb688155a" category="list-text">分配运行脚本的权限。</block>
   <block id="096edbdd03f35ea016cfaab3b88a91ae" category="paragraph">其中 &lt;version&gt; 是您下载的控制台代理的版本。</block>
   <block id="68ff18cb109d61d9e97d66c63cadf9e7" category="inline-link-macro">了解如何禁用手动安装的配置检查。</block>
-  <block id="8acaf9db7ba8cc88abac10f45ce89d6f" category="list-text">如果在政府云环境中安装，请禁用配置检查。<block ref="e24e26b3a5e2be9d4abc30199a402dae" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">运行安装脚本。</block>
   <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">如果您的网络需要代理来访问互联网，则需要添加代理信息。您可以添加透明或显式代理。 --proxy 和 --cacert 参数是可选的，系统不会提示您添加它们。如果您有代理服务器，则需要输入所示的参数。</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">以下是使用 CA 签名证书配置显式代理服务器的示例：</block>
@@ -371,7 +370,6 @@
   <block id="f5f31bd671c0968ba09c8eb577f95629" category="list-text">等待安装完成。</block>
   <block id="c326395610c1efc77fc99f199c08d4a2" category="paragraph">安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。</block>
   <block id="01a0d9e02c5f2599095642d2dd9a1f1b" category="inline-link-macro">了解如何解决安装问题。</block>
-  <block id="73e1f84e521a44157c904244430b1346" category="admonition">如果安装失败，您可以查看安装报告和日志来帮助您解决问题。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="749d806ac6f7868946ca8f9cc91af192" category="list-text">从连接到控制台代理虚拟机的主机打开 Web 浏览器并输入以下 URL：</block>
   <block id="0594b17c3f6f94eb28b63eec7d7d3841" category="paragraph"><block ref="0594b17c3f6f94eb28b63eec7d7d3841" category="inline-link-rx"></block></block>
   <block id="3e6472e78749cf6f2531c943c33f71ea" category="list-text">登录后，设置控制台代理：</block>
@@ -439,7 +437,6 @@
   <block id="dd911b1740a43ff59aad324bd3d90ae3" category="paragraph"><block ref="dd911b1740a43ff59aad324bd3d90ae3" category="inline-link-rx"></block></block>
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">启用 NTP</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">了解有关NetApp数据分类的更多信息</block>
-  <block id="f1ae8ff0a2356d9423833210592133cb" category="list-text">如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。<block ref="e224e5052fedfe25b39387d61b9face5" category="inline-link-rx"></block></block>
   <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy 使用以下格式之一将控制台代理配置为使用 HTTP 或 HTTPS 代理服务器：</block>
   <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert 指定用于控制台代理和代理服务器之间的 HTTPS 访问的 CA 签名证书。  HTTPS代理服务器、拦截代理服务器、透明代理服务器都需要此参数。</block>
   <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">下面是配置透明代理服务器的示例。配置透明代理时，不需要定义代理服务器。您只需将 CA 签名的证书添加到控制台代理主机：</block>
@@ -1032,7 +1029,6 @@
   <block id="1f07edf6ae5cccdb5dacb637fe693758" category="paragraph">当您从NetApp控制台部署控制台代理时，您现在可以选择验证代理配置。如果控制台无法部署代理，它会提供可下载的报告来帮助您排除故障。</block>
   <block id="4303212e6f242fe0a301876fa89b9f0b" category="section-title">改进了控制台代理的故障排除</block>
   <block id="b9b61d414c60733fb8a9d314eec6960a" category="inline-link-macro">了解如何排除控制台代理故障。</block>
-  <block id="79ab7cf55c7d04c02a94981a9a1b7b29" category="paragraph">控制台代理已改进错误消息，可帮助您更好地了解问题。<block ref="32afeb8eb0f9a2e606975b6efca2856e" category="inline-link-macro-rx"></block></block>
   <block id="8fa7eaeb8daf07d8832ec17187b7b40c" category="paragraph">NetApp控制台管理包括以下新功能：</block>
   <block id="bbd516543defb57b86168970a68bacbc" category="section-title">主页仪表板</block>
   <block id="7b8cf2fedf3cca7ede322904788b0cae" category="inline-link-macro">了解有关主页的更多信息。</block>
@@ -1902,7 +1898,6 @@
   <block id="504f5f6c5adc93609131b644e3f8c2a9" category="inline-link">创建或发现 FSx for ONTAP系统</block>
   <block id="c2a442cc7e270f03492b03623a59bddb" category="list-text"><block ref="c2a442cc7e270f03492b03623a59bddb" category="inline-link-rx"></block></block>
   <block id="8111d5a0f80f0b3c708f77dc1b05dc00" category="inline-link">创建Azure NetApp Files系统</block>
-  <block id="30ba58ed811e056e8ec725c80444b736" category="list-text"><block ref="30ba58ed811e056e8ec725c80444b736" category="inline-link-rx"></block></block>
   <block id="e4a9dd1c7d750241fad0d52a3bc7903b" category="inline-link">探索 E 系列系统</block>
   <block id="90a582acc370affa7fa401384859e582" category="list-text"><block ref="90a582acc370affa7fa401384859e582" category="inline-link-rx"></block></block>
   <block id="d85b01f001ee16ebd8eb1917c739d824" category="inline-link">了解StorageGRID系统</block>
@@ -3340,7 +3335,6 @@
   <block id="0ad1fc23b853416c03454d7493973064" category="paragraph">访问诊断工具来解决控制台代理的问题。  NetApp支持可能会在解决问题时要求您执行此操作。</block>
   <block id="c11707912206d93c089b6bec8129f6a2" category="list-text">进入<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block>查看支持和诊断菜单。</block>
   <block id="ea55290239a2ac8340463b02aec81aca" category="inline-link-macro">检查控制台代理状态</block>
-  <block id="2cb97cca54bddb4910dbbcde33e9f63d" category="list-text">进入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>访问诊断工具并按照屏幕上的提示进行操作。 + 例如，您可以验证所有代理服务是否正在运行。<block ref="8aac32cf7b9059cbe4a7c91815a8e5dc" category="inline-link-macro-rx"></block> 。</block>
   <block id="e627757f3c8ea2c508610ccbcdd4117e" category="section-title">远程访问代理诊断工具</block>
   <block id="3b886268b0c6e5d6922ef5ea806e5987" category="paragraph">您可以使用 Putty 等工具远程访问诊断工具。通过分配一次性密码启用对代理 VM 的 SSH 访问。</block>
   <block id="e4b79049874503e851b45867e8c43928" category="paragraph">SSH 访问支持复制和粘贴等高级终端功能。</block>
@@ -3398,24 +3392,11 @@
   <block id="6143580a5ae490efe32d3c566650ad6c" category="paragraph"><block ref="6143580a5ae490efe32d3c566650ad6c" category="inline-link-rx"></block></block>
   <block id="f5d22e387d3dd91dbc45f16de7949a06" category="list-text">选择*支持直接 API 流量*。</block>
   <block id="c569dd49f93a05d537d61130ed43e6e9" category="list-text">选中复选框以启用该选项，然后选择*保存*。</block>
-  <block id="3a8eeebc89d9a465a5174d42af5cbc7d" category="summary">如果您是首次使用NetApp控制台，控制台助手将指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。</block>
-  <block id="c01372c9f1b22e5c48b2dd2618b1db7c" category="doc">开始使用NetApp控制台助手</block>
-  <block id="727605c2ca57a1773b7b1e5760e8faf8" category="paragraph">如果您是首次使用NetApp控制台并具有组织管理员角色的用户，则可以使用控制台助手指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。</block>
-  <block id="2afde8ca8cdacfbe776c425bf18be8f7" category="section-title">访问控制台助手所需的角色</block>
-  <block id="604fe5148b856c1f70c93b02dd3b4b78" category="paragraph">控制台助手仅供具有组织管理员角色的用户使用。</block>
-  <block id="d1b5aa618777a6025bbb8af6da92da6b" category="section-title">控制台助手什么时候出现？</block>
-  <block id="86900a8a60b76457f1e6fd5485663052" category="paragraph">在完成强制性设置任务之前，控制台助手可在NetApp控制台主页上使用。</block>
-  <block id="4e0fdeb55bc3c4c71a155246b3205b66" category="paragraph">使用助手完成这些任务，其中一些是必需的：</block>
   <block id="63cc3bd9a1d39c996544d35459a3e83f" category="list-text">添加NetApp支持站点 (NSS) 帐户。</block>
   <block id="9a1d2c3a232f3692f2db1f53e2ff513f" category="list-text">通过部署控制台代理（强制步骤）连接到您的存储资产。</block>
   <block id="2999351f71503eb3b6d48edab88260fd" category="list-text">通过添加或发现集群来管理您的系统（强制步骤）。</block>
   <block id="eda3fd992dc421b5ecf21b005442d1e7" category="list-text">添加市场订阅或 PAYGO 许可证。</block>
   <block id="54b1f34b39c971ce20ffd13604bb074c" category="list-text">开放数据服务链接。</block>
-  <block id="53a1c56d6735a06d49554eac3c4a0364" category="section-title">启用控制台助手</block>
-  <block id="9d8eb7c3f2b1bc993fba688dd7d0efc3" category="paragraph">默认情况下， NetApp控制台会在主页上为首次具有组织管理员角色的用户显示控制台助手。</block>
-  <block id="8199bfed29a77faf6ca37cbfb1b7282c" category="admonition">只有当您或其他人完成必填项后，您才可以自行解散助手。完成必填项后，您组织中的所有用户都会关闭助手，并且不会再次出现。</block>
-  <block id="ae765b59bd40a71edf1620ddf4f66c9a" category="section-title">使用控制台助手开始</block>
-  <block id="7147a3ddf08647a0d6fe4c8949af44f3" category="paragraph">控制台助手将指导您完成以下任务来设置NetApp控制台环境：</block>
   <block id="0f2d8c8746eb76dda55a87c37bf8f14a" category="list-text">通过在本地或云端部署控制台代理来连接到您的存储资产。您可以手动部署它，也可以通过下载 OVA 来部署它。此步骤是必需的。</block>
   <block id="c257e840ff1ccd2003959f24bf40a4d2" category="list-text">通过添加或发现集群来管理您的系统。此步骤是必需的。</block>
   <block id="97f1d4158178271a52111e6b3daa25f3" category="list-text">了解有关NetApp数据服务的更多信息。</block>
@@ -3431,7 +3412,6 @@
   <block id="d5306448683653381de91511b8c55e1b" category="list-text">* ONTAP警报窗格*：文件夹或项目管理员、运营支持分析师、组织管理员、组织查看器、超级管理员、超级查看器</block>
   <block id="e151fa38e66e51bb09fbb6eb63083197" category="list-text">*存储性能容量窗格*：能够查看NetApp控制台系统页面</block>
   <block id="3392f0d20666a779d503d1ecdd475ffc" category="list-text">*许可证和订阅窗格*：文件夹或项目管理员、组织管理员、组织查看者、超级管理员、超级查看者</block>
-  <block id="3d1b0e48553c19ac53cc05011e627824" category="list-text">*勒索软件弹性窗格*：文件夹或项目管理员、组织管理员、勒索软件保护管理员、勒索软件保护查看器、超级管理员、超级查看器</block>
   <block id="36ca9cd27ee162c45eb4f0d11a5bedf1" category="list-text">*备份和恢复窗格*：备份和恢复备份管理员、备份和恢复超级管理员、备份和恢复备份查看器、备份和恢复克隆管理员、文件夹或项目管理员、组织管理员、备份和恢复恢复管理员、超级管理员、超级查看器</block>
   <block id="5bf7104590078e66848b59d3abfaf393" category="paragraph">如果您没有访问窗格的权限，该窗格会显示一条消息，表明您没有使用该窗格的权限。</block>
   <block id="dbbc09735940a2a21109b74dc600b92b" category="inline-link">了解NetApp控制台访问角色。</block>
@@ -3509,7 +3489,6 @@
   <block id="897c3b1ae39b50295a52dcaca00fa99d" category="paragraph">了解工作负载是否面临勒索软件攻击的风险或是否受到NetApp勒索软件恢复数据服务的保护。您可以查看受保护的数据总量、查看建议的操作数量以及查看与勒索软件防护相关的警报数量。</block>
   <block id="17565ce7eceda01f941c44247b052236" category="paragraph">数据每 5 分钟刷新一次，并与NetApp勒索软件恢复力仪表板中显示的数据相匹配。</block>
   <block id="e1303fde203d17c93a36144831175152" category="inline-link">了解NetApp勒索软件恢复能力</block>
-  <block id="25b9cfcade6c472ec4144237e67a7d62" category="paragraph"><block ref="8bcf9ea3fc2e64b26a0c91875a6419eb" category="inline-link-rx"></block> 。</block>
   <block id="c3ecd5a019581be952b7e478466f0cfc" category="list-text">从NetApp控制台菜单中，查看“勒索软件恢复力”窗格。</block>
   <block id="8c3c718749afd86a59b68786f22641b6" category="list-text">在“勒索软件恢复”窗格中执行以下操作之一：</block>
   <block id="7f176789d86d465c8df04184cd91e82b" category="inline-link">使用NetApp勒索软件恢复力仪表板监控工作负载健康状况</block>
@@ -4161,7 +4140,6 @@
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">查看“准备完成”窗口中的详细信息，选择“完成”。</block>
   <block id="533cb358048cec10b9364d5d776a39b1" category="paragraph">vSphere 任务栏显示控制台代理部署的进度。</block>
   <block id="54453e0b33b1c136b904d49d40e5584f" category="list-text">启动此虚拟机。</block>
-  <block id="bc6df5330a40a6601c383a672e7417ea" category="admonition">如果部署失败，您可以从代理主机访问验证报告和日志。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="9ef04a4b8a28bfcf784c72eeace644a2" category="section-title">使用NetApp控制台注册控制台代理</block>
   <block id="24ec0b6e7c909c10633ec52c6523f771" category="section-title">将云提供商凭据添加到控制台</block>
   <block id="3812e8779179a58315ca409176c5ff21" category="summary">您可以直接从NetApp控制台在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。</block>
@@ -4224,7 +4202,6 @@
   <block id="7d94cf454f2eac26ff84a8d1c8a89d1e" category="list-text">在“安全组”页面上，选择是否创建新的安全组或是否选择允许所需入站和出站规则的现有安全组。</block>
   <block id="a60b1115783600a21eb41ae13935fdc8" category="paragraph">控制台大约需要 10 分钟才能准备好实例。停留在该页面上直到该过程完成。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">该过程完成后，即可从控制台使用控制台代理。</block>
-  <block id="bb0f9ce335979002cd2400c1e9df1874" category="admonition">如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">了解如何从NetApp控制台管理 S3 存储桶</block>
   <block id="af2cca04ee665c389d737de3e58b6615" category="paragraph">如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。<block ref="b005331392e349a72b0688cce0d673cf" category="inline-link-rx"></block></block>
   <block id="3b46ada3c2c8fc9685f33a61ccf996e6" category="summary">您可以在 AWS 中运行的 Linux 主机上手动安装控制台代理。要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 AWS 权限、安装控制台代理，然后提供您准备好的权限。</block>
@@ -4270,7 +4247,6 @@
   <block id="dfcbfa4ce7dbf520f2b737359dfbc591" category="list-text">您的 IAM 用户订阅和取消订阅 AWS Marketplace 的权限。</block>
   <block id="64f210f4d96dcba2f41cec7b537055f7" category="list-text">了解实例的 CPU 和 RAM 要求。</block>
   <block id="e61d51539df3e3e85f74cb25bd105084" category="paragraph">AWS 使用指定的设置启动控制台代理，控制台代理将在大约十分钟内运行。</block>
-  <block id="ff6f43944fe68f6f9466637ceff3f37e" category="admonition">如果安装失败，您可以查看日志和报告来帮助您排除故障。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="e8cd161bebb938efc7055b8fa73c88c0" category="list-text">从连接到控制台代理虚拟机并具有控制台代理 URL 的主机打开 Web 浏览器。</block>
   <block id="4f5fd09b0fecd121d7890d5fcdd126ea" category="inline-link-macro">按照步骤在受限模式下开始使用NetApp控制台</block>
   <block id="797bbe628ec1fb17e30cf7efe960c970" category="paragraph">保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，<block ref="a92127338ae53d774985c3d6a7c5b7c1" category="inline-link-macro-rx"></block> 。</block>
@@ -4503,7 +4479,6 @@
   <block id="92fa0fc1299e55c066d0a19cd22b4e7b" category="list-text">*身份*：在*管理*下，选择*启用系统分配的托管身份*。</block>
   <block id="b99469b29b000bd070b5f230caa3b887" category="paragraph">Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件应在大约五分钟内运行。</block>
   <block id="8f40f6b9cda905fc9a83217435e6b940" category="open-title">手动安装</block>
-  <block id="8d99df925d96aff04328145571f87339" category="list-text">您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。<block ref="78a0b28d10c9034d7e8ac8b7c62d236d" category="inline-link-macro-rx"></block></block>
   <block id="2866ea542642e0051f06f0462f4f5e80" category="list-text">根据您的操作系统，在安装控制台代理之前需要 Podman 或 Docker Engine。</block>
   <block id="4a5aa670ff7341f391971ddd6994ac6d" category="paragraph">控制台代理现已安装。安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。</block>
   <block id="dff3d2b179cc5b62a2e772cc8404f515" category="section-title">第 2 步：设置NetApp控制台</block>
@@ -4937,7 +4912,6 @@
   <block id="463607e512069b418940a921afdec8b0" category="paragraph">受限模式通常由州和地方政府以及受监管的公司使用，包括在 AWS GovCloud 和 Azure Government 区域中的部署。在开始之前，请确保您了解<block ref="f3ace5a930cbd0beeeadc55a7b354ad6" category="inline-link-macro-rx"></block>和<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
   <block id="27677c533249219197c5933410713055" category="inline-link-macro">准备部署</block>
   <block id="1308ae14263d9629eb12e11bd10db155" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="f826f61970c0735d0b0624264426b512" category="inline-link-macro-rx"></block></block>
-  <block id="97b64edf91ee5b23d7be166b37661a91" category="paragraph"><block ref="97b64edf91ee5b23d7be166b37661a91" category="inline-link-rx"></block></block>
   <block id="eb762959fcc0cce31949abce6f8eb1c1" category="list-text">准备一个满足 CPU、RAM、磁盘空间、容器编排工具等要求的专用 Linux 主机。</block>
   <block id="b6ff2c8bfe1c4f67a13521ec6fe0231d" category="list-text">设置提供对目标网络的访问、用于手动安装的出站互联网访问以及用于日常访问的出站互联网的网络。</block>
   <block id="a890d698a19e93638bdfa0906dc8d80a" category="list-text">在您的云提供商中设置权限，以便您可以在部署控制台代理实例后将这些权限与控制台代理实例关联。</block>
@@ -5457,7 +5431,6 @@
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">已知限制</block>
   <block id="e4c53684ddd66ee4898db459d57514e8" category="sidebar">学习基础知识</block>
   <block id="bcb004c01b250a259c11d3d9406d9f6f" category="sidebar">开始使用NetApp助手</block>
-  <block id="89600e20a8904656a9df99bbfa311f3a" category="sidebar">使用NetApp助手</block>
   <block id="65ce4dce26160be29539699c6623e379" category="sidebar">入门工作流程</block>
   <block id="1434a6bb482886cf18491c3161371a87" category="sidebar">注册NetApp控制台</block>
   <block id="f3aee30a3a487c746572616e3f53dc9d" category="sidebar">创建控制台代理</block>
@@ -5522,7 +5495,6 @@
   <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetApp控制台建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp数据服务，提供实时洞察、更快的工作流程以及高度安全且合规的简化管理。</block>
   <block id="e4374974e911590511a1add55932606e" category="paragraph">*存储*菜单包括*警报*，用于查看ONTAP系统警报和*生命周期规划*（以前称为*经济效率*），用于识别未使用或未充分利用的资源。</block>
   <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">NetApp已将Keystone移至 *存储* 菜单，您可以在其中管理您的NetApp Keystone订阅并查看您的使用情况。</block>
-  <block id="e54f451349319459dd1f9900aebfc23e" category="paragraph">| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。</block>
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\ https://support.netapp.com</block>
   <block id="451228b79a76a54f6c3a4a5d5af0ec52" category="paragraph">该服务使用特定于NetApp Backup and Recovery 的以下角色。</block>
   <block id="8522e2f14782589c21835c86cf65bebb" category="list-text">*备份和恢复超级管理员*：在NetApp备份和恢复中执行任何操作。</block>
@@ -5568,4 +5540,33 @@
   <block id="1dcb606a3a707c345cb54b5c3113d621" category="cell">删除执行钩子模板</block>
   <block id="386bacb41d61c7b8e46cd3e9198743cd" category="cell">查看工作负载摘要和分析仪表板</block>
   <block id="8bbffbb59e50612d870c42d2db4880dc" category="cell">查看StorageGRID存储桶和存储目标</block>
+  <block id="c969e31f72edfcf168ffdd268986844a" category="paragraph">| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。| \https:\\support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。</block>
+  <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">如果在政府云环境中安装，请禁用配置检查。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
+  <block id="42c16a43066627b293306439eb1732f6" category="admonition">如果安装失败，您可以查看安装报告和日志来帮助您解决问题。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
+  <block id="12ad8fdc380a2754e74763c6ec3dd093" category="paragraph">控制台代理已改进错误消息，可帮助您更好地了解问题。<block ref="af6db24ea837f8b9ee9738ec7c58a997" category="inline-link-macro-rx"></block></block>
+  <block id="ee2dcfcc83687ed3d92f8b7d687f1f05" category="list-text"><block ref="ee2dcfcc83687ed3d92f8b7d687f1f05" category="inline-link-rx"></block></block>
+  <block id="c9c92f70006bb92009b6cd8f9b6b80f7" category="cell">\https:\\support.netapp.com</block>
+  <block id="f092dc53062418401abf8d7b17161fcb" category="cell">获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。</block>
+  <block id="02220399c28525a1c857a5784cf96eca" category="list-text">进入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>访问诊断工具并按照屏幕上的提示进行操作。+ 例如，您可以验证所有代理服务是否正在运行。<block ref="50f10aae18a0502372770b812f684d46" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d03af09bc0729475142a25d2101f89cb" category="summary">如果您是首次使用NetApp控制台，控制台助手将指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。</block>
+  <block id="d87d84551cb844b0885926102e010a21" category="doc">开始使用NetApp控制台助手</block>
+  <block id="353de4ac300e65b2fec1e023d43775e8" category="paragraph">如果您是首次使用NetApp控制台并具有组织管理员角色的用户，则可以使用控制台助手指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。</block>
+  <block id="8cef8f584fd9250404884341b9d1faf9" category="section-title">访问控制台助手所需的角色</block>
+  <block id="62e7589e6fbf937c65e401243a7b18fc" category="paragraph">控制台助手仅对具有组织管理员角色的用户可用。</block>
+  <block id="3f8d156ec79d1ba58a6edcc11b513c8f" category="section-title">控制台助手什么时候出现？</block>
+  <block id="b849ed2934d21e42ae7ade5deab5eb71" category="paragraph">在完成强制性设置任务之前，控制台助手可在NetApp控制台主页上使用。</block>
+  <block id="66e107092fbbaa7674c253527698105d" category="paragraph">使用助手完成这些任务，其中一些是强制性的：</block>
+  <block id="e2109b57fa6348f346526f55a48f78ba" category="section-title">启用控制台助手</block>
+  <block id="1d4f06583c930c65d01139af412243e9" category="paragraph">默认情况下， NetApp控制台会在主页上为首次具有组织管理员角色的用户显示控制台助手。</block>
+  <block id="0261c21f37275db55da37598552a89dc" category="admonition">只有您或其他人完成必填项后，您才可以自行解雇助手。完成必填项后，您组织中的所有用户都将不再使用该助手，并且不会再次出现。</block>
+  <block id="beb8b9e8503d0cddbe7c900d24ead8cd" category="section-title">使用控制台助手开始</block>
+  <block id="67cd761b7682bdb0c49c488e0f4f66f5" category="paragraph">控制台助手将指导您完成以下任务来设置NetApp控制台环境：</block>
+  <block id="7a6b8361cf669546010faac41df80823" category="list-text">*勒索软件恢复力窗格*：文件夹或项目管理员、组织管理员、勒索软件恢复力管理员、勒索软件恢复力查看器、超级管理员、超级查看器</block>
+  <block id="b0222afe7e5fe02f5ecf6f18206c0756" category="paragraph"><block ref="a8fcff039851ffc5bb3edfa9a8cce2e8" category="inline-link-rx"></block> 。</block>
+  <block id="54a3b32628f9142d15de42359d5a4ab9" category="admonition">如果部署失败，您可以从代理主机访问验证报告和日志。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="61ee3fc74079e98a59bc55949818a0a9" category="admonition">如果安装失败，您可以查看日志和报告来帮助您排除故障。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="d06ce875f1b2887cbc5d87b38e0d0d44" category="list-text">您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。<block ref="90428b1442632a8a73b6f9660fa083c4" category="inline-link-macro-rx"></block></block>
+  <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">使用NetApp控制台助手</block>
 </blocks>

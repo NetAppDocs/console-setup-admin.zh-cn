@@ -43,7 +43,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 其中 <version> 是您下载的控制台代理的版本。
 
-. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-connector.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
+. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-agent.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
 . 运行安装脚本。
 +
 [source, cli]
@@ -131,7 +131,7 @@ Esc:wq
 
 
 
-NOTE: 如果安装失败，您可以查看安装报告和日志来帮助您解决问题。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解决安装问题。"]
+NOTE: 如果安装失败，您可以查看安装报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
 . 从连接到控制台代理虚拟机的主机打开 Web 浏览器并输入以下 URL：
 +
