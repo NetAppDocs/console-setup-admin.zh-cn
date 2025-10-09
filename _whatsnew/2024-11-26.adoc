@@ -18,16 +18,16 @@
 | 连接器 | 3.9.46 | 轻微的安全改进和错误修复 
 
 
-| 备份和恢复 | 2024年11月22日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2024 年 11 月版本中包含的更改 
+| 备份和恢复 | 2024年11月22日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2024 年 11 月版本中包含的更改 
 
 
-| 分类 | 2024 年 11 月 4 日（版本 1.37） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.32 至 1.37 版本中包含的更改 
+| 分类 | 2024 年 11 月 4 日（版本 1.37） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.32 至 1.37 版本中包含的更改 
 
 
-| Cloud Volumes ONTAP管理 | 2024年11月11日 | 前往 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理页面的新增功能"^]并参考 2024 年 10 月和 2024 年 11 月版本中包含的更改 
+| Cloud Volumes ONTAP管理 | 2024年11月11日 | 前往 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理页面的新增功能"^]并参考 2024 年 10 月和 2024 年 11 月版本中包含的更改 
 
 
-| 本地ONTAP集群管理 | 2024年11月26日 | 前往 https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["本地ONTAP集群管理页面的新增功能"^]并参考 2024 年 11 月版本中包含的更改 
+| 本地ONTAP集群管理 | 2024年11月26日 | 前往 https://docs.netapp.com/us-en/storage-management-ontap-onprem/whats-new.html["本地ONTAP集群管理页面的新增功能"^]并参考 2024 年 11 月版本中包含的更改 
 |===
 虽然BlueXP digital wallet和BlueXP replication也包含在私人模式中，但与之前的私人模式版本相比没有任何变化。
 

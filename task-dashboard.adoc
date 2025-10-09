@@ -137,9 +137,9 @@ TIP: 缓存可优化性能，但可能会导致此窗格上的数据与实际值
 
 查看有关ONTAP中发生的某些事件的警报。它们是 EMS 和基于指标的警报的组合。
 
-有关ONTAP警报的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-alerts/index.html["关于ONTAP警报"^]。
+有关ONTAP警报的详细信息，请参阅 https://docs.netapp.com/us-en/console-alerts/index.html["关于ONTAP警报"^]。
 
-有关您可能会看到的警报列表，请参阅 https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["查看ONTAP存储中的潜在风险"^]。
+有关您可能会看到的警报列表，请参阅 https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["查看ONTAP存储中的潜在风险"^]。
 
 .步骤
 . 从NetApp控制台菜单中，查看ONTAP警报窗格。
@@ -200,9 +200,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 . 从NetApp控制台菜单中，查看“勒索软件恢复力”窗格。
 . 在“勒索软件恢复”窗格中执行以下操作之一：
 +
-** 选择“查看”转到NetApp勒索软件恢复力仪表板。有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["使用NetApp勒索软件恢复力仪表板监控工作负载健康状况"^]。
-** 查看NetApp勒索软件恢复力仪表板中的“推荐操作”。有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["查看NetApp勒索软件恢复力仪表板上的保护建议"^]。
-** 选择警报链接以查看NetApp勒索软件恢复警报页面中的警报。有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["使用NetApp勒索软件恢复功能处理检测到的勒索软件警报"^]。
+** 选择“查看”转到NetApp勒索软件恢复力仪表板。有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["使用NetApp勒索软件恢复力仪表板监控工作负载健康状况"^]。
+** 查看NetApp勒索软件恢复力仪表板中的“推荐操作”。有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["查看NetApp勒索软件恢复力仪表板上的保护建议"^]。
+** 选择警报链接以查看NetApp勒索软件恢复警报页面中的警报。有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["使用NetApp勒索软件恢复功能处理检测到的勒索软件警报"^]。
 
 
 
@@ -220,5 +220,5 @@ TIP: 缓存可优化性能，但可能会导致此窗格上的数据与实际值
 
 .步骤
 . 从NetApp控制台菜单中，查看“备份和恢复”窗格。
-. 选择“*查看*”转到NetApp备份和恢复仪表板。有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["NetApp备份和恢复文档"^]。
+. 选择“*查看*”转到NetApp备份和恢复仪表板。有关详细信息，请参阅 https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp备份和恢复文档"^]。
 

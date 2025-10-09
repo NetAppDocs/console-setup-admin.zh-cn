@@ -65,5 +65,5 @@ image:screenshot-iam-project-id.png["选择项目的操作菜单后，显示项�
 .相关信息
 * link:concept-identity-and-access-management.html["了解身份和访问管理"]
 * link:task-iam-get-started.html["开始使用身份和访问权限"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身份和访问 API"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身份和访问 API"^]
 

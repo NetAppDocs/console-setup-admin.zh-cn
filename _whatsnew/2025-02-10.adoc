@@ -69,7 +69,7 @@ BlueXP IAM 提供更精细的资源和权限管理：
 
 
 .BlueXP IAM 的 API
-此更改为BlueXP IAM 引入了一个新的 API，但它与以前的租赁 API 向后兼容。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
+此更改为BlueXP IAM 引入了一个新的 API，但它与以前的租赁 API 向后兼容。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
 
 .支持的部署模式
 在标准和受限模式下使用BlueXP时支持BlueXP IAM。如果您在私人模式下使用BlueXP ，那么您将继续使用BlueXP _account_ 来管理工作区、用户和资源。
@@ -90,8 +90,8 @@ BlueXP IAM 提供更精细的资源和权限管理：
 | 连接器 | 3.9.48 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["BlueXP连接器页面中的新功能"]并参考 3.9.48 版本所包含的更改。 
 
 
-| 备份和恢复 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2025 年 2 月版本中包含的更改。 
+| 备份和恢复 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2025 年 2 月版本中包含的更改。 
 
 
-| 分类 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.39 版本中包含的更改。 
+| 分类 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.39 版本中包含的更改。 
 |===

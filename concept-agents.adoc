@@ -24,7 +24,7 @@ _控制台代理_在您的云网络或本地网络中运行。您可以使用控
 
 * Amazon FSx for NetApp ONTAP
 +
-某些操作需要控制台代理或NetApp Workloads 链接。 https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["了解哪些操作需要控制台代理或链接"^]
+某些操作需要控制台代理或NetApp Workloads 链接。 https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html["了解哪些操作需要控制台代理或链接"^]
 
 * 自动化中心
 * Azure NetApp Files
@@ -46,7 +46,7 @@ _控制台代理_在您的云网络或本地网络中运行。您可以使用控
 您不需要控制台代理即可将本地ONTAP集群添加到控制台，但需要控制台代理来添加其他控制台功能和数据服务。
 
 +
-https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解有关本地ONTAP集群的发现和管理选项的更多信息"^]
+https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解有关本地ONTAP集群的发现和管理选项的更多信息"^]
 
 * 软件更新
 * 可持续性
@@ -98,7 +98,7 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["�
 * Amazon Web Services
 * Microsoft Azure
 +
-在 Azure 中与其管理的Cloud Volumes ONTAP系统位于同一区域的控制台代理。或者，将其部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]。这可确保Cloud Volumes ONTAP及其关联的存储帐户之间使用 Azure Private Link 连接。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解Cloud Volumes ONTAP如何使用 Azure Private Link"^]
+在 Azure 中与其管理的Cloud Volumes ONTAP系统位于同一区域的控制台代理。或者，将其部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]。这可确保Cloud Volumes ONTAP及其关联的存储帐户之间使用 Azure Private Link 连接。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["了解Cloud Volumes ONTAP如何使用 Azure Private Link"^]
 
 * Google Cloud
 +

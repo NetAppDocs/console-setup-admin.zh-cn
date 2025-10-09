@@ -60,5 +60,5 @@ link:task-adding-gcp-accounts.html["了解如何关联 Google Cloud Marketplace 
 Cloud Volumes ONTAP可以与控制台代理位于同一项目中，也可以位于不同的项目中。要在不同的项目中部署Cloud Volumes ONTAP ，您需要首先将控制台代理服务帐户和角色添加到该项目。
 
 * link:task-install-agent-google-console-gcloud.html#agent-permissions-google["了解如何设置服务帐户"]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["了解如何在 Google Cloud 中部署Cloud Volumes ONTAP并选择项目"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["了解如何在 Google Cloud 中部署Cloud Volumes ONTAP并选择项目"^]
 

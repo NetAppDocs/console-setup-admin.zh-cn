@@ -34,7 +34,7 @@ IMDSv2 提供了增强的针对漏洞的保护。 https://aws.amazon.com/blogs/s
 
 实例元数据服务 (IMDS) 在 EC2 实例上启用如下：
 
-* 对于从控制台或使用 https://docs.netapp.com/us-en/bluexp-automation/automate/overview.html["Terraform 脚本"^]，IMDSv2 在 EC2 实例上默认启用。
+* 对于从控制台或使用 https://docs.netapp.com/us-en/console-automation/automate/overview.html["Terraform 脚本"^]，IMDSv2 在 EC2 实例上默认启用。
 * 如果您在 AWS 中启动新的 EC2 实例，然后手动安装控制台代理软件，则 IMDSv2 也会默认启用。
 * 如果您从 AWS Marketplace 启动控制台代理，则默认启用 IMDSv1。您可以在 EC2 实例上手动配置 IMDSv2。
 * 对于现有的控制台代理，仍然支持 IMDSv1，但如果您愿意，可以在 EC2 实例上手动配置 IMDSv2。
@@ -88,7 +88,7 @@ NOTE: 这 `http-tokens`参数将 IMDSv2 设置为必需。什么时候 `http-tok
 
 
 .. 对其他Cloud Volumes ONTAP实例（包括 HA 中介）重复这些步骤。
-.. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-state.html["停止并启动Cloud Volumes ONTAP实例"^]
+.. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-state.html["停止并启动Cloud Volumes ONTAP实例"^]
 
 
 

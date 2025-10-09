@@ -38,7 +38,7 @@ summary: 代理的 Azure 安全组需要入站和出站规则。当您从控制�
 | HTTPS | 443 | 提供从客户端 Web 浏览器到本地用户界面的 HTTPS 访问，以及来自NetApp数据分类实例的连接 
 
 
-| TCP | 3128 | 为Cloud Volumes ONTAP提供互联网访问权限，以便将AutoSupport消息发送给NetApp支持。部署后您必须手动打开此端口。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-verify-autosupport.html["了解如何将代理用作AutoSupport消息的代理"^] 
+| TCP | 3128 | 为Cloud Volumes ONTAP提供互联网访问权限，以便将AutoSupport消息发送给NetApp支持。部署后您必须手动打开此端口。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["了解如何将代理用作AutoSupport消息的代理"^] 
 |===
 
 

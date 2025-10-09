@@ -18,10 +18,10 @@
 | 连接器 | 3.9.52, 3.9.51 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXP连接器页面中的新功能"]并参考版本 3.9.52 和 3.9.50 所包含的更改。 
 
 
-| 备份和恢复 | 2025年5月12日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2025 年 5 月版本中包含的更改。 
+| 备份和恢复 | 2025年5月12日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery页面中的新功能"^]并参考 2025 年 5 月版本中包含的更改。 
 
 
-| 分类 | 2025 年 5 月 12 日（版本 1.43） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.38 至 1.371.41 版本中包含的更改。 
+| 分类 | 2025 年 5 月 12 日（版本 1.43） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification页面中的新功能"^]并参考 1.38 至 1.371.41 版本中包含的更改。 
 |===
 有关私人模式的更多详细信息，包括如何升级，请参阅以下内容：
 

@@ -269,4 +269,4 @@ NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故�
 
 打开 Web 浏览器并转到 https://console.netapp.com["NetApp控制台"^]开始将控制台代理与控制台一起使用。
 
-如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["了解如何从NetApp控制台管理 S3 存储桶"^]
+如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp控制台管理 S3 存储桶"^]

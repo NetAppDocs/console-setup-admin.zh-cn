@@ -647,7 +647,7 @@ https://_ipaddress_[]
 
 
 
-如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["了解如何通过NetApp ConsoleP 管理 S3 存储桶"^]
+如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何通过NetApp ConsoleP 管理 S3 存储桶"^]
 
 
 

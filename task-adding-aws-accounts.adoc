@@ -32,7 +32,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp控制台具有在您的 AWS �
 
 * 将 AWS 凭证添加到 FSx for ONTAP控制台
 +
-将新的 AWS 凭证添加到控制台以创建和管理 FSx for ONTAP。 https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何设置 FSx for ONTAP 的权限"^]
+将新的 AWS 凭证添加到控制台以创建和管理 FSx for ONTAP。 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何设置 FSx for ONTAP 的权限"^]
 
 
 
@@ -194,7 +194,7 @@ image:screenshot_accounts_switch_aws.png["屏幕截图显示在“详细信息�
 
 ** 创建一个包含创建控制台代理所需权限的策略。
 +
-*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["查看 FSx for ONTAP所需的权限"^]
+*** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["查看 FSx for ONTAP所需的权限"^]
 *** link:task-install-agent-aws-console.html#aws-permissions-agent["查看代理部署策略"]
 
 
@@ -233,7 +233,7 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 
 == 向Amazon FSx for ONTAP控制台添加凭证
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 的控制台文档"^]
+有关详细信息，请参阅 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 的控制台文档"^]
 
 
 
