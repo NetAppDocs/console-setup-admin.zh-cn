@@ -83,7 +83,7 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
-\https:\\support.netapp.com
+\ https://support.netapp.com
  a| 
 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
 

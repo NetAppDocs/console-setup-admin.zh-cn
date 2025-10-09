@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp 
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp, console agent, console 
 summary: 当在本地 Linux 主机上手动安装时，控制台代理使用_入站_端口。请参考这些端口以进行规划。 
 ---
 = 本地控制台代理的端口

@@ -75,7 +75,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
 
 
  a| 
-\https:\\support.netapp.com
+\ https://support.netapp.com
  a| 
 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
 
