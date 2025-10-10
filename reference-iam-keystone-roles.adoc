@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-keystone-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: NetApp控制台身份和访问管理提供了两个Keystone角色，您可以将其分配给组织成员。 
+summary: NetApp Console身份和访问管理提供了两个Keystone角色，您可以将其分配给组织成员。 
 ---
-= NetApp控制台中的Keystone访问角色
+= NetApp Console中的Keystone访问角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp控制台身份和访问管理提供了两个Keystone角色，您
 [role="lead"]
 Keystone角色提供对Keystone仪表板的访问权限，并允许用户查看和管理他们的Keystone订阅。 Keystone角色有两种： Keystone管理员和Keystone查看者。这两个角色的主要区别在于他们在Keystone中可以采取的行动。  Keystone管理员角色是唯一允许创建服务请求或修改订阅的角色。
 
-.NetApp控制台中的Keystone角色示例
+.NetApp Console中的Keystone角色示例
 XYZ 公司有四名来自不同部门的存储工程师查看Keystone订阅信息。虽然所有这些用户都需要监控Keystone订阅，但只有团队负责人才被允许提出服务请求。团队中的三名成员被赋予 * Keystone查看者* 角色，而团队负责人被赋予 * Keystone管理员* 角色，以便对公司的服务请求进行控制。
 
 下表列出了每个Keystone角色可以执行的操作。
@@ -91,7 +91,7 @@ XYZ 公司有四名来自不同部门的存储工程师查看Keystone订阅信�
 
 
 
-3+| *许可证和订阅*： 
+3+| *Licenses and subscriptions*： 
 
 
 | 可以查看许可证和订阅  a| 

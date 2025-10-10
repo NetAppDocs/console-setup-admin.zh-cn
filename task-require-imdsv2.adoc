@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-require-imdsv2.html 
 keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, local interface, local connector, local cloud manager, local ui, go to local ui 
-summary: NetApp控制台通过控制台代理和Cloud Volumes ONTAP支持 IMDSv2。大多数情况下，IMDSv2 会在新的 EC2 实例上自动配置。 IMDSv1 于 2024 年 3 月之前启用。如果您的安全策略需要，您可能需要在 EC2 实例上手动配置 IMDSv2。 
+summary: NetApp Console通过控制台代理和Cloud Volumes ONTAP支持 IMDSv2。大多数情况下，IMDSv2 会在新的 EC2 实例上自动配置。 IMDSv1 于 2024 年 3 月之前启用。如果您的安全策略需要，您可能需要在 EC2 实例上手动配置 IMDSv2。 
 ---
 = 要求在 Amazon EC2 实例上使用 IMDSv2
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp控制台通过控制台代理和Cloud Volumes ONTAP支持 IMDSv2
 
 
 [role="lead"]
-NetApp控制台通过控制台代理和Cloud Volumes ONTAP （包括 HA 部署的中介）支持 Amazon EC2 实例元数据服务版本 2 (IMDSv2)。大多数情况下，IMDSv2 会在新的 EC2 实例上自动配置。 IMDSv1 于 2024 年 3 月之前启用。如果您的安全策略需要，您可能需要在 EC2 实例上手动配置 IMDSv2。
+NetApp Console通过控制台代理和Cloud Volumes ONTAP （包括 HA 部署的中介）支持 Amazon EC2 实例元数据服务版本 2 (IMDSv2)。大多数情况下，IMDSv2 会在新的 EC2 实例上自动配置。 IMDSv1 于 2024 年 3 月之前启用。如果您的安全策略需要，您可能需要在 EC2 实例上手动配置 IMDSv2。
 
 .开始之前
 * 控制台代理版本必须为 3.9.38 或更高版本。

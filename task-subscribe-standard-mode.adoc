@@ -4,7 +4,7 @@ permalink: task-subscribe-standard-mode.html
 keywords: subscribe, subscription, marketplace subscription, paygo, contract, annual contract 
 summary: 从您的云提供商市场订阅NetApp数据服务，按小时费率或通过年度合同支付数据服务费用。如果您从NetApp购买了许可证，您还需要订阅市场产品。您的许可证始终会先被收费，但如果您超出许可容量或许可证期限到期，则会按小时费率向您收费。 
 ---
-= 订阅NetApp智能服务（标准模式）
+= 订阅NetApp Intelligent Services（标准模式）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: 从您的云提供商市场订阅NetApp数据服务，按小时费率�
 
 
 [role="lead"]
-从云提供商的市场订阅NetApp智能服务，以按小时费率（PAYGO）或通过年度合同支付数据服务费用。如果您从NetApp （BYOL）购买了许可证，您还需要订阅市场产品。您的许可证始终会先被收费，但如果您超出许可容量或许可证期限到期，则会按小时费率向您收费。
+从云提供商的市场订阅NetApp Intelligent Services，以按小时费率（PAYGO）或通过年度合同支付数据服务费用。如果您从NetApp （BYOL）购买了许可证，您还需要订阅市场产品。您的许可证始终会先被收费，但如果您超出许可容量或许可证期限到期，则会按小时费率向您收费。
 
 通过市场订阅可以对以下NetApp数据服务收费：
 
-* NetApp备份和恢复
+* NetApp Backup and Recovery
 * Cloud Volumes ONTAP
-* NetApp云分层
-* NetApp勒索软件抵御能力
-* NetApp灾难恢复
+* NetApp Cloud Tiering
+* NetApp Ransomware Resilience
+* NetApp Disaster Recovery
 
 
-NetApp数据分类可通过您的订阅启用，但使用分类是免费的。
+NetApp Data Classification可通过您的订阅启用，但使用分类是免费的。
 
 .开始之前
 您必须已经部署控制台代理才能订阅数据服务。您需要将市场订阅与连接到控制台代理的云凭据关联起来。
@@ -34,16 +34,16 @@ NetApp数据分类可通过您的订阅启用，但使用分类是免费的。
 ====
 .AWS
 --
-以下视频展示了从 AWS Marketplace 订阅NetApp智能服务的步骤：
+以下视频展示了从 AWS Marketplace 订阅NetApp Intelligent Services的步骤：
 
-.从 AWS Marketplace 订阅NetApp智能服务
+.从 AWS Marketplace 订阅NetApp Intelligent Services
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步骤
 . 选择“*管理 > 凭证*”。
 . 选择*组织凭证*。
 . 选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。
 +
-您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp控制台关联的凭据关联。
+您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp Console关联的凭据关联。
 
 +
 image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜单的屏幕截图。"]
@@ -55,7 +55,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 .. 选择*订阅*。
 .. 选择*设置您的帐户*。
 +
-您将被重定向到NetApp控制台。
+您将被重定向到NetApp Console。
 
 .. 从“*订阅分配*”页面：
 +
@@ -82,7 +82,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 . 选择*组织凭证*。
 . 选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。
 +
-您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp控制台关联的凭据关联。
+您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp Console关联的凭据关联。
 
 . 要将凭据与现有订阅关联，请从下拉列表中选择订阅并选择*配置*。
 . 要将凭据与新订阅关联，请选择“添加订阅”>“继续”*，然后按照 Azure 市场中的步骤操作：
@@ -92,7 +92,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 .. 填写表格并选择*订阅*。
 .. 订阅过程完成后，选择*立即配置帐户*。
 +
-您将被重定向到NetApp控制台。
+您将被重定向到NetApp Console。
 
 .. 从“*订阅分配*”页面：
 +
@@ -109,7 +109,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 以下视频展示了从 Azure 市场订阅的步骤：
 
 +
-.从 Azure 市场订阅NetApp智能服务
+.从 Azure 市场订阅NetApp Intelligent Services
 video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
@@ -131,10 +131,10 @@ image:screenshot_gcp_associate.gif["为 Google Cloud 凭据选择的 Google Clou
 . 如果您还没有订阅，请选择*添加订阅>继续*并按照 Google Cloud Marketplace 中的步骤操作。
 +
 
-NOTE: 在完成以下步骤之前，请确保您在 Google Cloud 帐户中同时拥有 Billing Admin 权限以及NetApp Console 登录权限。
+NOTE: 在完成以下步骤之前，请确保您在 Google Cloud 帐户中同时拥有 Billing Admin 权限以及NetApp Console登录权限。
 
 +
-.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp智能服务页面"^]，确保在顶部导航菜单中选择了正确的项目。
+.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp Intelligent Services页面"^]，确保在顶部导航菜单中选择了正确的项目。
 +
 image:screenshot_gcp_cvo_marketplace.png["Google Cloud 中Cloud Volumes ONTAP市场页面的屏幕截图。"]
 
@@ -154,7 +154,7 @@ image:screenshot_gcp_marketplace_register.png["注册弹出窗口的屏幕截图
 .. 完成“*订阅分配*”页面上的步骤：
 +
 
-NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场，那么您将被重定向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp控制台中的Cloud Volumes ONTAP页面"^]反而。如果这是意外情况，请联系您的NetApp销售团队。  Google 为每个 Google 结算帐户仅启用一项订阅。
+NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场，那么您将被重定向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console中的Cloud Volumes ONTAP页面"^]反而。如果这是意外情况，请联系您的NetApp销售团队。  Google 为每个 Google 结算帐户仅启用一项订阅。
 
 +
 *** 选择您想要与此订阅关联的控制台组织或帐户。
@@ -174,7 +174,7 @@ NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场�
 video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. 此过程完成后，导航回控制台中的凭据页面并选择此新订阅。
+.. 此过程完成后，导航回控制台中的“凭据”页面并选择此新订阅。
 +
 image:screenshot_gcp_associate.gif["订阅分配页面的屏幕截图。"]
 

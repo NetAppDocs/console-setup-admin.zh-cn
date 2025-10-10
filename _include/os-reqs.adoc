@@ -74,7 +74,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 或更高版本， NetApp控制台处于标准模式或受限模式
+3.9.45 或更高版本， NetApp Console处于标准模式或受限模式
  a| 
 Docker Engine 23.06 至 28.0.0。
  a| 

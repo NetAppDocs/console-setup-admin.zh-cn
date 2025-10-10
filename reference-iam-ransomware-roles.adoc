@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: 在NetApp控制台中，您可以授予角色以让用户访问NetApp勒索软件恢复能力。 
+summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp Ransomware Resilience。 
 ---
-= NetApp控制台的勒索软件恢复访问角色
+= NetApp Console的勒索软件恢复访问角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 在NetApp控制台中，您可以授予角色以让用户访问NetApp�
 
 
 [role="lead"]
-勒索软件恢复角色为用户提供对NetApp勒索软件恢复的访问权限。这两个角色分别是勒索软件保护管理员和勒索软件保护查看者。这两个角色的主要区别在于他们在勒索软件恢复中可以采取的行动。
+勒索软件恢复角色为用户提供对NetApp Ransomware Resilience的访问权限。这两个角色分别是勒索软件保护管理员和勒索软件保护查看者。这两个角色的主要区别在于他们在勒索软件恢复中可以采取的行动。
 
 下表显示了每个角色可以执行的操作。
 

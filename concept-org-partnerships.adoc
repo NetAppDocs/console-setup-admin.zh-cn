@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-org-partnerships.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: 通过在NetApp控制台中建立组织之间的合作伙伴关系，组织合作伙伴可以跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。 
+summary: 通过在NetApp Console中建立组织之间的合作伙伴关系，组织合作伙伴可以跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。 
 ---
-= NetApp控制台中的合作伙伴关系
+= NetApp Console中的合作伙伴关系
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 通过在NetApp控制台中建立组织之间的合作伙伴关系，�
 
 
 [role="lead"]
-通过在组织之间建立合作伙伴关系， NetApp控制台可让合作伙伴跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。
+通过在组织之间建立合作伙伴关系， NetApp Console可让合作伙伴跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。
 
 .必需角色
 合作伙伴管理员link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
@@ -30,15 +30,15 @@ summary: 通过在NetApp控制台中建立组织之间的合作伙伴关系，�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]与发起组织共享您的组织 ID
 [role="quick-margin-para"]
-要发起合作关系，发起者必须知道目标组织的组织 ID。只有相应的组织可以访问此组织 ID。通过电子邮件或其他方式直接与NetApp控制台之外的发起组织共享。
+要发起合作关系，发起者必须知道目标组织的组织 ID。只有相应的组织可以访问此组织 ID。通过电子邮件或其他方式直接与NetApp Console之外的发起组织共享。
 
 发起组织是授予其资源访问权限的组织。
 
 image:diagram-partnership-org-id.png["显示初始组织的图表"]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在NetApp控制台内建立合作关系
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在NetApp Console内建立合作关系
 [role="quick-margin-para"]
-发起合作关系的组织通过从NetApp控制台发送合作关系请求来发起合作关系。
+发起合作关系的组织通过从NetApp Console发送合作关系请求来发起合作关系。
 
 image:diagram-partnership-accept.png["显示伙伴关系接受度的图表"]
 

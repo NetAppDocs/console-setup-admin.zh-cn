@@ -29,6 +29,6 @@ BlueXP管理员（具有组织管理员角色的用户）可以配置BlueXP以�
 
 NOTE: 此更改不会影响BlueXP私人模式，在该模式下您必须始终自行升级连接器。
 
-此功能在连接器版本 3.9.48 及更高版本中可用。
+此功能在 Connector 版本 3.9.48 及更高版本中可用。
 
 link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["了解如何禁用连接器的自动升级。"^]

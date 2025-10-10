@@ -3,7 +3,7 @@
 
 
 .步骤
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp控制台代理列表"^]
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理列表"^]
 . 在市场页面上，选择*继续订阅*。
 . 要订阅该软件，请选择*接受条款*。
 +

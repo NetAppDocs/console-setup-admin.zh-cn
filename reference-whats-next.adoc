@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-whats-next.html 
 keywords: standard mode, what you can do 
-summary: 现在您已登录并以标准模式设置NetApp控制台，用户可以创建和发现存储系统并使用NetApp数据服务。 
+summary: 现在您已登录并以标准模式设置NetApp Console，用户可以创建和发现存储系统并使用NetApp数据服务。 
 ---
 = 接下来可以做什么（标准模式）
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: 现在您已登录并以标准模式设置NetApp控制台，用户可�
 
 
 [role="lead"]
-现在您已登录并以标准模式设置NetApp控制台，用户可以创建和发现存储系统并使用NetApp数据服务。
+现在您已登录并以标准模式设置NetApp Console，用户可以创建和发现存储系统并使用NetApp数据服务。
 
 
 TIP: 如果您在 AWS、Microsoft Azure 或 Google Cloud 中安装了控制台代理，则控制台会自动发现有关安装代理的位置中的 Amazon S3 存储桶、Azure Blob 存储或 Google Cloud Storage 存储桶的信息。这些系统会自动添加到*系统*页面。
 
-如需帮助，请访问 https://docs.netapp.com/us-en/console-family/["NetApp控制台文档主页"^]查看NetApp控制台文档。
+如需帮助，请访问 https://docs.netapp.com/us-en/console-family/["NetApp Console文档主页"^]查看NetApp Console文档。
 
 .相关信息
-link:concept-modes.html["NetApp控制台部署模式"]
+link:concept-modes.html["NetApp Console部署模式"]

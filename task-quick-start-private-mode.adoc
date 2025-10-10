@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-private-mode.html 
 keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp 
-summary: 私有模式通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp控制台尚不支持私有模式。  NetApp继续通过BlueXP旧界面支持这些环境。链接：<doc link to PDF> 
+summary: 私有模式通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp Console尚不支持私有模式。  NetApp继续通过BlueXP旧界面支持这些环境。链接：<doc link to PDF> 
 ---
 = 入门工作流程（BlueXP私人模式）
 :hardbreaks:

@@ -4,7 +4,7 @@ permalink: task-user-settings.html
 keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
 summary: 在控制台中，每个用户都有一个配置文件，其中包含有关用户及其设置的信息。您可以查看和编辑您的个人资料设置。 
 ---
-= 管理您的NetApp控制台用户设置
+= 管理您的NetApp Console用户设置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

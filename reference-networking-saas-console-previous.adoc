@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: 当您登录并使用基于 Web 的控制台时，它会联系多个端点来完成您发起的操作。访问NetApp控制台的计算机必须与这些端点建立连接。 
+summary: 当您登录并使用基于 Web 的控制台时，它会联系多个端点来完成您发起的操作。访问NetApp Console的计算机必须与这些端点建立连接。 
 ---
 = 3.9.55 及以下版本所需的网络接入点
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: 当您登录并使用基于 Web 的控制台时，它会联系多个端
 
 
 [role="lead"]
-本主题详细介绍了NetApp控制台 4.0.0 之前的版本标准模式所需的网络访问。NetAppNetApp、 NetApp控制台代理和NetApp数据服务出站互联网访问以及联系必要端点的能力。您需要确保控制台和您安装的任何代理都具有正确的网络访问权限以使用功能属性。
+本主题详细介绍了NetApp Console4.0.0 之前的版本标准模式所需的网络访问、 NetApp ConsoleNetApp Console代理和NetApp数据服务出站互联网访问以及联系必要端点的能力。您需要确保控制台和您安装的任何代理都具有正确的网络访问权限以使用功能属性。
 
-您需要为以软件即服务 (SaaS) 形式访问NetApp控制台的计算机以及您在本地或云中安装的任何控制台代理设置网络访问。您可能还需要某些NetApp数据服务（包括Cloud Volumes ONTAP）的额外端点。
+您需要为以软件即服务 (SaaS) 形式访问NetApp Console的计算机以及您在本地或云中安装的任何控制台代理设置网络访问。您可能还需要某些NetApp数据服务（包括Cloud Volumes ONTAP）的额外端点。
 
 
 
@@ -47,13 +47,13 @@ systemctl status netapp-service-manager.service
 
 
 
-== NetApp控制台联系的端点
+== NetApp Console联系的端点
 
-访问NetApp控制台的每台计算机都必须连接到下面列出的端点。
+访问NetApp Console的每台计算机都必须连接到下面列出的端点。
 
 系统在两种情况下联系这些端点：
 
-* 从计算机访问 https://console.netapp.com["NetApp控制台"^]作为软件即服务（SaaS）。
+* 从计算机访问 https://console.netapp.com["NetApp Console"^]作为软件即服务（SaaS）。
 * 从直接访问代理主机的计算机，可以登录并进行设置，也可以从代理主机访问控制台。
 
 
@@ -65,7 +65,7 @@ systemctl status netapp-service-manager.service
 | \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
 
 
-| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp控制台中提供功能和服务。 
+| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp Console中提供功能和服务。 
 
 
  a| 
@@ -87,7 +87,7 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 
 * 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
 * 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
+* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
 
 
 |===
@@ -97,7 +97,7 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 
 您可以在本地或云中安装控制台代理，它会联系端点以完成控制台发起的操作。
 
-控制台代理需要访问与NetApp控制台相同的端点，如果您在云提供商中部署代理，则还需要访问其他端点。
+控制台代理需要访问与NetApp Console相同的端点，如果您在云提供商中部署代理，则还需要访问其他端点。
 
 
 
@@ -135,7 +135,7 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 
 * 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
 * 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
+* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
 
 
 |===
@@ -178,7 +178,7 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 
 * 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
 * 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
+* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
 
 
 |===
@@ -218,7 +218,7 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而�
 
 * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。
 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
+* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
 
 
 |===

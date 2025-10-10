@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-azure.html 
 keywords: ports, security group, http, https, inbound, outbound 
-summary: 代理的 Azure 安全组需要入站和出站规则。当您从控制台创建控制台代理时， NetApp控制台会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。 
+summary: 代理的 Azure 安全组需要入站和出站规则。当您从控制台创建控制台代理时， NetApp Console会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。 
 ---
 = Azure 中的控制台代理安全组规则
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 代理的 Azure 安全组需要入站和出站规则。当您从控制�
 
 
 [role="lead"]
-代理的 Azure 安全组需要入站和出站规则。当您从控制台创建控制台代理时， NetApp控制台会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。
+代理的 Azure 安全组需要入站和出站规则。当您从控制台创建控制台代理时， NetApp Console会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。
 
 
 
@@ -35,7 +35,7 @@ summary: 代理的 Azure 安全组需要入站和出站规则。当您从控制�
 
 
 
-| HTTPS | 443 | 提供从客户端 Web 浏览器到本地用户界面的 HTTPS 访问，以及来自NetApp数据分类实例的连接 
+| HTTPS | 443 | 提供从客户端 Web 浏览器到本地用户界面的 HTTPS 访问，以及来自NetApp Data Classification实例的连接 
 
 
 | TCP | 3128 | 为Cloud Volumes ONTAP提供互联网访问权限，以便将AutoSupport消息发送给NetApp支持。部署后您必须手动打开此端口。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["了解如何将代理用作AutoSupport消息的代理"^] 
@@ -76,7 +76,7 @@ NOTE: 源IP地址是代理主机。
 | 服务 | 协议 | 端口 | 目标 | 目的 
 
 
-| API 调用和AutoSupport | HTTPS | 443 | 出站互联网和ONTAP集群管理 LIF | 对 Azure、 ONTAP、 NetApp数据分类的 API 调用，以及向NetApp发送AutoSupport消息 
+| API 调用和AutoSupport | HTTPS | 443 | 出站互联网和ONTAP集群管理 LIF | 对 Azure、 ONTAP、 NetApp Data Classification的API 调用，以及向NetApp发送AutoSupport消息 
 
 
 | API 调用 | TCP | 8080 | 数据分类 | 部署期间探测数据分类实例 

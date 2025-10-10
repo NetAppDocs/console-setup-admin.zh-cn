@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: 当NetApp控制台在 AWS 中启动代理实例时，它会将一个策略附加到该实例，该策略为代理提供管理该 AWS 帐户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务等。 
+summary: 当NetApp Console在 AWS 中启动代理实例时，它会将一个策略附加到该实例，该策略为代理提供管理该 AWS 帐户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务等。 
 ---
 = 控制台代理的 AWS 权限
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 当NetApp控制台在 AWS 中启动代理实例时，它会将一个策
 
 
 [role="lead"]
-当NetApp控制台在 AWS 中启动控制台代理实例时，它会将一个策略附加到该实例，该策略为代理提供管理该 AWS 帐户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务 (KMS) 等。
+当NetApp Console在 AWS 中启动控制台代理实例时，它会将一个策略附加到该实例，该策略为代理提供管理该 AWS 帐户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务 (KMS) 等。
 
 
 
@@ -757,7 +757,7 @@ summary: 当NetApp控制台在 AWS 中启动代理实例时，它会将一个策
 
 == 如何使用 AWS 权限
 
-以下部分介绍了如何使用每个NetApp控制台管理或数据服务的权限。如果您的公司政策规定仅在需要时提供权限，则此信息会很有帮助。
+以下部分介绍了如何使用每个NetApp Console管理或数据服务的权限。如果您的公司政策规定仅在需要时提供权限，则此信息会很有帮助。
 
 
 
@@ -805,7 +805,7 @@ s3:获取加密配置
 
 
 
-=== NetApp备份和恢复
+=== NetApp Backup and Recovery
 
 该代理发出以下 API 请求来管理 Amazon S3 中的备份：
 
@@ -851,7 +851,7 @@ s3:获取加密配置
 * 胶水：批量删除分区
 
 
-当您使用 DataLock 和NetApp Ransomware Resilience 进行卷备份时，代理会发出以下 API 请求：
+当您使用 DataLock 和NetApp Ransomware Resilience进行卷备份时，代理会发出以下 API 请求：
 
 * s3:获取对象版本标记
 * s3：获取存储桶对象锁配置
@@ -892,7 +892,7 @@ s3:获取加密配置
 
 === 分类
 
-代理发出以下 API 请求来部署NetApp数据分类：
+代理发出以下 API 请求来部署NetApp Data Classification：
 
 * ec2:描述实例
 * ec2：描述实例状态
@@ -913,14 +913,14 @@ s3:获取加密配置
 * ec2:描述区域
 * cloudformation:创建堆栈
 * cloudformation:删除堆栈
-* cloudformation:描述堆栈
+* cloudformation:描述Stacks
 * cloudformation：描述堆栈事件
 * iam:添加角色到实例配置文件
 * ec2:AssociateIamInstanceProfile
 * ec2：描述IamInstanceProfileAssociations
 
 
-当您使用NetApp数据分类时，代理会发出以下 API 请求来扫描 S3 存储桶：
+当您使用NetApp Data Classification时，代理会发出以下 API 请求来扫描 S3 存储桶：
 
 * iam:添加角色到实例配置文件
 * ec2:AssociateIamInstanceProfile
@@ -1116,7 +1116,7 @@ s3:获取加密配置
 | cloudformation:删除堆栈 | 是 | 否 | 否 
 
 
-| cloudformation:描述堆栈 | 是 | 是 | 否 
+| cloudformation:描述Stacks | 是 | 是 | 否 
 
 
 | cloudformation：描述堆栈事件 | 是 | 否 | 否 
@@ -1215,7 +1215,7 @@ s3:获取加密配置
 
 === 2024年9月9日
 
-由于NetApp控制台不再支持NetApp边缘缓存以及 Kubernetes 集群的发现和管理，因此从标准区域的策略 #2 中删除了权限。
+由于NetApp Console不再支持NetApp边缘缓存以及 Kubernetes 集群的发现和管理，因此从标准区域的策略 #2 中删除了权限。
 
 .查看从策略中删除的权限
 [%collapsible]
@@ -1282,6 +1282,6 @@ kms:生成不带明文的数据密钥
 
 === 2023年2月14日
 
-NetApp Cloud Tiering 现在需要以下权限：
+NetApp Cloud Tiering现在需要以下权限：
 
 ec2:描述Vpc端点

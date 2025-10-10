@@ -4,7 +4,7 @@ permalink: task-iam-manage-members-permissions.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
 summary: 管理组织的成员以提供组织资源层次结构不同级别的权限。 
 ---
-= 将成员和服务帐户添加到NetApp控制台
+= 将成员和服务帐户添加到NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -37,7 +37,7 @@ _文件夹或项目管理员_可以在*成员*页面上查看所有成员，但�
 
 您可以向您的组织添加两种类型的成员：用户帐户和服务帐户。应用程序使用服务帐户来执行 API 任务，无需人工干预。人们通常使用用户帐户来登录和管理资源。
 
-用户必须先注册NetApp控制台，然后您才能将他们添加到组织或为他们分配角色。您可以直接从控制台创建服务帐户。
+用户必须先注册NetApp Console，然后您才能将他们添加到组织或为他们分配角色。您可以直接从控制台创建服务帐户。
 
 要管理用户及其权限，您必须具有*组织管理员*角色或*文件夹或项目管理员*角色。请记住，具有“文件夹或项目管理员”角色的用户只能管理他们具有管理员权限的文件夹或项目的成员。
 
@@ -45,15 +45,15 @@ _文件夹或项目管理员_可以在*成员*页面上查看所有成员，但�
 
 === 添加用户帐户
 
-尽管用户可以自行注册NetApp控制台，但他们需要明确添加到组织或特定文件夹或项目才能访问控制台中的资源。
+尽管用户可以自行注册NetApp Console，但他们需要明确添加到组织或特定文件夹或项目才能访问控制台中的资源。
 
 .步骤
-. 引导用户访问 https://console.netapp.com/["NetApp控制台"^]进行注册。
+. 引导用户访问 https://console.netapp.com/["NetApp Console"^]进行注册。
 +
 用户注册后，他们会完成*注册*页面，检查电子邮件并登录。如果控制台提示用户创建组织，他们会关闭它并通知您他们的帐户已创建。然后，您可以将该用户添加到您现有的组织。
 
 +
-link:task-sign-up-saas.html["了解如何注册NetApp控制台"] 。
+link:task-sign-up-saas.html["了解如何注册NetApp Console"] 。
 
 . 选择*管理>身份和访问*。
 . 选择*成员*。

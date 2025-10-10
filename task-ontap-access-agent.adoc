@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-ontap-access-agent.html 
 keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
-summary: 管理员可以配置NetApp控制台以提示用户输入其ONTAP凭据。 
+summary: 管理员可以配置NetApp Console以提示用户输入其ONTAP凭据。 
 ---
 = 强制实施ONTAP Advanced View（ONTAP系统管理器）的ONTAP权限
 :hardbreaks:
@@ -29,6 +29,6 @@ NOTE: 您必须具有组织管理员角色才能编辑控制台代理设置。
 . 选中复选框以启用*强制凭证*选项，然后选择*保存*。
 . 验证“*强制凭证*”选项是否已启用。
 +
-image:screenshot-force-credentials-on.png["屏幕截图显示强制凭证已启用"]
+image:screenshot-force-credentials-on.png["屏幕截图显示强制凭证已开启"]
 
 

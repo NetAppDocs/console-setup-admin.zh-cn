@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-federation.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: 身份联合支持通过NetApp控制台进行单点登录，以便用户可以使用来自您公司身份的凭据登录。首先，查看设置过程。 
+summary: 身份联合支持通过NetApp Console进行单点登录，以便用户可以使用来自您公司身份的凭据登录。首先，查看设置过程。 
 ---
-= 使用NetApp控制台的身份联合实现单点登录
+= 使用NetApp Console的身份联合实现单点登录
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 身份联合支持通过NetApp控制台进行单点登录，以便用�
 
 
 [role="lead"]
-单点登录（联合）允许用户使用其公司凭证登录NetApp控制台，从而简化了登录过程并增强了安全性。您可以使用身份提供商 (IdP) 或NetApp支持站点启用单点登录 (SSO)。
+单点登录（联合）允许用户使用其公司凭证登录NetApp Console，从而简化了登录过程并增强了安全性。您可以使用身份提供商 (IdP) 或NetApp支持站点启用单点登录 (SSO)。
 
 .所需角色
 组织管理员、联盟管理员、联盟查看器。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
@@ -63,7 +63,7 @@ NetApp支持以下联合协议和身份提供程序：
 
 
 
-=== 与NetApp控制台联合工作流程
+=== 与NetApp Console联合工作流程
 
 NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先配置身份提供者以信任NetApp作为服务提供商。然后，您可以在控制台中创建使用身份提供者配置的连接。
 

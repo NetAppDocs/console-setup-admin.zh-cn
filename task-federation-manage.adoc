@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-manage.html 
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
-summary: 添加联合连接后，您可以在NetApp控制台中对其进行管理。您可以查看连接的状态，根据需要启用或禁用它。 
+summary: 添加联合连接后，您可以在NetApp Console中对其进行管理。您可以查看连接的状态，根据需要启用或禁用它。 
 ---
-= 在NetApp控制台中管理联合
+= 在NetApp Console中管理联合
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 添加联合连接后，您可以在NetApp控制台中对其进行管�
 
 
 [role="lead"]
-您可以在NetApp控制台中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要它时禁用它。
+您可以在NetApp Console中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要它时禁用它。
 
 
 NOTE: 如果您使用NetApp Cloud Central 配置了联合，请通过 *Federation* 页面导入它以在控制台中进行管理。link:task-federation-import.html["了解如何导入您的联盟"]
@@ -22,7 +22,7 @@ NOTE: 如果您使用NetApp Cloud Central 配置了联合，请通过 *Federatio
 您还可以将已验证的域添加到现有联合中，这允许您使用多个域进行联合连接。
 
 
-NOTE: 联合管理事件（例如启用、禁用和更新联合）显示在时间轴中。link:task-monitor-cm-operations.html["了解有关在NetApp控制台中监控操作的更多信息。"]
+NOTE: 联合管理事件（例如启用、禁用和更新联合）显示在时间轴中。link:task-monitor-cm-operations.html["了解有关在NetApp Console中监控操作的更多信息。"]
 
 .必需角色
 需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
@@ -59,7 +59,7 @@ NOTE: 联合管理事件（例如启用、禁用和更新联合）显示在时�
 
 == 更新即将到期的联合连接
 
-您可以在控制台中更新联合的详细信息。例如，如果证书或客户端密钥等凭证过期，则需要更新联合。在需要时，更新通知日期以提醒您在连接到期之前更新连接。
+您可以在控制台中更新联合的详细信息。例如，如果证书或客户端机密等凭证过期，则需要更新联合。在需要时，更新通知日期以提醒您在连接到期之前更新连接。
 
 
 IMPORTANT: 在更新您的 IdP 之前，请先更新控制台以避免登录问题。在此过程中保持登录控制台。
@@ -82,7 +82,7 @@ IMPORTANT: 在更新您的 IdP 之前，请先更新控制台以避免登录问�
 . 选择*管理>身份和访问*。
 . 选择“*Federation*”选项卡。
 . 选择操作菜单image:button_3_vert_dots.png["带有三个垂直点的图标"]旁边的您想要添加已验证域的联盟，然后选择*测试连接*。
-. 选择*测试*。系统提示您使用公司凭证登录。如果连接成功，您将被重定向到NetApp控制台。如果连接失败，您会看到一条错误消息，表明联合存在问题。
+. 选择*测试*。系统提示您使用公司凭证登录。如果连接成功，您将被重定向到NetApp Console。如果连接失败，您会看到一条错误消息，表明联合存在问题。
 . 选择“*完成*”返回“*联合*”选项卡。
 
 

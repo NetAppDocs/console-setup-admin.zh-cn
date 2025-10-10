@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 或更高版本， NetApp控制台处于标准模式或受限模式
+3.9.45 或更高版本， NetApp Console处于标准模式或受限模式
  a| 
 Docker Engine 23.06 至 28.0.0。
  a| 
@@ -147,7 +147,7 @@ Azure VM 大小:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 
 
 * 启用并启动 podman.socket 服务
 * 安装python3
-* 安装 podman-compose 软件包版本 1.0.6
+* 安装 podman-compose 包版本 1.0.6
 * 将 podman-compose 添加到 PATH 环境变量
 * 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
 
@@ -307,7 +307,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabli
 出站互联网访问:: 部署控制台代理的网络位置必须具有出站互联网连接才能联系特定端点。
 
 
-使用基于 Web 的NetApp控制台时从计算机联系的端点::
+使用基于 Web 的NetApp Console时从计算机联系的端点::
 +
 --
 从 Web 浏览器访问控制台的计算机必须能够联系多个端点。您需要使用控制台来设置控制台代理并进行控制台的日常使用。
@@ -358,7 +358,7 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
@@ -372,7 +372,7 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服务。
+在NetApp Console中提供功能和服务。
 
 
 
@@ -417,7 +417,7 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 
 
 
@@ -446,7 +446,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
 . 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
-您应该为想要与NetApp控制台一起使用的每个 Azure 订阅添加 ID。
+您应该为想要与NetApp Console一起使用的每个 Azure 订阅添加 ID。
 
 +
 *例子*
@@ -498,7 +498,7 @@ image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory �
 . 指定有关应用程序的详细信息：
 +
 ** *名称*：输入应用程序的名称。
-** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp Console一起使用）。
 ** *重定向 URI*：您可以将此字段留空。
 
 
@@ -582,7 +582,7 @@ image:screenshot_azure_service_principal_role.png["Azure 门户的屏幕截图�
 服务主体现在具有部署控制台代理所需的 Azure 权限。
 
 +
-如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp控制台中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
+如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp Console中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
 
 
 
@@ -780,18 +780,18 @@ https://_ipaddress_[]
 .. 输入系统的名称。
 .. 在*您是否在安全环境中运行？*下保持限制模式处于禁用状态。
 +
-您应该保持限制模式处于禁用状态，因为这些步骤描述了如何在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤在受限模式下开始使用NetApp控制台"] 。
+您应该保持限制模式处于禁用状态，因为这些步骤描述了如何在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤在受限模式下开始使用NetApp Console"] 。
 
 .. 选择*让我们开始吧*。
 
 
 
 
-如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp控制台管理 Azure Blob 存储"^]
+如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp Console管理 Azure Blob 存储"^]
 
 
 
-== 步骤 6：提供对NetApp控制台的权限
+== 步骤 6：提供对NetApp Console的权限
 
 现在您已经安装了控制台代理，您需要为控制台代理提供您之前设置的 Azure 权限。提供权限使控制台能够管理 Azure 中的数据和存储基础结构。
 
@@ -804,7 +804,7 @@ https://_ipaddress_[]
 .步骤
 . 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
 +
-从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp控制台内完成操作的能力将受到影响。
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp Console内完成操作的能力将受到影响。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
@@ -828,7 +828,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 
 
 .下一步是什么？
-前往 https://console.netapp.com["NetApp控制台"^]开始使用控制台代理。
+前往 https://console.netapp.com["NetApp Console"^]开始使用控制台代理。
 
 --
 .服务主体
@@ -842,7 +842,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 +
 *** 应用程序（客户端）ID
 *** 目录（租户）ID
-*** 客户端机密
+*** 客户端密钥
 
 
 .. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。

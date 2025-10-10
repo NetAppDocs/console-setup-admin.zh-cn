@@ -85,7 +85,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
@@ -99,7 +99,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服务。
+在NetApp Console中提供功能和服务。
 
 
 
@@ -144,7 +144,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 创建控制台代理后实现网络要求。
@@ -189,7 +189,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
 . 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
-您应该为想要与NetApp控制台一起使用的每个 Azure 订阅添加 ID。
+您应该为想要与NetApp Console一起使用的每个 Azure 订阅添加 ID。
 
 +
 *例子*
@@ -241,7 +241,7 @@ image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory �
 . 指定有关应用程序的详细信息：
 +
 ** *名称*：输入应用程序的名称。
-** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp Console一起使用）。
 ** *重定向 URI*：您可以将此字段留空。
 
 
@@ -325,7 +325,7 @@ image:screenshot_azure_service_principal_role.png["Azure 门户的屏幕截图�
 服务主体现在具有部署控制台代理所需的 Azure 权限。
 
 +
-如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp控制台中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
+如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp Console中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
 
 
 
@@ -401,7 +401,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 
 .步骤
-. 转到 Azure 市场中的NetApp控制台代理 VM 页面。
+. 转到 Azure 市场中的NetApp Console代理 VM 页面。
 +
 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商业区域的 Azure 市场页面"^]
 
@@ -468,7 +468,7 @@ https://_ipaddress_[]
 .步骤
 . 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
 +
-从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp控制台内完成操作的能力将受到影响。
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp Console内完成操作的能力将受到影响。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
@@ -492,7 +492,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 
 
 .下一步是什么？
-前往 https://console.netapp.com["NetApp控制台"^]开始使用控制台代理。
+前往 https://console.netapp.com["NetApp Console"^]开始使用控制台代理。
 
 --
 .服务主体
@@ -506,7 +506,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 +
 *** 应用程序（客户端）ID
 *** 目录（租户）ID
-*** 客户端机密
+*** 客户端密钥
 
 
 .. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。

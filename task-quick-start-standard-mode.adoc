@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: 通过为控制台准备网络、注册并创建帐户以及（可选）创建控制台代理，以标准模式开始使用NetApp控制台。 
+summary: 通过为控制台准备网络、注册并创建帐户以及（可选）创建控制台代理，以标准模式开始使用NetApp Console。 
 ---
 = 入门工作流程（标准模式）
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 通过为控制台准备网络、注册并创建帐户以及（可选�
 
 
 [role="lead"]
-通过为控制台准备网络、注册并创建帐户以及（可选）创建控制台代理，以标准模式开始使用NetApp控制台。
+通过为控制台准备网络、注册并创建帐户以及（可选）创建控制台代理，以标准模式开始使用NetApp Console。
 
 在标准模式下，您可以访问由NetApp作为软件即服务 (SaaS) 产品托管的基于 Web 的控制台。在开始之前，请确保您了解link:concept-modes.html["部署模式"]和link:concept-agents.html["控制台代理"]。
 
@@ -47,6 +47,6 @@ summary: 通过为控制台准备网络、注册并创建帐户以及（可选�
 [role="quick-margin-para"]
 要使用NetApp智能数据服务管理 Google Cloud 中的存储和数据，请确保控制台代理在 Google Cloud 中运行。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] link:task-subscribe-standard-mode.html["订阅NetApp智能服务（可选）"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] link:task-subscribe-standard-mode.html["订阅NetApp Intelligent Services（可选）"]
 [role="quick-margin-para"]
-通过您的云提供商注册NetApp智能服务，按小时付费（PAYGO）或通过年度合同付费。  NetApp智能服务包括NetApp备份和恢复、 Cloud Volumes ONTAP、 NetApp云分层、 NetApp勒索软件恢复和NetApp灾难恢复。  NetApp数据分类包含在您的订阅中，无需额外付费。
+通过您的云提供商注册NetApp Intelligent Services，按小时付费（PAYGO）或通过年度合同付费。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的订阅中，无需额外付费。

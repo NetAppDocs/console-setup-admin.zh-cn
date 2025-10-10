@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-logging-in.html 
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
-summary: 如何登录NetApp控制台取决于您使用的部署模式。 
+summary: 如何登录NetApp Console取决于您使用的部署模式。 
 ---
-= 登录NetApp控制台
+= 登录NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 如何登录NetApp控制台取决于您使用的部署模式。
 
 
 [role="lead"]
-如何登录NetApp控制台取决于您使用的部署模式。
+如何登录NetApp Console取决于您使用的部署模式。
 
 24 小时后或关闭浏览器后，您将自动退出。
 
@@ -24,13 +24,13 @@ link:concept-modes.html["了解控制台部署模式"] 。
 ====
 .标准模式
 --
-注册NetApp控制台后，您可以从基于 Web 的控制台登录，开始管理您的数据和存储基础架构。
+注册NetApp Console后，您可以从基于 Web 的控制台登录，开始管理您的数据和存储基础架构。
 
 .关于此任务
-您可以使用以下选项之一登录NetApp控制台：
+您可以使用以下选项之一登录NetApp Console：
 
 * 您现有的NetApp支持站点 (NSS) 凭证
-* 使用您的电子邮件地址和密码的NetApp控制台帐户
+* 使用您的电子邮件地址和密码的NetApp Console帐户
 * 联合连接
 +
 您可以使用单点登录，使用公司目录（联合身份）中的凭据登录。link:concept-federation.html["了解如何设置身份联合"] 。
@@ -38,7 +38,7 @@ link:concept-modes.html["了解控制台部署模式"] 。
 
 
 .步骤
-. 打开 Web 浏览器并转到 https://console.netapp.com["NetApp控制台"]
+. 打开 Web 浏览器并转到 https://console.netapp.com["NetApp Console"]
 . 在*登录*页面上，输入与您的登录关联的电子邮件地址。
 . 根据与您的登录相关的身份验证方法，系统将提示您输入您的凭据：
 +
@@ -60,7 +60,7 @@ link:concept-modes.html["了解控制台部署模式"] 。
 .关于此任务
 在受限模式下，控制台支持使用以下选项之一登录：
 
-* 使用您的电子邮件地址和密码登录NetApp控制台
+* 使用您的电子邮件地址和密码登录NetApp Console
 * 联合连接
 +
 您可以使用单点登录，使用公司目录（联合身份）中的凭据登录。link:concept-federation.html["了解如何使用身份联合"] 。

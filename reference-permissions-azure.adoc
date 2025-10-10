@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-azure.html 
 keywords: permissions, azure, azure permissions, bluexp 
-summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一个自定义角色附加到 VM，该 VM 为代理提供管理该 Azure 订阅中的资源和流程的权限。代理使用权限对多个 Azure 服务进行 API 调用。 
+summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一个自定义角色附加到 VM，该 VM 为代理提供管理该 Azure 订阅中的资源和流程的权限。代理使用权限对多个 Azure 服务进行 API 调用。 
 ---
 = 控制台代理的 Azure 权限
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 
 [role="lead"]
-当NetApp控制台在 Azure 中启动控制台代理时，它会将一个自定义角色附加到 VM，该 VM 为代理提供管理该 Azure 订阅中的资源和流程的权限。代理使用权限对多个 Azure 服务进行 API 调用。
+当NetApp Console在 Azure 中启动控制台代理时，它会将一个自定义角色附加到 VM，该 VM 为代理提供管理该 Azure 订阅中的资源和流程的权限。代理使用权限对多个 Azure 服务进行 API 调用。
 
 是否需要为代理创建此自定义角色取决于您如何部署它。
 
-.从NetApp控制台部署
+.从NetApp Console部署
 当您使用控制台在 Azure 中部署代理虚拟机时，它会启用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系统分配的托管标识"^]在虚拟机上，创建自定义角色，并将其分配给虚拟机。该角色为控制台提供管理该 Azure 订阅内的资源和流程所需的权限。当代理升级时，角色的权限保持最新。您不需要为代理创建此角色或管理更新。
 
 .手动部署或从 Azure 市场部署
@@ -183,7 +183,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 === Azure NetApp Files
 
-当您使用NetApp数据分类扫描Azure NetApp Files数据时，代理会发出以下 API 请求：
+当您使用NetApp Data Classification扫描Azure NetApp Files数据时，代理会发出以下 API 请求：
 
 * NetApp。NetApp /netAppAccounts/read
 * NetApp。NetApp /netAppAccounts/capacityPools/read
@@ -194,9 +194,9 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 
 
-=== NetApp备份和恢复
+=== NetApp Backup and Recovery
 
-控制台代理对NetApp备份和恢复发出以下 API 请求：
+控制台代理对NetApp Backup and Recovery发出以下 API 请求：
 
 * Microsoft.Storage/storageAccounts/listkeys/action
 * Microsoft.Storage/storageAccounts/读取
@@ -242,7 +242,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 
 
-=== NetApp数据分类
+=== NetApp Data Classification
 
 当您使用数据分类时，代理会发出以下 API 请求。
 
@@ -269,7 +269,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 | Microsoft.Compute/虚拟机/读取 | 是 | 是 
 
 
-| Microsoft.Compute/virtualMachines/重启/操作 | 是 | 否 
+| Microsoft.Compute/虚拟机/重启/操作 | 是 | 否 
 
 
 | Microsoft.Compute/virtualMachines/启动/操作 | 是 | 否 
@@ -314,7 +314,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 | Microsoft.Network/网络接口/读取 | 是 | 是 
 
 
-| Microsoft.Network/networkInterfaces/写入 | 是 | 否 
+| Microsoft.Network/网络接口/写入 | 是 | 否 
 
 
 | Microsoft.Network/networkInterfaces/join/action | 是 | 否 
@@ -417,7 +417,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 | Microsoft.Compute/虚拟机/读取 | 是 | 是 | 否 
 
 
-| Microsoft.Compute/virtualMachines/重启/操作 | 是 | 是 | 否 
+| Microsoft.Compute/虚拟机/重启/操作 | 是 | 是 | 否 
 
 
 | Microsoft.Compute/virtualMachines/启动/操作 | 是 | 是 | 否 
@@ -432,7 +432,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 | Microsoft.Compute/虚拟机/写入 | 是 | 是 | 否 
 
 
-| Microsoft.Compute/virtualMachines/删除 | 是 | 是 | 是 
+| Microsoft.Compute/虚拟机/删除 | 是 | 是 | 是 
 
 
 | Microsoft.Resources/部署/删除 | 是 | 否 | 否 
@@ -447,7 +447,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 .4+| 在目标子网中创建和管理网络接口 | Microsoft.Network/网络接口/读取 | 是 | 是 | 否 
 
 
-| Microsoft.Network/networkInterfaces/写入 | 是 | 是 | 否 
+| Microsoft.Network/网络接口/写入 | 是 | 是 | 否 
 
 
 | Microsoft.Network/networkInterfaces/join/action | 是 | 是 | 否 
@@ -711,7 +711,7 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 === 分层
 
-当您设置NetApp Cloud Tiering 时，代理会发出以下 API 请求。
+当您设置NetApp Cloud Tiering时，代理会发出以下 API 请求。
 
 * Microsoft.Storage/storageAccounts/listkeys/action
 * Microsoft.Resources/订阅/资源组/读取
@@ -757,13 +757,13 @@ summary: 当NetApp控制台在 Azure 中启动控制台代理时，它会将一�
 
 === 2023年12月5日
 
-将卷数据备份到 Azure Blob 存储时， NetApp Backup and Recovery 不再需要以下权限：
+将卷数据备份到 Azure Blob 存储时， NetApp Backup and Recovery不再需要以下权限：
 
 * Microsoft.Compute/虚拟机/读取
 * Microsoft.Compute/virtualMachines/启动/操作
 * Microsoft.Compute/virtualMachines/解除分配/操作
 * Microsoft.Compute/virtualMachines/扩展/删除
-* Microsoft.Compute/virtualMachines/删除
+* Microsoft.Compute/虚拟机/删除
 
 
 其他控制台存储服务需要这些权限，因此如果您使用其他存储服务，它们仍将保留在代理的自定义角色中。
@@ -801,7 +801,7 @@ Cloud Volumes ONTAP仍然需要此权限。
 * Microsoft.Storage/storageAccounts/listAccountSas/action
 * Microsoft.Synapse/工作区/privateEndpointConnectionsApproval/操作
 +
-NetApp备份和恢复需要这些权限。
+NetApp Backup and Recovery需要这些权限。
 
 * Microsoft.Network/loadBalancers/backendAddressPools/join/action
 +

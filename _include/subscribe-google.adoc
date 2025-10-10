@@ -13,10 +13,10 @@ image:screenshot_gcp_associate.gif["为 Google Cloud 凭据选择的 Google Clou
 . 如果您还没有订阅，请选择*添加订阅>继续*并按照 Google Cloud Marketplace 中的步骤操作。
 +
 
-NOTE: 在完成以下步骤之前，请确保您在 Google Cloud 帐户中同时拥有 Billing Admin 权限以及NetApp Console 登录权限。
+NOTE: 在完成以下步骤之前，请确保您在 Google Cloud 帐户中同时拥有 Billing Admin 权限以及NetApp Console登录权限。
 
 +
-.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp智能服务页面"^]，确保在顶部导航菜单中选择了正确的项目。
+.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp Intelligent Services页面"^]，确保在顶部导航菜单中选择了正确的项目。
 +
 image:screenshot_gcp_cvo_marketplace.png["Google Cloud 中Cloud Volumes ONTAP市场页面的屏幕截图。"]
 
@@ -36,7 +36,7 @@ image:screenshot_gcp_marketplace_register.png["注册弹出窗口的屏幕截图
 .. 完成“*订阅分配*”页面上的步骤：
 +
 
-NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场，那么您将被重定向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp控制台中的Cloud Volumes ONTAP页面"^]反而。如果这是意外情况，请联系您的NetApp销售团队。  Google 为每个 Google 结算帐户仅启用一项订阅。
+NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场，那么您将被重定向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console中的Cloud Volumes ONTAP页面"^]反而。如果这是意外情况，请联系您的NetApp销售团队。  Google 为每个 Google 结算帐户仅启用一项订阅。
 
 +
 *** 选择您想要与此订阅关联的控制台组织或帐户。
@@ -56,7 +56,7 @@ NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场�
 video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. 此过程完成后，导航回控制台中的凭据页面并选择此新订阅。
+.. 此过程完成后，导航回控制台中的“凭据”页面并选择此新订阅。
 +
 image:screenshot_gcp_associate.gif["订阅分配页面的屏幕截图。"]
 

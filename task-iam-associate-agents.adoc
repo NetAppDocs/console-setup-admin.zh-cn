@@ -44,8 +44,8 @@ summary: 如果您组织的成员需要在另一个项目中使用控制台代�
 link:task-iam-manage-resources.html#associate-resource["了解如何将资源与文件夹和项目关联"] 。
 
 .相关信息
-* link:concept-agents.html["了解NetApp控制台代理"]
-* link:concept-identity-and-access-management.html["了解NetApp控制台身份和访问管理"]
+* link:concept-agents.html["了解NetApp Console代理"]
+* link:concept-identity-and-access-management.html["了解NetApp Console身份和访问管理"]
 * link:task-iam-get-started.html["开始使用身份和访问权限"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身份和访问管理的 API"^]
 

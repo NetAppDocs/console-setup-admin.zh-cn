@@ -16,7 +16,7 @@ summary: 卸载控制台代理以解决问题或将其从主机中永久删除�
 [role="lead"]
 卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。
 
-link:concept-modes.html["了解NetApp控制台部署模式"] 。
+link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 
 

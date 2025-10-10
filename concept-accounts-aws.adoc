@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-accounts-aws.html 
 keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
-summary: 了解NetApp控制台如何使用 AWS 凭证代表您执行操作以及这些凭证如何与市场订阅相关联。了解这些详细信息有助于您在控制台中管理一个或多个 AWS 账户的凭证。例如，您可能想了解何时向控制台添加额外的 AWS 凭证。 
+summary: 了解NetApp Console如何使用 AWS 凭证代表您执行操作以及这些凭证如何与市场订阅相关联。了解这些详细信息有助于您在控制台中管理一个或多个 AWS 账户的凭证。例如，您可能想了解何时向控制台添加额外的 AWS 凭证。 
 ---
-= 了解NetApp控制台中的 AWS 凭证和权限
+= 了解NetApp Console中的 AWS 凭证和权限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 了解NetApp控制台如何使用 AWS 凭证代表您执行操作以及
 
 
 [role="lead"]
-了解NetApp控制台如何使用 AWS 凭证代表您执行操作以及这些凭证如何与市场订阅相关联。了解这些详细信息有助于您在NetApp控制台中管理一个或多个 AWS 帐户的凭据。例如，您可能想了解何时添加额外的 AWS 凭证。
+了解NetApp Console如何使用 AWS 凭证代表您执行操作以及这些凭证如何与市场订阅相关联。了解这些详细信息有助于您在NetApp Console中管理一个或多个 AWS 帐户的凭据。例如，您可能想了解何时添加额外的 AWS 凭证。
 
 
 

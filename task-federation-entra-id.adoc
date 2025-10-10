@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-entra-id.html 
 keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
-summary: '与您的 Microsoft Entra ID IdP 提供商联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
+summary: '与您的 Microsoft Entra ID IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
 ---
-= 将NetApp控制台与 Microsoft Entra ID 联合起来
+= 将NetApp Console与 Microsoft Entra ID 联合起来
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: '与您的 Microsoft Entra ID IdP 提供商联合，为NetApp控制台�
 
 
 [role="lead"]
-与您的 Microsoft Entra ID IdP 提供商联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。
+与您的 Microsoft Entra ID IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。
 
 .必需角色
 需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
@@ -28,7 +28,7 @@ NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先�
 
 .开始之前
 * 需要具有管理权限的 IdP 帐户。与您的 IdP 管理员协调以完成这些步骤。
-* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp控制台中验证您的域"]话题。
+* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp Console中验证您的域"]话题。
 
 
 .步骤
@@ -96,4 +96,4 @@ NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先�
 . 选择“*完成*”以完成该过程。
 
 
-启用联合后，用户可以使用其公司凭据登录NetApp控制台。
+启用联合后，用户可以使用其公司凭据登录NetApp Console。

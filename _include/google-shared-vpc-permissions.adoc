@@ -26,7 +26,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 | 计算.网络用户部署管理器.编辑器 | 部署和维护服务项目中的Cloud Volumes ONTAP和服务 
 
 
-| Cloud Volumes ONTAP服务帐户 | 自定义 | 服务项目 | storage.admin 成员： NetApp Console 服务帐户作为 serviceAccount.user | 不适用 | （可选）适用于NetApp Cloud Tiering 和NetApp Backup and Recovery 
+| Cloud Volumes ONTAP服务帐户 | 自定义 | 服务项目 | storage.admin 成员： NetApp Console服务帐户作为 serviceAccount.user | 不适用 | （可选）适用于NetApp Cloud Tiering和NetApp Backup and Recovery 
 
 
 | Google API 服务代理 | Google Cloud | 服务项目  a| 
@@ -44,7 +44,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 |===
 注：
 
-. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp控制台将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
+. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp Console将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
 . 仅当您未将防火墙规则传递给部署并选择让控制台为您创建它们时，才需要firewall.create 和firewall.delete。这些权限位于控制台帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于为 VPC0 创建规则。
 . 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 serviceAccount.user 角色，而不仅仅是在项目级别。目前，如果您在项目级别分配 serviceAccount.user，则使用 getIAMPolicy 查询服务帐户时不会显示权限。
 

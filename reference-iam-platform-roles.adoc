@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-platform-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
-summary: 为用户分配平台角色，以授予管理NetApp控制台、分配角色、添加用户、创建控制台代理和管理联合的权限。 
+summary: 为用户分配平台角色，以授予管理NetApp Console、分配角色、添加用户、创建控制台代理和管理联合的权限。 
 ---
-= NetApp控制台平台访问角色
+= NetApp Console平台访问角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 为用户分配平台角色，以授予管理NetApp控制台、分配�
 
 
 [role="lead"]
-为用户分配平台角色，以授予管理NetApp控制台、分配角色、添加用户、创建控制台代理和管理联合的权限。
+为用户分配平台角色，以授予管理NetApp Console、分配角色、添加用户、创建控制台代理和管理联合的权限。
 
 .大型跨国组织的组织角色示例
 XYZ 公司按地区（北美、欧洲和亚太地区）组织数据存储访问，从而提供区域控制和集中监督。
@@ -132,7 +132,7 @@ XYZ 公司控制台中的*组织管理员*为每个区域创建一个初始组�
 组织应谨慎使用*超级管理员*访问权限，以最大限度地降低安全风险并符合最小特权原则。大多数组织应该分配具有必要权限的细粒度角色，以降低风险并提高可审计性。
 
 .超级角色示例
-ABC 公司拥有一个由五人组成的小团队，利用NetApp控制台进行数据服务和存储管理。他们没有分配多个角色，而是将“超级管理员”角色分配给两名高级团队成员，由他们负责所有管理任务，包括用户管理和资源配置。其余三名团队成员被分配了*超级查看者*角色，允许他们监控存储健康和数据服务状态，但无法修改设置。
+ABC 公司拥有一个由五人组成的小团队，利用NetApp Console进行数据服务和存储管理。他们没有分配多个角色，而是将“超级管理员”角色分配给两名高级团队成员，由他们负责所有管理任务，包括用户管理和资源配置。其余三名团队成员被分配了*超级查看者*角色，允许他们监控存储健康和数据服务状态，但无法修改设置。
 
 [cols="2,1"]
 |===

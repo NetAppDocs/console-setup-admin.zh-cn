@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-console-assistant.html 
 keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
-summary: '如果您是首次使用NetApp控制台，控制台助手将指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。' 
+summary: '如果您是首次使用NetApp Console，控制台助手将指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。' 
 ---
-= 开始使用NetApp控制台助手
+= 开始使用NetApp Console助手
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: '如果您是首次使用NetApp控制台，控制台助手将指导您�
 
 
 [role="lead"]
-如果您是首次使用NetApp控制台并具有组织管理员角色的用户，则可以使用控制台助手指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。
+如果您是首次使用NetApp Console并具有组织管理员角色的用户，则可以使用控制台助手指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。
 
 
 
@@ -26,7 +26,7 @@ summary: '如果您是首次使用NetApp控制台，控制台助手将指导您�
 
 == 控制台助手什么时候出现？
 
-在完成强制性设置任务之前，控制台助手可在NetApp控制台主页上使用。
+在完成强制性设置任务之前，控制台助手可在NetApp Console主页上使用。
 
 使用助手完成这些任务，其中一些是强制性的：
 
@@ -41,7 +41,7 @@ summary: '如果您是首次使用NetApp控制台，控制台助手将指导您�
 
 == 启用控制台助手
 
-默认情况下， NetApp控制台会在主页上为首次具有组织管理员角色的用户显示控制台助手。
+默认情况下， NetApp Console在主页上为首次具有组织管理员角色的用户显示控制台助手。
 
 
 TIP: 只有您或其他人完成必填项后，您才可以自行解雇助手。完成必填项后，您组织中的所有用户都将不再使用该助手，并且不会再次出现。
@@ -50,7 +50,7 @@ TIP: 只有您或其他人完成必填项后，您才可以自行解雇助手。
 
 == 使用控制台助手开始
 
-控制台助手将指导您完成以下任务来设置NetApp控制台环境：
+控制台助手将指导您完成以下任务来设置NetApp Console环境：
 
 * 添加NetApp支持站点 (NSS) 帐户。
 * 通过在本地或云端部署控制台代理来连接到您的存储资产。您可以手动部署它，也可以通过下载 OVA 来部署它。此步骤是必需的。

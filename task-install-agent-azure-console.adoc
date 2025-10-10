@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-azure-console.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
-summary: 要从NetApp控制台在 Azure 中创建控制台代理，您需要设置网络、准备 Azure 权限，然后创建控制台代理。 
+summary: 要从NetApp Console在 Azure 中创建控制台代理，您需要设置网络、准备 Azure 权限，然后创建控制台代理。 
 ---
-= 从NetApp控制台在 Azure 中创建控制台代理
+= 从NetApp Console在 Azure 中创建控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 要从NetApp控制台在 Azure 中创建控制台代理，您需要设�
 
 
 [role="lead"]
-要从NetApp控制台在 Azure 中创建控制台代理，您需要设置网络、准备 Azure 权限，然后创建控制台代理。
+要从NetApp Console在 Azure 中创建控制台代理，您需要设置网络、准备 Azure 权限，然后创建控制台代理。
 
 .开始之前
 * 你应该有一个link:concept-agents.html["了解控制台代理"]。
@@ -85,7 +85,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
@@ -99,7 +99,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服务。
+在NetApp Console中提供功能和服务。
 
 
 
@@ -119,7 +119,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 --
 
 
-从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp控制台时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
+从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp Console时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
 +
 --
 link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
@@ -152,7 +152,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 您需要在创建控制台代理后实现此网络要求。
@@ -339,7 +339,7 @@ image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory �
 . 指定有关应用程序的详细信息：
 +
 ** *名称*：输入应用程序的名称。
-** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp Console一起使用）。
 ** *重定向 URI*：您可以将此字段留空。
 
 
@@ -426,7 +426,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 == 步骤 4：创建控制台代理
 
-直接从NetApp控制台创建控制台代理。
+直接从NetApp Console创建控制台代理。
 
 .关于此任务
 * 从控制台创建控制台代理会使用默认配置在 Azure 中部署虚拟机。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。link:reference-agent-default-config.html["了解控制台代理的默认配置"] 。
@@ -473,7 +473,7 @@ TIP: 如果您已经登录 Azure 帐户，则控制台会自动使用该帐户�
 +
 *** 应用程序（客户端）ID
 *** 目录（租户）ID
-*** 客户端机密
+*** 客户端密钥
 
 
 
@@ -481,7 +481,7 @@ TIP: 如果您已经登录 Azure 帐户，则控制台会自动使用该帐户�
 +
 <<步骤 3：设置身份验证,了解如何获取服务主体的这些值>> 。
 
-. 在“虚拟机身份验证”页面上，选择 Azure 订阅、位置、新资源组或现有资源组，然后为您正在创建的控制台代理虚拟机选择身份验证方法。
+. 在“虚拟机身份验证”页面上，选择 Azure 订阅、位置、新资源组或现有资源组，然后为您正在创建的控制台代理虚拟机选择一种身份验证方法。
 +
 虚拟机的身份验证方法可以是密码或 SSH 公钥。
 
@@ -523,4 +523,4 @@ link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
 
 NOTE: 如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
-如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp控制台管理 Azure Blob 存储"^]
+如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp Console管理 Azure Blob 存储"^]

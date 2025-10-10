@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-roles.html 
 keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
-summary: 在NetApp控制台中，您可以根据用户需要执行的操作和位置为其分配角色。 
+summary: 在NetApp Console中，您可以根据用户需要执行的操作和位置为用户分配角色。 
 ---
-= 使用角色管理用户对NetApp控制台资源的访问
+= 使用角色管理用户对NetApp Console资源的访问
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

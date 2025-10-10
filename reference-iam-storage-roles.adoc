@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-storage-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: 您可以为用户分配以下角色，以便他们访问NetApp控制台中的存储管理功能。您可以为用户分配管理角色来管理存储或分配查看者角色来监控。 
+summary: 您可以为用户分配以下角色，以便他们访问NetApp Console中的存储管理功能。您可以为用户分配管理角色来管理存储或分配查看者角色来监控。 
 ---
-= NetApp控制台的存储访问角色
+= NetApp Console的存储访问角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 您可以为用户分配以下角色，以便他们访问NetApp控制�
 
 
 [role="lead"]
-您可以为用户分配以下角色，以便他们访问NetApp控制台中的存储管理功能。您可以为用户分配管理角色来管理存储或分配查看者角色来监控。
+您可以为用户分配以下角色，以便他们访问NetApp Console中的存储管理功能。您可以为用户分配管理角色来管理存储或分配查看者角色来监控。
 
 
-NOTE: NetApp控制台合作伙伴 API 不提供这些角色。
+NOTE: NetApp Console合作伙伴 API 不提供这些角色。
 
 管理员可以为用户分配以下存储资源和功能的存储角色：
 
@@ -36,7 +36,7 @@ NOTE: NetApp控制台合作伙伴 API 不提供这些角色。
 * 可持续性
 
 
-.NetApp控制台中的存储角色示例
+.NetApp Console中的存储角色示例
 XYZ 公司是一家跨国公司，拥有庞大的存储工程师和存储管理员团队。它们允许该团队管理其所在地区的存储资产，同时限制对核心控制台任务（如用户管理、代理创建和许可证管理）的访问。
 
 在一个由 12 人组成的团队中，有两名用户被赋予“存储查看者”角色，这使他们能够监控与他们被分配到的控制台项目相关的存储资源。其余九人被赋予*存储管理员*角色，包括管理软件更新、通过控制台访问ONTAP系统管理器以及发现存储资源（添加系统）的能力。团队中的一名成员被赋予*系统健康专家*角色，以便他们可以管理其所在区域的存储资源的健康状况，但不能修改或删除任何系统。此人还可以对其所分配项目的存储资源执行软件更新。
@@ -110,7 +110,7 @@ XYZ 公司是一家跨国公司，拥有庞大的存储工程师和存储管理�
 
 
 
-4+| *许可证和订阅* 
+4+| *Licenses and subscriptions* 
 
 
 | 查看所有页面和功能  a| 

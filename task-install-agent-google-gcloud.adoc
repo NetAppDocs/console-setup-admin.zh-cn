@@ -70,7 +70,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
@@ -84,7 +84,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服务。
+在NetApp Console中提供功能和服务。
 
 
 
@@ -104,7 +104,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
 --
 
 
-从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp控制台时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
+从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp Console时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
 +
 --
 link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
@@ -137,7 +137,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 创建控制台代理后实现此网络需求。
@@ -324,7 +324,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 | 计算.网络用户部署管理器.编辑器 | 部署和维护服务项目中的Cloud Volumes ONTAP和服务 
 
 
-| Cloud Volumes ONTAP服务帐户 | 自定义 | 服务项目 | storage.admin 成员： NetApp Console 服务帐户作为 serviceAccount.user | 不适用 | （可选）适用于NetApp Cloud Tiering 和NetApp Backup and Recovery 
+| Cloud Volumes ONTAP服务帐户 | 自定义 | 服务项目 | storage.admin 成员： NetApp Console服务帐户作为 serviceAccount.user | 不适用 | （可选）适用于NetApp Cloud Tiering和NetApp Backup and Recovery 
 
 
 | Google API 服务代理 | Google Cloud | 服务项目  a| 
@@ -342,7 +342,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 |===
 注：
 
-. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp控制台将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
+. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp Console将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
 . 仅当您未将防火墙规则传递给部署并选择让控制台为您创建它们时，才需要firewall.create 和firewall.delete。这些权限位于控制台帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于为 VPC0 创建规则。
 . 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 serviceAccount.user 角色，而不仅仅是在项目级别。目前，如果您在项目级别分配 serviceAccount.user，则使用 getIAMPolicy 查询服务帐户时不会显示权限。
 
@@ -364,7 +364,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 ** 身份和访问管理 (IAM) API
 ** 云密钥管理服务 (KMS) API
 +
-（仅当您计划将NetApp Backup and Recovery 与客户管理加密密钥 (CMEK) 结合使用时才需要）
+（仅当您计划将NetApp Backup and Recovery与客户管理加密密钥 (CMEK) 结合使用时才需要）
 
 
 
@@ -483,4 +483,4 @@ link:concept-identity-and-access-management.html["了解身份和访问管理"] 
 .结果
 控制台代理现已安装并设置到您的控制台组织。
 
-打开 Web 浏览器并转到 https://console.netapp.com["NetApp控制台"^]开始使用控制台代理。
+打开 Web 浏览器并转到 https://console.netapp.com["NetApp Console"^]开始使用控制台代理。

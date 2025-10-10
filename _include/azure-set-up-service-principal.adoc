@@ -15,7 +15,7 @@ image:screenshot_azure_ad.png["显示 Microsoft Azure 中的 Active Directory �
 . 指定有关应用程序的详细信息：
 +
 ** *名称*：输入应用程序的名称。
-** *帐户类型*：选择帐户类型（任何类型都可以与NetApp控制台一起使用）。
+** *帐户类型*：选择帐户类型（任何类型都可以与NetApp Console一起使用）。
 ** *重定向 URI*：您可以将此字段留空。
 
 
@@ -98,7 +98,7 @@ image:screenshot_azure_service_principal_role.png["Azure 门户的屏幕截图�
 服务主体现在具有部署控制台代理所需的 Azure 权限。
 
 +
-如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp控制台中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
+如果您想从多个 Azure 订阅部署Cloud Volumes ONTAP ，则必须将服务主体绑定到每个订阅。在NetApp Console中，您可以选择部署Cloud Volumes ONTAP时要使用的订阅。
 
 
 

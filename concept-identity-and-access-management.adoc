@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
 keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
-summary: 'NetApp控制台中的身份和访问管理 (IAM) 使您能够控制对组织资源的访问。' 
+summary: 'NetApp Console中的身份和访问管理 (IAM) 使您能够控制对组织资源的访问。' 
 ---
-= 了解NetApp控制台身份和访问管理
+= 了解NetApp Console身份和访问管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'NetApp控制台中的身份和访问管理 (IAM) 使您能够控制对
 
 
 [role="lead"]
-NetApp控制台中的身份和访问管理 (IAM) 使您能够组织和控制对NetApp资源的访问。您可以根据组织的层次结构来组织资源。例如，您可以按地理位置、站点或业务部门组织资源。然后，您可以将 IAM 角色分配给层次结构特定部分的成员，从而阻止访问层次结构其他部分的资源。
+NetApp Console中的身份和访问管理 (IAM) 使您能够组织和控制对NetApp资源的访问。您可以根据组织的层次结构来组织资源。例如，您可以按地理位置、站点或业务部门组织资源。然后，您可以将 IAM 角色分配给层次结构特定部分的成员，从而阻止访问层次结构其他部分的资源。
 
 * link:concept-modes.html["了解控制台部署模式"]
 
@@ -113,7 +113,7 @@ image:diagram-iam-resource-association-folder-3.png["该图显示了一个文件
 
 您的组织的成员是用户帐户或服务帐户。应用程序通常使用服务帐户来完成指定的任务，而无需人工干预。
 
-每个组织至少包含一个具有“组织管理员”角色的用户（控制台会自动将此角色分配给创建该组织的用户）。您可以将其他成员添加到组织，并在资源层次结构的不同级别分配不同的权限。
+每个组织至少包含一个具有“组织管理员”角色的用户（控制台会自动将此角色分配给创建该组织的用户）。您可以将其他成员添加到组织并在资源层次结构的不同级别分配不同的权限。
 
 
 
@@ -230,14 +230,14 @@ image:diagram-iam-example-hierarchy-advanced.png["概念图显示一个组织有
 
 == 下一步
 
-* link:task-iam-get-started.html["开始使用NetApp控制台中的 IAM"]
-* link:task-iam-manage-folders-projects.html["使用文件夹和项目在NetApp控制台中组织您的资源"]
-* link:task-iam-manage-members-permissions.html["管理NetApp控制台成员及其权限"]
-* link:task-iam-manage-resources.html["管理NetApp控制台组织中的资源层次结构"]
+* link:task-iam-get-started.html["开始使用NetApp Console中的 IAM"]
+* link:task-iam-manage-folders-projects.html["使用文件夹和项目在NetApp Console中组织您的资源"]
+* link:task-iam-manage-members-permissions.html["管理NetApp Console成员及其权限"]
+* link:task-iam-manage-resources.html["管理NetApp Console组织中的资源层次结构"]
 * link:task-iam-associate-agents.html["将代理与文件夹和项目关联"]
-* link:task-iam-switch-organizations-projects.html["在NetApp控制台项目和组织之间切换"]
-* link:task-iam-rename-organization.html["重命名您的NetApp控制台组织"]
+* link:task-iam-switch-organizations-projects.html["在NetApp Console项目和组织之间切换"]
+* link:task-iam-rename-organization.html["重命名您的NetApp Console组织"]
 * link:task-iam-audit-actions-timeline.html["监控或审计 IAM 活动"]
-* link:reference-iam-predefined-roles.html["NetApp控制台访问角色"]
+* link:reference-iam-predefined-roles.html["NetApp Console访问角色"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解NetApp Console IAM 的 API"^]
 

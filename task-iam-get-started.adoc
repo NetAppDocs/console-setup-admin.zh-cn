@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-get-started.html 
 keywords: iam, quick start, get started, get started with iam, identity and access management 
-summary: 要在NetApp控制台中开始身份和访问管理，请自定义组织的层次结构、添加其他成员、添加或发现资源，并将这些资源与项目关联。 
+summary: 要开始在NetApp Console中进行身份和访问管理，请自定义组织的层次结构、添加其他成员、添加或发现资源，并将这些资源与项目关联。 
 ---
-= 开始在NetApp控制台中使用身份和访问权限
+= 开始在NetApp Console中使用身份和访问权限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 要在NetApp控制台中开始身份和访问管理，请自定义组�
 
 
 [role="lead"]
-当您注册NetApp控制台时，系统会提示您创建一个新的组织。该组织包括一名成员（组织管理员）和一个默认项目。要设置身份和访问管理 (IAM) 来满足您的业务需求，您需要自定义组织的层次结构、添加其他成员、添加或发现资源，并在整个层次结构中关联这些资源。
+当您注册NetApp Console时，系统会提示您创建一个新的组织。该组织包括一名成员（组织管理员）和一个默认项目。要设置身份和访问管理 (IAM) 来满足您的业务需求，您需要自定义组织的层次结构、添加其他成员、添加或发现资源，并在整个层次结构中关联这些资源。
 
 您必须拥有*组织管理员*权限才能管理整个组织的身份和访问权限。如果您具有*文件夹或项目管理员*权限，则您只能管理您有权限的文件夹和项目。
 
@@ -60,6 +60,6 @@ link:task-iam-manage-members-permissions.html["了解如何管理成员及其权
 
 
 .相关信息
-* link:concept-identity-and-access-management.html["了解NetApp控制台中的身份和访问管理"]
+* link:concept-identity-and-access-management.html["了解NetApp Console中的身份和访问管理"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身份和访问 API"^]
 

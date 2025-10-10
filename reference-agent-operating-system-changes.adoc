@@ -40,7 +40,7 @@ NetApp支持具有以下 Linux 操作系统的代理。
 
 
 --
-从NetApp控制台部署:: Ubuntu 22.04 LTS
+从NetApp Console部署:: Ubuntu 22.04 LTS
 从 AWS Marketplace 部署:: Ubuntu 22.04 LTS
 从 Azure 市场部署:: Ubuntu 22.04 LTS
 
@@ -92,7 +92,7 @@ NetApp支持具有以下 Linux 操作系统的代理。
 
 请注意以下有关 RHEL 8 和 9 的支持：
 
-限制:: 如果您在本地的 RHEL 8 或 9 主机上安装代理，则支持NetApp数据分类。如果 RHEL 8 或 9 主机位于 AWS、Azure 或 Google Cloud 中，则不受支持。
+限制:: 如果您在本地的 RHEL 8 或 9 主机上安装代理，则支持NetApp Data Classification。如果 RHEL 8 或 9 主机位于 AWS、Azure 或 Google Cloud 中，则不受支持。
 容器编排工具:: 在 RHEL 8 或 9 主机上安装控制台代理时，必须使用 Podman 工具作为容器编排工具。  RHEL 8 和 9 不支持 Docker Engine。
 部署模式:: 在标准模式和受限模式下使用控制台时支持 RHEL 8 和 9。
 支持的控制台代理版本:: NetApp从以下版本的控制台代理开始支持 RHEL 8 和 9：

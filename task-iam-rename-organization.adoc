@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-iam-rename-organization.html 
 keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
-summary: 如果需要，您可以更改NetApp控制台组织的名称。 
+summary: 如果需要，您可以更改NetApp Console组织的名称。 
 ---
 = 组织和项目 ID
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 如果需要，您可以更改NetApp控制台组织的名称。
 
 
 [role="lead"]
-您的NetApp控制台组织有一个名称和一个 ID。您可以为您的组织选择一个名称以帮助识别它。您可能还需要检索某些集成的组织 ID。
+您的NetApp Console组织有一个名称和一个 ID。您可以为您的组织选择一个名称以帮助识别它。您可能还需要检索某些集成的组织 ID。
 
 
 
@@ -27,7 +27,7 @@ summary: 如果需要，您可以更改NetApp控制台组织的名称。
 . 选择*组织*。
 . 从“组织”页面，导航到表格的第一行，选择image:icon-action.png["三个并排的点组成的图标"]然后选择*编辑组织*。
 +
-image:screenshot-iam-edit-organization.png["概览页面的屏幕截图，其中显示了操作图标和编辑组织选项。"]
+image:screenshot-iam-edit-organization.png["概览页面的屏幕截图，显示操作图标和编辑组织选项。"]
 
 . 输入新的组织名称并选择*应用*。
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-azure.html 
 keywords: install connector azure, azure install connector, connector azure, azure connector, installation options, azure marketplace, manual install 
-summary: 有几种不同的方法可以在 Azure 中创建控制台代理。直接从NetApp控制台是最常见的方式。 
+summary: 有几种不同的方法可以在 Azure 中创建控制台代理。直接从NetApp Console是最常见的方式。 
 ---
 = Azure 中的控制台代理安装选项
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 有几种不同的方法可以在 Azure 中创建控制台代理。直�
 
 
 [role="lead"]
-有几种不同的方法可以在 Azure 中创建控制台代理。直接从NetApp控制台是最常见的方式。
+有几种不同的方法可以在 Azure 中创建控制台代理。直接从NetApp Console是最常见的方式。
 
 有以下安装选项可用：
 
-* link:task-install-agent-azure-console.html["直接从NetApp控制台创建控制台代理"]（这是标准选项）
+* link:task-install-agent-azure-console.html["直接从NetApp Console创建控制台代理"]（这是标准选项）
 +
 此操作将在您选择的 VNet 中启动运行 Linux 和控制台代理软件的 VM。
 

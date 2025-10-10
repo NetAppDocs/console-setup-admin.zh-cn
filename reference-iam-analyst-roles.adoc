@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-analyst-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: NetApp控制台身份和访问管理提供支持分析师角色来协助监控和支持案例。 
+summary: NetApp Console身份和访问管理提供支持分析师角色来协助监控和支持案例。 
 ---
-= NetApp控制台的运营支持分析师访问角色
+= NetApp Console的运营支持分析师访问角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

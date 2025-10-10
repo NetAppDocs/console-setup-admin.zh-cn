@@ -28,5 +28,5 @@
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文档：添加和删除 IAM 策略"^]
 
 
-. 确保用户拥有访问密钥，您可以在安装控制台代理后将其添加到NetApp控制台。
+. 确保用户拥有访问密钥，您可以在安装控制台代理后将其添加到NetApp Console。
 

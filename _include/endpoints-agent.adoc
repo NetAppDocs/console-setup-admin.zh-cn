@@ -42,9 +42,9 @@
 
 | 管理 Google Cloud 中的资源。
 
-| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。  | \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。  | \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。  | \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
 
-| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服务。
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp Console中提供功能和服务。
 
 a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 获取控制台代理升级的图像。
 
@@ -57,7 +57,7 @@ a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.a
 
 ^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
 
-+ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
++ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
 
 | 如果控制台代理位于 AWS 政府区域：\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
 

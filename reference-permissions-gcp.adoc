@@ -14,7 +14,7 @@ summary: 控制台代理需要权限才能在您的云提供商中执行操作�
 
 
 [role="lead"]
-NetApp控制台需要权限才能在 Google Cloud 中执行操作。这些权限包含在NetApp提供的自定义角色中。您应该了解代理使用这些权限做什么。
+NetApp Console需要权限才能在 Google Cloud 中执行操作。这些权限包含在NetApp提供的自定义角色中。您应该了解代理使用这些权限做什么。
 
 
 
@@ -167,7 +167,7 @@ includedPermissions:
 | - 计算.实例.获取 | 列出虚拟机实例。 
 
 
-| - 计算.实例.获取串行端口输出 | 获取控制台日志。 
+| - compute.instances.getSerialPortOutput | 获取控制台日志。 
 
 
 | - 计算.实例.列表 | 检索区域中的实例列表。 
@@ -230,7 +230,7 @@ includedPermissions:
 | - 计算.网络.更新策略 | 在 HA 对的 VPC 和子网上应用防火墙规则。 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | 启用NetApp数据分类。 
+| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | 启用NetApp Data Classification。 
 
 
 | - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | 在Cloud Volumes ONTAP HA 对上创建和管理存储虚拟机。 
@@ -239,7 +239,7 @@ includedPermissions:
 | - 监控.时间序列.列表 - 存储.桶.获取IamPolicy | 发现有关 Google Cloud Storage 存储桶的信息。 
 
 
-| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | 在NetApp备份和恢复激活向导中选择您自己的客户管理密钥，而不是使用默认的 Google 管理加密密钥。 
+| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | 在NetApp Backup and Recovery激活向导中选择您自己的客户管理密钥，而不是使用默认的 Google 管理加密密钥。 
 |===
 
 
@@ -271,4 +271,4 @@ Cloud Volumes ONTAP需要此权限。
 * cloudkms.keyRings.setIamPolicy
 
 
-NetApp备份和恢复需要这些权限。
+NetApp Backup and Recovery需要这些权限。

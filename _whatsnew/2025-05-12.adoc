@@ -30,7 +30,7 @@ BlueXP中的NetApp Keystone测试版增加了对Keystone管理的访问权限。
 
 
 
-=== BlueXP身份和访问管理（IAM）
+=== BlueXP身份和访问管理 (IAM)
 
 
 

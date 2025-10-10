@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-saml.html 
 keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: '与您的 SAML 2.0 IdP 提供商联合，为NetApp控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
+summary: '与您的 SAML 2.0 IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
 ---
 = 与 SAML 身份提供商联合
 :hardbreaks:
@@ -28,7 +28,7 @@ NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先�
 
 .开始之前
 * 需要具有管理权限的 IdP 帐户。与您的 IdP 管理员协调以完成这些步骤。
-* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp控制台中验证您的域"]话题。
+* 确定要用于联合的域。您可以使用您的电子邮件域名或您拥有的其他域名。如果您想使用电子邮件域以外的域，则必须首先在控制台中验证该域。您可以按照以下步骤操作link:task-federation-verify-domain.html["在NetApp Console中验证您的域"]话题。
 
 
 .步骤
@@ -89,4 +89,4 @@ NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先�
 . 选择“*完成*”以完成该过程。
 
 
-启用联合后，用户可以使用其公司凭据登录NetApp控制台。
+启用联合后，用户可以使用其公司凭据登录NetApp Console。

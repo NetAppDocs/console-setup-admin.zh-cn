@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-restricted-mode.html 
 keywords: government region, gov, govcloud, connector, sovereign cloud 
-summary: 以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp控制台。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。 
+summary: 以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp Console。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。 
 ---
 = 在限制模式下部署控制台代理
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 以受限模式部署控制台代理，以便您可以在有限的出�
 
 
 [role="lead"]
-以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp控制台。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。
+以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp Console。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。
 
 
 
@@ -46,7 +46,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["审查�
 
 
 .步骤
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp控制台代理列表"^]
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理列表"^]
 . 在市场页面上，选择*继续订阅*。
 . 要订阅该软件，请选择*接受条款*。
 +
@@ -88,7 +88,7 @@ link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
 AWS 使用指定的设置启动软件。控制台代理实例和软件运行大约需要五分钟。
 
 .下一步是什么？
-设置NetApp控制台。
+设置NetApp Console。
 
 --
 .AWS 政府市场
@@ -109,13 +109,13 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 
 
 .步骤
-. 转到 AWS Marketplace 中提供的NetApp控制台代理。
+. 转到 AWS Marketplace 中提供的NetApp Console代理。
 +
 .. 打开 EC2 服务并选择 *启动实例*。
 .. 选择 *AWS Marketplace*。
-.. 搜索NetApp Console 并选择产品。
+.. 搜索NetApp Console并选择产品。
 +
-image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜索NetApp控制台后显示的屏幕截图"]
+image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜索NetApp Console后显示的屏幕截图"]
 
 .. 选择*继续*。
 
@@ -161,7 +161,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 
 
 .步骤
-. 转到 Azure 市场中的NetApp控制台代理 VM 页面。
+. 转到 Azure 市场中的NetApp Console代理 VM 页面。
 +
 ** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商业区域的 Azure 市场页面"^]
 ** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure 政府区域的 Azure 市场页面"^]
@@ -202,7 +202,7 @@ link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
 Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件应在大约五分钟内运行。
 
 .下一步是什么？
-设置NetApp控制台。
+设置NetApp Console。
 
 --
 .手动安装
@@ -337,13 +337,13 @@ Esc:wq
 控制台代理现已安装。安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。
 
 .下一步是什么？
-设置NetApp控制台。
+设置NetApp Console。
 
 --
 ====
 
 
-== 第 2 步：设置NetApp控制台
+== 第 2 步：设置NetApp Console
 
 首次访问控制台时，系统会提示您为控制台代理选择一个组织，并需要启用受限模式。
 
@@ -354,7 +354,7 @@ Esc:wq
 
 .步骤
 . 从与控制台代理实例有连接的主机打开 Web 浏览器，然后输入您安装的控制台代理的以下 URL。
-. 注册或登录NetApp控制台。
+. 注册或登录NetApp Console。
 . 登录后，设置控制台：
 +
 .. 输入控制台代理的名称。
@@ -380,7 +380,7 @@ Esc:wq
 
 
 
-== 步骤 3：提供对NetApp控制台的权限
+== 步骤 3：提供对NetApp Console的权限
 
 如果您从 Azure 市场部署了控制台代理，或者手动安装了控制台代理软件，则需要提供之前设置的权限。
 
@@ -407,7 +407,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 --
 .AWS 访问密钥
 --
-向NetApp控制台提供具有所需权限的 IAM 用户的 AWS 访问密钥。
+向NetApp Console提供具有所需权限的 IAM 用户的 AWS 访问密钥。
 
 .步骤
 . 选择“*管理 > 凭证*”。
@@ -430,7 +430,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 .步骤
 . 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
 +
-从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp控制台内完成操作的能力将受到影响。
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp Console内完成操作的能力将受到影响。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
@@ -456,7 +456,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 --
 .Azure 服务主体
 --
-向NetApp控制台提供您之前设置的 Azure 服务主体的凭据。
+向NetApp Console提供您之前设置的 Azure 服务主体的凭据。
 
 .步骤
 . 选择“*管理 > 凭证*”。
@@ -467,7 +467,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 +
 *** 应用程序（客户端）ID
 *** 目录（租户）ID
-*** 客户端机密
+*** 客户端密钥
 
 
 .. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
@@ -477,7 +477,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 
 
 .结果
-NetApp控制台现在具有代表您在 Azure 中执行操作所需的权限。
+NetApp Console现在具有代表您在 Azure 中执行操作所需的权限。
 
 --
 .Google Cloud 服务帐号

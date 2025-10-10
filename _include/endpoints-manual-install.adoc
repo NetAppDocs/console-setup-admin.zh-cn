@@ -19,7 +19,7 @@
 | \ https://cloudmanager.cloud.netapp.com/tenancy |  
 
 
-| https://stream.cloudmanager.cloud.netapp.com |  
+| \ https://stream.cloudmanager.cloud.netapp.com |  
 
 
 | \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
@@ -44,7 +44,7 @@
 
 * 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。
 * 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。
-* 如果您将控制台代理与NetApp Backup and Recovery 或NetApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
+* 如果您将控制台代理与NetApp Backup and Recovery或NetApp Ransomware Resilience一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
 
 
 |===
@@ -65,7 +65,7 @@
 | \ https://cloudmanager.cloud.netapp.com/tenancy |  
 
 
-| https://stream.cloudmanager.cloud.netapp.com |  
+| \ https://stream.cloudmanager.cloud.netapp.com |  
 
 
 | \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
@@ -113,12 +113,12 @@
 
 * 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。
 * 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。
-* 如果您将控制台代理与NetApp Backup and Recovery 或NetApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
+* 如果您将控制台代理与NetApp Backup and Recovery或NetApp Ransomware Resilience一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
 
 
 |===
 +
 
-建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：** 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。 ** 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。 ** 如果您将控制台代理与NetApp Backup and Recovery 或 NetpApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
+建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：** 从控制台代理的 3.9.47 版本开始支持选项 1 中列出的端点。与控制台代理的先前版本不具有向后兼容性。 ** 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。 ** 如果您将控制台代理与NetApp Backup and Recovery或 NetpApp Ransomware Resilience 一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
 
 主机可能会在安装期间尝试更新操作系统包。主机可以联系不同的镜像站点来获取这些操作系统包。

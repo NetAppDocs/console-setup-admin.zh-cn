@@ -24,7 +24,7 @@ BlueXP UI 现已提供日语版本。如果您的浏览器语言是日语， Blu
 
 
 
-=== BlueXP身份和访问管理（IAM）
+=== BlueXP身份和访问管理 (IAM)
 
 BlueXP中的身份和访问管理现在提供以下功能。
 

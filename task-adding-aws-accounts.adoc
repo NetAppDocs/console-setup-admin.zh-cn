@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-aws-accounts.html 
 keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
-summary: 添加和管理 AWS 凭证，以便NetApp控制台具有在您的 AWS 账户中部署和管理云资源所需的权限。如果您管理多个 AWS 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。 
+summary: 添加和管理 AWS 凭证，以便NetApp Console具有在您的 AWS 账户中部署和管理云资源所需的权限。如果您管理多个 AWS 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。 
 ---
-= 管理NetApp控制台的 AWS 凭证和市场订阅
+= 管理NetApp Console的 AWS 凭证和市场订阅
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp控制台具有在您的 AWS �
 
 
 [role="lead"]
-添加和管理 AWS 凭证，以便您从NetApp控制台部署和管理 AWS 帐户中的云资源。如果您管理多个 AWS Marketplace 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。
+添加和管理 AWS 凭证，以便您从NetApp Console部署和管理 AWS 帐户中的云资源。如果您管理多个 AWS Marketplace 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。
 
 
 
@@ -28,7 +28,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp控制台具有在您的 AWS �
 
 * 将 AWS 凭证添加到控制台以创建控制台代理
 +
-向控制台添加新的 AWS 凭证可提供创建控制台代理所需的权限。<<add-aws-credentials-agent-creation,了解如何将 AWS 凭证添加到NetApp控制台>> 。
+向控制台添加新的 AWS 凭证可提供创建控制台代理所需的权限。<<add-aws-credentials-agent-creation,了解如何将 AWS 凭证添加到NetApp Console>> 。
 
 * 将 AWS 凭证添加到 FSx for ONTAP控制台
 +
@@ -40,7 +40,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp控制台具有在您的 AWS �
 
 == 如何轮换凭证
 
-NetApp控制台允许您通过几种方式提供 AWS 凭证：与代理实例关联的 IAM 角色、在受信任的帐户中承担 IAM 角色或提供 AWS 访问密钥。link:concept-accounts-aws.html["了解有关 AWS 凭证和权限的更多信息"] 。
+NetApp Console允许您通过几种方式提供 AWS 凭证：与代理实例关联的 IAM 角色、在受信任的帐户中承担 IAM 角色或提供 AWS 访问密钥。link:concept-accounts-aws.html["了解有关 AWS 凭证和权限的更多信息"] 。
 
 对于前两个选项，控制台使用 AWS 安全令牌服务来获取不断轮换的临时凭证。这个过程是最佳实践，因为它是自动的并且是安全的。
 
@@ -52,7 +52,7 @@ NetApp控制台允许您通过几种方式提供 AWS 凭证：与代理实例关
 
 向控制台代理添加额外的 AWS 凭证，以便它具有管理公共云环境中的资源和流程所需的权限。您可以提供另一个账户中的 IAM 角色的 ARN，也可以提供 AWS 访问密钥。
 
-如果您刚刚开始使用控制台，link:concept-accounts-aws.html["了解NetApp控制台如何使用 AWS 凭证和权限"] 。
+如果您刚刚开始使用控制台，link:concept-accounts-aws.html["了解NetApp Console如何使用 AWS 凭证和权限"] 。
 
 
 
@@ -157,7 +157,7 @@ image:screenshot_accounts_switch_aws.png["屏幕截图显示在“详细信息�
 
 === 设置 IAM 角色
 
-设置一个 IAM 角色，使NetApp控制台软件即服务 (SaaS) 层能够承担该角色。
+设置一个 IAM 角色，使NetApp Console软件即服务 (SaaS) 层能够承担该角色。
 
 .步骤
 . 转到目标账户中的 IAM 控制台。
@@ -253,16 +253,16 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 .开始之前
 您需要先创建控制台代理，然后才能配置订阅。link:concept-agents.html#agent-installation["了解如何创建控制台代理"] 。
 
-以下视频展示了从 AWS Marketplace 订阅NetApp智能服务的步骤：
+以下视频展示了从 AWS Marketplace 订阅NetApp Intelligent Services的步骤：
 
-.从 AWS Marketplace 订阅NetApp智能服务
+.从 AWS Marketplace 订阅NetApp Intelligent Services
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步骤
 . 选择“*管理 > 凭证*”。
 . 选择*组织凭证*。
 . 选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。
 +
-您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp控制台关联的凭据关联。
+您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp Console关联的凭据关联。
 
 +
 image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜单的屏幕截图。"]
@@ -274,7 +274,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 .. 选择*订阅*。
 .. 选择*设置您的帐户*。
 +
-您将被重定向到NetApp控制台。
+您将被重定向到NetApp Console。
 
 .. 从“*订阅分配*”页面：
 +
@@ -308,7 +308,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 .步骤
 . 确认您没有将您的订阅与您的控制台组织或帐户关联。
 +
-.. 从导航菜单中，选择*管理>许可证和订阅*。
+.. 从导航菜单中，选择*管理>Licenses and subscriptions*。
 .. 选择*订阅*。
 .. 确认您的订阅没有出现。
 +

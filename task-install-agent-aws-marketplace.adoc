@@ -78,7 +78,7 @@ AWS 服务（amazonaws.com）：
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
@@ -92,7 +92,7 @@ AWS 服务（amazonaws.com）：
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服务。
+在NetApp Console中提供功能和服务。
 
 
 
@@ -137,7 +137,7 @@ AWS 服务（amazonaws.com）：
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 创建控制台代理后实现此网络访问。
@@ -207,7 +207,7 @@ AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们�
 
 
 .步骤
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp控制台代理列表"^]
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理列表"^]
 . 在市场页面上，选择*继续订阅*。
 . 要订阅该软件，请选择*接受条款*。
 +
@@ -257,7 +257,7 @@ NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故�
 .. 输入系统的名称。
 .. 在*您是否在安全环境中运行？*下保持限制模式处于禁用状态。
 +
-保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤在受限模式下开始使用NetApp控制台"] 。
+保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤在受限模式下开始使用NetApp Console"] 。
 
 .. 选择*让我们开始吧*。
 
@@ -267,6 +267,6 @@ NOTE: 如果安装失败，您可以查看日志和报告来帮助您排除故�
 .结果
 控制台代理现已安装并设置到您的控制台组织。
 
-打开 Web 浏览器并转到 https://console.netapp.com["NetApp控制台"^]开始将控制台代理与控制台一起使用。
+打开 Web 浏览器并转到 https://console.netapp.com["NetApp Console"^]开始将控制台代理与控制台一起使用。
 
-如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp控制台管理 S3 存储桶"^]
+如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp Console管理 S3 存储桶"^]

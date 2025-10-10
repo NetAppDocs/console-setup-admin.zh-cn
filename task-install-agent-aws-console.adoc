@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
-summary: 您可以直接从NetApp控制台在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。 
+summary: 您可以直接从NetApp Console在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。 
 ---
-= 通过NetApp控制台在 AWS 中创建控制台代理
+= 通过NetApp Console在 AWS 中创建控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 您可以直接从NetApp控制台在 AWS 中创建控制台代理。在
 
 
 [role="lead"]
-您可以直接从NetApp控制台在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。
+您可以直接从NetApp Console在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。
 
 .开始之前
 * 你应该有一个link:concept-agents.html["了解控制台代理"]。
@@ -78,7 +78,7 @@ AWS 服务（amazonaws.com）：
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
@@ -92,7 +92,7 @@ AWS 服务（amazonaws.com）：
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服务。
+在NetApp Console中提供功能和服务。
 
 
 
@@ -112,7 +112,7 @@ AWS 服务（amazonaws.com）：
 --
 
 
-从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp控制台时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
+从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp Console时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
 +
 --
 link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
@@ -145,7 +145,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-启用 NTP:: 如果您计划使用NetApp数据分类来扫描公司数据源，则应在控制台代理和NetApp数据分类系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
 +
 --
 创建控制台代理后，您需要实现此网络要求。
@@ -353,4 +353,4 @@ link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
 
 NOTE: 如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
-如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp控制台管理 S3 存储桶"^]
+如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp Console管理 S3 存储桶"^]

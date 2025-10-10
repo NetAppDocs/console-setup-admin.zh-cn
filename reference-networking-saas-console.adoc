@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-networking-saas-console.html 
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: NetApp Console、 NetApp Console 代理和NetApp数据服务需要出站互联网访问以及联系必要端点的能力。 
+summary: NetApp Console、 NetApp Console代理和NetApp数据服务需要出站互联网访问以及联系必要端点的能力。 
 ---
-= 准备NetApp控制台的网络访问
+= 准备NetApp Console的网络访问
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: NetApp Console、 NetApp Console 代理和NetApp数据服务需要出�
 
 
 [role="lead"]
-NetApp Console、 NetApp Console 代理和NetApp数据服务需要出站互联网访问以及联系必要端点的能力。
+NetApp Console、 NetApp Console代理和NetApp数据服务需要出站互联网访问以及联系必要端点的能力。
 
 您需要为以下操作设置网络访问：
 
-* 以软件即服务 (SaaS) 形式访问NetApp控制台的计算机
+* 以软件即服务 (SaaS) 形式访问NetApp Console的计算机
 * 部署在本地或云中安装的控制台代理的网络位置。
 * 某些NetApp数据服务的附加端点，包括Cloud Volumes ONTAP。
 
@@ -28,13 +28,13 @@ NOTE: NetApp减少了控制台和控制台代理所需的网络端点，增强�
 
 
 
-== NetApp控制台联系的端点
+== NetApp Console联系的端点
 
-访问NetApp控制台的每台计算机都必须连接到下面列出的端点。
+访问NetApp Console的每台计算机都必须连接到下面列出的端点。
 
 系统在两种情况下联系这些端点：
 
-* 从计算机访问 https://console.netapp.com["NetApp控制台"^]作为软件即服务（SaaS）。
+* 从计算机访问 https://console.netapp.com["NetApp Console"^]作为软件即服务（SaaS）。
 * 从直接访问控制台代理主机的计算机，可以登录并进行设置，也可以从代理主机访问控制台。
 
 
@@ -49,13 +49,13 @@ NOTE: NetApp减少了控制台和控制台代理所需的网络端点，增强�
 | \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
 
 
-| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp控制台。 
+| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。 
 
 
 | \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。 
 
 
-| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服务。 
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp Console中提供功能和服务。 
 
 
  a| 
@@ -77,7 +77,7 @@ NOTE: NetApp减少了控制台和控制台代理所需的网络端点，增强�
 
 您可以在本地或云中安装控制台代理，它会联系端点以完成控制台发起的操作。
 
-控制台代理必须能够访问与NetApp控制台相同的端点，以及根据安装代理的位置而定的其他端点。
+控制台代理必须能够访问与NetApp Console相同的端点，另外还可以根据代理的安装位置访问其他端点。
 
 在安装控制台代理之前设置网络端点访问。
 

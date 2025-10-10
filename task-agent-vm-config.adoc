@@ -97,7 +97,7 @@ summary: 部署控制台代理后，您可以对现有的 VCenter 或 ESXi 主�
 . 选择*启动 Web 控制台*。
 . 使用创建 VM 实例时指定的用户名和密码登录 VM 实例。用户名是 `maint`密码是您在创建 VM 实例时指定的密码。
 . 进入 `2`查看 `Network Configuration`菜单。
-. 输入 1 到 6 之间的数字以查看相应的网络设置。
+. 输入 1 到 6 之间的数字来查看相应的网络设置。
 
 
 
@@ -148,7 +148,7 @@ summary: 部署控制台代理后，您可以对现有的 VCenter 或 ESXi 主�
 . 选择*启动 Web 控制台*。
 . 使用创建 VM 实例时指定的用户名和密码登录 VM 实例。用户名是 `maint`密码是您在创建 VM 实例时指定的密码。
 . 进入 `3`查看支持和诊断菜单。
-. 进入 `1`访问诊断工具并按照屏幕上的提示进行操作。+ 例如，您可以验证所有代理服务是否正在运行。link:task-troubleshoot-agent.html#check-agent-status["检查控制台代理状态"^] 。
+. 进入 `1`访问诊断工具并按照屏幕上的提示进行操作。 + 例如，您可以验证所有代理服务是否正在运行。link:task-troubleshoot-agent.html#check-agent-status["检查控制台代理状态"^] 。
 
 
 

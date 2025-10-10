@@ -4,7 +4,7 @@ permalink: task-partnerships-create.html
 keywords: partner organizations, create partnership, MSPs, service provider access 
 summary: 建立合作伙伴关系，在您的组织和值得信赖的合作伙伴之间建立安全、可管理的连接，以实现协作式NetApp资源管理。 
 ---
-= 在NetApp控制台中管理合作伙伴关系
+= 在NetApp Console中管理合作伙伴关系
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

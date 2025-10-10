@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-nss-accounts.html 
 keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
-summary: 将NetApp支持站点帐户与您的NetApp控制台组织关联，以启用Cloud Volumes ONTAP 的关键工作流程。这些 NSS 凭证与整个组织相关。 
+summary: 将NetApp支持站点帐户与您的NetApp Console组织关联，以启用Cloud Volumes ONTAP 的关键工作流程。这些 NSS 凭证与整个组织相关。 
 ---
-= 管理与NetApp控制台关联的 NSS 凭据
+= 管理与NetApp Console关联的 NSS 凭据
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -30,7 +30,7 @@ summary: 将NetApp支持站点帐户与您的NetApp控制台组织关联，以�
 
 * 注册即用即付Cloud Volumes ONTAP系统
 +
-需要提供您的 NSS 帐户才能激活对您的系统的支持并获得NetApp技术支持资源的访问权限。
+需要提供您的 NSS 帐户才能激活对您的系统的支持并获得对NetApp技术支持资源的访问权限。
 
 * 将Cloud Volumes ONTAP软件升级到最新版本
 
