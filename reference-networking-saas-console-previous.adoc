@@ -225,3 +225,38 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而�
 
 
 == 本地代理端点
+
+[cols="2*"]
+|===
+| 端点 | 目的 
+
+
+| \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
+
+
+| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp Console中提供功能和服务。 
+
+
+ a| 
+在两组端点之间进行选择：
+
+* 选项 1（推荐）
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* 选项 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+获取控制台代理升级的图像。
+
+NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并禁止选项 2 端点，除非您使用勒索软件恢复或备份和恢复。请注意有关这些端点的以下事项：
+
+* 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
+* 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
+* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
+
+
+|===

@@ -46,9 +46,6 @@ NOTE: NetApp减少了控制台和控制台代理所需的网络端点，增强�
 | \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
 
 
-| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
-
-
 | \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。 
 
 
@@ -63,7 +60,7 @@ NOTE: NetApp减少了控制台和控制台代理所需的网络端点，增强�
  a| 
 获取控制台代理升级的图像。
 
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
 +
 尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
 

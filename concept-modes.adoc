@@ -164,7 +164,7 @@ API 端点:: 对代理虚拟机进行 API 调用。
 | Azure NetApp Files | 全力支持 
 
 
-| 备份和恢复 | 在政府区域和商业区域受限制模式支持。不支持在具有限制模式的主权区域使用。在受限模式下， NetApp Backup and Recovery仅支持ONTAP卷数据的备份和恢复。 https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]不支持应用程序数据和虚拟机数据的备份和恢复。 
+| 备份和恢复 | 在政府区域和商业区域受限制模式支持。不支持在具有限制模式的主权区域使用。在受限模式下， NetApp Backup and Recovery仅支持ONTAP卷数据的备份和恢复。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]不支持应用程序数据和虚拟机数据的备份和恢复。 
 
 
 | NetApp Data Classification  a| 

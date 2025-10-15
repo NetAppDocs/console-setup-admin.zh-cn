@@ -187,13 +187,6 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
-\ https://support.netapp.com
- a| 
-获取许可信息并向NetApp支持发送AutoSupport消息。
-
-
-
- a| 
 \ https://signin.b2c.netapp.com
  a| 
 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
@@ -219,7 +212,7 @@ AWS 服务（amazonaws.com）：
  a| 
 获取控制台代理升级的图像。
 
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
 +
 尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
 
@@ -262,13 +255,6 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
-\ https://support.netapp.com
- a| 
-获取许可信息并向NetApp支持发送AutoSupport消息。
-
-
-
- a| 
 \ https://signin.b2c.netapp.com
  a| 
 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
@@ -294,7 +280,7 @@ AWS 服务（amazonaws.com）：
  a| 
 获取控制台代理升级的图像。
 
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
 +
 尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
 
@@ -556,7 +542,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 * 安装python3
 * 安装 podman-compose 包版本 1.0.6
 * 将 podman-compose 添加到 PATH 环境变量
-* 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
+* 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
 
 
