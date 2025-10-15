@@ -2207,9 +2207,7 @@
   <block id="05271cfa0bdeea693a59837fb97cbc3b" category="list-text"><block ref="05271cfa0bdeea693a59837fb97cbc3b" category="inline-link-macro-rx"></block></block>
   <block id="d5c64a8daa89e747afab2353c532cfd0" category="inline-link-macro">开始使用NetApp Console IAM</block>
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
-  <block id="470bbf3695958272c2830107baeb6411" category="summary">在NetApp Console中，您可以授予角色以允许用户访问NetApp Ransomware Resilience。</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">NetApp Console的勒索软件恢复访问角色</block>
-  <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">下表显示了每个角色可以执行的操作。</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">在仪表板上更新推荐状态</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">启动工作负载的重新发现</block>
   <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*在“保护”选项卡上*：</block>
@@ -2219,7 +2217,6 @@
   <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">列出保护计划和细节</block>
   <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">列出保护组</block>
   <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">查看保护组详细信息</block>
-  <block id="70348d94ac22a6df8ff175b1e3a7535b" category="cell">创建、编辑或删除保护组</block>
   <block id="4330b42a340140b836c42bbe9c7105be" category="cell">下载数据</block>
   <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*在“警报”选项卡上*：</block>
   <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">查看警报和警报详细信息</block>
@@ -5519,8 +5516,6 @@
   <block id="a11961cab6627eac643ea36ae57ce8df" category="sidebar">Keystone角色</block>
   <block id="7654fe6ca44295ba5f844fc9798f0103" category="sidebar">存储角色</block>
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">数据服务角色</block>
-  <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">备份和恢复角色</block>
-  <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">灾难恢复角色</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">合作组织</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">了解组织合作关系</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">建立组织伙伴关系</block>
@@ -5554,7 +5549,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台网络访问（旧版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索软件恢复角色为用户提供对NetApp Ransomware Resilience的访问权限。勒索软件恢复能力支持以下角色：</block>
-  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">角色赋予对设置和操作的不同访问权限。要配置或查看可疑的用户行为活动，您必须使用其中一个用户行为角色。</block>
   <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">具有*组织管理员*或*文件夹或项目管理员*角色的用户有责任将角色分配给其他用户。您可以根据项目或文件夹分配访问角色。例如，您可以为用户分配一个项目的勒索软件恢复管理员角色，并为另一个项目分配SnapCenter管理员角色。或者，如果用户需要特定文件夹内所有项目的分类管理员角色，您可以在文件夹级别授予他们此角色。</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">使用访问角色根据用户需要执行的特定任务分配对存储资源的访问权限。例如，如果用户需要与 Ransomware Resilience 进行交互，则必须为他们授予访问角色，该角色包括对授予访问角色的项目的 Ransomware Resilience 的查看或管理权限。</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成员可以在同一个项目内以及不同的项目中拥有多个角色。例如，较小的组织可能会将所有可用的访问角色分配给同一个用户，而较大的组织可能会让用户执行更专业的任务。或者，您也可以为一个用户分配组织的勒索软件恢复管理员角色。在该示例中，用户将能够对组织内的所有项目执行勒索软件恢复任务。</block>
@@ -5564,4 +5558,12 @@
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>，验证检查失败。为了避免此失败，请跳过验证检查。</block>
   <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">在政府区域和商业区域受限制模式支持。不支持在具有限制模式的主权区域使用。在受限模式下， NetApp Backup and Recovery仅支持ONTAP卷数据的备份和恢复。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>不支持应用程序数据和虚拟机数据的备份和恢复。</block>
+  <block id="7ce9d6824315daa5b3ba4a80bef8768d" category="summary">勒索软件恢复力提供不同的用户角色来管理对特权操作和报告的访问。</block>
+  <block id="f74b0b36940f757370478cb904680fe8" category="paragraph">角色赋予对设置和操作的不同级别的访问权限。</block>
+  <block id="d8ed8dce9d98718d4019d9388c24353d" category="inline-link-macro">可疑的用户活动</block>
+  <block id="592abd5ea65ad47726532e14cc5e25d7" category="paragraph">勒索软件恢复用户行为管理员和用户行为查看者角色可用的操作仅限于 <block ref="ab0f0a524b6807cce9d5b60fdac0f887" category="inline-link-macro-rx"></block>。这些角色旨在添加到勒索软件恢复管理员或查看者角色。要配置可疑用户行为设置并响应警报，用户必须具有勒索软件恢复用户行为管理员角色。要仅查看可疑用户行为警报，用户应具有勒索软件恢复用户行为查看者角色。</block>
+  <block id="6ebf0d56afdbe7f6542cf91826e113ef" category="paragraph">下表区分了勒索软件恢复管理员和勒索软件恢复查看者角色可用的操作。</block>
+  <block id="1ea8198251e36e2c445f036c869bfd7f" category="cell">创建、编辑或删除保护组</block>
+  <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">备份和恢复角色</block>
+  <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">灾难恢复角色</block>
 </blocks>

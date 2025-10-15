@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp Ransomware Resilience。 
+summary: 勒索软件恢复力提供不同的用户角色来管理对特权操作和报告的访问。 
 ---
 = NetApp Console的勒索软件恢复访问角色
 :hardbreaks:
@@ -22,32 +22,26 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 * 勒索软件恢复用户行为查看器
 
 
-角色赋予对设置和操作的不同访问权限。要配置或查看可疑的用户行为活动，您必须使用其中一个用户行为角色。
+角色赋予对设置和操作的不同级别的访问权限。
 
-下表显示了每个角色可以执行的操作。
+勒索软件恢复用户行为管理员和用户行为查看者角色可用的操作仅限于 link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑的用户活动"^]。这些角色旨在添加到勒索软件恢复管理员或查看者角色。要配置可疑用户行为设置并响应警报，用户必须具有勒索软件恢复用户行为管理员角色。要仅查看可疑用户行为警报，用户应具有勒索软件恢复用户行为查看者角色。
 
-[cols="40,20a,20a,20a,20a"]
+下表区分了勒索软件恢复管理员和勒索软件恢复查看者角色可用的操作。
+
+[cols="40,20a,20a"]
 |===
-| 特征和动作 | 勒索软件抵御能力管理员 | 勒索软件恢复力查看器 | 勒索软件恢复用户行为管理员 | 勒索软件恢复用户行为查看器 
+| 特征和动作 | 勒索软件抵御能力管理员 | 勒索软件恢复力查看器 
 
 
 | 查看仪表板和所有选项卡  a| 
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
 | 在仪表板上更新推荐状态  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -57,19 +51,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
 | 启动工作负载发现  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -79,22 +65,14 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
-5+| *在“保护”选项卡上*： 
+3+| *在“保护”选项卡上*： 
 
 
 | 添加、修改或删除保护计划  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -104,19 +82,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
 | 识别敏感数据的暴露  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -126,10 +96,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
@@ -137,10 +103,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
@@ -148,19 +110,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
 | 创建、编辑或删除保护组  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -170,33 +124,21 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
-5+| *在“警报”选项卡上*： 
+3+| *在“警报”选项卡上*： 
 
 
 | 查看警报和警报详细信息  a| 
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
 | 编辑事件状态  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -206,10 +148,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
@@ -217,19 +155,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
 | 解除或解决事件  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -239,19 +169,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
 | 获取受影响文件的完整列表  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -261,10 +183,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
@@ -272,22 +190,14 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 否
  a| 
 否
- a| 
-是
- a| 
-是
 
 
 
-5+| *在“恢复”选项卡上*： 
+3+| *在“恢复”选项卡上*： 
 
 
 | 下载受影响的文件  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -297,10 +207,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
@@ -308,10 +214,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
@@ -319,22 +221,14 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
-5+| *在“设置”选项卡上*： 
+3+| *在“设置”选项卡上*： 
 
 
 | 添加或修改备份目标  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -344,10 +238,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
@@ -355,19 +245,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
 | 添加或修改 SIEM 目标  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -377,19 +259,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
 | 开始准备演习  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -399,19 +273,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 否
- a| 
-否
- a| 
-否
 
 
 
 | 编辑准备演习  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -421,19 +287,11 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
 | 更新发现配置  a| 
 是
- a| 
-否
- a| 
-否
  a| 
 否
 
@@ -443,10 +301,6 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 
 
@@ -454,23 +308,15 @@ summary: 在NetApp Console中，您可以授予角色以允许用户访问NetApp
 否
  a| 
 否
- a| 
-是
- a| 
-否
 
 
 
-5+| *在“报告”选项卡上*： 
+3+| *在“报告”选项卡上*： 
 
 
 | 下载报告  a| 
 是
  a| 
 是
- a| 
-否
- a| 
-否
 
 |===
