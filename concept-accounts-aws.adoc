@@ -20,11 +20,11 @@ summary: 了解NetApp Console如何使用 AWS 凭证代表您执行操作以及�
 
 == 初始 AWS 凭证
 
-从控制台部署控制台代理时，您需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台的权限。所需的权限列在链接中：task-install-agent-aws-the Console.html#console-permissions-aws[AWS 的代理部署策略]。
+从控制台部署控制台代理时，您需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台的权限。所需的权限列在链接中：task-install-agent-aws-the Console.html#aws-permissions-agent[AWS 的代理部署策略]。
 
-当控制台在 AWS 中启动控制台代理实例时，它会为该实例创建一个 IAM 角色和一个实例配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。link:reference-permissions-aws.html["查看控制台如何使用权限"] 。
+当控制台在 AWS 中启动控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。link:reference-permissions-aws.html["查看代理如何使用权限"]。
 
-image:diagram_permissions_initial_aws.png["显示在 AWS 账户中部署控制台代理的控制台的概念图。  IAM 策略被分配给 IAM 角色，该角色附加到控制台实例。"]
+image:diagram_permissions_initial_aws.png["显示在 AWS 账户中部署控制台代理的控制台的概念图。IAM 策略被分配给 IAM 角色，该角色附加到控制台。"]
 
 如果您添加新的Cloud Volumes ONTAP系统，控制台将默认选择以下 AWS 凭证：
 
@@ -99,7 +99,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 === 如何安全地轮换我的 AWS 凭证？
 
-如上文所述，控制台允许您通过几种方式提供 AWS 凭证：与控制台代理实例关联的 IAM 角色、在受信任的账户中承担 IAM 角色或提供 AWS 访问密钥。
+如上文所述，控制台允许您通过几种方式提供 AWS 凭证：与控制台代理关联的 IAM 角色、在受信任的账户中承担 IAM 角色或提供 AWS 访问密钥。
 
 对于前两个选项，控制台使用 AWS 安全令牌服务来获取不断轮换的临时凭证。这个过程是最佳实践——它是自动的并且是安全的。
 

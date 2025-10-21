@@ -38,9 +38,9 @@ link:task-prepare-restricted-mode.html["了解网络要求"]
 link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何设置 AWS 权限"]
 
 * 您的 IAM 用户订阅和取消订阅 AWS Marketplace 的权限。
-* 了解实例的 CPU 和 RAM 要求。
+* 了解代理的 CPU 和 RAM 要求。
 +
-link:task-prepare-restricted-mode.html#step-3-review-host-requirements["审查实例要求"] 。
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["审查代理要求"]。
 
 * EC2 实例的密钥对。
 
@@ -85,7 +85,7 @@ link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
 
 
 .结果
-AWS 使用指定的设置启动软件。控制台代理实例和软件运行大约需要五分钟。
+AWS 使用指定的设置启动软件。控制台代理大约需要五分钟即可部署。
 
 .下一步是什么？
 设置NetApp Console。
@@ -139,7 +139,7 @@ image:screenshot_aws_iam_role.gif["显示 AWS 中配置实例页面上的字段�
 
 
 .结果
-AWS 使用指定的设置启动软件。控制台代理实例和软件运行大约需要五分钟。
+AWS 使用指定的设置启动软件。控制台代理大约需要五分钟即可部署。
 
 .下一步是什么？
 设置控制台。
@@ -180,7 +180,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 image:screenshot-azure-sku.png["Azure 中创建新 IP 地址的屏幕截图，可让您在 SKU 字段下选择“基本”。"]
 
 +
-如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果您用于访问控制台的机器无法访问该私有 IP 地址，则控制台中的操作将会失败。
+如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果您用于访问控制台的机器无法访问该私有 IP 地址，则控制台中的操作将失败。
 
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文档：公共 IP SKU"^]

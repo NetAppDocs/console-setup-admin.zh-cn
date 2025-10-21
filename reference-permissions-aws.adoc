@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: 当NetApp Console在 AWS 中启动代理实例时，它会将一个策略附加到该实例，该策略为代理提供管理该 AWS 帐户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务等。 
+summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附加到代理，该策略为代理提供管理该 AWS 账户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务等。 
 ---
 = 控制台代理的 AWS 权限
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 当NetApp Console在 AWS 中启动代理实例时，它会将一个策�
 
 
 [role="lead"]
-当NetApp Console在 AWS 中启动控制台代理实例时，它会将一个策略附加到该实例，该策略为代理提供管理该 AWS 帐户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务 (KMS) 等。
+当NetApp Console在 AWS 中启动控制台代理时，它会将一个策略附加到该代理，该策略为代理提供管理该 AWS 账户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务 (KMS) 等。
 
 
 

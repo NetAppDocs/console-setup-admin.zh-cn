@@ -159,7 +159,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 
 您需要创建一个具有在 Azure 中部署控制台代理的权限的自定义角色。
 
-创建一个 Azure 自定义角色，您可以将其分配给您的 Azure 帐户或 Microsoft Entra 服务主体。控制台通过 Azure 进行身份验证，并使用这些权限代表您创建控制台代理实例。
+创建一个 Azure 自定义角色，您可以将其分配给您的 Azure 帐户或 Microsoft Entra 服务主体。控制台通过 Azure 进行身份验证，并使用这些权限代表您创建控制台代理。
 
 控制台在 Azure 中部署控制台代理虚拟机，启用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系统分配的托管标识"^]，创建所需的角色，并将其分配给虚拟机。link:reference-permissions-azure.html["查看控制台如何使用权限"] 。
 
@@ -444,7 +444,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * 如果您不希望控制台自动为控制台代理创建 Azure 角色，则需要创建自己的link:reference-permissions-azure.html["使用此页面上的政策"]。
 +
-这些权限适用于控制台代理实例本身。这与您之前为部署控制台代理虚拟机而设置的权限不同。
+这些权限适用于控制台代理本身。这与您之前为部署控制台代理虚拟机而设置的权限不同。
 
 
 
@@ -481,7 +481,7 @@ TIP: 如果您已经登录 Azure 帐户，则控制台会自动使用该帐户�
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何连接到 Azure 中的 Linux VM"^]
 
-. 在“详细信息”页面上，输入实例的名称，指定标签，并选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色link:reference-permissions-azure.html["所需的权限"]。
+. 在“详细信息”页面上，输入代理的名称，指定标签，并选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色link:reference-permissions-azure.html["所需的权限"]。
 +
 请注意，您可以选择与此角色关联的 Azure 订阅。您选择的每个订阅都为控制台代理提供管理该订阅中的资源的权限（例如， Cloud Volumes ONTAP）。
 
@@ -506,7 +506,7 @@ link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
 ====
 . 选择“*添加*”。
 +
-控制台大约需要 10 分钟才能准备好实例。停留在该页面上直到该过程完成。
+控制台大约需要 10 分钟才能准备好代理。停留在该页面上直到该过程完成。
 
 
 
@@ -516,4 +516,4 @@ link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
 
 NOTE: 如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
-如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp Console管理 Azure Blob 存储"^]
+如果您在创建控制台代理的同一 Azure 帐户中拥有 Azure Blob 存储，您将看到 Azure Blob 存储自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何通过NetApp Console管理 Azure Blob 存储"^]

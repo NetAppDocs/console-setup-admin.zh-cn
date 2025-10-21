@@ -4,7 +4,7 @@ permalink: task-adding-gcp-accounts.html
 keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
 summary: 您可以通过关联市场订阅并对订阅过程进行故障排除来管理与控制台代理 VM 实例关联的 Google Cloud 凭据。这两项任务确保您可以使用市场订阅来支付数据服务。 
 ---
-= 管理NetApp Console的 Google Cloud 凭据和订阅
+= 将控制台代理凭据与您的 Google Cloud 订阅关联
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,6 +14,8 @@ summary: 您可以通过关联市场订阅并对订阅过程进行故障排除�
 
 
 [role="lead"]
+在 Google Cloud 中创建控制台代理时，您可以使用相关凭据订阅NetApp Intelligent Services（包括Cloud Volumes ONTAP）和NetApp数据服务。您必须将订阅与您想要使用其凭证来支付服务的代理商关联起来。
+
 您可以通过关联市场订阅并对订阅过程进行故障排除来管理与控制台代理 VM 实例关联的 Google Cloud 凭据。这两项任务确保您可以使用市场订阅来支付数据服务。
 
 
@@ -22,12 +24,16 @@ summary: 您可以通过关联市场订阅并对订阅过程进行故障排除�
 
 在 Google Cloud 中部署控制台代理时，控制台会创建一组与控制台代理虚拟机实例关联的默认凭据。您可以随时更改与这些凭据关联的 Google Cloud Marketplace 订阅。通过订阅，您可以创建按使用量付费的Cloud Volumes ONTAP系统，并使用其他数据服务。
 
-用新的订阅替换当前的市场订阅会更改任何现有Cloud Volumes ONTAP系统和所有新系统的市场订阅。
+用新的市场订阅替换当前的市场订阅会更新现有和新的Cloud Volumes ONTAP系统的订阅。
 
 .步骤
-. 选择“*管理>*凭证*”。
+. 选择“*管理 > 凭证*”。
 . 选择*组织凭证*。
-. 选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。  +需要新的屏幕截图（TS）image:screenshot_gcp_add_subscription.png["一组现有凭证的操作菜单的屏幕截图。"]
+. 选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。
+
+
+image:screenshot_gcp_add_subscription.png["一组现有凭证的操作菜单的屏幕截图。"]
+
 . 要使用选定的凭据配置现有订阅，请从下拉列表中选择一个 Google Cloud 项目和订阅，然后选择*配置*。
 +
 image:screenshot_gcp_associate.gif["为 Google Cloud 凭据选择的 Google Cloud 项目和订阅的屏幕截图。"]
@@ -61,10 +67,10 @@ image:screenshot_gcp_marketplace_register.png["注册弹出窗口的屏幕截图
 NOTE: 如果您组织中的某人已经从您的结算帐户中订阅了市场，那么您将被重定向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console中的Cloud Volumes ONTAP页面"^]反而。如果这是意外情况，请联系您的NetApp销售团队。  Google 为每个 Google 结算帐户仅启用一项订阅。
 
 +
-*** 选择您想要与此订阅关联的控制台组织或帐户。
-*** 在“*替换现有订阅*”字段中，选择是否要用这个新订阅自动替换一个组织或帐户的现有订阅。
+*** 选择您想要与此订阅关联的控制台组织。
+*** 在“替换现有订阅”字段中，选择是否要用这个新订阅自动替换一个组织的现有订阅。
 +
-控制台将用这个新订阅替换组织或帐户中所有凭据的现有订阅。如果一组凭证从未与订阅关联，那么这个新订阅将不会与这些凭证关联。
+控制台将用这个新订阅替换组织中所有凭据的现有订阅。如果一组凭证从未与订阅关联，那么这个新订阅将不会与这些凭证关联。
 
 +
 对于所有其他组织或帐户，您需要重复这些步骤来手动关联订阅。
@@ -90,7 +96,7 @@ image:screenshot_gcp_associate.gif["订阅分配页面的屏幕截图。"]
 
 == 解决 Marketplace 订阅流程问题
 
-有时，通过 Google Cloud Marketplace 订阅NetApp数据服务可能会由于权限不正确或意外未遵循重定向到控制台而变得碎片化。如果发生这种情况，请按照以下步骤完成订阅过程。
+通过 Google Cloud Marketplace 订阅NetApp数据服务可能会因权限不正确或错过重定向到控制台而失败。如果发生这种情况，请按照以下步骤完成订阅过程。
 
 .步骤
 . 导航至 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp页面"^]检查订单状态。如果页面显示*在提供商处管理*，请向下滚动并选择*管理订单*。

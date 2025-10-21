@@ -52,7 +52,7 @@ NetApp Console允许您通过几种方式提供 AWS 凭证：与代理实例关�
 
 向控制台代理添加额外的 AWS 凭证，以便它具有管理公共云环境中的资源和流程所需的权限。您可以提供另一个账户中的 IAM 角色的 ARN，也可以提供 AWS 访问密钥。
 
-如果您刚刚开始使用控制台，link:concept-accounts-aws.html["了解NetApp Console如何使用 AWS 凭证和权限"] 。
+link:concept-accounts-aws.html["了解NetApp Console如何使用 AWS 凭证和权限"]。
 
 
 
@@ -61,7 +61,7 @@ NetApp Console允许您通过几种方式提供 AWS 凭证：与代理实例关�
 在将 AWS 凭证添加到控制台代理之前授予权限。这些权限允许控制台代理管理该 AWS 账户内的资源和流程。您可以使用受信任账户或 AWS 密钥中角色的 ARN 来提供权限。
 
 
-NOTE: 如果您从控制台部署了控制台代理，它会自动为您部署控制台代理的账户添加 AWS 凭证。这确保了管理资源所需的必要权限。link:concept-accounts-aws.html["了解 AWS 凭证和权限"] 。
+NOTE: 如果您从控制台部署了控制台代理，它会自动为您部署控制台代理的账户添加 AWS 凭证。这确保了管理资源所需的必要权限。
 
 *选择*
 
@@ -73,7 +73,7 @@ NOTE: 如果您从控制台部署了控制台代理，它会自动为您部署�
 
 ==== 通过承担另一个账户中的 IAM 角色来授予权限
 
-您可以使用 IAM 角色在部署控制台代理实例的源 AWS 账户与其他 AWS 账户之间建立信任关系。然后，您将向控制台提供来自受信任账户的 IAM 角色的 ARN。
+您可以使用 IAM 角色在部署控制台代理的源 AWS 账户与其他 AWS 账户之间建立信任关系。然后，您将向控制台提供来自受信任账户的 IAM 角色的 ARN。
 
 如果控制台代理安装在本地，则无法使用此身份验证方法。您必须使用 AWS 密钥。
 
@@ -116,16 +116,15 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 
 
-.结果
-该帐户具有所需的权限。<<add-the-credentials,您现在可以将凭证添加到控制台代理>> 。
 
 
-
-=== 添加凭据
+=== 将凭证添加到现有代理
 
 为 AWS 账户提供所需权限后，您可以将该账户的凭证添加到现有代理。这使您可以使用相同的代理在该帐户中启动Cloud Volumes ONTAP系统。
 
- New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
+
+NOTE: 您的云提供商中的新凭证可能需要几分钟才能生效。
+
 .步骤
 . 使用顶部导航栏选择要添加凭据的控制台代理。
 . 在左侧导航栏中，选择“管理”>“凭据”。
@@ -143,7 +142,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 
 .结果
-现在，在将系统添加到控制台时，您可以从“详细信息和凭据”页面切换到另一组凭据
+现在，您可以在向控制台添加订阅时从“详细信息和凭据”页面切换到不同的凭据集。
 
 image:screenshot_accounts_switch_aws.png["屏幕截图显示在“详细信息和凭据”页面中选择“切换帐户”后在云提供商帐户之间进行选择。"]
 
@@ -204,7 +203,7 @@ image:screenshot_accounts_switch_aws.png["屏幕截图显示在“详细信息�
 
 
 .结果
-IAM 角色现在具有所需的权限。<<add-the-credentials-2,您现在可以将其添加到控制台>> 。
+IAM 角色现在具有所需的权限。<<add-the-credentials,您现在可以将其添加到控制台>>。
 
 
 
@@ -220,9 +219,9 @@ IAM 角色现在具有所需的权限。<<add-the-credentials-2,您现在可以�
 +
 image:screenshot-settings-icon-organization.png["显示控制台右上角的“设置”图标的屏幕截图。"]
 
-. 在*组织凭据*或*帐户凭据*页面上，选择*添加凭据*并按照向导中的步骤进行操作。
+. 在*组织凭据*页面上，选择*添加凭据*并按照向导中的步骤进行操作。
 +
-.. *凭证位置*：选择*Amazon Web Services > NetApp Console*。
+.. *凭证位置*：选择*Amazon Web Services > 控制台*。
 .. *定义凭证*：提供 IAM 角色的 ARN（Amazon 资源名称）。
 .. *审核*：确认有关新凭证的详细信息并选择*添加*。
 
@@ -239,7 +238,7 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 
 == 配置 AWS 订阅
 
-添加 AWS 凭证后，您可以使用这些凭证配置 AWS Marketplace 订阅。通过订阅，您可以按小时费率（PAYGO）或使用年度合同支付Cloud Volumes ONTAP费用，并支付其他数据服务费用。
+添加 AWS 凭证后，您可以使用这些凭证配置 AWS Marketplace 订阅。通过订阅，您可以按小时费率（PAYGO）或使用年度合同支付NetApp数据服务和Cloud Volumes ONTAP 的费用。
 
 在添加凭证后，您可以在两种情况下配置 AWS Marketplace 订阅：
 
@@ -295,18 +294,18 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 
 
 
-== 将现有订阅与您的组织或帐户关联
+== 将现有订阅与您的组织关联
 
-当您从 AWS Marketplace 订阅时，流程的最后一步是将订阅与您的组织关联。如果您没有完成此步骤，那么您就无法在您的组织或帐户中使用该订阅。
+当您从 AWS Marketplace 订阅时，流程的最后一步是将订阅与您的组织关联。如果您没有完成此步骤，那么您就无法在您的组织中使用该订阅。
 
 * link:concept-modes.html["了解控制台部署模式"]
 * link:concept-identity-and-access-management.html["了解控制台身份和访问管理"]
 
 
-如果您从 AWS Marketplace 订阅了NetApp智能数据服务，但错过了将订阅与您的帐户关联的步骤，请按照以下步骤操作。
+如果您从 AWS Marketplace 订阅了NetApp Intelligent Services，但错过了将订阅与您的帐户关联的步骤，请按照以下步骤操作。
 
 .步骤
-. 确认您没有将您的订阅与您的控制台组织或帐户关联。
+. 确认您没有将您的订阅与您的控制台组织关联。
 +
 .. 从导航菜单中，选择*管理>Licenses and subscriptions*。
 .. 选择*订阅*。
@@ -350,7 +349,7 @@ image:screenshot-subscription-assignment.png["订阅分配页面的屏幕截图�
 
 
 
-. 确认订阅与您的组织或帐户相关联。
+. 确认订阅与您的组织相关联。
 +
 .. 从导航菜单中，选择*管理>许可证和订阅*。
 .. 选择*订阅*。
@@ -359,7 +358,7 @@ image:screenshot-subscription-assignment.png["订阅分配页面的屏幕截图�
 
 . 确认订阅与您的 AWS 凭证相关联。
 +
-.. 在控制台的右上角，选择“设置”图标，然后选择“*凭据*”。
+.. 选择“*管理 > 凭证*”。
 .. 在“组织凭证”页面上，验证订阅是否与您的 AWS 凭证关联。
 +
 这是一个例子。
@@ -382,7 +381,7 @@ NOTE: 您无法编辑与控制台代理实例或Amazon FSx for ONTAP实例关联
 
 .步骤
 . 选择“*管理 > 凭证*”。
-. 在*组织凭据*或*帐户凭据*页面上，选择一组凭据的操作菜单，然后选择*编辑凭据*。
+. 在*组织凭证*页面上，选择一组凭证的操作菜单，然后选择*编辑凭证*。
 . 进行所需的更改，然后选择*应用*。
 
 
@@ -393,7 +392,7 @@ NOTE: 您无法编辑与控制台代理实例或Amazon FSx for ONTAP实例关联
 如果您不再需要一组凭证，您可以删除它们。您只能删除与系统无关的凭据。
 
 
-TIP: 您无法删除与控制台代理实例关联的实例配置文件的凭据。
+TIP: 您无法删除与控制台代理关联的实例配置文件的凭据。
 
 .步骤
 . 选择“*管理 > 凭证*”。
