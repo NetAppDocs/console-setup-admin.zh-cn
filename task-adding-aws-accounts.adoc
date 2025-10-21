@@ -252,10 +252,6 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 .开始之前
 您需要先创建控制台代理，然后才能配置订阅。link:concept-agents.html#agent-installation["了解如何创建控制台代理"] 。
 
-以下视频展示了从 AWS Marketplace 订阅NetApp Intelligent Services的步骤：
-
-.从 AWS Marketplace 订阅NetApp Intelligent Services
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步骤
 . 选择“*管理 > 凭证*”。
 . 选择*组织凭证*。

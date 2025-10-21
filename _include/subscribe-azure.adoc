@@ -30,12 +30,6 @@
 对于所有其他组织或帐户，您需要重复这些步骤来手动关联订阅。
 
 *** 选择*保存*。
-+
-以下视频展示了从 Azure 市场订阅的步骤：
-
-+
-.从 Azure 市场订阅NetApp Intelligent Services
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
