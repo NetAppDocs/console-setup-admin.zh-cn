@@ -572,8 +572,6 @@
   <block id="b4b78d037549f1e53319a933fd923727" category="list-text">登录后，设置控制台：</block>
   <block id="fa4a4ed3171c9645519ee525ed212db9" category="list-text">指定与控制台代理关联的控制台组织。</block>
   <block id="d1caa1543690181f63b8c0e0933c0c49" category="paragraph">当控制台代理安装在本地时，不支持限制模式。</block>
-  <block id="af60e7ca775342cbe207d574ae3a82ef" category="paragraph">以下视频展示了从 AWS Marketplace 订阅NetApp Intelligent Services的步骤：</block>
-  <block id="1cfe9a2e660a541826be5b5cc3018fdd" category="video-title">从 AWS Marketplace 订阅NetApp Intelligent Services</block>
   <block id="aaf23e1cf00fee0789e1c392da395cc9" category="list-text">选择与控制台代理关联的一组凭据的操作菜单，然后选择*配置订阅*。</block>
   <block id="601c60f4bc1d60fb12bbba2d26b90b33" category="paragraph">您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp Console关联的凭据关联。</block>
   <block id="0d28acbceed906f52a206d0f3fb0add2" category="inline-image-macro">一组现有凭证的操作菜单的屏幕截图。</block>
@@ -593,8 +591,6 @@
   <block id="7dffa6296286b12f66d638f53340316c" category="list-text">如果出现提示，请登录您的 Azure 帐户。</block>
   <block id="9dc9a5b2f23fe90a0fd71125f3034dfd" category="list-text">填写表格并选择*订阅*。</block>
   <block id="3221538307211e131f96e1a83b1a5235" category="list-text">订阅过程完成后，选择*立即配置帐户*。</block>
-  <block id="89d8b3b4c08395fc5dbef0d35cb50529" category="paragraph">以下视频展示了从 Azure 市场订阅的步骤：</block>
-  <block id="930540e35d6a8bd81f5882c46e1f93c2" category="video-title">从 Azure 市场订阅NetApp Intelligent Services</block>
   <block id="ef5d79e3ae5671ca28e5f6e3b02eed27" category="list-text">要使用选定的凭据配置现有订阅，请从下拉列表中选择一个 Google Cloud 项目和订阅，然后选择*配置*。</block>
   <block id="fff6f5125be05a94543d2e88dbd30b27" category="inline-image-macro">为 Google Cloud 凭据选择的 Google Cloud 项目和订阅的屏幕截图。</block>
   <block id="cab980518d03aa36afc924b709828a6e" category="paragraph"><block ref="cab980518d03aa36afc924b709828a6e" category="inline-image-macro-rx" type="image"></block></block>
@@ -613,8 +609,6 @@
   <block id="825c72d4114a9a71a355213f6b79c642" category="list-text">完成“*订阅分配*”页面上的步骤：</block>
   <block id="58575503869d282abe104097770af48c" category="inline-link">NetApp Console中的Cloud Volumes ONTAP页面</block>
   <block id="f363e3b5ffcff31a7405fb7c63982e48" category="admonition">如果您组织中的某人已经从您的结算帐户中订阅了市场，那么您将被重定向到<block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block>反而。如果这是意外情况，请联系您的NetApp销售团队。  Google 为每个 Google 结算帐户仅启用一项订阅。</block>
-  <block id="a6b7d96f53186edb463f8f8611f97cd9" category="paragraph">以下视频展示了从 Google Cloud Marketplace 订阅的步骤：</block>
-  <block id="c9b7d3dfb0a91a99ab5deba597b6741a" category="video-title">从 Google Cloud Marketplace 订阅</block>
   <block id="a5a1d94d16067bff86c06d08991b799b" category="list-text">此过程完成后，导航回控制台中的“凭据”页面并选择此新订阅。</block>
   <block id="467e5d6bbcd0ea531c8f7285b69e29ee" category="inline-image-macro">订阅分配页面的屏幕截图。</block>
   <block id="60d2ed6f6e1774535b6e69274800381d" category="paragraph"><block ref="60d2ed6f6e1774535b6e69274800381d" category="inline-image-macro-rx" type="image"></block></block>
@@ -5602,4 +5596,5 @@
   <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>。</block>
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS 使用指定的设置启动软件。控制台代理大约需要五分钟即可部署。</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果您用于访问控制台的机器无法访问该私有 IP 地址，则控制台中的操作将失败。</block>
+  <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">要激活可疑用户活动检测，您必须具有控制台组织管理员角色。</block>
 </blocks>
