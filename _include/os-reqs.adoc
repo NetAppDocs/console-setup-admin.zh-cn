@@ -148,7 +148,7 @@ CPU:: 8 个核心或 8 个 vCPU
 RAM:: 32 GB
 
 
-AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 t3.2xlarge。
+AWS EC2 实例类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐使用 t3.2xlarge。
 
 
 密钥对:: 创建控制台代理时，您需要选择一个 EC2 密钥对来与实例一起使用。
@@ -164,10 +164,10 @@ AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们�
 --
 
 
-Azure VM 大小:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 Standard_D8s_v3。
+Azure VM 大小:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 Standard_D8s_v3。
 
 
-Google Cloud 机器类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 n2-standard-8。
+Google Cloud 机器类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 n2-standard-8。
 +
 --
 Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["受防护的虚拟机功能"^]

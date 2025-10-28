@@ -177,7 +177,7 @@ AWS 服务（amazonaws.com）：
 
 CPU:: 8 个核心或 8 个 vCPU
 RAM:: 32 GB
-AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 t3.2xlarge。
+AWS EC2 实例类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐使用 t3.2xlarge。
 
 
 

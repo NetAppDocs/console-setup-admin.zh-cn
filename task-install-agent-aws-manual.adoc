@@ -50,6 +50,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范�
 
 
 --
+AWS EC2 实例类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐使用 t3.2xlarge。
 虚拟机管理程序:: 需要经过认证可运行受支持的操作系统的裸机或托管虚拟机管理程序。
 [[podman-versions]]操作系统和容器要求:: 在标准模式或受限模式下使用控制台时，控制台代理支持以下操作系统。安装代理之前需要一个容器编排工具。
 +
@@ -107,7 +108,6 @@ Docker Engine 23.0.6 至 28.0.0。
 
 |===
 --
-AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们推荐 t3.2xlarge。
 密钥对:: 创建控制台代理时，您需要选择一个 EC2 密钥对来与实例一起使用。
 使用 IMDSv2 时的 PUT 响应跳数限制:: 如果在 EC2 实例上启用了 IMDSv2（这是新 EC2 实例的默认设置），则必须将实例上的 PUT 响应跳数限制更改为 3。如果您不更改 EC2 实例的限制，则在尝试设置代理时会收到 UI 初始化错误。
 +
@@ -115,18 +115,6 @@ AWS EC2 实例类型:: 满足上述 CPU 和 RAM 要求的实例类型。我们�
 * link:task-require-imdsv2.html["要求在 Amazon EC2 实例上使用 IMDSv2"]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS 文档：更改 PUT 响应跳数限制"^]
 
-
---
-/opt 中的磁盘空间:: 必须有 100 GiB 可用空间
-+
---
-代理使用 `/opt`安装 `/opt/application/netapp`目录及其内容。
-
---
-/var 中的磁盘空间:: 必须有 20 GiB 可用空间
-+
---
-控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
 
 --
 

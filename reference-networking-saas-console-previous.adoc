@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
-keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: 当您登录并使用基于 Web 的控制台时，它会联系多个端点来完成您发起的操作。访问NetApp Console的计算机必须与这些端点建立连接。 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
+summary: 您需要确保控制台和您安装的任何代理都具有正确的网络访问权限才能正常运行。 
 ---
-= 3.9.55 及以下版本所需的网络接入点
+= 3.9.55 及以下版本需要网络访问
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,16 @@ summary: 当您登录并使用基于 Web 的控制台时，它会联系多个端
 
 
 [role="lead"]
-本主题详细介绍了NetApp Console4.0.0 之前的版本标准模式所需的网络访问、 NetApp ConsoleNetApp Console代理和NetApp数据服务出站互联网访问以及联系必要端点的能力。您需要确保控制台和您安装的任何代理都具有正确的网络访问权限以使用功能属性。
+NetApp Console、 NetApp Console代理和NetApp数据服务需要出站互联网访问才能联系必要的端点。
 
-您需要为以软件即服务 (SaaS) 形式访问NetApp Console的计算机以及您在本地或云中安装的任何控制台代理设置网络访问。您可能还需要某些NetApp数据服务（包括Cloud Volumes ONTAP）的额外端点。
+
+NOTE: 本主题记录了NetApp Console标准模式 3.9.55 及以下版本所需的网络访问。对于 4.0.0 及更高版本所需的端点，请查看link:reference-networking-saas-console.html["4.0.0 及更高版本所需的端点"]。
+
+您需要为以下内容设置网络访问：
+
+* 以软件即服务 (SaaS) 形式访问NetApp Console的计算机
+* 您在本地或云端安装的控制台代理。
+
 
 
 
@@ -24,11 +31,62 @@ summary: 当您登录并使用基于 Web 的控制台时，它会联系多个端
 
 从 4.0.0 版本开始，控制台代理需要的端点更少。 4.0.0 之前的现有部署仍然受支持。升级到 4.0.0 或更高版本后，您可以在方便时从允许列表中删除旧端点。
 
-NetApp建议您更新防火墙规则以使用修订后的端点列表。修改后的列表更小，因此更安全且更易于管理。
+NetApp建议更新防火墙规则以使用修订后的端点列表，该列表更小、更安全且更易于管理。  NetApp消除了对通配符条目的需求，并且代理升级的端点支持所有数据服务。
 
-审查link:reference-networking-saas-console.html["4.0.0 及更高版本支持的端点"]
+[cols="3*"]
+|===
+| *先前的端点* | *4.0.0 及以上版本的端点* | *目的* 
 
+
+ a| 
+* \ https://support.netapp.com
+* \ https://mysupport.netapp.com
+
+ a| 
+* \ https://mysupport.netapp.com
+* \ https://signin.b2c.netapp.com
+* \ https://support.netapp.com
+
+ a| 
+用于许可和联系NetApp支持。
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \ https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \ https://cloudmanager.cloud.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \ https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+用于日常运营。
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+| 获取控制台代理升级的图像。 
+|===
 .步骤
+. 验证您的代理是否为 4.0.0 或更高版本。link:task-troubleshoot-agent.html#view-the-console-agent-version["查看代理版本。"]
 . 将端点列入白名单link:reference-networking-saas-console.html["4.0.0 及更高版本支持的端点"]。
 . 通过运行以下命令重新启动每个代理上的服务管理器 2 服务：
 +
@@ -42,30 +100,30 @@ systemctl restart netapp-service-manager.service
 ----
 systemctl status netapp-service-manager.service
 ----
-. 从允许列表中删除旧端点。
+. 从防火墙允许列表中删除旧端点。
 
 
 
 
-== NetApp Console联系的端点
+== 3.9.55 及以下版本的NetApp Console和控制台代理的端点
 
-访问NetApp Console的每台计算机都必须连接到下面列出的端点。
-
-系统在两种情况下联系这些端点：
-
-* 从计算机访问 https://console.netapp.com["NetApp Console"^]作为软件即服务（SaaS）。
-* 从直接访问代理主机的计算机，可以登录并进行设置，也可以从代理主机访问控制台。
-
+这些端点用于控制台代理 3.9.55 及以下版本。
 
 [cols="2*"]
 |===
 | 端点 | 目的 
 
 
-| \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
+ a| 
+\ https://support.netapp.com \ https://mysupport.netapp.com
+ a| 
+获取许可信息并向NetApp支持发送AutoSupport消息。
 
 
-| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp Console中提供功能和服务。 
+
+ a| 
+\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com
+| 在NetApp Console中提供功能和服务。 
 
 
  a| 
@@ -93,170 +151,30 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 |===
 
 
-== 控制台代理联系的端点
+== 控制台代理联系的云提供商端点
 
-您可以在本地或云中安装控制台代理，它会联系端点以完成控制台发起的操作。
+如果控制台代理部署在您的云提供商中，则它们必须能够访问其他端点。
 
-控制台代理需要访问与NetApp Console相同的端点，如果您在云提供商中部署代理，则还需要访问其他端点。
+在安装控制台代理之前启用对云提供商端点的访问。
 
+* link:task-install-agent-aws-console.html#networking-aws-agent["为控制台代理设置 AWS 网络访问"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["为控制台代理设置 Azure 网络访问"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["为控制台代理设置 Google Cloud 网络访问"]
 
 
-=== AWS 的代理端点
+所有版本的云提供商端点都是相同的。
 
-这些端点适用于 4.0.0 之前的控制台代理。
 
-[cols="2*"]
-|===
-| 端点 | 目的 
 
+== 控制台代理联系的数据服务端点
 
-| AWS 服务 (amazonaws.com)：CloudFormation 弹性计算云 (EC2) 身份和访问管理 (IAM) 密钥管理服务 (KMS) 安全令牌服务 (STS) 简单存储服务 (S3) | 管理 AWS 中的资源。确切的端点取决于您使用的 AWS 区域。有关详细信息，请参阅 AWS 文档以获取许可信息并向NetApp支持发送AutoSupport消息。 
+控制台代理需要额外的出站互联网访问来支持某些NetApp数据服务和Cloud Volumes ONTAP。
 
 
-| \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
 
+=== Cloud Volumes ONTAP的端点
 
- a| 
-在两组端点之间进行选择：
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS 中的Cloud Volumes ONTAP端点"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure 中的Cloud Volumes ONTAP端点"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud 中Cloud Volumes ONTAP的端点"]
 
-* 选项 1（推荐）
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-获取控制台代理升级的图像。
-
-NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并禁止选项 2 端点，除非您使用勒索软件恢复或备份和恢复。请注意有关这些端点的以下事项：
-
-* 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
-* 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-|===
-
-
-=== Azure 的代理端点
-
-这些端点适用于 4.0.0 之前的控制台代理。
-
-[cols="2*"]
-|===
-| 端点 | 目的 
-
-
-| \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net | 管理 Azure 公共区域中的资源。 
-
-
-| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn | 管理 Azure 中国区域的资源。 
-
-
-| \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
-
-
- a| 
-在两组端点之间进行选择：
-
-* 选项 1（推荐）
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-获取控制台代理升级的图像。
-
-NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并禁止选项 2 端点，除非您使用勒索软件恢复或备份和恢复。请注意有关这些端点的以下事项：
-
-* 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
-* 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-|===
-
-
-=== Google Cloud 的代理端点
-
-这些端点适用于 4.0.0 之前的控制台代理。
-
-[cols="2*"]
-|===
-| 端点 | 目的 
-
-
-| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/project | 管理 Google Cloud 中的资源。 
-
-
-| \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
-
-
- a| 
-在两组端点之间进行选择：
-
-* 选项 1（推荐）
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-获取控制台代理升级的图像。
-
-NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
-
-* 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。
-* 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-|===
-
-
-== 本地代理端点
-
-[cols="2*"]
-|===
-| 端点 | 目的 
-
-
-| \ https://support.netapp.com \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。 
-
-
-| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp Console中提供功能和服务。 
-
-
- a| 
-在两组端点之间进行选择：
-
-* 选项 1（推荐）
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-获取控制台代理升级的图像。
-
-NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并禁止选项 2 端点，除非您使用勒索软件恢复或备份和恢复。请注意有关这些端点的以下事项：
-
-* 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
-* 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
-* 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-|===
