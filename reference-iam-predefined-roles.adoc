@@ -64,7 +64,7 @@ NetApp Console中的身份和访问管理 (IAM) 提供了预定义的角色，�
 | link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理员"] | 具有Google Cloud NetApp Volumes角色的用户可以发现和管理Google Cloud NetApp Volumes。 
 
 
-| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes用户"] | 具有Google Cloud NetApp Volumes用户角色的用户可以查看Google Cloud NetApp Volumes。 
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes查看器"] | 具有Google Cloud NetApp Volumes用户角色的用户可以查看Google Cloud NetApp Volumes。 
 
 
 | link:reference-iam-keystone-roles.html["Keystone管理员"] | 具有Keystone管理员角色的用户可以创建服务请求。允许用户监控和查看他们正在访问的Keystone租户内的使用情况、资源和管理详细信息。 
