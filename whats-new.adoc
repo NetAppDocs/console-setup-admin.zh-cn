@@ -18,6 +18,33 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 
 
+== 2025年11月10日
+
+
+
+== 控制台代理 4.1.0
+
+此版本的控制台代理包含安全改进、错误修复以及以下功能：
+
+4.1.0 版本适用于标准模式和限制模式。
+
+.重命名代理状态指示器
+将控制台代理的状态指示器从 *Active* 和 *Inactive* 重命名为 *Connected* 和 *Disconnected*，以使其用途更加明确。
+
+.支持 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0
+控制台代理现在支持 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本时， NetApp支持 podman-compose 1.5.0。
+
+
+
+== NetApp Console管理
+
+本次发布包含以下内容：
+
+.NetApp Console通知的新电子邮件地址
+发送NetApp Console通知的电子邮件地址已从 *service@console.bluexp.netapp.com* 更改为 *service@console.netapp.com*。NetApp建议更新所有电子邮件规则，允许 *service@console.netapp.com* 发送邮件，以确保您继续收到NetApp Console电子邮件通知。
+
+
+
 == 2025年10月6日
 
 

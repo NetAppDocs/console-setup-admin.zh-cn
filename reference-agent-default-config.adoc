@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
-summary: 在部署控制台代理之前，请详细了解它。 
+summary: 在部署控制台代理之前，请先了解有关该代理的更多信息。 
 ---
 = 控制台代理的默认配置
 :hardbreaks:
@@ -24,7 +24,7 @@ summary: 在部署控制台代理之前，请详细了解它。
 
 
 
-=== AWS 详细信息
+=== AWS 控制台代理 VM 详细信息
 
 如果您从控制台或云提供商的市场部署了控制台代理，请注意以下事项：
 
@@ -40,7 +40,7 @@ summary: 在部署控制台代理之前，请详细了解它。
 
 
 
-=== Azure 详细信息
+=== Azure 控制台代理 VM 详细信息
 
 如果您从控制台或云提供商的市场部署了控制台代理，请注意以下事项：
 
@@ -55,7 +55,7 @@ summary: 在部署控制台代理之前，请详细了解它。
 
 
 
-=== Google Cloud 详细信息
+=== Google Cloud 控制台代理 VM 详细信息
 
 如果您从控制台部署了控制台代理，请注意以下事项：
 
@@ -72,9 +72,9 @@ summary: 在部署控制台代理之前，请详细了解它。
 
 === 安装文件夹
 
-代理安装文件夹位于以下位置：
+代理程序安装文件夹位于以下位置：
 
-/opt/应用程序/netapp/cloudmanager
+`/opt/application/netapp/cloudmanager`
 
 
 
@@ -82,12 +82,12 @@ summary: 在部署控制台代理之前，请详细了解它。
 
 日志文件包含在以下文件夹中：
 
-* /opt/application/netapp/cloudmanager/log 或
-* /opt/application/netapp/service-manager-2/logs（从新的 3.9.23 安装开始）
+* `/opt/application/netapp/cloudmanager/log` 或者
+* `/opt/application/netapp/service-manager-2/logs` （从新安装的 3.9.23 版本开始）
 +
 这些文件夹中的日志提供了有关控制台代理的详细信息。
 
-* /opt/应用程序/netapp/cloudmanager/docker_occm/数据/日志
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log`
 +
 此文件夹中的日志提供有关云服务和在控制台代理上运行的控制台服务的详细信息。
 
@@ -120,13 +120,13 @@ summary: 在部署控制台代理之前，请详细了解它。
 
 如果您在没有互联网访问权限的本地 Linux 主机上手动安装了控制台代理，则适用以下配置。link:task-quick-start-private-mode.html["了解有关此安装选项的更多信息"] 。
 
-* 代理安装文件夹位于以下位置：
+* 代理程序安装文件夹位于以下位置：
 +
-/opt/应用程序/netapp/ds
+`/opt/application/netapp/ds`
 
 * 日志文件包含在以下文件夹中：
 +
-/var/lib/docker/volumes/ds_occmdata/_data/log
+`/var/lib/docker/volumes/ds_occmdata/_data/log`
 
 +
 此文件夹中的日志提供有关控制台代理和 Docker 映像的详细信息。

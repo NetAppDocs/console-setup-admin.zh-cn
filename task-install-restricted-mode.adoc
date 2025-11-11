@@ -260,7 +260,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
  ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-如果您的网络需要代理来访问互联网，则需要添加代理信息。您可以添加透明或显式代理。 --proxy 和 --cacert 参数是可选的，系统不会提示您添加它们。如果您有代理服务器，则需要输入所示的参数。
+如果您的网络需要代理来访问互联网，则需要添加代理信息。您可以在安装过程中添加显式代理。--proxy 和 --cacert 参数是可选的，系统不会提示您添加它们。如果您有明确的代理服务器，则需要按所示方式输入参数。
 
 +
 以下是使用 CA 签名证书配置显式代理服务器的示例：
@@ -300,16 +300,9 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-`--cacert`指定用于控制台代理和代理服务器之间的 HTTPS 访问的 CA 签名证书。  HTTPS代理服务器、拦截代理服务器、透明代理服务器都需要此参数。
 
-+ 下面是配置透明代理服务器的示例。配置透明代理时，不需要定义代理服务器。您只需将 CA 签名的证书添加到控制台代理主机：
+NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console.html["了解代理维护控制台"]
 
-+
-
-[source, cli]
-----
- ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
-----
 . 如果您使用 Podman，则需要调整 aardvark-dns 端口。
 +
 .. 通过 SSH 连接到控制台代理虚拟机。
