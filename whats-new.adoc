@@ -22,7 +22,7 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 
 
-== 控制台代理 4.1.0
+=== 控制台代理 4.1.0
 
 此版本的控制台代理包含安全改进、错误修复以及以下功能：
 
@@ -36,7 +36,7 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 
 
-== NetApp Console管理
+=== NetApp Console管理
 
 本次发布包含以下内容：
 
