@@ -1809,50 +1809,21 @@
   <block id="0bddca9be37ec136c74bc13d67a2327c" category="paragraph">要删除透明代理服务器，请使用以下命令：</block>
   <block id="e73e4a152d192531e90aca4120b4f30b" category="section-title">查看任何命令的帮助</block>
   <block id="6e59373a630740150c04aaac47bb0503" category="paragraph">要查看任何命令的帮助，请附加<block ref="0c113ca6d57519b559ba5a426be3c6b6" prefix=" " category="inline-code"></block>到命令。例如，要查看<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>命令，使用以下命令：</block>
-  <block id="5bf95fa727a4b2ba4ca86f34b19b20fd" category="summary">NetApp有时会在特定的 Linux 操作系统上添加和删除对控制台代理的支持，了解此支持如何影响您现有的控制台代理。</block>
-  <block id="06e657c37e762cbeb9edc676ff32181d" category="doc">受支持的 Linux 操作系统的变更</block>
-  <block id="bbf3330385f894cd7bd34b34e4c36d6c" category="section-title">支持的操作系统</block>
-  <block id="e1a383f58a0e33ae02b287edc69df212" category="paragraph">NetApp支持具有以下 Linux 操作系统的代理。</block>
-  <block id="d20756c02f9913587a3e83e30f0e10d3" category="list-text">手动安装</block>
-  <block id="cdf60a7d13d1d74e115661d87ae97a3f" category="list-text">Ubuntu 24.04 LTS</block>
-  <block id="183f3a1e578d0dce86eeb393edf40a5d" category="list-text">Ubuntu 22.04 LTS</block>
-  <block id="4770f3dd962dad9ee48887e8dcd5eca0" category="list-text">从NetApp Console部署</block>
-  <block id="12a87db5b86462e9bd05a612793965de" category="list-text">从 AWS Marketplace 部署</block>
-  <block id="21b3bbb098ff9926f5de185468b47efd" category="list-text">从 Azure 市场部署</block>
   <block id="44f51c4ac8fa1a6f53f07c0c2f751b69" category="open-title">私人模式</block>
   <block id="a5dacfcdb1adb3167b081f091b368732" category="section-title">支持 RHEL 8 和 9</block>
-  <block id="3cf44b158a4bb7a8c4ca007889bedc1a" category="paragraph">请注意以下有关 RHEL 8 和 9 的支持：</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="list-text">限制</block>
-  <block id="2130a22ec73651eb4d05bfbf2efdf5bd" category="list-text">如果您在本地的 RHEL 8 或 9 主机上安装代理，则支持NetApp Data Classification。如果 RHEL 8 或 9 主机位于 AWS、Azure 或 Google Cloud 中，则不受支持。</block>
-  <block id="bd3df16097ce93a7398107a82c38c714" category="list-text">容器编排工具</block>
-  <block id="1e6669acd60eed2d5a58dc20cd09d144" category="list-text">在 RHEL 8 或 9 主机上安装控制台代理时，必须使用 Podman 工具作为容器编排工具。  RHEL 8 和 9 不支持 Docker Engine。</block>
-  <block id="6949300ff5b5cf6bb192114a06c923bb" category="list-text">部署模式</block>
-  <block id="85709218a94b28831b069c18839156ae" category="list-text">在标准模式和受限模式下使用控制台时支持 RHEL 8 和 9。</block>
-  <block id="8ba551d12c564fe21c343077a6b1759d" category="list-text">支持的控制台代理版本</block>
-  <block id="87b62ca6ad9db4c0502c8308b0897df3" category="list-text">NetApp从以下版本的控制台代理开始支持 RHEL 8 和 9：</block>
-  <block id="2d8b97e48a32d955ebfe4543e93ad22d" category="list-text">3.9.40 在标准模式或限制模式下使用控制台时</block>
-  <block id="62ee52388b4c1539a4b357c9c16e57c6" category="list-text">仅限新的手动安装</block>
-  <block id="685280681dfa5fa46ed96521e0e1e1f2" category="list-text">在您的本地或云中运行的主机上手动安装代理时，RHEL 8 和 9 支持_新_代理安装。</block>
-  <block id="ba657bf59cdaa129ee6a10872f7d63cf" category="list-text">RHEL 升级</block>
-  <block id="048c4554bb6e3cb2ca72b04667e98d47" category="inline-xref">了解有关 RHEL 7 或 CentOS 7 上现有控制台代理的更多信息</block>
-  <block id="48c4098e9685dca0a421d5f2599da04c" category="list-text">如果您在 RHEL 7 主机上运行现有代理， NetApp不支持将 RHEL 7 操作系统升级到 RHEL 8 或 9。<block ref="dcb263bcab265e11e4987186c565dc42" category="inline-xref-macro-rx"></block> 。</block>
   <block id="d9fb1337dfb6a869dd0a2630e14b4543" category="section-title">终止对 RHEL 7 和 CentOS 7 的支持</block>
   <block id="c3a964b5dfacd9501abc103bfcc4c98f" category="paragraph">2024 年 6 月 30 日，RHEL 7 达到维护终止 (EOM)，而 CentOS 7 达到生命周期终止 (EOL)。  NetApp将于 2024 年 6 月 30 日停止对这些 Linux 发行版上的代理的支持。</block>
   <block id="7eba69a7025f97bec42a74bd138b395e" category="inline-link">Red Hat：关于 Red Hat Enterprise Linux 7 维护终止你需要知道的事</block>
   <block id="ebc4aba90c33f7558582b9bbf738fdd9" category="paragraph"><block ref="ebc4aba90c33f7558582b9bbf738fdd9" category="inline-link-rx"></block></block>
-  <block id="68570605b73a3a92c5bad34ef219b854" category="section-title">RHEL 7 或 CentOS 7 上的现有控制台代理</block>
   <block id="f9c4366c4eb9ae998e18094001111005" category="paragraph">如果您现有的代理在 RHEL 7 或 CentOS 7 上运行， NetApp不支持将操作系统升级或转换为 RHEL 8 或 9。您需要在受支持的操作系统上创建一个新的代理。</block>
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">设置 RHEL 8 或 9 主机。</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">安装一个_新_代理。</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">配置代理以发现先前代理所管理的系统。</block>
-  <block id="fd976d7410ccbb05f33da778aade918e" category="section-title">如何开始使用 RHEL 8 和 9</block>
-  <block id="ff1e80df6a2782ea650e40a872d2e409" category="paragraph">有关主机要求、Podman 要求以及安装 Podman 和 Cagent 的步骤的详细信息，请参阅以下页面：</block>
-  <block id="b604a3e5099a3ec9c55ef70ee5afe1d3" category="inline-link">在本地安装并设置控制台代理</block>
   <block id="a64fe2903c7070d5b81ce6dce3b03548" category="inline-link">在 AWS 中手动安装控制台代理</block>
   <block id="49b6ed50435718c0a1e9c1c394702ab8" category="inline-link">在 Azure 中手动安装控制台代理</block>
   <block id="eccadaf4d74bf176f32c91d78a6673c8" category="inline-link">在 Google Cloud 中手动安装控制台代理</block>
   <block id="6df5369b59a40f64ce1869a0d4d405ea" category="inline-link">准备在受限模式下部署</block>
-  <block id="fcd7347bb021d8231184894bed7bd347" category="section-title">如何重新发现你的系统</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">部署新的控制台代理后，请参阅以下页面来重新发现您的系统。</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">添加现有的Cloud Volumes ONTAP系统</block>
   <block id="2015c83409a6e7dfc23533375c5ae10e" category="list-text"><block ref="2015c83409a6e7dfc23533375c5ae10e" category="inline-link-rx"></block></block>
@@ -5522,11 +5493,6 @@
   <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">满足 CPU 和 RAM 要求的实例类型。  NetApp推荐使用 t3.2xlarge。</block>
   <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 Standard_D8s_v3。</block>
   <block id="8cf6ae40c51e78159e689e6172cff9c8" category="list-text">满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 n2-standard-8。</block>
-  <block id="8506e9451ada0f6713ff22e19ea5ea81" category="list-text"><block ref="8506e9451ada0f6713ff22e19ea5ea81" category="inline-link-rx"></block></block>
-  <block id="4339f3c8171824c42987385b4c398ef1" category="list-text"><block ref="4339f3c8171824c42987385b4c398ef1" category="inline-link-rx"></block></block>
-  <block id="1c9245a65b8c79506ab48fc890a4c565" category="list-text"><block ref="1c9245a65b8c79506ab48fc890a4c565" category="inline-link-rx"></block></block>
-  <block id="a84a1e7810d5b8e81646124511b75732" category="list-text"><block ref="a84a1e7810d5b8e81646124511b75732" category="inline-link-rx"></block></block>
-  <block id="7dfa5cc30dbbbfee91158767b86487c0" category="paragraph"><block ref="7dfa5cc30dbbbfee91158767b86487c0" category="inline-link-rx"></block></block>
   <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
   <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">您需要确保控制台和您安装的任何代理都具有正确的网络访问权限才能正常运行。</block>
   <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">3.9.55 及以下版本需要网络访问</block>
@@ -5574,7 +5540,6 @@
   <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">重命名代理状态指示器</block>
   <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">将控制台代理的状态指示器从 *Active* 和 *Inactive* 重命名为 *Connected* 和 *Disconnected*，以使其用途更加明确。</block>
   <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">支持 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0</block>
-  <block id="d90d113f70d4f4d024f99f4015bbbb96" category="paragraph">控制台代理现在支持 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本时， NetApp支持 podman-compose 1.5.0。</block>
   <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">NetApp Console管理</block>
   <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">本次发布包含以下内容：</block>
   <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">NetApp Console通知的新电子邮件地址</block>
@@ -5609,4 +5574,11 @@
   <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">当控制台在 AWS 中启动控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
   <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">以上部分描述了控制台代理的推荐部署方法，即从控制台部署。您还可以从 AWS Marketplace 在 AWS 中部署代理，也可以在您自己的 Linux 主机或 VCenter 中手动安装控制台代理软件。</block>
   <block id="7294c37d50c105bffdf0e10ac05a9beb" category="paragraph">Podman 版本 5.4.0，podman-compose 版本 1.5.0。</block>
+  <block id="eaf2f97729e8d5e4d205672da8afc9a5" category="paragraph">9.6</block>
+  <block id="057722eccb00723c8217ea4d2f4aa96f" category="paragraph">4.0.0 或更高版本，控制台处于标准模式或受限模式</block>
+  <block id="3c9c65e38751e99a6b90b6bfa4ed151f" category="paragraph">Podman 版本 4.9.4，podman-compose 版本 1.5.0。</block>
+  <block id="6bdcb1f64111cb0da052d18583a8f960" category="paragraph">Podman 版本 4.6.1 或 4.9.4，搭配 podman-compose 1.0.6。</block>
+  <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">查看操作系统要求</block>
+  <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">手动安装控制台代理时，该代理现在支持 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本时， NetApp支持 podman-compose 1.5.0。<block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>。</block>
+  <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">重新发现这些系统。</block>
 </blocks>

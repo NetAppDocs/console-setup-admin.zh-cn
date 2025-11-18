@@ -32,7 +32,7 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 将控制台代理的状态指示器从 *Active* 和 *Inactive* 重命名为 *Connected* 和 *Disconnected*，以使其用途更加明确。
 
 .支持 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0
-控制台代理现在支持 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本时， NetApp支持 podman-compose 1.5.0。
+手动安装控制台代理时，该代理现在支持 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本时， NetApp支持 podman-compose 1.5.0。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["查看操作系统要求"]。
 
 
 
@@ -1378,6 +1378,35 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 3.9.41 版本适用于标准模式和限制模式。
+
+
+
+=== 终止对 RHEL 7 和 CentOS 7 的支持
+
+2024 年 6 月 30 日，RHEL 7 达到维护终止 (EOM)，而 CentOS 7 达到生命周期终止 (EOL)。  NetApp将于 2024 年 6 月 30 日停止对这些 Linux 发行版上的代理的支持。
+
+https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance["Red Hat：关于 Red Hat Enterprise Linux 7 维护终止你需要知道的事"^]
+
+如果您现有的代理在 RHEL 7 或 CentOS 7 上运行， NetApp不支持将操作系统升级或转换为 RHEL 8 或 9。您需要在受支持的操作系统上创建一个新的代理。
+
+. 设置 RHEL 8 或 9 主机。
+. 安装 Podman。
+. 安装一个_新_代理。
+. 配置代理以发现先前代理所管理的系统。
+. 重新发现这些系统。
++
+部署新的控制台代理后，请参阅以下页面来重新发现您的系统。
+
++
+** https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["添加现有的Cloud Volumes ONTAP系统"^]
+** https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["发现本地ONTAP集群"^]
+** https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["创建或发现 FSx for ONTAP系统"^]
+** https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["创建Azure NetApp Files系统"^]
+** https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["探索 E 系列系统"^]
+** https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["了解StorageGRID系统"^]
+
+
+
 
 
 

@@ -20,8 +20,6 @@ sidebar:
       url: "/whats-new.html"
     - title: 已知限制
       url: "/reference-limitations.html"
-    - title: 受支持的 Linux 操作系统的变更
-      url: "/reference-agent-operating-system-changes.html"
   - title: 开始使用
     entries:
     - title: 学习基础知识
