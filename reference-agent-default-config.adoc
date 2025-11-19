@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
-summary: 在部署控制台代理之前，请先了解有关该代理的更多信息。 
+summary: 了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联网）的控制台代理默认配置，以及本地环境受限部署（不可访问互联网）的控制台代理默认配置。 
 ---
 = 控制台代理的默认配置
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 在部署控制台代理之前，请先了解有关该代理的更多�
 
 
 [role="lead"]
-在部署控制台代理之前，请了解有关其配置的更多信息。
+了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联网）的控制台代理默认配置，以及本地环境受限部署（不可访问互联网）的控制台代理默认配置。
 
 
 
