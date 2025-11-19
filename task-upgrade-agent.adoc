@@ -68,7 +68,7 @@ podman ps -a
 +
 [source, json]
 ----
-  "isUpgradeDisabled": true,
+  "isUpgradeDisabled": true
 ----
 . 保存您的文件。
 . 通过运行以下命令重新启动服务管理器 2 服务：
@@ -77,12 +77,11 @@ podman ps -a
 ----
 systemctl restart netapp-service-manager.service
 ----
-. 运行以下命令并验证代理的状态是否显示为_active(running)_：_
+. 运行以下命令并验证代理的状态是否显示为_active(running)_：
 +
 [source, cli]
 ----
 systemctl status netapp-service-manager.service
-_
 ----
 
 

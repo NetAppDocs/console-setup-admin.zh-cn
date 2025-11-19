@@ -22,7 +22,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 您可以从控制台代理主机访问维护控制台。导航到以下目录：
 
-[source, CLI]
+[source, cli]
 ----
 /opt/application/netapp/service-manager-2/agent-maint-console
 ----
@@ -38,7 +38,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 要查看当前的透明代理配置，请使用以下命令：
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy get
 ----
@@ -48,7 +48,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 要添加透明代理服务器，请使用以下命令，其中 `/home/ubuntu/myCA1.pem`是代理服务器证书文件的路径。证书文件必须为 PEM 格式：
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
 ----
@@ -60,7 +60,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 要更新透明代理服务器的证书，请使用以下命令，其中 `/home/ubuntu/myCA1.pem`是代理服务器的新证书文件的路径。证书文件必须为 PEM 格式：
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
 ----
@@ -72,7 +72,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 要删除透明代理服务器，请使用以下命令：
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy remove
 ----
@@ -82,7 +82,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 要查看任何命令的帮助，请附加 `--help`到命令。例如，要查看 `proxy add`命令，使用以下命令：
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy add --help
 ----

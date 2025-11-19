@@ -48,8 +48,11 @@ NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先�
 . 配置您的 SAML 身份提供商以信任NetApp作为服务提供商。您需要在 SAML 提供商服务器上执行此步骤。
 +
 .. 确保您的 IdP 具有属性 `email`设置为用户的电子邮件地址。这是控制台正确识别用户所必需的：
-+
-[source, xml]
+
+
+
+
+[listing]
 ----
 <saml:AttributeStatement xmlns:x500="urn:oasis:names:tc:SAML:2.0:profiles:attribute:X500" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">
@@ -57,36 +60,37 @@ NetApp仅支持服务提供商发起的（SP发起的） SSO。您需要首先�
     </saml:Attribute>
 </saml:AttributeStatement>
 ----
-.. 在控制台中注册 SAML 应用程序时，请使用以下值：
+. 在控制台中注册 SAML 应用程序时，请使用以下值：
 +
-*** 对于 *回复 URL* 或 *断言消费者服务 (ACS) URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
-*** 对于*注销 URL*，使用 `https://netapp-cloud-account.auth0.com/logout`
-*** 对于*受众/实体 ID*，使用 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`其中 <fed-domain-name-saml> 是您想要用于联合的域名。例如，如果您的域名是 `example.com`，受众/实体 ID 将是 `urn:auth0:netapp-cloud-account:fed-example-com-samlp`。
+** 对于 *回复 URL* 或 *断言消费者服务 (ACS) URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
+** 对于*注销 URL*，使用 `https://netapp-cloud-account.auth0.com/logout`
+** 对于*受众/实体 ID*，使用 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`其中 <fed-domain-name-saml> 是您想要用于联合的域名。例如，如果您的域名是 `example.com`，受众/实体 ID 将是 `urn:auth0:netapp-cloud-account:fed-example-com-samlp`。
 
 
-.. 创建信任后，从 SAML 提供商服务器复制以下值：
+. 创建信任后，从 SAML 提供商服务器复制以下值：
 +
-*** 登录网址
-*** 退出 URL（可选）
+** 登录网址
+** 退出 URL（可选）
 
 
-.. 从您的 SAML 提供商服务器下载 X.509 证书。它需要采用 PEM、CER 或 CRT 格式。
-
-
-. 返回控制台，然后选择“下一步”来创建连接。
-. 使用 SAML 创建连接。
+. 从您的 SAML 提供商服务器下载 X.509 证书。它需要采用 PEM、CER 或 CRT 格式。
 +
-.. 输入您的 SAML 服务器的 *登录 URL*。
-.. 上传从 SAML 提供商服务器下载的 X.509 证书。
-.. 或者，输入您的 SAML 服务器的 *退出 URL*。
+.. 返回控制台，然后选择“下一步”来创建连接。
+.. 使用 SAML 创建连接。
 
 
-. 选择*创建连接*。系统在几秒钟内建立连接。
-. 选择“下一步”。
-. 选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的 IdP 凭据登录以完成测试并返回控制台以启用连接。
-. 选择“下一步”。
-. 在“启用联合”页面上，查看联合详细信息，然后选择“启用联合”。
-. 选择“*完成*”以完成该过程。
+. 输入您的 SAML 服务器的 *登录 URL*。
+. 上传从 SAML 提供商服务器下载的 X.509 证书。
+. 或者，输入您的 SAML 服务器的 *退出 URL*。
++
+.. 选择*创建连接*。系统在几秒钟内建立连接。
+.. 选择“下一步”。
+.. 选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的 IdP 凭据登录以完成测试并返回控制台以启用连接。
+.. 选择“下一步”。
+.. 在“启用联合”页面上，查看联合详细信息，然后选择“启用联合”。
+.. 选择“*完成*”以完成该过程。
+
+
 
 
 启用联合后，用户可以使用其公司凭据登录NetApp Console。
