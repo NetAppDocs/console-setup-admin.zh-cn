@@ -1,4 +1,4 @@
-= 在根桥接中使用 NetAvark 时，用于 DNS 转发守护进程的端口
+= 
 :allow-uri-read: 
 
 
@@ -48,105 +48,101 @@ chmod +x NetApp-Console-Agent-<version>
 [source, cli]
 ----
 ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
-
-+
-You'll need to add proxy information if your network requires a proxy for internet access. You can add either a transparent or explicit proxy. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have a proxy server, you will need to enter the parameters as shown.
-+
-Here is an example configuring an explicit proxy server with a CA-signed certificate:
-+
-[source,cli]
-----
-
-
-[listing]
 ----
 +
---proxy configures the Console agent to use an HTTP or HTTPS proxy server using one of the following formats:
-+
-* \http://address:port
-* \http://user-name:password@address:port
-* \http://domain-name%92user-name:password@address:port
-* \https://address:port
-* \https://user-name:password@address:port
-* \https://domain-name%92user-name:password@address:port
-+
-Note the following:
-+
-** The user can be a local user or domain user.
-** For a domain user, you must use the ASCII code for a \ as shown above.
-** The Console agent doesn't support user names or passwords that include the @ character.
-** If the password includes any of the following special characters, you must escape that special character by prepending it with a backslash: & or !
-+
-For example:
-+
-\http://bxpproxyuser:netapp1\!@address:3128
+如果您的网络需要代理来访问互联网，则需要添加代理信息。您可以添加透明或显式代理。--proxy 和 --cacert 参数是可选的，系统不会提示您添加它们。如果您有代理服务器，则需要输入所示的参数。
 
 +
---cacert specifies a CA-signed certificate to use for HTTPS access between Console agent and the proxy server. This parameter is required for HTTPS proxy servers, intercepting proxy servers, and transparent proxy servers.
+以下是使用 CA 签名证书配置显式代理服务器的示例：
 
 +
-Here is an example configuring a transparent proxy server. When you configure a transparent proxy, you don't need to define the proxy server. You only add a CA-signed certificate to your Console agent host:
-
-+
-[source,cli]
+[source, cli]
 ----
- ./NetApp-Console-Agent-v4.0.0 --cacert /tmp/cacert/certificate.cer
-[listing]
+./NetApp-Console-Agent-v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
-. If you used Podman, you'll need to adjust the aardvark-dns port.
-.. SSH to the Console agent virtual machine.
-.. Open podman _/usr/share/containers/containers.conf_ file and modify the chosen port for Aardvark DNS service. For example, change it to 54.
++
+--proxy 使用以下格式之一将控制台代理配置为使用 HTTP 或 HTTPS 代理服务器：
+
++
+** \http://地址:端口
+** \http://用户名:密码@地址:端口
+** \http://域名%92用户名:密码@地址:端口
+** \https://地址:端口
+** \https://用户名:密码@地址:端口
+** \https://域名%92用户名:密码@地址:端口
++
+请注意以下事项：
+
++
+*** 用户可以是本地用户或域用户。
+*** 对于域用户，您必须使用 \ 的 ASCII 代码，如上所示。
+*** 控制台代理不支持包含 @ 字符的用户名或密码。
+*** 如果密码包含以下任何特殊字符，则必须在该特殊字符前面加上反斜杠来转义该特殊字符：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@地址:3128
+
++
+--cacert 指定用于控制台代理和代理服务器之间的 HTTPS 访问的 CA 签名证书。HTTPS代理服务器、拦截代理服务器、透明代理服务器都需要此参数。
+
+
+
++
+下面是配置透明代理服务器的示例。配置透明代理时，不需要定义代理服务器。您只需将 CA 签名的证书添加到控制台代理主机：
+
+
+
++
+[source, cli]
+----
+./NetApp-Console-Agent-v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. 如果您使用 Podman，则需要调整 aardvark-dns 端口。
++
+.. 通过 SSH 连接到控制台代理虚拟机。
+.. 打开 podman _/usr/share/containers/containers.conf_ 文件并修改 Aardvark DNS 服务的选定端口。例如，将其更改为54。
 +
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-
-[listing]
 ----
 +
-For example:
+例如：
+
 +
-[source,text]
+[source, text]
 ----
-
-
-= 在根桥接中使用 NetAvark 时，用于 DNS 转发守护进程的端口
-
-
-
-= 模式和 DNS 已启用。
-
-
-
-= 如果其他 DNS 服务需要使用备用端口，则使用备用端口可能很有用。
-
-
-
-= 在机器上运行。
-
-# dns_bind_port = 54
-
-[listing]
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
 ----
-.. Reboot the Console agent virtual machine.
-//end::main-steps[]
+.. 重新启动控制台代理虚拟机。
 
-//tag::standard-mode-steps-for-cloud[]
-. Wait for the installation to complete.
+
+
+
+. 等待安装完成。
 +
-At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
+安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。
 
-. Open a web browser from a host that has a connection to the Console agent virtual machine and enter the following URL:
+. 从连接到控制台代理虚拟机的主机打开 Web 浏览器并输入以下 URL：
 +
-https://_ipaddress_
+https://_ipaddress_[]
 
-. After you log in, set up the Console agent:
-.. Specify the organization to associate with the Console agent.
-.. Enter a name for the system.
-.. Under *Are you running in a secured environment?* keep restricted mode disabled.
+. 登录后，设置控制台代理：
 +
-You should keep restricted mode disabled because these steps describe how to use the Console in standard mode. You should enable restricted mode only if you have a secure environment and want to disconnect this account from backend services. If that's the case, link:task-quick-start-restricted-mode.html[follow steps to get started with the NetApp Console in restricted mode].
-.. Select *Let's start*.
+.. 指定与控制台代理关联的组织。
+.. 输入系统的名称。
+.. 在*您是否在安全环境中运行？*下保持限制模式处于禁用状态。
++
+您应该保持限制模式处于禁用状态，因为这些步骤描述了如何在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与后端服务的连接时，才应启用受限模式。如果真是这样的话，link:task-quick-start-restricted-mode.html["按照步骤在受限模式下开始使用NetApp Console"] 。
 
-//end::standard-mode-steps-for-cloud[]
-----
+.. 选择*让我们开始吧*。
+
+
+

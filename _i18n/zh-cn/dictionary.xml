@@ -5563,12 +5563,6 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">查看操作系统要求</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">手动安装控制台代理时，该代理现在支持 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本时， NetApp支持 podman-compose 1.5.0。<block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>。</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">重新发现这些系统。</block>
-  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">在根桥接中使用 NetAvark 时，用于 DNS 转发守护进程的端口</block>
-  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
-  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">模式和 DNS 已启用。</block>
-  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">如果其他 DNS 服务需要使用备用端口，则使用备用端口可能很有用。</block>
-  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">在机器上运行。</block>
-  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
   <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">如果直接从控制台在标准 AWS 区域中创建控制台代理，控制台会自动将策略应用于该代理。</block>
   <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">备份和恢复的旧版权限</block>
   <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">如果您在索引版本 v2 发布之前启用了旧版索引功能，则只需要以下权限：</block>
@@ -5600,4 +5594,8 @@
   <block id="04a0a4e163c04f3082e39c4a05b56121" category="paragraph">添加 AWS 凭证即可获得创建控制台代理的权限。</block>
   <block id="325cf27c7a62fb4beb8b270094e56814" category="paragraph">您必须将添加到控制台代理的凭证与 AWS Marketplace 订阅关联起来，才能按小时费率 (PAYGO) 支付Cloud Volumes ONTAP费用，并通过年度合同支付其他NetApp数据服务费用。<block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block>。</block>
   <block id="349b76807d98d4378df29b585951b7a4" category="summary">了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联网）的控制台代理默认配置，以及本地环境受限部署（不可访问互联网）的控制台代理默认配置。</block>
+  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">如果您的网络需要代理来访问互联网，则需要添加代理信息。您可以添加透明或显式代理。--proxy 和 --cacert 参数是可选的，系统不会提示您添加它们。如果您有代理服务器，则需要输入所示的参数。</block>
+  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy 使用以下格式之一将控制台代理配置为使用 HTTP 或 HTTPS 代理服务器：</block>
+  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert 指定用于控制台代理和代理服务器之间的 HTTPS 访问的 CA 签名证书。HTTPS代理服务器、拦截代理服务器、透明代理服务器都需要此参数。</block>
+  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">下面是配置透明代理服务器的示例。配置透明代理时，不需要定义代理服务器。您只需将 CA 签名的证书添加到控制台代理主机：</block>
 </blocks>
