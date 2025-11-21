@@ -1919,14 +1919,8 @@
   <block id="38b9e3522d3a7fe6b61f60b3419f6cd2" category="summary">您可以为用户分配以下角色，以便他们访问控制台内的NetApp Disaster Recovery。灾难恢复角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。</block>
   <block id="26c3a94bfb05fb2052bc1a9cc30a1cf4" category="doc">NetApp Console中的NetApp Disaster Recovery角色</block>
   <block id="881a358307b4d99de00f95aa58fb5a43" category="paragraph">灾难恢复使用以下角色：</block>
-  <block id="3db89b44d26706e71a450352c7c5a1da" category="list-text">*灾难恢复管理员*：执行任何操作。</block>
-  <block id="1e732ca66bd89df595b8e795e5dfa4ac" category="list-text">*灾难恢复故障转移管理*：执行故障转移和迁移。</block>
-  <block id="014b84d038553d60cf09cbddcb4e7d08" category="list-text">*灾难恢复应用程序管理员*：创建复制计划。修改复制计划。开始测试故障转移。</block>
-  <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*灾难恢复查看器*：仅查看信息。</block>
   <block id="05d21d5a33096194ae80a609c95e316b" category="paragraph">下表列出了每个角色可以执行的操作。</block>
   <block id="df2d943b4d0652d322ec6b3cb52e3036" category="cell">灾难恢复管理员</block>
-  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">灾难恢复故障转移管理员</block>
-  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">灾难恢复应用程序管理员</block>
   <block id="ba4b33592d18613c28d684c20110e152" category="cell">灾难恢复查看器</block>
   <block id="20f0d287f3a16854279c9e5960c749e1" category="cell">*在“站点”选项卡上*：</block>
   <block id="24f9533e942cbf2b6f6f10572e7060a3" category="cell">查看网站</block>
@@ -2838,8 +2832,6 @@
   <block id="babc7ae953e58c8202e366520ae9baf4" category="list-text"><block ref="babc7ae953e58c8202e366520ae9baf4" category="inline-link-rx"></block></block>
   <block id="6187e32203fd05e22e575166349f5b99" category="inline-link">备份和恢复文档</block>
   <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
-  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分类文档</block>
-  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Cloud Volumes ONTAP文档</block>
   <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
   <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">数字钱包文档</block>
@@ -4633,21 +4625,13 @@
   <block id="4e6fd6febc63e73f33b1e12bb15eab7a" category="paragraph">合作伙伴组织必须先将成员添加到合作伙伴关系中，然后您才能为他们分配组织中资源的角色。<block ref="af42bf104f841b0c4c7b71f12b6693d9" category="inline-link-macro-rx"></block></block>
   <block id="575c38cd2c5990295bb75895f260de3b" category="section-title">了解合作伙伴用户的角色</block>
   <block id="a7a7adfb76bf7fb68d92346dfa9d529d" category="paragraph">您可以按照管理自己的角色的方式来管理合作伙伴组织成员的角色。然而，并非所有角色都适合合作伙伴用户。特别是，您不能授予合作伙伴用户允许软件更新的角色。更新ONTAP软件通常需要直接网络访问。</block>
-  <block id="aa5691f6d018b3411c8082be20a4529f" category="paragraph">您可以为合作伙伴用户分配以下角色：</block>
-  <block id="eaec472b7a23d9c311a78adfd10b1032" category="inline-link-macro">备份和恢复管理员</block>
-  <block id="9b589496549b93bcbd645613fbd03c9c" category="list-text"><block ref="9b589496549b93bcbd645613fbd03c9c" category="inline-link-macro-rx"></block></block>
   <block id="8cf933db073501a5f76a2e7dfd953164" category="list-text"><block ref="8cf933db073501a5f76a2e7dfd953164" category="inline-link-macro-rx"></block></block>
   <block id="29ff866c1c97d8c216bf004c4f447a77" category="inline-link-macro">恢复管理员</block>
   <block id="4662f8e16785669755651e2b47080d3a" category="list-text"><block ref="4662f8e16785669755651e2b47080d3a" category="inline-link-macro-rx"></block></block>
   <block id="0ebca6a2628eb3838eff9087ecfc2909" category="inline-link-macro">克隆管理员</block>
   <block id="4db6f06f37e5b34186c68c70b344b6e5" category="list-text"><block ref="4db6f06f37e5b34186c68c70b344b6e5" category="inline-link-macro-rx"></block></block>
-  <block id="760c54a4cb61f02dffc8c2331073ae1d" category="list-text"><block ref="760c54a4cb61f02dffc8c2331073ae1d" category="inline-link-macro-rx"></block></block>
-  <block id="db385d806691bf16134876c971ae47ac" category="list-text"><block ref="db385d806691bf16134876c971ae47ac" category="inline-link-macro-rx"></block></block>
-  <block id="456f871b4f4ee4ad376b69d4040f5120" category="list-text"><block ref="456f871b4f4ee4ad376b69d4040f5120" category="inline-link-macro-rx"></block></block>
-  <block id="78d4b42d7cc8df44f5151da486494386" category="list-text"><block ref="78d4b42d7cc8df44f5151da486494386" category="inline-link-macro-rx"></block></block>
   <block id="107d607a0fbcdbb5eddd688662ad90ca" category="inline-link-macro">运营支持分析师</block>
   <block id="f06c384501f4ddab22ea69f586c70caf" category="list-text"><block ref="f06c384501f4ddab22ea69f586c70caf" category="inline-link-macro-rx"></block></block>
-  <block id="67580c71df9613a2df5711bad8e2d8d9" category="list-text"><block ref="67580c71df9613a2df5711bad8e2d8d9" category="inline-link-macro-rx"></block></block>
   <block id="31597ba98a5fab9e8c6bca4a800f5ea5" category="inline-link-macro">了解有关预定义角色的更多信息</block>
   <block id="dbf8f6054238418a17441da56cada5ea" category="paragraph"><block ref="dbf8f6054238418a17441da56cada5ea" category="inline-link-macro-rx"></block></block>
   <block id="f2d039d8870676819e12952f7e38048c" category="section-title">向合作伙伴用户添加角色</block>
@@ -5303,7 +5287,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台网络访问（旧版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索软件恢复角色为用户提供对NetApp Ransomware Resilience的访问权限。勒索软件恢复能力支持以下角色：</block>
-  <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">具有*组织管理员*或*文件夹或项目管理员*角色的用户有责任将角色分配给其他用户。您可以根据项目或文件夹分配访问角色。例如，您可以为用户分配一个项目的勒索软件恢复管理员角色，并为另一个项目分配SnapCenter管理员角色。或者，如果用户需要特定文件夹内所有项目的分类管理员角色，您可以在文件夹级别授予他们此角色。</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">使用访问角色根据用户需要执行的特定任务分配对存储资源的访问权限。例如，如果用户需要与 Ransomware Resilience 进行交互，则必须为他们授予访问角色，该角色包括对授予访问角色的项目的 Ransomware Resilience 的查看或管理权限。</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成员可以在同一个项目内以及不同的项目中拥有多个角色。例如，较小的组织可能会将所有可用的访问角色分配给同一个用户，而较大的组织可能会让用户执行更专业的任务。或者，您也可以为一个用户分配组织的勒索软件恢复管理员角色。在该示例中，用户将能够对组织内的所有项目执行勒索软件恢复任务。</block>
   <block id="c36b12344113082dcf8a9786e36a3536" category="cell">勒索软件抵御能力</block>
@@ -5504,7 +5487,6 @@
   <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
   <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
   <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
-  <block id="49868b41c479810c405bc3509cdb1907" category="cell">允许用户查看NetApp Data Classification扫描结果。具有此角色的用户可以查看合规性信息并生成他们有权访问的资源的报告。这些用户无法启用或禁用卷、存储桶或数据库模式的扫描。分类功能没有管理员角色。</block>
   <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">控制台不支持启用 SSL 解密的防火墙配置。如果启用了 SSL 解密，则控制台中将显示错误消息，并且代理实例显示为“已断开连接”。</block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">第三方代理和扩展程序</block>
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">代理虚拟机不支持第三方代理或虚拟机扩展。</block>
@@ -5665,4 +5647,17 @@
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="f14cdbbd5f80553660910a0a1219e605" category="section-title">2025年11月26日</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">权限已更新，以使其用途更加清晰，但未添加或删除任何权限。新增三列，分别指示每个权限是用于部署、日常操作还是删除。除此之外，还有一些权限根据其在NetApp Data Classification和NetApp Backup and Recovery的用途进行了划分。</block>
+  <block id="babdf7713555e95437e95d0dc578e050" category="list-text">*灾难恢复管理员*：执行任何操作。</block>
+  <block id="756062c061caa73b104caf35ad95abd9" category="list-text">*灾难恢复故障转移管理员*：执行故障转移和迁移。</block>
+  <block id="99c828ca537070159318271d66dda996" category="list-text">*灾难恢复应用程序管理员*：创建复制计划。修改复制计划。开始测试故障转移。</block>
+  <block id="10bfeabec8da9ffb3c60c40834621a5d" category="list-text">*灾难恢复查看器*：仅查看信息。</block>
+  <block id="f66b3ba81642886354f66476eebc171c" category="cell">允许用户查看NetApp Data Classification扫描结果。具有此角色的用户可以查看合规性信息并生成他们有权访问的资源的报告。这些用户无法启用或禁用卷、存储桶或数据库模式的扫描。数据分类没有管理员角色。</block>
+  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">数据分类文档</block>
+  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
+  <block id="d1047a2a7e1c25fc1d5cbd4c2dea5954" category="paragraph">具有*组织管理员*或*文件夹或项目管理员*角色的用户有责任将角色分配给其他用户。您可以根据项目或文件夹分配访问角色。例如，您可以为用户分配一个项目的勒索软件恢复管理员角色，并为另一个项目分配SnapCenter管理员角色。或者，如果用户需要特定文件夹内所有项目的勒索软件恢复管理员角色，您可以为该用户在文件夹级别授予此角色。</block>
+  <block id="4c56531120cb5dd49448926a4a5fd1fd" category="paragraph">您可以为合作伙伴用户分配以下角色：</block>
+  <block id="c291dac152d909d3eb9020000be43137" category="inline-link-macro">数据分类查看器</block>
+  <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
+  <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
+  <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
 </blocks>
