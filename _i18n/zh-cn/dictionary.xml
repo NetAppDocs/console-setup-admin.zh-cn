@@ -2626,68 +2626,35 @@
   <block id="4560d9b851db1f575c8bd1ba53369c0a" category="paragraph">您还需要确保角色是最新的，因为后续版本中会添加新的权限。如果需要新的权限，它们将在发行说明中列出。</block>
   <block id="823b2e7894c2b52c1e9adc9ea10b9be5" category="section-title">Google Cloud 权限的使用方式</block>
   <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">操作</block>
-  <block id="8224e3db072d582bb34ae19441c597fe" category="cell">- compute.disks.create - compute.disks.createSnapshot - compute.disks.delete - compute.disks.get - compute.disks.list - compute.disks.setLabels - compute.disks.use</block>
   <block id="f66d598893a55fa43b7676b10c66160f" category="cell">为Cloud Volumes ONTAP创建和管理磁盘。</block>
-  <block id="186d5d18725ed27ea017283ab0d492cb" category="cell">- compute.firewalls.创建 - compute.firewalls.删除 - compute.firewalls.获取 - compute.firewalls.列表</block>
   <block id="e9047288d907d41dac5645fd341a761c" category="cell">为Cloud Volumes ONTAP创建防火墙规则。</block>
-  <block id="d68761c54b75de07a5c7e81190eff82c" category="cell">- 计算.全局操作.获取</block>
   <block id="faa1fe708bc3d152e176473382740f3a" category="cell">获取操作状态。</block>
-  <block id="e4e217feb663d42d25a1bd3e191baafb" category="cell">- compute.images.get - compute.images.getFromFamily - compute.images.list - compute.images.useReadOnly</block>
   <block id="5744b1408aa12d37a882e036fd0b5b0c" category="cell">获取虚拟机实例的图像。</block>
-  <block id="a62cb5e41ea43b0eb52dd760a19a57cc" category="cell">- 计算.实例.附加磁盘 - 计算.实例.分离磁盘</block>
   <block id="8bba7faecca0a94b265abf5f43efa3d6" category="cell">将磁盘附加到Cloud Volumes ONTAP中分离磁盘。</block>
-  <block id="d491bb1926b66e3ba10dda6dba6bc534" category="cell">- 计算实例创建 - 计算实例删除</block>
   <block id="f46b37c15ecc892789a2d253315b8685" category="cell">创建和删除Cloud Volumes ONTAP VM 实例。</block>
-  <block id="55a71d84c079e501205413a7c4e1da20" category="cell">- 计算.实例.获取</block>
   <block id="9b9bebd0cfbd41f78a663304425c159a" category="cell">列出虚拟机实例。</block>
-  <block id="120032405f0875f3c0b8c2f4a4543d25" category="cell">- compute.instances.getSerialPortOutput</block>
   <block id="785c1192ce5d008d2337ca2f1e106868" category="cell">获取控制台日志。</block>
-  <block id="b58382e9818a18f4fb0c059401e79fd3" category="cell">- 计算.实例.列表</block>
   <block id="27de54922cddc90aa1b10c6eadf76ee6" category="cell">检索区域中的实例列表。</block>
-  <block id="cf258edf3cdbc32ff0c7c6928549dc8c" category="cell">- compute.instances.setDeletionProtection</block>
   <block id="2643145b6005230ba0e7706305be7c85" category="cell">对实例设置删除保护。</block>
-  <block id="f7ded0974e66418d48e74bf4e10985bf" category="cell">- 计算.实例.设置标签</block>
   <block id="75aae79ccc1289dac9627c1fd619c700" category="cell">添加标签。</block>
-  <block id="507599ceb1d23341ac32b6136f669418" category="cell">- compute.instances.setMachineType - compute.instances.setMinCpuPlatform</block>
   <block id="ff2e17343b0e539a1d1035f4c1747eb5" category="cell">更改Cloud Volumes ONTAP的机器类型。</block>
-  <block id="bc3a7314be8156f42da35e526ea46b68" category="cell">- 计算.实例.设置元数据</block>
   <block id="798cde79924dcfdf116337331de1abc6" category="cell">添加元数据。</block>
-  <block id="d7f8256ece39195bf4a52d8f553a89e9" category="cell">- 计算.实例.设置标签</block>
   <block id="0b9b5474d464d04e5a8cffb2d0c0470f" category="cell">为防火墙规则添加标签。</block>
-  <block id="82b3aee0ff1155064bcfd96636ce7a88" category="cell">- 计算实例.启动 - 计算实例.停止 - 计算实例.更新显示设备</block>
   <block id="a3e746367ec320b6ad54fa411275a214" category="cell">启动和停止Cloud Volumes ONTAP。</block>
-  <block id="ff10ffeb90b52ef1b3701cbafd459fec" category="cell">- compute.machineTypes.get</block>
-  <block id="53e0df8dfd19ae553acfd0263eecdde5" category="cell">获取核心数量来检查配额。</block>
-  <block id="1960ef021c27f3fc81a27b8373596133" category="cell">- 计算.项目.获取</block>
   <block id="46e8fba1e0cdfaca2ec194603ea5669d" category="cell">支持多项目。</block>
-  <block id="bbba6786f415c51476c8546db846c5a7" category="cell">- compute.snapshots.create - compute.snapshots.delete - compute.snapshots.get - compute.snapshots.list - compute.snapshots.setLabels</block>
   <block id="b68ac1909276f969317aaf5c99c05765" category="cell">创建和管理持久磁盘快照。</block>
-  <block id="7b380202324335127871c341efc82376" category="cell">- 计算.网络.获取 - 计算.网络.列表 - 计算.区域.获取 - 计算.区域.列表 - 计算.子网络.获取 - 计算.子网络.列表 - 计算.区域操作.获取 - 计算.区域.获取 - 计算.区域.列表</block>
   <block id="41d74981a5713a0af6196420fc5e9016" category="cell">获取创建新的Cloud Volumes ONTAP虚拟机实例所需的网络信息。</block>
-  <block id="c9f3dfc06374870c2aaeea00a1b4acc5" category="cell">- deploymentmanager.compositeTypes.get - deploymentmanager.compositeTypes.list - deploymentmanager.deployments.create - deploymentmanager.deployments.delete - deploymentmanager.deployments.get - deploymentmanager.deployments.list - deploymentmanager.manifests.get - deploymentmanager.manifests.list - deploymentmanager.operations.get - deploymentmanager.operations.list - deploymentmanager.resources.get - deploymentmanager.resources.list - deploymentmanager.typeProviders.get - deploymentmanager.typeProviders.list - deploymentmanager.types.get - deploymentmanager.types.list</block>
   <block id="278587616d1d4a2e9526d82c70569034" category="cell">使用 Google Cloud Deployment Manager 部署Cloud Volumes ONTAP虚拟机实例。</block>
-  <block id="cc36c3902557db376a27f7304d28b824" category="cell">- logging.logEntries.列表 - logging.privateLogEntries.列表</block>
   <block id="36ae58c33ff99af28901c6eddb16ffd3" category="cell">获取堆栈日志驱动器。</block>
-  <block id="9c0560d763bda094a50da9b8d130c021" category="cell">-资源管理器.项目.获取</block>
-  <block id="00da0336ad2c772fa5aee53f0a24e0a7" category="cell">- storage.buckets.create - storage.buckets.delete - storage.buckets.get - storage.buckets.list - storage.buckets.update</block>
   <block id="fa9afa1dd59ff2fa70c164505e8cfdb8" category="cell">创建和管理用于数据分层的 Google Cloud Storage 存储桶。</block>
-  <block id="33b1fc12afebc6abd93b45afa4c97c7a" category="cell">- cloudkms.cryptoKeyVersions.useToEncrypt - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.list - cloudkms.keyRings.list</block>
   <block id="7941f4ec9829eb5baad10a6f908245f5" category="cell">将来自 Cloud Key Management Service 的客户管理加密密钥与Cloud Volumes ONTAP结合使用。</block>
-  <block id="47ba3a5c64279fe36c99fd745c770415" category="cell">- compute.instances.setServiceAccount - iam.serviceAccounts.actAs - iam.serviceAccounts.getIamPolicy - iam.serviceAccounts.list - storage.objects.get - storage.objects.list</block>
   <block id="0e6cd912fcc55d354754239bbb3b910e" category="cell">在Cloud Volumes ONTAP实例上设置服务帐户。此服务帐户提供将数据分层到 Google Cloud Storage 存储桶的权限。</block>
-  <block id="e57298db10eaab02d032c6ff2a9e6fdd" category="cell">- 计算.地址.列表</block>
   <block id="43e22af3bd90038d6c1a4c68927d2d7e" category="cell">在部署 HA 对时检索区域中的地址。</block>
-  <block id="f506121b724cd6d8d13fbaddaf1c64d6" category="cell">- compute.backendServices.创建 - compute.regionBackendServices.创建 - compute.regionBackendServices.获取 - compute.regionBackendServices.列表</block>
   <block id="ab989208a01fcee6c888dec1f39482d9" category="cell">配置后端服务以在 HA 对中分配流量。</block>
-  <block id="739bf63a1a7b0a2e180e692ece9b9b11" category="cell">- 计算.网络.更新策略</block>
   <block id="40601d6546f763ec088fee026a0da641" category="cell">在 HA 对的 VPC 和子网上应用防火墙规则。</block>
-  <block id="7ae509c8f6a49ea947573abf4cb9d134" category="cell">- compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig</block>
   <block id="c0f2908e9f399f758ee8a7162805f9fd" category="cell">启用NetApp Data Classification。</block>
-  <block id="4bfec65bcbc9665c362f6c53301324c5" category="cell">- compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface</block>
   <block id="c5338aa09d091a71f3080053c9a0edc0" category="cell">在Cloud Volumes ONTAP HA 对上创建和管理存储虚拟机。</block>
-  <block id="54f877a36cc65a39f4c972facb5d5a3d" category="cell">- 监控.时间序列.列表 - 存储.桶.获取IamPolicy</block>
   <block id="884e026d3505b2b3847b25f6cecb4de7" category="cell">发现有关 Google Cloud Storage 存储桶的信息。</block>
-  <block id="4ce604ab4b6f3184f26713f30bde1bbe" category="cell">- cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy</block>
   <block id="d07a6a967273763e473875b528aab4ea" category="cell">在NetApp Backup and Recovery激活向导中选择您自己的客户管理密钥，而不是使用默认的 Google 管理加密密钥。</block>
   <block id="00e6f4ddf63e81c5de84a3913163d11d" category="section-title">2023年2月6日</block>
   <block id="26e9753e85fc2c13a9569cd1345a5b06" category="paragraph">此策略中添加了以下权限：</block>
@@ -5598,4 +5565,104 @@
   <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy 使用以下格式之一将控制台代理配置为使用 HTTP 或 HTTPS 代理服务器：</block>
   <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert 指定用于控制台代理和代理服务器之间的 HTTPS 访问的 CA 签名证书。HTTPS代理服务器、拦截代理服务器、透明代理服务器都需要此参数。</block>
   <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">下面是配置透明代理服务器的示例。配置透明代理时，不需要定义代理服务器。您只需将 CA 签名的证书添加到控制台代理主机：</block>
+  <block id="c55d3d704bf32eff6f655f83abc7cdde" category="cell">计算磁盘创建</block>
+  <block id="87087b5eac4a5e53c4945e9539fcaf0e" category="cell">compute.disk.createSnapshot</block>
+  <block id="5e64e2bda82f0b6231b4d8a6ee930490" category="cell">计算磁盘删除</block>
+  <block id="ebe1efdbbddc8c27fc4cde7697737c96" category="cell">计算磁盘获取</block>
+  <block id="dcf8ea389afc24d6e69edfd85a11d51c" category="cell">计算磁盘列表</block>
+  <block id="ed1ac497e427a29f49867e87513348bf" category="cell">计算磁盘设置标签</block>
+  <block id="44e4472e7c86e4f51859ca4628dd0f6d" category="cell">计算磁盘使用</block>
+  <block id="71d5f4c2533e790f535351590d08a168" category="cell">计算防火墙创建</block>
+  <block id="4a882eeef3e6c50d3bb4d82f84d57379" category="cell">计算防火墙删除</block>
+  <block id="29dc352467775fda0809adc424204117" category="cell">计算防火墙</block>
+  <block id="dbfb0e7e24eb5b7c01752edd4c67baa0" category="cell">计算防火墙列表</block>
+  <block id="4a1e6993ee92e55c56f575a1285bdc17" category="cell">compute.globalOperations.get。</block>
+  <block id="d8bd74ea171478953e02b86e43191839" category="cell">compute.images.get</block>
+  <block id="a2f8719fc4688979942132e6c83c9b02" category="cell">compute.images.getFromFamily</block>
+  <block id="0c47c066c21579629745163c6286259e" category="cell">计算图像列表</block>
+  <block id="69b7650a712357d6c55915b593d367f6" category="cell">compute.images.useReadOnly</block>
+  <block id="e327969de28c7f26d1892b97211bda8a" category="cell">compute.instances.attachDisk</block>
+  <block id="8a3d31659f5667faee1737b2ab869842" category="cell">compute.instances.detachDisk</block>
+  <block id="66e4efce40032bd07df91c07939a6c89" category="cell">compute.instances.create</block>
+  <block id="282aeae9d2e0e1de5dfc7e5ea713c3f6" category="cell">compute.instances.delete</block>
+  <block id="c985a691a6d9202e9a28557c4423e7ed" category="cell">compute.instances.get</block>
+  <block id="d1a19f7e2aed427e1d768ff28f357f58" category="cell">compute.instances.getSerialPortOutput</block>
+  <block id="c8f97d6cda3c44f2df9106379e5e4b7d" category="cell">compute.instances.list</block>
+  <block id="9042c9c4cde8069b30d1767c12ecba59" category="cell">compute.instances.setDeletionProtection</block>
+  <block id="dc32dcdaa987ba140e3194f2b513e375" category="cell">compute.instances.setLabels</block>
+  <block id="47b56d4fe849f0336c60174ea72b8a42" category="cell">compute.instances.setMachineType</block>
+  <block id="03e73f161519b5326c76435701ca5f7f" category="cell">compute.instances.setMinCpuPlatform</block>
+  <block id="438dd835f7ead4c680abc120cb4de57d" category="cell">compute.instances.setMetadata</block>
+  <block id="2c7d0cb457bf656043ab756af5d1f234" category="cell">compute.instances.setTags</block>
+  <block id="23680deff94e6444e9bbe943a4c95e15" category="cell">计算实例开始</block>
+  <block id="5ea9fb050d1cea20bbf9ec038c6e7d7a" category="cell">compute.instances.stop</block>
+  <block id="f5078b625f8b63238371207eebbc003b" category="cell">compute.instances.updateDisplayDevice</block>
+  <block id="64ab1847987db568e233edca63c210bf" category="cell">compute.machineTypes.get</block>
+  <block id="68d3c283dd9f031a87b7a092150d9fa7" category="cell">获取核心数以检查配额。</block>
+  <block id="f593ffff451c9c94c4ea8765bcfc2360" category="cell">compute.projects.get</block>
+  <block id="0980be0c4450de4bfdcd6bf901bf2a42" category="cell">计算快照创建</block>
+  <block id="8c13fae53bf70735f58d98737e7e6a5f" category="cell">计算快照删除</block>
+  <block id="c773f88c26d29d8b4d934a7b5609c93c" category="cell">计算快照获取</block>
+  <block id="3a6a4f518965d8c0e63c7234501b3be1" category="cell">计算快照列表</block>
+  <block id="ae37137fa442e7ff280e08e1f0042b99" category="cell">计算快照.设置标签</block>
+  <block id="9b8648338647e8cd71c93bc48a96216d" category="cell">compute.networks.get</block>
+  <block id="29158b2c4c238ec8805f83673be36e42" category="cell">计算网络列表</block>
+  <block id="83623f13ba67fe5f8cf28a5d649ad4f9" category="cell">计算区域</block>
+  <block id="abaa4f6c97bc6a962ada9ca08d2df430" category="cell">计算区域列表</block>
+  <block id="5fd35f9922ba9a4237ba82cc8108ae44" category="cell">计算子网络</block>
+  <block id="fcf92e20677abd8eb071bf44abe75c65" category="cell">计算子网络列表</block>
+  <block id="c0f8426d3d8fdfb75cf8d9a87d0a4a3c" category="cell">compute.zoneOperations.get</block>
+  <block id="3949afe15d48805996b71971935534a8" category="cell">计算区域</block>
+  <block id="0640a639e0371229b4606e3b85e099d0" category="cell">计算区域列表</block>
+  <block id="44b09034a417dd1cbbf80c2e7f406fac" category="cell">deploymentmanager.compositeTypes.get</block>
+  <block id="a61e3d693237952eedc94861792761e7" category="cell">deploymentmanager.compositeTypes.list</block>
+  <block id="5b62b18e1333ec88ca3755be16151f82" category="cell">deploymentmanager.deployments.create</block>
+  <block id="e8d7f31a76849feb849ec5f9c94517f8" category="cell">deploymentmanager.deployments.delete</block>
+  <block id="1cac324d02161f8480413dbe583746cb" category="cell">deploymentmanager.deployments.get</block>
+  <block id="d7d5a6455c040115eff34ddf66b66e9a" category="cell">deploymentmanager.deployments.list</block>
+  <block id="cb6b2c7aff583fba1974d1aca2c642b9" category="cell">deploymentmanager.manifests.get</block>
+  <block id="da06423408a13b1c48cb0cdd21d39b8c" category="cell">deploymentmanager.manifests.list</block>
+  <block id="20fb0190e56ce781fc6066428496c24a" category="cell">deploymentmanager.operations.get</block>
+  <block id="05856524267795a79bbfff4a6ab46de3" category="cell">deploymentmanager.operations.list</block>
+  <block id="946e4352b79fa3dca0e58967aead6ed3" category="cell">deploymentmanager.resources.get</block>
+  <block id="14445666f18911ae787c85620c950137" category="cell">deploymentmanager.resources.list</block>
+  <block id="21ecd7008df62da651eda20b6bf91fca" category="cell">deploymentmanager.typeProviders.get</block>
+  <block id="aa0a6270ba03a30904db1d0def33db3e" category="cell">deploymentmanager.typeProviders.list</block>
+  <block id="4884586a178747ee055ba872066dc623" category="cell">deploymentmanager.types.get</block>
+  <block id="256ccd69452a99f72a25d03949a26d79" category="cell">deploymentmanager.types.list</block>
+  <block id="33053bed5a9759f1052dcb5795ac1e23" category="cell">日志记录条目列表</block>
+  <block id="14edef4307168110c8839515a2a09654" category="cell">logging.privateLogEntries.list</block>
+  <block id="e72c69f215bc5d904b4ebf5960ab7d47" category="cell">resourcemanager.projects.get</block>
+  <block id="4e32b9f5d0e5fdb825f410e15ab2ba2d" category="cell">存储桶创建</block>
+  <block id="50f9d6cda7e1e1b29e240d06c8c488ef" category="cell">存储桶删除</block>
+  <block id="3b89f41cd711e50e42214e720bc51990" category="cell">存储桶获取</block>
+  <block id="d5c06b82cc54a460652e522586badc26" category="cell">存储桶列表</block>
+  <block id="571cdcf30f6c1483cc76687feeeb6fbb" category="cell">存储桶更新</block>
+  <block id="a14a41e5b31a1392281514dabd46b880" category="cell">cloudkms.cryptoKeyVersions.useToEncrypt</block>
+  <block id="801566ca6932572a08ba692f8391121a" category="cell">cloudkms.cryptoKeys.get</block>
+  <block id="822dcaf9e20737313f761f80cc25031f" category="cell">cloudkms.cryptoKeys.列表</block>
+  <block id="67c2b48a02a1206b0cf882e5b8d15ad2" category="cell">cloudkms.keyRings.列表</block>
+  <block id="a307cb7b824c047343b8ba5282d9df48" category="cell">compute.instances.setServiceAccount</block>
+  <block id="3876f8e19bed292ca3a3310423b70b4a" category="cell">iam.serviceAccounts.actAs</block>
+  <block id="2a98b5ece7a2d0ffb98d2baf136ca206" category="cell">iam.serviceAccounts.getIamPolicy</block>
+  <block id="640fa55511e172c87901c410a6f6add4" category="cell">iam.serviceAccounts.list</block>
+  <block id="e5bc2487a4bcbb7933c660376594b138" category="cell">storage.objects.get</block>
+  <block id="3abc2cd169a91b6eeedd33bdc4fc84dc" category="cell">存储对象列表</block>
+  <block id="7bceb7146db8df34bf815d761457c717" category="cell">计算地址列表</block>
+  <block id="4fdff5220f03fd32647178b9592e1ea8" category="cell">compute.backendServices.create</block>
+  <block id="b5f7b55042418948c13ab745ca00d11a" category="cell">compute.regionBackendServices.create</block>
+  <block id="df33d5e39cebdb3e0d07f3ae8e758d29" category="cell">compute.regionBackendServices.get</block>
+  <block id="a61930a69a0ad4254b6aa2424bee1dd6" category="cell">compute.regionBackendServices.list</block>
+  <block id="d68835cd27f78006f668d9590752dd1d" category="cell">compute.networks.updatePolicy</block>
+  <block id="3bb462479c266a76dad7f7e9ffbda877" category="cell">compute.instanceGroups.get</block>
+  <block id="9ea0e1f2d57c0f668731cb4f6687c8a3" category="cell">计算地址</block>
+  <block id="4c897801a8c1d095ef49717789ad6f44" category="cell">监控时间序列列表</block>
+  <block id="b7be069b84365eb8cddd15be26a8761f" category="cell">storage.buckets.getIamPolicy</block>
+  <block id="73d1ee273931a3c9c3cb0a7f6fadfbf3" category="section-title">NetApp Backup and Recovery所使用的权限</block>
+  <block id="b0d96347cc369585bb6181ea24e28101" category="section-title">NetApp Data Classification所使用的权限</block>
+  <block id="a4421516ae043bd916b22750fd43a081" category="list-text">计算子网络使用</block>
+  <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
+  <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
+  <block id="f14cdbbd5f80553660910a0a1219e605" category="section-title">2025年11月26日</block>
+  <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">权限已更新，以使其用途更加清晰，但未添加或删除任何权限。新增三列，分别指示每个权限是用于部署、日常操作还是删除。除此之外，还有一些权限根据其在NetApp Data Classification和NetApp Backup and Recovery的用途进行了划分。</block>
 </blocks>

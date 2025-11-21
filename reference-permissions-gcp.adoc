@@ -141,111 +141,341 @@ includedPermissions:
 
 == Google Cloud 权限的使用方式
 
-[cols="50,50"]
+[cols="5*"]
 |===
-| 操作 | 目的 
+| 操作 | 目的 | 用于部署？ | 用于日常运营？ | 用于删除？ 
 
 
-| - compute.disks.create - compute.disks.createSnapshot - compute.disks.delete - compute.disks.get - compute.disks.list - compute.disks.setLabels - compute.disks.use | 为Cloud Volumes ONTAP创建和管理磁盘。 
+| 计算磁盘创建 .7+| 为Cloud Volumes ONTAP创建和管理磁盘。 | 是 | 是 | 否 
 
 
-| - compute.firewalls.创建 - compute.firewalls.删除 - compute.firewalls.获取 - compute.firewalls.列表 | 为Cloud Volumes ONTAP创建防火墙规则。 
+| compute.disk.createSnapshot | 否 | 是 | 否 
 
 
-| - 计算.全局操作.获取 | 获取操作状态。 
+| 计算磁盘删除 | 否 | 是 | 是 
 
 
-| - compute.images.get - compute.images.getFromFamily - compute.images.list - compute.images.useReadOnly | 获取虚拟机实例的图像。 
+| 计算磁盘获取 | 否 | 是 | 否 
 
 
-| - 计算.实例.附加磁盘 - 计算.实例.分离磁盘 | 将磁盘附加到Cloud Volumes ONTAP中分离磁盘。 
+| 计算磁盘列表 | 是 | 是 | 否 
 
 
-| - 计算实例创建 - 计算实例删除 | 创建和删除Cloud Volumes ONTAP VM 实例。 
+| 计算磁盘设置标签 | 是 | 是 | 否 
 
 
-| - 计算.实例.获取 | 列出虚拟机实例。 
+| 计算磁盘使用 | 否 | 是 | 否 
 
 
-| - compute.instances.getSerialPortOutput | 获取控制台日志。 
+| 计算防火墙创建 .4+| 为Cloud Volumes ONTAP创建防火墙规则。 | 是 | 否 | 否 
 
 
-| - 计算.实例.列表 | 检索区域中的实例列表。 
+| 计算防火墙删除 | 否 | 是 | 是 
 
 
-| - compute.instances.setDeletionProtection | 对实例设置删除保护。 
+| 计算防火墙 | 是 | 是 | 否 
 
 
-| - 计算.实例.设置标签 | 添加标签。 
+| 计算防火墙列表 | 是 | 是 | 否 
 
 
-| - compute.instances.setMachineType - compute.instances.setMinCpuPlatform | 更改Cloud Volumes ONTAP的机器类型。 
+| compute.globalOperations.get。 | 获取操作状态。 | 是 | 是 | 否 
 
 
-| - 计算.实例.设置元数据 | 添加元数据。 
+| compute.images.get .4+| 获取虚拟机实例的图像。 | 是 | 否 | 否 
 
 
-| - 计算.实例.设置标签 | 为防火墙规则添加标签。 
+| compute.images.getFromFamily | 是 | 否 | 否 
 
 
-| - 计算实例.启动 - 计算实例.停止 - 计算实例.更新显示设备 | 启动和停止Cloud Volumes ONTAP。 
+| 计算图像列表 | 是 | 否 | 否 
 
 
-| - compute.machineTypes.get | 获取核心数量来检查配额。 
+| compute.images.useReadOnly | 是 | 否 | 否 
 
 
-| - 计算.项目.获取 | 支持多项目。 
+| compute.instances.attachDisk .2+| 将磁盘附加到Cloud Volumes ONTAP中分离磁盘。 | 是 | 是 | 否 
 
 
-| - compute.snapshots.create - compute.snapshots.delete - compute.snapshots.get - compute.snapshots.list - compute.snapshots.setLabels | 创建和管理持久磁盘快照。 
+| compute.instances.detachDisk | 否 | 是 | 是 
 
 
-| - 计算.网络.获取 - 计算.网络.列表 - 计算.区域.获取 - 计算.区域.列表 - 计算.子网络.获取 - 计算.子网络.列表 - 计算.区域操作.获取 - 计算.区域.获取 - 计算.区域.列表 | 获取创建新的Cloud Volumes ONTAP虚拟机实例所需的网络信息。 
+| compute.instances.create .2+| 创建和删除Cloud Volumes ONTAP VM 实例。 | 是 | 否 | 否 
 
 
-| - deploymentmanager.compositeTypes.get - deploymentmanager.compositeTypes.list - deploymentmanager.deployments.create - deploymentmanager.deployments.delete - deploymentmanager.deployments.get - deploymentmanager.deployments.list - deploymentmanager.manifests.get - deploymentmanager.manifests.list - deploymentmanager.operations.get - deploymentmanager.operations.list - deploymentmanager.resources.get - deploymentmanager.resources.list - deploymentmanager.typeProviders.get - deploymentmanager.typeProviders.list - deploymentmanager.types.get - deploymentmanager.types.list | 使用 Google Cloud Deployment Manager 部署Cloud Volumes ONTAP虚拟机实例。 
+| compute.instances.delete | 否 | 否 | 是 
 
 
-| - logging.logEntries.列表 - logging.privateLogEntries.列表 | 获取堆栈日志驱动器。 
+| compute.instances.get | 列出虚拟机实例。 | 是 | 是 | 否 
 
 
-| -资源管理器.项目.获取 | 支持多项目。 
+| compute.instances.getSerialPortOutput | 获取控制台日志。 | 是 | 是 | 否 
 
 
-| - storage.buckets.create - storage.buckets.delete - storage.buckets.get - storage.buckets.list - storage.buckets.update | 创建和管理用于数据分层的 Google Cloud Storage 存储桶。 
+| compute.instances.list | 检索区域中的实例列表。 | 是 | 是 | 否 
 
 
-| - cloudkms.cryptoKeyVersions.useToEncrypt - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.list - cloudkms.keyRings.list | 将来自 Cloud Key Management Service 的客户管理加密密钥与Cloud Volumes ONTAP结合使用。 
+| compute.instances.setDeletionProtection | 对实例设置删除保护。 | 是 | 否 | 否 
 
 
-| - compute.instances.setServiceAccount - iam.serviceAccounts.actAs - iam.serviceAccounts.getIamPolicy - iam.serviceAccounts.list - storage.objects.get - storage.objects.list | 在Cloud Volumes ONTAP实例上设置服务帐户。此服务帐户提供将数据分层到 Google Cloud Storage 存储桶的权限。 
+| compute.instances.setLabels | 添加标签。 | 是 | 否 | 否 
 
 
-| - 计算.地址.列表 | 在部署 HA 对时检索区域中的地址。 
+| compute.instances.setMachineType .2+| 更改Cloud Volumes ONTAP的机器类型。 | 是 | 是 | 否 
 
 
-| - compute.backendServices.创建 - compute.regionBackendServices.创建 - compute.regionBackendServices.获取 - compute.regionBackendServices.列表 | 配置后端服务以在 HA 对中分配流量。 
+| compute.instances.setMinCpuPlatform | 是 | 是 | 否 
 
 
-| - 计算.网络.更新策略 | 在 HA 对的 VPC 和子网上应用防火墙规则。 
+| compute.instances.setMetadata | 添加元数据。 | 是 | 是 | 否 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | 启用NetApp Data Classification。 
+| compute.instances.setTags | 为防火墙规则添加标签。 | 是 | 是 | 否 
 
 
-| - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | 在Cloud Volumes ONTAP HA 对上创建和管理存储虚拟机。 
+| 计算实例开始 .3+| 启动和停止Cloud Volumes ONTAP。 | 是 | 是 | 否 
 
 
-| - 监控.时间序列.列表 - 存储.桶.获取IamPolicy | 发现有关 Google Cloud Storage 存储桶的信息。 
+| compute.instances.stop | 是 | 是 | 否 
 
 
-| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | 在NetApp Backup and Recovery激活向导中选择您自己的客户管理密钥，而不是使用默认的 Google 管理加密密钥。 
+| compute.instances.updateDisplayDevice | 是 | 是 | 否 
+
+
+| compute.machineTypes.get | 获取核心数以检查配额。 | 是 | 否 | 否 
+
+
+| compute.projects.get | 支持多项目。 | 是 | 否 | 否 
+
+
+| 计算快照创建 .5+| 创建和管理持久磁盘快照。 | 是 | 是 | 否 
+
+
+| 计算快照删除 | 否 | 是 | 是 
+
+
+| 计算快照获取 | 否 | 是 | 否 
+
+
+| 计算快照列表 | 否 | 是 | 否 
+
+
+| 计算快照.设置标签 | 是 | 是 | 否 
+
+
+| compute.networks.get .9+| 获取创建新的Cloud Volumes ONTAP虚拟机实例所需的网络信息。 | 是 | 是 | 否 
+
+
+| 计算网络列表 | 是 | 是 | 否 
+
+
+| 计算区域 | 是 | 是 | 否 
+
+
+| 计算区域列表 | 是 | 是 | 否 
+
+
+| 计算子网络 | 是 | 是 | 否 
+
+
+| 计算子网络列表 | 是 | 是 | 否 
+
+
+| compute.zoneOperations.get | 是 | 是 | 否 
+
+
+| 计算区域 | 是 | 是 | 否 
+
+
+| 计算区域列表 | 是 | 是 | 否 
+
+
+| deploymentmanager.compositeTypes.get .16+| 使用 Google Cloud Deployment Manager 部署Cloud Volumes ONTAP虚拟机实例。 | 是 | 否 | 否 
+
+
+| deploymentmanager.compositeTypes.list | 是 | 否 | 否 
+
+
+| deploymentmanager.deployments.create | 是 | 否 | 否 
+
+
+| deploymentmanager.deployments.delete | 是 | 否 | 否 
+
+
+| deploymentmanager.deployments.get | 是 | 否 | 否 
+
+
+| deploymentmanager.deployments.list | 是 | 否 | 否 
+
+
+| deploymentmanager.manifests.get | 是 | 否 | 否 
+
+
+| deploymentmanager.manifests.list | 是 | 否 | 否 
+
+
+| deploymentmanager.operations.get | 是 | 否 | 否 
+
+
+| deploymentmanager.operations.list | 是 | 否 | 否 
+
+
+| deploymentmanager.resources.get | 是 | 否 | 否 
+
+
+| deploymentmanager.resources.list | 是 | 否 | 否 
+
+
+| deploymentmanager.typeProviders.get | 是 | 否 | 否 
+
+
+| deploymentmanager.typeProviders.list | 是 | 否 | 否 
+
+
+| deploymentmanager.types.get | 是 | 否 | 否 
+
+
+| deploymentmanager.types.list | 是 | 否 | 否 
+
+
+| 日志记录条目列表 .2+| 获取堆栈日志驱动器。 | 是 | 是 | 否 
+
+
+| logging.privateLogEntries.list | 是 | 是 | 否 
+
+
+| resourcemanager.projects.get | 支持多项目。 | 是 | 是 | 否 
+
+
+| 存储桶创建 .5+| 创建和管理用于数据分层的 Google Cloud Storage 存储桶。 | 是 | 是 | 否 
+
+
+| 存储桶删除 | 否 | 是 | 是 
+
+
+| 存储桶获取 | 否 | 是 | 否 
+
+
+| 存储桶列表 | 否 | 是 | 否 
+
+
+| 存储桶更新 | 否 | 是 | 否 
+
+
+| cloudkms.cryptoKeyVersions.useToEncrypt .4+| 将来自 Cloud Key Management Service 的客户管理加密密钥与Cloud Volumes ONTAP结合使用。 | 是 | 是 | 否 
+
+
+| cloudkms.cryptoKeys.get | 是 | 是 | 否 
+
+
+| cloudkms.cryptoKeys.列表 | 是 | 是 | 否 
+
+
+| cloudkms.keyRings.列表 | 是 | 是 | 否 
+
+
+| compute.instances.setServiceAccount .6+| 在Cloud Volumes ONTAP实例上设置服务帐户。此服务帐户提供将数据分层到 Google Cloud Storage 存储桶的权限。 | 是 | 是 | 否 
+
+
+| iam.serviceAccounts.actAs | 是 | 否 | 否 
+
+
+| iam.serviceAccounts.getIamPolicy | 是 | 是 | 否 
+
+
+| iam.serviceAccounts.list | 是 | 是 | 否 
+
+
+| storage.objects.get | 是 | 是 | 否 
+
+
+| 存储对象列表 | 是 | 是 | 否 
+
+
+| 计算地址列表 | 在部署 HA 对时检索区域中的地址。 | 是 | 否 | 否 
+
+
+| compute.backendServices.create .4+| 配置后端服务以在 HA 对中分配流量。 | 是 | 否 | 否 
+
+
+| compute.regionBackendServices.create | 是 | 否 | 否 
+
+
+| compute.regionBackendServices.get | 是 | 否 | 否 
+
+
+| compute.regionBackendServices.list | 是 | 否 | 否 
+
+
+| compute.networks.updatePolicy | 在 HA 对的 VPC 和子网上应用防火墙规则。 | 是 | 否 | 否 
+
+
+| compute.instanceGroups.get .3+| 在Cloud Volumes ONTAP HA 对上创建和管理存储虚拟机。 | 是 | 是 | 否 
+
+
+| 计算地址 | 是 | 是 | 否 
+
+
+| 计算.实例.更新网络接口 | 是 | 是 | 否 
+
+
+| 监控时间序列列表 .2+| 发现有关 Google Cloud Storage 存储桶的信息。 | 是 | 是 | 否 
+
+
+| storage.buckets.getIamPolicy | 是 | 是 | 否 
+|===
+
+
+=== NetApp Backup and Recovery所使用的权限
+
+[cols="5*"]
+|===
+
+
+| 操作 | 目的 | 用于部署？ | 用于日常运营？ | 用于删除？ 
+
+
+ a| 
+* cloudkms.cryptoKeys.get
+* cloudkms.cryptoKeys.getIamPolicy
+* cloudkms.cryptoKeys.列表
+* cloudkms.cryptoKeys.setIamPolicy
+* cloudkms.keyRings.get
+* cloudkms.keyRings.getIamPolicy
+* cloudkms.keyRings.列表
+* cloudkms.keyRings.setIamPolicy
+
+| 在NetApp Backup and Recovery激活向导中选择您自己的客户管理密钥，而不是使用默认的 Google 管理加密密钥。 | 是 | 是 | 否 
+|===
+
+
+=== NetApp Data Classification所使用的权限
+
+[cols="5*"]
+|===
+
+
+| 操作 | 目的 | 用于部署？ | 用于日常运营？ | 用于删除？ 
+
+
+ a| 
+* 计算子网络使用
+* compute.subnetworks.useExternalIp
+* compute.instances.addAccessConfig
+
+| 启用NetApp Data Classification。 | 是 | 否 | 否 
 |===
 
 
 == 更改日志
 
 当添加和删除权限时，我们会在下面的部分中注明。
+
+
+
+=== 2025年11月26日
+
+权限已更新，以使其用途更加清晰，但未添加或删除任何权限。新增三列，分别指示每个权限是用于部署、日常操作还是删除。除此之外，还有一些权限根据其在NetApp Data Classification和NetApp Backup and Recovery的用途进行了划分。
 
 
 
