@@ -514,22 +514,17 @@
   <block id="2ba663c096287d98a36bde6322e04cc7" category="inline-xref">查看支持的 Docker Engine 版本</block>
   <block id="bfd1773eb918278ec2382170b1e3e803" category="paragraph"><block ref="34142695033c90791f6ac8ad740edd90" category="inline-xref-macro-rx"></block> 。</block>
   <block id="455cbd59356abfa16dcf7666d4ae6c2b" category="open-title">Podman</block>
-  <block id="36321f8de6704271c20efb18c2788361" category="paragraph">按照以下步骤安装和配置 Podman：</block>
   <block id="98ddd266a82e7cfd3a24eb45842bec48" category="list-text">启用并启动 podman.socket 服务</block>
   <block id="402a934d05f32752831bc2ed8043fb03" category="list-text">安装python3</block>
-  <block id="e7655ce2e211e4106a4d229011bca18b" category="list-text">安装 podman-compose 包版本 1.0.6</block>
   <block id="a50a451f2ba0bc5a53f19d6887c717e4" category="list-text">将 podman-compose 添加到 PATH 环境变量</block>
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">安装代理后调整 aardvark-dns 端口（默认值：53），以避免 DNS 端口冲突。按照说明配置端口。</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">如果主机上安装了 podman-docker 包，请将其删除。</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">安装 Podman。</block>
-  <block id="e822146085e921b554750abcae74cd4a" category="paragraph">您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。</block>
   <block id="29c15383bb54e5c0c3bfba429503d481" category="paragraph">对于 Red Hat Enterprise Linux 9：</block>
   <block id="6d76d2ad5a4defbd1ab7de4805041d08" category="paragraph">其中 &lt;version&gt; 是您正在安装的 Podman 支持的版本。<block ref="f431862ab66067d97cd0bf60cb34059c" category="inline-xref-macro-rx"></block> 。</block>
   <block id="084cfc903eb108eb15642e42f36348f9" category="paragraph">对于 Red Hat Enterprise Linux 8：</block>
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">启用并启动 podman.socket 服务。</block>
   <block id="c258dc586685c07a851bfdce98251de9" category="list-text">安装 python3。</block>
-  <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">如果您的系统上还没有 EPEL 存储库包，请安装它。</block>
-  <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">此步骤是必需的，因为 podman-compose 可从 Extra Packages for Enterprise Linux (EPEL) 存储库中获得。</block>
   <block id="6f3a42415c589950b9ae4d3fe1f87dc7" category="list-text">安装 podman-compose 包 1.0.6。</block>
   <block id="ec7c87651a5ede2a98ad4091fe48b517" category="admonition">使用<block ref="02c7499137a5d8d10292d68634eb22a0" prefix=" " category="inline-code"></block>命令满足将 podman-compose 添加到 PATH 环境变量的要求。安装命令将 podman-compose 添加到 /usr/bin，它已经包含在<block ref="c9bac30d1d0554c0790285219e5ad518" prefix=" " category="inline-code"></block>主机上的选项。</block>
   <block id="1a91f495a43bfe57e3dea20b4f9cbbe3" category="list-text">如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。</block>
@@ -544,7 +539,6 @@
   <block id="fd3ac4b8bdad6f16e9e6e20e98f8fd3b" category="paragraph">按照 Docker 的文档安装 Docker Engine。</block>
   <block id="08a382dc3dd0f48c28f89b74f8bac2a4" category="inline-link">查看 Docker 的安装说明</block>
   <block id="3907e04a67ccb717783cc69d280aaa41" category="list-text"><block ref="3907e04a67ccb717783cc69d280aaa41" category="inline-link-rx"></block></block>
-  <block id="657da9022df45645ff2569b61278d3c3" category="paragraph">按照步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为控制台不支持它。</block>
   <block id="2e022b32dcdcb9f0b048e90340feb44b" category="list-text">验证 Docker 是否已启用并正在运行。</block>
   <block id="7f8c174d588ebe0dadcdeb4a63202e4b" category="list-text">转到 Amazon EC2 控制台。</block>
   <block id="18387052a5adf3d55c9d07f70f3141e7" category="list-text">选择*实例*。</block>
@@ -5293,7 +5287,6 @@
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">勒索软件抵御能力角色</block>
   <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。</block>
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>，验证检查失败。为了避免此失败，请跳过验证检查。</block>
-  <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">在政府区域和商业区域受限制模式支持。不支持在具有限制模式的主权区域使用。在受限模式下， NetApp Backup and Recovery仅支持ONTAP卷数据的备份和恢复。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>不支持应用程序数据和虚拟机数据的备份和恢复。</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">备份和恢复角色</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">灾难恢复角色</block>
@@ -5660,4 +5653,10 @@
   <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
   <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
   <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
+  <block id="6131a90681ddf9c2c7134fa754e90d4e" category="paragraph">安装并配置 Podman：</block>
+  <block id="68d20f859d04971de5875c315c929e92" category="list-text">安装相应的 podman-compose 包</block>
+  <block id="5448bfba9b19b99ebf560293cc6b89ab" category="list-text">请确认您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI。</block>
+  <block id="bf58c65de2201356b331dfea5e7eb976" category="paragraph">从 Red Hat Enterprise Linux 软件仓库获取 Podman。</block>
+  <block id="2632bb82f2d43ffb72d31ea06ed68352" category="list-text">安装 EPEL 以获取 podman-compose。</block>
+  <block id="3c7d277b4a6a1367e3f2567411648df9" category="paragraph">请按照以下步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为主机不支持该版本。</block>
 </blocks>
