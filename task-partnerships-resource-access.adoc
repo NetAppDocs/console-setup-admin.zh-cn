@@ -37,16 +37,12 @@ summary: 您可以通过为合作伙伴用户分配组织内文件夹和项目�
 * link:reference-iam-backup-rec-roles.html["备份查看器"]
 * link:reference-iam-backup-rec-roles.html["恢复管理员"]
 * link:reference-iam-backup-rec-roles.html["克隆管理员"]
-* link:reference-iam-predefined-roles.html["数据分类查看器"]
 * link:reference-iam-disaster-rec-roles.html["灾难恢复管理员"]
 * link:reference-iam-disaster-rec-roles.html["灾难恢复故障转移管理员"]
 * link:reference-iam-disaster-rec-roles.html["灾难恢复应用程序管理员"]
 * link:reference-iam-disaster-rec-roles.html["灾难恢复查看器"]
 * link:reference-iam-storage-roles.html["运营支持分析师"]
-* link:reference-iam-ransomware-roles.html["勒索软件抵御能力管理员"]
-* link:reference-iam-ransomware-roles.html["勒索软件恢复力查看器"]
-* link:reference-iam-ransomware-roles.html#user-behavior-roles["勒索软件恢复用户行为管理员"]
-* link:reference-iam-ransomware-roles.html#user-behavior-roles["勒索软件恢复用户行为查看器"]
+* link:reference-iam-predefined-roles.html["分类查看器"]
 
 
 link:reference-iam-predefined-roles.html["了解有关预定义角色的更多信息"]

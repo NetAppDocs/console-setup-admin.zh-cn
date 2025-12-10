@@ -2,6 +2,7 @@
 :allow-uri-read: 
 
 
+* 云基础设施管理器 API
 * 云部署管理器 V2 API
 * 云日志 API
 * 云资源管理器 API

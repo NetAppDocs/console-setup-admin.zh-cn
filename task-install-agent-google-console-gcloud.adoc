@@ -47,7 +47,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
 
 
  a| 
-\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects
  a| 
 管理 Google Cloud 中的资源。
 
@@ -155,6 +155,8 @@ title: Console agent deployment policy
 description: Permissions for the user who deploys the Console agent
 stage: GA
 includedPermissions:
+
+- cloudbuild.builds.get
 - compute.disks.create
 - compute.disks.get
 - compute.disks.list
@@ -192,6 +194,19 @@ includedPermissions:
 - compute.zoneOperations.get
 - compute.zones.get
 - compute.zones.list
+- *config.deployments.create*
+- *config.operations.get*
+- *config.deployments.delete*
+- *config.deployments.deleteState*
+- *config.deployments.get*
+- *config.deployments.getState*
+- *config.deployments.list*
+- *config.deployments.update*
+- *config.deployments.updateState*
+- *config.previews.get*
+- *config.previews.list*
+- *config.revisions.get*
+- *config.resources.list*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -210,16 +225,25 @@ includedPermissions:
 - deploymentmanager.types.list
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
+- *iam.serviceAccounts.actAs*
+- *iam.serviceAccounts.create*
 - iam.serviceAccounts.list
+- *iam.serviceAccountKeys.create*
+- *storage.buckets.create*
+- *storage.buckets.get*
+- *storage.objects.create*
+- *storage.folders.create*
+- *storage.objects.list*
+
 ----
 .. 从 Google Cloud 激活云壳。
 .. 上传包含所需权限的 YAML 文件。
 .. 使用创建自定义角色 `gcloud iam roles create`命令。
 +
-以下示例在项目级别创建一个名为“connectorDeployment”的角色：
+以下示例在项目级别创建一个名为“agentDeployment”的角色：
 
 +
-gcloud iam 角色创建 connectorDeployment --project=myproject --file=connector-deployment.yaml
+gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
@@ -234,7 +258,7 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
-== 步骤 3：设置控制台代理操作的权限
+== 步骤 3：创建一个 Google Cloud 服务帐户以与代理一起使用。
 
 需要一个 Google Cloud 服务帐号来向控制台代理提供控制台管理 Google Cloud 中的资源所需的权限。创建控制台代理时，您需要将此服务帐户与控制台代理 VM 关联。
 
@@ -248,10 +272,10 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 .. 上传包含所需权限的 YAML 文件。
 .. 使用创建自定义角色 `gcloud iam roles create`命令。
 +
-以下示例在项目级别创建一个名为“connector”的角色：
+以下示例在项目级别创建一个名为“agent”的角色：
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
@@ -350,6 +374,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 .步骤
 . 在您的项目中启用以下 Google Cloud API：
 +
+** 云基础设施管理器 API
 ** 云部署管理器 V2 API
 ** 云日志 API
 ** 云资源管理器 API
@@ -371,8 +396,10 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 直接从控制台创建控制台代理。
 
-.关于此任务
 创建控制台代理会使用默认配置在 Google Cloud 中部署虚拟机实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 VM 实例。link:reference-agent-default-config.html["了解控制台代理的默认配置"] 。
+
+
+NOTE: 在 Google Cloud 中部署代理时，代理会创建一个存储桶来存储部署文件。
 
 .开始之前
 您应该具有以下内容：

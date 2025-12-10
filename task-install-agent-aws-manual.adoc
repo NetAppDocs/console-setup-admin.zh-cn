@@ -25,12 +25,12 @@ summary: 您可以在 AWS 中运行的 Linux 主机上手动安装控制台代�
 
 == 步骤 1：查看主机要求
 
-控制台代理软件必须在满足特定操作系统要求、RAM 要求、端口要求等的主机上运行。
+确保运行控制台代理软件的主机满足操作系统、内存和端口要求。
 
 
 NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范围是固定的，不能修改。如果主机上的任何第三方软件使用此范围内的 UID 或 GID，则代理安装将失败。  NetApp建议使用没有第三方软件的主机以避免冲突。
 
-专用主机:: 与其他应用程序共享的主机不支持控制台代理。该主机必须是专用主机。主机可以是满足以下大小要求的任何架构：
+专用主机:: 控制台代理需要专用主机。只要满足以下尺寸要求，任何架构都受支持：
 +
 --
 * CPU：8 核或 8 个 vCPU
@@ -43,7 +43,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范�
 
 ** `/var`：必须有 40 GiB 可用空间
 +
-控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+控制台代理需要此空间 `/var`因为 Podman 或 Docker 的设计初衷就是在这个目录下创建容器。具体来说，他们将在以下位置创建容器： `/var/lib/containers/storage`目录和 `/var/lib/docker`用于 Docker。外部安装或符号链接不适用于此空间。
 
 
 
@@ -157,7 +157,7 @@ Docker Engine 23.0.6 至 28.0.0。
 
 |===
 密钥对:: 创建控制台代理时，您需要选择一个 EC2 密钥对来与实例一起使用。
-使用 IMDSv2 时的 PUT 响应跳数限制:: 如果在 EC2 实例上启用了 IMDSv2（这是新 EC2 实例的默认设置），则必须将实例上的 PUT 响应跳数限制更改为 3。如果您不更改 EC2 实例的限制，则在尝试设置代理时会收到 UI 初始化错误。
+使用 IMDSv2 时的 PUT 响应跳数限制:: 如果启用了 IMDSv2（新 EC2 实例的默认设置），请将 PUT 响应跳数限制设置为 3。否则，系统会在代理设置期间显示 UI 初始化错误。
 +
 --
 * link:task-require-imdsv2.html["要求在 Amazon EC2 实例上使用 IMDSv2"]
@@ -188,13 +188,13 @@ Docker Engine 23.0.6 至 28.0.0。
 ====
 .Podman
 --
-安装并配置 Podman：
+按照以下步骤安装和配置 Podman：
 
 * 启用并启动 podman.socket 服务
 * 安装python3
-* 安装相应的 podman-compose 包
+* 安装 podman-compose 包版本 1.0.6
 * 将 podman-compose 添加到 PATH 环境变量
-* 请确认您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI。
+* 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
 
 
@@ -210,7 +210,7 @@ rm /var/run/docker.sock
 ----
 . 安装 Podman。
 +
-从 Red Hat Enterprise Linux 软件仓库获取 Podman。
+您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。
 
 +
 对于 Red Hat Enterprise Linux 9：
@@ -246,32 +246,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. 安装 EPEL 以获取 podman-compose。
-+
-.. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
+. 如果您的系统上还没有 EPEL 存储库包，请安装它。
+
+
+此步骤是必需的，因为 podman-compose 可从 Extra Packages for Enterprise Linux (EPEL) 存储库中获得。
+
+. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. 安装 podman-compose 包 1.5.0。
++
+.. 安装 podman-compose 包 1.5.0。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. 如果使用的是 Red Hat Enterprise Linux 8：
+
+
+. 如果使用的是 Red Hat Enterprise Linux 8：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. 安装 podman-compose 包 1.0.6。
++
+.. 安装 podman-compose 包 1.0.6。
 +
 [source, cli]
 ----
@@ -281,11 +283,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用 `dnf install`命令满足将 podman-compose 添加到 PATH 环境变量的要求。安装命令将 podman-compose 添加到 /usr/bin，它已经包含在 `secure_path`主机上的选项。
 
-. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
-+
-.. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
+.. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
 
 
+. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
 
 
 [listing]
@@ -329,7 +330,7 @@ podman info | grep networkBackend
 .步骤
 . https://docs.docker.com/engine/install/["查看 Docker 的安装说明"^]
 +
-请按照以下步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为主机不支持该版本。
+按照步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为控制台不支持它。
 
 . 验证 Docker 是否已启用并正在运行。
 +
@@ -345,7 +346,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 == 步骤 3：设置网络
 
-确保您计划安装控制台代理的网络位置支持以下要求。满足这些要求使控制台代理能够管理混合云环境中的资源和流程。
+请确保网络位置满足以下要求，以便控制台代理能够管理混合云中的资源。
 
 连接到目标网络:: 控制台代理需要与您计划创建和管理系统的位置建立网络连接。例如，您计划在本地环境中创建Cloud Volumes ONTAP系统或存储系统的网络。
 
@@ -385,6 +386,16 @@ AWS 服务（amazonaws.com）：
 
  a| 
 管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
+
+
+
+ a| 
+Amazon FsX for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。
 
 
 
@@ -464,7 +475,7 @@ AWS 服务（amazonaws.com）：
 
 == 步骤 4：设置控制台的 AWS 权限
 
-您需要使用以下选项之一向NetApp Console提供 AWS 权限：
+请使用以下选项之一为NetApp Console提供 AWS 权限：
 
 * 选项 1：创建 IAM 策略并将策略附加到可与 EC2 实例关联的 IAM 角色。
 * 选项 2：向控制台提供具有所需权限的 IAM 用户的 AWS 访问密钥。
@@ -537,7 +548,7 @@ AWS 服务（amazonaws.com）：
 
 == 步骤 5：安装控制台代理
 
-前提条件完成后，您可以在自己的 Linux 主机上手动安装该软件。
+完成所有先决条件后，请在您的 Linux 主机上手动安装该软件。
 
 .开始之前
 您应该具有以下内容：
@@ -551,10 +562,10 @@ AWS 服务（amazonaws.com）：
 
 
 
-NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console.html["代理维护控制台"]。
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console-proxy.html["代理维护控制台"]。
 
 .关于此任务
-NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。
+安装后，如果有新版本可用，控制台代理会自动更新。
 
 .步骤
 . 如果主机上设置了 _http_proxy_ 或 _https_proxy_ 系统变量，请将其删除：
@@ -567,9 +578,14 @@ unset https_proxy
 +
 如果不删除这些系统变量，安装将失败。
 
-. 从下载控制台代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]，然后将其复制到Linux主机上。
+. 下载控制台代理软件，然后将其复制到 Linux 主机。您可以从NetApp Console或NetApp支持网站下载。
 +
-您应该下载适用于您的网络或云中的“在线”代理安装程序。
+** NetApp Console：转到*代理 > 管理 > 部署代理 > 本地部署 > 手动安装*。
++
+选择下载代理安装程序文件或文件的 URL。
+
+** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
+
 
 . 分配运行脚本的权限。
 +
@@ -629,7 +645,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console.html["了解代理维护控制台"]
+NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]
 
 . 如果您使用 Podman，则需要调整 aardvark-dns 端口。
 +
@@ -688,13 +704,13 @@ https://_ipaddress_[]
 
 == 步骤 6：提供对NetApp Console的权限
 
-现在您已经安装了控制台代理，您需要为控制台提供您之前设置的 AWS 权限。提供权限使控制台代理能够管理 AWS 中的数据和存储基础设施。
+安装控制台代理后，提供您设置的 AWS 权限，以便控制台代理可以管理您在 AWS 中的数据和存储基础设施。
 
 [role="tabbed-block"]
 ====
 .IAM 角色
 --
-将您之前创建的 IAM 角色附加到控制台代理 EC2 实例。
+将创建的 IAM 角色附加到控制台代理 EC2 实例。
 
 .步骤
 . 转到 Amazon EC2 控制台。

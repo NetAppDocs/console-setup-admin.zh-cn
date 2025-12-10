@@ -22,7 +22,7 @@ summary: 要解决控制台代理的问题，您可以与NetApp支持人员合�
 
 == 常见错误消息和解决方法
 
-下表列出了常见的错误信息及其解决建议：
+此表列出了常见的错误信息以及解决方法：
 
 [cols="19,27,27"]
 |===
@@ -37,7 +37,7 @@ summary: 要解决控制台代理的问题，您可以与NetApp支持人员合�
 * 验证服务管理器服务是否处于活动状态。
 * 验证所有容器是否正在运行。
 * 确保您的防火墙允许访问端口 8888 的服务。
-* 如果问题仍然存在，请联系支持人员。
+* 如果仍有问题，请联系客服。
 
 
 
@@ -70,7 +70,8 @@ summary: 要解决控制台代理的问题，您可以与NetApp支持人员合�
  a| 
 如果代理无法访问您的支持帐户，则会显示此消息。
  a| 
-* *。
+* 确认代理程序拥有对所需端点的出站访问权限。link:reference-networking-saas-console.html["了解有关所需网络访问端点的更多信息。"]
+
 
 |===
 
@@ -127,6 +128,28 @@ podman ps -a
 
 
 
+=== 对控制台代理运行配置检查
+
+从控制台或代理维护控制台对控制台代理运行配置检查，以确保它们已连接。
+
+您还可以使用代理维护控制台运行配置检查。link:reference-agent-maint-console-config-checker.html["了解更多关于使用 config-checker validate 命令的信息。"]
+
+
+NOTE: 您只能验证状态为“已连接”的代理。
+
+.控制台操作步骤
+. 选择“*管理 > 代理*”。
+. 选择要检查的控制台代理的操作菜单，然后选择“验证”。
++
+image:screenshot-agent-validate.png["屏幕截图显示了代理“操作”菜单中的“验证”选项。"]
+
++
+验证过程最多可能需要 15 分钟。结果会在完成后显示。
+
+
+
+
+
 == 控制台代理安装问题
 
 如果安装失败，请查看报告和日志以解决问题。
@@ -151,14 +174,10 @@ podman ps -a
 
 === 禁用手动安装的配置检查
 
-有时您可能需要禁用在安装期间验证出站连接的配置检查。例如：
-
-* 在政府云环境中手动安装代理时，您需要禁用配置检查，否则安装将失败。
-* 如果您继续使用以前的端点列表进行代理升级，您可能还需要禁用这些检查。
-
+有时您可能需要禁用在安装期间验证出站连接的配置检查。例如，在政府云环境中手动安装代理时，需要禁用配置检查，否则安装将失败。
 
 .步骤
-您可以通过在 _com/opt/application/netapp/service-manager-2/config.json_ 文件中设置 _skipConfigCheck_ 标志来禁用配置检查。默认情况下，此标志设置为 false，并且配置检查会验证代理的出站访问。将此标志设置为 true 以禁用检查。在完成此步骤之前，您应该熟悉 JSON 语法。
+您可以通过在 _com/opt/application/netapp/service-manager-2/config.json_ 文件中设置 _skipConfigCheck_ 标志来禁用配置检查。默认情况下，此标志设置为 false，并且配置检查会验证代理的出站访问。将此标志设置为 true 以禁用检查。在完成此步骤之前，请先熟悉 JSON 语法。
 
 要重新启用配置检查，请使用以下步骤并将_skipConfigCheck_标志设置为false。
 
@@ -186,22 +205,6 @@ systemctl stop netapp-service-manager.service
 systemctl restart netapp-service-manager.service
 ----
 
-
-
-
-=== 用于升级的端点安装失败
-
-如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为避免这种情况，请在安装到 VCenter 时取消选中 *验证代理配置* 复选框或跳过配置检查。
-
-NetApp建议更新防火墙规则以允许访问link:reference-networking-saas-console.html["当前端点"]尽早。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新您的端点"] 。
-
-请务必验证唯一的错误是否与前面的端点有关：
-
-* \ https://bluexpinfraprod.eastus2.data.azurecr.io
-* \ https://bluexpinfraprod.azurecr.io
-
-
-如果存在其他错误，您需要先解决它们，然后才能继续。
 
 
 

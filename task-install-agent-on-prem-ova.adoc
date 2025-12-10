@@ -106,6 +106,16 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+Amazon FsX for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。
+
+
+
+ a| 
 \ https://mysupport.netapp.com
  a| 
 获取许可信息并向NetApp支持发送AutoSupport消息。

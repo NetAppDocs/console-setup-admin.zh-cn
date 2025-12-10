@@ -47,7 +47,7 @@ link:concept-modes.html["了解限制模式的工作原理"] 。
 
 当您从 AWS 或 Azure 市场部署控制台代理时，映像包含所需的操作系统和软件组件。您只需选择满足 CPU 和 RAM 要求的实例类型。
 
-专用主机:: 与其他应用程序共享的主机不支持控制台代理。该主机必须是专用主机。主机可以是满足以下大小要求的任何架构：
+专用主机:: 控制台代理需要专用主机。只要满足以下尺寸要求，任何架构都受支持：
 +
 --
 * CPU：8 核或 8 个 vCPU
@@ -60,7 +60,7 @@ link:concept-modes.html["了解限制模式的工作原理"] 。
 
 ** `/var`：必须有 40 GiB 可用空间
 +
-控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+控制台代理需要此空间 `/var`因为 Podman 或 Docker 的设计初衷就是在这个目录下创建容器。具体来说，他们将在以下位置创建容器： `/var/lib/containers/storage`目录和 `/var/lib/docker`用于 Docker。外部安装或符号链接不适用于此空间。
 
 
 
@@ -69,7 +69,7 @@ link:concept-modes.html["了解限制模式的工作原理"] 。
 --
 AWS EC2 实例类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐使用 t3.2xlarge。
 Azure VM 大小:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 Standard_D8s_v3。
-Google Cloud 机器类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 n2-standard-8。
+Google Cloud 机器类型:: 满足 CPU 和 RAM 要求的实例类型。NetApp推荐 n2-standard-8。
 +
 --
 Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["受防护的虚拟机功能"^]
@@ -203,13 +203,13 @@ Docker Engine 23.0.6 至 28.0.0。
 ====
 .Podman
 --
-安装并配置 Podman：
+按照以下步骤安装和配置 Podman：
 
 * 启用并启动 podman.socket 服务
 * 安装python3
-* 安装相应的 podman-compose 包
+* 安装 podman-compose 包版本 1.0.6
 * 将 podman-compose 添加到 PATH 环境变量
-* 请确认您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI。
+* 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
 
 
@@ -225,7 +225,7 @@ rm /var/run/docker.sock
 ----
 . 安装 Podman。
 +
-从 Red Hat Enterprise Linux 软件仓库获取 Podman。
+您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。
 
 +
 对于 Red Hat Enterprise Linux 9：
@@ -261,32 +261,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. 安装 EPEL 以获取 podman-compose。
-+
-.. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
+. 如果您的系统上还没有 EPEL 存储库包，请安装它。
+
+
+此步骤是必需的，因为 podman-compose 可从 Extra Packages for Enterprise Linux (EPEL) 存储库中获得。
+
+. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. 安装 podman-compose 包 1.5.0。
++
+.. 安装 podman-compose 包 1.5.0。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. 如果使用的是 Red Hat Enterprise Linux 8：
+
+
+. 如果使用的是 Red Hat Enterprise Linux 8：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. 安装 podman-compose 包 1.0.6。
++
+.. 安装 podman-compose 包 1.0.6。
 +
 [source, cli]
 ----
@@ -296,11 +298,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用 `dnf install`命令满足将 podman-compose 添加到 PATH 环境变量的要求。安装命令将 podman-compose 添加到 /usr/bin，它已经包含在 `secure_path`主机上的选项。
 
-. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
-+
-.. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
+.. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
 
 
+. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
 
 
 [listing]
@@ -344,7 +345,7 @@ podman info | grep networkBackend
 .步骤
 . https://docs.docker.com/engine/install/["查看 Docker 的安装说明"^]
 +
-请按照以下步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为主机不支持该版本。
+按照步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为控制台不支持它。
 
 . 验证 Docker 是否已启用并正在运行。
 +
@@ -410,6 +411,16 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
+Amazon FsX for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。
+
+
+
+ a| 
 Azure 环境
 
 
@@ -441,7 +452,7 @@ Azure 环境
 
 
  a| 
-\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects
  a| 
 管理 Google Cloud 中的资源。
 
@@ -821,12 +832,12 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 .. 上传包含控制台代理所需权限的 YAML 文件。
 .. 使用创建自定义角色 `gcloud iam roles create`命令。
 +
-以下示例在项目级别创建一个名为“connector”的角色：
+以下示例在项目级别创建一个名为“agent”的角色：
 
 +
 [source, gcloud]
 ----
-gcloud iam roles create connector --project=myproject --file=connector.yaml
+gcloud iam roles create agent --project=myproject --file=agent.yaml
 ----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
@@ -846,9 +857,6 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
-.结果
-您现在拥有一个可以分配给控制台代理 VM 实例的服务帐户。
-
 --
 ====
 
@@ -860,6 +868,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 .步骤
 . https://cloud.google.com/apis/docs/getting-started#enabling_apis["在您的项目中启用以下 Google Cloud API"^]
 +
+** 云基础设施管理器 API
 ** 云部署管理器 V2 API
 ** 云日志 API
 ** 云资源管理器 API

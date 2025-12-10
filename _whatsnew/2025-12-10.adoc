@@ -1,0 +1,44 @@
+= 控制台代理 4.2.0
+:allow-uri-read: 
+
+
+
+
+=== 控制台代理 4.2.0
+
+4.2.0 版本同时支持标准模式和受限模式。
+
+此版本的控制台代理包含安全改进、错误修复以及以下功能：
+
+.支持 Google Cloud Infrastructure Manager
+NetApp现在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Cloud Deployment Manager 来部署代理和管理 Google Cloud 中的代理。做出此项更改是因为谷歌将弃用此功能。link:https://docs.cloud.google.com/deployment-manager/docs/deprecations["云部署管理器"] 。
+
+* 任何 4.2.0 及更高版本的新代理都使用基础架构管理器，您应该更新用于部署的用户帐户和服务帐户权限。link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["查看权限变更日志。"^]
+* 部署代理时，系统还会创建一个 Google Cloud 存储桶来存储部署文件。
+
+
+.改进了控制台代理的配置检查
+* 控制台代理现在在执行配置检查时会检查已弃用的端点。如果您尚未更新到 4.0.0 或更高版本的新端点列表，则只要系统能够访问之前的端点列表，安装就会成功。link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["了解更多关于控制台代理所需端点的信息。"^]
+* 从控制台或代理维护控制台对已安装的控制台代理运行配置检查，以验证连接性并排除故障。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何对控制台代理运行配置检查。"^]
+
+
+.直接从NetApp Console下载代理软件
+当您需要手动安装代理时，除了NetApp支持网站之外，您还可以直接从NetApp Console访问代理软件。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually["了解如何直接从NetApp Console下载控制台代理软件。"^]
+
+
+
+=== NetApp Console管理
+
+本次发布包含以下内容：
+
+.能够设置凭证过期通知。
+设置服务帐户和联合身份验证凭据过期的通知。选择七天或三十天。控制台会向具有相应角色的用户显示通知和电子邮件。组织管理员会收到服务帐户通知。组织管理员、联盟管理员和联盟查看者会收到联盟通知。
+
+.启用联合身份验证后，本地登录将不可用。
+为控制台组织启用联合身份验证后，用户将无法使用本地登录，而是会被引导至联合身份验证登录。
+
+.提升存储管理页面的易用性
+现在，您可以从存储管理页面更轻松地查看和管理有关ONTAP本地系统（以及 FSx for ONTAP）的详细信息。
+
+* “Discoverable systems”页面将摘要信息与可用系统的选项卡显示分开，从而更容易查看有关可发现系统的全面信息。
+

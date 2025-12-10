@@ -20,7 +20,7 @@ summary: 在限制模式下启动并运行NetApp Console后，您可以开始使
 
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Files文档"^]
 * https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["备份和恢复文档"^]
-* https://docs.netapp.com/us-en/data-services-data-classification/index.html["数据分类文档"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/index.html["分类文档"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP文档"^]
 * https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["数字钱包文档"^]
 * https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["本地ONTAP集群文档"^]

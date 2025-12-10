@@ -14,10 +14,10 @@
 
 
 
-NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console.html["代理维护控制台"]。
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console-proxy.html["代理维护控制台"]。
 
 .关于此任务
-NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。
+安装后，如果有新版本可用，控制台代理会自动更新。
 
 .步骤
 . 如果主机上设置了 _http_proxy_ 或 _https_proxy_ 系统变量，请将其删除：
@@ -30,9 +30,14 @@ unset https_proxy
 +
 如果不删除这些系统变量，安装将失败。
 
-. 从下载控制台代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]，然后将其复制到Linux主机上。
+. 下载控制台代理软件，然后将其复制到 Linux 主机。您可以从NetApp Console或NetApp支持网站下载。
 +
-您应该下载适用于您的网络或云中的“在线”代理安装程序。
+** NetApp Console：转到*代理 > 管理 > 部署代理 > 本地部署 > 手动安装*。
++
+选择下载代理安装程序文件或文件的 URL。
+
+** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
+
 
 . 分配运行脚本的权限。
 +
@@ -92,7 +97,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console.html["了解代理维护控制台"]
+NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]
 
 . 如果您使用 Podman，则需要调整 aardvark-dns 端口。
 +

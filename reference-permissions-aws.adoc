@@ -881,7 +881,7 @@ s3:获取加密配置
 
 
 
-=== 数据分类
+=== 分类
 
 代理发出以下 API 请求来部署NetApp Data Classification：
 

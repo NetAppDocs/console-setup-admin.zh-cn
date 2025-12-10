@@ -30,7 +30,7 @@ summary: 要在您自己的 Linux 主机上手动安装控制台代理，您需�
 
 NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范围是固定的，不能修改。如果主机上的任何第三方软件使用此范围内的 UID 或 GID，则代理安装将失败。  NetApp建议使用没有第三方软件的主机以避免冲突。
 
-专用主机:: 与其他应用程序共享的主机不支持控制台代理。该主机必须是专用主机。主机可以是满足以下大小要求的任何架构：
+专用主机:: 控制台代理需要专用主机。只要满足以下尺寸要求，任何架构都受支持：
 +
 --
 * CPU：8 核或 8 个 vCPU
@@ -43,7 +43,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范�
 
 ** `/var`：必须有 40 GiB 可用空间
 +
-控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+控制台代理需要此空间 `/var`因为 Podman 或 Docker 的设计初衷就是在这个目录下创建容器。具体来说，他们将在以下位置创建容器： `/var/lib/containers/storage`目录和 `/var/lib/docker`用于 Docker。外部安装或符号链接不适用于此空间。
 
 
 
@@ -177,13 +177,13 @@ Docker Engine 23.0.6 至 28.0.0。
 ====
 .Podman
 --
-安装并配置 Podman：
+按照以下步骤安装和配置 Podman：
 
 * 启用并启动 podman.socket 服务
 * 安装python3
-* 安装相应的 podman-compose 包
+* 安装 podman-compose 包版本 1.0.6
 * 将 podman-compose 添加到 PATH 环境变量
-* 请确认您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI。
+* 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
 
 
@@ -199,7 +199,7 @@ rm /var/run/docker.sock
 ----
 . 安装 Podman。
 +
-从 Red Hat Enterprise Linux 软件仓库获取 Podman。
+您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。
 
 +
 对于 Red Hat Enterprise Linux 9：
@@ -235,32 +235,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. 安装 EPEL 以获取 podman-compose。
-+
-.. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
+. 如果您的系统上还没有 EPEL 存储库包，请安装它。
+
+
+此步骤是必需的，因为 podman-compose 可从 Extra Packages for Enterprise Linux (EPEL) 存储库中获得。
+
+. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. 安装 podman-compose 包 1.5.0。
++
+.. 安装 podman-compose 包 1.5.0。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. 如果使用的是 Red Hat Enterprise Linux 8：
+
+
+. 如果使用的是 Red Hat Enterprise Linux 8：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. 安装 podman-compose 包 1.0.6。
++
+.. 安装 podman-compose 包 1.0.6。
 +
 [source, cli]
 ----
@@ -270,11 +272,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用 `dnf install`命令满足将 podman-compose 添加到 PATH 环境变量的要求。安装命令将 podman-compose 添加到 /usr/bin，它已经包含在 `secure_path`主机上的选项。
 
-. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
-+
-.. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
+.. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
 
 
+. 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
 
 
 [listing]
@@ -318,7 +319,7 @@ podman info | grep networkBackend
 .步骤
 . https://docs.docker.com/engine/install/["查看 Docker 的安装说明"^]
 +
-请按照以下步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为主机不支持该版本。
+按照步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为控制台不支持它。
 
 . 验证 Docker 是否已启用并正在运行。
 +
@@ -685,7 +686,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 
 
-NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console.html["代理维护控制台"]。
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console-proxy.html["代理维护控制台"]。
 
 * 在 Azure 中的 VM 上启用托管标识，以便您可以通过自定义角色提供所需的 Azure 权限。
 +
@@ -694,7 +695,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 
 
 .关于此任务
-NetApp支持站点上提供的安装程序可能是早期版本。安装后，如果有新版本可用，控制台代理会自动更新。
+安装后，如果有新版本可用，控制台代理会自动更新。
 
 .步骤
 . 如果主机上设置了 _http_proxy_ 或 _https_proxy_ 系统变量，请将其删除：
@@ -707,9 +708,14 @@ unset https_proxy
 +
 如果不删除这些系统变量，安装将失败。
 
-. 从下载控制台代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]，然后将其复制到Linux主机上。
+. 下载控制台代理软件，然后将其复制到 Linux 主机。您可以从NetApp Console或NetApp支持网站下载。
 +
-您应该下载适用于您的网络或云中的“在线”代理安装程序。
+** NetApp Console：转到*代理 > 管理 > 部署代理 > 本地部署 > 手动安装*。
++
+选择下载代理安装程序文件或文件的 URL。
+
+** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
+
 
 . 分配运行脚本的权限。
 +
@@ -769,7 +775,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console.html["了解代理维护控制台"]
+NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]
 
 . 如果您使用 Podman，则需要调整 aardvark-dns 端口。
 +

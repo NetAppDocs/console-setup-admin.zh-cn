@@ -244,8 +244,10 @@ sidebar:
     entries:
     - title: 代理维护控制台
       entries:
-      - title: 代理维护控制台
+      - title: 配置检查
         url: "/reference-agent-maint-console.html"
+      - title: 透明代理
+        url: "/reference-agent-maint-console-proxy.html"
     - title: 权限
       entries:
       - title: 权限摘要
