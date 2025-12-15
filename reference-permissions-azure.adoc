@@ -35,6 +35,190 @@ summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一�
 
 
 
+[source, json]
+----
+{
+  "Name": "Console Operator",
+  "Actions": [
+    "Microsoft.Compute/disks/delete",
+    "Microsoft.Compute/disks/read",
+    "Microsoft.Compute/disks/write",
+    "Microsoft.Compute/locations/operations/read",
+    "Microsoft.Compute/locations/vmSizes/read",
+    "Microsoft.Resources/subscriptions/locations/read",
+    "Microsoft.Compute/operations/read",
+    "Microsoft.Compute/virtualMachines/instanceView/read",
+    "Microsoft.Compute/virtualMachines/powerOff/action",
+    "Microsoft.Compute/virtualMachines/read",
+    "Microsoft.Compute/virtualMachines/restart/action",
+    "Microsoft.Compute/virtualMachines/deallocate/action",
+    "Microsoft.Compute/virtualMachines/start/action",
+    "Microsoft.Compute/virtualMachines/vmSizes/read",
+    "Microsoft.Compute/virtualMachines/write",
+    "Microsoft.Compute/images/read",
+    "Microsoft.Network/locations/operationResults/read",
+    "Microsoft.Network/locations/operations/read",
+    "Microsoft.Network/networkInterfaces/read",
+    "Microsoft.Network/networkInterfaces/write",
+    "Microsoft.Network/networkInterfaces/join/action",
+    "Microsoft.Network/networkSecurityGroups/read",
+    "Microsoft.Network/networkSecurityGroups/write",
+    "Microsoft.Network/networkSecurityGroups/join/action",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+    "Microsoft.Network/virtualNetworks/subnets/read",
+    "Microsoft.Network/virtualNetworks/subnets/write",
+    "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+    "Microsoft.Network/virtualNetworks/virtualMachines/read",
+    "Microsoft.Network/virtualNetworks/subnets/join/action",
+    "Microsoft.Resources/deployments/operations/read",
+    "Microsoft.Resources/deployments/read",
+    "Microsoft.Resources/deployments/write",
+    "Microsoft.Resources/resources/read",
+    "Microsoft.Resources/subscriptions/operationresults/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/delete",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/write",
+    "Microsoft.Storage/checknameavailability/read",
+    "Microsoft.Storage/operations/read",
+    "Microsoft.Storage/storageAccounts/listkeys/action",
+    "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Storage/storageAccounts/delete",
+    "Microsoft.Storage/storageAccounts/write",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+    "Microsoft.Storage/storageAccounts/listAccountSas/action",
+    "Microsoft.Storage/usages/read",
+    "Microsoft.Compute/snapshots/write",
+    "Microsoft.Compute/snapshots/read",
+    "Microsoft.Compute/availabilitySets/write",
+    "Microsoft.Compute/availabilitySets/read",
+    "Microsoft.Compute/disks/beginGetAccess/action",
+    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+    "Microsoft.Network/loadBalancers/read",
+    "Microsoft.Network/loadBalancers/write",
+    "Microsoft.Network/loadBalancers/delete",
+    "Microsoft.Network/loadBalancers/backendAddressPools/read",
+    "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+    "Microsoft.Network/loadBalancers/loadBalancingRules/read",
+    "Microsoft.Network/loadBalancers/probes/read",
+    "Microsoft.Network/loadBalancers/probes/join/action",
+    "Microsoft.Authorization/locks/*",
+    "Microsoft.Network/routeTables/join/action",
+    "Microsoft.NetApp/netAppAccounts/read",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete",
+    "Microsoft.Network/privateEndpoints/write",
+    "Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action",
+    "Microsoft.Storage/storageAccounts/privateEndpointConnections/read",
+    "Microsoft.Storage/storageAccounts/managementPolicies/read",
+    "Microsoft.Storage/storageAccounts/managementPolicies/write",
+    "Microsoft.Network/privateEndpoints/read",
+    "Microsoft.Network/privateDnsZones/write",
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/write",
+    "Microsoft.Network/virtualNetworks/join/action",
+    "Microsoft.Network/privateDnsZones/A/write",
+    "Microsoft.Network/privateDnsZones/read",
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+    "Microsoft.Resources/deployments/operationStatuses/read",
+    "Microsoft.Insights/Metrics/Read",
+    "Microsoft.Compute/virtualMachines/extensions/write",
+    "Microsoft.Compute/virtualMachines/extensions/delete",
+    "Microsoft.Compute/virtualMachines/extensions/read",
+    "Microsoft.Compute/virtualMachines/delete",
+    "Microsoft.Network/networkInterfaces/delete",
+    "Microsoft.Network/networkSecurityGroups/delete",
+    "Microsoft.Resources/deployments/delete",
+    "Microsoft.Compute/diskEncryptionSets/read",
+    "Microsoft.Compute/snapshots/delete",
+    "Microsoft.Network/privateEndpoints/delete",
+    "Microsoft.Compute/availabilitySets/delete",
+    "Microsoft.KeyVault/vaults/read",
+    "Microsoft.KeyVault/vaults/accessPolicies/write",
+    "Microsoft.Compute/diskEncryptionSets/write",
+    "Microsoft.KeyVault/vaults/deploy/action",
+    "Microsoft.Compute/diskEncryptionSets/delete",
+    "Microsoft.Resources/tags/read",
+    "Microsoft.Resources/tags/write",
+    "Microsoft.Resources/tags/delete",
+    "Microsoft.Network/applicationSecurityGroups/write",
+    "Microsoft.Network/applicationSecurityGroups/read",
+    "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+    "Microsoft.Network/networkSecurityGroups/securityRules/write",
+    "Microsoft.Network/applicationSecurityGroups/delete",
+    "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+    "Microsoft.Synapse/workspaces/write",
+    "Microsoft.Synapse/workspaces/read",
+    "Microsoft.Synapse/workspaces/delete",
+    "Microsoft.Synapse/register/action",
+    "Microsoft.Synapse/checkNameAvailability/action",
+    "Microsoft.Synapse/workspaces/operationStatuses/read",
+    "Microsoft.Synapse/workspaces/firewallRules/read",
+    "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
+    "Microsoft.Synapse/workspaces/operationResults/read",
+    "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action",
+    "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+    "Microsoft.Compute/images/write",
+    "Microsoft.Network/loadBalancers/frontendIPConfigurations/read",
+    "Microsoft.Compute/virtualMachineScaleSets/write",
+    "Microsoft.Compute/virtualMachineScaleSets/read",
+    "Microsoft.Compute/virtualMachineScaleSets/delete"
+  ],
+  "NotActions": [],
+  "AssignableScopes": [],
+  "Description": "Console Permissions",
+  "IsCustom": "true"
+}
+----
+
+
+== 如何使用 Azure 权限
+
+以下部分介绍了如何对每个NetApp存储系统和数据服务使用权限。如果您的公司政策规定仅在需要时提供权限，则此信息会很有帮助。
+
+
+
+=== Azure NetApp Files
+
+当您使用NetApp Data Classification扫描Azure NetApp Files数据时，代理会发出以下 API 请求：
+
+* NetApp。NetApp /netAppAccounts/read
+* NetApp。NetApp /netAppAccounts/capacityPools/read
+* NetApp/netAppAccounts/capacityPools/volumes/write
+* NetApp/netAppAccounts/capacityPools/volumes/read
+* NetApp/netAppAccounts/capacityPools/volumes/delete
+
+
+
+
+=== NetApp Backup and Recovery
+
+以下各节描述了NetApp Backup and Recovery如何使用权限。
+
+
+
+==== NetApp Backup and Recovery权限
+
+控制台代理会发出以下 API 请求以实现基本的NetApp Backup and Recovery功能：
+
+* Microsoft.Storage/storageAccounts/listkeys/action
+* Microsoft.Storage/storageAccounts/读取
+* Microsoft.Storage/storageAccounts/write
+* Microsoft.Storage/storageAccounts/blobServices/containers/read
+* Microsoft.Storage/storageAccounts/listAccountSas/action
+* Microsoft.Resources/订阅/位置/读取
+* Microsoft.Resources/订阅/资源组/读取
+* Microsoft.Resources/订阅/资源组/资源/读取
+* Microsoft.Resources/订阅/资源组/写入
+* Microsoft.Storage/storageAccounts/managementPolicies/读取
+* Microsoft.Storage/storageAccounts/managementPolicies/write
+* Microsoft.Authorization/locks/write
+* Microsoft.Authorization/locks/read
+
+
 以下是用于备份和恢复的自定义策略，它使用的权限最少，范围也最窄：
 
 [source, json]
@@ -76,47 +260,7 @@ summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一�
 ----
 
 
-== 如何使用 Azure 权限
-
-以下部分介绍了如何对每个NetApp存储系统和数据服务使用权限。如果您的公司政策规定仅在需要时提供权限，则此信息会很有帮助。
-
-
-
-=== Azure NetApp Files
-
-当您使用NetApp Data Classification扫描Azure NetApp Files数据时，代理会发出以下 API 请求：
-
-* NetApp。NetApp /netAppAccounts/read
-* NetApp。NetApp /netAppAccounts/capacityPools/read
-* NetApp/netAppAccounts/capacityPools/volumes/write
-* NetApp/netAppAccounts/capacityPools/volumes/read
-* NetApp/netAppAccounts/capacityPools/volumes/delete
-
-
-
-
-=== NetApp Backup and Recovery权限
-
-控制台代理会发出以下 API 请求以实现基本的NetApp Backup and Recovery功能：
-
-* Microsoft.Storage/storageAccounts/listkeys/action
-* Microsoft.Storage/storageAccounts/读取
-* Microsoft.Storage/storageAccounts/write
-* Microsoft.Storage/storageAccounts/blobServices/containers/read
-* Microsoft.Storage/storageAccounts/listAccountSas/action
-* Microsoft.Resources/订阅/位置/读取
-* Microsoft.Resources/订阅/资源组/读取
-* Microsoft.Resources/订阅/资源组/资源/读取
-* Microsoft.Resources/订阅/资源组/写入
-* Microsoft.Storage/storageAccounts/managementPolicies/读取
-* Microsoft.Storage/storageAccounts/managementPolicies/write
-* Microsoft.Authorization/locks/write
-* Microsoft.Authorization/locks/read
-
-
-
-
-=== 其他备份和恢复权限
+==== 高级备份和恢复权限
 
 控制台代理发出以下 API 请求，以实现高级备份和恢复操作以及搜索和恢复功能。这些权限允许管理网络、密钥库和受管身份：
 
@@ -136,9 +280,9 @@ summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一�
 
 
 
-=== 备份和恢复的旧版权限
+==== 备份和恢复的旧版权限
 
-当您使用搜索和恢复功能时，代理会发出以下 API 请求。只有在索引版本 v2 发布之前启用了旧版索引功能，才需要这些权限：
+当您使用搜索和恢复功能时，代理会发出以下 API 请求。只有在 2025 年 2 月索引版本 v2 发布之前启用了旧版索引功能，才需要这些权限：
 
 * Microsoft.Synapse/工作区/写入
 * Microsoft.Synapse/工作区/读取
@@ -648,129 +792,9 @@ summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一�
 
 === 2025年11月11日
 
-为了使示例能够反映备份和恢复所需的最低权限，已从 JSON 角色示例中移除以下权限：
+添加了一个自定义 JSON 策略，该策略体现了尽可能少的权限和尽可能小的范围。
 
-[%collapsible]
-====
-* Microsoft.Compute/磁盘/删除
-* Microsoft.Compute/磁盘/读取
-* Microsoft.Compute/磁盘/写入
-* Microsoft.Compute/位置/操作/读取
-* Microsoft.Compute/位置/vmSizes/读取
-* Microsoft.Compute/操作/读取
-* Microsoft.Compute/virtualMachines/instanceView/读取
-* Microsoft.Compute/virtualMachines/powerOff/action
-* Microsoft.Compute/虚拟机/读取
-* Microsoft.Compute/虚拟机/重启/操作
-* Microsoft.Compute/virtualMachines/解除分配/操作
-* Microsoft.Compute/virtualMachines/启动/操作
-* Microsoft.Compute/virtualMachines/vmSizes/读取
-* Microsoft.Compute/虚拟机/写入
-* Microsoft.Compute/图像/读取
-* Microsoft.Network/locations/operationResults/read
-* Microsoft.Network/位置/操作/读取
-* Microsoft.Network/网络接口/读取
-* Microsoft.Network/网络接口/写入
-* Microsoft.Network/networkInterfaces/join/action
-* Microsoft.Network/networkSecurityGroups/读取
-* Microsoft.Network/networkSecurityGroups/写入
-* Microsoft.Network/networkSecurityGroups/加入/操作
-* Microsoft.Network/virtualNetworks/读取
-* Microsoft.Network/virtualNetworks/checkIpAddressAvailability/读取
-* Microsoft.Network/virtualNetworks/子网/读取
-* Microsoft.Network/virtualNetworks/子网/写入
-* Microsoft.Network/virtualNetworks/子网/virtualMachines/读取
-* Microsoft.Network/virtualNetworks/virtualMachines/读取
-* Microsoft.Network/virtualNetworks/子网/加入/操作
-* Microsoft.Resources/部署/操作/读取
-* Microsoft.Resources/部署/读取
-* Microsoft.Resources/部署/写入
-* Microsoft.Resources/资源/读取
-* Microsoft.Resources/subscriptions/operationresults/read
-* Microsoft.Resources/subscriptions/resourceGroups/delete
-* Microsoft.Storage/checknameavailability/读取
-* Microsoft.Storage/操作/读取
-* Microsoft.Storage/storageAccounts/删除
-* Microsoft.Storage/使用情况/读取
-* Microsoft.Compute/快照/写入
-* Microsoft.Compute/快照/读取
-* Microsoft.Compute/可用性集/写入
-* Microsoft.Compute/可用性集/读取
-* Microsoft.Compute/磁盘/beginGetAccess/操作
-* Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read
-* Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write
-* Microsoft.Network/loadBalancers/读取
-* Microsoft.Network/loadBalancers/写入
-* Microsoft.Network/loadBalancers/删除
-* Microsoft.Network/loadBalancers/backendAddressPools/读取
-* Microsoft.Network/loadBalancers/backendAddressPools/join/action
-* Microsoft.Network/loadBalancers/loadBalancingRules/读取
-* Microsoft.Network/loadBalancers/探测/读取
-* Microsoft.Network/loadBalancers/探测/加入/操作
-* Microsoft.授权/锁/*
-* Microsoft.Network/routeTables/join/action
-* NetApp。NetApp /netAppAccounts/read
-* NetApp。NetApp /netAppAccounts/capacityPools/read
-* NetApp/netAppAccounts/capacityPools/volumes/write
-* NetApp/netAppAccounts/capacityPools/volumes/read
-* NetApp/netAppAccounts/capacityPools/volumes/delete
-* Microsoft.Network/privateEndpoints/写入
-* Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action
-* Microsoft.Storage/storageAccounts/privateEndpointConnections/读取
-* Microsoft.Network/privateEndpoints/读取
-* Microsoft.Network/privateDnsZones/写入
-* Microsoft.Network/privateDnsZones/virtualNetworkLinks/写入
-* Microsoft.Network/virtualNetworks/join/action
-* Microsoft.Network/privateDnsZones/A/写入
-* Microsoft.Network/privateDnsZones/读取
-* Microsoft.Network/privateDnsZones/virtualNetworkLinks/读取
-* Microsoft.Resources/deployments/operationStatuses/read
-* Microsoft.Insights/Metrics/读取
-* Microsoft.Compute/virtualMachines/extensions/write
-* Microsoft.Compute/virtualMachines/扩展/删除
-* Microsoft.Compute/virtualMachines/extensions/read
-* Microsoft.Compute/虚拟机/删除
-* Microsoft.Network/networkInterfaces/删除
-* Microsoft.Network/networkSecurityGroups/删除
-* Microsoft.Resources/部署/删除
-* Microsoft.Compute/diskEncryptionSets/读取
-* Microsoft.Compute/快照/删除
-* Microsoft.Network/privateEndpoints/删除
-* Microsoft.Compute/可用性集/删除
-* Microsoft.KeyVault/保管库/读取
-* Microsoft.KeyVault/保管库/访问策略/写入
-* Microsoft.Compute/diskEncryptionSets/写入
-* Microsoft.KeyVault/保管库/部署/操作
-* Microsoft.Compute/diskEncryptionSets/删除
-* Microsoft.Resources/标签/阅读
-* Microsoft.Resources/标签/写入
-* Microsoft.Resources/标签/删除
-* Microsoft.Network/applicationSecurityGroups/写入
-* Microsoft.Network/applicationSecurityGroups/读取
-* Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action
-* Microsoft.Network/networkSecurityGroups/securityRules/写入
-* Microsoft.Network/applicationSecurityGroups/删除
-* Microsoft.Network/networkSecurityGroups/securityRules/删除
-* Microsoft.Synapse/工作区/写入
-* Microsoft.Synapse/工作区/读取
-* Microsoft.Synapse/工作区/删除
-* Microsoft.Synapse/注册/操作
-* Microsoft.Synapse/checkNameAvailability/操作
-* Microsoft.Synapse/工作区/operationStatuses/读取
-* Microsoft.Synapse/工作区/防火墙规则/读取
-* Microsoft.Synapse/工作区/replaceAllIpFirewallRules/操作
-* Microsoft.Synapse/工作区/操作结果/读取
-* Microsoft.Synapse/工作区/privateEndpointConnectionsApproval/操作
-* Microsoft.ManagedIdentity/userAssignedIdentities/分配/操作
-* Microsoft.Compute/图像/写入
-* Microsoft.Network/loadBalancers/frontendIPConfigurations/读取
-* Microsoft.Compute/virtualMachineScaleSets/写入
-* Microsoft.Compute/virtualMachineScaleSets/读取
-* Microsoft.Compute/virtualMachineScaleSets/删除
-
-
-====
-以下权限已添加到 JSON 角色示例中：
+以下权限已添加到最小备份和恢复权限列表中：
 
 * Microsoft.Authorization/locks/write
 * Microsoft.Authorization/locks/read
@@ -803,8 +827,6 @@ summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一�
 * Microsoft.Resources/订阅/资源组/写入
 * Microsoft.Storage/storageAccounts/managementPolicies/读取
 * Microsoft.Storage/storageAccounts/managementPolicies/write
-* Microsoft.Authorization/locks/write
-* Microsoft.Authorization/locks/read
 
 
 
