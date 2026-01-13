@@ -15,6 +15,11 @@
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何对控制台代理运行配置检查。"]
 
+.针对Cloud Volumes ONTAP 的其他 Google Cloud 权限
+为了支持 Google Cloud 中的Cloud Volumes ONTAP管理，控制台代理现在需要额外的权限。已向控制台代理使用的服务帐户添加以下权限：compute.forwardingRules.update
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["查看权限变更日志。"]
+
 
 
 === NetApp Console管理
