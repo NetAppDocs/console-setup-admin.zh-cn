@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-sign-up-saas.html 
+permalink: task-enable-read-only-mode.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
 summary: 要开始使用控制台，第一步是使用您的NetApp支持站点凭据注册或登录，或者创建NetApp Console登录帐户。如果您是公司第一个注册的用户，您将在控制台中以组织管理员的身份创建一个新组织。如果贵公司已有组织机构，您可以注册或登录以访问该机构。 
 ---
-= 注册或登录NetApp Console
+= 为NetApp Console组织启用只读模式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,35 @@ summary: 要开始使用控制台，第一步是使用您的NetApp支持站点�
 
 
 [role="lead"]
-要使用控制台，请注册或使用您的NetApp支持站点凭据登录，或者创建NetApp Console登录。如果您是公司第一个注册的人，您将创建一个新的组织并担任管理员。如果贵公司已有组织，请使用您现有的NetApp支持站点凭据或公司单点登录 (SSO) 注册或登录。
+为安全起见，您可以为NetApp Console组织启用只读模式。在只读模式下，用户可以查看资源和设置，但不能进行任何更改。
+
+在只读模式下，具有管理员角色的用户必须手动提升权限才能进行更改，这确保了更改是有意为之的。
+
+.所需访问权限
+超级管理员或组织管理员。
+
+
+
+== 为您的控制台组织启用只读模式
+
+启用只读模式以限制对控制台组织的更改。所有用户仍然可以查看资源。拥有管理员角色的用户，如果不手动提升权限，则无法在控制台中执行任何操作。
+
+启用只读模式后，用户会看到一个横幅，通知他们该组织处于只读模式。用户必须前往用户设置来提升其角色。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 在“组织”选项卡中，选择要设置为只读模式的组织的“编辑组织设置”。
+. 在“只读模式”部分，将开关拨到“开”位置启用只读模式，然后选择“保存”。
++
+image:screenshot-read-only-slider.png["屏幕截图显示只读模式开关处于开启状态。"]
+
+
 
 
 
 == 以初始组织管理员身份注册NetApp Console
 
-如果贵公司还没有NetApp Console组织，请注册创建一个。第一个用户将成为组织管理员，并管理用户帐户和权限。您可以稍后更新角色并添加更多管理员。
+如果贵公司还没有NetApp Console组织，请注册创建一个。第一个用户是管理员，负责管理帐户和权限。您可以稍后更新角色并添加管理员。
 
 .步骤
 . 打开 Web 浏览器并转到 https://console.netapp.com["NetApp Console"^]
@@ -46,10 +68,10 @@ NOTE: 注册表格中只允许使用英文字符。
 . 选择*让我们开始吧*。
 
 
-+ 作为首次用户和组织管理员，您可以按照引导流程添加存储资源、创建控制台代理等等。 link:task-console-assistant.html["了解如何使用控制台助手。"^]
++ 作为首次担任管理员的用户，请按照引导流程添加存储、创建控制台代理等。 link:task-console-assistant.html["了解如何使用控制台助手。"]
 
 .下一步
-作为管理员，在完成控制台助手中包含的步骤后，您应该规划身份和访问策略，将用户添加到您的组织，并分配角色。 link:task-iam-get-started.html["了解NetApp Console的身份和访问管理"^]
+作为管理员，在完成控制台助手中包含的步骤后，您应该规划身份和访问策略，将用户添加到您的组织，并分配角色。 link:task-iam-get-started.html["了解NetApp Console的身份和访问管理"]
 
 
 
@@ -77,7 +99,7 @@ NOTE: 注册表格中只允许使用英文字符。
 
 
 . 登录后，请阅读并接受最终用户许可协议。
-. 如果系统提示您创建组织，请关闭对话框并告知控制台管理员，以便他们可以将您添加到控制台组织并授予您访问权限。 link:task-user-settings.html#contact-admin["了解如何联系组织管理员。"^]
+. 如果系统提示您创建组织，请关闭对话框并告知控制台管理员，以便他们可以将您添加到控制台组织并授予您访问权限。 link:task-user-settings.html#contact-admin["了解如何联系组织管理员。"]
 
 
 .下一步

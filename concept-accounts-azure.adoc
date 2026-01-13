@@ -44,7 +44,7 @@ image:screenshot_accounts_select_azure.gif["显示“详细信息和凭证”页
 
 如果要在控制台中使用不同的 Azure 凭据，则必须通过以下方式授予所需的权限link:task-adding-azure-accounts.html["在 Microsoft Entra ID 中创建和设置服务主体"]对于每个 Azure 帐户。下图显示了另外两个帐户，每个帐户都设置了服务主体和提供权限的自定义角色：
 
-image:diagram_permissions_multiple_azure.png["概念图显示了初始 Azure 帐户，该帐户通过自定义角色和托管标识接收权限，以及另外两个通过自定义角色和服务主体接收权限的帐户。"]
+image:diagram_permissions_multiple_azure.png["概念图显示了通过自定义角色和托管标识获得权限的初始 Azure 帐户，以及通过自定义角色和服务主体获得权限的两个附加帐户。"]
 
 那么你会link:task-adding-azure-accounts.html#add-credentials-azure["将帐户凭据添加到控制台"]通过提供有关 AD 服务主体的详细信息。
 

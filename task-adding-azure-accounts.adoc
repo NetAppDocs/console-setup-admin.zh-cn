@@ -83,7 +83,7 @@ TIP: 如果您在现有系统上手动安装了控制台代理软件，则不会
 .关于此任务
 下图描述了控制台如何获取在 Azure 中执行操作的权限。服务主体对象与一个或多个 Azure 订阅绑定，代表 Microsoft Entra ID 中的控制台，并分配给允许所需权限的自定义角色。
 
-image:diagram_azure_authentication.png["概念图显示控制台在进行 API 调用之前从 Microsoft Entra ID 获取身份验证和授权。在 Active Directory 中，控制台角色定义权限。它与一个或多个 Azure 订阅以及代表 Cloud Manger 应用程序的服务主体对象相关联。"]
+image:diagram_azure_authentication.png["概念图，显示控制台在进行 API 调用之前，如何从 Microsoft Entra ID 获取身份验证和授权。控制台角色定义了 Active Directory 中的权限。它与一个或多个 Azure 订阅以及代表控制台应用程序的服务主体对象相关联。"]
 
 .步骤
 . <<创建 Microsoft Entra 应用程序>> 。

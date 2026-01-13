@@ -598,7 +598,6 @@
   <block id="bd572303cf9daecbf8e01f72f337d250" category="list-text">您可以更改成员的现有角色或删除角色。</block>
   <block id="4e650af420bdf02411b6420197fa8b73" category="list-text">要更改成员的角色，请选择要更改的角色旁边的“*更改*”。您只能将角色更改为同一角色类别内的角色。例如，您可以从一个数据服务角色更改为另一个数据服务角色。确认更改。</block>
   <block id="9a3441a99feefccc201b51666c68d0d2" category="inline-image-macro">类似垃圾桶的图标</block>
-  <block id="9410d39af130c313b964685327e24e7a" category="list-text">要取消分配成员的角色，请选择<block ref="65d5e1d842da62aa3653eba17c2cb20e" category="inline-image-macro-rx" type="image"></block>取消为该成员分配相应的角色。系统会要求您确认删除。</block>
   <block id="d63f1c66d83451eade374ce0e602a4b4" category="list-text">在表格中，展开您想要查看成员分配角色的组织、文件夹或项目的相应行，然后在“角色”列中选择“查看”。</block>
   <block id="45e27b9fcac7d60b4663ab56a2bac350" category="paragraph">您还可以直接从以下目录中的控制台代理主机访问 JSON 格式的验证报告和配置日志：</block>
   <block id="647fa610609fa01d971d4fbb3656f443" category="paragraph">如果您在*审核*页面上选中了*验证代理配置*复选框，则控制台会在创建控制台代理后验证其配置。如果控制台无法部署代理，它会提供可下载的报告来帮助您排除故障。</block>
@@ -1009,75 +1008,20 @@
   <block id="9c1c5b1b2bca352ed0ccb3521d870e14" category="section-title">删除了支持聊天</block>
   <block id="6a6050b7d9c0524d1d41dffdc70d6613" category="paragraph">NetApp已从NetApp Console中删除了支持聊天功能。使用“管理”&gt;“支持”页面来创建和管理支持案例。</block>
   <block id="d6b258792ff06f82933c74eeb8aef591" category="doc">组织</block>
-  <block id="3c4f7accda6c4e5b05c122dfef01bebe" category="paragraph">以下部分描述了在BlueXP中使用 IAM 的不同组件。</block>
-  <block id="7d5499ec968e6c97c7264ba95116b2d6" category="paragraph">使用BlueXP IAM 时，您将管理以下组件：</block>
-  <block id="ba49e39a2ccedcfe8d31a1eb6440393b" category="list-text">该组织</block>
   <block id="60c7502b5c40479908aed919a94c1786" category="list-text">文件夹</block>
   <block id="54e1d44609e3abed11f6e1eb6ae54988" category="list-text">项目</block>
   <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="list-text">资源</block>
   <block id="ef53538ae41a651c7f72ab6cb1135d8c" category="list-text">成员</block>
-  <block id="cc3fc292512275828d3e52e16ae33c1e" category="list-text">角色和权限</block>
-  <block id="63d750f29eced0ef6f1a75aa4da71fd5" category="paragraph">BlueXP资源按层次结构组织：</block>
-  <block id="790fa8644dbcadf85fb5b45d7fca979d" category="list-text">该组织处于层级结构的顶端。</block>
-  <block id="2ede3ee5af948d52fa8b02b8b724edbc" category="list-text">文件夹是组织或其他文件夹的子文件夹。</block>
-  <block id="c6d4d895d45b22ea5448413edb3695fb" category="list-text">项目是组织或文件夹的子项。</block>
-  <block id="d328918eb0bde8153b59b715b29dab04" category="list-text">资源与一个或多个文件夹或项目相关联。</block>
   <block id="c811c1fbfa4dd81873bbea559d575b16" category="paragraph">下图从基本层面说明了这一层次结构。</block>
-  <block id="10119787527a31da075fede0d76f0203" category="inline-image-macro">概念图显示了BlueXP IAM 的资源层次结构：组织、文件夹、项目和资源。</block>
-  <block id="7e775be1764f78009e9846f9006651fa" category="paragraph"><block ref="7e775be1764f78009e9846f9006651fa" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="31e872437335d3d81483e87525b418b2" category="paragraph">_组织_是 BlueXP 的 IAM 系统的顶层，通常代表您的公司。您的组织由文件夹、项目、成员、角色和资源组成。连接器与组织中的具体项目相关联。</block>
-  <block id="2514dc2ef1e14f7696838f5cc8280315" category="paragraph">当您注册BlueXP时，系统会提示您创建一个新组织。</block>
-  <block id="ee07c487a7e0b5c18c94b4bded207535" category="paragraph">_文件夹_使您能够将相关项目分组在一起，并将它们与组织中的其他项目分开。例如，文件夹可能代表地理位置（欧盟或美国东部）、站点（伦敦或多伦多）或业务部门（工程或营销）。</block>
-  <block id="4f4b6c71ed586432b1f40e519b555023" category="paragraph">文件夹可以包含项目、其他文件夹或两者的组合。</block>
-  <block id="073b4a34202498afcb0022a2400e1b32" category="paragraph">_项目_代表BlueXP中的一个工作区，组织成员可以从BlueXP画布访问该工作区以管理资源。例如，一个项目可以包括一个Cloud Volumes ONTAP系统、一个本地ONTAP集群或一个 FSx for ONTAP文件系统。</block>
-  <block id="420332558cea2f6b48a90723f1ba988b" category="paragraph">一个组织可以有一个或多个项目。项目可以直接位于组织下或文件夹内。</block>
-  <block id="6df9abd9c7b51bbfb5b24919ebf7a0d9" category="paragraph">_资源_是您在BlueXP中创建或发现的工作环境。</block>
-  <block id="4bcb4158bb794b5f6897b12a3d885700" category="paragraph">当您创建或发现资源时，该资源将与当前选定的项目相关联。这可能是您想要与该资源关联的唯一项目。但您可以选择将该资源与您组织中的其他项目相关联。</block>
-  <block id="448d5e2671e1140d3206b53b2cd8fcb3" category="paragraph">例如，您可以将Cloud Volumes ONTAP系统与另一个项目或组织中的所有项目关联。如何关联资源取决于您组织的需求。</block>
-  <block id="168c1dcd033cefa7491c208fa91302b0" category="inline-xref">了解有关使用连接器和BlueXP IAM 的更多信息</block>
-  <block id="41b86f6155d6363543815bac5dea73ad" category="admonition">您还可以将连接器与组织中的另一个文件夹或项目关联。<block ref="9e7f5047feaf45527e5897b8e3a9f3c3" category="inline-xref-macro-rx"></block> 。</block>
   <block id="45fe20b7675ad9a40c796bc19a899151" category="section-title">何时将资源与文件夹关联</block>
-  <block id="e95e1ea14aa7dd2b3186795a75b45b13" category="paragraph">当您需要分离责任或存储资源时，您可以将资源组织到文件夹中。</block>
-  <block id="c2b6281f68ca211ace1d3b7217d3af91" category="paragraph">_组织管理员_可能会将资源与文件夹关联，以便_文件夹或项目管理员_可以将该资源与文件夹中的相应项目关联。</block>
   <block id="1058f4a748781e5148a8a3c55abb0aab" category="paragraph">例如，假设您有一个包含两个项目的文件夹：</block>
   <block id="6ca67105e5f9ace975f61928538c4611" category="inline-image-macro">该图显示了一个文件夹和文件夹中的两个项目：项目 A 和项目 B。</block>
   <block id="754e6597ff2f536e3e344211df138650" category="paragraph"><block ref="754e6597ff2f536e3e344211df138650" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f7b8351932b4b34ebd9a3c35f609142" category="paragraph">_组织管理员_可以将资源与文件夹关联：</block>
-  <block id="13d52e7b25d0d3a36ee2a18423d7e3fc" category="inline-image-macro">该图显示了一个文件夹、与该文件夹关联的资源以及位于该文件夹中的两个项目：项目 A 和项目 B。</block>
-  <block id="a762f5e5e726c59b96c9704f6690afd5" category="paragraph"><block ref="a762f5e5e726c59b96c9704f6690afd5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="abcb4f764f4be71c7de8f1f00d041876" category="paragraph">将资源与文件夹关联并不会自动使文件夹中的所有项目都可以访问该资源。但是文件夹或项目管理员可以决定哪些项目可以使用该资源。做出决定后，管理员就可以将资源与正确的项目关联起来。</block>
   <block id="390c53a5725b855c6866ac325cec9ffc" category="paragraph">在此示例中，管理员将资源与项目 A 关联：</block>
-  <block id="a6359392d37b223c34ad47dc59840824" category="inline-image-macro">该图显示了一个文件夹、文件夹中的两个项目：项目 A 和项目 B，以及与项目 A 关联的资源。</block>
-  <block id="033735cdc14884b812013b44ececf16d" category="paragraph"><block ref="033735cdc14884b812013b44ececf16d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7daf841f0e77802f670d882e89b2933a" category="paragraph">拥有项目 A 权限的成员现在可以访问该资源。</block>
   <block id="edd719acf18ba2b24326bae940c8d405" category="paragraph">您的组织的成员是用户帐户或服务帐户。应用程序通常使用服务帐户来完成指定的任务，而无需人工干预。</block>
-  <block id="1e600081d8c3ddee81a1c4fde234a8ea" category="paragraph">一个组织至少有一个具有_组织管理员_角色的用户（创建该组织的用户会自动分配此角色）。您可以将其他成员添加到组织，并在资源层次结构的不同级别分配不同的权限。</block>
-  <block id="f7498a2b1cad9068d22c6cae249fa86a" category="paragraph">在BlueXP IAM 中，您不会直接向组织成员授予权限。相反，您授予每个成员一个角色。角色包含一组权限，使成员能够在资源层次结构的特定级别执行特定操作。</block>
-  <block id="113f89b00e292b60a3abd42cf2ae334d" category="paragraph">通过在资源层次结构的特定部分提供权限，您可以将访问权限限制为成员完成其任务所需的资源。</block>
-  <block id="805218308fdc32b426f980b2af2fc1bb" category="section-title">您可以在层次结构中分配角色</block>
-  <block id="3b9526de74c9dc5ffc9af4580bef6209" category="paragraph">当您将成员与角色关联时，您需要选择整个组织、特定文件夹或特定项目。您选择的角色将授予成员对层次结构中选定部分中的资源的权限。</block>
-  <block id="3a3412900d3c19fdb5732fe4f6694e1d" category="section-title">角色继承</block>
-  <block id="1dbcc05186db9ce123a5c671a4b5512c" category="paragraph">当您分配角色时，该角色将在组织层次结构中继承：</block>
-  <block id="54e4ca1414109471d3f30c5ad4a0e082" category="list-text">您在组织级别授予的角色将被组织中的所有文件夹、项目和资源继承。这意味着该成员对组织中的所有内容拥有权限。</block>
-  <block id="352f1c445e075db00bbcab968cda6823" category="list-text">您在文件夹级别授予的角色将被文件夹中的所有文件夹、项目和资源继承。</block>
-  <block id="5ac64a6676e634fcfd02895729d7efc4" category="paragraph">例如，如果您在文件夹级别分配角色，并且该文件夹有三个项目，则该成员将对这三个项目和任何相关资源拥有权限。</block>
-  <block id="f7cc750b6297ad0e9c4ddc933def018d" category="list-text">您在项目级别授予的角色将被与该项目相关的所有资源继承。</block>
-  <block id="d91e4a7f7d3d057f2ceb3bf51ca4b809" category="section-title">多重角色</block>
-  <block id="3a6537a8a84cacd748ff26028e103b68" category="paragraph">您可以为每个组织成员分配组织层次结构不同级别的角色。可以是相同的角色，也可以是不同的角色。例如，您可以为项目 1 和项目 2 分配成员角色 A。或者您可以为项目 1 分配成员角色 A，为项目 2 分配角色 B。</block>
-  <block id="b1371d1a1eaa0db34a42be4569a94358" category="section-title">访问角色</block>
-  <block id="55b6d94d9ad6439fe5c46ccdba149ed3" category="paragraph">BlueXP支持多种访问角色，您可以将其分配给组织成员。</block>
   <block id="f0b3d6677a212276d758f01224d831be" category="paragraph"><block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block> 。</block>
-  <block id="1f2652079b5030c3e1f5c5b95701a71c" category="paragraph">当“组织管理员”创建连接器时， BlueXP自动将该连接器与组织和当前选定的项目关联。 _组织管理员_可以从组织中的任何位置自动访问该连接器。但是，如果您的组织中还有其他具有不同角色的成员，则这些成员只能从创建该连接器的项目访问该连接器，除非您将该连接器与其他项目关联。</block>
-  <block id="a84eaa1aafc5282e553ddc52e74d77b9" category="paragraph">在以下情况下，您可能希望使连接器可用于另一个项目：</block>
-  <block id="9ce6bd5f8ae0c74108c66519e8a1d5dd" category="list-text">您希望允许组织中的成员使用现有的连接器在另一个项目中创建或发现其他工作环境</block>
-  <block id="1294a41af24549496295a289ef7392a4" category="list-text">您将现有资源与另一个项目关联，并且该资源由连接器管理</block>
-  <block id="73cf487cae9590b5cffed6be5a610252" category="paragraph">如果使用BlueXP连接器发现与其他项目关联的资源，那么您还需要将连接器与该资源现在关联的项目关联起来。否则，没有“组织管理员”角色的成员将无法从BlueXP画布访问连接器及其相关资源。</block>
-  <block id="6d257318c199abbb1afe6c1bda69ac59" category="paragraph">您可以从BlueXP IAM 中的 *连接器* 页面创建关联：</block>
-  <block id="878220f2fc28384f3ff6858db2ecdbb8" category="list-text">将连接器与项目关联</block>
-  <block id="840678c266fb13b1e6f3bb15d8389d12" category="paragraph">当您将连接器与项目关联时，可以在查看项目时从BlueXP画布访问该连接器。</block>
-  <block id="e85ac916ed94cb910b4635be78c76be1" category="list-text">将连接器与文件夹关联</block>
-  <block id="b586758af094fc2bd17d0a7998a3c157" category="paragraph">将连接器与文件夹关联并不会自动使文件夹中的所有项目都可以访问该连接器。在您将连接器与特定项目关联之前，组织成员无法从项目访问连接器。</block>
-  <block id="201614334b2723fd3338cf698f37ecd4" category="paragraph">_组织管理员_可能会将连接器与文件夹关联，以便_文件夹或项目管理员_可以决定将该连接器与文件夹中的相应项目关联。</block>
   <block id="e54158140168d6bfda7951dabc8a0468" category="doc">了解NetApp Console中的 AWS 凭证和权限</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">初始 AWS 凭证</block>
   <block id="055263949ee2b6bf634a650444f9e58d" category="inline-link-macro">查看控制台如何使用权限</block>
@@ -1091,8 +1035,6 @@
   <block id="3f9d6d7606eb17252b87adea9b9f458c" category="list-text">创建和管理 FSx for ONTAP文件系统</block>
   <block id="1fba93959336f34e08c6d34d0ca68230" category="paragraph">请参阅以下部分以了解更多详细信息。</block>
   <block id="660e634b3a4b701f7ae1b606cb192b19" category="section-title">添加 AWS 凭证以将控制台代理与另一个 AWS 账户一起使用</block>
-  <block id="25743d3dcac2dfe95c6e899571bfccc3" category="inline-image-macro">显示两个附加帐户的概念图。每个都有一个 IAM 策略，一个附加到 IAM 用户，另一个附加到 IAM 角色。</block>
-  <block id="49a11e441cb19dc0d43b1d3a3794d033" category="paragraph"><block ref="49a11e441cb19dc0d43b1d3a3794d033" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f1e73f0a47d8521aadcfb5742670657b" category="paragraph">例如，您可以在创建新的Cloud Volumes ONTAP系统时在凭据之间切换：</block>
   <block id="21eadec2055a6f0a03fad1207bdeece7" category="inline-image-macro">屏幕截图显示在“详细信息和凭据”页面中选择“切换帐户”后在云提供商帐户之间进行选择。</block>
   <block id="670a8a47b7b3908f997fce0320ebba4d" category="paragraph"><block ref="516be10b96635b1f3aefce4dcd4540dd" category="inline-image-macro-rx" type="image"></block></block>
@@ -1152,8 +1094,6 @@
   <block id="87201b9d2d1782996b39bbbe3547cd00" category="section-title">其他 Azure 凭据</block>
   <block id="b63eb36e7e2e258bb1104cee2cd67c79" category="inline-link-macro">在 Microsoft Entra ID 中创建和设置服务主体</block>
   <block id="f1670184aa6276ac8e4f4912d0a7301a" category="paragraph">如果要在控制台中使用不同的 Azure 凭据，则必须通过以下方式授予所需的权限<block ref="45c7e71be639d18293cd100d389b6dc3" category="inline-link-macro-rx"></block>对于每个 Azure 帐户。下图显示了另外两个帐户，每个帐户都设置了服务主体和提供权限的自定义角色：</block>
-  <block id="21df124adba9039de035d33b17717b15" category="inline-image-macro">概念图显示了初始 Azure 帐户，该帐户通过自定义角色和托管标识接收权限，以及另外两个通过自定义角色和服务主体接收权限的帐户。</block>
-  <block id="0d613716f3793197f23817b5b3a36ec3" category="paragraph"><block ref="0d613716f3793197f23817b5b3a36ec3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="41c4f1179d3acc3642596a9782001d66" category="inline-link-macro">将帐户凭据添加到控制台</block>
   <block id="225be26a904a308465cc03d3c32bef0d" category="paragraph">那么你会<block ref="207228f9151d3df069fb7f16dfb3c529" category="inline-link-macro-rx"></block>通过提供有关 AD 服务主体的详细信息。</block>
   <block id="451c5548be4e9e7bdee0e30d3122050a" category="paragraph"><block ref="5df7abb03e9cd39c0665b677aaa45ef4" category="inline-image-macro-rx" type="image"></block></block>
@@ -1198,42 +1138,20 @@
   <block id="1833b862078dbb4dc1ea1c935b25b75f" category="list-text"><block ref="1833b862078dbb4dc1ea1c935b25b75f" category="inline-link-macro-rx"></block></block>
   <block id="4ec920ccbe2fc417ccd7dcd957eb9653" category="inline-link">了解如何在 Google Cloud 中部署Cloud Volumes ONTAP并选择项目</block>
   <block id="eae530fcdecfaf8ee890d4814cafd997" category="list-text"><block ref="eae530fcdecfaf8ee890d4814cafd997" category="inline-link-rx"></block></block>
-  <block id="1ffac481825810aa6d8bc2bbd6e9f0d5" category="summary">_控制台代理_是在您的云网络或本地网络上运行的NetApp软件。您可以使用控制台代理将NetApp Console服务连接到您的存储环境。</block>
   <block id="53101ed6c57b4f1b9f3eb58eb938c2b1" category="doc">了解NetApp Console代理</block>
-  <block id="a2bc646d8356827e60828ee5d135d25a" category="paragraph">_控制台代理_在您的云网络或本地网络中运行。您可以使用控制台代理将NetApp Console服务连接到您的存储环境。</block>
-  <block id="34dc0992630166a9ee338cb2bbcf285f" category="section-title">没有控制台代理您可以做什么</block>
-  <block id="5c3c98f86750c7b0364106f4c4c18721" category="paragraph">如果您不部署控制台代理，则某些控制台功能和服务可用：</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSx for NetApp ONTAP</block>
-  <block id="2e25b2633a61a7b4243d119b40c693e8" category="inline-link">了解哪些操作需要控制台代理或链接</block>
-  <block id="f2a98b63d5b6deacc3ab5c090502f1f2" category="paragraph">某些操作需要控制台代理或NetApp Workloads 链接。<block ref="df41765196184a753d31e48b088e08b6" category="inline-link-rx"></block></block>
   <block id="8d3abfc56116d32646bce9531012ccf6" category="list-text">自动化中心</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
-  <block id="f991c5969c5c46c6f408fd726f910304" category="paragraph">您不需要控制台代理来管理Azure NetApp Files，但需要使用NetApp Data Classification来扫描Azure NetApp Files。</block>
   <block id="4b3238b2edd994dbf80a66b2fce8841e" category="list-text">NetApp Copy and Sync</block>
-  <block id="bc2098e843ff2dcfb064f6b75537efac" category="list-text">监控许可证使用情况，订阅监控需要控制台代理</block>
-  <block id="90cc27614de74bfaac946da5abcad817" category="paragraph">通常，您无需使用控制台代理即可向NetApp Console添加许可证。</block>
-  <block id="6a0be6d5fa404fc685fcda4dec15c177" category="paragraph">需要代理来添加Cloud Volumes ONTAP _基于节点的_许可证，因为数据来自安装在Cloud Volumes ONTAP系统上的许可证。</block>
-  <block id="184e70c253a2ad370c338775e7482497" category="list-text">直接发现本地ONTAP集群</block>
-  <block id="f9b71618b1d05cfcd0726a79c3f829f8" category="paragraph">您不需要控制台代理即可将本地ONTAP集群添加到控制台，但需要控制台代理来添加其他控制台功能和数据服务。</block>
-  <block id="9b049adb8a41cc7a0f049e9ffbda62b5" category="inline-link">了解有关本地ONTAP集群的发现和管理选项的更多信息</block>
-  <block id="557086d692ef9d1cc86a94361985a0fe" category="paragraph"><block ref="557086d692ef9d1cc86a94361985a0fe" category="inline-link-rx"></block></block>
   <block id="01ea8320c69e46ffe573d0801d9eefe1" category="list-text">NetApp工作负载</block>
-  <block id="17adde6aed0933a9e39d1cd0883785c4" category="section-title">当需要控制台代理时</block>
-  <block id="ea7e44bae4d44c1c658ffe4ef1d40fab" category="paragraph">在标准模式下，控制台需要控制台代理来执行以下操作：</block>
   <block id="df583ae7ba964fd4806b55904da81813" category="list-text">警报</block>
-  <block id="234eb6bb27d592cbf06aa6537a33a380" category="list-text">Amazon FSx for ONTAP管理功能</block>
   <block id="d79294e72dc3584cc12c98a7a931315d" category="list-text">Amazon S3 存储</block>
   <block id="2b3e8f910d66604cd77f93b333670468" category="list-text">Azure Blob 存储</block>
   <block id="cc6088539286339733631d73fb51774b" category="list-text">NetApp Backup and Recovery</block>
   <block id="604880f6f585767eee17ec85b3c76533" category="list-text">数据分类</block>
   <block id="19cbafc0246850c97323cac4fb786794" category="list-text">NetApp Disaster Recovery</block>
-  <block id="c7a576f5db262c0475afa4a53822979e" category="list-text">经济效率^1^</block>
-  <block id="390e388eccc77b388b4d54d73b76f902" category="list-text">Google Cloud Storage 存储桶</block>
-  <block id="016d4dd0efd43648613b0639e13ba2c7" category="list-text">本地ONTAP集群与NetApp数据服务的集成</block>
   <block id="a94a2dfcff08cd86c973716edaf32722" category="list-text">NetApp Cloud Tiering</block>
   <block id="6f267103f7f652e22e0ead9f66014cd4" category="list-text">NetApp Volume Caching</block>
-  <block id="06f4d4213c3d87db39929c4ce6ffcc0f" category="paragraph">^1^ 您无需控制台代理即可访问这些服务，但需要控制台代理来启动操作。</block>
-  <block id="2f7410e0094251e63bad9225a4bd4205" category="paragraph">您始终需要一个控制台代理才能在受限模式下使用控制台。</block>
   <block id="9e70ee0a0c0f8a306b9fcce2746cc5c8" category="section-title">控制台代理必须始终处于运行状态</block>
   <block id="d8df9e40feabe0bd65e73cc9203b2219" category="paragraph">控制台代理是NetApp Console的基本组成部分。您（客户）有责任确保相关代理随时处于正常运行和可访问状态。控制台可以处理短暂的代理中断，但您必须快速修复基础设施故障。</block>
   <block id="2834a9b643366c558b54d8d3426db386" category="paragraph">本文档受 EULA 管辖。按照文档以外的方式操作产品可能会影响其功能和您的 EULA 权利。</block>
@@ -1250,13 +1168,11 @@
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link-macro">了解NetApp Console部署模式</block>
   <block id="0f99c6c066f1002e098cbdaa87427745" category="paragraph"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block> 。</block>
   <block id="277baff1e6ebc32f068b4cb7de953e5e" category="section-title">如何安装控制台代理</block>
-  <block id="db9101be071ebe11e7a67828afb8c886" category="paragraph">您可以直接从控制台、云提供商的市场安装控制台代理，也可以在您自己的 Linux 主机或 VCenter 环境中手动安装软件。如何开始取决于您是在标准模式还是受限模式下使用控制台。</block>
   <block id="d0fb4185dcdae7937ec99f5b30ad1a65" category="list-text"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block></block>
   <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">开始在标准模式下使用NetApp Console</block>
   <block id="1b04b04eae157b7a2e94f5fe3a41ed68" category="list-text"><block ref="1b04b04eae157b7a2e94f5fe3a41ed68" category="inline-link-macro-rx"></block></block>
   <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">开始在受限模式下使用NetApp Console</block>
   <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
-  <block id="51364b16802c39c0a147dcd705c784df" category="section-title">云权限</block>
   <block id="cc8f36711f6212dccee4062562263a83" category="paragraph">在标准模式下使用控制台时，如何提供权限取决于您计划如何创建控制台代理。</block>
   <block id="235df19fd66aa61dd8174f1a6480f822" category="paragraph">要了解如何设置权限，请参阅以下内容：</block>
   <block id="961f8ee244937e243425632b39f7defe" category="inline-link-macro">AWS 中的代理安装选项</block>
@@ -1277,7 +1193,6 @@
   <block id="108ad88d40691c0e1197ab3eba5b6fd5" category="paragraph">您有责任在后续版本中添加新权限时更新控制台代理策略。发行说明列出了新的权限。</block>
   <block id="6b5f02c0e240003ab735d340f52a7333" category="section-title">代理升级</block>
   <block id="7c1aeb8999deeb4f5ccaa49b7d44e424" category="paragraph">NetApp每月更新代理软件以添加功能并提高稳定性。某些控制台功能（如Cloud Volumes ONTAP和本地ONTAP集群管理）依赖于控制台代理版本和设置。</block>
-  <block id="5ae32585fa310b47843d2bd6a91b4832" category="paragraph">在标准或受限模式下，如果控制台代理可以访问互联网，它将自动更新。</block>
   <block id="28d40d49edc5d8557dfa8624f4921f55" category="section-title">操作系统和虚拟机维护</block>
   <block id="09ecb112c1af6628255a4b08c6a7cbed" category="inline-xref">控制台代理必须始终处于运行状态</block>
   <block id="2686a2ef3c47d0e0eafe183d768a5487" category="paragraph"><block ref="f653f7d16df54a3c9e88f23235c315ba" category="inline-xref-macro-rx"></block> 。</block>
@@ -1336,78 +1251,18 @@
   <block id="b76c6c3c96f9fd2d4a4d8f47ff90bcb3" category="list-text"><block ref="b76c6c3c96f9fd2d4a4d8f47ff90bcb3" category="inline-link-macro-rx"></block></block>
   <block id="3f2aa4bd073d2458603c46bc293f8ade" category="inline-link-macro">与 SAML 身份提供商建立联合连接</block>
   <block id="00aef0f14c29d451cdbf8446ce6b0b8e" category="list-text"><block ref="00aef0f14c29d451cdbf8446ce6b0b8e" category="inline-link-macro-rx"></block></block>
-  <block id="080468cc3bf22fc3af03a81a687c09f8" category="summary">NetApp Console中的身份和访问管理 (IAM) 使您能够控制对组织资源的访问。</block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">了解NetApp Console身份和访问管理</block>
-  <block id="88d2fb652b1708341e0fb25f72c33e7c" category="paragraph">NetApp Console中的身份和访问管理 (IAM) 使您能够组织和控制对NetApp资源的访问。您可以根据组织的层次结构来组织资源。例如，您可以按地理位置、站点或业务部门组织资源。然后，您可以将 IAM 角色分配给层次结构特定部分的成员，从而阻止访问层次结构其他部分的资源。</block>
   <block id="557e5a677a2db55310052bc62fe96998" category="inline-link-macro">了解控制台部署模式</block>
-  <block id="8405362106e8a6cec493f51b335fe282" category="list-text"><block ref="8405362106e8a6cec493f51b335fe282" category="inline-link-macro-rx"></block></block>
-  <block id="76d639487fb1b996848978763a4f48b3" category="section-title">IAM 的工作原理</block>
-  <block id="079eba20aee75f3f1ce07584c0cfd5bf" category="paragraph">IAM 允许您通过将用户访问角色分配给层次结构的特定部分来授予资源访问权限。例如，可以为成员分配具有五种资源的项目的文件夹或项目管理员角色。</block>
-  <block id="f11f3311a89dff4cf9dfbbd01eab9de5" category="paragraph">使用 IAM 时，您可以管理以下组件：</block>
-  <block id="d209d8595b2fe961ab6003a04a35f614" category="paragraph">资源按层次结构组织：</block>
-  <block id="13282f3859807af569124a1afe5ca477" category="inline-image-macro">显示访问管理的资源层次结构的概念图：组织、文件夹、项目和资源。</block>
-  <block id="919a61a743c246bba2996c30968a5a9e" category="paragraph"><block ref="919a61a743c246bba2996c30968a5a9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e5c1519cd8d7472771e0a519c54ccae1" category="paragraph">_组织_是控制台 IAM 系统的顶层，通常代表您的公司。您的组织由文件夹、项目、成员、角色和资源组成。代理与组织内的特定项目相关联。</block>
-  <block id="d1a673947eb13f6a24d3391e4329c5be" category="paragraph">您可以组织文件夹以包含项目、其他文件夹或两者。它们是可选的。</block>
-  <block id="4dca17714b7d6f905b41c25867af08ac" category="paragraph">_项目_代表控制台中的一个工作区，组织成员可以从*系统*页面访问该工作区以管理资源。例如，一个项目可以包括一个Cloud Volumes ONTAP系统、一个本地ONTAP集群或一个 FSx for ONTAP文件系统。</block>
-  <block id="d335f0c6c7c4582889ad18b13e897975" category="paragraph">_资源_是您在控制台中创建或发现的系统。</block>
-  <block id="dc961b0ec9508c7ece5d2241e545258d" category="inline-xref">了解有关使用代理与 IAM 的更多信息</block>
-  <block id="9e4accfff2796f8555c64502739ce18d" category="admonition">代理还可以与多个项目相关联。<block ref="9c62b344f0c4c5a47c0b67109239d190" category="inline-xref-macro-rx"></block> 。</block>
-  <block id="fc684e5246159b2c02963d967d21fdff" category="paragraph">您还可以选择将资源与文件夹关联，但这是可选的，并且可以满足特定用例的需求。</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">_组织管理员_可以将资源与文件夹关联，以便_文件夹或项目管理员_可以将其链接到文件夹中的相应项目。</block>
   <block id="13a6a98927a83ffb05bccef1ebf3e2a4" category="paragraph">将资源与文件夹关联并不会使所有项目都可以访问它；只有文件夹或项目管理员可以看到它。  _文件夹或项目管理员_决定哪些项目可以访问它，并将资源与适当的项目关联。</block>
-  <block id="8292dcb0cfa074e6ae26b46ddc606162" category="paragraph">每个组织至少包含一个具有“组织管理员”角色的用户（控制台会自动将此角色分配给创建该组织的用户）。您可以将其他成员添加到组织并在资源层次结构的不同级别分配不同的权限。</block>
-  <block id="f8a1d162e7dda7b8ac65995a5416eeb3" category="paragraph">您不能直接向组织成员授予权限。相反，您授予每个成员一个角色。角色包含一组权限，使成员能够在资源层次结构的特定级别执行特定操作。</block>
-  <block id="d0a2fd44b574c80dea744b29f7095360" category="paragraph">在层次结构级别授予角色会限制成员对所需资源和服务的访问。</block>
-  <block id="7e5a81668c826cd6eb55e2a526c3b3fc" category="list-text">在组织级别授予成员访问角色将赋予他们访问所有文件夹、项目和资源的权限。</block>
-  <block id="f4a866cc8d962c94d7c7fd8decdd7e6c" category="list-text">当您在文件夹级别授予访问角色时，文件夹中的所有文件夹、项目和资源都会继承该角色。</block>
-  <block id="34aee3ad45d37ad6cf603311eb0838fb" category="list-text">当您在项目级别授予访问角色时，与该项目相关的所有资源都会继承该角色。</block>
   <block id="2c2e7be4268cd14a5e106bbdd7de7669" category="section-title">访问角色</block>
   <block id="d1e1d436ff9ab09fa8255740cda7f298" category="paragraph">控制台提供您可以分配给组织成员的访问角色。</block>
-  <block id="180a151cc1c6549cc0d70497f6ef52f2" category="paragraph">当“组织管理员”创建控制台代理时，控制台会自动将该代理与组织和当前选定的项目关联。 _组织管理员_可以从组织中的任何位置自动访问该代理。但是，如果您的组织中有具有不同角色的其他成员，则这些成员只能从创建该代理的项目访问该代理，除非您将该代理与其他项目关联。</block>
-  <block id="0b35624e47f777c075433bd07405bc7b" category="paragraph">在以下情况下，您可以为另一个项目提供控制台代理：</block>
-  <block id="61aed18951cb3655f76053b824f65366" category="list-text">您希望允许组织中的成员使用现有代理来创建或发现另一个项目中的其他系统</block>
-  <block id="75adf56287e5fede53eed009fe4bb57c" category="list-text">您将现有资源与另一个项目关联，并且该资源由控制台代理管理</block>
-  <block id="7b275cfe45d5807fa2ff28352f86b675" category="paragraph">如果使用控制台代理发现与其他项目关联的资源，那么您还需要将该代理与该资源现在关联的项目关联。否则，没有“组织管理员”角色的成员将无法从“*系统*”页面访问该代理及其关联资源。</block>
-  <block id="22e4429379f26aa3a67cf79e0cf36ee5" category="paragraph">您可以从控制台 IAM 中的“代理”页面创建关联：</block>
-  <block id="cb328ffeba08b23f00e4a2b11f345edd" category="list-text">将控制台代理与项目关联</block>
-  <block id="d7b6e36e14f890cd30414dd8c36b315a" category="paragraph">当您将控制台代理与项目关联时，可以在查看项目时从*系统*页面访问该代理。</block>
-  <block id="292a4ccb006ad9eb35d4c3e0307d5d52" category="list-text">将控制台代理与文件夹关联</block>
-  <block id="8b8aab150b57c51a433433f6e9fced92" category="paragraph">将控制台代理与文件夹关联并不会自动使文件夹中的所有项目都可以访问该代理。组织成员无法从项目访问控制台代理，除非您将代理与特定项目关联。</block>
-  <block id="ecbfa727d7fbe0557035d8c9b8e89ae6" category="paragraph">_组织管理员_可能会将控制台代理与文件夹关联，以便_文件夹或项目管理员_可以决定将该代理与文件夹中的相应项目关联。</block>
-  <block id="0561b5e58584cfa2d9e645e47c0c3bb1" category="section-title">IAM 示例</block>
-  <block id="5f340589d07c141520bb25fe26a78177" category="paragraph">这些示例演示了如何建立您的组织。</block>
-  <block id="135b3c5ddb2b53a7189302bba4295fc6" category="section-title">简单的组织</block>
-  <block id="bc43b12884b61655079a5a16d18ad9de" category="paragraph">下图显示了使用默认项目且没有文件夹的组织的简单示例。一名成员管理整个组织。</block>
-  <block id="a72765d3ccd5c52417f70bed4c7b5d10" category="inline-image-macro">概念图显示了一个具有项目、相关资源和一个组织管理员的组织。</block>
-  <block id="face2518a7991fc077049ce88a451506" category="paragraph"><block ref="face2518a7991fc077049ce88a451506" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="59621237129094427f9a72a5abd1c4ab" category="section-title">先进组织</block>
-  <block id="c6b77e1242f5c61d1b3a4fcc23ecbc5f" category="paragraph">下图显示了一个组织使用文件夹来组织业务中每个地理位置的项目。每个项目都有自己的一套相关资源。成员包括组织管理员和组织中每个文件夹的管理员。</block>
-  <block id="c42c21a7b10f03efb2158ca490037fe6" category="inline-image-macro">概念图显示一个组织有三个文件夹，每个文件夹有三个项目及其相关资源。共有四名成员：一名组织管理员和三名文件夹管理员。</block>
-  <block id="bf82c3800cfba815226d6198ee52f743" category="paragraph"><block ref="bf82c3800cfba815226d6198ee52f743" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b6e184636b4849c22597dc9f585f903c" category="section-title">IAM 的功能</block>
-  <block id="ae938f0d309c4a1db08d3c8f262b39eb" category="paragraph">以下示例描述了如何使用 IAM 来管理控制台组织：</block>
-  <block id="8ee1b3030cf2306807b2455986fcdbb7" category="list-text">授予特定成员特定角色，以便他们只能完成所需的任务。</block>
-  <block id="f91eea9f01a5fb5fa77a710b4ba9c3f8" category="list-text">由于成员调动部门或承担额外责任而修改成员权限。</block>
-  <block id="ef27124892f4f09e9c2bb90c1203ff27" category="list-text">删除已离开公司的用户。</block>
-  <block id="e1f2316dbf17a6638de690d7aa30435a" category="list-text">将文件夹或项目添加到您的层次结构中，因为新的业务部门已添加NetApp存储。</block>
-  <block id="b2cc75cf0917e7a2e3b9e5436f277bca" category="list-text">将资源与另一个项目关联起来，因为该资源具有另一个团队可以利用的能力。</block>
-  <block id="4d7877e30c207ca4005b216478fe60b7" category="list-text">查看成员可以访问的资源。</block>
-  <block id="6cb05f8d1ecb6a2e9d2feda7fc446108" category="list-text">查看与特定项目相关的成员和资源。</block>
   <block id="41428e1a8f5e5ef9e0277fc3516edda7" category="inline-link-macro">开始使用NetApp Console中的 IAM</block>
   <block id="ce33d88948928be33d0ed21e3173d5f6" category="list-text"><block ref="ce33d88948928be33d0ed21e3173d5f6" category="inline-link-macro-rx"></block></block>
-  <block id="4091566b79f546023e0b3c3dca45e391" category="inline-link-macro">使用文件夹和项目在NetApp Console中组织您的资源</block>
-  <block id="ca50d057fbbad3c8ec7e5344b112803e" category="list-text"><block ref="ca50d057fbbad3c8ec7e5344b112803e" category="inline-link-macro-rx"></block></block>
   <block id="6ed38fc27f6f1161e50eaf968f5ac26a" category="inline-link-macro">管理NetApp Console成员及其权限</block>
   <block id="ec180bba6d4f60fdcf634df6bbc386ce" category="list-text"><block ref="ec180bba6d4f60fdcf634df6bbc386ce" category="inline-link-macro-rx"></block></block>
-  <block id="fd345e29cb62c01ba1d4171017902879" category="inline-link-macro">管理NetApp Console组织中的资源层次结构</block>
-  <block id="471aa63a508cd0a524e051c1eee8bb18" category="list-text"><block ref="471aa63a508cd0a524e051c1eee8bb18" category="inline-link-macro-rx"></block></block>
   <block id="15f73bdf087fb0fd54c4481d4dc02d6c" category="inline-link-macro">将代理与文件夹和项目关联</block>
-  <block id="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="list-text"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block></block>
-  <block id="fcf7f94bff9ad201c2ad67548361caa3" category="inline-link-macro">在NetApp Console项目和组织之间切换</block>
-  <block id="cb4c504866718434ac51aadba7ecd536" category="list-text"><block ref="cb4c504866718434ac51aadba7ecd536" category="inline-link-macro-rx"></block></block>
-  <block id="b2e7e5223ec4cb6c91429bf7de09474b" category="inline-link-macro">重命名您的NetApp Console组织</block>
-  <block id="b4627a29a833ca738523505c6101b826" category="list-text"><block ref="b4627a29a833ca738523505c6101b826" category="inline-link-macro-rx"></block></block>
   <block id="01e8a182567bd2c2dcbbff70cc3ab8df" category="inline-link-macro">监控或审计 IAM 活动</block>
   <block id="08f5de863be0cce720d83cf5f9e2325a" category="list-text"><block ref="08f5de863be0cce720d83cf5f9e2325a" category="inline-link-macro-rx"></block></block>
   <block id="f50849d7a51a2af22661c16f98df65ff" category="inline-link-macro">NetApp Console访问角色</block>
@@ -1492,8 +1347,6 @@
   <block id="d96ba69951eb7ddb699d3c264ee7fa6e" category="cell">市场订阅和 BYOL</block>
   <block id="49aa7067a1e5b4d8f3ea23a65bb94a2e" category="paragraph">阅读以下部分以了解有关这些模式的更多信息，包括支持哪些NetApp Console功能和服务。</block>
   <block id="cc59a00ae083d792f922023c8850d35c" category="paragraph">下图是标准模式部署的示例。</block>
-  <block id="1700f6f559d78aa24bdb6c977e878329" category="inline-image-macro">概念图显示了提供基于 Web 的控制台、SaaS 层和 auth0 身份验证的公共互联网、运行控制台代理并管理Cloud Volumes ONTAP 的云中虚拟网络以及本地数据中心的AFF集群。</block>
-  <block id="c7c404be9c360b8321cf141fe96f0ed3" category="paragraph"><block ref="c7c404be9c360b8321cf141fe96f0ed3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca136a9cca838ef5c3092290e511fb42" category="paragraph">控制台在标准模式下的工作方式如下：</block>
   <block id="7b0c55f247d6f53c6782615b53af4619" category="list-text">出站沟通</block>
   <block id="c43c363ca98a3640bd064d1c0bd3a413" category="list-text">需要从控制台代理到控制台 SaaS 层、到云提供商的公开可用资源以及到日常操作的其他基本组件的连接。</block>
@@ -1526,8 +1379,6 @@
   <block id="e9fd7484e38200d8baa6e573d1d7294a" category="inline-link-macro">了解如何开始使用标准模式</block>
   <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block> 。</block>
   <block id="88f3c518a924b9747d81192ccc7eeaeb" category="paragraph">下图是限制模式部署的示例。</block>
-  <block id="5c6ad751df2bb486ab60a2eaa01a789c" category="inline-image-macro">概念图显示了可使用 SaaS 层和 auth0 身份验证的公共互联网、运行控制台代理并提供基于 Web 的控制台访问的云中的虚拟网络，以及管理本地数据中心中的Cloud Volumes ONTAP和AFF集群。</block>
-  <block id="247b31d452bc370c193d56244d236305" category="paragraph"><block ref="247b31d452bc370c193d56244d236305" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b8302c030e9a62244d45c84ad8ce6eb8" category="paragraph">控制台在限制模式下的工作方式如下：</block>
   <block id="12e0780cde42b76465d8a45194d8c0f2" category="list-text">代理需要与控制台 SaaS 层建立出站连接，以实现数据服务、软件升级、身份验证和元数据传输。</block>
   <block id="a932bee9dfd2d4381168cfa68eca19a8" category="paragraph">控制台 SaaS 层不会发起与代理的通信。代理启动与控制台 SaaS 层的所有通信，根据需要提取或推送数据。</block>
@@ -1624,11 +1475,7 @@
   <block id="c0e2dcb1678fc18292f1a56144d5f43a" category="paragraph">您可以通过为组织内的特定项目或文件夹分配角色来实现此目的。</block>
   <block id="0f5725960c303f4472d3cc7550c2fd5a" category="inline-image-macro">显示资源共享的图表</block>
   <block id="4830e6d5d6c968f2f2908ed6acc095af" category="paragraph"><block ref="4830e6d5d6c968f2f2908ed6acc095af" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8663789040cc1ce772d464910f7dfa02" category="summary">NetApp Console可在企业范围内跨本地和云环境集中管理NetApp存储和数据服务。</block>
   <block id="b0be8ab9543f692468afd4189eda23e9" category="doc">了解NetApp Console</block>
-  <block id="7bc83ccf5497bea26ff35d73f1bf2427" category="paragraph">NetApp Console在企业级内部和云环境中提供对NetApp存储和NetApp Data Services的集中管理，提供实时洞察、更快的工作流程和简化的管理，高度安全且合规。</block>
-  <block id="a844cc34d4be653e82cc15771dd9efd2" category="paragraph">它是一种服务 (SaaS) 平台，提供存储管理、数据移动性、数据保护以及数据分析和控制。管理功能通过基于 Web 的控制台和 API 提供。</block>
-  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="34af3a9c49c2c5c991ebfa2c64342ed6" category="paragraph">该控制台通过集成数据服务统一混合多云的存储管理和保护，以保护和优化数据。</block>
   <block id="7d55a867fdb967d9025d0801ef6eb458" category="section-title">集中存储管理</block>
   <block id="6601d888a62f87cae78b273d4598403b" category="paragraph">使用控制台发现、部署和管理云和本地存储。</block>
@@ -1640,8 +1487,6 @@
   <block id="b9c8cb06fa02abe70007fad1ae9d0b57" category="list-text">云对象存储</block>
   <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="section-title">存储管理</block>
   <block id="0182e364824d96db33c54a813b67edca" category="paragraph">在控制台中，_systems_ 代表已发现或已部署的存储。您可以选择一个系统将其与NetApp数据服务集成或管理存储，例如添加卷。</block>
-  <block id="a8ce21090a27e3689291a21b27b1f817" category="inline-image-macro">控制台的屏幕截图显示了多个系统，其中一个已被选中，并显示了启用NetApp数据服务或选择 *进入系统* 来管理存储的能力。</block>
-  <block id="a40a174407ed88cfdc63249b07e3ae40" category="paragraph"><block ref="a40a174407ed88cfdc63249b07e3ae40" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3212175a9a38f1ace0526f2a09ce6c99" category="section-title">集成数据服务和存储管理，以保护、保障和优化数据</block>
   <block id="f9f008da2a17fe3a33a465a0c004c33e" category="paragraph">控制台提供数据服务以保护和维护存储可用性。</block>
   <block id="a0409ef7729969662c91fdaee22bc933" category="list-text">存储警报</block>
@@ -1686,10 +1531,7 @@
   <block id="b5d4f8f6ade5a4fbfeb3724b7bbc0b5e" category="paragraph">一些附加功能和数据服务需要控制台代理。它使您能够管理本地和云环境中的资源和流程。您需要它来管理一些系统（例如， Cloud Volumes ONTAP）并使用一些NetApp数据服务。</block>
   <block id="919907c49b488683fa1ddd5c9088c12b" category="inline-link-macro">了解有关控制台代理的更多信息</block>
   <block id="9e97ec538c2df79d1e5e48262f80e2f3" category="paragraph"><block ref="a0861367aee4f711e39ff50c5df170be" category="inline-link-macro-rx"></block> 。</block>
-  <block id="05cb21b1c0958252effc11eb9d437f38" category="section-title">部署模式</block>
-  <block id="189b4f6eadcbbd36f0feb8dc1b8e1caf" category="paragraph">NetApp为NetApp Console提供了两种部署模式：_标准模式_使用软件即服务 (SaaS) 层实现全部功能，而_受限模式_限制出站连接。</block>
   <block id="93ed0ac1db1f6b5a46cfc5e5f9034f18" category="inline-link-macro">了解没有互联网连接的站点的BlueXP （私人模式）。</block>
-  <block id="d104909de4dacb114d4d06622a661f95" category="paragraph">NetApp继续为不需要出站连接的站点提供BlueXP 。  BlueXP仅在私人模式下可用。<block ref="f1018912945653d0f5d1d6c88d05acfe" category="inline-link-macro-rx"></block></block>
   <block id="cf7a9a2cd5377e378f9b1405ec142a3b" category="inline-link-macro">了解有关部署模式的更多信息</block>
   <block id="e9dbe7d99d4ec8722dd3b33c7c526c3e" category="paragraph"><block ref="fb1800a80fb75441187032d2305f2c40" category="inline-link-macro-rx"></block> 。</block>
   <block id="0b43e955bb49e08923e9b43ee20ef2b3" category="section-title">SOC 2 类型 2 认证</block>
@@ -1999,7 +1841,6 @@
   <block id="ebf2e736fadeb05a39d24aa702faf1b3" category="cell"><block ref="ebf2e736fadeb05a39d24aa702faf1b3" category="inline-link-macro-rx"></block></block>
   <block id="f2ad52479c9d7a5dc51ed3f3ab03e45a" category="cell">允许用户不受限制地访问组织内的所有项目和文件夹，向任何项目或文件夹添加成员，以及执行任何任务和使用任何没有明确关联角色的数据服务。具有此角色的用户可以通过创建文件夹和项目、分配角色、添加用户以及管理系统（如果他们拥有适当的凭据）来管理您的组织。这是唯一可以创建控制台代理的访问角色。</block>
   <block id="b749e7fb3c856e9ce827dee8e365115c" category="cell"><block ref="b749e7fb3c856e9ce827dee8e365115c" category="inline-link-macro-rx"></block></block>
-  <block id="358da483c73c4b8118c411b88ef8c480" category="cell">允许用户不受限制地访问分配的项目和文件夹。可以将成员添加到他们管理的文件夹或项目中，以及执行任何任务并在他们被分配的文件夹或项目内的资源上使用任何数据服务或应用程序。文件夹或项目管理员无法创建控制台代理。</block>
   <block id="e8df21ebe8cfc76c6960895bb0bc899b" category="cell"><block ref="e8df21ebe8cfc76c6960895bb0bc899b" category="inline-link-macro-rx"></block></block>
   <block id="f086bc5e806b733d57a2a45ac22134d5" category="cell">允许用户使用控制台创建和管理联合，从而实现单点登录 (SSO)。</block>
   <block id="fe0c8042406bdaec2695339b5ae04e72" category="cell"><block ref="fe0c8042406bdaec2695339b5ae04e72" category="inline-link-macro-rx"></block></block>
@@ -2626,9 +2467,6 @@
   <block id="2d3fc94cd0898448a15e6e05f4098b6f" category="inline-link-macro">设置 AWS 权限</block>
   <block id="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="cell"><block ref="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="inline-link-macro-rx"></block></block>
   <block id="78b382509bdd4a7b6a4640d195cfbf2a" category="cell">为控制台代理提供权限</block>
-  <block id="c9c719cb0217b958ec8c7414fa63880a" category="inline-link-macro">向控制台代理添加更多 AWS 凭证</block>
-  <block id="9c0558b0c2119452ada22cb61fbef4d9" category="inline-link-macro">控制台代理的 AWS 权限</block>
-  <block id="5fcaed6ff7619142f6cf0442d3bfaa6b" category="cell"><block ref="5fcaed6ff7619142f6cf0442d3bfaa6b" category="inline-link-macro-rx"></block></block>
   <block id="c926e674205f7757d37d0a06a12a2b10" category="cell">使用NetApp Backup and Recovery将本地ONTAP集群备份到 Amazon S3</block>
   <block id="194ec4e4b51309967d460875197de1ae" category="cell">在ONTAP卷上激活备份时， NetApp Backup and Recovery会提示您输入具有特定权限的 IAM 用户的访问密钥和密码。</block>
   <block id="ba37f89d4d4c6ea1b335169793666fbe" category="inline-link">设置备份的 S3 权限</block>
@@ -2638,7 +2476,6 @@
   <block id="421a1f316880c0380ff3114c3bf34f83" category="inline-link">了解如何自行设置 IAM 角色</block>
   <block id="45c54074547a6e7b96c3122cd38fa458" category="cell"><block ref="45c54074547a6e7b96c3122cd38fa458" category="inline-link-rx"></block></block>
   <block id="07914074e8936595a39fa14377c5047c" category="cell">在 AWS 中部署数据代理</block>
-  <block id="18a3707b00c2a06ba4d52fc010e2ac0e" category="cell">用于部署数据代理的 AWS 用户帐户必须具有特定权限。</block>
   <block id="572539efea3b8fc37d4d9f01097ce1b1" category="inline-link">在 AWS 中部署数据代理所需的权限</block>
   <block id="cfddb3eace2cd819afed174de216343e" category="cell"><block ref="cfddb3eace2cd819afed174de216343e" category="inline-link-rx"></block></block>
   <block id="5a4538181503849bbcd06a951c8a8e2d" category="cell">为数据经纪人提供权限</block>
@@ -2655,7 +2492,6 @@
   <block id="8d5c6b0c966cc9b5f51ab3ebb991e7ec" category="inline-link">了解如何为 FSx 设置 AWS 凭证</block>
   <block id="fd5c2279fb88ee0ad3118f3be652a1a6" category="cell"><block ref="fd5c2279fb88ee0ad3118f3be652a1a6" category="inline-link-rx"></block></block>
   <block id="6bc8bd282f003afcaaf88391550efbaf" category="cell">将本地ONTAP集群分层到 Amazon S3</block>
-  <block id="10c690a39fb5b28e51f8b6d7c7fd3552" category="cell">当您启用NetApp Cloud Tiering到 AWS 时，向导会提示您输入访问密钥和密钥。这些凭证被传递到ONTAP集群，以便ONTAP可以将数据分层到 S3 存储桶。</block>
   <block id="827bb82562627531a1105788bd9826e6" category="inline-link">设置 S3 分层权限</block>
   <block id="5f2c172dbfc6022aa5027029dc114852" category="cell"><block ref="5f2c172dbfc6022aa5027029dc114852" category="inline-link-rx"></block></block>
   <block id="bf689424a4d3a62d9c0d40a07107c3d2" category="section-title">Azure 权限</block>
@@ -2667,7 +2503,6 @@
   <block id="610a789ea69218ae2657ee289d3ea1ab" category="paragraph">当控制台在 Azure 中部署控制台代理 VM 时，它会创建一个自定义角色，该角色提供管理该 Azure 订阅中的资源和流程所需的权限。</block>
   <block id="410f33250f13598d6849ceba7b4120a3" category="inline-link-macro">向控制台代理添加更多 Azure 凭据</block>
   <block id="e1e6784eb91937369cc77d605f81165a" category="paragraph">如果您从市场启动控制台代理，如果您手动安装控制台代理，或者如果您<block ref="b386d5f716662b44565e96428cb16fbd" category="inline-link-macro-rx"></block>。</block>
-  <block id="bcfaa2da0752134728f286af2b223842" category="paragraph">您还需要确保策略是最新的，因为后续版本中会添加新的权限。</block>
   <block id="8c605586e9435454b7e63325e36fa996" category="inline-link-macro">控制台代理的 Azure 权限</block>
   <block id="0f1b892db46ff16e97b0f8d8338ef138" category="paragraph"><block ref="0f1b892db46ff16e97b0f8d8338ef138" category="inline-link-macro-rx"></block></block>
   <block id="51fa9005485af9016610af9875c0e913" category="cell">将Cloud Volumes ONTAP备份到 Azure Blob 存储</block>
@@ -2677,7 +2512,6 @@
   <block id="8625ed737cea7841c422023f4e27bc1d" category="inline-link">使用备份和恢复将Cloud Volumes ONTAP数据备份到 Azure Blob 存储</block>
   <block id="19aa170b6eb2d116be230ed7b485bbe6" category="list-text"><block ref="19aa170b6eb2d116be230ed7b485bbe6" category="inline-link-rx"></block></block>
   <block id="f66493a5c1b72a6a6a675e1d79371789" category="cell">将本地ONTAP集群备份到 Azure Blob 存储</block>
-  <block id="df8a92294eabcce5e6356671d915d447" category="cell">使用NetApp Backup and Recovery本地 ONTAP 集群时，您需要向控制台代理添加权限才能使用“搜索和恢复”功能。</block>
   <block id="957901780fae6c72beed34248e8e252d" category="inline-link">使用备份和恢复将本地ONTAP数据备份到 Azure Blob 存储</block>
   <block id="651492a6900c9cc9941c3dd88935a740" category="cell"><block ref="651492a6900c9cc9941c3dd88935a740" category="inline-link-rx"></block></block>
   <block id="2647d0cabcc3f6f95c50e907a499a04c" category="section-title">NetApp复制和同步</block>
@@ -2952,8 +2786,6 @@
   <block id="6e95efa08c25f0af7a47ce778b6734b5" category="section-title">使用服务主体授予 Azure 权限</block>
   <block id="a06070c99bdaf961ed7ad071a020fa3b" category="paragraph">控制台需要权限才能在 Azure 中执行操作。您可以通过在 Microsoft Entra ID 中创建和设置服务主体并获取控制台所需的 Azure 凭据来向 Azure 帐户授予所需的权限。</block>
   <block id="58dd89cf40cb35c7db016a8034997010" category="paragraph">下图描述了控制台如何获取在 Azure 中执行操作的权限。服务主体对象与一个或多个 Azure 订阅绑定，代表 Microsoft Entra ID 中的控制台，并分配给允许所需权限的自定义角色。</block>
-  <block id="2696fa794fd6dbc8ce1bfa48d130afda" category="inline-image-macro">概念图显示控制台在进行 API 调用之前从 Microsoft Entra ID 获取身份验证和授权。在 Active Directory 中，控制台角色定义权限。它与一个或多个 Azure 订阅以及代表 Cloud Manger 应用程序的服务主体对象相关联。</block>
-  <block id="2a61a7e0fe7c15660322ffb9d88588d0" category="paragraph"><block ref="2a61a7e0fe7c15660322ffb9d88588d0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f2ef9d77d1510f334154dfe7d165c04f" category="list-text"><block ref="f6c5720bdbe1f9f8e6fbf04de7a942ac" category="inline-xref-macro-rx"></block> 。</block>
   <block id="b5cf760d7a6af85b245fd69703dbf615" category="list-text"><block ref="043a4d29eb639fbbd1f56826dde09f8f" category="inline-xref-macro-rx"></block> 。</block>
   <block id="a7fa3c1cd24012fd30c1c780e76ed243" category="list-text"><block ref="64c971bf921f5a3e2106b2880ac38406" category="inline-xref-macro-rx"></block> 。</block>
@@ -3160,25 +2992,10 @@
   <block id="c569dd49f93a05d537d61130ed43e6e9" category="list-text">选中复选框以启用该选项，然后选择*保存*。</block>
   <block id="d03af09bc0729475142a25d2101f89cb" category="summary">如果您是首次使用NetApp Console，控制台助手将指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。</block>
   <block id="d87d84551cb844b0885926102e010a21" category="doc">开始使用NetApp Console助手</block>
-  <block id="353de4ac300e65b2fec1e023d43775e8" category="paragraph">如果您是首次使用NetApp Console并具有组织管理员角色的用户，则可以使用控制台助手指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理数据。</block>
   <block id="8cef8f584fd9250404884341b9d1faf9" category="section-title">访问控制台助手所需的角色</block>
   <block id="62e7589e6fbf937c65e401243a7b18fc" category="paragraph">控制台助手仅对具有组织管理员角色的用户可用。</block>
-  <block id="3f8d156ec79d1ba58a6edcc11b513c8f" category="section-title">控制台助手什么时候出现？</block>
-  <block id="b849ed2934d21e42ae7ade5deab5eb71" category="paragraph">在完成强制性设置任务之前，控制台助手可在NetApp Console主页上使用。</block>
-  <block id="66e107092fbbaa7674c253527698105d" category="paragraph">使用助手完成这些任务，其中一些是强制性的：</block>
   <block id="63cc3bd9a1d39c996544d35459a3e83f" category="list-text">添加NetApp支持站点 (NSS) 帐户。</block>
-  <block id="9a1d2c3a232f3692f2db1f53e2ff513f" category="list-text">通过部署控制台代理（强制步骤）连接到您的存储资产。</block>
-  <block id="2999351f71503eb3b6d48edab88260fd" category="list-text">通过添加或发现集群来管理您的系统（强制步骤）。</block>
   <block id="eda3fd992dc421b5ecf21b005442d1e7" category="list-text">添加市场订阅或 PAYGO 许可证。</block>
-  <block id="54b1f34b39c971ce20ffd13604bb074c" category="list-text">开放数据服务链接。</block>
-  <block id="e2109b57fa6348f346526f55a48f78ba" category="section-title">启用控制台助手</block>
-  <block id="1d4f06583c930c65d01139af412243e9" category="paragraph">默认情况下， NetApp Console在主页上为首次具有组织管理员角色的用户显示控制台助手。</block>
-  <block id="0261c21f37275db55da37598552a89dc" category="admonition">只有您或其他人完成必填项后，您才可以自行解雇助手。完成必填项后，您组织中的所有用户都将不再使用该助手，并且不会再次出现。</block>
-  <block id="beb8b9e8503d0cddbe7c900d24ead8cd" category="section-title">使用控制台助手开始</block>
-  <block id="67cd761b7682bdb0c49c488e0f4f66f5" category="paragraph">控制台助手将指导您完成以下任务来设置NetApp Console环境：</block>
-  <block id="0f2d8c8746eb76dda55a87c37bf8f14a" category="list-text">通过在本地或云端部署控制台代理来连接到您的存储资产。您可以手动部署它，也可以通过下载 OVA 来部署它。此步骤是必需的。</block>
-  <block id="c257e840ff1ccd2003959f24bf40a4d2" category="list-text">通过添加或发现集群来管理您的系统。此步骤是必需的。</block>
-  <block id="97f1d4158178271a52111e6b3daa25f3" category="list-text">了解有关NetApp数据服务的更多信息。</block>
   <block id="51aed162f3c6042839d754cf42646aba" category="summary">在NetApp Console中，您可以在主页上查看指标。</block>
   <block id="67cd51096613271a527ad4c74859b513" category="doc">查看NetApp Console主页上的指标</block>
   <block id="1f466765e1b1ec24319b452d85efe642" category="paragraph">监控存储资产的健康状况可确保您了解存储保护问题并采取措施解决这些问题。使用NetApp Console主页，查看NetApp Backup and Recovery的备份和恢复状态，以及面临勒索软件攻击风险或受到NetApp Ransomware Resilience保护的工作负载数量。您可以查看单个集群和Cloud Volumes ONTAP的存储容量、 ONTAP警报、每个集群或Cloud Volumes ONTAP系统的存储性能容量、您拥有的不同类型的许可证等等。</block>
@@ -3332,9 +3149,7 @@
   <block id="ba953e551c9ecc7acec5e18af7b8cd22" category="paragraph">您可以在NetApp Console中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要它时禁用它。</block>
   <block id="6ead1a7fe0f07609f377bd234facc0ef" category="inline-link-macro">了解如何导入您的联盟</block>
   <block id="fc29dd2df36c6f92f02b69ad5460a804" category="admonition">如果您使用NetApp Cloud Central 配置了联合，请通过 *Federation* 页面导入它以在控制台中进行管理。<block ref="57d57f1ec815a326ebb31008786ac229" category="inline-link-macro-rx"></block></block>
-  <block id="22ae8cdedea46c7c71a0f34e66a726f1" category="paragraph">您还可以将已验证的域添加到现有联合中，这允许您使用多个域进行联合连接。</block>
   <block id="f18af734247953cdba78d6c868dcac9a" category="inline-link-macro">了解有关在NetApp Console中监控操作的更多信息。</block>
-  <block id="ba62bfb16bdbe93296e3748cf258d5d8" category="admonition">联合管理事件（例如启用、禁用和更新联合）显示在时间轴中。<block ref="2aa37a4e40a079c9408b3b80517b92fa" category="inline-link-macro-rx"></block></block>
   <block id="70428325999b48bdeb21b0cdde9e5656" category="section-title">启用联盟</block>
   <block id="1f979d105f20c2f806605c287fb09d85" category="paragraph">如果您已经创建了联盟但尚未启用，您可以通过*联盟*页面启用它。启用联合允许与联合关联的用户使用其公司凭据登录控制台。在启用联合之前，请先成功创建并测试联合。</block>
   <block id="af4be6fc4403cc728a8d4fd4f3f9bf83" category="list-text">选择操作菜单<block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>旁边的您想要启用的联盟并选择*启用*。</block>
@@ -3480,11 +3295,7 @@
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*结案*：提供有关结案原因的详细信息，然后选择*结案*。</block>
   <block id="3a466826add50c0d11b1af2f3a6f205b" category="summary">如果您组织的成员需要在另一个项目中使用控制台代理，则需要将该控制台代理与相应的项目关联。</block>
   <block id="604b1e0e127703c0aac25f4d3b41ca32" category="doc">将控制台代理与其他文件夹和项目关联</block>
-  <block id="3d79cee328fb60e08f1baec96bc0b245" category="paragraph">当“组织管理员”创建控制台代理时，该控制台代理会自动与组织内当前选定的项目相关联。尽管具有“组织管理员”角色的人可以从组织中的任何地方访问该控制台代理。除非您将该控制台代理与其他项目关联，否则您组织中的其他成员只能从创建该控制台代理的项目访问该控制台代理。</block>
-  <block id="f9b40aef917036a67168f93e72e934ae" category="inline-link-macro">了解如何将控制台代理与身份和访问结合使用</block>
-  <block id="e8b08b08780a84ed7e1857ed55d272fe" category="paragraph">回顾控制台代理关联的工作原理。<block ref="17f629c1b89232701064739c047ad5dd" category="inline-link-macro-rx"></block> 。</block>
   <block id="6955c430a5d86c9667f05d296c1693d4" category="inline-link-macro">详细了解文件夹或项目管理员可以完成的操作</block>
-  <block id="69495461d46af3256edcb3d822fba6a9" category="paragraph">文件夹或项目管理员可以在代理页面上查看所有控制台代理，但只能将控制台代理与他们有权限的文件夹和项目关联。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="79a2660261144427a97767c88661ef7a" category="list-text">选择*管理&gt;身份和访问*&gt;*代理*。</block>
   <block id="a529344e6caf745d7286ce181133d987" category="list-text">从表中，找到要关联的控制台代理。</block>
   <block id="bc10bf1996aa6f35549e32f7bd090043" category="paragraph">使用表格上方的搜索功能查找特定的控制台代理或按资源层次结构过滤表格。</block>
@@ -3512,14 +3323,12 @@
   <block id="a27e2b8a6be7b119af3800fb970ed3db" category="summary">要开始在NetApp Console中进行身份和访问管理，请自定义组织的层次结构、添加其他成员、添加或发现资源，并将这些资源与项目关联。</block>
   <block id="47bacd4194e86b90323ba31bf380b83d" category="doc">开始在NetApp Console中使用身份和访问权限</block>
   <block id="d417a89f8b21634545227f1b0d709411" category="paragraph">当您注册NetApp Console时，系统会提示您创建一个新的组织。该组织包括一名成员（组织管理员）和一个默认项目。要设置身份和访问管理 (IAM) 来满足您的业务需求，您需要自定义组织的层次结构、添加其他成员、添加或发现资源，并在整个层次结构中关联这些资源。</block>
-  <block id="82b6ac73919b1688c48b6dada131ca75" category="paragraph">您必须拥有*组织管理员*权限才能管理整个组织的身份和访问权限。如果您具有*文件夹或项目管理员*权限，则您只能管理您有权限的文件夹和项目。</block>
   <block id="bf68d30e1bc63322cf5255688ebb2637" category="paragraph">按照以下步骤建立一个新组织。该顺序可能会根据您组织的需求而有所不同。</block>
   <block id="4e7ef180350510bb1b5495edc59a540f" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>编辑默认项目或添加到组织的层次结构</block>
   <block id="c10c892886acddf2e2cadd07adf17f76" category="paragraph">使用默认项目或创建与您的业务层次结构相匹配的其他项目和文件夹。</block>
   <block id="3a55ab4fb3114696e0b9c8d3786a3a95" category="inline-link-macro">了解如何使用文件夹和项目来组织资源</block>
   <block id="3d19bf548c854ffd6c0292d1875e0edd" category="paragraph"><block ref="968e8791737599307dd67fcbe92e9cbd" category="inline-link-macro-rx"></block> 。</block>
   <block id="9fea0b15c1b7bd94f7011cdc6e6829b3" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>将成员与您的组织关联</block>
-  <block id="5f0c1ea8d372a78f97a32424761815a8" category="paragraph">将用户帐户链接到您的组织并分配权限。您还可以选择向您的组织添加服务帐户。</block>
   <block id="9ec5c0ba9365bb27b016a700955f883d" category="inline-link-macro">了解如何管理成员及其权限</block>
   <block id="2d9d027ed40d94b5797f8ff2eac12474" category="paragraph"><block ref="20fed5a6fd937b8ae02cbbc8c36e0fcb" category="inline-link-macro-rx"></block> 。</block>
   <block id="369419be6c2d63174cdf720283757d9b" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>添加或发现资源</block>
@@ -3541,25 +3350,15 @@
   <block id="e2a0d9cb668e6b8456f193f9e7481e9e" category="list-text"><block ref="e2a0d9cb668e6b8456f193f9e7481e9e" category="inline-link-macro-rx"></block></block>
   <block id="d74a08d7ee858b57e9e95937c86453c6" category="inline-link">了解身份和访问 API</block>
   <block id="51ddea41addd6afba49a3f8917e6dd1c" category="list-text"><block ref="51ddea41addd6afba49a3f8917e6dd1c" category="inline-link-rx"></block></block>
-  <block id="6b2ba5a58459a38337e4a785867d2123" category="summary">在NetApp Console中，使用身份和访问管理使您能够使用文件夹和项目来表示完整的资源层次结构。</block>
-  <block id="c91d4274dbc95093979f44d9158f63c4" category="doc">使用文件夹和项目组织您的NetApp Console资源</block>
-  <block id="6dca94e5f8ef4f7534b19b4528884acb" category="paragraph">在NetApp Console中，您可以使用项目和文件夹来组织您的NetApp资源。  _项目_代表控制台中的一个工作区，组织成员可以访问该工作区来管理_资源_（例如， Cloud Volumes ONTAP系统）。 _文件夹_将相关项目分组在一起。将资源组织到文件夹和项目中后，您可以通过向组织成员提供特定文件夹和项目的权限来授予对资源的细粒度访问权限。</block>
   <block id="c08b7d4448e95633b73e2495389e853c" category="section-title">添加文件夹或项目</block>
   <block id="8b2ab7e3ad5d97cdc07606024ad7cd90" category="list-text">选择*组织*。</block>
   <block id="54f6cd3aa5e387ea27f8d46fcd265b0f" category="list-text">从*组织*页面中，选择*添加文件夹或项目*。</block>
   <block id="0bb9526fc793356f11cea651032b1b15" category="list-text">选择*文件夹*或*项目*。</block>
-  <block id="f46059ba82cb53e4af025ce918760999" category="list-text">*资源*：选择您想要与此文件夹或项目关联的资源。</block>
-  <block id="3c3738a24f68869d5cec5d24654be31c" category="paragraph">您可以选择与父文件夹或项目相关的资源。</block>
-  <block id="2aa8f2be43810963811ccc42047d868e" category="inline-link-macro">了解何时将资源与文件夹关联</block>
-  <block id="1cfaf9081db0e3182d27f586bb481603" category="paragraph"><block ref="9b735c42d80f104cecdf7ab600a203a6" category="inline-link-macro-rx"></block> 。</block>
-  <block id="8bb3c5dc86a399d0babf2eb49831e5ec" category="list-text">*访问*：根据资源层次结构中已定义的现有权限，查看有权访问文件夹或项目的成员。</block>
   <block id="7f394af8afb3598061eec3ed6197180d" category="section-title">重命名文件夹或项目</block>
-  <block id="f8ca84129dded5d2d753c0d0cc1ddea1" category="paragraph">如果需要，您可以更改文件夹和项目的名称。</block>
   <block id="f53392d049b9dddff4ba55ad74c96588" category="inline-image-macro">带有三个点的图标</block>
   <block id="0ae32f0f3a313260aebd33e0703d5276" category="list-text">从“组织”页面，导航到表中的项目或文件夹，选择<block ref="e85cc783c74f9ef35cfeeca99fcaf6f6" category="inline-image-macro-rx" type="image"></block>然后选择*编辑文件夹*或*编辑项目*。</block>
   <block id="ec4b36b02d2682a0624b6df463ee2789" category="list-text">在*编辑*页面上，输入新名称并选择*应用*。</block>
   <block id="03b976867f3d4bd64ebf2dde3b296e4d" category="section-title">删除文件夹或项目</block>
-  <block id="486b799bb85b3d2fe9d51e27f973ebbf" category="paragraph">删除不再需要的文件夹和项目。</block>
   <block id="42f2baba648ca8f4aea79acfaf1465c8" category="list-text">从“组织”页面，导航到表中的项目或文件夹，选择<block ref="e85cc783c74f9ef35cfeeca99fcaf6f6" category="inline-image-macro-rx" type="image"></block>然后选择*删除*。</block>
   <block id="48a726f3d57687547ef8fb70fab0c713" category="list-text">确认您要删除文件夹或项目。</block>
   <block id="7ef08e2a2795e0ebd33ca241791da34d" category="section-title">查看与文件夹或项目关联的资源</block>
@@ -3571,11 +3370,9 @@
   <block id="a470fed0aa4603c3c8d460c4028252f1" category="list-text">选择“*资源*”来查看相关资源。在表中，“*状态*”列标识与文件夹或项目相关的资源。</block>
   <block id="c2fdbd86cd719dffbb80161af27b0ec9" category="inline-image-macro">编辑项目页面的屏幕截图，显示可与项目关联或取消关联的可用资源。</block>
   <block id="65381685a85e45e94ee53dbceff322ff" category="paragraph"><block ref="65381685a85e45e94ee53dbceff322ff" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="189b8907a7ab6c4c7b1ea92510e40d70" category="paragraph">拥有文件夹或项目权限的成员可以访问其相关资源。</block>
   <block id="0727cfa5c59f7b7114ac7246e406611c" category="list-text">在*编辑*页面上，选择*资源*。</block>
   <block id="d66e1bd376f74d0703fc72b368b92cd7" category="paragraph">在表中，“*状态*”列标识与文件夹或项目相关的资源。</block>
   <block id="95e3e0534ba1d2354c42f80be5302007" category="list-text">选择您想要关联或取消关联的资源。</block>
-  <block id="77132bcd63b33103ab4d954f60736e06" category="list-text">根据您选择的资源，选择*与项目关联*或*与项目取消关联*。</block>
   <block id="152ff89b1af4f8995e50a4b8f158db52" category="inline-image-macro">编辑项目页面的屏幕截图，其中显示了选择当前未关联的资源后可用的关联资源选项。</block>
   <block id="883f9a97670aa2ea1a29d0163ef97be1" category="paragraph"><block ref="883f9a97670aa2ea1a29d0163ef97be1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3621d23b92254c73b3a713d227a66f5" category="section-title">查看与文件夹或项目关联的成员</block>
@@ -3584,8 +3381,6 @@
   <block id="e537768f43901c1791172250c6c08115" category="paragraph"><block ref="e537768f43901c1791172250c6c08115" category="inline-image-macro-rx" type="image"></block></block>
   <block id="19df46354fac1ffd06065f8388377f84" category="section-title">修改成员对文件夹或项目的访问权限</block>
   <block id="f676fbba085923546a37baf94ce6784b" category="inline-link-macro">从“会员”页面管理权限</block>
-  <block id="6774afc9942c8dcab2e06828e8f199cb" category="inline-link-macro">了解有关角色继承的详细信息</block>
-  <block id="8945f05b50a19ebe83ee85e629a09120" category="paragraph"><block ref="e2e11ae218588663759cb10a40da4876" category="inline-link-macro-rx"></block> 。</block>
   <block id="2bd6967deb6b9eb3d79e794bad318fb4" category="list-text">在*编辑*页面上，选择*访问*以查看有权访问所选文件夹或项目的成员列表。</block>
   <block id="904a2691210bbfe6dfc1b17db516d71c" category="list-text">修改会员访问权限：</block>
   <block id="b49630790a232696bd0f62fa51014e55" category="list-text">*添加成员*：选择您想要添加到文件夹或项目的成员并为他们分配角色。</block>
@@ -3597,56 +3392,27 @@
   <block id="0d1eeacefa3d24f7c6debacd39a43d19" category="inline-link">了解身份和访问 API</block>
   <block id="a580f203efb1da76755f79253a21d96f" category="list-text"><block ref="a580f203efb1da76755f79253a21d96f" category="inline-link-rx"></block></block>
   <block id="0574e6792e501b2d7f486dd56c08812e" category="summary">管理组织的成员以提供组织资源层次结构不同级别的权限。</block>
-  <block id="b3977944ab3f32dc0aa6da440a2a0fd6" category="doc">将成员和服务帐户添加到NetApp Console</block>
-  <block id="d2729cf62f219b942e9e38ba9c0da3f4" category="paragraph">在控制台中，您可以将用户和服务帐户添加到您的组织，并在资源层次结构中为他们分配一个或多个角色。角色包含一组权限，使成员（用户或服务帐户）能够在资源层次结构的特定级别执行特定操作。</block>
-  <block id="a7e18bbc5b8b0662f8ea820c5452bb8a" category="paragraph">您需要以下角色之一来管理用户和权限：</block>
-  <block id="e315fd1b95b71681931eeb8955a37b50" category="paragraph">具有此角色的用户可以管理所有成员</block>
-  <block id="f2822d5dedda5be93d6f6e298458878b" category="paragraph">具有此角色的用户只能管理指定文件夹或项目的成员</block>
-  <block id="31c547d7cd4c250a91b1a8bef306d954" category="paragraph">_文件夹或项目管理员_可以在*成员*页面上查看所有成员，但只能管理他们有权访问的文件夹和项目的权限。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="e3a1bd8f43fc761424ef512d07c27a8b" category="section-title">向您的组织添加成员</block>
-  <block id="4a6e57c6cb2443ee81ba504493e38c0d" category="paragraph">用户必须先注册NetApp Console，然后您才能将他们添加到组织或为他们分配角色。您可以直接从控制台创建服务帐户。</block>
-  <block id="e882dcb285b727741daef45bc38e2d7b" category="paragraph">要管理用户及其权限，您必须具有*组织管理员*角色或*文件夹或项目管理员*角色。请记住，具有“文件夹或项目管理员”角色的用户只能管理他们具有管理员权限的文件夹或项目的成员。</block>
-  <block id="7915733bd673ab1728be20879c847f08" category="section-title">添加用户帐户</block>
-  <block id="61b25900484f4653d66349a1077ef91b" category="paragraph">尽管用户可以自行注册NetApp Console，但他们需要明确添加到组织或特定文件夹或项目才能访问控制台中的资源。</block>
-  <block id="831942abb5f1b9a9ec740d02e462f971" category="list-text">引导用户访问<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>进行注册。</block>
-  <block id="8e4777899f695a88ae50392658e4266a" category="paragraph">用户注册后，他们会完成*注册*页面，检查电子邮件并登录。如果控制台提示用户创建组织，他们会关闭它并通知您他们的帐户已创建。然后，您可以将该用户添加到您现有的组织。</block>
-  <block id="6f034702a5231360e52dfa4cc279ea49" category="inline-link-macro">了解如何注册NetApp Console</block>
-  <block id="01a31119d3a813ace884be299c703439" category="paragraph"><block ref="a0f72a4c67ea8ac6a261dd3d8edfdf13" category="inline-link-macro-rx"></block> 。</block>
   <block id="ea06d0aa9a6946f5aa264a3c85890998" category="list-text">选择*成员*。</block>
   <block id="e85e93a55281258b0ff57a7eebf50647" category="list-text">选择*添加成员*。</block>
   <block id="05533f1c305372580b0cd9f811f822da" category="list-text">对于*会员类型*，保持选择*用户*。</block>
-  <block id="ebf7a6ceca553d47e6a21df7caf226f8" category="list-text">对于*用户的电子邮件*，输入与其创建的登录相关联的用户的电子邮件地址。</block>
   <block id="c195c34006590ba56c537be59fbae354" category="list-text">使用“选择组织、文件夹或项目”部分来选择成员应具有权限的资源层次结构级别。</block>
   <block id="6cb5506ebf4b8ed9628e8a45d42029e3" category="list-text">您只能从您有权限的文件夹和项目中进行选择。</block>
   <block id="3ce6287f1ae7f02bd3111aa0ca0f28cb" category="list-text">选择一个组织或文件夹将授予成员对其所有内容的权限。</block>
   <block id="1b9e5023b15875b95f973dcf33f7796c" category="list-text">您只能在组织级别分配*组织管理员*角色。</block>
   <block id="864ccda1428bb8cb646ce133e0de4547" category="list-text">*选择一个类别*，然后选择一个*角色*，该角色为成员提供与您选择的组织、文件夹或项目相关的资源的权限。</block>
-  <block id="ea4cc374b24c1005ebd8e491476f9b1c" category="list-text">可选：选择其他角色或项目。如果您想提供对组织内其他文件夹或项目的访问权限，或授予用户在所选区域中的其他角色，请选择*添加角色*，指定另一个文件夹或项目或其他角色类别，然后选择一个角色。</block>
-  <block id="86def4e3ac446d357ad611b113041c94" category="paragraph">控制台向用户发送一封包含说明的电子邮件。</block>
   <block id="e2bb94000e1f96727eb1486d97c66971" category="section-title">添加服务帐户</block>
-  <block id="aef45d07fb51a333e17b1c8c36ced315" category="paragraph">您可以使用服务帐户自动执行任务并与控制台 API 安全地集成。创建服务帐户时，请在两种身份验证方法之间进行选择：使用客户端 ID 和密钥，或使用 JWT（JSON Web 令牌）身份验证。客户端 ID 和秘密方法适合简单设置，而 JWT 身份验证为自动化或云原生环境提供更强的安全性。选择最适合您的安全需求以及您计划如何使用控制台的选项。</block>
-  <block id="fee7ad7f5c8a95539509eabf92d63cd8" category="paragraph">如果您想使用 JWT 身份验证，请准备好您的公钥或证书。</block>
   <block id="8e7e960ee764c7e6e42c82f1edaa4133" category="list-text">对于*会员类型*，选择*服务帐户*。</block>
   <block id="e14a6ae0776860dda96f0e481824bccd" category="list-text">输入服务帐户的名称。</block>
-  <block id="ebcb63e875051cc6846253b2c9ce48da" category="list-text">如果您想使用 JWT 身份验证，请选择 *使用私钥 JWT 身份验证* 并上传您的公共 RSA 密钥或证书。如果您想使用客户端 ID 和密钥，请跳过此步骤。</block>
-  <block id="fc0041752419b9f94c8f1b7af4db8c4a" category="list-text">选择一个*类别*，然后选择一个*角色*，该角色为成员提供与您选择的组织、文件夹或项目相关的资源的权限。</block>
-  <block id="78f6d8218cb580b136d9697f7235ad36" category="list-text">如果您没有选择使用 JWT 身份验证，请下载或复制客户端 ID 和客户端密钥。 + 控制台仅显示一次客户端密钥。安全地复制它；如果需要，您可以稍后重新创建它。</block>
-  <block id="3f1c25aff6cde8c3443a53dfb8490e46" category="list-text">如果您选择 JWT 身份验证，请下载或复制客户端 ID 和 JWT 受众。此信息仅显示一次，之后无法检索。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">选择*关闭*。</block>
   <block id="043819e1bae944c0c66cfa39d92d377a" category="section-title">查看组织成员</block>
   <block id="27b4994b9febc0cd4f07d6077ad313fb" category="inline-link-macro">了解如何使用角色来控制对控制台资源的访问。</block>
   <block id="059a12d70c6724987881cc65dc77dc2c" category="paragraph">要了解成员可用的资源和权限，您可以查看在组织资源层次结构的不同级别分配给该成员的角色。<block ref="91d9a5d394e3e0818e3adc3a6b8470f5" category="inline-link-macro-rx"></block></block>
-  <block id="bfec8ea1e6ffe7b45777eaa357499fd3" category="paragraph">您可以从“*成员*”页面查看用户帐户和服务帐户。</block>
-  <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">了解更多</block>
-  <block id="d7a7789c661ae542fd74704356987fed" category="admonition">您还可以查看与特定文件夹或项目相关的所有成员。<block ref="b14f5e106a01ebd026991543e5a0ffc8" category="inline-link-macro-rx"></block> 。</block>
   <block id="d5e4a18be128c90b65012755ecabfe00" category="paragraph">*成员*表列出了您组织的成员。</block>
   <block id="4137654b2b560bb6af478553cbc120b2" category="section-title">从您的组织中移除成员</block>
-  <block id="e4cb5729a397d486706aec2c33ce4ea6" category="paragraph">您可能需要从您的组织中删除某个成员 - 例如，如果他们离开了您的公司。</block>
   <block id="17968a6208774a9e7e1a042da70ec52f" category="list-text">从“成员”页面，导航到表中的成员，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*删除用户*。</block>
   <block id="6e49938f1c5b86ad879eeaf086442b08" category="list-text">确认您要从组织中删除该成员。</block>
   <block id="a657b530c9804722859fcb4792bf4466" category="section-title">重新创建服务帐户的凭据</block>
-  <block id="80b918917d33f94b9ba8a9bd70d3703a" category="paragraph">如果您丢失了凭证或需要更新凭证，请创建新的凭证。</block>
-  <block id="587ee44a2d8c31788fd2c2219c69f11c" category="paragraph">重新创建凭据时，您将删除服务帐户的现有凭据并创建新的凭据。您不能使用以前的凭据。</block>
   <block id="bb0f4333667b84217bd737a0e3fc6024" category="list-text">在“成员”表中，导航到服务帐户，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*重新创建秘密*。</block>
   <block id="8de213850e1e3dc79a14014382d25163" category="list-text">选择*重新创建*。</block>
   <block id="25240dbf964ce37736226ead112d31f2" category="section-title">管理用户的多重身份验证 (MFA)</block>
@@ -3655,8 +3421,6 @@
   <block id="5882327647586429810441bede064892" category="admonition">要管理用户的多重身份验证，您必须拥有与受影响用户位于同一域的电子邮件地址。</block>
   <block id="4c03cc49e70b34418f2385277d266d90" category="list-text">从“成员”页面，导航到表中的成员，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*管理多重身份验证*。</block>
   <block id="d999f1f9870b33a6f990ea80c528cd45" category="list-text">选择是否删除或禁用用户的 MFA 配置。</block>
-  <block id="2fe6c9d572351b2d4e0b387a62bdf1e2" category="summary">通过将资源与特定项目和文件夹关联来管理组织的资源层次结构。</block>
-  <block id="0b99b236783ea746ceb31085990e767d" category="paragraph">当您将成员与您的组织关联时，您会在组织、文件夹或项目级别提供权限。为了确保这些成员有权访问正确的资源，您需要通过将资源与特定项目和文件夹关联来管理组织的资源层次结构。  _资源_是控制台已经管理或知道的存储系统或控制台代理。</block>
   <block id="98ca801aa8933a24531043c30c475e2e" category="section-title">查看组织中的资源</block>
   <block id="95c9ea5440ca8b54a3d3dae8e1d1f492" category="list-text">选择*资源*。</block>
   <block id="a5d2efab4d8509840f3f76fe8f0a57c1" category="list-text">选择*高级搜索和过滤*。</block>
@@ -3666,16 +3430,12 @@
   <block id="4a42d7a28e04f8a9b2270b8906ae904c" category="list-text">*组织、文件夹或项目*：选择整个组织、特定文件夹或特定项目。</block>
   <block id="fb3b214ed2681d71df95f0a2e1ad7ee8" category="list-text">选择*搜索*。</block>
   <block id="6b979ebd5780c7df2c462682bbe1749e" category="section-title">将资源与文件夹和项目关联</block>
-  <block id="78165857205234d373bb942f86a37fe3" category="paragraph">将资源与文件夹或项目关联以使其可用。</block>
-  <block id="123b63ad16a2eb2123e4d954ed9b410d" category="inline-link-macro">了解资源，包括何时将资源与文件夹关联</block>
-  <block id="aa17a9cf1b2a8bd01a901a0eb2e99eee" category="paragraph">您应该了解资源关联是如何工作的。<block ref="a1afb03a32649c13d619ffef925eefd6" category="inline-link-macro-rx"></block> 。</block>
   <block id="0ba76e0dec90ea0767d0bea623254565" category="list-text">从“资源”页面，导航到表中的资源，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*关联到文件夹或项目*。</block>
   <block id="40604a706a532d51e9c0e2942f20bbbd" category="list-text">要关联其他文件夹或项目，请选择*添加文件夹或项目*，然后选择该文件夹或项目。</block>
   <block id="227d0042933a910c506c0345c27ef64f" category="paragraph">请注意，您只能从您拥有管理员权限的文件夹和项目中进行选择。</block>
   <block id="5c4e241b983cce10c131e9a51dc2f2e5" category="list-text">选择*关联资源*。</block>
   <block id="b2576d5e19367669910225493514c6ca" category="list-text">如果您将资源与项目关联，则拥有这些项目权限的成员现在可以从控制台访问该资源。</block>
   <block id="6330741dc930a8e0cff70d2bbd0c2a2d" category="inline-link-macro">了解如何将资源与文件夹关联</block>
-  <block id="d7d29cb540549064e90bd51cfc84f41b" category="list-text">如果您将资源与文件夹关联，则_文件夹或项目管理员_现在可以访问该资源并将其与文件夹内的项目关联。<block ref="a53b921d2a913725c8b4e28a24824743" category="inline-link-macro-rx"></block> 。</block>
   <block id="5fa00154da6a08931f0c26c47b3ca339" category="paragraph">如果您使用控制台代理发现资源，请将控制台代理与项目关联以授予访问权限。否则，没有“组织管理员”角色的成员将无法访问控制台代理及其相关资源。</block>
   <block id="3a04b19767b9262d748f5bc93b4d433d" category="section-title">查看与资源关联的文件夹和项目</block>
   <block id="1dc54c786b9042ae57ddce705cbaa9dc" category="paragraph">您可以查看与特定资源关联的文件夹和项目。</block>
@@ -3686,23 +3446,15 @@
   <block id="a46cbe82e9adff7ecc82d6eadb58aa97" category="inline-image-macro">资源详细信息页面的屏幕截图，显示与组织下属项目关联的资源。</block>
   <block id="7cadbb5f400f149f938a910df5c5cb0d" category="paragraph"><block ref="7cadbb5f400f149f938a910df5c5cb0d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="02daa88c7c6888cad8b055624d764072" category="section-title">从文件夹或项目中删除资源</block>
-  <block id="101c2fc402187ad7ad2fa40cf25d35b2" category="paragraph">要从文件夹或项目中删除资源，您需要删除文件夹或项目与资源之间的关联。当您删除关联时，它会阻止成员管理文件夹或项目中的资源。</block>
   <block id="a55ecc4bf928da93f86f41bb1fa482cc" category="inline-image-macro">垃圾桶的图标</block>
-  <block id="4fc3c6ef596dbec8a3af38f79c84cf02" category="list-text">对于要删除资源的文件夹或项目，选择<block ref="5aa3fbfa4a030d3d0fb7677a91fd2eba" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ece216a1c354b015ef19084b08f5e92f" category="list-text">通过选择“*删除*”确认您要删除关联。</block>
   <block id="a4fbefb4650f29051f939c158582897d" category="list-text"><block ref="a4fbefb4650f29051f939c158582897d" category="inline-link-macro-rx"></block></block>
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">在NetApp Console中，您可以根据用户需要执行的操作和位置为用户分配角色。</block>
-  <block id="14750286cb2a5a61bf62b65d9b9d2112" category="doc">使用角色管理用户对NetApp Console资源的访问</block>
-  <block id="5f24947dab075e3413b914aa36df023a" category="paragraph">在控制台中，您可以根据用户需要做什么以及在哪里为用户分配角色。</block>
-  <block id="3908f1e42aa5b81b8316befd30a6965d" category="inline-link-macro">了解如何使用文件夹和项目来组织您的资源。</block>
-  <block id="ecdeffad8e53c7c9b1fb61f02a3cb5d1" category="admonition">请记住，您不能直接授予对资源的访问权限。首先将资源分配给项目。在分配用户访问权限之前，请考虑设置资源层次结构。<block ref="122b4639308e055d5bdfeb8a65e1794d" category="inline-link-macro-rx"></block></block>
   <block id="34025ad60edecbf8612a359edaca8684" category="section-title">查看分配给成员的角色</block>
   <block id="317e1169ce13ad8808ce0775bf310cef" category="paragraph">如果您具有_文件夹或项目管理员_角色，则该页面将显示组织中的所有成员。但是，您只能查看和管理您拥有权限的文件夹和项目的成员权限。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">为成员添加访问角色</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">您通常在向组织添加成员时分配角色，但您可以随时通过删除或添加角色来更新它。</block>
   <block id="ba364a79f6fbfab0c8591198ecfd87cc" category="paragraph">您可以为用户分配组织、文件夹或项目的访问角色。</block>
   <block id="7a43b6f649f8cf73a12056888057076b" category="paragraph">您的访问角色策略应与您组织NetApp资源的方式保持一致。</block>
-  <block id="20c36cd6c77d407b6118c77ebe403934" category="admonition">被分配了组织管理员角色的成员不能被分配任何其他角色。他们已经拥有整个组织的权限。具有文件夹或项目角色的成员不能被分配文件夹或项目中他们已经具有该角色的任何其他角色。这两个角色都提供对其被分配范围内的所有服务的访问权限。</block>
   <block id="068135177d9d1843118236d5f10dc5b7" category="section-title">更改成员的指定角色</block>
   <block id="4edfdeb74f014e9408efa692c71a9d2e" category="admonition">必须为用户分配至少一个角色。您不能删除用户的所有角色。如果您需要删除所有角色，则必须从组织中删除该用户。</block>
   <block id="2be01e6baa22b9b0a4f0a2c054fe7289" category="summary">如果需要，您可以更改NetApp Console组织的名称。</block>
@@ -3738,9 +3490,7 @@
   <block id="ee335870b9e8c6514985b62ef0af3e87" category="inline-image-macro">顶部横幅的屏幕截图，您可以在其中选择组织下拉菜单，然后选择另一个组织。</block>
   <block id="83d920a7f91f27f7b69139239db8ffbb" category="paragraph"><block ref="83d920a7f91f27f7b69139239db8ffbb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8f6dcd7bef7e7ddc82fef633c6535db1" category="list-text">如果您有任何合作组织，请选择“*合作伙伴关系*”选项卡来查看可用的合作伙伴组织。</block>
-  <block id="927ac89a95ebc902198129b49e2915fa" category="paragraph">+ 如果您没有任何合作伙伴组织，则不会显示“合作伙伴关系”选项卡。</block>
   <block id="eb5df30f07def91b4af8259255a5d626" category="list-text">选择另一个组织，然后选择*切换*。</block>
-  <block id="c8fbc7269e6d5c9b80acffc154de6e43" category="paragraph">+ 如果您有任何合作组织，请选择“合作伙伴关系”选项卡来查看可用的合作伙伴组织。</block>
   <block id="94b85a1c5a643296b6d5ecd3976a9159" category="section-title">在项目之间切换</block>
   <block id="6346841107e9c8e2be1fd621b47ca24c" category="paragraph">如果您的组织包含多个项目并且您有权访问这些项目，则您可以随时在它们之间切换。</block>
   <block id="a249a1ac87b4adc711b0c58bcaaaf23f" category="admonition">在查看任何*身份和访问*页面时，您无法切换到另一个项目。</block>
@@ -4213,7 +3963,6 @@
   <block id="cc337b5a93c54f8a59d4731866297bf2" category="list-text"><block ref="cc337b5a93c54f8a59d4731866297bf2" category="inline-link-rx"></block></block>
   <block id="92fa0fc1299e55c066d0a19cd22b4e7b" category="list-text">*身份*：在*管理*下，选择*启用系统分配的托管身份*。</block>
   <block id="b99469b29b000bd070b5f230caa3b887" category="paragraph">Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件应在大约五分钟内运行。</block>
-  <block id="8f40f6b9cda905fc9a83217435e6b940" category="open-title">手动安装</block>
   <block id="d06ce875f1b2887cbc5d87b38e0d0d44" category="list-text">您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。<block ref="90428b1442632a8a73b6f9660fa083c4" category="inline-link-macro-rx"></block></block>
   <block id="2866ea542642e0051f06f0462f4f5e80" category="list-text">根据您的操作系统，在安装控制台代理之前需要 Podman 或 Docker Engine。</block>
   <block id="4a5aa670ff7341f391971ddd6994ac6d" category="paragraph">控制台代理现已安装。安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。</block>
@@ -4301,8 +4050,6 @@
   <block id="b3cb6ababbe01759cd13ec3fb3684c1a" category="summary">维护代理主机上的操作系统是您的责任。例如，您应该按照公司的操作系统分发标准程序，对控制台代理主机上的操作系统应用安全更新。</block>
   <block id="6148da760abfb5167327e2dbd67b1724" category="doc">维护控制台代理虚拟机和操作系统</block>
   <block id="5279ec16620bed638d689fb55a687bf8" category="paragraph">维护控制台代理主机上的操作系统是您（客户）的责任。例如，您（客户）应按照贵公司的操作系统分发标准程序对代理主机上的操作系统应用安全更新。</block>
-  <block id="32ecd7116f82d32fc86313604d074f12" category="inline-link-macro">受支持的 Linux 操作系统的变更</block>
-  <block id="b1b07a21d749d47b74e5826a57b17eaf" category="admonition">如果您有现成的代理，您应该注意<block ref="8d716f5c1f2e0c5f076bb39a15dd1a47" category="inline-link-macro-rx"></block>。</block>
   <block id="35379aa08313c0fa9274fecfc86b4cc0" category="section-title">操作系统补丁和代理</block>
   <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">无需停止代理主机服务即可应用操作系统安全补丁。</block>
   <block id="d54ab8a1d5dd0b1066137c76d5021844" category="section-title">VM 或实例类型</block>
@@ -4636,19 +4383,12 @@
   <block id="1d682899a424ef1c9395956d4422fd8a" category="inline-link-macro">订阅NetApp Intelligent Services（可选）</block>
   <block id="e7dd7f23b1ff3326cdebf5cb759f7a6f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="60f282c89397f6d15a4ed422eccb831c" category="inline-link-macro-rx"></block></block>
   <block id="d1d624aaa80d4b95ecda4ca00906004a" category="paragraph">可选：从云提供商的市场订阅NetApp Intelligent Services，以按小时费率（PAYGO）或通过年度合同支付数据服务费用。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的订阅中，无需额外付费。</block>
-  <block id="6d4ac1cbd4bd47313400a32115439002" category="summary">通过为控制台准备网络、注册并创建帐户以及（可选）创建控制台代理，以标准模式开始使用NetApp Console。</block>
-  <block id="2c4bc70d5e888213a3bca35048028c96" category="doc">入门工作流程（标准模式）</block>
-  <block id="f17ca32b513f955e12b0e36662eed21b" category="paragraph">在标准模式下，您可以访问由NetApp作为软件即服务 (SaaS) 产品托管的基于 Web 的控制台。在开始之前，请确保您了解<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>和<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>。</block>
   <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">准备使用NetApp控制台的网络</block>
   <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
-  <block id="6c6992d5903cf814577c44cbe3ed58b0" category="paragraph">访问NetApp控制台的计算机应该与特定端点建立连接。如果您的网络限制出站访问，您应该确保允许这些端点。</block>
   <block id="0f29bdee858adb6d973cf8db83b0a896" category="inline-link-macro">注册并创建组织</block>
   <block id="a31431c54e189487cfd625eb4abd12c5" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="10b13e3a86d0fb043f42c593114c5f97" category="inline-link-macro-rx"></block></block>
   <block id="8859695a85afcf4d196795433a572988" category="inline-link">NetApp控制台</block>
-  <block id="a40400c6f5bf51aa4e7aaaedbf791535" category="paragraph">前往<block ref="193ae139051d487c450de046f6bd2645" category="inline-link-rx"></block>并注册。您将可以选择创建一个组织，但如果您的公司已经有现有组织，则应跳过该步骤。</block>
   <block id="d1e788bf754c3b9d70eae673330792e2" category="inline-link-macro">了解没有控制台代理您可以做什么</block>
-  <block id="6e4c4444e6f5b58ee31bcd6f7fcef10d" category="paragraph">此时，您已登录并可以开始管理存储和使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服务。<block ref="d15147d8429817c45cc619fa49c43b04" category="inline-link-macro-rx"></block> 。</block>
-  <block id="48700fa46e521cfa608d334472b68ef1" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>创建控制台代理</block>
   <block id="8f012b04ed4896873993ff7252418ca4" category="paragraph">高级存储管理功能和某些NetApp数据服务要求您安装控制台代理。控制台代理使控制台能够管理混合云环境中的资源和流程。</block>
   <block id="ce207d705a8165045c7d26c1fa5fe273" category="paragraph">您可以在云或本地网络中创建控制台代理。</block>
   <block id="380e8dcf837dc4b4a9dfb71ed62ffe17" category="inline-link-macro">详细了解何时需要控制台代理以及它们如何工作</block>
@@ -4661,9 +4401,6 @@
   <block id="b0a30fdadf738e65e6490f50bac8c5b1" category="list-text"><block ref="b0a30fdadf738e65e6490f50bac8c5b1" category="inline-link-macro-rx"></block></block>
   <block id="01539f3bb82319392680d2729edcc784" category="inline-link-macro">了解如何在本地创建控制台代理</block>
   <block id="bac5c4edb29e43518e1f2b0b721fb1d5" category="list-text"><block ref="bac5c4edb29e43518e1f2b0b721fb1d5" category="inline-link-macro-rx"></block></block>
-  <block id="546d7695c99c2937a5bfae3cd6cf8da5" category="paragraph">要使用NetApp智能数据服务管理 Google Cloud 中的存储和数据，请确保控制台代理在 Google Cloud 中运行。</block>
-  <block id="f21c11580c94835481d6c035b85f4b79" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
-  <block id="3a9162a1dd41f82eb4f6e7242b11328b" category="paragraph">通过您的云提供商注册NetApp Intelligent Services，按小时付费（PAYGO）或通过年度合同付费。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的订阅中，无需额外付费。</block>
   <block id="9b7e373120000fa09050f54f6d8d4b33" category="summary">NetApp Console通过控制台代理和Cloud Volumes ONTAP支持 IMDSv2。大多数情况下，IMDSv2 会在新的 EC2 实例上自动配置。 IMDSv1 于 2024 年 3 月之前启用。如果您的安全策略需要，您可能需要在 EC2 实例上手动配置 IMDSv2。</block>
   <block id="81d494db27371a915cc88068d037376c" category="paragraph">NetApp Console通过控制台代理和Cloud Volumes ONTAP （包括 HA 部署的中介）支持 Amazon EC2 实例元数据服务版本 2 (IMDSv2)。大多数情况下，IMDSv2 会在新的 EC2 实例上自动配置。 IMDSv1 于 2024 年 3 月之前启用。如果您的安全策略需要，您可能需要在 EC2 实例上手动配置 IMDSv2。</block>
   <block id="054d5276b9fcc7da7d10dc6e4df18356" category="list-text">控制台代理版本必须为 3.9.38 或更高版本。</block>
@@ -4703,33 +4440,12 @@
   <block id="0694adc8bc882f236f606e1c56eebe94" category="inline-link">停止并启动Cloud Volumes ONTAP实例</block>
   <block id="b7feb1419e39be60dd56e13eb4251594" category="list-text"><block ref="b7feb1419e39be60dd56e13eb4251594" category="inline-link-rx"></block></block>
   <block id="60d6844eb545641bb1448829af996932" category="paragraph">控制台代理实例和Cloud Volumes ONTAP实例现已配置为使用 IMDSv2。</block>
-  <block id="90d396015a6c35f04f7379d52f402f98" category="summary">可以通过基于 Web 的控制台访问NetApp Console。要开始使用控制台，您的第一步是注册或使用您的NetApp支持站点凭据登录，或者创建NetApp Console登录。</block>
   <block id="5dbaefa65dffe1f0a37c10d0c33764b1" category="doc">注册或登录NetApp Console</block>
-  <block id="81d03bff849cba3ebe7f16ba385d8dfd" category="paragraph">首次访问控制台时，您可以使用以下选项之一注册或登录：</block>
-  <block id="98ad2e7b7380eae4ff340445d2b3c74d" category="list-text">NetApp Console登录</block>
-  <block id="7b417e75c5332347f70ca8294d7f6d4b" category="list-text">您可以通过创建登录名来注册。此身份验证方法要求您指定您的电子邮件地址和密码。验证电子邮件地址后，您可以登录并创建一个组织（如果您还不属于任何组织）。</block>
-  <block id="4e509fcd83df29eba4ce6711d142163b" category="list-text">NetApp支持站点 (NSS) 凭证</block>
-  <block id="3ac9ee31c60fb27242863e9f71741e13" category="list-text">如果您已有NetApp支持站点凭证，则无需注册控制台。您使用 NSS 凭据登录，然后控制台会提示您创建一个组织（如果您还不属于任何组织）。</block>
-  <block id="bf820fbd70335732dc19994d1d737cb1" category="paragraph">您将收到一次性密码 (OTP) 到注册的电子邮件地址。每次登录尝试都会生成一个新的 OTP。</block>
-  <block id="9cb17ba10a86a6d673f250ed811a88c2" category="list-text">联合连接</block>
-  <block id="a73f9c5c78b615ea1e1d6d51d344176b" category="list-text">如果您的公司已经拥有NetApp Console实例，则您的控制台管理员可能已经设置了单点登录，以使用来自您的公司目录（联合身份）的凭据登录。</block>
-  <block id="efa2743e18bf17f898e2aa31a500ddeb" category="inline-link-macro">了解如何将身份联合与NetApp Console结合使用</block>
-  <block id="524adadbcb7d43841a7c04102e8abfa7" category="paragraph"><block ref="bbbae0c405364730462617fcee2b6070" category="inline-link-macro-rx"></block> 。</block>
   <block id="827522fc27d0b7a8a36e98a829e5c687" category="list-text">打开 Web 浏览器并转到<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block></block>
-  <block id="631a9d1918b756ca1857359538227c2a" category="list-text">如果您有NetApp支持站点帐户或已设置身份联合，请在“登录”页面直接输入与您的帐户关联的电子邮件地址。</block>
   <block id="f6400c3e909c93ba53f8281302a7ffef" category="paragraph">在这两种情况下，您都会在初始登录时注册控制台。</block>
   <block id="bf093decf90516c940874ca448e5647c" category="list-text">如果您想通过创建控制台登录来注册，请选择*注册*。</block>
   <block id="dafbc60d299b7ecf7d1bf490a178f77f" category="list-text">在*注册*页面上，输入所需信息并选择*下一步*。</block>
-  <block id="9998984c95caccce61e49ca25de1c99f" category="paragraph">请注意，注册表中只允许输入英文字符。</block>
   <block id="422588021a93cfdaa26ce8d7d46dfeda" category="list-text">检查您的收件箱，查找来自NetApp的电子邮件，其中包含验证您的电子邮件地址的说明。</block>
-  <block id="fb088777e64ef8bfb642b0dcae0ba8c8" category="paragraph">您必须先执行此步骤才能登录控制台。</block>
-  <block id="a0e12b903763894b05053f1758f87c86" category="list-text">登录后，请查看最终用户许可协议并接受条款。</block>
-  <block id="8d783bf61327a04cc07eb0e4391615f6" category="paragraph">如果您的用户帐户尚不属于控制台组织，系统将提示您创建一个。</block>
-  <block id="99e4ceee92f6d4220b77ac2f6be52958" category="list-text">在*欢迎*页面上，输入您的控制台组织的名称。</block>
-  <block id="6d4977c9bbc73f941bbf441c6863ca40" category="inline-link-macro">了解 IAM</block>
-  <block id="000c772fe260d0b8e749078c826912c1" category="paragraph">控制台定义组织是控制台身份和访问管理 (IAM) 中的顶级元素。<block ref="1dc93dd72b8832a8813ecf4a23f06394" category="inline-link-macro-rx"></block> 。</block>
-  <block id="b2b8934645fc8cde08a5e11b20c23996" category="inline-link-macro">了解如何向现有组织添加成员</block>
-  <block id="eaebca7f118a1e86b062fb58c5beb139" category="paragraph">如果您的企业已经有一个组织并且您想加入该组织，请关闭控制台并要求组织管理员将您与该组织关联。添加后，您可以登录并访问控制台组织。<block ref="59dea8bb85edd16986d40f5a52513b8b" category="inline-link-macro-rx"></block> 。</block>
   <block id="16a6acfaa9478d613f4568fcc7f798b9" category="list-text">选择*让我们开始吧*。</block>
   <block id="003a29a0c94cdfca33812dab6ad6ae71" category="summary">从您的云提供商市场订阅NetApp Intelligent Services，以按小时费率或通过年度合同支付NetApp数据服务费用。如果您从NetApp购买了许可证，您还需要订阅市场产品。您的许可证始终会先被收费，但如果您超出许可容量或许可证期限到期，则会按小时费率向您收费。</block>
   <block id="9c127a433a6192892f397a5a7e6dcb5a" category="doc">订阅NetApp Intelligent Services（受限模式）</block>
@@ -4781,7 +4497,6 @@
   <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">在控制台的右上角，选择“帮助”图标，然后选择“*支持*”。</block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">从支持注册页面找到您的帐户 ID 序列号。</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">帮助菜单的屏幕截图，其中支持是第一个选项</block>
-  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp 的支持注册网站</block>
   <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">导航至<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block>并选择*我不是注册的NetApp客户*。</block>
   <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">填写必填字段（带有红色星号的字段）。</block>
@@ -4800,7 +4515,6 @@
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">这些 NSS 凭证与您的特定控制台帐户 ID 相关联。属于控制台组织的用户可以从*支持 &gt; NSS 管理*访问这些凭据。</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">如果您有客户级帐户，则可以添加一个或多个 NSS 帐户。</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">如果您有合作伙伴或经销商帐户，则可以添加一个或多个 NSS 帐户，但不能与客户级帐户一起添加。</block>
-  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">选择*NSS 管理 &gt; 添加 NSS 帐户*。</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登录页面，提供您的NetApp支持站点注册的电子邮件地址和密码以执行身份验证过程。</block>
   <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">这些操作使控制台能够使用您的 NSS 帐户进行许可证下载、软件升级验证和未来支持注册等操作。</block>
@@ -4808,8 +4522,6 @@
   <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">如果该帐户是合作伙伴级别帐户，则只能有一个 NSS 帐户。如果您尝试添加客户级 NSS 帐户并且合作伙伴级帐户已存在，您将收到以下错误消息：</block>
   <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">“此帐户不允许使用 NSS 客户类型，因为已经存在不同类型的 NSS 用户。”</block>
   <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">如果您已有客户级 NSS 帐户并尝试添加合作伙伴级帐户，情况也是如此。</block>
-  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">这是系统生成的映射到您的电子邮件的 ID。在*NSS 管理*页面上，您可以显示来自<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>菜单。</block>
-  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">如果您需要刷新登录凭证令牌，还有一个*更新凭证*选项<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>菜单。</block>
   <block id="37e3ca694c2290cac15ddf033e79bf4d" category="summary">要解决控制台代理的问题，您可以与NetApp支持人员合作，他们可能会询问您的系统 ID、代理版本或最新的AutoSupport消息。您还可以查看NetApp知识库来自行解决问题。</block>
   <block id="9752c145fd3c469b18b30d8f8dee3b0c" category="doc">控制台代理故障排除</block>
   <block id="b9196d8e9e32358d5fa547d13c254fb4" category="paragraph">要解决控制台代理的问题，您可以自行验证问题或与NetApp支持人员合作，他们可能会询问您的系统 ID、代理版本或最新的AutoSupport消息。</block>
@@ -4922,13 +4634,11 @@
   <block id="8883652241e094c22f85122286bf7be5" category="doc">管理您的NetApp Console用户设置</block>
   <block id="ee070c48eba3a60ce6f46beb0f406d92" category="paragraph">您可以修改您的控制台配置文件，包括更改您的密码、启用多重身份验证 (MFA) 以及查看您的控制台管理员是谁。</block>
   <block id="3cb1f3e723c9b0e598cf1cb6a69a55e2" category="section-title">更改您的显示名称</block>
-  <block id="fc9e021feb5503a4290dbcee9e81e12d" category="paragraph">您可以更改用于识别您并且其他用户可见的控制台显示名称。您的显示名称与您的用户名或电子邮件地址不同，并且无法更改。</block>
   <block id="d46bfef79ef4e5af07e7e7eecfff0603" category="list-text">选择控制台右上角的配置文件图标以查看用户设置面板。</block>
   <block id="befac70fd40711c428906b0a641dd516" category="list-text">选择您姓名旁边的“*编辑*”图标。</block>
   <block id="a4f6cc91409a8e534a14d0b5e0cfef8f" category="list-text">在“*名称*”字段中输入您的新显示名称。</block>
   <block id="a7c8edfd028f355b86456c7117112269" category="section-title">配置多重身份验证</block>
   <block id="ac61073d010cbc3a251f9d4e6c8eccd2" category="paragraph">配置多重身份验证 (MFA)，通过要求第二种验证方法来提高安全性。</block>
-  <block id="65a2a7eb5174016a8062a56633e73251" category="paragraph">使用外部身份提供商或NetApp支持站点进行单点登录的用户无法启用 MFA。如果您遇到上述任一情况，您将不会在个人资料设置中看到启用 MFA 的选项。</block>
   <block id="9632b6787f248249a00c5deddd6f8030" category="paragraph">如果您的用户帐户用于 API 访问，请不要启用 MFA。当为用户帐户启用多因素身份验证时，它会停止 API 访问。使用服务帐户进行所有 API 访问。</block>
   <block id="6d168c0cfcd90046f487062da3a74001" category="list-text">您必须已将身份验证应用程序（例如 Google Authenticator 或 Microsoft Authenticator）下载到您的设备。</block>
   <block id="7dd404768128571da27501ee0dc2ae48" category="list-text">您需要密码来设置 MFA。</block>
@@ -4944,7 +4654,6 @@
   <block id="45c07fa99050f57de53fb4ff89fd7cab" category="list-text">选择*重新生成恢复代码*。</block>
   <block id="2332588943c47002d7d4b6b185a7aa0c" category="list-text">复制生成的恢复代码并将其保存在安全的位置。</block>
   <block id="671e07801d48dec4b74d96f219be7477" category="section-title">删除您的 MFA 配置</block>
-  <block id="bba7c74fb0cff30dc0c0e00b337f4a66" category="paragraph">要停止使用多重身份验证 (MFA) 进行登录，请删除您的 MFA 配置。这样，您在登录时就无需输入身份验证应用程序中的一次性代码。</block>
   <block id="9e385c1342cdca08c1b237574c77e586" category="admonition">如果您无法访问您的身份验证应用程序或恢复代码，您将需要联系您的组织管理员来重置您的 MFA 配置。</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">选择*删除*。</block>
   <block id="8b473423c18a9814010c33fe5e039084" category="section-title">联系您的组织管理员</block>
@@ -5086,67 +4795,33 @@
   <block id="55744ccea4ab827ad5f363c0ec39e8bf" category="sidebar">NetApp Console设置和管理文档</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">开始使用</block>
   <block id="bd684dd31e369444b29047e57d56ff19" category="sidebar">了解部署模式</block>
-  <block id="7e99ea34b714387479c29a20b4a89752" category="sidebar">开始使用标准模式</block>
-  <block id="2e765525323590e2ff4d6c84d224de36" category="sidebar">开始使用受限模式</block>
-  <block id="f716edbe35ec39a9cae98bf3d24f38e3" category="sidebar">设置身份和访问权限</block>
-  <block id="7ddbb2eaa2fabd17fe28d7d03e8ad2df" category="sidebar">了解控制台身份和访问管理 (IAM)</block>
-  <block id="f9979c483e6c4c3e0bb110084e2529e7" category="sidebar">使用文件夹和项目组织您的资源</block>
-  <block id="9a95138b9cb83f59109eb15c038b1073" category="sidebar">添加成员和服务帐户</block>
-  <block id="7211199f77a8a73dc960b8a15a019199" category="sidebar">使用角色控制成员对资源的访问</block>
   <block id="91e534d044a3d9c6a1c8575f89e73c9b" category="sidebar">了解控制台代理</block>
-  <block id="a620abb16506a8da5f6b8dcbc0073466" category="sidebar">查看 AWS 权限</block>
-  <block id="b7053c5f835c45d38cf071449c74fd56" category="sidebar">查看 Azure 权限</block>
-  <block id="7050d365baa220c42a688cbf36a7e997" category="sidebar">查看 Google Cloud 权限</block>
-  <block id="891c5b2cea54480f0e1abb74959457a6" category="sidebar">在标准 AWS 区域开始使用</block>
-  <block id="e766f31fe70a68c11b8631144211d0f7" category="sidebar">在 AWS GovCloud 区域开始使用</block>
-  <block id="9722aa95875a94430d4569d2e8bd2382" category="sidebar">开始使用 AWS Secret 或 Top Secret Cloud</block>
-  <block id="0989b93807bc249a7accf2af8a9679dd" category="sidebar">查看控制台代理的 IAM 策略</block>
   <block id="8d855a86408ade086a4d47d808971acd" category="sidebar">管理凭证和订阅</block>
-  <block id="27c705176bc1f05cf50771b1f8fe182a" category="sidebar">在标准 Azure 区域中开始使用</block>
-  <block id="60563f8b2620e88ac71d1a98ee73e2e5" category="sidebar">在 Azure 政府区域开始使用</block>
-  <block id="31b63be41ae4657f9e340188aa268589" category="sidebar">Azure IL6 入门</block>
-  <block id="44c5d10bc881679d7e684cca5cf32bfa" category="sidebar">查看控制台代理的自定义角色</block>
-  <block id="6c3328ab0a2ccaa273efaec9a88e2751" category="sidebar">在标准 Google Cloud 区域开始使用</block>
-  <block id="4a76bec126921ea884970bf74fa31ac3" category="sidebar">查看控制台代理的服务帐户</block>
-  <block id="f0e69ccbb7ad96f546f7924206944bfa" category="sidebar">本地</block>
-  <block id="b6f41daebcd302181af0a121289d6fbb" category="sidebar">在标准模式下手动安装和设置控制台代理</block>
-  <block id="0d24e43f27f514852b6f35a6561be7d1" category="sidebar">在 VCenter 中安装并设置控制台代理</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客和社区</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
-  <block id="8bd88a6e146388c50931a9b4474ac68b" category="sidebar">NetApp Console设置和管理</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">什么是新的</block>
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">已知限制</block>
   <block id="e4c53684ddd66ee4898db459d57514e8" category="sidebar">学习基础知识</block>
-  <block id="14a5258ed6e53fde9968f99c48b5072e" category="sidebar">开始使用NetApp Console助手</block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">使用NetApp Console助手</block>
   <block id="65ce4dce26160be29539699c6623e379" category="sidebar">入门工作流程</block>
   <block id="1434a6bb482886cf18491c3161371a87" category="sidebar">注册NetApp Console</block>
-  <block id="f3aee30a3a487c746572616e3f53dc9d" category="sidebar">创建控制台代理</block>
   <block id="09b85e561b979d579e985e238b5e5d1c" category="sidebar">控制台代理安装选项</block>
   <block id="b9c838fe095b8b207e2903c139e3b496" category="sidebar">从NetApp Console创建控制台代理</block>
-  <block id="db286ac77f06147d01296f6d003b7e79" category="sidebar">从市场创建控制台代理</block>
   <block id="143fa1019fce3ddf5117f0b1f4f14fae" category="sidebar">手动安装控制台代理</block>
   <block id="ac04a782af57ff93f16c88e88212efb7" category="sidebar">在本地安装代理</block>
   <block id="0cd6a787b0c3cf4c965fe4f471c14a79" category="sidebar">手动在本地安装代理</block>
   <block id="999d0fc21e3f7ccb9869c3812a630168" category="sidebar">在 VCenter 中安装本地代理</block>
   <block id="102e22f275df79c5a1dde1e8293216b7" category="sidebar">订阅NetApp Intelligent Services</block>
   <block id="d0a7edff5cd82c23f3d1c18e0779ccbc" category="sidebar">接下来可以做什么</block>
-  <block id="ea5a9c54da2f265f65e20d38f9fcccf9" category="sidebar">开始使用BlueXP旧版界面（私人模式）</block>
-  <block id="a266db65e9da42d584a76b5e3f7f5fef" category="sidebar">BlueXP旧版界面入门（私人模式）</block>
   <block id="7029abd7e78c892ffba05a2ede3d7c4d" category="sidebar">使用NetApp Console</block>
   <block id="ece486ec258e6abf5b83feda49ff66e5" category="sidebar">登录NetApp Console</block>
-  <block id="a65d39d18fe3e5aabe5c3f06617edc8e" category="sidebar">管理NetApp Console</block>
   <block id="bcc69f55e471ef4f63ebea154056303c" category="sidebar">了解如何管理身份和访问</block>
-  <block id="6055633e93e75f195e1ce7a98f705965" category="sidebar">管理会员和服务帐户</block>
-  <block id="e824a4cdd52665a1b8f0bccc58724034" category="sidebar">管理资源层次结构</block>
-  <block id="986ccbc66c0eca226016ab4ae6a65874" category="sidebar">在组织、项目和控制台代理之间切换</block>
   <block id="5c06fd7ff7155e85c2867088844a5bb8" category="sidebar">Google Cloud NetApp Volumes角色</block>
   <block id="a11961cab6627eac643ea36ae57ce8df" category="sidebar">Keystone角色</block>
   <block id="7654fe6ca44295ba5f844fc9798f0103" category="sidebar">存储角色</block>
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">数据服务角色</block>
-  <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">合作组织</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">了解组织合作关系</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">建立组织伙伴关系</block>
   <block id="bd5a03f6c4ea6ff59c3bcf72b4208024" category="sidebar">管理合作组织的资源访问</block>
@@ -5160,26 +4835,20 @@
   <block id="d99778be9371fb280b62abdcd21887c2" category="sidebar">与 PingFederate 联合</block>
   <block id="d00255b25e6ac270c154c1b88351cb61" category="sidebar">管理联盟</block>
   <block id="b738cb995b90e7ef0f6b53e82271107a" category="sidebar">导入现有的联合连接</block>
-  <block id="a2e2f8288038950766d9cd088e4d892d" category="sidebar">维护虚拟机和操作系统</block>
   <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">维护 VCenter 安装的代理</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">安装 CA 签名证书以访问 Web 控制台</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">要求在 EC2 实例上使用 IMDSv2</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">卸载并删除控制台代理</block>
   <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">默认配置</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">在NetApp Console中强制执行ONTAP权限</block>
-  <block id="260bcd27c402b5ba9f5dcabbfc1e0ddd" category="sidebar">凭证和订阅</block>
   <block id="cbaee96b9499da2c5c6d3b23090382c6" category="sidebar">了解凭证和权限</block>
   <block id="9d812302dfdd0fdbf4faa0fe53b9ed24" category="sidebar">了解项目和权限</block>
-  <block id="cd3fa09be95f7fc90de7266dc3621de8" category="sidebar">管理与NetApp Console组织或帐户关联的 NSS 凭据</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
-  <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="sidebar">权限</block>
   <block id="a4f605cd0aab29ee5fb50f28627cef5d" category="sidebar">权限摘要</block>
   <block id="abfd94e3956e611a257a32b0f396af25" category="sidebar">Google Cloud 中的控制台代理防火墙规则</block>
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台网络访问（旧版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索软件恢复角色为用户提供对NetApp Ransomware Resilience的访问权限。勒索软件恢复能力支持以下角色：</block>
-  <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">使用访问角色根据用户需要执行的特定任务分配对存储资源的访问权限。例如，如果用户需要与 Ransomware Resilience 进行交互，则必须为他们授予访问角色，该角色包括对授予访问角色的项目的 Ransomware Resilience 的查看或管理权限。</block>
-  <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成员可以在同一个项目内以及不同的项目中拥有多个角色。例如，较小的组织可能会将所有可用的访问角色分配给同一个用户，而较大的组织可能会让用户执行更专业的任务。或者，您也可以为一个用户分配组织的勒索软件恢复管理员角色。在该示例中，用户将能够对组织内的所有项目执行勒索软件恢复任务。</block>
   <block id="c36b12344113082dcf8a9786e36a3536" category="cell">勒索软件抵御能力</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">勒索软件抵御能力角色</block>
   <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。</block>
@@ -5192,8 +4861,6 @@
   <block id="d530645223f70d357ab17787b555f381" category="list-text">在“替换现有订阅”字段中，选择是否要用这个新订阅自动替换一个组织的现有订阅。</block>
   <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">控制台将用这个新订阅替换组织中所有凭据的现有订阅。如果一组凭证从未与订阅关联，那么这个新订阅将不会与这些凭证关联。</block>
   <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">查看代理如何使用权限</block>
-  <block id="9bdb90e2cf9f7f97285de5520ab53a37" category="inline-image-macro">显示在 AWS 账户中部署控制台代理的控制台的概念图。IAM 策略被分配给 IAM 角色，该角色附加到控制台。</block>
-  <block id="6200ddd5978ec4a6ebc04f286e729487" category="paragraph"><block ref="6200ddd5978ec4a6ebc04f286e729487" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">如上文所述，控制台允许您通过几种方式提供 AWS 凭证：与控制台代理关联的 IAM 角色、在受信任的账户中承担 IAM 角色或提供 AWS 访问密钥。</block>
   <block id="a47f802b14f43406913307d1775681b4" category="list-text">您需要使用具有从控制台启动控制台代理权限的 Google 帐户部署控制台代理。</block>
   <block id="2f452b0fc39f70459edce8976da308fa" category="list-text">部署控制台代理时，系统会提示您选择<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block>对于代理控制台从服务帐户获取权限来创建和管理Cloud Volumes ONTAP系统、使用NetApp备份和恢复管理备份等等。通过将自定义角色附加到服务帐户来提供权限。</block>
@@ -5252,10 +4919,6 @@
   <block id="b10c09311b2a36cdbb586dd7823222f1" category="paragraph">当NetApp Console在 AWS 中启动控制台代理时，它会将一个策略附加到该代理，该策略为代理提供管理该 AWS 账户内的资源和流程的权限。代理使用权限对多个 AWS 服务进行 API 调用，包括 EC2、S3、CloudFormation、IAM、密钥管理服务 (KMS) 等。</block>
   <block id="a4a0e88b76170508470ee15848f6e7ba" category="cell">管理Cloud Volumes ONTAP用作后端存储的 EBS 卷</block>
   <block id="ebbb47c5d02c18deadd05d0341ccdd00" category="paragraph">控制台代理需要权限才能在 Google Cloud 中执行操作。这些权限包含在NetApp提供的自定义角色中。您应该了解代理使用这些权限做什么。</block>
-  <block id="dfeb199885257150591ae817b9f6fe44" category="paragraph">要使用NetApp Console功能和服务，您需要提供权限，以便控制台代理可以在您的云环境中执行操作。使用此页面上的链接可以根据您的目标快速访问所需的权限。</block>
-  <block id="28dc1d5c4a46ee6ae58c1c58beab7562" category="cell">从控制台创建控制台代理的用户需要特定权限才能在 AWS 中部署该代理。</block>
-  <block id="f9336c7c27ce5def37b4c85f532f3e69" category="cell">当控制台部署控制台代理时，它会将一个策略附加到代理，该代理提供管理 AWS 账户中的资源和流程所需的权限。如果您从 AWS Marketplace 部署控制台代理、手动安装控制台代理，或者<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block>。您还需要确保策略是最新的，因为后续版本中会添加新的权限。</block>
-  <block id="7d1553be39870d08636e98597a4b5934" category="cell">控制台代理的服务帐户必须具有日常操作的特定权限。您需要在部署期间将服务帐户与控制台代理关联。您还需要确保策略是最新的，因为后续版本中会添加新的权限。</block>
   <block id="80c404e08f5d5340903c30aa20ed5e6d" category="paragraph"><block ref="bc75056b5fa2888bb728b2036381638f" category="inline-link-macro-rx"></block>。</block>
   <block id="c1fecb1554425a64f3f9e6114b6f590b" category="admonition">如果您从控制台部署了控制台代理，它会自动为您部署控制台代理的账户添加 AWS 凭证。这确保了管理资源所需的必要权限。</block>
   <block id="eb6d1dd2b9253237853279d2ed49bd03" category="paragraph">您可以使用 IAM 角色在部署控制台代理的源 AWS 账户与其他 AWS 账户之间建立信任关系。然后，您将向控制台提供来自受信任账户的 IAM 角色的 ARN。</block>
@@ -5521,8 +5184,6 @@
   <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">| Amazon FsX for NetApp ONTAP：</block>
   <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
   <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">| 基于 Web 的控制台通过此端点与 Workload Factory API 进行交互，以管理和操作基于ONTAP 的FSx 工作负载。</block>
-  <block id="d273096b8b8c7966eb2a2fb6ca248366" category="paragraph">| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects</block>
-  <block id="f8cd35bf6f398c2f8c485bfd95309caa" category="list-text">。选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的身份提供商凭据登录。登录后，返回控制台启用连接。</block>
   <block id="61169bbb57ab5c82abb2ac47499153f3" category="list-text">在控制台中，选择“下一步”以查看摘要页面。</block>
   <block id="95d9f0b87c61b5cd1f8c21678ced4a5c" category="list-text">设置通知。</block>
   <block id="ec811988404f148d3a7f84f040f45531" category="paragraph">您可以选择七天或三十天。系统会通过电子邮件向具有以下角色的任何用户发送到期通知，并在控制台中显示这些通知：超级管理员、组织管理员、联盟管理员和联盟查看者。</block>
@@ -5616,7 +5277,6 @@
   <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*灾难恢复查看器*：仅查看信息。</block>
   <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">灾难恢复故障转移管理员</block>
   <block id="49f16ca5444f519e5203bb5067957eef" category="cell">灾难恢复应用程序管理员</block>
-  <block id="49868b41c479810c405bc3509cdb1907" category="cell">允许用户查看NetApp Data Classification扫描结果。具有此角色的用户可以查看合规性信息并生成他们有权访问的资源的报告。这些用户无法启用或禁用卷、存储桶或数据库模式的扫描。分类功能没有管理员角色。</block>
   <block id="7fefc96661449151a3bee08edda3e255" category="paragraph">这些限制是NetApp Console和管理设置特有的：代理、软件即服务 (SaaS) 平台等等。</block>
   <block id="332ea1ed79fb36acca4a28cb73bfb8c3" category="section-title">Google Cloud 用户帐户权限</block>
   <block id="83ad392c56898ad2bc9258551bd9dc50" category="paragraph">以下自定义角色赋予 Google Cloud 用户部署代理所需的权限。将此自定义角色分配给将要部署代理的用户。</block>
@@ -5727,31 +5387,16 @@
   <block id="34e82a1501cca5af4e190be9c03c0fbb" category="inline-link-macro">Google Cloud 文档：编辑自定义角色</block>
   <block id="322a5219fa870735040f24cb43da8303" category="paragraph"><block ref="322a5219fa870735040f24cb43da8303" category="inline-link-macro-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">您可以使用以下方法更新控制台代理现有的透明代理服务器：<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>通过使用命令来移除透明代理服务器<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。更多信息，请查阅相关文档。<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> 。</block>
-  <block id="6c69cf52de815b4e3d26a89db4f26c8a" category="paragraph">当您创建组织时，它包含一个项目。添加项目以管理资源，添加文件夹以将相关项目分组在一起。</block>
-  <block id="2bc87be9675bb8a069610f3430a1e3e8" category="paragraph">您可以在组织的资源结构中创建最多七级的文件夹和项目。在文件夹内创建文件夹，为您的组织构建嵌套结构。</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">请输入文件夹或项目详细信息：</block>
-  <block id="e3a15113b550a2e5d2560f495223b05a" category="list-text">*名称和位置*：输入名称并选择文件夹或项目的层次结构中的位置。将文件夹或项目放在组织下或另一个文件夹内。</block>
-  <block id="d67cf2e8c3d97e0eed9561206ed3e9ca" category="paragraph">选择“添加成员”以分配访问权限和角色。</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">了解如何移除资源</block>
   <block id="d66b571e57bc053e8b1ad8e43b91ee4e" category="paragraph">删除文件夹或项目之前，请确保其中不包含任何资源。<block ref="2ce0cd71e2b80657c61ce3337cd46c5f" category="inline-xref-macro-rx"></block>。</block>
   <block id="2634a609591cac73e3cee6d75b3a8299" category="section-title">更改与文件夹或项目关联的资源</block>
-  <block id="e1485c69a5051018e6f541a40ac64334" category="paragraph">修改成员访问权限以控制资源访问。</block>
-  <block id="3aab6b4b2431f483b7e867e25c7dc17f" category="paragraph">如果成員存取權限是從較高階層繼承而來，則無法在較低階層變更成員存取權限。更新更高层次结构级别的成员权限以更改访问权限。或者，您可以 <block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>.</block>
-  <block id="dc56ef546dad0049c4fe42c718817af1" category="paragraph">您可以向您的组织添加两种类型的成员：用户帐户和服务帐户。应用程序使用服务帐户自动执行 API 任务。人们使用用户帐户登录和管理资源。</block>
-  <block id="0a8fdeec95373b802409cb30efb505de" category="paragraph">您的 X.509 证书。它必须是 PEM、CRT 或 CER 格式。</block>
   <block id="81e59e8e4bf25fcadc8863ff39bcfc04" category="list-text">设置证书到期通知。您可以选择七天或三十天。到期通知将通过电子邮件发送给具有超级管理员或组织管理员角色的用户，并在控制台中显示。</block>
-  <block id="1753b2507377ecd0602ed08944b9d1b2" category="paragraph">删除成员时，系统会撤销其权限，但保留其控制台和NetApp支持站点帐户。</block>
-  <block id="a758e86398ed40898f56dc46bf8d3b3b" category="list-text">下载或复制客户端 ID 和客户端密钥。+ 控制台只会显示一次客户端密钥。复制或下载并安全存储。</block>
-  <block id="a3d754fa6f41840770949e7570cb4dc0" category="paragraph">用户移除多因素身份验证后，登录时必须重新设置多因素身份验证。如果用户只是暂时无法访问其 MFA 设备，他们可以使用设置 MFA 时保存的恢复代码登录。</block>
   <block id="e41f7fb86a6b410ae7e503a4ccc83ef6" category="paragraph">您可以查看与您的组织相关的已发现和未发现的资源。系统会查找存储资源，并将其标记为未发现，直到您将其添加到控制台为止。</block>
-  <block id="fc35c417bbb2c0ec9081298a05b3071b" category="admonition">资源页面不包含Amazon FSx for NetApp ONTAP资源，因为用户无法将其与角色关联。可以在“系统”页面或“工作负载”中查看。</block>
   <block id="62ff23d019d29d30b64698ce14ebdc09" category="list-text">利用现有选项查找资源：</block>
   <block id="aaff9ff22e8e6739bcdc8cc79cb3614b" category="inline-link-macro">查看有权访问关联文件夹和项目的成员</block>
   <block id="8b3be42a579e101783dbee0366282232" category="admonition">要查看哪些组织成员有权访问该资源，<block ref="d3f770deeda88cc3cea0d73a63cf7240" category="inline-link-macro-rx"></block> 。</block>
   <block id="d23b81e3e519af34ae1d1368f055ab5c" category="admonition">要从整个组织中删除已发现的资源，请转到“系统”页面并删除该系统。</block>
-  <block id="876c2ced14b405974ba0e1bffce7d0d5" category="paragraph">具有*组织管理员*或*文件夹或项目管理员*角色的用户有责任将角色分配给其他用户。您可以根据项目或文件夹分配访问角色。按项目或文件夹分配访问角色。例如，将“勒索软件恢复”管理员角色分配给一个项目的用户，将“SnapCenter”管理员角色分配给另一个项目的用户。要为用户授予文件夹中所有项目的勒索软件恢复管理员角色，请在文件夹级别分配该角色。</block>
-  <block id="ed59bba19a8b1215a5da046694459de3" category="paragraph">根据您的身份和访问管理 (IAM) 策略分配角色，以提高安全性。  IAM角色限制用户访问权限，使其仅限于必要的权限。</block>
-  <block id="dff14b7229aae5e011982b724c9867d3" category="paragraph">当您向组织添加成员时，系统会提示您为其分配角色。您可以查看他们目前被分配的角色。</block>
   <block id="d47741191d2932672428925f5a647577" category="paragraph">更改成员角色以更新其访问权限。</block>
   <block id="c0597b9526c7ff0d7645fb305fbbb302" category="paragraph">Amazon FsX for NetApp ONTAP：</block>
   <block id="deb5ab06bb4820c3ddaf1096673112dd" category="paragraph">基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。</block>
@@ -5761,7 +5406,6 @@
   <block id="cb55016940e52c1c7b882becfa96703f" category="paragraph">完成所有先决条件后，请在您的 Linux 主机上手动安装该软件。</block>
   <block id="3a25df27a9593be32d58d660128319d2" category="paragraph">安装控制台代理后，提供您设置的 AWS 权限，以便控制台代理可以管理您在 AWS 中的数据和存储基础设施。</block>
   <block id="5c585aa7c70930b73bdafb2cb9161f8a" category="paragraph">将创建的 IAM 角色附加到控制台代理 EC2 实例。</block>
-  <block id="ba496406ba5e67bd0a486e583b8cd337" category="paragraph">\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects</block>
   <block id="483f6f30ec7b7da81659462b08c18e8a" category="paragraph">以下示例在项目级别创建一个名为“agentDeployment”的角色：</block>
   <block id="606b4f54c298cd84f8c9d4d46c74820a" category="paragraph">gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml</block>
   <block id="a447c4cad2c58e7308d516639f777fff" category="section-title">步骤 3：创建一个 Google Cloud 服务帐户以与代理一起使用。</block>
@@ -5810,4 +5454,454 @@
   <block id="f81364bddd76f5bb00fa7ea1afb1e8f3" category="paragraph">当您使用搜索和恢复功能时，代理会发出以下 API 请求。只有在 2025 年 2 月索引版本 v2 发布之前启用了旧版索引功能，才需要这些权限：</block>
   <block id="6b3f95e18a1ba0f839260ac943cc5e73" category="paragraph">添加了一个自定义 JSON 策略，该策略体现了尽可能少的权限和尽可能小的范围。</block>
   <block id="0a466732427ffe0e3d3bf69fe76471c6" category="paragraph">以下权限已添加到最小备份和恢复权限列表中：</block>
+  <block id="733b0d64c43170576328dd2ff626b2c6" category="paragraph">| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://config.googleapis.com/v1/projects</block>
+  <block id="93e8ce3770c07ae531a9c736b37fd7a8" category="list-text">选择*测试连接*来测试您的连接。您将被引导至 IdP 服务器的登录页面。使用您的身份提供商凭据登录。登录后，返回控制台启用连接。</block>
+  <block id="f67fcb7a54d85787358c91ce5f1b1794" category="admonition">在受限模式下使用控制台时，请将 URL 复制到隐身浏览器窗口或单独的浏览器中，以登录到您的身份提供商 (IdP)。</block>
+  <block id="80c0d1efa61513303c5a1dc623dc8c80" category="list-text">要取消分配成员的角色，请选择 <block ref="e7d3eb2c8040b3803a37719a0c0ad857" category="inline-image-macro-rx" type="image"></block> 在角色旁边，点击即可从成员中移除相应的角色。您将被要求确认删除操作。</block>
+  <block id="eb571b52feba51f06ec7af9444b7857f" category="list-text">在“成员”页面中，导航至表格中的某个成员，然后选择 <block ref="875211da84a24f8a0b17392fa712292d" category="inline-image-macro-rx" type="image"></block> 然后选择“查看详情”。</block>
+  <block id="79af92d05f2b214eab2c765e215beb6b" category="doc">控制台代理 4.3.0</block>
+  <block id="6f1b51eea64496510e6cf5a5a2d57d29" category="paragraph">4.3.0 版本同时支持标准模式和受限模式。</block>
+  <block id="664a9e1da962d9131b0a035da50bbcc7" category="paragraph-title">能够验证控制台代理的网络连接</block>
+  <block id="81cc16a2354d8ec80802e2e4ac22f15a" category="paragraph">现在可以直接从NetApp Console验证已连接的控制台代理的网络连接。此功能有助于验证连接性并排查控制台代理的问题。</block>
+  <block id="65ce32eae3a28c0b24f8cc33c345ab84" category="paragraph"><block ref="65ce32eae3a28c0b24f8cc33c345ab84" category="inline-link-macro-rx"></block></block>
+  <block id="8b71edf4fd7d99d72da1d37de5e154b7" category="paragraph-title">NetApp Console处于受限模式时支持联合身份验证</block>
+  <block id="58bbe2cc0931c12594be1bafb70597fb" category="paragraph">现在您可以为处于受限模式的NetApp Console组织启用联合身份验证。这样，用户就可以使用其公司凭证登录控制台，同时保持受限模式的安全优势。</block>
+  <block id="ac811c471ef716f9c8a3865d7f14caa3" category="paragraph-title">只读模式</block>
+  <block id="8fc5022358a80320244b4f909c4293cc" category="paragraph">您可以将NetApp Console组织设置为只读模式。在只读模式下，用户可以查看资源和设置，但不能进行任何更改。组织管理员或超级管理员可以启用组织的只读模式。启用只读模式后，具有管理角色的用户必须手动提升权限才能根据需要进行更改。</block>
+  <block id="c7c19a46289db74512cc747670442409" category="inline-link-macro">了解如何为控制台组织启用只读模式。</block>
+  <block id="701595799e137f6efaa9c9cd9be54125" category="paragraph"><block ref="701595799e137f6efaa9c9cd9be54125" category="inline-link-macro-rx"></block></block>
+  <block id="4380e2b873a072c906edb6d21b6eb823" category="inline-link-macro">当你的组织处于只读模式时，了解如何提升你的角色。</block>
+  <block id="b45238e19857e4059227131bbda630a6" category="paragraph"><block ref="b45238e19857e4059227131bbda630a6" category="inline-link-macro-rx"></block></block>
+  <block id="0c2fbb6854f3455435639851d8cd9997" category="inline-image-macro">显示在 AWS 账户中部署控制台代理的控制台的概念图。</block>
+  <block id="a13b8f382ebf56f2b82af89db286c5a4" category="paragraph"><block ref="a13b8f382ebf56f2b82af89db286c5a4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4159a33176d30977a2d9b1b4ff27b420" category="inline-image-macro">一张概念图，展示了另外两个账户。每个用户都有身份和访问管理 (IAM) 策略。一个与 IAM 用户关联，另一个与 IAM 角色关联。</block>
+  <block id="66f249e9d83e1feff3fbdd894b518eff" category="paragraph"><block ref="66f249e9d83e1feff3fbdd894b518eff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30417b3c810a323e60b9866f8e6c9350" category="inline-image-macro">概念图显示了通过自定义角色和托管标识获得权限的初始 Azure 帐户，以及通过自定义角色和服务主体获得权限的两个附加帐户。</block>
+  <block id="3c3998b3724b770848f697973652cbed" category="paragraph"><block ref="3c3998b3724b770848f697973652cbed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a28d84712ec63fca5b3358a179fd161" category="summary">您可以使用控制台代理将NetApp Console连接到您的基础架构，并安全地协调跨 AWS、Azure、Google Cloud 或本地环境的存储解决方案，以及使用数据保护服务。</block>
+  <block id="aab5731bfa6cbaa9335ace3b6119b1ed" category="paragraph">您可以使用控制台代理将NetApp Console连接到您的基础架构，并安全地协调跨 AWS、Azure、Google Cloud 或本地环境的存储解决方案，以及使用数据保护服务。</block>
+  <block id="3230673163c008cdd02f112405efaaf9" category="paragraph">控制台代理使您能够：</block>
+  <block id="4d7b2f840c5d1940c932ef5b68407d63" category="list-text">通过NetApp Console协调存储管理任务，例如配置Cloud Volumes ONTAP、设置存储卷、使用数据分类等等。</block>
+  <block id="63e5cc9026d02c060058ae369a9c3c72" category="list-text">使用云提供商的 IAM 角色进行身份验证，以实现订阅计费集成。</block>
+  <block id="b5442d822ef2fdf45dde0be1d98a8164" category="list-text">使用高级数据服务（NetApp Backup and Recovery、 NetApp Disaster Recovery、 NetApp Ransomware Resilience和NetApp Cloud Tiering）</block>
+  <block id="5588ef10eaf5928d5c2eef029dd121da" category="list-text">以受限模式使用控制台。</block>
+  <block id="308c01eb8a0ce7aa29641087670683cc" category="paragraph">如果您不需要高级编排或数据保护，则可以集中管理本地ONTAP集群和云原生存储服务，而无需部署代理。此外，还提供监控和数据传输工具。</block>
+  <block id="89d00b0e4cdc5ca22b542515e11cf7fb" category="paragraph">下表显示了您可以使用和不使用控制台代理时可以使用的功能和服务。</block>
+  <block id="3ec96dde9691a6afd519c61179d8bedd" category="cell">可联系经纪人获取信息</block>
+  <block id="1490f23e97090196f0b8e4be2d8742a2" category="cell">无需代理即可购买</block>
+  <block id="8104d245049cf15410198b6913ed44d1" category="cell">支持的存储系统：</block>
+  <block id="fb97d1c8259ba6635407f1a41cf956eb" category="paragraph">是的（发现和管理功能）</block>
+  <block id="fab18a3d0e482e8c690720ece0d59967" category="paragraph">是的（仅限探索）</block>
+  <block id="821aade5bfe8143b04b0e3329145eb49" category="cell">Google Cloud 存储桶</block>
+  <block id="38b3d6672c5cc9fcae4bb30e89781b0d" category="cell">本地部署ONTAP集群（高级管理和发现）</block>
+  <block id="bdec6a7498ca4d25566e3e23d2c62a76" category="paragraph">是的（高级管理和发现）</block>
+  <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">否（仅限基本发现）</block>
+  <block id="a9ae3aa6d3b5385e5d21f5f7c9cbe066" category="cell">*可用的存储管理服务*：</block>
+  <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor（Active IQ）</block>
+  <block id="c3705e839d1a8df80ae158824bd08448" category="cell">首页仪表盘指标</block>
+  <block id="d3e800228af9a7ced9cadbe31f21cf71" category="paragraph">是的^2^</block>
+  <block id="fec52cc0232a22ef4060c7b61d92c0a0" category="paragraph">1号</block>
+  <block id="3863a60fc30916ec3597541037025585" category="cell">*可用数据服务*：</block>
+  <block id="6444e1b68689d877ddc4f4121e08c0f6" category="paragraph">^1^ 无需控制台代理即可查看生命周期规划，但需要控制台代理才能启动操作。</block>
+  <block id="69503e81cc92bb7b09446dacc350d84d" category="paragraph">^2^ 主页上的准确指标需要大小合适且配置正确的控制台代理。</block>
+  <block id="932e0f0da3df907fbda805c12b12abe5" category="paragraph">您可以直接从控制台、云提供商的市场安装控制台代理，也可以在您自己的 Linux 主机或 VCenter 环境中手动安装软件。</block>
+  <block id="0d07862d67097acd517fe27c0de099d7" category="section-title">云提供商权限</block>
+  <block id="3ba516db764b4c90d4973b3960d1d8d9" category="paragraph">当您在云端安装代理时，如果控制台代理可以访问互联网，则会自动更新。</block>
+  <block id="59b11244b7261ce8d669bb84f89d952d" category="summary">NetApp Console提供 SaaS 体验，可访问所有功能；也提供自托管选项，适用于网络连接受限的组织。</block>
+  <block id="7d4e67c65d7806e0a44c126537175622" category="paragraph">您可以通过两种方式使用NetApp Console ：作为完全托管的 SaaS 体验，或作为您自己的云环境中的自托管解决方案。使用 SaaS 选项，您可以通过 console.netapp.com 访问控制台，而NetApp管理所有基础架构、身份验证和更新。您可以通过网页浏览器直接访问所有功能。如果选择自托管选项，则需要在 AWS、Azure 或 Google Cloud 环境中安装控制台代理。该接口在本地运行，代理程序与NetApp保持有限的出站连接，以执行身份验证和更新等基本任务。</block>
+  <block id="7639306c3c0ecef2fa65fc37fa553d1e" category="paragraph">如果您的组织拥有标准的互联网连接，请选择 SaaS 体验。您可以享受最简单的设置、自动更新以及对所有NetApp存储系统、数据服务和高级功能的完全访问权限。您可以直接从控制台添加代理， NetApp会处理所有维护工作。</block>
+  <block id="693597565a0abb445dd8c1378b547c8a" category="paragraph">如果您的组织需要严格的连接性、安全性或合规性控制，例如政府或受监管行业，请选择自托管选项。您可以获得更多控制权和网络隔离，但只能管理选定的NetApp存储系统并使用有限的数据服务，并且某些功能不可用。您可以手动安装控制台代理，并直接从本地代理界面访问控制台。通过云市场或手动安装安装代理，代理仅与NetApp进行出站通信，确保没有入站互联网连接。</block>
+  <block id="79b1b35ef8f164c3d04934de4b4e0249" category="inline-image-macro">一张概念图，展示了标准模式的架构，其中公共互联网提供了 SaaS 层和 Auth0 身份验证。</block>
+  <block id="4c448565e3fd072b37daa94fa673661d" category="paragraph"><block ref="4c448565e3fd072b37daa94fa673661d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e875d2f82c83bb0d211e843f8273306f" category="inline-image-macro">受限模式的概念图。</block>
+  <block id="8eee0eea4e2ae93e083fb1f6a03a412e" category="paragraph"><block ref="8eee0eea4e2ae93e083fb1f6a03a412e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">使用基于角色的访问控制 (RBAC) 管理用户对NetApp Console的访问，在组织、文件夹或项目级别分配预定义角色。每个角色都授予特定的权限，定义用户在其分配的权限范围内可以执行哪些操作。</block>
+  <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">了解NetApp Console基于角色的访问控制 (RBAC)</block>
+  <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp在设计控制台角色时遵循最小权限原则，因此每个角色仅包含其任务所需的权限。这种方法通过限制每个成员所需的访问权限来增强安全性。</block>
+  <block id="e8e5bdd9e757a841d4916678c54e0477" category="paragraph">将资源整理成文件夹和项目后，为组织成员分配特定文件夹或项目的角色，使他们只能履行自己的职责。</block>
+  <block id="17b936d2e4829a5cf778b2c29100bb7a" category="paragraph">例如，您可以为特定项目级别的成员分配勒索软件恢复管理员角色，允许他们对该项目内的资源执行勒索软件恢复操作，而无需授予他们对整个组织的更广泛访问权限。同一用户可以被授予组织内多个项目的角色。</block>
+  <block id="9b372111c3284b1c413c38133ce241b7" category="paragraph">您可以根据用户的职责，为同一范围或不同范围的用户分配多个角色。例如，规模较小的组织可能会让同一用户在组织层面管理勒索软件恢复和备份与恢复任务，而规模较大的组织可能会在项目层面为每个角色分配不同的用户。</block>
+  <block id="0455998a9b4d48dfc90712f125c02594" category="section-title">控制台组织成员的类型</block>
+  <block id="216d633ebb90f040a2915716b0e69fdf" category="paragraph">NetApp Console组织中有三种类型的成员：* _用户帐户_：登录到NetApp Console以管理资源的个人用户。用户必须先注册NetApp Console，然后才能被添加到组织中。* _服务帐户_：应用程序或服务通过 API 与NetApp Console交互时使用的非人类帐户。您可以将服务帐户直接添加到您的控制台组织中。* _联合组_：从您的身份提供商 (IdP) 同步的组，允许您集中管理多个用户的访问权限。联合组中的每个用户都必须先注册NetApp Console，并被添加到您的组织中，且拥有相应的访问角色，然后才能访问授予该组的资源。</block>
+  <block id="143a5c25b96e4e8867190c0d1f10dbb3" category="inline-link-macro">了解如何向您的组织添加成员。</block>
+  <block id="5bc06c288bf257ec517f854ffef3edce" category="paragraph"><block ref="5bc06c288bf257ec517f854ffef3edce" category="inline-link-macro-rx"></block></block>
+  <block id="429804783adfb78f99dde5b7f7743fa3" category="section-title">NetApp Console中的预定义角色</block>
+  <block id="03fe474c549af244d2d9ae34c36418c0" category="paragraph">NetApp Console包含预定义角色，您可以将其分配给组织成员。每个角色都包含权限，用于指定成员在其分配的范围（组织、文件夹或项目）内可以执行哪些操作。</block>
+  <block id="59f087e27ff6ff3f1db7f4c6f4bd7ed7" category="paragraph">NetApp Console角色采用最小权限原则，确保成员仅拥有完成任务所需的权限，并按角色提供的访问权限类型对其进行分类：</block>
+  <block id="1614405d496cc003badc1066d7669711" category="list-text">平台角色：提供控制台管理权限</block>
+  <block id="c186b521a1d693e26e360baada60a0fc" category="list-text">数据服务角色：提供管理特定数据服务的权限，例如勒索软件恢复和备份与恢复。</block>
+  <block id="f815d8c404e332320043018b03d096c2" category="list-text">应用程序角色：提供管理存储以及审核控制台事件和警报的权限</block>
+  <block id="1cf40e697c787a7f4363d8aa57c9c982" category="paragraph">您可以根据成员的职责为其分配多个角色。例如，您可以为特定项目为一名成员分配勒索软件恢复管理员角色和备份与恢复管理员角色。</block>
+  <block id="fe766b76d3c1afbbfa9812a4774a1108" category="inline-link-macro">了解NetApp Console中可用的预定义角色</block>
+  <block id="ca5fd8bb5d9faf476fbe2d765b802bdc" category="paragraph"><block ref="55b5ceff8fee7cfc075b04636ac3ba7f" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6f301b2c67375931164ffab8594268a" category="summary">使用NetApp控制台的身份和访问管理 (IAM) 根据您的业务层次结构（例如按位置、部门或项目）来构建和控制资源访问。</block>
+  <block id="8f0b3e866642f7b2bd73e95879da522a" category="paragraph">使用NetApp控制台的身份和访问管理 (IAM) 来组织您的NetApp资源，并根据您的业务结构（按位置、部门或项目）控制访问权限。</block>
+  <block id="3ffaa4542bdc105235c2aa6d84398ba1" category="paragraph">资源按层级排列：组织位于顶层，其次是文件夹（可以包含其他文件夹或项目），然后是项目，项目包含存储系统、工作负载和代理。</block>
+  <block id="4802d1fc79ac23aaf44455daac9d6bb8" category="paragraph">在组织、文件夹或项目级别为成员分配基于角色的访问控制 (RBAC) 权限，以确保用户拥有对资源的适当访问权限。</block>
+  <block id="6eccc51ae400d9583687f84b5fbdb257" category="admonition">您必须拥有_超级管理员_、_组织管理员_或_文件夹或项目管理员_角色才能在NetApp Console中管理 IAM。</block>
+  <block id="e8c67cc0d7ca66d55340b50ff19e81d8" category="inline-image-macro">资源管理组成部分的概念图</block>
+  <block id="64e87e268d8a02cfb5d37a77e92402d6" category="paragraph"><block ref="0642d6783c4254d0630aae1c47f2e5b2" category="inline-image-macro-rx" type="image"></block>]</block>
+  <block id="6dc5e990649602e7e565307ea2b766cc" category="section-title">身份和访问管理组件</block>
+  <block id="b9bd354ffbde2ab3520144428026e644" category="paragraph">在NetApp Console中，您可以使用三个主要组件来组织存储资源：组织组件、资源组件和用户访问组件。</block>
+  <block id="8031ad367c5f0eab4552c9249b900da5" category="section-title">组织内的项目和文件夹</block>
+  <block id="b1e9822212430f6a045685b8ee19be13" category="paragraph">在您的 IAM 结构中，您使用三个组织组件：组织、项目和文件夹。您可以通过为用户分配以下任何级别的角色来授予他们访问权限。</block>
+  <block id="6cded2372fd04c9dd52343a98f35146b" category="list-text">项目用于提供对存储资源的访问。必须先将资源分配给项目，其他人才能访问这些资源。您可以将多个资源分配给一个项目，也可以创建多个项目。然后，您可以为用户分配项目权限，使他们能够访问项目中的资源。</block>
+  <block id="8427feb21fa52ea7a726ef6e57657a30" category="paragraph">例如，您可以根据需要，将本地ONTAP系统与单个项目或组织中的所有项目关联起来。</block>
+  <block id="34c4afb90e82099fac404c0f590e4c24" category="inline-link-macro">了解如何向您的组织添加项目。</block>
+  <block id="caee6d2f97679cf9374c79a1d6ae25b0" category="paragraph"><block ref="caee6d2f97679cf9374c79a1d6ae25b0" category="inline-link-macro-rx"></block></block>
+  <block id="dbbd0be2ab27e73b122e8161ad90c3da" category="list-text">将相关项目分组到_文件夹_中，以便按位置、站点或业务部门进行组织。您无法直接将资源与文件夹关联，但将用户分配到文件夹级别的角色，即可使其访问该文件夹中的所有项目。</block>
+  <block id="4141f49cc8cf63834c1efaa049d309e0" category="inline-link-macro">了解如何向您的组织添加文件夹。</block>
+  <block id="9b81d805be63395863d2a1721014a6bb" category="paragraph"><block ref="9b81d805be63395863d2a1721014a6bb" category="inline-link-macro-rx"></block></block>
+  <block id="b1b22dc4c5575b2e202a4925725a072a" category="paragraph">资源包括存储系统、 Keystone订阅以及控制台代理。</block>
+  <block id="de535fcbd4d214b2ab192b8311cd28bb" category="paragraph">+ 必须先将资源与项目关联，其他人才能访问该资源。</block>
+  <block id="41e1fd34ab20918035d6b06b198a4dd6" category="paragraph">例如，您可以将Cloud Volumes ONTAP系统与一个项目或组织中的所有项目关联起来。资源的分配方式取决于贵组织的需求。</block>
+  <block id="ea7af68e4527f06be6522ac5e2825e2d" category="inline-link-macro">了解如何将资源关联到项目。</block>
+  <block id="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="paragraph"><block ref="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="inline-link-macro-rx"></block></block>
+  <block id="235f31305ad49210767c08b30ea8f944" category="list-text">存储系统和Keystone订阅</block>
+  <block id="e09e666756aaffdfff2449235d7d9d0d" category="list-text">存储系统是您在NetApp Console中管理的主要资源。NetApp Console支持对本地和云存储系统的管理。必须先在项目中添加存储系统，其他人才能访问该项目。</block>
+  <block id="5c130a5ccad0215f526f58692320aa7a" category="paragraph">存储系统会自动与添加它们的项目关联，但您也可以从“资源”页面将它们与其他项目或文件夹关联。</block>
+  <block id="acf67f786e22a15c3ff04ae1f6c8ea12" category="paragraph">Keystone订阅也是您可以与项目关联的资源，以便授予用户在NetApp Console中访问订阅的权限。</block>
+  <block id="8e88fe5e613df95ef0fde3cf27c21a5b" category="list-text">组织管理员创建控制台代理来管理存储系统并启用NetApp数据服务。代理最初与创建它们的项目关联，但管理员可以从“代理”页面将它们添加到其他项目或文件夹。</block>
+  <block id="628d9176cd0fff84e7a7642d6e347c77" category="paragraph">将代理与项目关联起来，可以管理该项目中的资源；而将代理与文件夹关联起来，可以让文件夹或项目管理员决定哪些项目应该使用该代理。代理人必须与特定项目关联才能提供管理能力。</block>
+  <block id="803ae69b5603a03e7969373e143099c4" category="inline-link-macro">了解如何将代理商与项目关联起来。</block>
+  <block id="d2023a4ab828cd6c831b409006f97d93" category="paragraph"><block ref="d2023a4ab828cd6c831b409006f97d93" category="inline-link-macro-rx"></block></block>
+  <block id="3046a3cf2a88459ab80652e4ae68b22c" category="section-title">成员及角色</block>
+  <block id="c16d2c57bf7fad0e40cde58d27c1339f" category="paragraph">成员注册NetApp Console后，您需要将他们添加到您的组织中。添加完成后，您可以为他们分配角色，以便授予他们访问资源的权限。您可以手动从控制台添加服务帐户，也可以通过NetApp ConsoleIAM API 自动创建和管理服务帐户。</block>
+  <block id="43b297cbb0e75204baf387be01022755" category="paragraph"><block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
+  <block id="f916d263ec3be157e30192a304e53728" category="paragraph">将成员与角色关联时，您可以为整个组织、特定文件夹或特定项目授予该角色。您选择的角色赋予成员对层次结构中选定部分的资源的权限。</block>
+  <block id="ef07a2f4fd4017b8814a997f89b39300" category="paragraph">NetApp Console提供细粒度的角色控制，遵循“最小权限”原则，这意味着访问角色旨在仅向用户授予其所需的权限。</block>
+  <block id="2a841c3875a3cfb6973b8cf8d764ccb7" category="paragraph">这意味着随着用户职责的增加，他们可能会被分配多个角色。</block>
+  <block id="04049ea3946b8d071880d432ab8244f5" category="section-title">IAM 策略示例</block>
+  <block id="0107f97fd7cbc1a3c8ceb62d7e5a6d61" category="section-title">小型组织战略</block>
+  <block id="32443b220e6828d6f9f8016ad5c10432" category="paragraph">对于用户少于 50 人且采用集中式存储管理的组织，可以考虑使用超级管理员和超级查看者角色的简化方法。</block>
+  <block id="618d897449d220f2837f97a28a20e8e4" category="paragraph">**示例：ABC公司（5人团队）**</block>
+  <block id="61cbbf5877d024341a0ef65454034d0d" category="list-text">**组织结构：** 单一组织，下设 3 个项目（生产、开发、备份）</block>
+  <block id="727267ca2e62d67e09baf72ee7a6143c" category="list-text">**角色：**</block>
+  <block id="52d0e3e3e49b1c15ffc46987d4355baf" category="list-text">2 位高级成员：拥有*超级管理员*角色，可获得完整的管理权限</block>
+  <block id="b9ec60acb8ef1e7e6f9701eb09d805a3" category="list-text">3 名团队成员：*超级查看者*角色，拥有监控权限但无修改权限</block>
+  <block id="d9a58df0eace2d186eaded70baf838b6" category="list-text">**代理策略：**所有项目都关联一个代理，以实现资源共享访问。</block>
+  <block id="55b47824d0005c8b8ab4de13ff882e64" category="list-text">**优势：**简化管理，降低角色复杂性，适合需要广泛访问权限的团队</block>
+  <block id="f19b08303a80cfd1d9684c7ce9cb8320" category="section-title">多区域企业战略</block>
+  <block id="aba9938ebc9466429e9556389084ff33" category="paragraph">对于拥有区域运营和专业团队的大型组织，应采用层级式方法，用文件夹表示地理或业务单元边界。</block>
+  <block id="9b890ccf9a6e93916c8c59f0adbe368b" category="paragraph">**例如：XYZ公司（跨国公司）**</block>
+  <block id="c4e9a544c77f67f0daa16a823c5dad67" category="list-text">**结构：** 组织结构 &gt; 区域文件夹（北美、欧洲、亚太） &gt; 每个区域的项目文件夹</block>
+  <block id="cbb69d7099797b6abb26688a676ebafd" category="list-text">平台角色：</block>
+  <block id="22fadd1c560fece376d8a8bcd22a6686" category="list-text">1 *组织管理*：全球监督和政策管理</block>
+  <block id="d085387b24d7bd608526ad66a88849e2" category="list-text">3 *文件夹或项目管理员*：区域控制（每个区域一个）</block>
+  <block id="047117926ac026ef323e1bb551d7a3ba" category="list-text">1 *联盟管理员*：企业身份提供商集成</block>
+  <block id="af6b385891fa191082f9b26a2d50fd71" category="list-text">**按区域划分的存储角色：**</block>
+  <block id="7fca1fbbd1c1e4437e0285a8ce868797" category="list-text">9 *存储管理员*：发现和管理指定区域中的存储系统</block>
+  <block id="d824c09b7302996cb69c8ac47615d269" category="list-text">2 *存储查看器*：监控跨区域的存储资源</block>
+  <block id="336a9df87a259bea2c48f91551120070" category="list-text">1 *系统健康专家*：无需修改系统即可管理存储健康状况</block>
+  <block id="d01b14a12072eaf2bdc4f1ab2189e695" category="list-text">**数据服务角色：**</block>
+  <block id="620ae10c7e5824918bbe23191568baec" category="list-text">*备份和恢复管理员*：按项目根据备份职责而定</block>
+  <block id="f4fb000411fab03ddf611da667916603" category="list-text">*勒索软件恢复管理员*：负责跨项目的安全团队监控</block>
+  <block id="8c56ec73753455408a4fdce92050c3a7" category="list-text">**代理策略：**与相应地理项目相关的区域代理</block>
+  <block id="c978064e6c0abe3ea339b837f893d9f4" category="list-text">**优势：** 通过角色分离、区域自主权和遵守当地法规来增强安全性</block>
+  <block id="1bca43386adb1b5dfd81efdcc80db730" category="section-title">部门专业化战略</block>
+  <block id="0a63f0954c541e845e88af82c4db6d09" category="paragraph">对于拥有需要特定数据服务访问权限的专业团队的组织，应根据职能职责进行有针对性的角色分配。</block>
+  <block id="aa9752dc69ed187e2810e47002c52751" category="paragraph">**例如：TechCorp（一家中型科技公司）**</block>
+  <block id="04baa5867533308bc0cc91388e728ac5" category="list-text">**结构：** 组织 &gt; 部门文件夹（IT、安全、开发） &gt; 项目特定资源</block>
+  <block id="364d4b2b51f19e1d7f6d176b369d3c65" category="list-text">**专业岗位：**</block>
+  <block id="7b643f4babc14154b240069484f64b94" category="list-text">安全团队：*勒索软件恢复管理员*和*分类查看器*角色</block>
+  <block id="5bdf90c7ab018c993a169377c8a512b0" category="list-text">备份团队：*备份和恢复超级管理员*，负责全面的备份操作</block>
+  <block id="cdc9616ac940de001148c939588043e2" category="list-text">开发团队：*测试环境管理存储管理员*</block>
+  <block id="19ac215f6aedb92a065e282a886afcf3" category="list-text">合规团队：*运营支持分析师*，负责监控和支持案例管理</block>
+  <block id="ec09e08f0dad9967f815ea4a6150e06c" category="list-text">**代理策略：** 根据资源所有权将代理与部门项目关联起来</block>
+  <block id="0ef5ca1d3a2b8ef1e24d12a2a867a4f6" category="list-text">**优势：** 可定制的访问控制、更高的运营效率以及明确的专项任务责任划分</block>
+  <block id="12e01bb1a747f9efa932e4290df47651" category="section-title">NetApp Console中 IAM 的后续步骤</block>
+  <block id="317861835a558acc5da02a2d53e87e99" category="paragraph">它既可以作为软件即服务 (SaaS) 平台使用，也可以作为自托管选项安装在您自己的主权云中。它提供存储管理、数据移动性、数据保护以及数据分析和控制。管理功能通过基于 Web 的控制台和 API 提供。</block>
+  <block id="6f9220ecdca642b0359fd1d526b21090" category="inline-image-macro">控制台截图，显示了多个系统。选中其中一个选项，即可启用NetApp数据服务，或者选择“进入系统”来管理存储。</block>
+  <block id="011d3401e6ecd731f72c9e3afe1df058" category="paragraph"><block ref="011d3401e6ecd731f72c9e3afe1df058" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="87d57ea72cafc3aa3be259970e754f81" category="section-title">SaaS 与主权云部署</block>
+  <block id="641ac543d6ed23ceda83d07e868515f8" category="paragraph">您可以通过注册 SaaS 服务或将其部署在您的主权云中来开始使用NetApp Console 。在主权云中部署NetApp Console时， NetApp会限制出站连接，以满足您组织的安全性和合规性要求。当控制台部署在主权云中时，并非所有功能和服务都可用。</block>
+  <block id="2c6c43d54a7dd74a06c155d08d7db4eb" category="paragraph">NetApp继续为不需要出站连接的站点提供BlueXP 。BlueXP可以安装在您的网络上，无需任何出站连接。 <block ref="f1018912945653d0f5d1d6c88d05acfe" category="inline-link-macro-rx"></block></block>
+  <block id="950a35d7aced985e8ee1b6240f65a908" category="doc">NetApp Console的安全合规性</block>
+  <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">NetApp Console符合 SOC 2 II 型标准。</block>
+  <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">了解更多关于NetApp SOC 2合规性的信息。</block>
+  <block id="5c1f694e43aab1bf26b300260c3822c2" category="paragraph"><block ref="5c1f694e43aab1bf26b300260c3822c2" category="inline-link-macro-rx"></block></block>
+  <block id="a7cbfcc3f40f9b759d21b6e0bfb565ec" category="cell">允许用户不受限制地访问分配的项目和文件夹。可以将成员添加到他们管理的文件夹或项目中，以及执行任何任务并在他们被分配的文件夹或项目内的资源上使用任何数据服务或应用程序。文件夹或项目管理员无法创建控制台代理。</block>
+  <block id="143bd02c953bba9b731282024d3a9f3d" category="cell">允许用户查看NetApp Data Classification扫描结果。具有此角色的用户可以查看合规性信息并生成他们有权访问的资源的报告。这些用户无法启用或禁用卷、存储桶或数据库模式的扫描。分类功能没有管理员角色。</block>
+  <block id="1282f90034162aa1eb616797e0379691" category="paragraph">您需要为控制台代理提供适当的权限，以便它可以在您的云环境中执行操作。使用此页面上的链接，您可以根据目标快速访问所需的权限。</block>
+  <block id="0429753823dd56c6321879ac91c61377" category="cell">从控制台部署控制台代理 要在 AWS 中部署控制台代理，用户需要特定的权限。</block>
+  <block id="6a576eacbcc0768a7faf1facae7a80dd" category="cell">用于部署数据代理的 AWS 用户账户必须具有所需的权限。</block>
+  <block id="382a5f94b2fc27afca8b5059a38447fc" category="cell">启用NetApp Cloud Tiering到 AWS 时，您需要输入访问密钥和秘密密钥。这些凭证将传递给ONTAP集群，以便ONTAP可以将数据分层存储到 S3 存储桶中。</block>
+  <block id="afde698940da385b9c6a6919318278ab" category="paragraph">随着后续版本添加新的权限，请及时更新策略。</block>
+  <block id="9c2492a427b389000c06bd6e5bc48096" category="cell">使用NetApp Backup and Recovery备份本地ONTAP集群时，需要向控制台代理添加权限才能使用“搜索和恢复”功能。</block>
+  <block id="59f9914b438a2f55a9b7b527baf46fa7" category="cell">控制台代理的服务帐户必须具有日常操作所需的特定权限。部署期间需要将服务帐户与控制台代理关联。随着后续版本添加新的权限，请及时更新策略。</block>
+  <block id="7d7ac3e1fbeac6b54cb98f1e6ba0c151" category="inline-image-macro">概念图，显示控制台在进行 API 调用之前，如何从 Microsoft Entra ID 获取身份验证和授权。控制台角色定义了 Active Directory 中的权限。它与一个或多个 Azure 订阅以及代表控制台应用程序的服务主体对象相关联。</block>
+  <block id="67c9df3365a25f9273ce9359a9970d73" category="paragraph"><block ref="67c9df3365a25f9273ce9359a9970d73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b5b8631c77766cf76c4cdf595d85709d" category="paragraph">如果您是首次使用NetApp Console(SaaS) 并拥有组织管理员角色的用户，则可以使用控制台助手来指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理您的数据。</block>
+  <block id="f4fcdc3618d224e799137c32961b66fe" category="paragraph">默认情况下，对于具有组织管理员角色的首次用户， NetApp Console会在主页上显示控制台助手。在您完成创建控制台代理和添加系统的必要任务之前，它将一直可用。</block>
+  <block id="87ce348d036c128a34f78c5571668a05" category="paragraph">使用助手完成以下任务，这些任务将为您的NetApp Console环境提供最基本的设置：</block>
+  <block id="8c34b16f3206503a273a913d579a45b4" category="inline-link-macro">了解如何添加 NSS 帐户</block>
+  <block id="910e5ce0d2ce921cf2d92a32f17c63cc" category="paragraph"><block ref="020d26e4890f1052d0e4c1afcac4a7ce" category="inline-link-macro-rx"></block>。</block>
+  <block id="219da842ce0ea93dbe65e778848ee1ac" category="list-text">通过部署控制台代理连接到您的存储环境。</block>
+  <block id="8df7cf42ef8d2b87ead21a16f64ec2db" category="inline-link-macro">了解如何在本地安装控制台代理。</block>
+  <block id="d75cfb6f68d260019e101b846a291a95" category="paragraph"><block ref="d75cfb6f68d260019e101b846a291a95" category="inline-link-macro-rx"></block></block>
+  <block id="0041b0a20310bf9b86cf14cc7a911900" category="list-text">通过添加或发现集群来管理存储系统</block>
+  <block id="8bde17b3755db15ba7eeeaebbd0ec6a6" category="inline-link-macro">了解如何添加许可证和订阅</block>
+  <block id="32cb091abc6285411d273895dd9a676a" category="paragraph"><block ref="1ddf5dd64a51001f039dd9f39712e537" category="inline-link-macro-rx"></block>。</block>
+  <block id="29ea98735edd89bd452d0ccd218efb00" category="list-text">查看数据服务信息。</block>
+  <block id="5d775d2582c5b9e09c769a1d78f0287b" category="summary">要开始使用控制台，第一步是使用您的NetApp支持站点凭据注册或登录，或者创建NetApp Console登录帐户。如果您是公司第一个注册的用户，您将在控制台中以组织管理员的身份创建一个新组织。如果贵公司已有组织机构，您可以注册或登录以访问该机构。</block>
+  <block id="ee9164e87b6a48eb7267f96b5eea6927" category="doc">为NetApp Console组织启用只读模式</block>
+  <block id="1502dd52f21974358fc9b631a9bd3ede" category="paragraph">为安全起见，您可以为NetApp Console组织启用只读模式。在只读模式下，用户可以查看资源和设置，但不能进行任何更改。</block>
+  <block id="934bac81bd3943334449500387f09185" category="paragraph">在只读模式下，具有管理员角色的用户必须手动提升权限才能进行更改，这确保了更改是有意为之的。</block>
+  <block id="53ccb7bd8c0be53a952139ebd4454132" category="paragraph-title">所需访问权限</block>
+  <block id="4108d98bcfb2f72210c814c171f79e00" category="paragraph">超级管理员或组织管理员。</block>
+  <block id="1bd38acf8c902626aedcc8c6b12762d7" category="section-title">为您的控制台组织启用只读模式</block>
+  <block id="5bf8daa3c0dc16befcbf126a2fbf7d3b" category="paragraph">启用只读模式以限制对控制台组织的更改。所有用户仍然可以查看资源。拥有管理员角色的用户，如果不手动提升权限，则无法在控制台中执行任何操作。</block>
+  <block id="67dc6731b52be466c87a71e328b38b1d" category="paragraph">启用只读模式后，用户会看到一个横幅，通知他们该组织处于只读模式。用户必须前往用户设置来提升其角色。</block>
+  <block id="077396c12efaa57c1b81350a76f607c7" category="list-text">在“组织”选项卡中，选择要设置为只读模式的组织的“编辑组织设置”。</block>
+  <block id="d2a2a2d01dab51c4edcc72cdbf26dd9e" category="list-text">在“只读模式”部分，将开关拨到“开”位置启用只读模式，然后选择“保存”。</block>
+  <block id="830042deac7cf98a9d585826bf88f527" category="inline-image-macro">屏幕截图显示只读模式开关处于开启状态。</block>
+  <block id="aaa2a8206d2beaf2ad4c110435335619" category="paragraph"><block ref="aaa2a8206d2beaf2ad4c110435335619" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0946433107c0141c86e12d9acfc94eb5" category="section-title">以初始组织管理员身份注册NetApp Console</block>
+  <block id="7d49e7e93048e2c08ada8c16c7b0851f" category="paragraph">如果贵公司还没有NetApp Console组织，请注册创建一个。第一个用户是管理员，负责管理帐户和权限。您可以稍后更新角色并添加管理员。</block>
+  <block id="dc346f53e29026800c3b9274294105f6" category="list-text">如果您拥有NetApp支持站点帐户，请直接在“登录”页面上输入与您的帐户关联的电子邮件地址。</block>
+  <block id="b1c0e39fde6fd83a65dd3bd95142165f" category="paragraph">控制台会在您首次登录时使用您的NetApp支持站点凭据进行注册。</block>
+  <block id="95f99a60f019f663b3b74472e57bd99b" category="admonition">注册表格中只允许使用英文字符。</block>
+  <block id="745229ae5b2bced3482332829ac60c32" category="paragraph">请验证您的电子邮件地址以完成注册。</block>
+  <block id="9e8f3a5627d6a315be184e88407a8e4b" category="list-text">登录后，请阅读并接受最终用户许可协议。</block>
+  <block id="4c93133d0f71016860e62cd5febc8888" category="list-text">在“欢迎”页面上，创建一个组织。</block>
+  <block id="d7398f410905989b0cfbd7c8949dea25" category="inline-link-macro">了解如何使用控制台助手。</block>
+  <block id="fa08bac88bef3e9d26d3b95077caef72" category="paragraph">+ 作为首次担任管理员的用户，请按照引导流程添加存储、创建控制台代理等。 <block ref="bf1931d629ee75960c14ddd7c33b6738" category="inline-link-macro-rx"></block></block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="paragraph-title">下一步</block>
+  <block id="11fd5297be439890aa7909ed6b065791" category="inline-link-macro">了解NetApp Console的身份和访问管理</block>
+  <block id="31d64e1aa309f3c1d129fe42fb15c550" category="paragraph">作为管理员，在完成控制台助手中包含的步骤后，您应该规划身份和访问策略，将用户添加到您的组织，并分配角色。 <block ref="c76be609c50d4552e26c26422993deb2" category="inline-link-macro-rx"></block></block>
+  <block id="347778e3054043c713d65df7f9e10e01" category="section-title">如果组织已存在，请注册或登录NetApp Console。</block>
+  <block id="5acfd694e6aaca7505fcdbc950ee0e38" category="paragraph">如果贵公司已有NetApp Console组织，请注册或登录以访问它。您的注册或登录方式取决于您的公司是否使用身份联合或拥有NetApp支持站点凭据。如果还没有，请创建NetApp Console登录帐户。</block>
+  <block id="7db903b190082d22d5def424cfdf8da1" category="list-text">如果您拥有NetApp支持站点帐户，或者您的公司已设置单点登录 (SSO)，请在“登录”页面上输入您关联的电子邮件地址或 SSO 凭据。按照提示完成登录。</block>
+  <block id="adbbbb6561b05ff5263526309e842926" category="inline-link-macro">了解如何联系组织管理员。</block>
+  <block id="209cbd371e4e73e308b346af700a9f6d" category="list-text">如果系统提示您创建组织，请关闭对话框并告知控制台管理员，以便他们可以将您添加到控制台组织并授予您访问权限。 <block ref="68ba448e5ed3d32508e199fa22eb43b6" category="inline-link-macro-rx"></block></block>
+  <block id="bd2f34410185922260ac4efdf54bca8b" category="paragraph">获得组织访问权限后，即可开始管理存储和使用分配给您的数据服务。</block>
+  <block id="f59f161390f1bb901c50b0444a10682d" category="paragraph">您还可以向现有联盟添加额外的已验证域，从而允许您为联盟连接使用多个域。</block>
+  <block id="455eba9dac1d0bd193275dfd5a99f973" category="list-text">您可以在“审核”页面上查看联盟管理事件，例如启用、禁用和更新联盟。 <block ref="2aa37a4e40a079c9408b3b80517b92fa" category="inline-link-macro-rx"></block></block>
+  <block id="95df6e616e319eb924bc933f31ac6775" category="paragraph">将控制台代理与特定项目关联起来，以实现资源管理和数据服务访问。通过控制台代理发现的资源需要资源和代理都与同一个项目关联，才能实现团队访问。</block>
+  <block id="4660db74d545b9594630c648aca44dd7" category="paragraph">超级管理员和组织管理员可以创建代理，并将任何代理与任何项目或文件夹关联起来。文件夹或项目管理员只能将现有代理与他们拥有权限的文件夹和项目关联起来。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block>。</block>
+  <block id="9b569f5410f438350a839aa90af4545d" category="paragraph">您需要拥有*组织管理员*或*超级管理员*权限才能管理组织的身份和访问权限。拥有*文件夹或项目管理员*权限，您只能管理您有权访问的文件夹和项目。</block>
+  <block id="fe333bbc506814f898618c6bcf114d81" category="paragraph">用户注册NetApp Console后，您必须明确地将他们添加到您的 Console 组织中。您还可以选择向您的组织添加服务帐户。</block>
+  <block id="2ce957c89371cf8acad81ff68dd6e552" category="summary">添加文件夹和项目，以匹配您的业务结构。创建文件夹和项目后，您可以将资源与它们关联起来，并管理成员对这些项目的访问权限。</block>
+  <block id="0b1953169659929f252b74b2fac140a4" category="doc">将文件夹和项目添加到NetApp Console组织</block>
+  <block id="f2b5e92952531dba522ce88cb4c16dae" category="inline-link-macro">了解NetApp Console中的资源层次结构</block>
+  <block id="f49ccb97d62c81974bbda51cd8c77318" category="paragraph">创建新组织时，控制台会自动为您创建一个项目。大多数组织都需要多个项目，以及文件夹来保持井然有序。<block ref="3ff8a71797cdccee53e5a806a28529f8" category="inline-link-macro-rx"></block>。</block>
+  <block id="f55c1cf23850cb94b20fa20bba3f1258" category="section-title">使用文件夹和项目来组织资源</block>
+  <block id="f5053c5bbeed6cc022a8eb13ef974310" category="paragraph">在NetApp Console中，组织包含文件夹和项目，可帮助您组织资源。文件夹可以帮助您对相关项目进行分组，项目可以帮助您管理资源和成员访问权限。</block>
+  <block id="23a84683c545992067034aebc5f5800d" category="paragraph">文件夹可以帮助您整理相关项目。您可以创建嵌套文件夹来表示组织结构的不同层级。例如，您可以为每个业务部门创建一个顶级文件夹，然后在该业务部门内为不同的团队创建子文件夹。然后，您可以在文件夹内创建项目。</block>
+  <block id="0e1d4bb97fa3c0957a2102a7ad9a8a4a" category="paragraph">文件夹还可以通过角色继承更有效地管理成员访问权限。在文件夹级别为成员分配角色时，他们将继承所有子项目和文件夹的权限。</block>
+  <block id="47645323d0dcf35be6cd9da50c005f91" category="admonition">文件夹是一种组织工具，对于没有 IAM 权限的成员（例如组织管理员、文件夹或项目管理员或超级管理员角色）是不可见的。成员访问的是项目，而不是文件夹。</block>
+  <block id="b0a1fc59ed55ce94ec61843746c271e3" category="paragraph">组织管理员可以通过创建文件夹来委派管理职责。创建文件夹后，组织管理员可以为特定文件夹分配文件夹管理员或项目管理员角色。这些成员无需访问整个组织即可管理该文件夹内的所有项目。</block>
+  <block id="7333669681c3bfc4b872d032356ff491" category="paragraph">文件夹可以包含其他文件夹或项目作为子文件夹，但不能直接关联资源。资源必须与项目关联。</block>
+  <block id="890ae0025d21eef160ace21fb3149039" category="inline-image-macro">一张图表，显示一个文件夹以及与该文件夹关联的资源。文件夹中有两个项目：项目 A 和项目 B。</block>
+  <block id="d46a6083c02d984712a83d6c5b120fc1" category="paragraph"><block ref="d46a6083c02d984712a83d6c5b120fc1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7ab001a557500fdf3abf96f1dc5846d7" category="inline-image-macro">一张图表，显示一个文件夹，其中包含两个项目：项目 A 和项目 B。一个与项目 A 关联的资源。</block>
+  <block id="680181c4f97261b5c9ed915395ba3b92" category="paragraph"><block ref="680181c4f97261b5c9ed915395ba3b92" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="46265e9714318d57269c7d6f993d7bf7" category="paragraph">将资源与项目关联起来，以便成员进行管理。资源必须与项目关联才能进行管理和用户访问。</block>
+  <block id="1dbed530db5c9d95fa8ec141aee2c8a3" category="paragraph">一个组织可以有一个或多个项目。项目可以直接位于组织下，也可以位于文件夹内。如果使用代理来发现项目中的资源，则还必须将该代理与该项目关联起来。</block>
+  <block id="f68264db31f8e358d7b3d39779910149" category="paragraph">用户可在“系统”页面上浏览已分配的项目，以管理与每个项目相关的资源。</block>
+  <block id="81bcfbdb7e695e8691db23d1321b1e4d" category="paragraph">添加项目以管理资源，添加文件夹以对相关项目进行分组。创建新组织时，控制台会包含一个项目。</block>
+  <block id="6ed61c190e4f415666551a70090ee558" category="paragraph">您可以在组织的资源结构中创建最多七级的文件夹和项目。根据需要创建嵌套文件夹来整理资源。</block>
+  <block id="5dc5f7f75b0dfdc61cd1b94110ae984b" category="list-text">*名称和位置*：输入文件夹或项目的名称并选择其位置。您可以将文件夹或项目放置在组织下，也可以放置在其他文件夹内。</block>
+  <block id="254d2f12d648be132f229e56797f57ae" category="list-text">*资源*：选择要与此文件夹或项目关联的资源。如果您尚未向主机添加存储系统，您可以稍后执行此步骤。</block>
+  <block id="cc91e3d4532f60de58ee3bbfc98a83ba" category="admonition">只有当文件夹中的资源被分配给某个项目后，成员才能访问这些资源。使用文件夹临时存放资源，直到创建必要的项目为止。这可以帮助组织管理员将资源分配委派给文件夹或项目管理员，然后由该管理员将资源分配给文件夹内的项目。</block>
+  <block id="1c5908c2545fe748beabd542eeadfa65" category="list-text">*访问权限*：选择*添加成员*以分配访问权限和角色。您可以随时向项目或文件夹中添加或删除成员。</block>
+  <block id="c1617a424b1b78f2e4996c706c7da25f" category="paragraph">根据需要重命名文件夹或项目。重命名不会影响相关资源或成员访问权限。</block>
+  <block id="06a01cc7b48cebaa7b2745656e6b06c0" category="paragraph">删除不再需要的文件夹和项目，例如团队重组或项目完成后。</block>
+  <block id="87134724e257cb8840c1000071f4b625" category="paragraph">您可以根据组织的需求变化更改与文件夹或项目关联的资源。</block>
+  <block id="715079a082fcf8dc70bf1c45f87994a6" category="list-text">根据您选择的资源，选择“与项目关联”或“与项目取消关联”。</block>
+  <block id="48eddb9422f94db0ba1c8ab2d6959b69" category="paragraph">您可以从“组织”页面查看与文件夹或项目关联的成员。</block>
+  <block id="7ec95d8b18380f61f62a5c7444edbb4d" category="paragraph">修改成员访问权限以控制资源访问。请记住，在文件夹级别分配的角色将被所有子项目和文件夹继承。</block>
+  <block id="6a070ab9c3d6306fbe1b5def78331465" category="paragraph">如果成员访问权限是从文件夹或组织级别继承的，则无法在较低级别更改成员访问权限。更改更高层级成员的权限以更改访问权限。或者，您可以 <block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>。</block>
+  <block id="692fa8c1472b3f5b389ae8b229a03338" category="doc">将用户添加到NetApp Console组织</block>
+  <block id="9367e759db9275009eaa691f3756abe9" category="paragraph">在控制台中，您可以根据访问角色授予用户对项目或文件夹的访问权限。_访问角色_包含一组权限，使成员（用户或服务帐户）能够在资源层次结构的指定级别执行特定操作。</block>
+  <block id="e1e51b7c8740497989d96d687d7ce641" category="paragraph">超级管理员、组织管理员或文件夹或项目管理员（对于他们管理的文件夹和项目）。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
+  <block id="3cbafb79babb187563c0124e2520510c" category="section-title">了解如何在NetApp Console中授予访问权限</block>
+  <block id="6006dace312ced6616f59ef5355ec45d" category="paragraph">NetApp Console使用基于角色的访问控制 (RBAC) 来管理权限。可以单独为用户分配角色，也可以通过联合组为用户分配角色。每个角色都定义了对特定资源允许的操作。</block>
+  <block id="34b1f94b77b5bf3b37ba851f10060189" category="paragraph">请注意以下关于在NetApp Console中授予访问权限的事项：</block>
+  <block id="68486ab3d656a167edf458a9cdc1ec37" category="list-text">所有用户必须先注册NetApp Console，然后才能获得资源访问权限。</block>
+  <block id="2bd8e344bd7b38add589340263927733" category="list-text">即使用户是已分配角色的联合组的成员，也必须在控制台中明确地为每个用户分配角色，然后他们才能访问资源。</block>
+  <block id="b499ec6fa9977b0ca77f6656a13829bb" category="list-text">您可以直接从控制台添加服务帐户并为其分配角色。</block>
+  <block id="9522a4fe29d3a6f0c0622f4995ff5efb" category="paragraph">NetApp Console支持三种类型的成员：用户帐户、服务帐户和联合组。</block>
+  <block id="f885e9c9bd1a071e174b95a4756cc585" category="paragraph">即使用户属于联合组，也必须先注册NetApp Console，然后才能添加他们并分配角色。直接在控制台中创建服务帐户。</block>
+  <block id="d94f6f6ba8ce7506a6b69386dcf7a22a" category="paragraph">所有成员必须至少被明确分配一个角色才能访问资源。</block>
+  <block id="329677cd626d4cfa5f740d7b30a4267d" category="paragraph">添加成员时，选择资源级别（组织、文件夹或项目），并分配一个或多个具有所需权限的角色。</block>
+  <block id="1dab057ddc4cf188939abb2ad8167642" category="section-title">添加用户</block>
+  <block id="c4f012a820a876441651b72de9950dd2" category="paragraph">用户注册NetApp Console，但组织管理员、文件夹管理员或项目管理员必须将他们添加到组织、文件夹或项目中，以便他们能够访问资源。</block>
+  <block id="b4a0cb24fc1c2a28e5b0fd5fa8308158" category="paragraph-title">开始之前：</block>
+  <block id="24d7e1e56b09c7376a4a094ec532aeab" category="inline-link-macro">注册NetApp Console。</block>
+  <block id="f9f0fc08a28165bf61fdcc6fc990b36c" category="paragraph">用户必须已经注册了NetApp Console。如果他们还没有注册，请引导他们…… <block ref="d4374b555d5da28aa40f87ee2182176f" category="inline-link-macro-rx"></block></block>
+  <block id="4b3c98ae86f08a374f95582b9064bd51" category="admonition">如果要添加属于联合组的用户，请确保该用户已注册NetApp Console，并在控制台中明确分配了角色。NetApp建议分配最低访问权限角色，例如组织查看者。</block>
+  <block id="e4c7746ce65f01142bd97bb2d2b4e60c" category="list-text">对于*用户的电子邮件*，输入与其创建的登录相关联的用户的电子邮件地址。</block>
+  <block id="16f19f1862986e5cfa297bf88d518ae8" category="list-text">您只能选择您拥有权限的文件夹和项目。</block>
+  <block id="af90d2d7644f20dc2d8aec6e0f442367" category="list-text">选择组织或文件夹时，即授予该成员对其所有内容的访问权限。</block>
+  <block id="a9b2b751db8d05c519eb79f9711b1fb5" category="list-text">要授予对更多文件夹、项目或角色的访问权限，请选择“添加角色”，选择文件夹、项目或角色类别，然后选择角色。</block>
+  <block id="c1210e1eadc2e6185343080e42569250" category="paragraph">控制台会通过电子邮件向用户发送操作说明。</block>
+  <block id="7d3bb6a341c5bcd69e576d8a2d0d4481" category="paragraph">服务帐户允许您自动执行任务并安全地连接到控制台 API。对于简单的设置，可以选择客户端 ID 和密钥；对于自动化或云原生环境，可以选择 JWT（JSON Web Token）以获得更强的安全性。选择符合您安全要求的方法。</block>
+  <block id="cf93592d2eb75cefdaf9491c515627ff" category="paragraph">对于 JWT 身份验证，请准备您的公钥或证书。</block>
+  <block id="6b46a99edf68965e5f08add7c63f7189" category="list-text">要使用 JWT 身份验证，请选择“使用私钥 JWT 身份验证”，然后上传您的 RSA 公钥或证书。如果使用客户端 ID 和密钥，则跳过此步骤。</block>
+  <block id="25054204158c0a8e9ec275453c365690" category="paragraph">您的 X.509 证书。它必须是 PEM、CRT 或 CER 格式。</block>
+  <block id="346b70a5bf4a6387b4ab083ced7c39f4" category="list-text">选择一个*类别*，然后选择一个*角色*，授予成员对所选组织、文件夹或项目中的资源的权限。</block>
+  <block id="b8d2f0ac411b3987f15812871943a838" category="list-text">如果您没有选择使用 JWT 身份验证，请下载或复制客户端 ID 和客户端密钥。</block>
+  <block id="1065e278b83db0baa7239d1c2c89e558" category="paragraph">控制台只会显示一次客户端密钥。请妥善备份；如果丢失，您可以稍后重新创建。</block>
+  <block id="6c07155a6c5b387b3649e57518b2acbf" category="list-text">如果您选择 JWT 身份验证，请下载或复制客户端 ID 和 JWT 受众群体。控制台只会显示此信息一次，之后无法再检索。</block>
+  <block id="1e5bd0e3b2f8efdd44ff92b7d355c374" category="section-title">向您的组织添加联合组</block>
+  <block id="c4d8a0f38fcfd51b64b45642a963ccd2" category="paragraph">您可以将来自身份提供商 (IdP) 的联合组添加到您的组织。联合组的成员将继承您在控制台中分配给该组的角色。</block>
+  <block id="1f87469083830ec60b59de86a65908a9" category="inline-link-macro">了解如何建立联邦。</block>
+  <block id="44c50d77ce337726b2c52859655871e2" category="paragraph">添加联合组之前，请确保以下事项： * 您必须已在身份提供商 (IdP) 和控制台之间设置联合。<block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block> * 该群组必须已存在于您的身份提供商 (IdP) 中。* 您必须知道身份提供商 (IdP) 中群组的确切名称。* 该组用户必须已注册NetApp Console，并在控制台中被明确分配了角色。</block>
+  <block id="16a2c505069eacd418dca553f5b68d99" category="list-text">对于“成员类型”，请选择“联合组”。</block>
+  <block id="00cfd65508d24955faa8b609b29efc15" category="list-text">选择该团体所属的联邦。</block>
+  <block id="be1ae879869c7f401beda2410fc2ef42" category="list-text">对于“组名称”，请输入您身份提供商 (IdP) 中组的确切名称。</block>
+  <block id="07de438994544ae30eaf7e2f193c409e" category="summary">通过将用户添加到NetApp Console组织中的项目和文件夹来控制用户对资源的访问权限。授予项目级用户访问权限。</block>
+  <block id="e56038e31d347de9d8efed7b085f0ea0" category="doc">在NetApp Console中向文件夹和项目添加资源</block>
+  <block id="e05491de164847046e2b1bfc23dc2ad8" category="paragraph">资源是指控制台所感知到的实体，例如存储资源、控制台代理或备份和恢复工作负载。</block>
+  <block id="855302443127a4472e4eafba07d53be5" category="paragraph">您可以在控制台的“资源”页面中查看和管理资源。</block>
+  <block id="839048d357b4befdffffdf7daf5ab90a" category="section-title">控制台资源类型</block>
+  <block id="005ca739b8c68c884a42cd2b34782fd8" category="paragraph">您可以将多种类型的资源关联到NetApp Console组织中的项目：</block>
+  <block id="19dbfcf1459f2bf9d1efc94a96c88d10" category="list-text">存储资源</block>
+  <block id="63798ea34197c7edbbb5794fb20b2d0e" category="list-text">存储资源是组织中最常见的资源类型，包括本地存储系统和云存储系统。在控制台中添加存储系统时，您可以将其添加到文件夹或项目中。在此之前，控制台会将其标记为未发现，并且不会在“资源”页面上显示它。</block>
+  <block id="9c1341268d013754bd82bdf6ffbb0757" category="list-text">如果您使用控制台代理来发现存储系统，请将该代理添加到同一文件夹或项目中。这允许用户执行代理启用的功能，例如数据服务或控制台原生存储管理。您可以从控制台的“代理”页面向文件夹或项目中添加代理。<block ref="a6db5244ec8666b2e12c38c770923c31" category="inline-link-macro-rx"></block>。</block>
+  <block id="6e0ffc28497d27ad3c6bea6ff91952d8" category="list-text">Keystone订阅</block>
+  <block id="914389e5e60dfc20b254ad9e68c9222f" category="list-text">如果您的组织拥有Keystone订阅，您可以在“资源”页面上查看它们。您可以将Keystone订阅与文件夹或项目关联起来，以便向拥有这些文件夹或项目权限的成员提供访问权限。</block>
+  <block id="0ae3744d4aece1a5dd0a98ad7070fcda" category="admonition">控制台会将Amazon FSx for NetApp ONTAP资源从“资源”页面中排除，因为用户无法将其与角色关联。您可以在“系统”页面或“工作负载”中查看这些资源。</block>
+  <block id="213681c9dc8fd7427e93994d790da314" category="paragraph">将资源关联到文件夹或项目，使其可供具有该文件夹或项目权限的成员使用。</block>
+  <block id="c04502b23fc006429135d64d911d5536" category="list-text">如果您将资源与文件夹关联，则_文件夹或项目管理员_现在可以访问该资源并将其与文件夹内的项目关联。<block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>。</block>
+  <block id="0c2e13a193f12ed8110274ba733eef72" category="paragraph">要从文件夹或项目中删除资源，请删除其关联。这样可以防止成员管理该文件夹或项目中的资源。</block>
+  <block id="297f68b77c05f2a54dc7c6dd691dcb7c" category="list-text">要从文件夹或项目中移除资源，请选择 <block ref="5aa3fbfa4a030d3d0fb7677a91fd2eba" category="inline-image-macro-rx" type="image"></block> 在文件夹或项目旁边。</block>
+  <block id="56eda737c9d7f16cfc7da39c3c418546" category="list-text">选择“删除”以移除关联。</block>
+  <block id="a83100154d543563bb4d5b97c5e96942" category="doc">在NetApp Console中管理成员访问权限</block>
+  <block id="ba4d06d423cce106bf6535eb7db9492c" category="paragraph">管理您在控制台组织中的成员访问权限。分配角色以设置权限。成员离开时将其移除。</block>
+  <block id="b41a805ec9017f0b704697df693123e6" category="paragraph">超级管理员、组织管理员或文件夹或项目管理员（对于他们管理的文件夹和项目）。链接：reference-iam-predefined-roles.html[了解访问角色]。</block>
+  <block id="cc9490185617aa95d7b60301afe90ae1" category="paragraph">您可以按项目或文件夹分配访问角色。例如，可以为用户分配两个特定项目的角色，或者在文件夹级别分配角色，从而授予用户对文件夹中所有项目的勒索软件恢复管理员角色。</block>
+  <block id="679b40124e84cc1083a162b4adbd7938" category="inline-link-macro">了解如何添加文件夹和项目。</block>
+  <block id="cf91125d1c872bdab1636283bb432d86" category="admonition">请先添加文件夹和项目，然后再分配用户访问权限。 <block ref="7b716a1b87dcc74b5100e99c2831f686" category="inline-link-macro-rx"></block></block>
+  <block id="40fb7b24c380ce71145e537ff475c5e8" category="paragraph">NetApp Console使用基于角色的访问控制 (RBAC) 模型来管理用户权限。您可以单独或通过联合组为成员分配预定义的角色。您可以向服务帐户以及联合组添加和分配角色。每个角色都定义了成员可以在相关资源上执行哪些操作。</block>
+  <block id="39377b079cc7298cede5e71697ef95a4" category="list-text">所有用户必须先注册NetApp Console，然后才能获得资源访问权限。</block>
+  <block id="70d188d257e89b9d25c9b84daaaf414f" category="section-title">使用角色继承</block>
+  <block id="cf7afbf14de8bec1f53def1143f2ceac" category="paragraph">在NetApp Console中，当您在组织、文件夹或项目级别分配角色时，所选范围内的所有资源都会自动继承该角色。例如，文件夹级角色适用于所有包含的项目，而项目级角色适用于该项目内的所有资源。</block>
+  <block id="e60016344d77f4cfca08d380f83a5ec5" category="paragraph">您可以查看他们目前被分配的角色。</block>
+  <block id="312c9a6ca1ccba18340ba6f65daa444b" category="paragraph">您可以查看哪些成员有权访问特定文件夹或项目。</block>
+  <block id="644ed7e725ca7a7a2108f353f403ae81" category="section-title">分配或修改成员访问权限</block>
+  <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">用户注册NetApp Console后，您可以将他们添加到您的组织并分配角色，以便向他们提供资源访问权限。 <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
+  <block id="729d1ca3c10203fc503fd9f53e1e1025" category="paragraph">您可以根据需要添加或删除角色来调整成员的访问权限。</block>
+  <block id="385f92ada47188b8c301664b007e6ca3" category="paragraph">成员可以在同一个项目内或不同的项目中担任多个角色。例如，规模较小的组织可能会将所有可用的访问角色分配给同一用户，而规模较大的组织可能会让用户执行更专业的任务。或者，您也可以在组织级别为一名用户分配勒索软件恢复管理员角色。在这个例子中，用户可以对组织内的所有项目执行勒索软件恢复任务。</block>
+  <block id="185fff519c8fc661f991bd10bba243ab" category="admonition">被分配了组织管理员角色的成员不能被分配任何其他角色。他们已经拥有整个组织的权限。拥有文件夹或项目管理员角色的成员不能被分配到他们已经拥有该角色的文件夹或项目中的任何其他角色。这两个角色都可以访问其职责范围内的所有服务。</block>
+  <block id="ebeb67c2ab58cfe7b88d1a1bc054c1a8" category="list-text">选择成员选项卡之一：*用户*、*服务帐户*或*联合组*。</block>
+  <block id="a62c20a6e8e006e17ebdbe37484ef3e8" category="paragraph">如果成员离开您的组织，则将其从组织中移除。</block>
+  <block id="b28aef4c16ab3aa23caf8777e9998b0c" category="paragraph">删除成员时，系统会撤销其控制台权限，但保留其控制台和NetApp支持站点帐户。</block>
+  <block id="737b12a5e844af7e5587e33feeb06499" category="list-title">联邦成员</block>
+  <block id="46bc8a32811e038789b16b3be4c304b0" category="list-text">当联合用户从您的身份提供商 (IdP) 中移除时，他们将自动失去对NetApp Console的访问权限。但您仍然应该将它们从您的控制台组织中删除，以保持您的成员列表是最新的。</block>
+  <block id="2a331f65a945f71cf576d7408c911549" category="list-text">如果您从身份提供商 (IdP) 中的联合组中移除用户，他们将失去与该组关联的控制台访问权限。但是，他们仍然保留在控制台中分配给他们的明确角色所关联的任何访问权限。</block>
+  <block id="741fa1d97e274d87522c5274731ddbd6" category="paragraph">如果您没有任何合作伙伴组织，则不会显示“合作伙伴”选项卡。</block>
+  <block id="a6e7e6949d9cfe21acbeb52c1329d758" category="doc">用户安全</block>
+  <block id="1ec1065d3e78d7c206f0ecaef991aaf0" category="paragraph">通过管理成员安全设置，确保用户对NetApp Console组织的访问权限。您可以重置用户密码、管理多因素身份验证 (MFA) 以及重新创建服务帐户凭据。</block>
+  <block id="fea697c6ae1d0da74f0ba44be3fc0d3f" category="section-title">重置用户密码（仅限本地用户）</block>
+  <block id="3330914a79300c6835bbe3bc86cf9c45" category="paragraph">组织管理员无法重置本地用户的用户密码。但是，他们可以指导用户重置自己的密码。</block>
+  <block id="16d33ec21eee9c061bc9a88909c5ec33" category="paragraph">指示用户通过选择“忘记密码？”从控制台登录页面重置密码。</block>
+  <block id="bb06c441f91b01e38af765cd0f68f60f" category="admonition">此选项不适用于联合组织中的用户。</block>
+  <block id="bc6678c9a9943f90ed06302f420dfb08" category="admonition">多因素身份验证仅适用于本地用户。联合身份验证用户无法启用多因素身份验证 (MFA)。</block>
+  <block id="e3727073d591ed506f7e87126b243caa" category="paragraph">用户移除多因素身份验证后，登录时必须重新设置多因素身份验证。如果用户暂时无法访问其 MFA 设备，他们可以使用已保存的恢复代码登录。</block>
+  <block id="3ba67e9f839feac6f7f1d7812b36e256" category="paragraph">如果您丢失或需要更新服务凭证，可以创建新的凭证。</block>
+  <block id="cbb983c8b2240366fdf2e6a4ca41bee0" category="paragraph">创建新凭证会删除旧凭证。您不能使用旧的凭据。</block>
+  <block id="f67f980ba471dba7c5f95c824dd43bf6" category="list-text">下载或复制客户端 ID 和客户端密钥。</block>
+  <block id="5e8ecdfa17ba50d83eb7b9028eeb4de9" category="paragraph">控制台只会显示一次客户端密钥。请务必复制或下载并妥善保存。</block>
+  <block id="e6c66c93554a031ae85ef2984add99c4" category="paragraph">\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://config.googleapis.com/v1/projects</block>
+  <block id="8a3c52723df25b46d8e20662b73d35df" category="paragraph">安装控制台代理之前，您需要先准备好环境。您可以从 AWS Marketplace、Azure Marketplace 安装，也可以在您自己的运行于 AWS、Azure 或 Google Cloud 中的 Linux 主机上手动安装。</block>
+  <block id="65a0e63ccea20a9f20e161d239f88202" category="open-title">手动安装（必须用于 Google Cloud）</block>
+  <block id="8cec294d7bbf367168b102d1aed4952e" category="paragraph">您可以将控制台代理手动安装到运行在 AWS、Azure 或 Google Cloud 上的 Linux 主机上。</block>
+  <block id="f1a5483ce6e0c38d7737152319fdfc85" category="paragraph">您还可以核实是谁向组织添加了成员，或者项目是否已成功删除。</block>
+  <block id="d80a62f674e4a96f69c2ddfcceed1b7a" category="summary">要开始使用NetApp Console(SaaS)，请先准备控制台的网络，注册并创建帐户，然后使用NetApp助手设置初始功能。</block>
+  <block id="3162c8efd4cce0d602638a86276c10b1" category="doc">入门工作流程（SaaS）</block>
+  <block id="e10c2ca7a3a40579fe4240028852ed47" category="paragraph">要开始使用NetApp Console(SaaS)，请先准备控制台的网络，注册并创建帐户，然后使用控制台助手设置初始功能。</block>
+  <block id="f9fd7cc1e76e4519cd46daa993179867" category="paragraph">您可以访问由NetApp提供的基于 Web 的控制台，该控制台是软件即服务 (SaaS) 产品。您可以使用控制台管理混合云存储环境并使用NetApp数据服务。</block>
+  <block id="5a7e12e086f90e07ae42b4c3c6b5121a" category="paragraph">确保访问NetApp控制台的计算机能够通过网络访问所需的端点。</block>
+  <block id="d0f2d6c9731b54e920f1ea734e746767" category="inline-link-macro">了解如何为NetApp控制台配置网络。</block>
+  <block id="742f3a58c8d5c1f7cc5a4bb3ac391412" category="paragraph"><block ref="742f3a58c8d5c1f7cc5a4bb3ac391412" category="inline-link-macro-rx"></block></block>
+  <block id="1281b5e18d123835effb54466c6c0e1e" category="paragraph">前往<block ref="193ae139051d487c450de046f6bd2645" category="inline-link-rx"></block> 并注册。如果系统提示您创建组织，而您认为您的公司已经存在组织，请关闭对话框并告知您的组织管理员。如果贵公司目前没有组织管理员，您可以认领此角色。 <block ref="3886fb7bb69eaac4d5ed416bad678dd5" category="inline-link-macro-rx"></block></block>
+  <block id="e958f6c4076ed5879c19626945716300" category="paragraph">此时，您已登录，可以使用NetApp助手开始配置控制台。首先，请将您的NetApp支持帐户与控制台代理关联，以启用全部功能。</block>
+  <block id="6dc63c80f81838734d4c9f2cb014cd91" category="paragraph">如果您选择不使用NetApp助手或安装控制台代理，您可以开始管理存储并使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服务。<block ref="d15147d8429817c45cc619fa49c43b04" category="inline-link-macro-rx"></block>。</block>
+  <block id="c184293a5cc8371b882a8e3ab950451d" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 关联您的NetApp支持站点 (NSS) 帐户</block>
+  <block id="1c13eb1d242262739dd57d2d470f7dc8" category="paragraph">将您的NetApp支持站点 (NSS) 帐户与控制台关联，可以更轻松地管理您的许可证和订阅，并直接从控制台访问支持资源。</block>
+  <block id="f370c692837fb71b9e6a06838b702556" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 创建控制台代理</block>
+  <block id="d42aa5ad5df5384bcdd3dc85edb4fba7" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 为主机添加存储系统</block>
+  <block id="1372e6d7b3a42f31a712299457ee40d8" category="paragraph">在NetApp Console中，您可以添加或发现存储系统来管理您的混合云存储环境。使用NetApp助手添加您的第一个存储系统。</block>
+  <block id="538aab892dada422b64c6e5dd6222278" category="admonition">如果在 AWS、Microsoft Azure 或 Google Cloud 中安装控制台代理，则控制台会自动发现代理安装位置的 Amazon S3 存储桶、Azure Blob 存储或 Google Cloud Storage 存储桶的相关信息。这些系统会自动添加到“系统”页面。</block>
+  <block id="d630b5e36d1d4a276c2faf76a5a9ccab" category="inline-link-macro">了解如何发现ONTAP系统</block>
+  <block id="552b3fa9a9920290123ede1f374236aa" category="list-text"><block ref="552b3fa9a9920290123ede1f374236aa" category="inline-link-macro-rx"></block></block>
+  <block id="e7b18ef41c55f7558e2e8eadd1e0d652" category="inline-link-macro">了解如何发现StorageGRID系统</block>
+  <block id="8ee8c2411f1d69e6027b0240bf4ad83f" category="list-text"><block ref="8ee8c2411f1d69e6027b0240bf4ad83f" category="inline-link-macro-rx"></block></block>
+  <block id="bd2a04f40dfa26475eeaeb5104213639" category="inline-link-macro">了解如何发现 E 系列系统</block>
+  <block id="20397d9bb3cf91b26829ed1f1050f846" category="list-text"><block ref="20397d9bb3cf91b26829ed1f1050f846" category="inline-link-macro-rx"></block></block>
+  <block id="0f1d83ed07623902c200d2b4489a8bc0" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
+  <block id="9c50bfc1c0c8af31868d53cf5d274ca4" category="paragraph">通过您的云提供商注册NetApp Intelligent Services ，即可按小时（按需付费）或按年计费。订阅包含NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience、 NetApp Disaster Recovery和NetApp Data Classification。</block>
+  <block id="b13696d6f982d12cdad42fb6cff86df3" category="paragraph">要使用控制台，请注册或使用您的NetApp支持站点凭据登录，或者创建NetApp Console登录。如果您是公司第一个注册的人，您将创建一个新的组织并担任管理员。如果贵公司已有组织，请使用您现有的NetApp支持站点凭据或公司单点登录 (SSO) 注册或登录。</block>
+  <block id="826401015c53957df701460dc5fefb05" category="paragraph">如果贵公司还没有NetApp Console组织，请注册创建一个。第一个用户将成为组织管理员，并管理用户帐户和权限。您可以稍后更新角色并添加更多管理员。</block>
+  <block id="d5f547e805bd962044877e771a5c80c4" category="paragraph">+ 作为首次用户和组织管理员，您可以按照引导流程添加存储资源、创建控制台代理等等。 <block ref="85a3a682e34d7edd80cbda274368cd58" category="inline-link-macro-rx"></block></block>
+  <block id="b5b65d6b4a701c4b166972e9ae9ba772" category="paragraph">作为管理员，在完成控制台助手中包含的步骤后，您应该规划身份和访问策略，将用户添加到您的组织，并分配角色。 <block ref="dbb46a6e4f0b0745461f707fd3a50e50" category="inline-link-macro-rx"></block></block>
+  <block id="c3a7847a904b35ec1f29b8f879b372cb" category="list-text">如果系统提示您创建组织，请关闭对话框并告知控制台管理员，以便他们可以将您添加到控制台组织并授予您访问权限。 <block ref="3886fb7bb69eaac4d5ed416bad678dd5" category="inline-link-macro-rx"></block></block>
+  <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="de07e4843aeeb5e60c2065b6397c18c7" category="paragraph">您可以更改控制台显示名称，以便其他用户识别您的身份。您无法更改用户名或电子邮件地址。</block>
+  <block id="cd180248ccf35caecb564563a1c37c36" category="section-title">提升您在只读模式下的角色</block>
+  <block id="f530a438c9744c7405c242128860c986" category="paragraph">在某些情况下，您的组织管理员可能会将您的组织设置为只读模式。如果您拥有管理员角色，则必须提升权限才能进行更改。这样可以确保变更都是有意为之且获得授权的。</block>
+  <block id="4e87c090abc7c70b838f8921102ad78a" category="paragraph">提升角色后，您可以在控制台中进行更改，直到当前会话过期。</block>
+  <block id="86e4cc6244dee378a725fe2f2f7607c3" category="paragraph">完成后，要么退出控制台，要么将滑块移回只读模式。会话过期后，系统将撤销您的高级权限。</block>
+  <block id="10a94d9e1a5f5e7339e3430bdc845dbf" category="list-text">要进入*只读模式*，请将滑块移动到*提升*位置并确认更改。</block>
+  <block id="4e24b3bf4baecbe5b4c0908b14a3e434" category="inline-image-macro">屏幕截图显示了“只读模式”滑块处于“提升”位置的情况。</block>
+  <block id="f2b29b75c17cd0382c92806057ed69bc" category="paragraph"><block ref="f2b29b75c17cd0382c92806057ed69bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c31c8785f7463414c8f14dda741b437" category="paragraph">使用外部身份提供商或NetApp支持站点进行单点登录的用户无法启用 MFA。如果以上两种情况中的任何一种适用于您，您将在个人资料设置中看不到启用 MFA 的选项。</block>
+  <block id="174ae0d84f7c9dd712d41abcfa50ec20" category="section-title">2026年1月13日</block>
+  <block id="7a53865977eaa5b4d126b4bb38ab3d60" category="sidebar">NetApp Console (SaaS) 入门指南</block>
+  <block id="d479c74127647ef19be1288e3c84ad58" category="sidebar">使用NetApp Console助手（SaaS）</block>
+  <block id="a18e7b20a79ebd88fb9c7f1fc43e7133" category="sidebar">以受限模式部署NetApp Console（主权云部署）</block>
+  <block id="528d4bb0b865d3d1472bb85fda901a37" category="sidebar">实施身份和访问管理（IAM）</block>
+  <block id="33b619b2a0b648b8042ae175a232cd61" category="sidebar">制定您的身份和访问管理 (IAM) 策略</block>
+  <block id="6fe6f7f944917c7ec0941e2231b3b4e0" category="sidebar">添加文件夹和项目</block>
+  <block id="410aa2d0b1a47fea911d8630517784ad" category="sidebar">了解访问角色如何运作</block>
+  <block id="35be827dcf9fc58b5de8b85d832b0897" category="sidebar">添加成员、服务帐户和联合组</block>
+  <block id="d1fc990d451ee0b17493a694896ba144" category="sidebar">部署控制台代理</block>
+  <block id="4b1a627afcfffc4e38993003bd2a09d9" category="sidebar">在本地部署代理</block>
+  <block id="af5ef39b449ad0a19e43922742596f8e" category="sidebar">在 AWS 中部署代理</block>
+  <block id="c8e511ba0d866204ed44fbb080700872" category="sidebar">在 Azure 中部署代理</block>
+  <block id="1d2ba7530c41754097734076da1435f0" category="sidebar">在 Google Cloud 中部署代理</block>
+  <block id="2767cd2574c6a7fa44753eb88a0319e9" category="sidebar">维护控制台代理</block>
+  <block id="4d177447c2808c8549544c3aa3b9f504" category="sidebar">安全与合规</block>
+  <block id="f19aee9e6e2e5954d2de8e30cbe4751d" category="sidebar">与您的身份提供商联合</block>
+  <block id="444cf9807eaf5ac0945edfce9108c729" category="sidebar">启用只读模式</block>
+  <block id="320b734c12631424ce316d6953d1dedc" category="sidebar">监控控制台活动</block>
+  <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">以受限模式部署NetApp Console（主权云部署）</block>
+  <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">SOC-2 合规性</block>
+  <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">主机平台合作伙伴关系</block>
+  <block id="dc6f0f429a5f3d39f01ef6f9ecb8cc24" category="sidebar">SaaS 与受限部署模式</block>
+  <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">NetApp支持帐户</block>
+  <block id="0aa0b8f431cf64b7d8c4369a301c64dd" category="sidebar">NetApp Console (SaaS) 入门</block>
+  <block id="b295192b816510df999050431291a13e" category="sidebar">NetApp Console入门（受限模式）</block>
+  <block id="0f7804927cf75f0a017463717b53dd88" category="sidebar">准备进行受限的NetApp Console部署</block>
+  <block id="e171a54350d0c0c8636e6db01c266344" category="sidebar">以受限模式部署NetApp Console</block>
+  <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理和监测</block>
+  <block id="e164f7a733b2fa9b64a65e86a09dd8a1" category="sidebar">NetApp支持帐户</block>
+  <block id="809491e400d5e2dcbace5d5f1a7a33be" category="sidebar">管理 NSS 凭证</block>
+  <block id="4cdcdd6cc684e8847f57a8c461306706" category="sidebar">部署控制台代理</block>
+  <block id="bbc07544cc7c462eb5a4289a5bcfc9f6" category="sidebar">从 AWS Marketplace 创建控制台代理</block>
+  <block id="4a3560a731f667c1fdd695e7355a9a38" category="sidebar">从 Azure 市场创建控制台代理</block>
+  <block id="775bf3ee1192539276369c51ffb1e11a" category="sidebar">管理云提供商凭证</block>
+  <block id="a8e85a76d65daefc79e2cc1686473b8b" category="sidebar">设置您的控制台组织</block>
+  <block id="74e6765601a5bb33738c62a4a5fa467e" category="sidebar">创建文件夹和项目</block>
+  <block id="c4801111063a815324ee7709172dc7b5" category="sidebar">将资源关联到文件夹和项目</block>
+  <block id="4072a7a49b0e80c4b76d5a9700c613b0" category="sidebar">将用户添加到您的控制台组织</block>
+  <block id="e440951d5d777081f672ac89bef1a765" category="sidebar">添加用户、服务帐户和联合组</block>
+  <block id="a426b59be1babdc977781d33817717ea" category="sidebar">管理用户访问权限和安全</block>
+  <block id="bd479d755e7f2fb21ebeb4c75d60a5cc" category="sidebar">了解基于角色的访问控制 (RBAC)</block>
+  <block id="2221117251a2584b4321597c5eac423e" category="sidebar">管理用户访问</block>
+  <block id="43259fd79c21c8c404026181d57d44e4" category="sidebar">管理成员安全</block>
+  <block id="90d80e55b1b13ef48ef0cb5c0b7acf31" category="sidebar">身份和访问 API</block>
+  <block id="48a692835317bf23f0c6c5786de2ed91" category="sidebar">身份和访问管理 API 参考</block>
+  <block id="bdf5cb4cf4c3cf24f8f5f686d12f900b" category="sidebar">管理您的联合连接</block>
+  <block id="4435cda4ad6a758c200d44762ebe3776" category="sidebar">为组织启用只读模式</block>
+  <block id="e7b017be83e84bb37606ed273d1aa537" category="sidebar">NetApp Console的 SOC-2 合规性</block>
+  <block id="bcd0f336112d623ef709cad808ebf0b9" category="sidebar">管理组织合作伙伴关系</block>
+  <block id="043e92b3b8c615eff75d2bdf3d1fad93" category="sidebar">在组织伙伴关系中工作</block>
+  <block id="a0c24f631f6d719a131bcec194d1a9e1" category="sidebar">云提供商代理权限和网络要求</block>
+  <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWS 代理权限和安全规则</block>
+  <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure 权限和所需安全规则</block>
+  <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud 权限和所需的防火墙规则</block>
 </blocks>

@@ -22,6 +22,8 @@ summary: 以受限模式部署控制台代理，以便您可以在有限的出�
 
 从云提供商的市场安装控制台代理或在 Linux 主机上手动安装。
 
+安装控制台代理之前，您需要先准备好环境。您可以从 AWS Marketplace、Azure Marketplace 安装，也可以在您自己的运行于 AWS、Azure 或 Google Cloud 中的 Linux 主机上手动安装。
+
 [role="tabbed-block"]
 ====
 .AWS 商业市场
@@ -205,8 +207,10 @@ Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件�
 设置NetApp Console。
 
 --
-.手动安装
+.手动安装（必须用于 Google Cloud）
 --
+您可以将控制台代理手动安装到运行在 AWS、Azure 或 Google Cloud 上的 Linux 主机上。
+
 .开始之前
 您应该具有以下内容：
 

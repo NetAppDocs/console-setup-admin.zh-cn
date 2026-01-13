@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: reference-compliance.html 
+keywords: SOC-2, compliance, netapp console compliance, console compliance, console soc-2, soc-2 report, soc 2 report 
+summary: 在控制台中，每个用户都有一个配置文件，其中包含有关用户及其设置的信息。您可以查看和编辑您的个人资料设置。 
+---
+= NetApp Console的安全合规性
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console符合 SOC 2 II 型标准。
+
+link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["了解更多关于NetApp SOC 2合规性的信息。"]

@@ -1,0 +1,32 @@
+= 控制台代理 4.3.0
+:allow-uri-read: 
+
+
+
+
+=== 控制台代理 4.3.0
+
+4.3.0 版本同时支持标准模式和受限模式。
+
+此版本的控制台代理包含安全改进、错误修复以及以下功能：
+
+.能够验证控制台代理的网络连接
+现在可以直接从NetApp Console验证已连接的控制台代理的网络连接。此功能有助于验证连接性并排查控制台代理的问题。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何对控制台代理运行配置检查。"]
+
+
+
+=== NetApp Console管理
+
+本次发布包含以下内容：
+
+.NetApp Console处于受限模式时支持联合身份验证
+现在您可以为处于受限模式的NetApp Console组织启用联合身份验证。这样，用户就可以使用其公司凭证登录控制台，同时保持受限模式的安全优势。
+
+.只读模式
+您可以将NetApp Console组织设置为只读模式。在只读模式下，用户可以查看资源和设置，但不能进行任何更改。组织管理员或超级管理员可以启用组织的只读模式。启用只读模式后，具有管理角色的用户必须手动提升权限才能根据需要进行更改。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["了解如何为控制台组织启用只读模式。"]
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["当你的组织处于只读模式时，了解如何提升你的角色。"]

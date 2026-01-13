@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, Console agents, learn about agents, what are connectors, what is a connector, what"s a connector, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
-summary: _控制台代理_是在您的云网络或本地网络上运行的NetApp软件。您可以使用控制台代理将NetApp Console服务连接到您的存储环境。 
+keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+summary: 您可以使用控制台代理将NetApp Console连接到您的基础架构，并安全地协调跨 AWS、Azure、Google Cloud 或本地环境的存储解决方案，以及使用数据保护服务。 
 ---
 = 了解NetApp Console代理
 :hardbreaks:
@@ -14,72 +14,225 @@ summary: _控制台代理_是在您的云网络或本地网络上运行的NetApp
 
 
 [role="lead"]
-_控制台代理_在您的云网络或本地网络中运行。您可以使用控制台代理将NetApp Console服务连接到您的存储环境。
+您可以使用控制台代理将NetApp Console连接到您的基础架构，并安全地协调跨 AWS、Azure、Google Cloud 或本地环境的存储解决方案，以及使用数据保护服务。
+
+控制台代理使您能够：
+
+* 通过NetApp Console协调存储管理任务，例如配置Cloud Volumes ONTAP、设置存储卷、使用数据分类等等。
+* 使用云提供商的 IAM 角色进行身份验证，以实现订阅计费集成。
+* 使用高级数据服务（NetApp Backup and Recovery、 NetApp Disaster Recovery、 NetApp Ransomware Resilience和NetApp Cloud Tiering）
+* 以受限模式使用控制台。
+
+
+如果您不需要高级编排或数据保护，则可以集中管理本地ONTAP集群和云原生存储服务，而无需部署代理。此外，还提供监控和数据传输工具。
+
+下表显示了您可以使用和不使用控制台代理时可以使用的功能和服务。
+
+[cols="40,20a,20a"]
+|===
+|  | 可联系经纪人获取信息 | 无需代理即可购买 
+
+
+3+| 支持的存储系统： 
+
+
+| 适用于ONTAP 的Amazon FSx  a| 
+是的（发现和管理功能）
+ a| 
+是的（仅限探索）
 
 
 
-== 没有控制台代理您可以做什么
-
-如果您不部署控制台代理，则某些控制台功能和服务可用：
-
-* Amazon FSx for NetApp ONTAP
-+
-某些操作需要控制台代理或NetApp Workloads 链接。 https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html["了解哪些操作需要控制台代理或链接"^]
-
-* 自动化中心
-* Azure NetApp Files
-+
-您不需要控制台代理来管理Azure NetApp Files，但需要使用NetApp Data Classification来扫描Azure NetApp Files。
-
-* Google Cloud NetApp Volumes
-* NetApp Copy and Sync
-* 数字顾问
-* 监控许可证使用情况，订阅监控需要控制台代理
-+
-通常，您无需使用控制台代理即可向NetApp Console添加许可证。
-
-+
-需要代理来添加Cloud Volumes ONTAP _基于节点的_许可证，因为数据来自安装在Cloud Volumes ONTAP系统上的许可证。
-
-* 直接发现本地ONTAP集群
-+
-您不需要控制台代理即可将本地ONTAP集群添加到控制台，但需要控制台代理来添加其他控制台功能和数据服务。
-
-+
-https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解有关本地ONTAP集群的发现和管理选项的更多信息"^]
-
-* 软件更新
-* 可持续性
-* NetApp工作负载
+| Amazon S3 存储  a| 
+是
+ a| 
+否
 
 
 
-
-== 当需要控制台代理时
-
-在标准模式下，控制台需要控制台代理来执行以下操作：
-
-* 警报
-* Amazon FSx for ONTAP管理功能
-* Amazon S3 存储
-* Azure Blob 存储
-* NetApp Backup and Recovery
-* 数据分类
-* Cloud Volumes ONTAP
-* NetApp Disaster Recovery
-* E系列系统
-* 经济效率^1^
-* Google Cloud Storage 存储桶
-* 本地ONTAP集群与NetApp数据服务的集成
-* NetApp Ransomware Resilience
-* StorageGRID系统
-* NetApp Cloud Tiering
-* NetApp Volume Caching
+| Azure Blob 存储  a| 
+是
+ a| 
+是
 
 
-^1^ 您无需控制台代理即可访问这些服务，但需要控制台代理来启动操作。
 
-您始终需要一个控制台代理才能在受限模式下使用控制台。
+| Azure NetApp Files  a| 
+是
+ a| 
+是
+
+
+
+| Cloud Volumes ONTAP  a| 
+是
+ a| 
+否
+
+
+
+| E系列系统  a| 
+是
+ a| 
+否
+
+
+
+| Google Cloud NetApp Volumes  a| 
+是
+ a| 
+是
+
+
+
+| Google Cloud 存储桶  a| 
+是
+ a| 
+否
+
+
+
+| StorageGRID系统  a| 
+是
+ a| 
+否
+
+
+
+| 本地部署ONTAP集群（高级管理和发现）  a| 
+是的（高级管理和发现）
+ a| 
+否（仅限基本发现）
+
+
+
+3+| *可用的存储管理服务*： 
+
+
+| 警报  a| 
+是
+ a| 
+否
+
+
+
+| 自动化中心  a| 
+是
+ a| 
+是
+
+
+
+| Digital Advisor（Active IQ）  a| 
+是
+ a| 
+否
+
+
+
+| 许可证和订阅管理  a| 
+是
+ a| 
+否
+
+
+
+| 经济效益  a| 
+是
+ a| 
+否
+
+
+
+| 首页仪表盘指标  a| 
+是的^2^
+ a| 
+否
+
+
+
+| 生命周期规划  a| 
+是
+ a| 
+1号
+
+
+
+| 可持续性  a| 
+是
+ a| 
+否
+
+
+
+| 软件更新  a| 
+是
+ a| 
+是
+
+
+
+| NetApp工作负载  a| 
+是
+ a| 
+是
+
+
+
+3+| *可用数据服务*： 
+
+
+| NetApp Backup and Recovery  a| 
+是
+ a| 
+否
+
+
+
+| 数据分类  a| 
+是
+ a| 
+否
+
+
+
+| NetApp Cloud Tiering  a| 
+是
+ a| 
+否
+
+
+
+| NetApp Copy and Sync  a| 
+是
+ a| 
+否
+
+
+
+| NetApp Disaster Recovery  a| 
+是
+ a| 
+否
+
+
+
+| NetApp Ransomware Resilience  a| 
+是
+ a| 
+否
+
+
+
+| NetApp Volume Caching  a| 
+是
+ a| 
+否
+
+|===
+^1^ 无需控制台代理即可查看生命周期规划，但需要控制台代理才能启动操作。
+
+^2^ 主页上的准确指标需要大小合适且配置正确的控制台代理。
 
 
 
@@ -125,7 +278,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 == 如何安装控制台代理
 
-您可以直接从控制台、云提供商的市场安装控制台代理，也可以在您自己的 Linux 主机或 VCenter 环境中手动安装软件。如何开始取决于您是在标准模式还是受限模式下使用控制台。
+您可以直接从控制台、云提供商的市场安装控制台代理，也可以在您自己的 Linux 主机或 VCenter 环境中手动安装软件。
 
 * link:concept-modes.html["了解NetApp Console部署模式"]
 * link:task-quick-start-standard-mode.html["开始在标准模式下使用NetApp Console"]
@@ -134,7 +287,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 
 
-== 云权限
+== 云提供商权限
 
 您需要特定权限才能直接从NetApp Console创建控制台代理，并且需要另一组权限来创建控制台代理本身。如果您直接从控制台在 AWS 或 Azure 中创建控制台代理，则控制台将使用其所需的权限创建控制台代理。
 
@@ -168,7 +321,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 NetApp每月更新代理软件以添加功能并提高稳定性。某些控制台功能（如Cloud Volumes ONTAP和本地ONTAP集群管理）依赖于控制台代理版本和设置。
 
-在标准或受限模式下，如果控制台代理可以访问互联网，它将自动更新。
+当您在云端安装代理时，如果控制台代理可以访问互联网，则会自动更新。
 
 
 

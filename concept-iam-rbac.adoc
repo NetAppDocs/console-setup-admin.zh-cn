@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: concept-iam-rbac.html 
+keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console access, organization access, folder access, project access, resource access 
+summary: '使用基于角色的访问控制 (RBAC) 管理用户对NetApp Console的访问，在组织、文件夹或项目级别分配预定义角色。每个角色都授予特定的权限，定义用户在其分配的权限范围内可以执行哪些操作。' 
+---
+= 了解NetApp Console基于角色的访问控制 (RBAC)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用基于角色的访问控制 (RBAC) 管理用户对NetApp Console的访问，在组织、文件夹或项目级别分配预定义角色。每个角色都授予特定的权限，定义用户在其分配的权限范围内可以执行哪些操作。
+
+NetApp在设计控制台角色时遵循最小权限原则，因此每个角色仅包含其任务所需的权限。这种方法通过限制每个成员所需的访问权限来增强安全性。
+
+将资源整理成文件夹和项目后，为组织成员分配特定文件夹或项目的角色，使他们只能履行自己的职责。
+
+例如，您可以为特定项目级别的成员分配勒索软件恢复管理员角色，允许他们对该项目内的资源执行勒索软件恢复操作，而无需授予他们对整个组织的更广泛访问权限。同一用户可以被授予组织内多个项目的角色。
+
+您可以根据用户的职责，为同一范围或不同范围的用户分配多个角色。例如，规模较小的组织可能会让同一用户在组织层面管理勒索软件恢复和备份与恢复任务，而规模较大的组织可能会在项目层面为每个角色分配不同的用户。
+
+
+
+== 控制台组织成员的类型
+
+NetApp Console组织中有三种类型的成员：* _用户帐户_：登录到NetApp Console以管理资源的个人用户。用户必须先注册NetApp Console，然后才能被添加到组织中。* _服务帐户_：应用程序或服务通过 API 与NetApp Console交互时使用的非人类帐户。您可以将服务帐户直接添加到您的控制台组织中。* _联合组_：从您的身份提供商 (IdP) 同步的组，允许您集中管理多个用户的访问权限。联合组中的每个用户都必须先注册NetApp Console，并被添加到您的组织中，且拥有相应的访问角色，然后才能访问授予该组的资源。
+
+link:task-iam-manage-members-permissions.html#add-members["了解如何向您的组织添加成员。"]
+
+
+
+== NetApp Console中的预定义角色
+
+NetApp Console包含预定义角色，您可以将其分配给组织成员。每个角色都包含权限，用于指定成员在其分配的范围（组织、文件夹或项目）内可以执行哪些操作。
+
+NetApp Console角色采用最小权限原则，确保成员仅拥有完成任务所需的权限，并按角色提供的访问权限类型对其进行分类：
+
+* 平台角色：提供控制台管理权限
+* 数据服务角色：提供管理特定数据服务的权限，例如勒索软件恢复和备份与恢复。
+* 应用程序角色：提供管理存储以及审核控制台事件和警报的权限
+
+
+您可以根据成员的职责为其分配多个角色。例如，您可以为特定项目为一名成员分配勒索软件恢复管理员角色和备份与恢复管理员角色。
+
+link:reference-iam-predefined-roles.html["了解NetApp Console中可用的预定义角色"]。

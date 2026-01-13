@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-federation-manage.html 
-keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
+keywords: federation, NetApp Console, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
 summary: 添加联合连接后，您可以在NetApp Console中对其进行管理。您可以查看连接的状态，根据需要启用或禁用它。 
 ---
 = 在NetApp Console中管理联合
@@ -16,17 +16,18 @@ summary: 添加联合连接后，您可以在NetApp Console中对其进行管理
 [role="lead"]
 您可以在NetApp Console中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要它时禁用它。
 
-
-NOTE: 如果您使用NetApp Cloud Central 配置了联合，请通过 *Federation* 页面导入它以在控制台中进行管理。link:task-federation-import.html["了解如何导入您的联盟"]
-
-您还可以将已验证的域添加到现有联合中，这允许您使用多个域进行联合连接。
-
-
-NOTE: 联合管理事件（例如启用、禁用和更新联合）显示在时间轴中。link:task-monitor-cm-operations.html["了解有关在NetApp Console中监控操作的更多信息。"]
-
 .必需角色
 需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 
+您还可以向现有联盟添加额外的已验证域，从而允许您为联盟连接使用多个域。
+
+[NOTE]
+====
+* 如果您使用NetApp Cloud Central 配置了联合，请通过 *Federation* 页面导入它以在控制台中进行管理。link:task-federation-import.html["了解如何导入您的联盟"]
+* 您可以在“审核”页面上查看联盟管理事件，例如启用、禁用和更新联盟。 link:task-monitor-cm-operations.html["了解有关在NetApp Console中监控操作的更多信息。"]
+
+
+====
 
 
 == 启用联盟

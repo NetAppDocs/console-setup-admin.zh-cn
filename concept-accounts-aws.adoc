@@ -24,7 +24,7 @@ summary: 您可以使用NetApp Console管理 AWS 凭证和市场订阅，通过�
 
 当控制台在 AWS 中启动控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。link:reference-permissions-aws.html["查看代理如何使用权限"]。
 
-image:diagram_permissions_initial_aws.png["显示在 AWS 账户中部署控制台代理的控制台的概念图。IAM 策略被分配给 IAM 角色，该角色附加到控制台。"]
+image:diagram_permissions_initial_aws.png["显示在 AWS 账户中部署控制台代理的控制台的概念图。"]
 
 如果您添加新的Cloud Volumes ONTAP系统，控制台将默认选择以下 AWS 凭证：
 
@@ -51,7 +51,7 @@ image:screenshot_accounts_select_aws.gif["显示“详细信息和凭证”页�
 
 要将控制台与额外的 AWS 账户一起使用，请提供 AWS 密钥或受信任账户中角色的 ARN。下图显示了两个附加账户，一个通过受信任账户中的 IAM 角色提供权限，另一个通过 IAM 用户的 AWS 密钥提供权限：
 
-image:diagram_permissions_multiple_aws.png["显示两个附加帐户的概念图。每个都有一个 IAM 策略，一个附加到 IAM 用户，另一个附加到 IAM 角色。"]
+image:diagram_permissions_multiple_aws.png["一张概念图，展示了另外两个账户。每个用户都有身份和访问管理 (IAM) 策略。一个与 IAM 用户关联，另一个与 IAM 角色关联。"]
 
 您可以通过指定 IAM 角色的 Amazon 资源名称 (ARN) 或 IAM 用户的 AWS 密钥，将帐户凭证添加到控制台。
 

@@ -16,7 +16,7 @@ summary: 要开始在NetApp Console中进行身份和访问管理，请自定义
 [role="lead"]
 当您注册NetApp Console时，系统会提示您创建一个新的组织。该组织包括一名成员（组织管理员）和一个默认项目。要设置身份和访问管理 (IAM) 来满足您的业务需求，您需要自定义组织的层次结构、添加其他成员、添加或发现资源，并在整个层次结构中关联这些资源。
 
-您必须拥有*组织管理员*权限才能管理整个组织的身份和访问权限。如果您具有*文件夹或项目管理员*权限，则您只能管理您有权限的文件夹和项目。
+您需要拥有*组织管理员*或*超级管理员*权限才能管理组织的身份和访问权限。拥有*文件夹或项目管理员*权限，您只能管理您有权访问的文件夹和项目。
 
 按照以下步骤建立一个新组织。该顺序可能会根据您组织的需求而有所不同。
 
@@ -29,7 +29,7 @@ link:task-iam-manage-folders-projects.html["了解如何使用文件夹和项目
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]将成员与您的组织关联
 [role="quick-margin-para"]
-将用户帐户链接到您的组织并分配权限。您还可以选择向您的组织添加服务帐户。
+用户注册NetApp Console后，您必须明确地将他们添加到您的 Console 组织中。您还可以选择向您的组织添加服务帐户。
 
 [role="quick-margin-para"]
 link:task-iam-manage-members-permissions.html["了解如何管理成员及其权限"] 。
