@@ -14,7 +14,7 @@ summary: 有几种不同的方法可以在 Google Cloud 中创建控制台代理
 
 
 [role="lead"]
-有几种不同的方法可以在 Google Cloud 中创建控制台代理。直接从NetApp Console是最常见的方式。  ---
+有几种不同的方法可以在 Google Cloud 中创建控制台代理。直接从NetApp Console是最常见的方式。
 
 有以下安装选项可用：
 
