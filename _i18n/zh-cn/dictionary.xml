@@ -5744,9 +5744,7 @@
   <block id="1065e278b83db0baa7239d1c2c89e558" category="paragraph">控制台只会显示一次客户端密钥。请妥善备份；如果丢失，您可以稍后重新创建。</block>
   <block id="6c07155a6c5b387b3649e57518b2acbf" category="list-text">如果您选择 JWT 身份验证，请下载或复制客户端 ID 和 JWT 受众群体。控制台只会显示此信息一次，之后无法再检索。</block>
   <block id="1e5bd0e3b2f8efdd44ff92b7d355c374" category="section-title">向您的组织添加联合组</block>
-  <block id="c4d8a0f38fcfd51b64b45642a963ccd2" category="paragraph">您可以将来自身份提供商 (IdP) 的联合组添加到您的组织。联合组的成员将继承您在控制台中分配给该组的角色。</block>
   <block id="1f87469083830ec60b59de86a65908a9" category="inline-link-macro">了解如何建立联邦。</block>
-  <block id="44c50d77ce337726b2c52859655871e2" category="paragraph">添加联合组之前，请确保以下事项： * 您必须已在身份提供商 (IdP) 和控制台之间设置联合。<block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block> * 该群组必须已存在于您的身份提供商 (IdP) 中。* 您必须知道身份提供商 (IdP) 中群组的确切名称。* 该组用户必须已注册NetApp Console，并在控制台中被明确分配了角色。</block>
   <block id="16a2c505069eacd418dca553f5b68d99" category="list-text">对于“成员类型”，请选择“联合组”。</block>
   <block id="00cfd65508d24955faa8b609b29efc15" category="list-text">选择该团体所属的联邦。</block>
   <block id="be1ae879869c7f401beda2410fc2ef42" category="list-text">对于“组名称”，请输入您身份提供商 (IdP) 中组的确切名称。</block>
@@ -5903,9 +5901,13 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWS 代理权限和安全规则</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure 权限和所需安全规则</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud 权限和所需的防火墙规则</block>
-  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">针对Cloud Volumes ONTAP 的其他 Google Cloud 权限</block>
-  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">为了支持 Google Cloud 中的Cloud Volumes ONTAP管理，控制台代理现在需要额外的权限。已向控制台代理使用的服务帐户添加以下权限：compute.forwardingRules.update</block>
-  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
-  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">计算转发规则更新</block>
-  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新现有流量管理转发规则。</block>
+  <block id="9f3261123c8a658e7b62dee5c17371f4" category="paragraph-title">NetApp Console中联合组的角色访问控制</block>
+  <block id="c4d7a3f544d6f76c7c70bcb232209dbf" category="paragraph">NetApp Console支持将角色分配给联合组（例如 Active Directory 组），从而允许管理员根据组织身份提供程序 (IdP) 中的组成员身份自动执行用户入职和离职。此功能可减少管理开销，并通过在组成员身份更改时立即更新控制台访问权限来确保安全、一致的访问。</block>
+  <block id="ac4ebbe533b328180ba7587ac3ed17ea" category="inline-link-macro">了解如何为您的组织提供对联合组的访问权限。</block>
+  <block id="bd8d483345dcb63c75668983c3887b87" category="paragraph"><block ref="bd8d483345dcb63c75668983c3887b87" category="inline-link-macro-rx"></block></block>
+  <block id="8e21188f4a561525a629d0158af709a2" category="paragraph">您可以将身份提供商 (IdP) 中的联合组添加到您的组织，并为其分配一个或多个角色。联合组的成员将继承您在控制台中分配给该组的角色。</block>
+  <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">在为联合组分配角色之前，请确保以下事项：</block>
+  <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">在身份提供商 (IdP) 和控制台之间建立联盟。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
+  <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">该组必须已存在于您的身份提供商 (IdP) 中，并且已被分配对控制台的应用程序访问权限。</block>
+  <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">属于该组的用户必须已经注册了NetApp Console，并且已被明确分配了控制台中的角色。NetApp建议分配最低访问权限角色，例如组织查看者。</block>
 </blocks>

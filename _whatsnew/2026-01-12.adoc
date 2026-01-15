@@ -21,6 +21,11 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 本次发布包含以下内容：
 
+.NetApp Console中联合组的角色访问控制
+NetApp Console支持将角色分配给联合组（例如 Active Directory 组），从而允许管理员根据组织身份提供程序 (IdP) 中的组成员身份自动执行用户入职和离职。此功能可减少管理开销，并通过在组成员身份更改时立即更新控制台访问权限来确保安全、一致的访问。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-federated-group-to-your-organization["了解如何为您的组织提供对联合组的访问权限。"]
+
 .NetApp Console处于受限模式时支持联合身份验证
 现在您可以为处于受限模式的NetApp Console组织启用联合身份验证。这样，用户就可以使用其公司凭证登录控制台，同时保持受限模式的安全优势。
 
