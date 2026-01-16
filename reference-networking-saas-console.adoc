@@ -90,3 +90,21 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure 中的Cloud Volumes ONTAP端点"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud 中Cloud Volumes ONTAP的端点"]
 
+
+
+
+=== 工作负载端点
+
+控制台代理必须能够访问以下NetApp工作负载端点。
+
+[cols="2*"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+https://api.workloads.netapp.com
+ a| 
+基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。
+
+|===

@@ -5910,4 +5910,8 @@
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">在身份提供商 (IdP) 和控制台之间建立联盟。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
   <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">该组必须已存在于您的身份提供商 (IdP) 中，并且已被分配对控制台的应用程序访问权限。</block>
   <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">属于该组的用户必须已经注册了NetApp Console，并且已被明确分配了控制台中的角色。NetApp建议分配最低访问权限角色，例如组织查看者。</block>
+  <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">工作负载端点</block>
+  <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">控制台代理必须能够访问以下NetApp工作负载端点。</block>
+  <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
+  <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。</block>
 </blocks>
