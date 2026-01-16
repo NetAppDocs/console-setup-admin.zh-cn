@@ -5470,7 +5470,6 @@
   <block id="c7c19a46289db74512cc747670442409" category="inline-link-macro">了解如何为控制台组织启用只读模式。</block>
   <block id="701595799e137f6efaa9c9cd9be54125" category="paragraph"><block ref="701595799e137f6efaa9c9cd9be54125" category="inline-link-macro-rx"></block></block>
   <block id="4380e2b873a072c906edb6d21b6eb823" category="inline-link-macro">当你的组织处于只读模式时，了解如何提升你的角色。</block>
-  <block id="b45238e19857e4059227131bbda630a6" category="paragraph"><block ref="b45238e19857e4059227131bbda630a6" category="inline-link-macro-rx"></block></block>
   <block id="0c2fbb6854f3455435639851d8cd9997" category="inline-image-macro">显示在 AWS 账户中部署控制台代理的控制台的概念图。</block>
   <block id="a13b8f382ebf56f2b82af89db286c5a4" category="paragraph"><block ref="a13b8f382ebf56f2b82af89db286c5a4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4159a33176d30977a2d9b1b4ff27b420" category="inline-image-macro">一张概念图，展示了另外两个账户。每个用户都有身份和访问管理 (IAM) 策略。一个与 IAM 用户关联，另一个与 IAM 角色关联。</block>
@@ -5914,4 +5913,5 @@
   <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">控制台代理必须能够访问以下NetApp工作负载端点。</block>
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
   <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。</block>
+  <block id="1f48aa3b8a17cda9bff69e07d29acd50" category="paragraph"><block ref="1f48aa3b8a17cda9bff69e07d29acd50" category="inline-link-macro-rx"></block></block>
 </blocks>
