@@ -11,9 +11,9 @@
 此版本的控制台代理包含安全改进、错误修复以及以下功能：
 
 .能够验证控制台代理的网络连接
-现在可以直接从NetApp Console验证已连接的控制台代理的网络连接。此功能有助于验证连接性并排查控制台代理的问题。
+现在，您可以直接从 NetApp Console 验证已连接的 Console 代理的网络连接。此功能有助于验证连接并排除 Console 代理的问题。这是除了从 Console 代理维护控制台命令行界面 (CLI) 运行网络诊断的现有能力之外。
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何对控制台代理运行配置检查。"]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何从 NetApp Console 运行配置。"]
 
 
 
