@@ -34,9 +34,9 @@ NetApp Console部署了一个具有两个接口的代理，这两个接口的 IP
 
 
 
-=== 不支持 SSL 解密
+=== 仅 Cloud Volumes ONTAP 支持 SSL 解密
 
-控制台不支持启用 SSL 解密的防火墙配置。如果启用了 SSL 解密，则控制台中将显示错误消息，并且代理实例显示为“已断开连接”。
+仅支持与 Cloud Volumes ONTAP 关联的代理使用透明代理服务器。如果代理与其他 NetApp 数据服务一起使用，则不能对其使用透明代理。如果您将 NetApp 数据服务与 Cloud Volumes ONTAP 一起使用，请为 Cloud Volumes ONTAP 创建专用代理，您可以在其中使用透明代理服务器。
 
 为了增强安全性，您可以选择link:task-installing-https-cert.html["安装由证书颁发机构 (CA) 签名的 HTTPS 证书"]。
 
