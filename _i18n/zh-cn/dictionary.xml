@@ -247,8 +247,6 @@
   <block id="9e636409b20980fb5089c87705851b4d" category="list-text">云资源管理器 API</block>
   <block id="1101b09020ade12e90a562489e315c8d" category="list-text">计算引擎 API</block>
   <block id="71660685d00034957db3f9a31c160978" category="list-text">身份和访问管理 (IAM) API</block>
-  <block id="b86699cce9d5045d0f0bc82298a74e55" category="list-text">云密钥管理服务 (KMS) API</block>
-  <block id="69245535097faf15b4cd50ccdf260cb5" category="paragraph">（仅当您计划将NetApp Backup and Recovery与客户管理加密密钥 (CMEK) 结合使用时才需要）</block>
   <block id="96e9d2544a631c0e7dc2d1406389b951" category="paragraph">将服务帐户与控制台代理 VM 关联。</block>
   <block id="f44a9773a2e7b335a94a01e88c993003" category="list-text">转到 Google Cloud 门户并将服务帐户分配给控制台代理 VM 实例。</block>
   <block id="81c722be01f6c1251ced26ff2ff9dd3f" category="inline-link">Google Cloud 文档：更改实例的服务帐户和访问范围</block>
@@ -1206,14 +1204,12 @@
   <block id="3799cba2b024e60d963d2e86eaf51655" category="paragraph">单点登录（联合）允许用户使用其公司凭证登录NetApp Console，从而简化了登录过程并增强了安全性。您可以使用身份提供商 (IdP) 或NetApp支持站点启用单点登录 (SSO)。</block>
   <block id="c4173993f088503294e79bbbe0bb63d6" category="paragraph-title">所需角色</block>
   <block id="4610064cac3ad84114cc400649031071" category="paragraph">组织管理员、联盟管理员、联盟查看器。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="517210395e603e1c3d5f72b67c9d0d8b" category="section-title">与NetApp支持站点的身份联合</block>
   <block id="89a60a6294b7338e14dd136c35959073" category="paragraph">与NetApp支持站点联合允许用户使用相同的凭据登录控制台、 Active IQ Digital Advisor和其他相关应用程序。</block>
   <block id="465e770e13636214d49910bb014b1053" category="admonition">如果您与NetApp支持站点联合，则您不能与您的企业身份管理提供商联合。选择最适合您组织的一种。</block>
   <block id="0a3bde973847d35b12a69e1debea9ca9" category="inline-link">NetApp联合申请表</block>
   <block id="2364b4b1093b706141a365b97b678a4d" category="list-text">下载并完成<block ref="82f36446881e14fa28b945cd41d2b383" category="inline-link-rx"></block>。</block>
   <block id="28ff396d9aacc41256de2a2d064386fd" category="list-text">将表格提交至表格中指定的电子邮件地址。</block>
   <block id="d712dedaa07f66d96d580961a7fed8f3" category="paragraph">NetApp支持团队将审核并处理您的请求。</block>
-  <block id="d6a05f20cad23a452bca7452f796d46c" category="section-title">与您的身份提供商建立联合连接</block>
   <block id="7b223ab8cf744681107757b61b395c2f" category="paragraph">您可以与身份提供商建立联合连接，以启用控制台的单点登录 (SSO)。该过程涉及配置您的身份提供商以信任NetApp作为服务提供商，然后在控制台中创建连接。</block>
   <block id="21199c6ee115447074a02f720b934dab" category="inline-link-macro">了解如何导入您的联盟。</block>
   <block id="041cf6bc84476cee962155554c00e44d" category="admonition">如果您之前使用NetApp Cloud Central（控制台的外部应用程序）配置了联合，则需要使用联合页面导入联合以在控制台内进行管理。<block ref="f94fc06031e07cb597f1d58d86de05fb" category="inline-link-macro-rx"></block></block>
@@ -1441,14 +1437,12 @@
   <block id="13348442cc6a27032d2b4aa28b75a5d3" category="cell">搜索</block>
   <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="cell">审核</block>
   <block id="6c781c37150950b9639b1a88927fa671" category="summary">通过在NetApp Console中建立组织之间的合作伙伴关系，组织合作伙伴可以跨组织边界安全地管理NetApp资源，从而简化协作并增强安全性。</block>
-  <block id="48b10af85ea37189fccab5406ba059ed" category="doc">NetApp Console中的合作伙伴关系</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">必需角色</block>
   <block id="8dab33dda3f37e096d3ad18f7ab81434" category="paragraph">合作伙伴管理员<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="324861aee136989b2cba2eb117747e57" category="paragraph">合作伙伴关系允许使用控制台中的角色驱动关系跨组织安全地管理NetApp资源。发起组织授予对其资源的访问权限，而接受组织提供被授予访问权限的用户或服务帐户。合作伙伴关系是通过自助服务工作流程建立的，使发起组织能够完全控制共享的资源、分配的角色以及根据需要加入、管理或撤销合作伙伴访问权限的能力。</block>
   <block id="bd0fbd65df8bd548c584ca52608e419f" category="paragraph">客户可以授权 MSP 或经销商来管理NetApp环境，而无需复杂的设置。客户可以控制合作伙伴可以访问哪些集群以及他们拥有哪些角色，并且可以随时撤销访问权限以维护安全性和合规性。</block>
   <block id="defd5f35301947f3054b93e7318c1f2d" category="paragraph">作为合作伙伴，您可以获得跨客户环境的集中可见性和控制力。您可以轻松切换到客户的组织来管理资源、运行数据服务并在定义的边界内监控健康状况，从而减少自定义工具并确保与每个客户的政策保持一致。</block>
   <block id="85fffa8f040ebb57cf579e93b9c39695" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>为一个或多个用户分配合作伙伴管理员角色</block>
-  <block id="34953e94d11f858dd747183567e19d40" category="paragraph">为发起组织和接收组织中的一个或多个用户分配合作伙伴管理员角色来创建和管理合作伙伴关系。您可以将合作伙伴查看器角色分配给只需要查看合作伙伴关系而不需要管理的用户。</block>
   <block id="9477ff40729a388541d0a190df83371a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>与发起组织共享您的组织 ID</block>
   <block id="012e05f5b47ec3c1eaa86aec6a2a9373" category="paragraph">要发起合作关系，发起者必须知道目标组织的组织 ID。只有相应的组织可以访问此组织 ID。通过电子邮件或其他方式直接与NetApp Console之外的发起组织共享。</block>
   <block id="2cf522f52d209f1cccd3f7a42da11247" category="paragraph">发起组织是授予其资源访问权限的组织。</block>
@@ -5528,7 +5522,6 @@
   <block id="e6f301b2c67375931164ffab8594268a" category="summary">使用NetApp控制台的身份和访问管理 (IAM) 根据您的业务层次结构（例如按位置、部门或项目）来构建和控制资源访问。</block>
   <block id="8f0b3e866642f7b2bd73e95879da522a" category="paragraph">使用NetApp控制台的身份和访问管理 (IAM) 来组织您的NetApp资源，并根据您的业务结构（按位置、部门或项目）控制访问权限。</block>
   <block id="3ffaa4542bdc105235c2aa6d84398ba1" category="paragraph">资源按层级排列：组织位于顶层，其次是文件夹（可以包含其他文件夹或项目），然后是项目，项目包含存储系统、工作负载和代理。</block>
-  <block id="4802d1fc79ac23aaf44455daac9d6bb8" category="paragraph">在组织、文件夹或项目级别为成员分配基于角色的访问控制 (RBAC) 权限，以确保用户拥有对资源的适当访问权限。</block>
   <block id="6eccc51ae400d9583687f84b5fbdb257" category="admonition">您必须拥有_超级管理员_、_组织管理员_或_文件夹或项目管理员_角色才能在NetApp Console中管理 IAM。</block>
   <block id="e8c67cc0d7ca66d55340b50ff19e81d8" category="inline-image-macro">资源管理组成部分的概念图</block>
   <block id="64e87e268d8a02cfb5d37a77e92402d6" category="paragraph"><block ref="0642d6783c4254d0630aae1c47f2e5b2" category="inline-image-macro-rx" type="image"></block>]</block>
@@ -5543,14 +5536,11 @@
   <block id="dbbd0be2ab27e73b122e8161ad90c3da" category="list-text">将相关项目分组到_文件夹_中，以便按位置、站点或业务部门进行组织。您无法直接将资源与文件夹关联，但将用户分配到文件夹级别的角色，即可使其访问该文件夹中的所有项目。</block>
   <block id="4141f49cc8cf63834c1efaa049d309e0" category="inline-link-macro">了解如何向您的组织添加文件夹。</block>
   <block id="9b81d805be63395863d2a1721014a6bb" category="paragraph"><block ref="9b81d805be63395863d2a1721014a6bb" category="inline-link-macro-rx"></block></block>
-  <block id="b1b22dc4c5575b2e202a4925725a072a" category="paragraph">资源包括存储系统、 Keystone订阅以及控制台代理。</block>
   <block id="de535fcbd4d214b2ab192b8311cd28bb" category="paragraph">+ 必须先将资源与项目关联，其他人才能访问该资源。</block>
   <block id="41e1fd34ab20918035d6b06b198a4dd6" category="paragraph">例如，您可以将Cloud Volumes ONTAP系统与一个项目或组织中的所有项目关联起来。资源的分配方式取决于贵组织的需求。</block>
   <block id="ea7af68e4527f06be6522ac5e2825e2d" category="inline-link-macro">了解如何将资源关联到项目。</block>
   <block id="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="paragraph"><block ref="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="inline-link-macro-rx"></block></block>
   <block id="235f31305ad49210767c08b30ea8f944" category="list-text">存储系统和Keystone订阅</block>
-  <block id="e09e666756aaffdfff2449235d7d9d0d" category="list-text">存储系统是您在NetApp Console中管理的主要资源。NetApp Console支持对本地和云存储系统的管理。必须先在项目中添加存储系统，其他人才能访问该项目。</block>
-  <block id="5c130a5ccad0215f526f58692320aa7a" category="paragraph">存储系统会自动与添加它们的项目关联，但您也可以从“资源”页面将它们与其他项目或文件夹关联。</block>
   <block id="acf67f786e22a15c3ff04ae1f6c8ea12" category="paragraph">Keystone订阅也是您可以与项目关联的资源，以便授予用户在NetApp Console中访问订阅的权限。</block>
   <block id="8e88fe5e613df95ef0fde3cf27c21a5b" category="list-text">组织管理员创建控制台代理来管理存储系统并启用NetApp数据服务。代理最初与创建它们的项目关联，但管理员可以从“代理”页面将它们添加到其他项目或文件夹。</block>
   <block id="628d9176cd0fff84e7a7642d6e347c77" category="paragraph">将代理与项目关联起来，可以管理该项目中的资源；而将代理与文件夹关联起来，可以让文件夹或项目管理员决定哪些项目应该使用该代理。代理人必须与特定项目关联才能提供管理能力。</block>
@@ -5610,7 +5600,6 @@
   <block id="950a35d7aced985e8ee1b6240f65a908" category="doc">NetApp Console的安全合规性</block>
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">NetApp Console符合 SOC 2 II 型标准。</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">了解更多关于NetApp SOC 2合规性的信息。</block>
-  <block id="5c1f694e43aab1bf26b300260c3822c2" category="paragraph"><block ref="5c1f694e43aab1bf26b300260c3822c2" category="inline-link-macro-rx"></block></block>
   <block id="a7cbfcc3f40f9b759d21b6e0bfb565ec" category="cell">允许用户不受限制地访问分配的项目和文件夹。可以将成员添加到他们管理的文件夹或项目中，以及执行任何任务并在他们被分配的文件夹或项目内的资源上使用任何数据服务或应用程序。文件夹或项目管理员无法创建控制台代理。</block>
   <block id="143bd02c953bba9b731282024d3a9f3d" category="cell">允许用户查看NetApp Data Classification扫描结果。具有此角色的用户可以查看合规性信息并生成他们有权访问的资源的报告。这些用户无法启用或禁用卷、存储桶或数据库模式的扫描。分类功能没有管理员角色。</block>
   <block id="1282f90034162aa1eb616797e0379691" category="paragraph">您需要为控制台代理提供适当的权限，以便它可以在您的云环境中执行操作。使用此页面上的链接，您可以根据目标快速访问所需的权限。</block>
@@ -5921,4 +5910,30 @@
   <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
   <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">仅 Cloud Volumes ONTAP 支持 SSL 解密</block>
   <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">仅支持与 Cloud Volumes ONTAP 关联的代理使用透明代理服务器。如果代理与其他 NetApp 数据服务一起使用，则不能对其使用透明代理。如果您将 NetApp 数据服务与 Cloud Volumes ONTAP 一起使用，请为 Cloud Volumes ONTAP 创建专用代理，您可以在其中使用透明代理服务器。</block>
+  <block id="9b0564a9487057897c8645ec862ad856" category="list-text">云密钥管理服务 (KMS) API（仅当您计划将 NetApp Backup and Recovery 与客户管理的加密密钥 (CMEK) 一起使用时才需要）</block>
+  <block id="362cb79b6626c8ace583ce4914bc2e72" category="list-text">Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 时需要）</block>
+  <block id="1076db915b54c5214ad7cd6d4bac394d" category="doc">Console 代理 4.4.0</block>
+  <block id="19ddf31000061ed231618214ee45c8af" category="paragraph">4.4.0 版本同时支持标准模式和受限模式。</block>
+  <block id="9c62117ea7b157d383c8d20f426de6ce" category="paragraph">此版本的 Console 代理包括安全性改进和错误修复。</block>
+  <block id="83d800fe01b0b9d8ce89e835fc6accad" category="paragraph-title">支持基于角色的访问 NetApp Backup and Recovery 工作负载（Oracle 和 Microsoft SQL Server）</block>
+  <block id="06ee57c0bd0d81d8eb2d33f86f1d8a97" category="paragraph">您可以将 Backup and Recovery 工作负载（Oracle 和 Microsoft SQL Server）与项目相关联。分配给项目后，为项目分配 Backup and Recovery 角色的用户可以处理工作负载。目前，基于角色的访问不支持其他工作负载。</block>
+  <block id="55791ddd61c5fe5bce016bba04360146" category="inline-link-macro">详细了解如何为 Backup and Recovery 工作负载设置基于角色的访问权限。</block>
+  <block id="15346ab7cdfe10fa94df581d10043017" category="paragraph"><block ref="15346ab7cdfe10fa94df581d10043017" category="inline-link-macro-rx"></block></block>
+  <block id="02c628ba4f7790b56fb6aacb4a07a4f6" category="section-title">使用 NetApp Support Site 单点登录</block>
+  <block id="ee4c6f236464665c90e91a3f4c9b027f" category="section-title">使用身份提供程序单一登录</block>
+  <block id="118079baff415c40b2ccc891079ba2e1" category="paragraph">在组织、文件夹或项目级别分配访问角色，以便用户有权访问资源。</block>
+  <block id="16c8cb56a7f9e98bee6f5799207b5d74" category="paragraph">_resource_ 是 NetApp Console 知道并可以分配给项目的实体。_Resources_ 包括存储系统、Keystone 订阅、某些 NetApp Backup and Recovery 工作负载以及 NetApp Console 代理。</block>
+  <block id="17fcc6a962ac37e30e3ac0efd8e7e1ab" category="list-text">存储系统是您在 NetApp Console 中管理的主要资源。NetApp Console 支持本地和云存储系统的管理。必须将存储系统添加到项目中，以便分配给项目的人员可以访问它。</block>
+  <block id="87d2b5d50a3f94d38a8b567627e0fb58" category="list-text">存储系统</block>
+  <block id="c5a4c92d61a00aa93ed0e2e91cd396e5" category="list-text">存储系统会自动与添加它们的项目关联，但您可以从*资源*页面将其与其他项目或文件夹关联。您无法将 FSx for NetApp ONTAP 存储系统与项目或文件夹关联，但您可以在*系统*页面或从工作负载中查看它们。</block>
+  <block id="b21b013b17072459deed40157a28f04c" category="list-text">备份和恢复工作负载（Oracle 和 Microsoft SQL Server）</block>
+  <block id="74869869e1e77d7ff0af89938eb46965" category="list-text">一些 Backup and Recovery 工作负载也被视为资源。您可以分配用户权限来访问 Backup and</block>
+  <block id="e1826278f73613e39c2eb5a5b9bc4593" category="doc">NetApp Console 中的组织伙伴关系</block>
+  <block id="566147af4c9016826e0b72e65115c15c" category="paragraph">为发起和接收组织中的一个或多个用户分配 Partnership admin 角色，以创建和管理伙伴关系。您可以将 Partnership viewer 角色分配给只需要查看伙伴关系而不需要管理的用户。</block>
+  <block id="fa65dbaec8413a6f5b464ae076206d91" category="paragraph"><block ref="fa65dbaec8413a6f5b464ae076206d91" category="inline-link-macro-rx"></block></block>
+  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
+  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新流量管理的现有转发规则。</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
+  <block id="86adfecaaa4dc7c9c4b8f67dcfd84a27" category="paragraph">已添加<block ref="b18fad63d8ccb120bf7c88b5cde19431" prefix=" " category="inline-code"></block>权限，用于支持 Google Cloud 中 Cloud Volumes ONTAP 部署中的 Infrastructure Manager。</block>
+  <block id="dea86e9f14e9d4847c31a2b6d002bdbc" category="paragraph">includes::_whatsnew/2026-02-09.adoc[]</block>
 </blocks>

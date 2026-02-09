@@ -16,4 +16,4 @@ summary: 在控制台中，每个用户都有一个配置文件，其中包含�
 [role="lead"]
 NetApp Console符合 SOC 2 II 型标准。
 
-link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["了解更多关于NetApp SOC 2合规性的信息。"]
+link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["了解更多关于NetApp SOC 2合规性的信息。"^]

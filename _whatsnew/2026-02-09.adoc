@@ -1,0 +1,22 @@
+= Console 代理 4.4.0
+:allow-uri-read: 
+
+
+
+
+=== Console 代理 4.4.0
+
+4.4.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复。
+
+
+
+=== NetApp Console管理
+
+本次发布包含以下内容：
+
+.支持基于角色的访问 NetApp Backup and Recovery 工作负载（Oracle 和 Microsoft SQL Server）
+您可以将 Backup and Recovery 工作负载（Oracle 和 Microsoft SQL Server）与项目相关联。分配给项目后，为项目分配 Backup and Recovery 角色的用户可以处理工作负载。目前，基于角色的访问不支持其他工作负载。
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["详细了解如何为 Backup and Recovery 工作负载设置基于角色的访问权限。"^]
