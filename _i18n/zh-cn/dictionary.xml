@@ -5367,13 +5367,6 @@
   <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">此策略新增了以下权限：</block>
   <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分类文档</block>
   <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
-  <block id="9b894a36c4ebb01df8469fa98daba21f" category="summary">NetApp有时会在将控制台代理部署到 Google Cloud 时更新用于该代理的服务帐户所需的权限。</block>
-  <block id="d6d6c33d995f278b372d3d2f7a10524d" category="doc">管理 Google Cloud 部署的控制台代理权限</block>
-  <block id="daf1fbd23852baa7dc431ec2658722d9" category="inline-link-macro">核实所需的 Google 权限列表</block>
-  <block id="c35025e4c3afa1c5d645893259cbce25" category="paragraph"><block ref="df29c88404b44d3e8df12197653b40b2" category="inline-link-macro-rx"></block>。</block>
-  <block id="4860b54918e1580143a7c01984c21fe1" category="paragraph">使用 Google Cloud 控制台更新分配给服务帐号的 IAM 角色，使其与新的权限集匹配。</block>
-  <block id="34e82a1501cca5af4e190be9c03c0fbb" category="inline-link-macro">Google Cloud 文档：编辑自定义角色</block>
-  <block id="322a5219fa870735040f24cb43da8303" category="paragraph"><block ref="322a5219fa870735040f24cb43da8303" category="inline-link-macro-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">您可以使用以下方法更新控制台代理现有的透明代理服务器：<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>通过使用命令来移除透明代理服务器<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。更多信息，请查阅相关文档。<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> 。</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">请输入文件夹或项目详细信息：</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">了解如何移除资源</block>
@@ -5935,5 +5928,21 @@
   <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新流量管理的现有转发规则。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
   <block id="86adfecaaa4dc7c9c4b8f67dcfd84a27" category="paragraph">已添加<block ref="b18fad63d8ccb120bf7c88b5cde19431" prefix=" " category="inline-code"></block>权限，用于支持 Google Cloud 中 Cloud Volumes ONTAP 部署中的 Infrastructure Manager。</block>
-  <block id="dea86e9f14e9d4847c31a2b6d002bdbc" category="paragraph">includes::_whatsnew/2026-02-09.adoc[]</block>
+  <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">您可以通过关联市场订阅和疑难解答订阅流程来管理与 Console 代理 VM 实例关联的 Google Cloud 凭据。这两项任务都可确保您可以使用市场订阅来支付数据服务费用。</block>
+  <block id="a5902f6d28779078fd2033b21af7a5fe" category="doc">管理 NetApp Console 的 Google Cloud 凭据和订阅</block>
+  <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">您可以通过关联市场订阅和疑难解答订阅流程来管理与 Console 代理 VM 实例关联的 Google Cloud 凭据。这两项任务都可确保您可以使用市场订阅来支付数据服务费用。</block>
+  <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">将 Marketplace 订阅与 Google Cloud 凭据关联</block>
+  <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">在 Google Cloud 中部署 Console 代理时，Console 将创建与 Console 代理 VM 实例关联的默认凭据集。您可以随时更改与这些凭据相关联的 Google Cloud Marketplace 订阅。此订阅使您能够创建即用即付的 Cloud Volumes ONTAP 系统，并使用其他数据服务。</block>
+  <block id="55c766cf4228626844250621a71175de" category="section-title">排查 Marketplace 订阅流程故障</block>
+  <block id="22799693f8d16282f927158e17952aae" category="paragraph">有时，通过 Google Cloud Marketplace 订阅 NetApp 数据服务可能会因权限不正确或意外未遵循重定向到 Console 而变得分散。如果发生这种情况，请使用以下步骤完成订阅过程。</block>
+  <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Google Cloud Marketplace 上的 NetApp 页面</block>
+  <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text">导航到<block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block>以查看订单状态。如果页面显示 *Manage on Provider*，请向下滚动并选择 *Manage Orders*。</block>
+  <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">订阅后市场页面的屏幕截图。</block>
+  <block id="138509c56fb0084f814c9be7b6c3f21d" category="paragraph"><block ref="138509c56fb0084f814c9be7b6c3f21d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e934500d9ced37392a4bfadda2e26daf" category="list-text">如果订单显示绿色复选标记，而这是意外情况，则可能已经订阅了使用同一账单账号的其他组织成员。如果这是出乎意料的，或者您需要此订阅的详细信息，请联系您的 NetApp 销售团队。</block>
+  <block id="bb7a877315ec49d95bef4521481a238d" category="inline-image-macro">已接受权利的屏幕截图。</block>
+  <block id="57c37d5700a1b0612b4ca2402852172a" category="paragraph"><block ref="57c37d5700a1b0612b4ca2402852172a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="342df35452bbec008148c714d47038f6" category="list-text">如果订单显示时钟和 *Pending* 状态，请返回 marketplace 页面，然后选择 *Manage on Provider* 以完成上述流程。</block>
+  <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">待定市场权限的屏幕截图。</block>
+  <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
