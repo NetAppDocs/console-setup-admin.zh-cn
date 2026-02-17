@@ -5945,4 +5945,7 @@
   <block id="342df35452bbec008148c714d47038f6" category="list-text">如果订单显示时钟和 *Pending* 状态，请返回 marketplace 页面，然后选择 *Manage on Provider* 以完成上述流程。</block>
   <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">待定市场权限的屏幕截图。</block>
   <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Console 代理 4.4.1</block>
+  <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">从 NetApp Console 访问 NetApp Data Infrastructure Insights</block>
+  <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">您可以从 NetApp Console 中访问 NetApp Data Infrastructure Insights 的免费试用版。转到 *Governance* &gt; *Data Infrastructure Insights* 进行注册，以探索有关数据环境的见解和分析。</block>
 </blocks>
