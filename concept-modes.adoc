@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-modes.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp Console提供多种部署模式，使您能够满足您的业务和安全需求。_标准模式_利用软件即服务 (SaaS) 层来提供全部功能，而_限制模式_和_私人模式_适用于有连接限制的组织。' 
+summary: 您可以通过 SaaS 应用程序使用 NetApp Console，也可以自己在自己的环境中（云或本地）安装它。 
 ---
 = 了解NetApp Console部署模式
 :hardbreaks:
@@ -14,87 +14,201 @@ summary: 'NetApp Console提供多种部署模式，使您能够满足您的业�
 
 
 [role="lead"]
-NetApp Console提供多种部署模式，使您能够满足您的业务和安全需求。
+您可以通过 SaaS 应用程序使用 NetApp Console，也可以自己在自己的环境中（云或本地）安装它。
 
-* _标准模式_利用软件即服务 (SaaS) 层来提供完整的功能。用户通过基于 Web 的托管界面访问控制台
-* _限制模式_适用于有连接限制并希望在自己的公共云中安装NetApp Console的组织。用户通过托管在其云环境中的控制台代理上的基于 Web 的界面访问控制台。
-+
-NetApp Console在受限模式下限制流量、通信和数据，您必须确保您的环境（本地和云端）符合所需的规定。
+NetApp 将这些用例称为_部署模式_。每种模式都可为您的业务和安全需求提供不同的连接、功能和服务。
 
-
-
+标准模式 (SaaS):: NetApp Console SaaS（软件即服务）应用程序允许访问所有 NetApp 数据服务、自动更新和灵活的身份验证选项，如身份联合和 NetApp Support Site 登录。此模式支持市场订阅和 BYOL 许可。此模式非常适合大多数用户和组织，尤其是那些希望使用 NetApp Console 获得最多功能和服务的用户和组织。
+受限模式（安装在您自己的公共云中）:: 受限模式适用于需要增强安全性和有限连接的组织，例如政府和受监管公司。您将 NetApp Console 安装在自己的公共云中（在政府、主权或商业区域），并且它对 NetApp Console API 端点（托管在 SaaS 应用程序中）的出站连接有限。受限模式提供对关键数据服务的访问，包括 Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（在政府和商业区域）和数据分类，以及自动软件升级和身份联合。
+私有模式（安装在您的场所或云中）:: 专用模式适用于具有严格安全需求的组织，例如 AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 或 air-gapped 环境中的组织。它不会连接到 NetApp Console SaaS 应用程序或 NetApp 基于云的 API，让您完全控制并阻止外部通信。支持的数据服务包括 NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication 和 Cloud Volumes ONTAP。所有存储和身份验证都保留在本地，将数据保留在您的环境中。对于国防承包商、具有严格数据驻留规则的金融机构以及具有机密系统的政府机构，请使用此模式。
 
 
-== 概述
+在您的本地安装时，仅支持 ONTAP 存储系统。
+
+
+NOTE: NetApp Console 限制受限和私有模式的数据流，但您必须确保您的环境符合您的法规。
 
 每种部署模式在出站连接、位置、安装、身份验证、数据服务和收费方法方面有所不同。
 
-标准模式:: 您可以从基于 Web 的控制台使用 SaaS 服务。根据您计划使用的数据服务和功能，控制台组织管理员将创建一个或多个控制台代理来管理混合云环境中的数据。
-+
---
-此模式使用公共互联网上的加密数据传输。
+下表比较了这些模式。
 
---
-限制模式:: 您在云中（在政府、主权或商业区域）安装控制台代理，并且它与NetApp ConsoleSaaS 层的出站连接有限。
-+
---
-这种模式通常由州和地方政府以及受监管的公司使用。
-
-<<限制模式,了解有关 SaaS 层的出站连接的更多信息>> 。
-
---
-BlueXP私人模式（仅限旧版BlueXP界面）:: BlueXP私有模式（传统BlueXP接口）通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp继续通过传统的BlueXP界面支持这些环境。link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文档"^]
-
-
-下表提供了NetApp控制台的比较。
-
-[cols="16h,28,28"]
+[cols="16h,28,28,28"]
 |===
-|  | 标准模式 | 限制模式 
+|  | 标准模式 | 限制模式 | 私人模式 
 
 
-| 需要连接到NetApp Console SaaS 层吗？ | 是 | 仅限出站 
+| 是否需要连接到 NetApp Console SaaS 应用程序？ | 是 | 仅限出站 | 否 
 
 
-| 需要连接到您的云提供商吗？ | 是 | 是的，在该地区 
+| 需要连接到您的云提供商吗？ | 是 | 是的，在该地区 | 是，在区域内（如果使用 Cloud Volumes ONTAP） 
 
 
-| 控制台代理安装 | 从控制台、云市场或手动安装 | 云市场或手动安装 
+| 控制台代理安装 | 从控制台、云市场或手动安装 | 云市场或手动安装 | 手动安装 
 
 
-| 控制台代理升级 | 自动升级 | 自动升级 
+| 控制台代理升级 | Console 代理软件自动升级 | Console 代理软件自动升级 | 需要手动升级 
 
 
-| UI 访问 | 从控制台 SaaS 层 | 从代理虚拟机本地 
+| UI 访问 | 从 Console SaaS 应用程序 | 从代理虚拟机本地 | 从代理虚拟机本地 
 
 
-| API 端点 | 控制台 SaaS 层 | 控制台代理 
+| API 端点 | Console SaaS 应用程序 | 代理 | 代理 
 
 
-| 身份验证 | 通过使用 auth0、NSS 登录或身份联合的 SaaS | 通过使用 auth0 或身份联合的 SaaS 
+| 身份验证 | 通过使用 auth0、NSS 登录或身份联合的 SaaS | 通过使用 auth0 或身份联合的 SaaS | 本地用户身份验证 
 
 
-| 多因素身份验证 | 适用于本地用户 | 不可用 
+| 多因素身份验证 | 适用于本地用户 | 不可用 | 不可用 
 
 
-| 存储和数据服务 | 全部支持 | 许多人受到支持 
+| 存储和数据服务 | 全部支持 | 许多人受到支持 | 支持几种 
 
 
-| 数据服务许可选项 | 市场订阅和 BYOL | 市场订阅和 BYOL 
+| 数据服务许可选项 | 市场订阅和 BYOL | 市场订阅和 BYOL | 自带执照（BYOL） 
 |===
-阅读以下部分以了解有关这些模式的更多信息，包括支持哪些NetApp Console功能和服务。
+有关每种模式下支持的功能和服务的详细信息，请参见以下各节。
 
 
 
-== 标准模式
+== 标准模式下的 NetApp Console（SaaS 应用程序）
 
-下图是标准模式部署的示例。
+下图显示了标准模式部署。
 
-image:diagram-standard-mode.png["一张概念图，展示了标准模式的架构，其中公共互联网提供了 SaaS 层和 Auth0 身份验证。"]
+image:diagram-standard-mode.png["一个概念图像，显示了公共互联网（其中提供基于 Web 的控制台、SaaS 应用程序和 auth0 身份验证）、云中的虚拟网络（其中代理正在运行并管理 Cloud Volumes ONTAP）以及本地数据中心中的 AFF 集群。"]
+
+
+
+=== 标准模式下 NetApp Console 支持的功能和服务
+
+下表列出了 NetApp Console SaaS 应用程序（标准模式）中提供的存储管理功能、数据服务和管理功能。
+
+[cols="3*"]
+|===
+| 产品领域 | NetApp 服务或功能 | 需要 Console 代理 
+
+
+.12+| *存储系统管理* 此表显示您可以从 NetApp Console 管理哪些存储系统。它不列出 NetApp Backup and Recovery 的备份目标。 | 警报 | 是 
+
+
+| 适用于ONTAP 的Amazon FSx | 是的，用于发现和管理。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
+
+
+| Amazon S3 | 是 
+
+
+| Azure Blob | 否 
+
+
+| Azure NetApp Files | 否 
+
+
+| Cloud Volumes ONTAP | 是 
+
+
+| E 系列 | 是 
+
+
+| Google Cloud NetApp Volumes | 否 
+
+
+| Google Cloud Storage | 是 
+
+
+| 本地ONTAP集群 | 发现和管理所必需的。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
+
+
+| StorageGRID | 是 
+
+
+| 工作负载 | 否 
+
+
+.8+| *数据服务* | NetApp Backup and Recovery | 是 
+
+
+| NetApp 分类 | 是 
+
+
+| NetApp复制和同步 | 是 
+
+
+| NetApp Disaster Recovery | 是 
+
+
+| NetApp 勒索软件保护 | 是 
+
+
+| NetApp Replication | 否 
+
+
+| NetApp Cloud Tiering | 是 
+
+
+| NetApp Volume Caching | 是 
+
+
+.5+| *NetApp 支持合同功能* | 数字顾问 | 是 
+
+
+| 经济效益 | 是 
+
+
+| 生命周期规划 | 是 
+
+
+| 软件更新 | 否 
+
+
+| 可持续性 | 是 
+
+
+.12+| *管理功能* | 审核 | 否 
+
+
+| 自动化中心 | 否 
+
+
+| 联邦 | 否 
+
+
+| 身份和访问管理 | 否 
+
+
+ a| 
+Licenses and subscriptions 管理
+
+* 标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的NetApp数据服务。查看每项服务的文档以了解有关可用许可选项的更多信息。
+
+| 否 
+
+
+| 管理云提供商凭证 | 否 
+
+
+| 多重身份验证（本地用户） | 否 
+
+
+| 通知 | 否 
+
+
+| NSS 账户 | 否 
+
+
+| 组织合作伙伴关系 | 否 
+
+
+| 只读模式 | 否 
+
+
+| 通知 | 否 
+|===
+
+
+=== NetApp Console 在标准模式下的工作原理
 
 控制台在标准模式下的工作方式如下：
 
-出站沟通:: 需要从控制台代理到控制台 SaaS 层、到云提供商的公开可用资源以及到日常操作的其他基本组件的连接。
+出站沟通:: 需要从代理连接到 Console SaaS 应用程序、云提供商的公共可用资源以及日常运营的其他基本组件。
 +
 --
 * link:task-install-agent-aws-console.html#networking-aws-agent["代理在 AWS 中联系的终端节点"]
@@ -103,94 +217,108 @@ image:diagram-standard-mode.png["一张概念图，展示了标准模式的架�
 
 
 --
-代理支持的位置:: 在标准模式下，代理在云端或您的场所受支持。
-控制台代理安装:: 您可以使用以下方法之一安装代理：
-+
---
-* 从控制台
-* 来自 AWS 或 Azure 市场
-* 来自 Google Cloud SDK
-* 在数据中心或云中的 Linux 主机上手动使用安装程序
-* 在您的 VCenter 环境中使用提供的 OVA。
+Console 代理支持的位置:: 在标准模式下，您可以在云中或本地安装 Console 代理。
 
 
---
-控制台代理升级:: NetApp每月自动升级您的代理。
-用户界面访问:: 可以通过 SaaS 层提供的基于 Web 的控制台访问用户界面。
+
+NOTE: 在云中安装代理会产生云使用费。
+
+控制台代理升级:: NetApp 每月自动升级代理软件。
+用户界面访问:: 您可以从 Console SaaS 应用程序访问用户界面，该应用程序可通过公共互联网访问。
 API 端点:: API 调用针对以下端点：\ https://api.bluexp.netapp.com
-身份验证:: 使用 auth0 或NetApp支持站点 (NSS) 登录进行身份验证。身份联合可用。
-支持的数据服务:: 支持所有NetApp数据服务。link:https://docs.netapp.com/us-en/data-services-family/index.html["了解有关NetApp数据服务的更多信息"^] 。
-支持的许可选项:: 标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的NetApp数据服务。查看每项服务的文档以了解有关可用许可选项的更多信息。
-如何开始使用标准模式:: 前往 https://console.netapp.com["NetApp Console"^]并注册。
-+
---
-link:task-quick-start-standard-mode.html["了解如何开始使用标准模式"] 。
-
---
+身份验证:: NetApp Console 通过 auth0 或 NetApp 支持站点 (NSS) 登录提供身份验证。身份联合可用。
 
 
 
 
-== 限制模式
+=== 如何开始使用标准模式
+
+前往 https://console.netapp.com["NetApp Console"^]并注册。
+
++ link:task-quick-start-standard-mode.html["了解如何开始使用标准模式"].
+
+
+
+== NetApp Console 处于受限模式（安装在您自己的公共云中）
+
+您在云中（在政府、主权或商业区域）安装 Console 代理，它对 NetApp Console API 端点（托管在 SaaS 应用程序中）的出站连接有限。
+
+用户访问 Console 代理提供的本地 UI，而不是 SaaS 应用程序。
+
+根据您计划使用的数据服务和功能，Console 组织管理员会创建额外的 Console 代理来管理混合云环境中的数据。
+
+<<限制模式,详细了解到 NetApp Console API 的出站连接>>。
 
 下图是限制模式部署的示例。
 
-image:diagram-restricted-mode.png["受限模式的概念图。"]
+image:diagram-restricted-mode.png["一个概念图像，显示可用 SaaS 应用程序和 auth0 身份验证的公共互联网、运行代理并提供对基于 Web 的控制台的访问的云中的虚拟网络，以及在内部数据中心中管理 Cloud Volumes ONTAP 和 AFF 群集。"]
 
-控制台在限制模式下的工作方式如下：
 
-出站沟通:: 代理需要与控制台 SaaS 层建立出站连接，以实现数据服务、软件升级、身份验证和元数据传输。
-+
---
-控制台 SaaS 层不会发起与代理的通信。代理启动与控制台 SaaS 层的所有通信，根据需要提取或推送数据。
 
-还需要与区域内的云提供商资源建立连接。
+=== 受限模式下 NetApp Console 支持的功能和服务
 
---
-代理支持的位置:: 在受限模式下，代理在云中受支持：在政府区域、主权区域或商业区域。
-控制台代理安装:: 您可以从 AWS 或 Azure 市场安装，也可以在您自己的 Linux 主机上手动安装，或者在您的 VCenter 环境中使用可下载的 OVA。
-控制台代理升级:: NetApp每月自动更新您的代理软件。
-用户界面访问:: 您可以从部署在云区域中的代理虚拟机访问用户界面。
-API 端点:: 对代理虚拟机进行 API 调用。
-身份验证:: 通过 auth0 提供身份验证。身份联合也可用。
-支持的存储管理和数据服务:: 以下存储和数据服务具有受限模式：
-+
---
-[cols="2*"]
+下表列出了在受限模式下安装 NetApp Console 时可用的存储管理功能、数据服务和管理功能。
+
+[cols="3*"]
 |===
-| 支持的服务 | 笔记 
+| 产品领域 | NetApp 服务或功能 | 需要 Console 代理 
 
 
-| Azure NetApp Files | 全力支持 
+.3+| *存储系统管理* 此表显示您可以从 NetApp Console 管理哪些存储系统。它不列出 NetApp Backup and Recovery 的备份目标。 | Azure NetApp Files | 否 
 
 
-| 备份和恢复 | 在政府区域和商业区域受限制模式支持。不支持在具有限制模式的主权区域使用。在受限模式下， NetApp Backup and Recovery仅支持ONTAP卷数据的备份和恢复。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]不支持应用程序数据和虚拟机数据的备份和恢复。 
+| Cloud Volumes ONTAP | 是 
 
 
-| NetApp Data Classification  a| 
-在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。
+| 本地ONTAP集群 | 发现和管理所必需的。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
 
 
+.3+| *Data Services* （受限模式支持的数据服务比标准模式少）  a| 
+备份和恢复
 
-| Cloud Volumes ONTAP | 全力支持 
+* 在政府地区和商业地区支持限制模式。在限制模式的主权区域不支持。
+* 在受限模式下，NetApp Backup and Recovery 仅支持 ONTAP 卷数据的备份和恢复。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]
+
+| 在政府地区和具有受限模式的商业地区中受支持。在具有受限模式的主权地区中不受支持。在受限模式下，NetApp Backup and Recovery 仅支持 ONTAP 卷数据的备份和恢复。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP数据支持的备份目标列表"^] 
 
 
-| Licenses and subscriptions | 您可以使用下面列出的受限模式支持的许可选项访问许可证和订阅信息。 
+ a| 
+NetApp Data Classification
+
+* 在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。
+
+| 是 
 
 
-| 本地ONTAP集群 | 使用控制台代理的发现和不使用控制台代理的发现（直接发现）均受支持。当您发现没有控制台代理的本地集群时，高级视图（系统管理器）不受支持。 
+ a| 
+NetApp Replication
+
+* 在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。
+
+| 是*，（如果从 ONTAP 内部环境复制到 ONTAP 内部环境则不需要） 
 
 
-| 复制 | 在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。 
-|===
---
-支持的许可选项:: 限制模式支持以下许可选项：
-+
---
-* 市场订阅（按小时和按年合同）
-+
+| *NetApp 支持合同功能* | 无 | 不适用 
+
+
+.12+| *管理功能* | 审核 | 否 
+
+
+| 自动化中心 | 否 
+
+
+| 联邦 | 否 
+
+
+| 身份和访问管理 | 否 
+
+
+ a| 
+Licenses and subscriptions 管理
+
 请注意以下事项：
 
+* 市场订阅（按小时和按年合同）
 +
 ** 对于Cloud Volumes ONTAP，仅支持基于容量的许可。
 ** 在 Azure 中，不支持与政府区域签订年度合同。
@@ -201,126 +329,354 @@ API 端点:: 对代理虚拟机进行 API 调用。
 对于Cloud Volumes ONTAP，BYOL 支持基于容量的许可和基于节点的许可。
 
 
+| 否 
+
+
+| 管理云提供商凭证 | 否 
+
+
+| 多重身份验证（本地用户） | 否 
+
+
+| 通知 | 否 
+
+
+| NSS 账户 | 否 
+
+
+| 组织合作伙伴关系 | 否 
+
+
+| 只读模式 | 否 
+
+
+| 通知 | 否 
+|===
+
+
+=== NetApp Console 在受限模式下的工作原理
+
+控制台在限制模式下的工作方式如下：
+
+出站沟通:: 代理需要出站连接到 NetApp 基于云的 API，以支持数据服务、软件升级、身份验证和元数据传输。
++
+--
+NetApp 不会启动与代理的通信。代理启动所有通信，并可以根据需要从 NetApp API 和服务提取或推送数据。
+
+还需要与区域内的云提供商资源建立连接。
 
 --
-如何开始使用受限模式:: 创建NetApp Console组织时，您需要启用受限模式。
-
-
-如果您还没有组织，当您第一次从手动安装的控制台代理或从云提供商的市场创建的控制台代理登录控制台时，系统会提示您创建组织并启用受限模式。
-
-
-NOTE: 创建组织后，您无法更改限制模式设置。
-
-link:task-quick-start-restricted-mode.html["了解如何开始使用受限模式"] 。
+代理支持的位置:: 在受限模式下，您可以在云中安装代理：在政府区域、主权区域或商业区域。
+控制台代理升级:: NetApp Console 每月自动升级代理软件。
+用户界面访问:: 用户从部署在云区域中的代理虚拟机访问 Console。
+API 端点:: 对代理虚拟机进行 API 调用。
+身份验证:: 通过 NetApp Console 的云服务使用 auth0 提供身份验证。也可以使用身份联合。
 
 
 
-== 服务和功能比较
 
-下表可以帮助您快速识别受限模式支持哪些服务和功能。
+=== 如何开始使用受限模式
 
-请注意，某些服务可能会受到限制。有关如何在受限模式下支持这些服务的更多详细信息，请参阅上面的部分。
+创建 NetApp Console 帐户时，您需要启用受限模式。如果没有组织，则会在首次登录已安装的 Console 代理时提示您创建一个组织并启用受限模式。
 
-[cols="19,27,27"]
+请注意，创建组织后，受限模式设置将被固定。以后无法启用或禁用受限模式。link:task-quick-start-restricted-mode.html["了解如何开始使用受限模式"]。
+
+
+
+== 私密模式下的 NetApp Console
+
+在专用模式下，您可以在内部或云端安装 Console 代理，然后使用 NetApp Console 跨混合云管理数据。没有与 NetApp Console API 端点或 NetApp Console SaaS 应用程序的连接，因此您可以从 Console 代理提供的本地 UI 访问 Console。
+
+下图显示了私有模式部署的示例，其中 Console 代理安装在云中并管理 Cloud Volumes ONTAP 和本地 ONTAP 群集。
+
+image:diagram-private-mode-cloud.png["一个概念映像，显示云中的虚拟网络，其中代理正在运行并提供对基于 Web 的控制台的访问，并且正在管理本地数据中心中的 Cloud Volumes ONTAP 和 AFF 群集。"]
+
+第二个图像显示了私有模式部署的示例，其中代理是本地安装的，管理本地 ONTAP 群集，并提供对受支持的 NetApp Console 数据服务的访问。
+
+image:diagram-private-mode-onprem.png["显示内部数据中心的概念图像，其中代理正在其中运行并提供对基于 Web 的控制台、NetApp Console 数据服务的访问，并且正在管理内部数据中心中的 AFF 群集。"]
+
+
+
+=== 私有模式下 NetApp Console 支持的功能和服务
+
+下表列出了在专用模式下安装 NetApp Console 时可用的存储管理功能、数据服务和管理功能。当您将 NetApp Console 安装在云端而不是您的场所时，功能会有所不同。
+
+云中已安装专用模式::
+
+
+[cols="3*"]
 |===
-| 产品领域 | NetApp数据服务或功能 | 限制模式 
+| 产品领域 | NetApp 服务或功能 | 需要 Console 代理 
 
 
-.10+| *存储* 表格的此部分列出了对从控制台管理存储系统的支持。它没有指明NetApp Backup and Recovery支持的备份目标。 | 适用于ONTAP 的Amazon FSx | 否 
+.2+| *存储系统管理* 表中的这一部分列出了从 NetApp Console 管理存储系统的支持。它没有指明 NetApp Backup and Recovery 支持的备份目标。 | Cloud Volumes ONTAP | 是的，但由于没有互联网接入，以下功能不可用：自动软件升级和 AutoSupport。 
 
 
-| Amazon S3 | 否 
+ a| 
+本地ONTAP集群
 
+* 需要从云（安装了 Console 代理的地方）到本地环境的连接。
++
+要发现本地 ONTAP 集群，您必须已安装 Console 代理。
 
-| Azure Blob | 否 
 
+| 您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
 
-| Azure NetApp Files | 是 
 
+.3+| *数据服务*  a| 
+备份和恢复
 
-| Cloud Volumes ONTAP | 是 
+* 在私有模式下，NetApp Backup and Recovery 仅支持备份和恢复 ONTAP 卷数据。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]不支持应用程序数据和虚拟机数据的备份和还原。
+* 不支持 Google Cloud 或 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]、 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]或 https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^]
 
+| 是 
 
-| Google Cloud NetApp Volumes | 否 
 
+ a| 
+NetApp 分类
 
-| Google Cloud Storage | 否 
+* 唯一受支持的数据源是您可以在本地发现的数据源。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["查看可在本地发现的源"^]
+* 需要出站 Internet 访问的功能不受支持。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["查看功能限制"^]
 
+| 是 
 
-| 本地ONTAP集群 | 是 
 
+| NetApp Replication | 是* （如果从 ONTAP 本地复制到 ONTAP 本地则不需要） 
 
-| E 系列 | 否 
 
+| *NetApp 支持合同功能* | 无 | -- 
 
-| StorageGRID | 否 
 
+.6+| *管理功能* | 审核 | 否 
 
-.9+| *数据服务* | NetApp备份和恢复 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] 
 
+ a| 
+Licenses and subscriptions 管理
 
-| NetApp Data Classification | 是 
+* 私密模式仅支持 BYOL。
++
+对于 Cloud Volumes ONTAP BYOL，仅支持基于节点的许可。不支持基于容量的许可。由于出站 Internet 连接不可用，因此需要在 Console 中手动上载 Cloud Volumes ONTAP 许可文件。
 
 
-| NetApp Copy and Sync | 否 
 
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["了解如何添加 licenses"^]
+| 否 
 
-| NetApp Disaster Recovery | 否 
 
+| 身份和访问管理 | 否 
 
-| NetApp Ransomware Resilience | 否 
 
+| 管理云提供商凭证 | 否 
 
-| NetApp Replication | 是 
 
+| 只读模式 | 否 
 
-| NetApp Cloud Tiering | 否 
 
+| 通知 | 否 
+|===
+本地安装的私有模式::
 
-| NetApp卷缓存 | 否 
 
+[cols="3*"]
+|===
+| 产品领域 | NetApp 服务或功能 | 需要 Console 代理 
 
-| NetApp工作负载工厂 | 否 
 
+| *存储系统管理* 表中的这一部分列出了从 NetApp Console 管理存储系统的支持。它没有指明 NetApp Backup and Recovery 支持的备份目标。  a| 
+本地ONTAP集群
 
-.14+| *特征* | 警报 | 否 
+* 需要从云（安装了 Console 代理的地方）到本地环境的连接。
++
+要发现本地 ONTAP 集群，您必须已安装 Console 代理。
 
 
-| Digital Advisor | 否 
+| 您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
 
 
-| 许可证和订阅管理 | 是 
+.3+| *数据服务*  a| 
+备份和恢复
 
+* 在私有模式下，NetApp Backup and Recovery 仅支持 ONTAP 卷数据的备份和恢复。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP数据支持的备份目标列表"^]
+* 不支持应用程序数据和虚拟机数据的备份和还原。
 
-| 身份和访问管理 | 是 
+| 是 
 
 
-| 凭据 | 是 
+ a| 
+NetApp 分类
 
+* 唯一受支持的数据源是您可以在本地发现的数据源。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["查看可在本地发现的源"^]
+* 需要出站 Internet 访问的功能不受支持。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["查看功能限制"^]
 
-| 联邦 | 是 
+| 是 
 
 
-| 生命周期规划 | 否 
+| NetApp Replication | 是* （如果从 ONTAP 本地复制到 ONTAP 本地则不需要） 
 
 
-| 多因素身份验证 | 是 
+| *NetApp 支持合同功能* | 无 | 不适用 
 
 
-| NSS 账户 | 是 
+.6+| *管理功能* | 审核 | 否 
 
 
-| 通知 | 是 
+ a| 
+Licenses and subscriptions 管理
 
+* 私密模式仅支持 BYOL。
 
-| 搜索 | 是 
+| 否 
 
 
-| 软件更新 | 否 
+| 身份和访问管理 | 否 
 
 
-| 可持续性 | 否 
+| 管理云提供商凭证 | 否 
 
 
-| 审核 | 是 
+| 只读模式 | 否 
+
+
+| 通知 | 否 
+|===
+
+
+=== NetApp Console 在私有模式下的工作原理
+
+NetApp Console 在私有模式下的工作方式如下：
+
+出站沟通:: 无需出站连接到 Console SaaS 应用程序（即其他 API 端点所在的应用程序）。所有包、依赖项和基本组件都与 Console 代理打包在一起，并由本地计算机提供。仅当您部署 Cloud Volumes ONTAP 时，才需要连接到云提供商的公开可用资源。
+Console 代理支持的位置:: 在专用模式下，云或本地支持 Console 代理。
+控制台代理升级:: 您必须手动升级 Console 代理软件。NetApp 按未定义的时间间隔将 Console 代理软件发布到 NetApp 支持站点。
+用户界面访问:: 用户从部署在云区域或本地的 Console 代理访问 Console。
+API 端点:: 对控制台代理虚拟机进行 API 调用。
+身份验证:: 身份验证通过本地用户管理和访问提供。身份验证不通过 NetApp Console 的云服务提供。
+
+
+
+
+=== 如何开始使用私有模式
+
+从 NetApp 支持站点下载"离线"安装程序即可使用专用模式。
+
++ link:task-quick-start-private-mode.html["了解如何开始使用私有模式"].
+
++ 注意：如果要在 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]或 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]中使用 NetApp Console，则应按照单独的说明开始使用这些环境。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["了解如何在 AWS Secret Cloud 或 Top Secret Cloud 中开始使用 Cloud Volumes ONTAP"^]
+
+
+
+== NetApp Console 服务和功能比较
+
+此表显示受限模式和私有模式支持哪些服务和功能。
+
+
+NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
+
+请注意，某些服务可能会受到限制支持。有关受限模式和私有模式如何支持这些服务的更多详细信息，请参阅上述部分。
+
+[cols="19,27,27,27"]
+|===
+| 产品领域 | NetApp 服务或功能 | 限制模式 | 私人模式 
+
+
+.10+| *存储系统管理* 此表显示您可以从 NetApp Console 管理哪些存储系统。它不列出 NetApp Backup and Recovery 的备份目标。 | 警报 | 否 | 否 
+
+
+| 适用于ONTAP 的Amazon FSx | 否 | 否 
+
+
+| Amazon S3 | 否 | 否 
+
+
+| Azure Blob | 否 | 否 
+
+
+| Azure NetApp Files | 是 | 否 
+
+
+| Cloud Volumes ONTAP | 是 | 是 
+
+
+| Google Cloud NetApp Volumes | 否 | 否 
+
+
+| Google Cloud Storage | 否 | 否 
+
+
+| 内部部署 ONTAP 集群 | 是 | 是 
+
+
+| E 系列 | 否 | 否 
+
+
+| StorageGRID | 否 | 否 | 工作负载工厂 
+
+
+| 否 | 否 .8+| *数据服务* | 备份和恢复 
+
+
+| 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] | NetApp 分类 
+
+
+| 是 | 是 | 复制和同步 
+
+
+| 否 | 否 | NetApp Disaster Recovery 
+
+
+| 否 | 否 | NetApp 勒索软件保护 
+
+
+| 否 | 否 | NetApp Replication 
+
+
+| 是 | 是 | NetApp Cloud Tiering 
+
+
+| 否 | 否 | NetApp Volume Caching 
+
+
+| 否 | 否 .4+| *NetApp 支持合同功能* | 数字顾问 
+
+
+| 否 | 否 | 生命周期规划 
+
+
+| 否 | 否 | 软件更新 
+
+
+| 否 | 否 | 可持续性 
+
+
+| 否 | 否 .9+| *管理功能* | 存储和数据服务的仪表板指标 
+
+
+| 否 | 否 | 身份和访问管理 
+
+
+| 是 | 是 | 管理云提供商凭证 
+
+
+| 是 | 是 | 联邦 
+
+
+| 是 | 否 | Licenses and subscriptions 
+
+
+| 是 | 是 | 多因素身份验证 
+
+
+| 是 | 否 | NSS 账户 
+
+
+| 是 | 否 | 组织合作伙伴关系 
+
+
+| 是 | 否 | 只读模式 
+
+
+| 否 | 否 | 通知 | 是 
+
+
+| 否 | 审核 | 是 | 是 
 |===

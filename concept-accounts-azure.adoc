@@ -117,4 +117,5 @@ link:task-adding-azure-accounts.html#subscribe["了解如何关联 Azure 订阅"
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
 
 
+* link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["设置专用模式的权限"]
 

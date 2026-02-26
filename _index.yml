@@ -21,14 +21,10 @@ indexpage:
     links:
     - title: NetApp Console (SaaS) 入门指南
       url: task-quick-start-standard-mode.html
-    - title: 准备NetApp Console的网络访问
-      url: reference-networking-saas-console.html
-    - title: 注册NetApp Console
-      url: task-sign-up-saas.html
-    - title: 使用NetApp Console助手（SaaS）
-      url: task-console-assistant.html
-    - title: 以受限模式部署NetApp Console（主权云部署）
+    - title: 以受限模式部署NetApp Console
       url: "/task-quick-start-restricted-mode.html"
+    - title: 在私密模式下部署 NetApp Console
+      url: "/task-quick-start-private-mode.html"
   - title: 实施身份和访问管理（IAM）
     links:
     - title: 制定您的身份和访问管理 (IAM) 策略

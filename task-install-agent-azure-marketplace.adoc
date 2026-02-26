@@ -90,7 +90,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服务。
 
@@ -179,7 +179,7 @@ Azure VM 大小:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 Stan
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure 文档：使用 Azure 门户为 VM 上的 Azure 资源配置托管标识"^]
 
-. 复制link:reference-permissions-azure.html["连接器的自定义角色权限"]并将它们保存在 JSON 文件中。
+. 复制link:reference-permissions-azure.html["控制台代理的自定义角色权限"]并将它们保存在 JSON 文件中。
 . 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
 您应该为想要与NetApp Console一起使用的每个 Azure 订阅添加 ID。

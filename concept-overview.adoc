@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept-overview.html 
-keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: 该控制台通过集成数据服务统一混合多云的存储管理和保护，以保护和优化数据。 
+keywords: overview, concepts, features, use case, cloud manager, netapp console, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
+summary: NetApp Console 可帮助您管理和保护所有云和本地系统的数据。它包括保护您的数据安全和正常工作的工具。 
 ---
-= 了解NetApp Console
+= 用于统一存储管理的 NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,63 @@ summary: 该控制台通过集成数据服务统一混合多云的存储管理�
 
 
 [role="lead"]
-该控制台通过集成数据服务统一混合多云的存储管理和保护，以保护和优化数据。
+NetApp Console 可帮助您管理和保护所有云和本地系统的数据。它包括保护您的数据安全和正常工作的工具。
 
-它既可以作为软件即服务 (SaaS) 平台使用，也可以作为自托管选项安装在您自己的主权云中。它提供存储管理、数据移动性、数据保护以及数据分析和控制。管理功能通过基于 Web 的控制台和 API 提供。
+将 Console 用作软件即服务 (SaaS) 应用程序，或将其安装在云或本地环境中（受限或专用模式）。每种模式都支持不同的功能集和安全要求。
 
-
-
-== 集中存储管理
-
-使用控制台发现、部署和管理云和本地存储。
+Console 与您在环境中部署的 Console 代理一起工作，以跨本地和云环境管理资源和协调流程。
 
 
 
-=== 支持的云和本地存储
+== 选择如何访问 NetApp Console
 
-您可以从控制台管理以下类型的存储：
+通过注册 SaaS 应用程序（标准模式）、将其安装在云端（受限模式）或本地（私有模式）开始使用 NetApp Console。某些功能在受限或私有模式下不可用。
+
+link:concept-modes.html["了解有关部署模式的更多信息"] 。
+
+
+
+== 使用 Console 代理扩展 Console 功能
+
+控制台代理是轻量级软件组件，可连接到 NetApp Console SaaS 应用程序和基于云的 API，从而实现高级功能和数据服务。
+
+在受限或专用模式下，在云或本地环境中安装 Console 代理以访问 NetApp Console 应用程序。您需要部署其他代理，以支持需要直接连接到 NetApp Console 及其 API 的功能。
+
+link:concept-agents.html["了解有关控制台代理的更多信息"] 。
+
+
+
+== 在 NetApp Console 中管理用户访问和权限
+
+控制台提供身份和访问管理 (IAM)，以提高整个数据基础设施的安全性和控制。围绕组织角色和职责组织存储和数据服务，以降低未经授权访问的风险，同时保持运营效率：
+
+* 顶级 _organization_ 使您能够在整个基础架构中授予和撤销对存储系统和项目的访问权限
+* _Folders_ 使您能够根据业务职能或合规性要求将存储资源和项目分组在一起
+* _Projects_ 使您能够控制哪些团队访问特定的存储系统、卷和数据服务
+* _基于角色的访问控制 (RBAC)_ 允许您向不同级别的团队成员授予存储管理权限，因此您可以委派任务，而无需授予太多访问权限
+
+
+link:concept-identity-and-access-management.html["了解有关NetApp Console中的 IAM 的更多信息"]
+
+
+
+== NetApp Console 的安全与合规性
+
+启用单点登录 (SSO) 等安全和合规性功能，以控制对存储和数据服务的访问。具有组织管理员角色的用户可以默认设置只读模式，要求用户请求提升权限以对存储系统进行更改并使用数据服务。您还可以使用 NetApp Console 监控存储管理和用户活动。NetApp Console 已通过 SOC 2 Type 2 认证，NetApp 向客户提供 SOC 2 报告。
+
+https://www.netapp.com/company/trust-center/compliance/soc-2/["查看 NetApp 的 SOC 2 报告"^]
+
+
+
+== NetApp Console 功能和支持的存储
+
+NetApp Console 支持跨本地和云环境的广泛存储类型、功能和数据服务。使用 Console 管理存储系统，监控其运行状况和性能，并启用数据服务以保护和优化数据。
+
+
+
+=== NetApp Console 中支持的云和本地存储
+
+从控制台管理这些存储类型：
 
 云存储解决方案::
 +
@@ -62,97 +104,54 @@ summary: 该控制台通过集成数据服务统一混合多云的存储管理�
 
 
 
-=== 存储管理
+=== NetApp Console 中的存储管理和运行状况服务
 
-在控制台中，_systems_ 代表已发现或已部署的存储。您可以选择一个系统将其与NetApp数据服务集成或管理存储，例如添加卷。
+NetApp Console 通过单一界面提供 NetApp 存储基础架构的统一管理。
+
+在 Console 中，_Systems_ 表示您发现或部署的存储。直接在 Console 中管理存储卷，或打开系统的管理界面以获取更多选项。
 
 image:screenshot-canvas.png["控制台截图，显示了多个系统。选中其中一个选项，即可启用NetApp数据服务，或者选择“进入系统”来管理存储。"]
 
+除了存储管理之外，还可以使用基础架构服务来监控和管理所有环境中的存储基础架构。
 
-
-== 集成数据服务和存储管理，以保护、保障和优化数据
-
-控制台提供数据服务以保护和维护存储可用性。
-
-存储警报:: 查看与ONTAP环境中的容量、可用性、性能、保护和安全性相关的问题。
-自动化中心:: 使用脚本解决方案来自动化NetApp产品和服务的部署和集成。
-NetApp Backup and Recovery:: 备份和恢复云和本地数据。
-NetApp Data Classification:: 让您的应用程序数据和云环境隐私做好准备。
-NetApp Copy and Sync:: 在本地和云数据存储之间同步数据。
-NetApp数字顾问 (Active IQ):: 使用预测分析和主动支持来优化您的数据基础设施。
+运行状况和性能监控:: 查看存储系统运行状况和性能的仪表板，并获取警报，以便在问题导致故障之前解决问题。
 Licenses and subscriptions:: 管理和监控您的许可证和订阅。
-NetApp Disaster Recovery:: 使用 VMware Cloud on Amazon FSx for ONTAP作为灾难恢复站点来保护本地 VMware 工作负载。
-生命周期规划:: 识别当前或预测容量较低的集群并实施数据分层或额外容量建议。
-NetApp Ransomware Resilience:: 检测可能导致勒索软件攻击的异常。保护和恢复工作负载。
-NetApp Replication:: 在存储系统之间复制数据以支持备份和灾难恢复。
-软件更新:: 自动评估、规划和执行ONTAP升级。
+生命周期规划:: 识别空间不足的集群，并根据需要添加容量或移动数据。
+NetApp数字顾问 (Active IQ):: 使用预测分析和主动支持来优化您的数据基础设施。
+软件更新:: 自动化评估、规划和完成 ONTAP 升级。
+存储警报:: 查看与ONTAP环境中的容量、可用性、性能、保护和安全性相关的问题。
+系统页面:: 在一个地方查看所有存储系统，并快速访问其管理界面。直接从"系统"页面拖放以启用数据服务。
 可持续性仪表板:: 分析存储系统的可持续性。
-NetApp Cloud Tiering:: 将您的本地ONTAP存储扩展到云端。
-NetApp Volume Caching:: 创建可写的缓存卷以加快数据访问速度或卸载访问量大的卷的流量。
-NetApp工作负载:: 使用Amazon FSx for NetApp ONTAP设计、设置和操​​作关键工作负载。
-
-
-https://www.netapp.com/bluexp/["了解有关NetApp Console和可用数据服务的更多信息"^]
-
-
-
-== 支持的云提供商
-
-该控制台使您能够管理云存储并使用 Amazon Web Services、Microsoft Azure 和 Google Cloud 中的云服务。
-
-
-
-== 成本
-
-NetApp Console是免费的。如果您在云中部署控制台代理或使用在云中部署的受限模式，则会产生费用。某些NetApp数据服务会产生相关费用。https://bluexp.netapp.com/pricing["了解NetApp数据服务定价"^]
-
-
-
-== NetApp Console的工作原理
-
-NetApp Console是一个基于 Web 的控制台，通过 SaaS 层、资源和访问管理系统、管理存储系统和启用NetApp数据服务的控制台代理以及不同的部署模式提供，以满足您的业务需求。
-
-
-
-=== 软件即服务
-
-您可以通过 https://console.netapp.com["基于网络的界面"^]和 API。这种 SaaS 体验使您能够在最新功能发布时自动访问它们。
-
-
-
-=== 身份和访问管理 (IAM)
-
-控制台为资源和访问管理提供身份和访问管理 (IAM)。此 IAM 模型提供资源和权限的细粒度管理：
-
-* 顶级组织使您能够管理各个项目之间的访问权限
-* _文件夹_ 使您可以将相关项目分组在一起
-* 资源管理使您能够将资源与一个或多个文件夹或项目关联
-* 访问管理使您能够为组织层次结构中不同级别的成员分配角色
-* link:concept-identity-and-access-management.html["了解有关NetApp Console中的 IAM 的更多信息"]
 
 
 
 
-=== 控制台代理
+=== NetApp Console 中的数据安全和保护服务
 
-一些附加功能和数据服务需要控制台代理。它使您能够管理本地和云环境中的资源和流程。您需要它来管理一些系统（例如， Cloud Volumes ONTAP）并使用一些NetApp数据服务。
+使用内置数据服务来保护关键数据并优化存储效率。
 
-link:concept-agents.html["了解有关控制台代理的更多信息"] 。
-
-
-
-=== SaaS 与主权云部署
-
-您可以通过注册 SaaS 服务或将其部署在您的主权云中来开始使用NetApp Console 。在主权云中部署NetApp Console时， NetApp会限制出站连接，以满足您组织的安全性和合规性要求。当控制台部署在主权云中时，并非所有功能和服务都可用。
-
-NetApp继续为不需要出站连接的站点提供BlueXP 。BlueXP可以安装在您的网络上，无需任何出站连接。 link:task-quick-start-private-mode.html["了解没有互联网连接的站点的BlueXP （私人模式）。"]
-
-link:concept-modes.html["了解有关部署模式的更多信息"] 。
+NetApp Backup and Recovery:: 备份和还原云和本地数据。需要订阅。
+NetApp Copy and Sync:: 在本地和云数据存储之间同步数据。
+NetApp Disaster Recovery:: 使用 VMware Cloud on Amazon FSx for ONTAP 作为灾难恢复站点来保护本地 VMware 工作负载。需要订阅。
+NetApp Ransomware Resilience:: 检测可能导致勒索软件攻击的异常情况。保护和恢复工作负载。需要订阅。
+NetApp Replication:: 在存储系统之间复制数据以支持备份和灾难恢复。
 
 
 
-== SOC 2 类型 2 认证
 
-一家独立的注册会计师事务所和服务审计师审查了控制台，并确认其根据适用的信托服务标准实现了 SOC 2 类型 2 报告。
+=== NetApp Console 中的成本和合规管理服务
 
-https://www.netapp.com/company/trust-center/compliance/soc-2/["查看 NetApp 的 SOC 2 报告"^]
+跟踪所有系统的合同状态，以改进成本管理、合规性和采购决策。
+
+自动化中心:: 使用脚本解决方案自动化 NetApp 产品和服务的设置和连接，以实现更流畅、更一致的操作。
+NetApp Cloud Tiering:: 将您的本地 ONTAP 存储扩展到云，以实现成本优化和数据生命周期管理。
+NetApp Data Classification:: 让您的应用程序数据和云环境为遵守数据隐私法规做好隐私准备。订阅即可免费使用。
+NetApp Volume Caching:: 创建可写缓存卷，以加快对数据的访问速度，或从频繁访问的卷中卸载流量，从而提高性能和成本效益。
+NetApp工作负载:: 使用 Amazon FSx for NetApp ONTAP 设计、设置和操作关键工作负载，以优化特定应用程序的性能和成本。
+
+
+
+
+=== NetApp Console 成本
+
+NetApp 不对 Console 收费。在云中部署 Console 代理或使用受限模式时会产生成本。一些 NetApp 数据服务也有相关成本。https://bluexp.netapp.com/pricing["了解NetApp数据服务定价"^]

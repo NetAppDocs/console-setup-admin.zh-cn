@@ -36,6 +36,7 @@ image:diagram_permissions_gcp.png["概念图描绘了 Google 和服务帐户部�
 
 * link:task-install-agent-google-console-gcloud.html#agent-permissions-google["设置标准模式的 Google Cloud 权限"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
+* link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["设置专用模式的权限"]
 
 
 

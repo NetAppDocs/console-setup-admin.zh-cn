@@ -1,0 +1,195 @@
+---
+sidebar: sidebar 
+permalink: task-install-private-mode.html 
+keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet 
+summary: 在私有模式下部署 NetApp Console，以便可以在没有出站连接的情况下使用它。若要开始，请安装 Console 代理，通过访问在 Console 代理上运行的用户界面来设置 NetApp Console，然后提供之前设置的云权限。 
+---
+= 在专用模式下部署 Console 代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在私有模式下部署 NetApp Console，以便可以在没有出站连接的情况下使用它。若要开始，请安装 Console 代理，通过访问在 Console 代理上运行的用户界面来设置 NetApp Console，然后提供之前设置的云权限。
+
+
+
+== 步骤 1：安装控制台代理
+
+从 NetApp 支持站点下载产品安装程序，然后在您自己的 Linux 主机上手动安装控制台。
+
+要在 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]或 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]中使用 NetApp Console，则应按照单独的说明开始使用这些环境。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["了解如何在 AWS Secret Cloud 或 Top Secret Cloud 中开始使用 Cloud Volumes ONTAP"^]
+
+.开始之前
+* 安装 Console 代理需要根权限。
+* 根据您的操作系统，在安装控制台代理之前需要 Podman 或 Docker Engine。
+
+
+.步骤
+. 从 NetApp 支持站点下载 Console 代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]
++
+请务必为没有 Internet 访问权限的专用网络下载脱机安装程序。
+
+. 将安装程序复制到 Linux 主机。
+. 分配运行脚本的权限。
++
+[source, cli]
+----
+chmod +x /path/NetApp-Console-Private-Mode-<version>
+----
++
+其中 <version> 是您下载的控制台代理的版本。
+
+. 运行安装脚本：
++
+[source, cli]
+----
+sudo /path/NetApp-Console-Private-Mode-<version>
+----
++
+其中 <version> 是您下载的控制台代理的版本。
+
+
+
+.结果
+控制台代理已安装。现在，您可以设置 NetApp Console 了。
+
+
+
+== 第 2 步：设置NetApp Console
+
+首次访问 NetApp Console 时，系统会提示您设置 NetApp Console。
+
+.步骤
+. 打开 Web 浏览器，并输入安装 Console 代理的 Linux 主机的 IP 地址。
+. 选择 *Set Up New Console agent* ，然后按照提示设置系统。
++
+** *系统详细信息*：输入 Console 代理的名称和公司名称。
+** *创建管理员用户*：为系统创建管理员用户。
+** *Review*：查看详细信息，接受许可协议，然后选择 *Set Up*。
+
+
+. 使用刚刚创建的管理员用户登录到 NetApp Console。
+
+
+.结果
+控制台代理现已安装。在 Web 浏览器中访问其 IP 地址，以私有模式访问 NetApp Console。
+
+当新版本的 Console 软件可用时，它们将发布到 NetApp 支持站点。link:task-upgrade-agent.html["了解如何升级 Console 代理"].
+
+.下一步是什么？
+向 Console 代理提供之前设置的云提供程序权限。
+
+
+
+== 步骤 3：为 Console 代理提供权限
+
+如果要创建 Cloud Volumes ONTAP 工作环境，则需要向 Console 代理提供之前设置的云提供商权限。
+
+link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["了解如何准备云权限"]。
+
+[role="tabbed-block"]
+====
+.AWS IAM 角色
+--
+将之前创建的 IAM 角色附加到 Console 代理 EC2 实例。
+
+.步骤
+. 转到 Amazon EC2 控制台。
+. 选择*实例*。
+. 选择控制台代理实例。
+. 选择*操作 > 安全 > 修改 IAM 角色*。
+. 选择 IAM 角色并选择 *更新 IAM 角色*。
+
+
+--
+.AWS 访问密钥
+--
+为拥有所需权限的 IAM 用户向 Console 代理提供 AWS 访问密钥。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择*组织凭证*。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Amazon Web Services > 代理。
+.. *定义凭证*：输入 AWS 访问密钥和密钥。
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+--
+.Azure 角色
+--
+转到 Azure 门户并将 Azure 自定义角色分配给一个或多个订阅的控制台代理虚拟机。
+
+.步骤
+. 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
++
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp Console内完成操作的能力将受到影响。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
+
+. 选择*访问控制 (IAM)* > *添加* > *添加角色分配*。
+. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
++
+
+NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色选择了不同的名称，则选择该名称。
+
+. 在“*成员*”选项卡中，完成以下步骤：
++
+.. 分配对*托管身份*的访问权限。
+.. 选择“选择成员”，选择创建控制台代理虚拟机的订阅，在“托管标识”下，选择“虚拟机”，然后选择控制台代理虚拟机。
+.. 选择*选择*。
+.. 选择“下一步”。
+.. 选择*审阅+分配*。
+.. 如果要管理其他 Azure 订阅中的资源，请切换到该订阅，然后重复这些步骤。
+
+
+
+
+--
+.Azure 服务主体
+--
+为 Console 代理提供先前设置的 Azure 服务主体的凭据。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Microsoft Azure > 代理*。
+.. *定义凭据*：输入有关授予所需权限的 Microsoft Entra 服务主体的信息：
++
+*** 应用程序（客户端）ID
+*** 目录（租户）ID
+*** 客户端密钥
+
+
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+--
+.Google Cloud 服务帐号
+--
+将服务帐户与控制台代理 VM 关联。
+
+.步骤
+. 转到 Google Cloud 门户并将服务帐户分配给控制台代理 VM 实例。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文档：更改实例的服务帐户和访问范围"^]
+
+. 如果您想管理其他项目中的资源，请通过将具有控制台代理角色的服务帐户添加到该项目来授予访问权限。您需要对每个项目重复此步骤。
+
+
+--
+====

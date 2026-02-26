@@ -33,6 +33,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
 ** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["设置 AWS Marketplace 部署的权限"]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure["设置本地部署的权限"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["设置限制模式的权限"]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["设置专用模式的权限"]
 
 
 

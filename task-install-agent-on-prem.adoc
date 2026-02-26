@@ -248,7 +248,7 @@ Amazon FsX for NetApp ONTAP：
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服务。
 
@@ -316,7 +316,7 @@ Amazon FsX for NetApp ONTAP：
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服务。
 
@@ -788,6 +788,13 @@ unset https_proxy
 +
 选择下载代理安装程序文件或文件的 URL。
 
+
+
++
+
+NOTE: 下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。
+
++
 ** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
 
 
@@ -872,7 +879,7 @@ dns_bind_port = 54
 
 == 使用NetApp Console注册控制台代理
 
-登录控制台并将控制台代理与您的组织关联。登录方式取决于您使用控制台的模式。如果您在标准模式下使用控制台，则可以通过 SaaS 网站登录。如果您在受限模式下使用控制台，则可以从控制台代理主机本地登录。
+登录到 Console 并将 Console 代理与您的组织关联。登录方式取决于使用 Console 的模式。如果在标准模式下使用 Console，请通过 SaaS 网站登录。如果要在受限模式或专用模式下使用 Console，请从 Console 代理主机本地登录。
 
 .步骤
 . 打开 Web 浏览器并输入控制台代理主机 URL：

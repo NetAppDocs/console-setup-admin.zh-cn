@@ -36,6 +36,13 @@ unset https_proxy
 +
 选择下载代理安装程序文件或文件的 URL。
 
+
+
++
+
+NOTE: 下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。
+
++
 ** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
 
 

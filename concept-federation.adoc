@@ -16,6 +16,9 @@ summary: 身份联合支持通过NetApp Console进行单点登录，以便用户
 [role="lead"]
 单点登录（联合）允许用户使用其公司凭证登录NetApp Console，从而简化了登录过程并增强了安全性。您可以使用身份提供商 (IdP) 或NetApp支持站点启用单点登录 (SSO)。
 
+
+NOTE: 当 NetApp Console 处于私有模式时，联盟不可用。link:concept-modes.html["详细了解 NetApp Console 模式"^]。
+
 .所需角色
 组织管理员、联盟管理员、联盟查看器。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 

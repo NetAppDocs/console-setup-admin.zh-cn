@@ -18,6 +18,9 @@ summary: 要开始使用控制台，第一步是使用您的NetApp支持站点�
 
 在只读模式下，具有管理员角色的用户必须手动提升权限才能进行更改，这确保了更改是有意为之的。
 
+
+NOTE: 当 NetApp Console 处于私有模式时，只读模式不可用。link:concept-modes.html["详细了解 NetApp Console 模式"]。
+
 .所需访问权限
 超级管理员或组织管理员。
 

@@ -16,11 +16,9 @@ summary: 卸载控制台代理以解决问题或将其从主机中永久删除�
 [role="lead"]
 卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。
 
-link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 
-
-== 使用标准或受限模式时卸载代理
+== 当代理具有出站连接时将其卸载
 
 如果您使用的是标准模式或受限模式（换句话说，代理主机具有出站连接），那么您应该按照以下步骤卸载代理。
 
@@ -33,6 +31,42 @@ link:concept-modes.html["了解NetApp Console部署模式"] 。
 +
 _silent_ 运行脚本而不提示您确认。
 
+
+
+
+
+== 在没有出站连接时卸载代理
+
+如果代理没有出站连接（例如，在专用模式下），则必须从主机中手动删除代理软件。
+
+.步骤
+. 连接到控制台代理的 Linux VM。
+. 从 Linux 主机中，运行以下命令：
++
+[source, cli]
+----
+/opt/application/netapp/ds/cleanup.sh
+rm -rf /opt/application/netapp/
+----
+. 从 Linux 主机中删除旧的、未使用的容器映像文件，以释放 /var 目录中的空间以进行重新安装。
++
+[role="tabbed-block"]
+====
+.Podman
+--
+[source, cli]
+----
+podman system prune --all
+----
+--
+.Docker
+--
+[source, cli]
+----
+docker system prune -a
+----
+--
+====
 
 
 

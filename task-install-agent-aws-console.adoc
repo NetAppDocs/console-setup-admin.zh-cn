@@ -93,7 +93,7 @@ Amazon FsX for NetApp ONTAP：
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服务。
 
@@ -115,7 +115,7 @@ Amazon FsX for NetApp ONTAP：
 --
 
 
-从NetApp控制台联系的端点:: 当您使用通过 SaaS 层提供的基于 Web 的NetApp Console时，它会联系多个端点来完成数据管理任务。这包括从控制台联系以部署控制台代理的端点。
+从NetApp控制台联系的端点:: 当您使用基于 Web 的 NetApp Console SaaS 应用程序时，它会联系多个端点以完成数据管理任务。这包括从 Console 部署 Console 代理时联系的端点。
 +
 --
 link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
