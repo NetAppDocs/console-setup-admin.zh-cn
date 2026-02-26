@@ -5948,4 +5948,7 @@
   <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Console 代理 4.4.1</block>
   <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">从 NetApp Console 访问 NetApp Data Infrastructure Insights</block>
   <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">您可以从 NetApp Console 中访问 NetApp Data Infrastructure Insights 的免费试用版。转到 *Governance* &gt; *Data Infrastructure Insights* 进行注册，以探索有关数据环境的见解和分析。</block>
+  <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation：ListStacks</block>
+  <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">2026 年 2 月 24 日</block>
+  <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">数据分类现在需要以下权限：</block>
 </blocks>
