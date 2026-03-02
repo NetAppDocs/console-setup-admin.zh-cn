@@ -108,6 +108,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "cloudformation:CreateStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "cloudformation:DeleteStack",
         "iam:PassRole",
@@ -405,6 +406,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "s3:GetObject",
         "s3:ListBucket",
@@ -549,6 +551,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -668,6 +671,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -882,7 +886,7 @@ s3:获取加密配置
 
 
 
-=== 数据分类
+=== NetApp Data Classification
 
 代理发出以下 API 请求来部署NetApp Data Classification：
 
