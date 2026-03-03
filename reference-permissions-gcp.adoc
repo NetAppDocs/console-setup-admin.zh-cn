@@ -328,7 +328,7 @@ includedPermissions:
 | config.deployments.deleteState | 否 | 否 | 是 
 
 
-| config.deployments.get | 否 | 是 | 否 
+| config.deployments.get | 否 | 是 | 是 
 
 
 | config.deployments.getLock | 否 | 是 | 否 
