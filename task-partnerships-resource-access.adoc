@@ -43,6 +43,8 @@ summary: 您可以通过为合作伙伴用户分配组织内文件夹和项目�
 * link:reference-iam-disaster-rec-roles.html["灾难恢复查看器"]
 * link:reference-iam-storage-roles.html["运营支持分析师"]
 * link:reference-iam-predefined-roles.html["分类查看器"]
+* link:reference-iam-keystone-roles.html["Keystone管理员"]
+* link:reference-iam-keystone-roles.html["Keystone查看器"]
 
 
 link:reference-iam-predefined-roles.html["了解有关预定义角色的更多信息"]

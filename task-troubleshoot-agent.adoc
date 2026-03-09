@@ -122,7 +122,7 @@ podman ps -a
 
 
 
-== 验证网络访问
+== 验证 Console 代理的网络和端口访问权限
 
 确保控制台代理具有所需的网络访问权限。link:reference-networking-saas-console.html["了解有关所需网络接入点的更多信息。"]
 
@@ -130,7 +130,7 @@ podman ps -a
 
 === 对控制台代理运行配置检查
 
-从控制台或代理维护控制台对控制台代理运行配置检查，以确保它们已连接。
+从控制台或代理维护控制台对控制台代理运行配置检查，以确保它们可以访问所需的端点，并且所需的端口已打开。
 
 您还可以使用代理维护控制台运行配置检查。link:reference-agent-maint-console-config-checker.html["了解更多关于使用 config-checker validate 命令的信息。"]
 
