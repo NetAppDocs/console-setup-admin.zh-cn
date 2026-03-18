@@ -56,7 +56,6 @@ NetApp支持以下联合协议和身份提供程序：
 
 .协议
 * link:task-federation-adfs.html["Active Directory 联合身份验证服务 (AD FS)"]
-* link:task-federation-entra-id.html["微软Entra ID"]
 * link:link:task-federation-saml.html["安全断言标记语言 (SAML) 身份提供者"]
 
 
