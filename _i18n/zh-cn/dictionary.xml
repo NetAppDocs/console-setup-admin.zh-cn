@@ -6132,4 +6132,5 @@
   <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
   <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">将联合组添加到 Console 并为其分配角色时，只有作为 IdP 中组成员并已注册 NetApp Console 并在 Console 中明确分配角色的用户才能访问资源。NetApp 建议将最低访问角色（如组织查看器）分配给这些用户。</block>
   <block id="e40a26e15c2c65355aa43c03560cc632" category="list-text">所有用户都必须先注册 NetApp Console，然后才能被授予资源访问权限，即使他们属于联合组。</block>
+  <block id="34df2c4da19b4e31f0349125e9cabfc7" category="section-title">2026 年 3 月 10 日</block>
 </blocks>
