@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: faq-iam-netapp-console.html 
+keywords: faq, frequently asked questions, frequently asked questions about netapp console iam, identity and access management, role-based access control, rbac, iam, roles, permissions, organization, folders, projects, members, agents, service accounts, federated groups 
+summary: 有关 NetApp Console 中身份和访问管理以及基于角色的访问控制的常见问题。 
+---
+= NetApp Console 的身份和访问管理常见问题
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+本常见问题解答回答了有关 NetApp Console 中身份和访问管理 (IAM) 的常见问题。它侧重于基于角色的访问控制概念、层次结构行为和成员管理，这些在规划和实施组织的访问时非常有用。
+
+
+
+== 入门指南
+
+.创建新的 NetApp Console 组织后，设置 IAM 的第一步是什么？
+注册后，Console 将创建一个包含一个组织管理员和一个默认项目的组织。推荐的设置步骤如下：
+
+. 编辑默认项目或创建其他项目和文件夹以匹配您的业务层次结构。
+. 将成员添加到您的组织。
+. 添加或发现资源。
+. 根据需要将资源与其他项目相关联。
+
+
+
+
+== 资源层次结构：组织、文件夹和项目
+
+.NetApp Console IAM 中的文件夹和项目有什么区别？
+文件夹将相关项目分组，用于组织结构和角色委派。项目包含资源，是成员访问这些资源的地方。资源不能直接与文件夹相关联—它们必须与项目相关联。在文件夹级别分配角色将使该成员继承对所有子项目和文件夹的访问权限。
+
+.我的组织的所有成员都可以看到文件夹吗？
+不可以。文件夹仅对具有 IAM 权限的成员可见：组织管理员、文件夹或项目管理员或超级管理员。普通成员直接访问项目，不会看到文件夹。
+
+.我可以直接将资源与文件夹关联吗？
+否。资源必须与项目关联，而不是与文件夹关联。但是，组织管理员可以将资源与文件夹关联，以便文件夹或项目管理员可以将其链接到该文件夹中的相应项目。
+
+.我可以在组织层次结构中嵌套多深的文件夹和项目？
+您最多可以在组织的资源结构中创建七个级别的文件夹和项目。
+
+.哪些类型的资源可以与 NetApp Console 中的项目相关联？
+可与项目关联的资源包括：
+
+* 存储系统
+* Keystone订阅
+* 部分备份和恢复工作负载
+* 控制台代理
+
+
+
+
+== 角色和权限
+
+.组织管理员与文件夹或项目管理员有什么区别？
+组织管理员可以不受限制地访问整个组织中的所有项目和文件夹，并且是唯一可以创建 Console 代理的角色。文件夹或项目管理员只能管理分配给他们的特定文件夹和项目，无法创建 Console 代理。
+
+.谁可以在 NetApp Console 中创建 Console 代理？
+只有具有组织管理员角色的用户才能创建 Console 代理。文件夹或项目管理员无法创建 Console 代理。
+
+.我应该将什么角色分配给只需要监控存储运行状况和管理支持案例的用户？
+分配 *Operation support analyst* 角色，该角色提供对警报和监控工具的访问权限以及输入和管理支持案例的能力。
+
+.如果成员的访问权限是从文件夹继承的，我可以在项目级别更改该成员的角色吗？
+否。如果成员访问权限是从更高级别继承的，则无法在较低级别进行更改。要修改访问权限，您必须在最初分配成员权限的更高层次结构级别（文件夹或组织）更改其权限。
+
+
+
+== 管理成员和访问
+
+.在将用户添加到我的 NetApp Console 组织之前必须执行哪些操作？
+用户必须已注册 NetApp Console，然后您才能将其添加到您的组织、文件夹或项目中。此要求甚至适用于联合组成员的用户。
+
+.当我将其组添加到 Console 时，联合用户是否自动获得对资源的访问权限？
+不可以。即使为联合组分配了角色，单个用户也必须满足两个要求才能访问资源：
+
+. 用户必须已经注册 NetApp Console。
+. 必须在 Console 中显式为用户分配角色。
+
+
+NetApp 建议为这些用户分配最低访问角色，例如 Organization viewer。
+
+
+
+== 控制台代理
+
+.Console 代理创建后会发生什么，它可以用于其他项目吗？
+Console 代理最初绑定到创建它们的项目。创建后，管理员可以将代理添加到其他项目，或将其与 Agents 页面中的文件夹关联。
+
+
+
+== 相关信息
+
+* link:concept-identity-and-access-management.html["了解NetApp Console身份和访问管理"]
+* link:reference-iam-predefined-roles.html["了解NetApp Console访问角色"]
+* link:task-iam-get-started.html["开始在NetApp Console中使用身份和访问权限"]
+* link:task-iam-manage-folders-projects.html["将文件夹和项目添加到NetApp Console组织"]
+* link:task-iam-manage-members-permissions.html["将用户添加到NetApp Console组织"]
+

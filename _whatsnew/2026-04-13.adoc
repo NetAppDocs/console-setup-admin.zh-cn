@@ -1,0 +1,17 @@
+= Console 代理 4.6.0
+:allow-uri-read: 
+
+
+
+
+=== Console 代理 4.6.0
+
+4.6.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复以及以下新功能。
+
+.支持所需磁盘空间的配置检查
+您可以使用配置检查验证 Console 代理所需的磁盘空间是否可用。您可以从 Console 或 Agent 维护控制台执行配置检查。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["详细了解如何在 Console 代理上运行配置检查"^]
+
+.使用 ISO 升级 vCenter 部署的 Console 代理
+如果您在 vCenter 中使用 OVA 部署了 Console 代理，现在可以通过将 ISO 装载到 VM 并从 VM 维护控制台运行升级来将其升级到新版本。link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["了解如何升级 vCenter 部署的 Console 代理"^]

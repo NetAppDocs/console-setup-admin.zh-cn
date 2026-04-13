@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
-keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam 
 summary: '使用NetApp控制台的身份和访问管理 (IAM) 根据您的业务层次结构（例如按位置、部门或项目）来构建和控制资源访问。' 
 ---
 = 了解NetApp Console身份和访问管理
@@ -16,31 +16,31 @@ summary: '使用NetApp控制台的身份和访问管理 (IAM) 根据您的业务
 [role="lead"]
 使用NetApp控制台的身份和访问管理 (IAM) 来组织您的NetApp资源，并根据您的业务结构（按位置、部门或项目）控制访问权限。
 
-资源按层级排列：组织位于顶层，其次是文件夹（可以包含其他文件夹或项目），然后是项目，项目包含存储系统、工作负载和代理。
+您可以在层次结构中组织资源：组织位于顶部，然后是文件夹（可以包含其他文件夹或项目），然后是项目，项目包含存储系统、工作负载和代理。
 
 在组织、文件夹或项目级别分配访问角色，以便用户有权访问资源。
 
 
-NOTE: 您必须拥有_超级管理员_、_组织管理员_或_文件夹或项目管理员_角色才能在NetApp Console中管理 IAM。
+NOTE: 要管理 NetApp Console 中的 IAM，您必须具有 _Super admin_、_Organization admin_ 或 _Folder or project admin_ 角色。
 
 下图从基本层面说明了这一层次结构。
 
-image:diagram-iam-resource-hierarchy.png["资源管理组成部分的概念图"]]
+image:diagram-iam-resource-hierarchy.png["资源管理组成部分的概念图"]
 
 
 
 == 身份和访问管理组件
 
-在NetApp Console中，您可以使用三个主要组件来组织存储资源：组织组件、资源组件和用户访问组件。
+NetApp Console IAM 基于三种类型的组件：定义层次结构的组织组件、在该层次结构中分配的资源以及控制谁可以访问什么的成员和角色。
 
 
 
-=== 组织内的项目和文件夹
+=== NetApp Console 组织组件
 
-在您的 IAM 结构中，您使用三个组织组件：组织、项目和文件夹。您可以通过为用户分配以下任何级别的角色来授予他们访问权限。
+组织组件（组织、文件夹和项目）形成一个层次结构，用于确定资源的分组方式和访问权限的委派方式。
 
-组织:: _组织_是控制台 IAM 系统的顶层，通常代表您的公司。您的组织由文件夹、项目、成员、角色和资源组成。代理与组织内的特定项目相关联。
-项目:: 项目用于提供对存储资源的访问。必须先将资源分配给项目，其他人才能访问这些资源。您可以将多个资源分配给一个项目，也可以创建多个项目。然后，您可以为用户分配项目权限，使他们能够访问项目中的资源。
+组织:: _组织_是 Console IAM 系统的顶层，通常代表您的公司。您的组织由文件夹、项目、成员、角色和资源组成。资源与项目相关联，成员在组织、文件夹或项目级别被分配角色。
+项目:: 项目组存储资源。将资源分配给项目，并在项目级别授予用户访问权限。资源可以属于多个项目。具有项目访问权限的用户可以使用其资源。
 +
 --
 例如，您可以根据需要，将本地ONTAP系统与单个项目或组织中的所有项目关联起来。
@@ -48,10 +48,11 @@ image:diagram-iam-resource-hierarchy.png["资源管理组成部分的概念图"]
 link:task-iam-manage-folders-projects.html["了解如何向您的组织添加项目。"^]
 
 --
-文件夹:: 将相关项目分组到_文件夹_中，以便按位置、站点或业务部门进行组织。您无法直接将资源与文件夹关联，但将用户分配到文件夹级别的角色，即可使其访问该文件夹中的所有项目。
+文件夹:: 对_文件夹_中的相关项目进行分组，按位置、站点或业务部门对其进行组织。无法将资源直接关联到文件夹，但为用户分配文件夹级别的角色可使他们访问该文件夹中的所有项目。
 
 
-link:task-iam-manage-folders-projects.html["了解如何向您的组织添加文件夹。"]
+
+NOTE: 具有 Org admin 角色的用户可以向文件夹添加资源，以将资源与项目关联的任务委托给相应文件夹的 Folder 或 project admins。link:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何将资源与文件夹关联"].
 
 
 
@@ -59,28 +60,26 @@ link:task-iam-manage-folders-projects.html["了解如何向您的组织添加文
 
 _resource_ 是 NetApp Console 知道并可以分配给项目的实体。_Resources_ 包括存储系统、Keystone 订阅、某些 NetApp Backup and Recovery 工作负载以及 NetApp Console 代理。
 
-+ 必须先将资源与项目关联，其他人才能访问该资源。
-
-+
+将资源与项目关联，以便拥有项目访问权限的用户可以使用该资源。
 
 例如，您可以将Cloud Volumes ONTAP系统与一个项目或组织中的所有项目关联起来。资源的分配方式取决于贵组织的需求。
 
-+
-
 link:task-iam-manage-resources.html["了解如何将资源关联到项目。"]
 
-存储系统和Keystone订阅:: 存储系统是您在 NetApp Console 中管理的主要资源。NetApp Console 支持本地和云存储系统的管理。必须将存储系统添加到项目中，以便分配给项目的人员可以访问它。
-存储系统:: 存储系统会自动与添加它们的项目关联，但您可以从*资源*页面将其与其他项目或文件夹关联。您无法将 FSx for NetApp ONTAP 存储系统与项目或文件夹关联，但您可以在*系统*页面或从工作负载中查看它们。
+存储系统:: 存储系统是您在 NetApp Console 中管理的主要资源。NetApp Console 支持对本地和云存储系统的管理。将存储系统添加到项目，以便具有项目访问权限的用户可以访问它。
++
+--
+存储系统会自动与添加它们的项目关联，但您可以从*资源*页面将其与其他项目或文件夹关联。您无法将 FSx for NetApp ONTAP 存储系统与项目或文件夹关联，但您可以在*系统*页面或从工作负载中查看它们。
+
+--
 Keystone订阅:: Keystone订阅也是您可以与项目关联的资源，以便授予用户在NetApp Console中访问订阅的权限。
-备份和恢复工作负载（Oracle 和 Microsoft SQL Server）:: 一些 Backup and Recovery 工作负载也被视为资源。您可以分配用户权限来访问 Backup and
+备份和恢复工作负载（Oracle 和 Microsoft SQL Server）:: 某些备份和恢复工作负载也被视为资源。将备份和恢复工作负载分配给项目，以便授予用户访问权限。
 
 
 [[associate-agents]]
-控制台代理:: 组织管理员创建控制台代理来管理存储系统并启用NetApp数据服务。代理最初与创建它们的项目关联，但管理员可以从“代理”页面将它们添加到其他项目或文件夹。
+控制台代理:: 组织管理员创建 Console 代理来管理存储系统并启用 NetApp 数据服务。代理最初被绑定到创建它们的项目，但管理员可以从 *Agents* 页面将其添加到其他项目。
 +
 --
-将代理与项目关联起来，可以管理该项目中的资源；而将代理与文件夹关联起来，可以让文件夹或项目管理员决定哪些项目应该使用该代理。代理人必须与特定项目关联才能提供管理能力。
-
 link:task-iam-associate-agents.html["了解如何将代理商与项目关联起来。"]
 
 --
@@ -90,10 +89,12 @@ link:task-iam-associate-agents.html["了解如何将代理商与项目关联起�
 
 === 成员及角色
 
+成员是组织中的用户和服务帐户。角色定义他们可以执行的操作以及层次结构的哪个级别（组织、文件夹或项目）。
+
 成员:: 您的组织的成员是用户帐户或服务帐户。应用程序通常使用服务帐户来完成指定的任务，而无需人工干预。
 +
 --
-成员注册NetApp Console后，您需要将他们添加到您的组织中。添加完成后，您可以为他们分配角色，以便授予他们访问资源的权限。您可以手动从控制台添加服务帐户，也可以通过NetApp ConsoleIAM API 自动创建和管理服务帐户。
+在成员注册 NetApp Console 后，将其添加到您的组织。添加成员后，分配角色以提供对资源的访问权限。您可以从控制台内手动添加服务帐户，或通过 NetApp Console IAM API 自动创建和管理它们。
 
 link:task-iam-manage-members-permissions.html#add-members["了解如何向您的组织添加成员。"^]
 
@@ -101,11 +102,11 @@ link:task-iam-manage-members-permissions.html#add-members["了解如何向您的
 访问角色:: 控制台提供您可以分配给组织成员的访问角色。
 +
 --
-将成员与角色关联时，您可以为整个组织、特定文件夹或特定项目授予该角色。您选择的角色赋予成员对层次结构中选定部分的资源的权限。
+将成员与角色关联时，可以为整个组织、特定文件夹或特定项目授予该角色。您选择的角色授予成员对层次结构选定部分中的资源的权限。
 
-NetApp Console提供细粒度的角色控制，遵循“最小权限”原则，这意味着访问角色旨在仅向用户授予其所需的权限。
+NetApp Console 提供符合"最小权限"原则的粒度角色，这意味着访问角色旨在仅为用户提供他们需要的访问权限。
 
-这意味着随着用户职责的增加，他们可能会被分配多个角色。
+随着职责的扩展，用户可能会扮演多个角色。
 
 link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
@@ -115,6 +116,8 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 == IAM 策略示例
+
+正确的 IAM 结构取决于组织的规模和团队的组织方式。以下示例演示了不同的组织如何使用 IAM 层次结构有效地管理访问权限。
 
 
 

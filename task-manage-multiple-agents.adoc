@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
-summary: 如果您使用多个控制台代理，则可以直接从控制台在这些代理之间切换。 
+summary: '如果您的组织使用多个 Console 代理，则可以直接从"系统"页面在这些 Console 代理之间切换以查看关联的系统。' 
 ---
-= 使用多个控制台代理
+= 查看与不同 Console 代理关联的系统
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,19 @@ summary: 如果您使用多个控制台代理，则可以直接从控制台在�
 
 
 [role="lead"]
-如果您使用多个控制台代理，则可以直接从控制台在这些控制台代理之间切换以查看相关系统。
+如果您的组织使用多个 Console 代理，您可以在它们之间切换以查看与特定代理关联的系统。
+
+对于具有 Org admin 角色的用户，这在实施资源管理策略时非常有用。您可以在发现存储系统时切换到其他代理，以自动将这些系统与位于同一环境中的代理关联。
+
+对于存储管理员，请在代理之间切换以管理与每个代理关联的系统。
+
+例如，在多云环境中，您的组织可能在 AWS 中有一个代理，在 Google Cloud 中有另一个代理。在这些代理之间切换，以管理各自云环境中的 Cloud Volumes ONTAP 系统。
 
 
-
-== 在控制台代理之间切换
-
-如果您有多个控制台代理，您可以在它们之间切换以查看与特定代理关联的系统。
-
-例如，在多云环境中，您可能在 AWS 中有一个代理，在 Google Cloud 中有一个代理。在这些代理之间切换以管理各自云环境中的Cloud Volumes ONTAP系统。
-
-
-NOTE: 从代理的本地 UI 查看NetApp Console时，此选项不可用
+NOTE: 从代理的本地 UI 查看 NetApp Console 时，此选项不可用。
 
 .步骤
+. 选择 *Storage* > *Management* > *Systems*。
 . 选择控制台代理图标 (image:icon-agent.png["代理图标"] ) 查看可用代理的列表。
 +
 image:screenshot-connector-switch.png["屏幕截图显示了标题栏中的代理图标和切换操作。"]

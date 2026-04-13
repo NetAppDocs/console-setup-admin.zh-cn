@@ -21,6 +21,8 @@ summary: 您只能使用已验证的域进行联合。如果您想与不同于�
 
 验证您的域名涉及向您的域名的 DNS 设置添加 TXT 记录。此记录用于证明您拥有该域并允许NetApp Console信任该域进行联合。您可能需要与您的 IT 或网络管理员协调来完成此步骤。
 
+例如，如果使用 Microsoft Entra ID，则可以按照 Microsoft 文档中的步骤进行操作link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["使用 Microsoft Entra ID 添加域"]。
+
 .步骤
 . 选择*管理>身份和访问*。
 . 选择“*Federation*”以查看“*Federations*”页面。

@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: concept-agent-install-options.html 
+keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
+summary: 使用 NetApp Console、云提供商的市场或通过在 Linux 主机上手动安装软件来部署 Console 代理。您的部署方法决定了您对主机的控制以及您可以多快开始 
+---
+= 选择 Console 代理部署方法
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Console、云提供商的市场或通过在 Linux 主机上手动安装软件来部署 Console 代理。您的部署方法决定了您对主机的控制以及启动的速度。
+
+对于云部署，您可以在 Amazon Web Services (AWS)、Microsoft Azure 或 Google Cloud 中部署代理。
+
+
+
+== 从 NetApp Console 部署
+
+NetApp 建议在使用标准模式时从 NetApp Console 进行部署。NetApp Console 将引导您完成网络和权限设置，然后自动在您的云提供商中启动 VM 或实例。Console 将引导您完成网络和权限设置，然后自动在您的云提供商中启动 VM 或实例。
+
+在以下情况下选择此方法：
+
+* 您正在具有出站互联网访问的标准云环境中进行部署。
+* 您希望以最少的手动设置获得运行代理的最快路径。
+
+
+[cols="47,47"]
+|===
+| 优势 | 劣势 
+
+
+ a| 
+* 引导式设置 — Console 在单个工作流中处理 VM 创建、软件安装和初始注册
+* 自动应用正确的 VM 映像和配置
+* 任何云部署方法中最少的手动步骤
+
+ a| 
+* 不适用于本地、受限模式或气隙环境
+
+
+|===
+link:task-install-agent-aws-console.html["从 NetApp Console 在 AWS 部署 Console agent"] link:task-install-agent-azure-console.html["从 NetApp Console 在 Microsoft Azure 部署 Console 代理"] link:task-install-agent-google-console-gcloud.html["从 NetApp Console 在 Google Cloud 部署 Console 代理"]
+
+
+
+== 从云提供商市场进行部署
+
+从 AWS Marketplace 或 Azure Marketplace 进行部署将直接从市场而不是从 NetApp Console 启动代理安装。
+
+
+NOTE: 使用 Google Cloud 工具（gcloud CLI 或 Google Cloud 控制台），而不是传统的市场列表，可在 Google Cloud 中提供市场等效选项。
+
+在以下情况下选择此方法：
+
+* 您的组织要求通过市场采购所有云软件。
+* 您更喜欢从云提供商的界面而不是 NetApp Console 启动部署。
+
+
+[cols="47,47"]
+|===
+| 优势 | 劣势 
+
+
+ a| 
+* 为已在云提供商控制台中工作的团队提供熟悉的部署界面
+
+ a| 
+* 部署是在 NetApp Console 外部启动的，因此引导工作流程不可用
+
+
+|===
+link:task-install-agent-aws-marketplace.html["从市场在 AWS 中部署 Console 代理"] link:task-install-agent-azure-marketplace.html["从市场在 Azure 中部署 Console 代理"] link:task-install-agent-google-gcloud.html["使用 Google Cloud 工具在 Google Cloud 中部署 Console 代理"]
+
+
+
+== 在云中的 Linux 主机上手动安装
+
+手动安装可让您直接在您在 AWS、Azure、Google Cloud 或本地提供和管理的 Linux 主机上安装 Console 代理软件。
+
+在以下情况下选择此方法：
+
+* 您需要在没有出站 Internet 访问的受限模式或专用模式环境中进行部署。
+* 您的组织要求将所有软件安装在预先批准的内部管理主机上。
+
+
+[cols="47,47"]
+|===
+| 优势 | 劣势 
+
+
+ a| 
+* 支持出站 Internet 访问受限的环境（受限模式或私有模式）
+* 当 Console 代理能够访问 Internet 时，将自动处理升级
+
+ a| 
+* 任何部署方法的大多数步骤。您必须准备主机，安装 Podman 或 Docker，配置网络，安装软件，并手动提供权限
+* * 部署在 NetApp Console 外部启动，因此无法使用引导工作流程
+
+
+|===
+link:task-install-agent-aws-manual.html["在 AWS 中手动安装 Console 代理"] link:task-install-agent-azure-manual.html["在 Azure 中手动安装 Console 代理"] link:task-install-agent-google-manual.html["在 Google Cloud 中手动安装 Console 代理"]
+
+
+
+== 使用 VCenter (OVA) 手动安装本地
+
+如果使用 VMware VCenter，则可以通过导入 OVA（Open Virtual Appliance）文件来部署 Console 代理。OVA 是使用 vSphere 客户端部署的预配置虚拟机映像，无需安装 Linux 或配置容器运行时。
+
+在以下情况下选择此方法：
+
+* 您正在 VMware 环境中部署本地。
+* 您希望进行更简单的本地安装，需要更少的维护和 Linux 设置。
+
+
+
+NOTE: 无法从本地 Console 代理管理 Google Cloud 资源。要管理 Google Cloud 资源，请在 Google Cloud 中安装代理。
+
+[cols="47,47"]
+|===
+| 优势 | 劣势 
+
+
+ a| 
+* 更简单的本地安装，无需 Linux 或容器运行时设置
+* 仅限本地；不适用于云部署
+* 包括用于代理维护任务的菜单驱动型维护控制台
+* VMware 管理员熟悉的部署工作流程
+* * 预配置的 VM 映像有助于防止错误并使维护更容易
+
+ a| 
+* 需要 VCenter；无法直接安装在裸 ESXi 主机上
+
+
+|===
+link:task-install-agent-on-prem-ova.html["使用 VCenter 部署本地"]
+
+
+
+== 手动安装本地（不使用 VCenter）
+
+您可以在任何本地 Linux 主机上手动安装 Console 代理。您必须设置 Linux 主机和容器运行时（Docker 或 Podman），然后安装 Console 代理。
+
+在以下情况下选择此方法：
+
+* 您正在本地部署，但没有 VMware VCenter 环境。
+* 您熟悉 Linux 管理并希望自己管理底层主机。
+* 您希望控制何时升级 Console 代理。
+
+
+[cols="47,47"]
+|===
+| 优势 | 劣势 
+
+
+ a| 
+* 适用于任何与 Linux 兼容的本地硬件或 VM 平台—无需 VMware
+* 支持私有模式（气隙）部署，无出站互联网访问
+
+ a| 
+* 您需要知道如何使用 Linux 并自己设置 Docker 或 Podman
+* 您有责任在发布新版本时手动将升级应用到 Console 代理
+
+
+|===
+link:task-install-agent-on-prem.html["手动安装本地部署"]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: 当 Console 代理具有出站连接时，它会自动升级。如果您的 Console 代理没有出站连接，则可以手动升级它（例如使用专用模式）。 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
+summary: 当 Console 代理具有出站连接时，它会自动升级。如果您的 Console 代理没有出站连接，您可以手动升级它。如果您的代理部署在 vCenter 中，则可以使用 ISO 对其进行升级。 
 ---
-= 管理控制台代理升级
+= 升级控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 当 Console 代理具有出站连接时，它会自动升级。如果�
 
 
 [role="lead"]
-当 Console 代理具有出站连接时，它会自动升级。如果您的 Console 代理没有出站连接，则可以手动升级它（例如使用专用模式）。
+控制台代理具有出站连接时会自动升级。如果您的控制台代理没有出站连接，您可以手动升级它。如果您的代理是在 vCenter 中使用 OVA 部署的，则可以通过将 ISO 挂载到虚拟机将其升级到新版本。
 
 
 
@@ -44,4 +44,47 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 其中 <version> 是您下载的代理的版本。
 
 . 升级完成后，您可以前往*管理>支持>代理*来验证代理的版本。
+
+
+
+
+== 使用 ISO 升级 vCenter 部署的 Console 代理
+
+如果您的 Console 代理是在 vCenter 中使用 OVA 部署的，则可以通过将 ISO 挂载到虚拟机并从虚拟机维护控制台运行升级将其升级到新版本。
+
+在开始之前，请拍摄虚拟机的快照，以防需要回滚。
+
+.步骤
+. 从 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]下载 Console 代理 ISO。
+. 将 ISO 上传到可从 vCenter 访问的数据存储区。
+. 在 vSphere 客户端中，登录到您的 vCenter 并选择托管 Console 代理的 VM 实例。
+. 将 ISO 装载到 VM：
++
+.. 右键单击 VM 并选择 *Edit Settings*。
+.. 选择 CD/DVD 驱动器，然后选择 *Datastore ISO File*。
+.. 浏览到并选择 Console 代理 ISO。
+.. 请确保已启用 *Connect*。
+.. 选择 *OK*。
+
+
+. 选择虚拟机后，选择 *启动 Web 控制台*。
+. 使用部署 OVA 时指定的用户名 `maint`和维护密码登录到维护控制台。
+. 输入 `1` 以打开 *System Configuration* 菜单。
+. 输入 `3`以选择 *Upgrade* 并按照屏幕上的提示进行操作。
++
+升级将安装更新的 OS、Docker 运行时和 Console 代理服务。如果内核已更新，VM 将自动重新启动。
+
+. 升级完成后，验证 Console 代理是否正确运行：
++
+.. 在 vSphere 客户端中，确认虚拟机已开机且 Web 控制台可访问。
+.. 在 NetApp Console 中，转到 *Administration > Support > Agents*，并确认代理版本反映了新版本。
+
+
+. 从虚拟机中卸载 ISO：
++
+.. 在 vSphere 客户端中，右键单击虚拟机并选择*编辑设置*。
+.. 选择 CD/DVD 驱动器，然后选择 *Client Device* 或断开数据存储 ISO。
+.. 选择 *OK*。
+
+
 

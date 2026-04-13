@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
-summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理、云提供商凭据等。 
+summary: 了解 NetApp Console 管理的新功能。 
 ---
 = 什么是新的
 :hardbreaks:
@@ -18,6 +18,24 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 
 
+== 2026 年 4 月 13 日
+
+
+
+=== Console 代理 4.6.0
+
+4.6.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复以及以下新功能。
+
+.支持所需磁盘空间的配置检查
+您可以使用配置检查验证 Console 代理所需的磁盘空间是否可用。您可以从 Console 或 Agent 维护控制台执行配置检查。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["详细了解如何在 Console 代理上运行配置检查"^]
+
+.使用 ISO 升级 vCenter 部署的 Console 代理
+如果您在 vCenter 中使用 OVA 部署了 Console 代理，现在可以通过将 ISO 装载到 VM 并从 VM 维护控制台运行升级来将其升级到新版本。link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["了解如何升级 vCenter 部署的 Console 代理"^]
+
+
+
 == 2026 年 3 月 10 日
 
 
@@ -28,14 +46,14 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 此版本的 Console 代理包括安全性改进和错误修复以及以下新功能。
 
-.支持对所需端口的配置检查
-您可以使用配置检查来验证 Console 代理所需的端口是否已打开。您可以从 Console 或 Agent 维护控制台执行配置检查。link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["详细了解如何在 Console 代理上运行配置检查。"]
+.支持所需端口的配置检查
+您可以使用配置检查来验证 Console 代理所需的端口是否已打开。您可以从 Console 或 Agent 维护控制台执行配置检查。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["详细了解如何在 Console 代理上运行配置检查。"]
 
 
 
 === Console 管理
 
-您可以将 Keystone 角色分配给合作伙伴用户，以允许这些用户管理合作伙伴组织中的 Keystone 资源。link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["详细了解如何将 Keystone 角色分配给合作伙伴用户。"]
+您可以将 Keystone 角色分配给合作伙伴用户，以允许这些用户管理合作伙伴组织中的 Keystone 资源。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["详细了解如何将 Keystone 角色分配给合作伙伴用户。"]
 
 
 

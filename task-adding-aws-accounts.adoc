@@ -250,7 +250,7 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 
 
 .开始之前
-您需要先创建控制台代理，然后才能配置订阅。link:concept-agents.html#agent-installation["了解如何创建控制台代理"] 。
+您需要先创建 Console 代理，然后才能配置订阅。link:concept-agent-install-options.html["了解如何创建控制台代理"].
 
 .步骤
 . 选择“*管理 > 凭证*”。

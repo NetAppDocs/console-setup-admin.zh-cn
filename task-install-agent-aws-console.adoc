@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
-keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
-summary: 您可以直接从NetApp Console在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。 
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console 
+summary: 您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。在从 Console 在 AWS 中部署 Console 代理之前，您需要设置网络并准备 AWS 权限。 
 ---
-= 通过NetApp Console在 AWS 中创建控制台代理
+= 从 NetApp Console 在 AWS 中部署 Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,12 @@ summary: 您可以直接从NetApp Console在 AWS 中创建控制台代理。在�
 
 
 [role="lead"]
-您可以直接从NetApp Console在 AWS 中创建控制台代理。在从控制台创建 AWS 中的控制台代理之前，您需要设置网络并准备 AWS 权限。
+您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。在从 Console 在 AWS 中部署 Console 代理之前，您需要设置网络并准备 AWS 权限。
+
+在 AWS 中部署代理将在您选择的 VPC 中启动运行 Linux 和 Console 代理软件的 EC2 实例。
 
 .开始之前
-* 你应该有一个link:concept-agents.html["了解控制台代理"]。
+* link:concept-agents.html["了解控制台代理"].
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -341,7 +343,9 @@ link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
 +
 []
 ====
-如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
+
 
 ====
 . 选择“*添加*”。

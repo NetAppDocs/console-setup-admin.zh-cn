@@ -274,10 +274,9 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 为 Azure 帐户提供所需权限后，您可以将该帐户的凭据添加到控制台。完成此步骤后，您可以使用不同的 Azure 凭据启动Cloud Volumes ONTAP 。
 
 .开始之前
-如果您刚刚在云提供商中创建了这些凭据，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。
+* 如果您刚刚在云提供商中创建了这些凭据，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。
+* 您需要先创建 Console 代理，然后才能配置订阅。link:concept-agent-install-options.html["了解如何创建控制台代理"].
 
-.开始之前
-您需要先创建控制台代理，然后才能更改控制台设置。link:concept-agents.html#agent-installation["了解如何创建控制台代理"] 。
 
 .步骤
 . 选择“*管理 > 凭证*”。

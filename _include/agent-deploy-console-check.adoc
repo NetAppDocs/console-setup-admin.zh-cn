@@ -10,7 +10,9 @@
 +
 []
 ====
-如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
+
 
 ====
 

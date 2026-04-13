@@ -4,7 +4,7 @@ permalink: task-install-agent-google-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: 要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。 
 ---
-= 从 Google Cloud 创建控制台代理
+= 从 Google Cloud 部署 Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,12 @@ summary: 要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您�
 
 
 [role="lead"]
-要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。
+要使用 Google Cloud 在 Google Cloud 中部署 Console 代理，需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后部署 Console 代理。
+
+在 Google Cloud 中部署代理会启动运行 Linux 的虚拟机实例，并在您选择的 VPC 中启动 Console 代理软件。
 
 .开始之前
-* 你应该有一个link:concept-agents.html["了解控制台代理"]。
+* 您应拥有 link:concept-agents.html["了解控制台代理"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -451,19 +453,8 @@ $ gcloud components update
 +
 [source, bash]
 ----
-gcloud compute instances create <instance-name>
-  --machine-type=n2-standard-8
-  --image-project=netapp-cloudmanager
-  --image-family=cloudmanager
-  --scopes=cloud-platform
-  --project=<project>
-  --service-account=<service-account>
-  --zone=<zone>
-  --no-address
-  --tags <network-tag>
-  --network <network-path>
-  --subnet <subnet-path>
-  --boot-disk-kms-key <kms-key-path>
+
+gcloud compute instances create <instance-name> --machine-type=n2-standard-8 --image-project=<image-project-name> --image-family=<image-family-name> --scopes=cloud-platform --project=<project-name> --service-account="<service-account-name>" --zone=<zone-name> --no-address --tags "<tags>" --network "<network-path>" --subnet "<subnet-path>"
 ----
 +
 实例名称:: VM 实例所需的实例名称。

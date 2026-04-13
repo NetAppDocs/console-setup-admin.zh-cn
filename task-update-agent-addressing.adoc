@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-update-agent-addressing.html 
+keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing 
+summary: 当网络配置发生变化时，您可能需要更新云提供商中的代理 IP 地址以及 Console 中注册的 URI。 
+---
+= 更新代理地址和 URI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当网络配置发生变化时，您可能需要更新云提供商中的代理 IP 地址以及 Console 中注册的 URI。
+
+
+
+== 更改代理的 IP 地址
+
+如果需要，您可以更改云提供商分配的代理实例的内部和公共 IP 地址。
+
+.步骤
+. 按照云提供商的说明更改代理实例的本地 IP 地址或公共 IP 地址（或两者）。
+. 重新启动代理实例以向控制台注册新的公共 IP 地址。
+. 如果您更改了私有 IP 地址，请更新Cloud Volumes ONTAP配置文件的备份位置，以便将备份发送到代理上的新私有 IP 地址。
++
+更新每个Cloud Volumes ONTAP系统的备份位置。
+
++
+.. 从Cloud Volumes ONTAP CLI，将权限级别设置为高级：
+
+
+
+
+[listing]
+----
+set -privilege advanced
+----
+. 运行以下命令显示当前备份目标：
+
+
+[listing]
+----
+system configuration backup settings show
+----
+. 运行以下命令来更新备份目标的 IP 地址：
+
+
+[listing]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+== 编辑代理的 URI
+
+如果您的网络要求发生变化，则更新 Console 代理的 URI。这可确保对存储基础架构进行不间断、安全且合规的管理。
+
+.步骤
+. 选择“*管理 > 代理*”。
+. 在*概览*页面上，选择控制台代理的操作菜单，然后选择*编辑代理*。
++
+控制台代理必须处于活动状态才能对其进行编辑。
+
+. 展开*代理 URI* 栏以查看代理 URI。
+. 添加和删除 URI，然后选择*应用*。
+

@@ -122,17 +122,17 @@ podman ps -a
 
 
 
-== 验证 Console 代理的网络和端口访问权限
+== 验证 Console 代理是否满足要求
 
-确保控制台代理具有所需的网络访问权限。link:reference-networking-saas-console.html["了解有关所需网络接入点的更多信息。"]
+Console 代理需要访问某些网络端点，需要打开多个端口，并且必须满足硬件要求。您可以从 Console 或使用代理维护控制台来验证您的 Console 代理是否满足这些要求。
 
+link:reference-networking-saas-console.html["了解有关所需网络接入点的更多信息。"] 链接：
 
+在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
 
-=== 对控制台代理运行配置检查
+link:reference-networking-saas-console.html["了解有关所需网络接入点的更多信息。"] 链接：
 
-从控制台或代理维护控制台对控制台代理运行配置检查，以确保它们可以访问所需的端点，并且所需的端口已打开。
-
-您还可以使用代理维护控制台运行配置检查。link:reference-agent-maint-console-config-checker.html["了解更多关于使用 config-checker validate 命令的信息。"]
+您还可以使用代理维护控制台运行验证检查。link:reference-agent-maint-console-config-checker.html["了解更多关于使用 config-checker validate 命令的信息。"]
 
 
 NOTE: 您只能验证状态为“已连接”的代理。

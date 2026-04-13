@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-federation-ping.html 
-keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience/Entity ID, Reply URL, organization admin 
+keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience ID, Entity ID, Reply URL, organization admin 
 summary: '与您的 PingFederate IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
 ---
 = 使用 PingFederate 联合NetApp Console

@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-config-checker.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: 您可以使用控制台代理维护控制台来配置控制台代理以使用透明代理服务器。 
 ---
-= 使用维护控制台进行代理验证
+= 使用 NetApp Console 中的维护控制台进行控制台代理验证
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -39,9 +39,19 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 `--services <comma-separated list of services to validate>` - *必需的* - 
 
 [role="quick-margin-para"]
-选择一个或多个要验证的服务。有效的服务名称为：*`PLATFORM`，它验证到所需 Console 端点的网络连接以及 Console 代理所需的端口是否已打开。
+选择一个或多个要验证的服务。有效的服务名称是：
 
-`--validationTypes <comma-separated list validation types to run>`--*必填*-- 选择要运行的一种或多种验证类型。有效的验证类型包括：* `NETWORK`验证与所需控制台端点的网络连接。
+*`PLATFORM` 它验证到所需 Console 端点的网络连接，以及 Console 代理所需的端口是否已打开。
+
+`--validationTypes <comma-separated list validation types to run>` --*必填*-- 从一个或多个要运行的验证类型中进行选择。有效的验证类型为：
+
+* `NETWORK` 验证到所需 Console 端点的网络连接。
+* `HARDWARE` 验证代理主机是否满足 Console 代理的最低硬件要求。
++
+
+NOTE: 在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
+
+
 
 `--proxy <url>` - *选修的* - 
 
@@ -57,20 +67,22 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 === 配置检查器验证示例
 
-.基本验证：
+以下示例包括验证网络连接、所需端口和硬件要求，以及使用代理服务器和自定义证书的不同组合。
+
+.验证网络连接和硬件要求：
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE
 ----
 .使用代理服务器作为代理时的验证：
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --proxy http://proxy.company.com:8080
 ----
 .使用证书验证代理：
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
 

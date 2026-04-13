@@ -4,7 +4,7 @@ permalink: task-install-agent-google-console-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: 要从NetApp Consoel 或使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。 
 ---
-= 通过NetApp Console在 Google Cloud 中创建控制台代理
+= 从 NetApp Console 在 Google Cloud 中部署 Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,9 @@ summary: 要从NetApp Consoel 或使用 Google Cloud 在 Google Cloud 中创建�
 
 
 [role="lead"]
-您可以从控制台在 Google Cloud 中创建控制台代理。您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。
+您可以从 Console 在 Google Cloud 中部署 Console 代理。您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后部署 Console 代理。
+
+在 Google Cloud 中部署代理会启动运行 Linux 的虚拟机实例，并在您选择的 VPC 中启动 Console 代理软件。
 
 .开始之前
 * 你应该有一个link:concept-agents.html["了解控制台代理"]。
@@ -441,7 +443,9 @@ link:reference-ports-gcp.html["Google Cloud 中的防火墙规则"]
 +
 []
 ====
-如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
+
 
 ====
 . 选择“*添加*”。

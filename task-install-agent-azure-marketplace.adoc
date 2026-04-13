@@ -16,6 +16,11 @@ summary: 要从 Azure 市场创建控制台代理，您需要设置网络、准�
 [role="lead"]
 您可以直接从 Azure 市场在 Azure 中创建控制台代理。要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。
 
+在 Azure 中部署代理将启动运行 Linux 的虚拟机，并在您选择的 VNet 中启动 Console 代理软件。
+
+
+NOTE: 在与其管理的 Cloud Volumes ONTAP 系统相同的 Azure 区域或在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]中部署 Console 代理。这可确保在 Cloud Volumes ONTAP 及其关联的存储帐户之间使用 Azure 专用链接连接。
+
 .开始之前
 * 你应该有一个link:concept-agents.html["了解控制台代理"]。
 * 审查link:reference-limitations.html["控制台代理限制"]。

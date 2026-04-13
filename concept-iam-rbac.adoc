@@ -28,7 +28,12 @@ NetApp在设计控制台角色时遵循最小权限原则，因此每个角色�
 
 == 控制台组织成员的类型
 
-NetApp Console组织中有三种类型的成员：* _用户帐户_：登录到NetApp Console以管理资源的个人用户。用户必须先注册NetApp Console，然后才能被添加到组织中。* _服务帐户_：应用程序或服务通过 API 与NetApp Console交互时使用的非人类帐户。您可以将服务帐户直接添加到您的控制台组织中。* _联合组_：从您的身份提供商 (IdP) 同步的组，允许您集中管理多个用户的访问权限。联合组中的每个用户都必须先注册NetApp Console，并被添加到您的组织中，且拥有相应的访问角色，然后才能访问授予该组的资源。
+NetApp Console 组织中有三种类型的成员：
+
+* _用户帐户_：登录 NetApp Console 以管理资源的个人用户。用户必须先注册 NetApp Console，然后才能添加到组织中。
+* _服务帐户_：应用程序或服务用于通过 API 与 NetApp Console 交互的非人工帐户。您可以将服务帐户直接添加到您的 Console 组织。
+* _联合组_：从身份提供程序 (IdP) 同步的组，允许您共同管理多个用户的访问权限。联合组中的每个用户必须已注册 NetApp Console，并已通过访问角色添加到您的组织，然后才能访问授予该组的资源。
+
 
 link:task-iam-manage-members-permissions.html#add-members["了解如何向您的组织添加成员。"]
 
