@@ -19,7 +19,7 @@ summary: 要在您自己的 Linux 主机上手动安装控制台代理，您需�
 在 Google Cloud 中部署代理会启动运行 Linux 的虚拟机实例，并在您选择的 VPC 中启动 Console 代理软件。
 
 .开始之前
-* link:concept-agents.html["了解控制台代理"].
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["了解何时在 Google Cloud 中手动部署"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 

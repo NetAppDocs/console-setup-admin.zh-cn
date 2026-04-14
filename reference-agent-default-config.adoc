@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
-keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, ubuntu, agent, agent installation folder, agent configuration 
 summary: 了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联网）的控制台代理默认配置，以及本地环境受限部署（不可访问互联网）的控制台代理默认配置。 
 ---
 = NetApp Console 中的 Console 代理默认配置

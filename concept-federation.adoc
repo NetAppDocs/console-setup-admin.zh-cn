@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-federation.html 
-keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, NetApp Console 
 summary: 身份联合支持通过NetApp Console进行单点登录，以便用户可以使用来自您公司身份的凭据登录。首先，查看设置过程。 
 ---
 = 使用NetApp Console的身份联合实现单点登录

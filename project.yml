@@ -66,6 +66,42 @@ sidebar:
         url: "/task-install-private-mode.html"
       - title: 接下来可以做什么
         url: "/reference-whats-next-private-mode.html"
+    - title: 部署控制台代理
+      entries:
+      - title: 选择 Console 代理部署方法
+        url: "/concept-agent-install-options.html"
+      - title: AWS
+        entries:
+        - title: 通过NetApp Console在 AWS 中创建控制台代理
+          url: "/task-install-agent-aws-console.html"
+        - title: 从 AWS 市场在 AWS 中创建 Console 代理
+          url: "/task-install-agent-aws-marketplace.html"
+        - title: 在 AWS 中手动安装 Console 代理
+          url: "/task-install-agent-aws-manual.html"
+      - title: Azure
+        entries:
+        - title: 从NetApp Console在 Azure 中创建控制台代理
+          url: "/task-install-agent-azure-console.html"
+        - title: 从 Azure 市场在 Azure 中创建 Console 代理
+          url: "/task-install-agent-azure-marketplace.html"
+        - title: 在 Azure 中手动安装 Console 代理
+          url: "/task-install-agent-azure-manual.html"
+      - title: Google Cloud
+        entries:
+        - title: 通过NetApp Console在 Google Cloud 中创建控制台代理
+          url: "/task-install-agent-google-console-gcloud.html"
+        - title: 从 Google Cloud 在 Google Cloud 中创建 Console 代理
+          url: "/task-install-agent-google-gcloud.html"
+        - title: 在 Google Cloud 中手动安装 Console 代理
+          url: "/task-install-agent-google-manual.html"
+      - title: 在本地安装代理
+        entries:
+        - title: 在本地手动安装控制台代理
+          url: "/task-install-agent-on-prem.html"
+        - title: 在 VCenter 中安装本地 Console 代理
+          url: "/task-install-agent-on-prem-ova.html"
+        - title: 本地控制台代理的端口
+          url: "/reference-ports-on-prem.html"
   - title: 使用NetApp Console
     entries:
     - title: 登录NetApp Console
@@ -88,48 +124,6 @@ sidebar:
       entries:
       - title: 了解控制台代理
         url: "/concept-agents.html"
-      - title: 部署控制台代理
-        entries:
-        - title: 选择 Console 代理部署方法
-          url: "/concept-agent-install-options.html"
-        - title: AWS
-          entries:
-          - title: 适用于 AWS 的 Console 代理安装选项
-            url: "/concept-install-aws.html"
-          - title: 通过NetApp Console在 AWS 中创建控制台代理
-            url: "/task-install-agent-aws-console.html"
-          - title: 从 AWS 市场在 AWS 中创建 Console 代理
-            url: "/task-install-agent-aws-marketplace.html"
-          - title: 在 AWS 中手动安装 Console 代理
-            url: "/task-install-agent-aws-manual.html"
-        - title: Azure
-          entries:
-          - title: Azure 的 Console 代理安装选项
-            url: "/concept-install-azure.html"
-          - title: 从NetApp Console在 Azure 中创建控制台代理
-            url: "/task-install-agent-azure-console.html"
-          - title: 从 Azure 市场在 Azure 中创建 Console 代理
-            url: "/task-install-agent-azure-marketplace.html"
-          - title: 在 Azure 中手动安装 Console 代理
-            url: "/task-install-agent-azure-manual.html"
-        - title: Google Cloud
-          entries:
-          - title: 适用于 Google Cloud 的 Console 代理安装选项
-            url: "/concept-install-google.html"
-          - title: 通过NetApp Console在 Google Cloud 中创建控制台代理
-            url: "/task-install-agent-google-console-gcloud.html"
-          - title: 从 Google Cloud 在 Google Cloud 中创建 Console 代理
-            url: "/task-install-agent-google-gcloud.html"
-          - title: 在 Google Cloud 中手动安装 Console 代理
-            url: "/task-install-agent-google-manual.html"
-        - title: 在本地安装代理
-          entries:
-          - title: 在本地手动安装控制台代理
-            url: "/task-install-agent-on-prem.html"
-          - title: 在 VCenter 中安装本地 Console 代理
-            url: "/task-install-agent-on-prem-ova.html"
-          - title: 本地控制台代理的端口
-            url: "/reference-ports-on-prem.html"
       - title: 维护控制台代理
         entries:
         - title: 维护手动安装的 Console 代理

@@ -22,7 +22,7 @@ summary: 要从NetApp Console在 Azure 中创建控制台代理，您需要设�
 NOTE: 在与其管理的 Cloud Volumes ONTAP 系统相同的 Azure 区域或在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]中部署 Console 代理。这可确保在 Cloud Volumes ONTAP 及其关联的存储帐户之间使用 Azure 专用链接连接。
 
 .开始之前
-* 你应该有一个link:concept-agents.html["了解控制台代理"]。
+* link:concept-agent-install-options.html#agent-console-deploy["了解何时从 Console 进行部署"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 

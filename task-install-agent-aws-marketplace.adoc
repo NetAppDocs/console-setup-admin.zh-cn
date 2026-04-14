@@ -19,7 +19,7 @@ summary: 要从 AWS Marketplace 创建控制台代理，您需要设置网络、
 在 AWS 中部署代理将在您选择的 VPC 中启动运行 Linux 和 Console 代理软件的 EC2 实例。
 
 .开始之前
-* 你应该有一个link:concept-agents.html["了解控制台代理"]。
+* link:concept-agent-install-options.html#agent-marketplace-deploy["了解何时从 AWS Marketplace 进行部署"]。
 * 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
 
 
