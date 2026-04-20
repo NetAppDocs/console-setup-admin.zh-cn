@@ -62,6 +62,51 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 * 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
 
 
+
+
+ a| 
+\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
+ a| 
+获取控制台代理升级的图像。
+
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
++
+尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
+
+* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
+
+
+^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
+
++ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
+
+
+
+| 如果 Console 代理位于 AWS Government 区域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io | 在 AWS 政府区域中安装 Console 代理时，获取用于 Console 代理升级的映像。 
+
+
+| 如果 Console 代理位于 Azure Government 区域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us | 在 Azure Government 区域中安装 Console 代理时，获取用于 Console 代理升级的映像。 
+
+
+ a| 
+如果 Console 代理位于商业区域或主权区域，可以在两组端点之间进行选择：
+
+* 选项 1（推荐）^1^
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* 选项 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+| 当 Console agent 安装在商业区域或主权区域时，获取 Console agent 升级所需的镜像。[cols=3*,options="header,autowidth"] 
+|===
+|*3.9.55 及更低版本的端点* | *4.0.0 及更高版本的端点* | *目的*
+
+a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用于许可和联系 NetApp 支持。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用于日常操作。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 获取用于 Console 代理升级的映像。
+
+|===
 |===
 
 

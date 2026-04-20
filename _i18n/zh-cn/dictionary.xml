@@ -4039,7 +4039,6 @@
   <block id="2f494f83707a07f0e9291c07ca188635" category="list-text">准备网络以供用户访问NetApp Console</block>
   <block id="95eb2566e767fc3a5aef275a7e7a5ed1" category="list-text">在受限模式下，用户从控制台代理 VM 访问控制台。控制台代理联系几个端点来完成数据管理任务。当从控制台完成特定操作时，将从用户的计算机联系这些端点。</block>
   <block id="6d15ec998ca5b36e1198120e9926fcce" category="inline-link-macro">了解有关 4.0.0 之前版本所需的网络访问的更多信息。</block>
-  <block id="619032e5c3c27ba05162bacd35032461" category="admonition">4.0.0 版本之前的控制台代理需要额外的端点。如果您升级到 4.0.0 或更高版本，则可以从允许列表中删除旧端点。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
   <block id="7748cd70a494ff5fd7b8c1e42d92a2e6" category="cell">\ https://cdn.auth0.com \ https://services.cloud.netapp.com</block>
   <block id="9ed5fb21e9c2b709cc0bad180f57762d" category="cell">您的 Web 浏览器通过NetApp Console连接到这些端点以进行集中用户身份验证。</block>
   <block id="fa5cc2cb386581601ffd1b12fb1e1e4f" category="list-text">用于日常运营的出站互联网访问</block>
@@ -6227,4 +6226,16 @@
   <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">发行说明</block>
   <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">选择支持专用模式的版本。检查 <block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block> 以获取受支持的最新版本。</block>
   <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">为没有 Internet 访问权限的网络下载脱机安装程序。</block>
+  <block id="c8b1b9c2d71ef002d1c50060b2cb083e" category="paragraph">a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| 获取用于 Console 代理升级的映像。</block>
+  <block id="819febf39e28af038c733bae7ff4f55c" category="paragraph">\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io</block>
+  <block id="44915bc5ffc6c8bb2ea6583e61a74d64" category="cell">如果 Console 代理位于 AWS Government 区域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
+  <block id="7d128c30060391a6ee4534fc0d154143" category="cell">在 AWS 政府区域中安装 Console 代理时，获取用于 Console 代理升级的映像。</block>
+  <block id="1ed1ae4edf03cb57c3163af9c463b4fe" category="cell">如果 Console 代理位于 Azure Government 区域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us</block>
+  <block id="0b38caea2fd4b746ced14d695c333449" category="cell">在 Azure Government 区域中安装 Console 代理时，获取用于 Console 代理升级的映像。</block>
+  <block id="60437b7f6fe69c94ccfdf5bf6379a7e3" category="paragraph">如果 Console 代理位于商业区域或主权区域，可以在两组端点之间进行选择：</block>
+  <block id="31a8003e522e87e4d487da308c8a6607" category="cell">当 Console agent 安装在商业区域或主权区域时，获取 Console agent 升级所需的镜像。[cols=3*,options="header,autowidth"]</block>
+  <block id="4d7feb9606c47cedd755f6afd698f4a3" category="paragraph">|*3.9.55 及更低版本的端点* | *4.0.0 及更高版本的端点* | *目的*</block>
+  <block id="68fd8193be29a61e220fc4162cc03154" category="paragraph">a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用于许可和联系 NetApp 支持。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用于日常操作。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 获取用于 Console 代理升级的映像。</block>
+  <block id="a913a5833b76298a0bccb4d15b796571" category="paragraph">当 Console 代理安装在商业区域或主权区域时，获取用于 Console 代理升级的映像。</block>
+  <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">4.0.0 版之前的 Console 代理支持不同的端点。如果您升级到 4.0.0 或更高版本，则可以从允许列表中删除旧端点。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
 </blocks>
