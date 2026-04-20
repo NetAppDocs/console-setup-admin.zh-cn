@@ -5810,7 +5810,6 @@
   <block id="c73db6dd4dc3a461773070693cc406c6" category="paragraph">要在<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>或<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>中使用 NetApp Console，则应按照单独的说明开始使用这些环境。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
   <block id="1c88387d9be2a13f9b45fd276e63cf80" category="list-text">安装 Console 代理需要根权限。</block>
   <block id="afbfe533a489b7d4102d31feb17a881a" category="list-text">从 NetApp 支持站点下载 Console 代理软件<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block></block>
-  <block id="a6c2003199e95310a83aa40a67058bd8" category="paragraph">请务必为没有 Internet 访问权限的专用网络下载脱机安装程序。</block>
   <block id="70c6033ed76dffb5d74ff7bb0402f4fa" category="paragraph">控制台代理已安装。现在，您可以设置 NetApp Console 了。</block>
   <block id="4d50d200e5ecb85ea8908049caf1caab" category="paragraph">首次访问 NetApp Console 时，系统会提示您设置 NetApp Console。</block>
   <block id="d50d972bc008375c76a9eba41b5ce3e3" category="list-text">打开 Web 浏览器，并输入安装 Console 代理的 Linux 主机的 IP 地址。</block>
@@ -6225,4 +6224,7 @@
   <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>。</block>
   <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">可选：从云提供商的市场订阅 NetApp Intelligent Services，按小时费率（PAYGO）或通过年度合同支付数据服务费用。NetApp Intelligent Services 包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience 和 NetApp Disaster Recovery。NetApp Data Classification 包含在您的订阅中，无需额外费用。</block>
   <block id="6c842907a578805c3a54843de813b384" category="paragraph">通过您的云服务提供商注册 NetApp Intelligent Services，可选择按小时（PAYGO）或按年计费。订阅包含 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery 以及 NetApp Data Classification。</block>
+  <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">发行说明</block>
+  <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">选择支持专用模式的版本。检查 <block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block> 以获取受支持的最新版本。</block>
+  <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">为没有 Internet 访问权限的网络下载脱机安装程序。</block>
 </blocks>

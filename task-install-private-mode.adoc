@@ -32,7 +32,9 @@ summary: 在私有模式下部署 NetApp Console，以便可以在没有出站�
 .步骤
 . 从 NetApp 支持站点下载 Console 代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]
 +
-请务必为没有 Internet 访问权限的专用网络下载脱机安装程序。
+** 选择支持专用模式的版本。检查 link:whats-new.html["发行说明"] 以获取受支持的最新版本。
+** 为没有 Internet 访问权限的网络下载脱机安装程序。
+
 
 . 将安装程序复制到 Linux 主机。
 . 分配运行脚本的权限。
