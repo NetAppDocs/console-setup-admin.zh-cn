@@ -23,8 +23,6 @@ NetApp 将这些用例称为_部署模式_。每种模式都可为您的业务�
 私有模式（安装在您的场所或云中）:: 专用模式适用于具有严格安全需求的组织，例如 AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 或 air-gapped 环境中的组织。它不会连接到 NetApp Console SaaS 应用程序或 NetApp 基于云的 API，让您完全控制并阻止外部通信。支持的数据服务包括 NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication 和 Cloud Volumes ONTAP。所有存储和身份验证都保留在本地，将数据保留在您的环境中。对于国防承包商、具有严格数据驻留规则的金融机构以及具有机密系统的政府机构，请使用此模式。
 
 
-在您的本地安装时，仅支持 ONTAP 存储系统。
-
 
 NOTE: NetApp Console 限制受限和私有模式的数据流，但您必须确保您的环境符合您的法规。
 

@@ -167,7 +167,7 @@ Console 代理对 NetApp Console 至关重要。代理必须保持可操作性�
 | Digital Advisor（Active IQ）  a| 
 是
  a| 
-否
+是
 
 
 
