@@ -182,7 +182,7 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | 联邦 | 否 
 
 
-| 身份和访问管理 | 否 
+| 身份和访问管理 | 是 
 
 
  a| 
@@ -321,7 +321,7 @@ NetApp Replication
 | 联邦 | 否 
 
 
-| 身份和访问管理 | 否 
+| 身份和访问管理 | 是 
 
 
  a| 
@@ -474,7 +474,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 | 否 
 
 
-| 身份和访问管理 | 否 
+| 身份和访问管理 | 是 
 
 
 | 管理云提供商凭证 | 否 

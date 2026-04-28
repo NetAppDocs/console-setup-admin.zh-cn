@@ -99,7 +99,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 | 否 
 
 
-| 身份和访问管理 | 否 
+| 身份和访问管理 | 是 
 
 
 | 管理云提供商凭证 | 否 
@@ -165,7 +165,7 @@ Licenses and subscriptions 管理
 | 否 
 
 
-| 身份和访问管理 | 否 
+| 身份和访问管理 | 是 
 
 
 | 管理云提供商凭证 | 否 
