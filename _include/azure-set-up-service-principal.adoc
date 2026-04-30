@@ -120,7 +120,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，
 . 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
 . 复制*应用程序（客户端）ID*和*目录（租户）ID*。
 +
-image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+image:screenshot_azure_app_ids.gif["显示 Microsoft Entra ID 中应用程序的应用程序（客户端）ID 和目录（租户）ID 的屏幕截图。"]
 
 +
 将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。

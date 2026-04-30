@@ -54,7 +54,7 @@ link:concept-modes.html["了解隐私模式的运作方式"]。
 
 ** `/var`：必须有 40 GiB 可用空间
 +
-控制台代理需要此空间 `/var`因为 Podman 或 Docker 的设计初衷就是在这个目录下创建容器。具体来说，他们将在以下位置创建容器： `/var/lib/containers/storage`目录和 `/var/lib/docker`用于 Docker。外部安装或符号链接不适用于此空间。
+Console 代理需要此空间在 `/var`中，因为 Podman 或 Docker 的架构是在此目录中创建容器。具体来说，它们将在 `/var/lib/containers/storage`目录和 `/var/lib/docker`中为 Docker 创建容器。外部挂载或符号链接不适用于此空间。
 
 
 
@@ -127,7 +127,7 @@ Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： htt
 /var 中的磁盘空间:: 必须有 20 GiB 可用空间
 +
 --
-控制台代理需要此空间 `/var`因为 Docker 或 Podman 的设计目的是在此目录中创建容器。具体来说，他们将在 `/var/lib/containers/storage`目录。外部安装或符号链接不适用于此空间。
+Console 代理需要此空间， `/var`因为 Docker 或 Podman 架构用于在此目录中创建容器。具体来说，它们将在 `/var/lib/containers/storage`目录中创建容器。外部挂载或符号链接不适用于此空间。
 
 --
 
@@ -159,7 +159,7 @@ Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： htt
 
 * 启用并启动 podman.socket 服务
 * 安装python3
-* 安装 podman-compose 包版本 1.0.6
+* 安装 podman-compose 包（因 Red Hat 版本而异）
 * 将 podman-compose 添加到 PATH 环境变量
 * 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
@@ -421,7 +421,7 @@ HTTP (80) 和 HTTPS (443) 提供对 NetApp Console 的访问。如果您需要�
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 
 
 
@@ -668,7 +668,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，
 . 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
 . 复制*应用程序（客户端）ID*和*目录（租户）ID*。
 +
-image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+image:screenshot_azure_app_ids.gif["显示 Microsoft Entra ID 中应用程序的应用程序（客户端）ID 和目录（租户）ID 的屏幕截图。"]
 
 +
 将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
@@ -720,7 +720,7 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. 从 IAM 和管理服务中，选择 *服务帐户 > 创建服务帐户*。
 .. 输入服务帐户详细信息并选择*创建并继续*。
 .. 选择您刚刚创建的角色。
-.. 完成剩余步骤以创建角色。
+.. 完成创建服务帐户的剩余步骤。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文档：创建服务帐号"^]
 
@@ -746,7 +746,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ** 云资源管理器 API
 ** 计算引擎 API
 ** 身份和访问管理 (IAM) API
-** 云密钥管理服务 (KMS) API（仅当您计划将 NetApp Backup and Recovery 与客户管理的加密密钥 (CMEK) 一起使用时才需要）
+** 云密钥管理服务 (KMS) API（仅当您计划使用客户管理的加密密钥 (CMEK) 进行 NetApp Backup and Recovery 时才需要）
 ** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 时需要）
 
 

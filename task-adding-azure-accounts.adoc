@@ -239,7 +239,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，
 . 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
 . 复制*应用程序（客户端）ID*和*目录（租户）ID*。
 +
-image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+image:screenshot_azure_app_ids.gif["显示 Microsoft Entra ID 中应用程序的应用程序（客户端）ID 和目录（租户）ID 的屏幕截图。"]
 
 +
 将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
@@ -329,7 +329,7 @@ image:screenshot_accounts_switch_azure.gif["屏幕截图显示在“详细信息
 +
 您必须选择与控制台代理关联的凭据。您无法将市场订阅与与NetApp Console关联的凭据关联。
 
-. 要将凭据与现有订阅关联，请从下拉列表中选择订阅并选择*配置*。
+. 要将凭据与现有订阅相关联，请从下拉列表中选择该订阅，然后选择 *Configure* 。
 . 要将凭据与新订阅关联，请选择“添加订阅”>“继续”*，然后按照 Azure 市场中的步骤操作：
 +
 .. 如果出现提示，请登录您的 Azure 帐户。

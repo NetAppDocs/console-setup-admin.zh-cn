@@ -20,7 +20,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 从NetApp控制台联系的端点:: 当您使用基于 Web 的 NetApp Console SaaS 应用程序时，它会联系多个端点以完成数据管理任务。这包括从 Console 部署 Console 代理时联系的端点。
 +
 --
-link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
+link:reference-networking-saas-console.html["查看从 NetApp Console 联系的端点列表"]。
 
 --
 
@@ -33,7 +33,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabli
 --
 
 
-端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
+端口:: 除非由您发起，或者用作代理将 AutoSupport 消息从 Cloud Volumes ONTAP 发送到 NetApp Support，否则不会有流向 Console agent 的入站流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
@@ -70,5 +70,5 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 

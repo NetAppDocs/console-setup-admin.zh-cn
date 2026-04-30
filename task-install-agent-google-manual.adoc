@@ -45,7 +45,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范�
 
 ** `/var`：必须有 40 GiB 可用空间
 +
-控制台代理需要此空间 `/var`因为 Podman 或 Docker 的设计初衷就是在这个目录下创建容器。具体来说，他们将在以下位置创建容器： `/var/lib/containers/storage`目录和 `/var/lib/docker`用于 Docker。外部安装或符号链接不适用于此空间。
+Console 代理需要此空间在 `/var`中，因为 Podman 或 Docker 的架构是在此目录中创建容器。具体来说，它们将在 `/var/lib/containers/storage`目录和 `/var/lib/docker`中为 Docker 创建容器。外部挂载或符号链接不适用于此空间。
 
 
 
@@ -137,7 +137,7 @@ Ubuntu
  a| 
 3.9.45 或更高版本， NetApp Console处于标准模式或受限模式
  a| 
-Docker Engine 23.06 至 28.0.0。
+Docker Engine 23.0.6 至 28.0.0。
  a| 
 不支持
 
@@ -187,7 +187,7 @@ Google Cloud 虚拟机实例上的控制台代理支持以下操作系统： htt
 
 * 启用并启动 podman.socket 服务
 * 安装python3
-* 安装 podman-compose 包版本 1.0.6
+* 安装 podman-compose 包（因 Red Hat 版本而异）
 * 将 podman-compose 添加到 PATH 环境变量
 * 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
@@ -362,9 +362,9 @@ sudo systemctl enable docker && sudo systemctl start docker
 使用基于 Web 的NetApp Console时从计算机联系的端点::
 +
 --
-从 Web 浏览器访问控制台的计算机必须能够联系多个端点。您需要使用控制台来设置控制台代理并进行控制台的日常使用。
+从 Web 浏览器访问 NetApp Console 的计算机必须能够联系多个端点。
 
-link:reference-networking-saas-console.html["为NetApp控制台准备网络"] 。
+link:reference-networking-saas-console.html["为 NetApp Console 准备网络"]。
 
 --
 
@@ -441,7 +441,7 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
 --
 
 
-端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
+端口:: 除非由您发起，或者用作代理将 AutoSupport 消息从 Cloud Volumes ONTAP 发送到 NetApp Support，否则不会有流向 Console agent 的入站流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
@@ -455,7 +455,7 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 
 
 
@@ -477,8 +477,10 @@ link:reference-networking-saas-console.html["为NetApp控制台准备网络"] �
 以下示例在项目级别创建一个名为“agent”的角色：
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
 
@@ -489,13 +491,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. 从 IAM 和管理服务中，选择 *服务帐户 > 创建服务帐户*。
 .. 输入服务帐户详细信息并选择*创建并继续*。
 .. 选择您刚刚创建的角色。
-.. 完成剩余步骤以创建角色。
+.. 完成创建服务帐户的剩余步骤。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文档：创建服务帐号"^]
 
 
 
-. 如果您计划在与控制台代理所在项目不同的项目中部署Cloud Volumes ONTAP系统，则需要为控制台代理的服务帐户提供对这些项目的访问权限。
+. 如果您计划在 Console 代理驻留的项目以外的项目中部署 Cloud Volumes ONTAP 系统，则需要为 Console 代理的服务帐户提供对这些项目的访问权限。
 +
 例如，假设控制台代理位于项目 1 中，而您想要在项目 2 中创建Cloud Volumes ONTAP系统。您需要授予项目 2 中的服务帐户访问权限。
 
@@ -561,9 +563,9 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 |===
 注：
 
-. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp Console将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
-. 仅当您未将防火墙规则传递给部署并选择让控制台为您创建它们时，才需要firewall.create 和firewall.delete。这些权限位于控制台帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于为 VPC0 创建规则。
-. 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 serviceAccount.user 角色，而不仅仅是在项目级别。目前，如果您在项目级别分配 serviceAccount.user，则使用 getIAMPolicy 查询服务帐户时不会显示权限。
+. `deploymentmanager.editor` 仅在主机项目中需要。如果您没有将防火墙规则传递给部署，并选择让 Console 为您创建它们。如果未指定规则，NetApp Console 将在主机项目中创建包含 VPC0 防火墙规则的部署。
+. `firewall.create` 和  `firewall.delete` 仅在您没有将防火墙规则传递给部署并选择让 Console 为您创建它们时才需要。这些权限位于 Console 帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于创建 VPC0 的规则。
+. 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有  `serviceAccount.user` 角色，而不仅仅是在项目级别。如果在项目级别分配  `serviceAccount.user`，则在使用  `getIAMPolicy` 查询服务帐户时不会显示权限。
 
 
 ====
@@ -583,7 +585,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 ** 云资源管理器 API
 ** 计算引擎 API
 ** 身份和访问管理 (IAM) API
-** 云密钥管理服务 (KMS) API（仅当您计划将 NetApp Backup and Recovery 与客户管理的加密密钥 (CMEK) 一起使用时才需要）
+** 云密钥管理服务 (KMS) API（仅当您计划使用客户管理的加密密钥 (CMEK) 进行 NetApp Backup and Recovery 时才需要）
 ** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 时需要）
 
 
@@ -605,7 +607,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 * 安装控制台代理的 root 权限。
 * 如果控制台代理需要代理才能访问互联网，则提供有关代理服务器的详细信息。
 +
-您可以选择在安装后配置代理服务器，但这样做需要重新启动控制台代理。
+您可以选择在安装后配置代理服务器，但这样做需要重新启动 Console 代理。
 
 * 如果代理服务器使用 HTTPS 或代理是拦截代理，则需要 CA 签名的证书。
 
@@ -629,9 +631,9 @@ unset https_proxy
 
 . 下载控制台代理软件，然后将其复制到 Linux 主机。您可以从NetApp Console或NetApp支持网站下载。
 +
-** NetApp Console：转到*代理 > 管理 > 部署代理 > 本地部署 > 手动安装*。
+** NetApp Console：转到 *Agents > Management > Deploy agent > On-prem > Manual install*。
 +
-选择下载代理安装程序文件或文件的 URL。
+选择下载代理安装程序文件或复制文件的 URL。
 
 
 
@@ -640,7 +642,7 @@ unset https_proxy
 NOTE: 下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。
 
 +
-** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
+** NetApp 支持站点（如果您还没有 Console 的访问权限，则需要该站点） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^]。
 
 
 . 分配运行脚本的权限。
@@ -665,7 +667,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]
+NOTE: 如果要配置透明代理，可以在安装代理后进行此操作。link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]。
 
 +
 
@@ -675,7 +677,7 @@ NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` 使用以下格式之一将 Console 代理配置为使用 HTTP 或 HTTPS 代理服务器：

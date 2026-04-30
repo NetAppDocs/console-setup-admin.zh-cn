@@ -56,9 +56,9 @@ NOTE: 在 vCenter 环境中安装代理，而不是直接在 ESXi 主机上安�
 使用基于 Web 的NetApp Console时从计算机联系的端点::
 +
 --
-从 Web 浏览器访问控制台的计算机必须能够联系多个端点。您需要使用控制台来设置控制台代理并进行控制台的日常使用。
+从 Web 浏览器访问 NetApp Console 的计算机必须能够联系多个端点。
 
-link:reference-networking-saas-console.html["为NetApp控制台准备网络"] 。
+link:reference-networking-saas-console.html["为 NetApp Console 准备网络"]。
 
 --
 
@@ -196,7 +196,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
+端口:: 除非由您发起，或者用作代理将 AutoSupport 消息从 Cloud Volumes ONTAP 发送到 NetApp Support，否则不会有流向 Console agent 的入站流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
@@ -210,7 +210,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 
 
 
@@ -384,7 +384,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，
 . 在*Microsoft Entra ID*服务中，选择*App Registrations*并选择应用程序。
 . 复制*应用程序（客户端）ID*和*目录（租户）ID*。
 +
-image:screenshot_azure_app_ids.gif["屏幕截图显示了 Microsoft Entra IDy 中应用程序的应用程序（客户端）ID 和目录（租户）ID。"]
+image:screenshot_azure_app_ids.gif["显示 Microsoft Entra ID 中应用程序的应用程序（客户端）ID 和目录（租户）ID 的屏幕截图。"]
 
 +
 将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
@@ -492,7 +492,7 @@ NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志�
 
 == 使用NetApp Console注册控制台代理
 
-登录控制台并将控制台代理与您的组织关联。登录方式取决于您使用控制台的模式。如果您在标准模式下使用控制台，则可以通过 SaaS 网站登录。如果您在受限或私人模式下使用控制台，则可以从控制台代理主机本地登录。
+登录到 Console 并将 Console 代理与您的组织关联。登录方式取决于使用 Console 的模式。如果在标准模式下使用 Console，请通过 SaaS 网站登录。如果以受限或专用模式使用 Console，则可以从 Console 代理主机本地登录。
 
 .步骤
 . 打开 Web 浏览器并输入控制台代理主机 URL：
@@ -531,7 +531,7 @@ NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志�
 . 选择*组织凭证*。
 . 选择“*添加凭据*”并按照向导中的步骤操作。
 +
-.. *凭证位置*：选择*Amazon Web Services > 代理。
+.. *凭证位置*：选择*Amazon Web Services > 代理*。
 .. *定义凭证*：输入 AWS 访问密钥和密钥。
 .. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
 .. *审核*：确认有关新凭证的详细信息并选择*添加*。
@@ -545,7 +545,7 @@ NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志�
 .Azure
 --
 .开始之前
-如果您刚刚创建了这些 Azure 凭据，它们可能需要几分钟才能使用。等待几分钟，然后再添加控制台代理的凭据。
+如果您刚刚创建了这些 Azure 凭据，它们可能需要几分钟时间才能可用。请稍等几分钟，然后将凭据添加到 Console 代理。
 
 .步骤
 . 选择“*管理 > 凭证*”。

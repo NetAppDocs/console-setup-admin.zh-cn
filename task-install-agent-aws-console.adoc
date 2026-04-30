@@ -120,7 +120,7 @@ Amazon FSx for NetApp ONTAP：
 从NetApp控制台联系的端点:: 当您使用基于 Web 的 NetApp Console SaaS 应用程序时，它会联系多个端点以完成数据管理任务。这包括从 Console 部署 Console 代理时联系的端点。
 +
 --
-link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
+link:reference-networking-saas-console.html["查看从 NetApp Console 联系的端点列表"]。
 
 --
 
@@ -136,7 +136,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
+端口:: 除非由您发起，或者用作代理将 AutoSupport 消息从 Cloud Volumes ONTAP 发送到 NetApp Support，否则不会有流向 Console agent 的入站流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
@@ -150,7 +150,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 +
 --
 创建控制台代理后，您需要实现此网络要求。
@@ -335,15 +335,15 @@ TIP: 如果您选择*承担角色*，您可以从控制台代理部署向导创�
 +
 link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
 
-. 检查您的选择以验证您的设置是否正确。
+. 查看您的选择，确认您的设置正确无误。
 +
-.. 默认情况下，*验证代理配置*复选框处于选中状态，以便控制台在您部署时验证网络连接要求。如果控制台无法部署代理，它会提供一份报告来帮助您排除故障。如果部署成功，则不会提供报告。
+.. 默认情况下会选中*验证代理配置*复选框，以便在部署时让 Console 验证网络连接要求。如果 Console 无法部署代理，它会提供一个报告来帮助您排除故障。如果部署成功，则不提供报告。
 
 
 +
-[]
+[NOTE]
 ====
-** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 如果您仍在使用用于代理升级的 link:reference-networking-saas-console-previous.html["先前的端点"]，验证将失败并显示错误。要避免这种情况，请清除复选框以跳过验证检查。
 ** 在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
 
 

@@ -102,7 +102,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
 从NetApp控制台联系的端点:: 当您使用基于 Web 的 NetApp Console SaaS 应用程序时，它会联系多个端点以完成数据管理任务。这包括从 Console 部署 Console 代理时联系的端点。
 +
 --
-link:reference-networking-saas-console.html["查看从NetApp控制台联系的端点列表"] 。
+link:reference-networking-saas-console.html["查看从 NetApp Console 联系的端点列表"]。
 
 --
 
@@ -118,7 +118,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
+端口:: 除非由您发起，或者用作代理将 AutoSupport 消息从 Cloud Volumes ONTAP 发送到 NetApp Support，否则不会有流向 Console agent 的入站流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
@@ -132,7 +132,7 @@ link:reference-networking-saas-console.html["查看从NetApp控制台联系的�
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 +
 --
 创建控制台代理后实现此网络需求。
@@ -279,8 +279,10 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 以下示例在项目级别创建一个名为“agent”的角色：
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
 
@@ -291,13 +293,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. 从 IAM 和管理服务中，选择 *服务帐户 > 创建服务帐户*。
 .. 输入服务帐户详细信息并选择*创建并继续*。
 .. 选择您刚刚创建的角色。
-.. 完成剩余步骤以创建角色。
+.. 完成创建服务帐户的剩余步骤。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文档：创建服务帐号"^]
 
 
 
-. 如果您计划在与控制台代理所在项目不同的项目中部署Cloud Volumes ONTAP系统，则需要为控制台代理的服务帐户提供对这些项目的访问权限。
+. 如果您计划在 Console 代理驻留的项目以外的项目中部署 Cloud Volumes ONTAP 系统，则需要为 Console 代理的服务帐户提供对这些项目的访问权限。
 +
 例如，假设控制台代理位于项目 1 中，而您想要在项目 2 中创建Cloud Volumes ONTAP系统。您需要授予项目 2 中的服务帐户访问权限。
 
@@ -363,9 +365,9 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 |===
 注：
 
-. 如果您没有将防火墙规则传递给部署并选择让控制台为您创建规则，则仅主机项目才需要 deploymentmanager.editor。如果未指定规则， NetApp Console将在主机项目中创建一个包含 VPC0 防火墙规则的部署。
-. 仅当您未将防火墙规则传递给部署并选择让控制台为您创建它们时，才需要firewall.create 和firewall.delete。这些权限位于控制台帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于为 VPC0 创建规则。
-. 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 serviceAccount.user 角色，而不仅仅是在项目级别。目前，如果您在项目级别分配 serviceAccount.user，则使用 getIAMPolicy 查询服务帐户时不会显示权限。
+. `deploymentmanager.editor` 仅在主机项目中需要。如果您没有将防火墙规则传递给部署，并选择让 Console 为您创建它们。如果未指定规则，NetApp Console 将在主机项目中创建包含 VPC0 防火墙规则的部署。
+. `firewall.create` 和  `firewall.delete` 仅在您没有将防火墙规则传递给部署并选择让 Console 为您创建它们时才需要。这些权限位于 Console 帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于创建 VPC0 的规则。
+. 对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有  `serviceAccount.user` 角色，而不仅仅是在项目级别。如果在项目级别分配  `serviceAccount.user`，则在使用  `getIAMPolicy` 查询服务帐户时不会显示权限。
 
 
 ====
@@ -385,7 +387,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 ** 云资源管理器 API
 ** 计算引擎 API
 ** 身份和访问管理 (IAM) API
-** 云密钥管理服务 (KMS) API（仅当您计划将 NetApp Backup and Recovery 与客户管理的加密密钥 (CMEK) 一起使用时才需要）
+** 云密钥管理服务 (KMS) API（仅当您计划使用客户管理的加密密钥 (CMEK) 进行 NetApp Backup and Recovery 时才需要）
 ** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 时需要）
 
 
@@ -437,15 +439,15 @@ link:reference-ports-gcp.html["Google Cloud 中的防火墙规则"]
 
 
 
-. 检查您的选择以验证您的设置是否正确。
+. 查看您的选择，确认您的设置正确无误。
 +
-.. 默认情况下，*验证代理配置*复选框处于选中状态，以便控制台在您部署时验证网络连接要求。如果控制台无法部署代理，它会提供一份报告来帮助您排除故障。如果部署成功，则不会提供报告。
+.. 默认情况下会选中*验证代理配置*复选框，以便在部署时让 Console 验证网络连接要求。如果 Console 无法部署代理，它会提供一个报告来帮助您排除故障。如果部署成功，则不提供报告。
 
 
 +
-[]
+[NOTE]
 ====
-** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端点"]用于代理升级，验证失败并出现错误。为了避免这种情况，请取消选中复选框以跳过验证检查。
+** 如果您仍在使用用于代理升级的 link:reference-networking-saas-console-previous.html["先前的端点"]，验证将失败并显示错误。要避免这种情况，请清除复选框以跳过验证检查。
 ** 在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
 
 

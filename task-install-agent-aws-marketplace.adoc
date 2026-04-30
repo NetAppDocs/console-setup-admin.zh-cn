@@ -128,7 +128,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-端口:: 除非您启动它或将其用作代理将AutoSupport消息从Cloud Volumes ONTAP发送到NetApp支持，否则控制台代理不会有传入流量。
+端口:: 除非由您发起，或者用作代理将 AutoSupport 消息从 Cloud Volumes ONTAP 发送到 NetApp Support，否则不会有流向 Console agent 的入站流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供对本地 UI 的访问，您会在极少数情况下使用它们。
@@ -142,7 +142,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-启用 NTP:: 如果您计划使用NetApp Data Classification来扫描公司数据源，则应在控制台代理和NetApp Data Classification系统上启用网络时间协议 (NTP) 服务，以便系统之间的时间同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有关NetApp数据分类的更多信息"^]
+启用 NTP:: 如果您计划使用 NetApp Data Classification 扫描公司数据源，则应在 Console 代理和 NetApp Data Classification 系统上启用网络时间协议 (NTP) 服务，以便在系统之间同步时间 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["详细了解 NetApp Data Classification"^]。
 +
 --
 创建控制台代理后实现此网络访问。
@@ -212,7 +212,7 @@ AWS EC2 实例类型:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐
 
 
 .步骤
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理列表"^]
+. 转到  https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理列表"^]。
 . 在市场页面上，选择*继续订阅*。
 . 要订阅该软件，请选择*接受条款*。
 +

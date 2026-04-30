@@ -8,7 +8,7 @@
 * 安装控制台代理的 root 权限。
 * 如果控制台代理需要代理才能访问互联网，则提供有关代理服务器的详细信息。
 +
-您可以选择在安装后配置代理服务器，但这样做需要重新启动控制台代理。
+您可以选择在安装后配置代理服务器，但这样做需要重新启动 Console 代理。
 
 * 如果代理服务器使用 HTTPS 或代理是拦截代理，则需要 CA 签名的证书。
 
@@ -32,9 +32,9 @@ unset https_proxy
 
 . 下载控制台代理软件，然后将其复制到 Linux 主机。您可以从NetApp Console或NetApp支持网站下载。
 +
-** NetApp Console：转到*代理 > 管理 > 部署代理 > 本地部署 > 手动安装*。
+** NetApp Console：转到 *Agents > Management > Deploy agent > On-prem > Manual install*。
 +
-选择下载代理安装程序文件或文件的 URL。
+选择下载代理安装程序文件或复制文件的 URL。
 
 
 
@@ -43,7 +43,7 @@ unset https_proxy
 NOTE: 下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。
 
 +
-** NetApp支持网站（如果您还没有访问控制台的权限，则需要此网站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] ，
+** NetApp 支持站点（如果您还没有 Console 的访问权限，则需要该站点） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^]。
 
 
 . 分配运行脚本的权限。
@@ -68,7 +68,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]
+NOTE: 如果要配置透明代理，可以在安装代理后进行此操作。link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]。
 
 +
 
@@ -78,7 +78,7 @@ NOTE: 如果要配置透明代理，可以在安装完成后进行配置。 link
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` 使用以下格式之一将 Console 代理配置为使用 HTTP 或 HTTPS 代理服务器：
