@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem.html
 keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
 summary: 在本地部署 Console 代理，然后登录并将其设置为与您的 Console 组织配合使用。 
 ---
-= 在本地手动部署 Console 代理
+= 在本地手动安装控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,9 +17,9 @@ summary: 在本地部署 Console 代理，然后登录并将其设置为与您�
 在本地部署 Console 代理，然后登录并将其设置为与您的 Console 组织配合使用。
 
 
-NOTE: 如果您是 VMWare 用户，您可以使用 OVA 在您的 VCenter 中部署 Console 代理。link:task-install-agent-on-prem-ova.html["详细了解在 VCenter 中部署代理。"]
+NOTE: 如果您是 VMware 用户，您可以使用 OVA 在您的 vCenter 中部署 Console 代理。link:task-install-agent-on-prem-ova.html["详细了解在 vCenter 中部署代理。"]
 
-在安装之前，您需要确保您的主机（VM 或 Linux 主机）满足要求，并确保控制台代理可以访问互联网以及目标网络。如果您计划使用NetApp数据服务或云存储选项（例如Cloud Volumes ONTAP），则需要在云提供商中创建凭据以添加到控制台，以便控制台代理可以代表您在云中执行操作。
+在安装之前，您需要确保主机（VM 或 Linux 主机）满足要求，并确保 Console 代理能够出站访问互联网以及目标网络。如果您计划使用 NetApp 数据服务或云存储选项（如 Cloud Volumes ONTAP），则需要在云提供商中创建凭据以添加到 Console，以便 Console 代理可以代表您在云中执行操作。
 
 
 
@@ -31,7 +31,7 @@ NOTE: 如果您是 VMWare 用户，您可以使用 OVA 在您的 VCenter 中部�
 
 === 查看控制台代理主机要求
 
-在满足操作系统、RAM 和端口要求的 x86 主机上运行控制台代理。在安装控制台代理之前，请确保您的主机满足这些要求。
+在满足操作系统、RAM 和端口要求的 x86 主机上运行 Console 代理。安装 Console 代理之前，请确保您的主机满足这些要求。
 
 
 NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 范围。这个范围是固定的，不能修改。如果主机上的任何第三方软件使用此范围内的 UID 或 GID，则代理安装将失败。  NetApp建议使用没有第三方软件的主机以避免冲突。
@@ -187,14 +187,60 @@ NOTE: 安装在您场所的控制台代理无法管理 Google Cloud 中的资源
 
 [role="tabbed-block"]
 ====
-.AWS
+.最低必需端点
 --
-当控制台代理安装在本地时，它需要对以下 AWS 端点进行网络访问，以便管理部署在 AWS 中的NetApp系统（例如Cloud Volumes ONTAP）。
+所有 Console 代理部署都需要这些端点。要管理 AWS 或 Azure 中的 NetApp 资源，需要额外的端点。
 
-从控制台代理联系的端点:: 控制台代理需要出站互联网访问来联系以下端点，以管理公共云环境中的资源和流程以进行日常操作。
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
+
+
+
+ a| 
+\ https://support.netapp.com
+ a| 
+获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
+ a| 
+在NetApp Console中提供功能和服务。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+获取控制台代理升级的图像。
+
+* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
 +
+尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
+
+* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
+
+
+|===
 --
-下面列出的端点都是 CNAME 条目。
+.AWS 资源的其他端点
+--
+当 Console 代理在本地安装时，它需要对以下其他 AWS 端点的网络访问权限，以管理部署在 AWS 中的 NetApp 系统（例如 Cloud Volumes ONTAP）。
 
 [cols="2a,1a"]
 |===
@@ -217,118 +263,18 @@ AWS 服务（amazonaws.com）：
 
 
  a| 
-Amazon FsX for NetApp ONTAP：
+Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
  a| 
 基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。
 
-
-
- a| 
-\ https://mysupport.netapp.com
- a| 
-获取许可信息并向NetApp支持发送AutoSupport消息。
-
-
-
- a| 
-\ https://signin.b2c.netapp.com
- a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
-
-
-
- a| 
-\ https://support.netapp.com
- a| 
-获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-在NetApp Console中提供功能和服务。
-
-
-
- a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
- a| 
-获取控制台代理升级的图像。
-
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
-+
-尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
-
-* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-获取控制台代理升级的图像。
-
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
-+
-尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
-
-* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
-
-
-^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
-
-+ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-
- a| 
-如果 Console 代理位于 AWS Government 区域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-在 AWS 政府区域中安装 Console 代理时，获取用于 Console 代理升级的映像。
-
-
-
- a| 
-如果 Console 代理位于 Azure Government 区域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-在 Azure Government 区域中安装 Console 代理时，获取用于 Console 代理升级的映像。
-
-
-
- a| 
-如果 Console 代理位于商业区域或主权区域，可以在两组端点之间进行选择：
-
-* 选项 1（推荐）^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-当 Console 代理安装在商业区域或主权区域时，获取用于 Console 代理升级的映像。
-
 |===
 --
-
-
-|*3.9.55 及更低版本的端点* | *4.0.0 及更高版本的端点* | *目的*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用于许可和联系 NetApp 支持。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用于日常操作。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 获取用于 Console 代理升级的映像。
-
-|===
-|===
+.Azure 资源的其他端点
 --
-.Azure
---
-当控制台代理安装在本地时，它需要对以下 Azure 端点进行网络访问，以便管理部署在 Azure 中的NetApp系统（例如Cloud Volumes ONTAP）。
+当 Console 代理在本地安装时，它需要对以下其他 Azure 终结点的网络访问，以管理 Azure 中部署的 NetApp 系统（如 Cloud Volumes ONTAP）。
 
 [cols="2a,1a"]
 |===
@@ -347,103 +293,6 @@ a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://m
  a| 
 管理 Azure 中国区域的资源。
 
-
-
- a| 
-\ https://mysupport.netapp.com
- a| 
-获取许可信息并向NetApp支持发送AutoSupport消息。
-
-
-
- a| 
-\ https://signin.b2c.netapp.com
- a| 
-更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
-
-
-
- a| 
-\ https://support.netapp.com
- a| 
-获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-在NetApp Console中提供功能和服务。
-
-
-
- a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
- a| 
-获取控制台代理升级的图像。
-
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
-+
-尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
-
-* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-获取控制台代理升级的图像。
-
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
-+
-尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
-
-* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
-
-
-^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
-
-+ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-
- a| 
-如果 Console 代理位于 AWS Government 区域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-在 AWS 政府区域中安装 Console 代理时，获取用于 Console 代理升级的映像。
-
-
-
- a| 
-如果 Console 代理位于 Azure Government 区域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-在 Azure Government 区域中安装 Console 代理时，获取用于 Console 代理升级的映像。
-
-
-
- a| 
-如果 Console 代理位于商业区域或主权区域，可以在两组端点之间进行选择：
-
-* 选项 1（推荐）^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-当 Console 代理安装在商业区域或主权区域时，获取用于 Console 代理升级的映像。
-
-|===
-|*3.9.55 及更低版本的端点* | *4.0.0 及更高版本的端点* | *目的*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用于许可和联系 NetApp 支持。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用于日常操作。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 获取用于 Console 代理升级的映像。
-
-|===
 |===
 --
 ====
@@ -479,7 +328,7 @@ a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://m
 
 === 为 AWS 或 Azure 创建控制台代理云权限
 
-如果您想通过本地控制台代理使用 AWS 或 Azure 中的NetApp数据服务，则需要在云提供商中设置权限，然后在安装控制台代理后将凭据添加到控制台代理。
+如果要将 AWS 或 Azure 中的 NetApp 数据服务与本地 Console 代理一起使用，则需要在云提供商中设置权限，然后在安装后将凭据添加到 Console 代理。
 
 
 TIP: 您必须在 Google Cloud 中安装控制台代理来管理驻留在那里的任何资源。
@@ -671,7 +520,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 == 手动安装控制台代理
 
-当您手动安装控制台代理时，您需要准备您的机器环境以使其满足要求。您需要一台 Linux 机器，并且需要安装 Podman 或 Docker，具体取决于您的 Linux 操作系统。
+手动安装 Console 代理时，需要准备好计算机环境，使其满足要求。您需要一台 Linux 机器，并且需要安装 Podman 或 Docker，具体取决于您的 Linux 操作系统。
 
 
 
@@ -1042,7 +891,7 @@ dns_bind_port = 54
 .Azure
 --
 .开始之前
-如果您刚刚创建了这些 Azure 凭据，它们可能需要几分钟才能使用。等待几分钟，然后再添加控制台代理的凭据。
+如果您刚刚创建了这些 Azure 凭据，它们可能需要几分钟时间才能可用。请稍等几分钟，然后将凭据添加到 Console 代理。
 
 .步骤
 . 选择“*管理 > 凭证*”。

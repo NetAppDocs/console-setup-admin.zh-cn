@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-agent-google-console-gcloud.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
-summary: 要从NetApp Consoel 或使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。 
+summary: 要在 Google Cloud 中从 NetApp Console 或使用 Google Cloud 创建 Console 代理，需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建 Console 代理。 
 ---
 = 从 NetApp Console 在 Google Cloud 中部署 Console 代理
 :hardbreaks:
@@ -58,7 +58,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
  a| 
 \ https://mysupport.netapp.com
  a| 
-获取许可信息并向NetApp支持发送AutoSupport消息。
+获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。
 
 
 
@@ -72,7 +72,7 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
  a| 
 \ https://support.netapp.com
  a| 
-获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
 
 
 
@@ -95,65 +95,10 @@ VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和�
 * 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
 
 
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-获取控制台代理升级的图像。
-
-* 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
-+
-尽管以前的端点仍然受支持，但NetApp建议尽快将防火墙规则更新到当前端点。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新终端节点列表"] 。
-
-* 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
-
-
-^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
-
-+ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
-
-
-
- a| 
-如果 Console 代理位于 AWS Government 区域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-在 AWS 政府区域中安装 Console 代理时，获取用于 Console 代理升级的映像。
-
-
-
- a| 
-如果 Console 代理位于 Azure Government 区域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-在 Azure Government 区域中安装 Console 代理时，获取用于 Console 代理升级的映像。
-
-
-
- a| 
-如果 Console 代理位于商业区域或主权区域，可以在两组端点之间进行选择：
-
-* 选项 1（推荐）^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-当 Console 代理安装在商业区域或主权区域时，获取用于 Console 代理升级的映像。
-
 |===
 --
 
 
-|*3.9.55 及更低版本的端点* | *4.0.0 及更高版本的端点* | *目的*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用于许可和联系 NetApp 支持。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用于日常操作。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 获取用于 Console 代理升级的映像。
-
-|===
-|===
 从NetApp控制台联系的端点:: 当您使用基于 Web 的 NetApp Console SaaS 应用程序时，它会联系多个端点以完成数据管理任务。这包括从 Console 部署 Console 代理时联系的端点。
 +
 --
@@ -300,8 +245,10 @@ includedPermissions:
 以下示例在项目级别创建一个名为“agentDeployment”的角色：
 
 +
-gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml
-
+[source, shell]
+----
+gcloud iam roles create agentDeployment --project=myproject --file=agent-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文档：创建和管理自定义角色"^]
 
@@ -461,13 +408,13 @@ NOTE: 在 Google Cloud 中部署代理时，代理会创建一个存储桶来存
 您应该具有以下内容：
 
 * 创建控制台代理所需的 Google Cloud 权限以及控制台代理虚拟机的服务帐号。
-* 满足组网需求的VPC及子网。
+* 满足网络要求的 VPC 和子网。
 * 如果控制台代理需要代理才能访问互联网，则提供有关代理服务器的详细信息。
 
 
 .步骤
 . 选择“*管理 > 代理*”。
-. 在“概览”页面上，选择“部署代理”>“Google Cloud”
+. 在 *概述* 页面上，选择 *部署代理 > Google Cloud*。
 . 在*部署代理*页面上，查看您需要的详细信息。您有两个选择：
 +
 .. 选择“*继续*”以使用产品内指南准备部署。产品内指南中的每个步骤都包含文档此页面上的信息。
@@ -483,8 +430,8 @@ NOTE: 在 Google Cloud 中部署代理时，代理会创建一个存储桶来存
 ** *详细信息*：输入虚拟机实例的名称，指定标签，选择项目，然后选择具有所需权限的服务帐户（有关详细信息，请参阅上面的部分）。
 ** *位置*：指定实例的区域、区域、VPC 和子网。
 ** *网络*：选择是否启用公共 IP 地址并选择性地指定代理配置。
-** *网络标签*：如果使用透明代理，则向控制台代理实例添加网络标签。网络标签必须以小写字母开头，并且可以包含小写字母、数字和连字符。标签必须以小写字母或数字结尾。例如，您可以使用标签“console-agent-proxy”。
-** *防火墙策略*：选择是否创建新的防火墙策略，或者是否选择允许所需入站和出站规则的现有防火墙策略。
+** *网络标签*：如果使用透明代理，则向 Console 代理实例添加网络标签。网络标签必须以小写字母开头，并且可以包含小写字母、数字和连字符。标签必须以小写字母或数字结尾。例如，您可以使用标签 `console-agent-proxy`。
+** *防火墙策略*：选择是创建新的防火墙策略，还是选择允许所需入站和出站规则的现有防火墙策略。
 +
 link:reference-ports-gcp.html["Google Cloud 中的防火墙规则"]
 
@@ -515,4 +462,4 @@ link:reference-ports-gcp.html["Google Cloud 中的防火墙规则"]
 
 NOTE: 如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
 
-如果您在创建控制台代理的同一 Google Cloud 帐户中拥有 Google Cloud Storage 存储桶，您将看到 Google Cloud Storage 系统自动出现在 *Systems* 页面上。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何通过控制台管理 Google 云端存储"]
+如果您在创建 Console 代理的同一个 Google Cloud 帐户中有 Google Cloud Storage 存储桶，则 Google Cloud Storage 系统会自动显示在*系统*页面上 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何通过控制台管理 Google 云端存储"^]。

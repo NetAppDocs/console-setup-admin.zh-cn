@@ -22,12 +22,12 @@
 
 | 管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
 
-| Amazon FsX for NetApp ONTAP：
+| Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
 
-| 基于 Web 的控制台通过此端点与 Workload Factory API 进行交互，以管理和操作基于ONTAP 的FSx 工作负载。
+| 基于 Web 的控制台联系此端点以与 Workload Factory API 进行交互，以管理和操作基于 FSx for ONTAP 的工作负载。
 
 | \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
 
@@ -49,7 +49,7 @@
 
 | 管理 Google Cloud 中的资源。
 
-| \ https://mysupport.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息。| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。| \ https://support.netapp.com | 获取许可信息并向NetApp支持发送AutoSupport消息以及接收Cloud Volumes ONTAP的软件更新。
+| https://mysupport.netapp.com | 用于获取许可信息并向 NetApp 支持发送 AutoSupport 消息。| https://signin.b2c.netapp.com | 用于更新 NetApp 支持站点 (NSS) 凭据或将新的 NSS 凭据添加到 NetApp Console。| https://support.netapp.com | 用于获取许可信息、向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
 
 | https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | 在 NetApp Console 中提供功能和服务。
 
@@ -87,8 +87,8 @@
 
 NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并禁止选项 2 端点，除非您使用勒索软件恢复或备份和恢复。请注意有关这些端点的以下事项：
 
-* 3.9.47 及更高版本支持选项 1 端点。  3.9.47 之前的版本不支持向后兼容。
-* 控制台代理首先启动与选项 2 中的端点的联系。如果这些端点不可访问，它会自动联系选项 1 中的端点。
+* 3.9.47 及更高版本支持选项 1 端点。3.9.47 之前的版本不支持向后兼容。
+* Console 代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。
 * 如果将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
 
 
@@ -102,7 +102,7 @@ a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.a
 * 当您更新到防火墙中的当前端点时，您现有的代理将继续工作。
 
 
-a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| 获取用于 Console 代理升级的映像。
+a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| 获取用于 Console 代理升级的映像。
 
 * 当您部署新代理时，验证检查会测试与当前端点的连接。如果你使用link:reference-networking-saas-console-previous.html["先前的端点"]，验证检查失败。为了避免此失败，请跳过验证检查。
 +
@@ -113,7 +113,7 @@ a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a
 
 ^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
 
-+ * 从控制台代理 3.9.47 版本开始，系统支持选项 1 中列出的端点。控制台代理的先前版本不支持向后兼容。 * 控制台代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。 * 如果您将控制台代理与NetApp Backup and Recovery或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点并不允许选项 1。
++ * 从 Console 代理的 3.9.47 版本开始，系统支持选项 1 中列出的端点。先前版本的 Console 代理不支持向后兼容性。* Console 代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。* 如果您将 Console 代理与 NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点，不允许选项 1。
 
 | 如果控制台代理位于 AWS 政府区域：\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
 
