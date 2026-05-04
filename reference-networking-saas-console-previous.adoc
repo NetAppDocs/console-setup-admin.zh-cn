@@ -82,6 +82,7 @@ NetApp建议更新防火墙规则以使用修订后的端点列表，该列表�
  a| 
 * \ https://bluexpinfraprod.eastus2.data.azurecr.io
 * \ https://bluexpinfraprod.azurecr.io
+* \https://occmclientinfragov.azurecr.us.io （如果在受限模式环境中）
 
 | 获取控制台代理升级的图像。 
 |===
