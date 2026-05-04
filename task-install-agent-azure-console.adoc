@@ -168,7 +168,7 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 
 控制台在 Azure 中部署控制台代理虚拟机，启用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系统分配的托管标识"^]，创建所需的角色，并将其分配给虚拟机。link:reference-permissions-azure.html["查看控制台如何使用权限"] 。
 
-请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤演示如何使用 Azure CLI 创建角色。如果您想使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]。
 
 .步骤
 . 复制 Azure 中新自定义角色所需的权限并将其保存在 JSON 文件中。
@@ -455,9 +455,9 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 .步骤
 . 选择“*管理 > 代理*”。
-. 在“概述”页面上，选择“部署代理”>“Azure”
+. 在*概述*页面上，选择*部署代理 > Azure*。
 . 在*审核*页面上，审核部署代理的要求。这些要求也在本页上方详细说明。
-. 在“虚拟机身份验证”页面上，选择与您设置 Azure 权限的方式相匹配的身份验证选项：
+. 在 *Virtual Machine Authentication* 页面上，选择与设置 Azure 权限方式匹配的身份验证选项：
 +
 ** 选择*登录*登录您的 Microsoft 帐户，该帐户应具有所需的权限。
 +
@@ -481,22 +481,19 @@ TIP: 如果您已经登录 Azure 帐户，则控制台会自动使用该帐户�
 
 . 在“虚拟机身份验证”页面上，选择 Azure 订阅、位置、新资源组或现有资源组，然后为您正在创建的控制台代理虚拟机选择一种身份验证方法。
 +
-虚拟机的身份验证方法可以是密码或 SSH 公钥。
++ 虚拟机的身份验证方法可以是密码或 SSH 公钥。
 
 +
-https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何连接到 Azure 中的 Linux VM"^]
++ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何连接到 Azure 中的 Linux VM"^]
 
-. 在“详细信息”页面上，输入代理的名称，指定标签，并选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色link:reference-permissions-azure.html["所需的权限"]。
+. 在 *详细信息* 页面上，输入代理的名称，指定标记，并选择是要 Console 创建具有所需权限的新角色，还是要选择使用 link:reference-permissions-azure.html["所需的权限"] 设置的现有角色。
 +
 请注意，您可以选择与此角色关联的 Azure 订阅。您选择的每个订阅都为控制台代理提供管理该订阅中的资源的权限（例如， Cloud Volumes ONTAP）。
 
 . 在“*网络*”页面上，选择 VNet 和子网，是否启用公共 IP 地址，并可选择指定代理配置。
-+
-** 在“安全组”页面上，选择是否创建新的安全组或是否选择允许所需入站和出站规则的现有安全组。
+. 在“安全组”页面上，选择是否创建新的安全组或是否选择允许所需入站和出站规则的现有安全组。
 +
 link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
-
-
 
 . 查看您的选择，确认您的设置正确无误。
 +

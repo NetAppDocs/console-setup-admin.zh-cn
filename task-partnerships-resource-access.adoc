@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-partnerships-resource-access.html 
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 您可以通过为合作伙伴用户分配组织内文件夹和项目的特定角色来授予他们访问权限。 
 ---
 = 为合作伙伴用户提供资源访问
@@ -27,7 +27,7 @@ summary: 您可以通过为合作伙伴用户分配组织内文件夹和项目�
 
 您可以按照管理自己的角色的方式来管理合作伙伴组织成员的角色。然而，并非所有角色都适合合作伙伴用户。特别是，您不能授予合作伙伴用户允许软件更新的角色。更新ONTAP软件通常需要直接网络访问。
 
-您可以为合作伙伴用户分配以下角色：
+您可以将以下角色分配给合作伙伴用户：
 
 * link:reference-iam-platform-roles.html#organization-admin-roles["组织管理员"]
 * link:reference-iam-platform-roles.html#organization-admin-roles["文件夹或项目管理员"]
@@ -61,7 +61,7 @@ link:reference-iam-predefined-roles.html["了解有关预定义角色的更多�
 . 选择*管理>身份和访问*。
 . 选择*合作伙伴关系*。
 . 选择*合作伙伴关系已启动*选项卡。
-. 选择操作菜单image:icon-action.png["带有三个垂直点的图标"]在您想要查看的已建立的合作关系旁边，选择“查看详细信息”。
+. 选择要查看的已建立合作伙伴关系旁边的操作菜单 image:icon-action.png["带有三个垂直点的图标"]，然后选择 *查看详细信息*。
 +
 *成员*列表显示合作伙伴组织已添加到合作伙伴关系的成员。
 
@@ -90,7 +90,7 @@ link:reference-iam-predefined-roles.html["了解有关预定义角色的更多�
 . 选择*管理>身份和访问*。
 . 选择*合作伙伴关系*。
 . 选择*合作伙伴关系已启动*选项卡。
-. 选择操作菜单image:icon-action.png["带有三个垂直点的图标"]在您想要查看的已建立的合作关系旁边，选择“查看详细信息”。
+. 选择要查看的已建立合作伙伴关系旁边的操作菜单 image:icon-action.png["带有三个垂直点的图标"]，然后选择 *查看详细信息*。
 +
 *成员*列表显示合作伙伴组织已添加到合作伙伴关系的成员。
 

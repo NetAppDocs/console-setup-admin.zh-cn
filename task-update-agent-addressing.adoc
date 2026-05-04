@@ -57,7 +57,7 @@ system configuration backup settings modify -destination <target-location>
 
 == 编辑代理的 URI
 
-如果您的网络要求发生变化，则更新 Console 代理的 URI。这可确保对存储基础架构进行不间断、安全且合规的管理。
+如果您的网络要求发生变化，请更新 Console 代理的 URI。这可确保对存储基础架构进行不间断、安全且合规的管理。
 
 .步骤
 . 选择“*管理 > 代理*”。

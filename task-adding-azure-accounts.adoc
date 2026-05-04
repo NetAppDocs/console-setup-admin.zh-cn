@@ -265,7 +265,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 
 .结果
-您的服务主体现已设置，您应该已经复制了应用程序（客户端）ID、目录（租户）ID 和客户端机密的值。添加 Azure 帐户时，您需要在控制台中输入此信息。
+您的服务主体现已设置完毕，您应该已经复制了应用程序（客户端）ID、目录（租户）ID 和客户端机密的值。添加 Azure 帐户时，您需要在控制台中输入此信息。
 
 
 
@@ -297,7 +297,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 
 .结果
-您可以从“详细信息和凭证”页面切换到另一组凭证 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["将系统添加到控制台时"^]
+您可以从"详细信息和凭据"页面切换到其他凭据集 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["将系统添加到控制台时"^]。
 
 image:screenshot_accounts_switch_azure.gif["屏幕截图显示在“详细信息和凭证”页面中选择“编辑凭证”后在凭证之间进行选择。"]
 

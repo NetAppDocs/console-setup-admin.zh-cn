@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations.html 
-keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, Cloud Volumes ONTAP, days, running,  imdsv2, https tokens, Console agent 
 summary: 已知限制标识了该产品的此版本不支持或不能与其正确互操作的平台、设备或功能。仔细审查这些限制。 
 ---
 = NetApp Console的已知限制
@@ -16,7 +16,7 @@ summary: 已知限制标识了该产品的此版本不支持或不能与其正�
 [role="lead"]
 已知限制标识了该产品的此版本不支持或不能与其正确互操作的平台、设备或功能。仔细审查这些限制。
 
-这些限制是NetApp Console和管理设置特有的：代理、软件即服务 (SaaS) 平台等等。
+这些限制特定于 NetApp Console 和管理的设置：代理、软件即服务 (SaaS) 平台等。
 
 
 

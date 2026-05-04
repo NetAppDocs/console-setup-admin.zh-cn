@@ -16,13 +16,13 @@ summary: 勒索软件恢复力提供不同的用户角色来管理对设置、�
 [role="lead"]
 勒索软件恢复角色为用户提供对NetApp Ransomware Resilience的访问权限。勒索软件恢复能力支持以下角色：
 
-**基线角色**
+*基准角色*
 
 * 勒索软件恢复管理员 - 配置勒索软件恢复设置；调查并响应加密警报
 * 勒索软件恢复力查看器 - 查看加密事件、报告和发现设置
 
 
-**用户行为活动角色**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用户活动检测"^]警报提供对文件活动事件等数据的可见性；这些警报包括文件名和用户执行的文件操作（例如读取、写入、删除、重命名）。为了限制这些数据的可见性，只有具有这些角色的用户才能管理或查看这些警报。
+*用户行为活动角色* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用户活动检测"^] 警报提供对文件活动事件等数据的可见性；这些警报包括文件名和用户执行的文件操作（如读取、写入、删除、重命名）。为了限制此数据的可见性，只有具有这些角色的用户才能管理或查看这些警报。
 
 * 勒索软件恢复用户行为管理员 - 激活可疑用户活动检测，调查并响应可疑用户活动警报
 * 勒索软件恢复用户行为查看器 - 查看可疑用户活动警报
@@ -309,7 +309,7 @@ NOTE: 用户行为角色不是独立角色；它们旨在添加到勒索软件�
 
 要配置可疑用户行为设置并响应警报，用户必须具有勒索软件恢复用户行为管理员角色。要仅查看可疑用户行为警报，用户应具有勒索软件恢复用户行为查看者角色。
 
-应将用户行为角色授予具有现有勒索软件恢复管理员或查看者权限且需要访问link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用户活动设置和警报"^]。例如，具有勒索软件恢复管理员角色的用户应该获得勒索软件恢复用户行为管理员角色来配置用户活动代理并阻止或解除阻止用户。不应将勒索软件恢复用户行为管理员角色授予勒索软件恢复查看者。
+应将用户行为角色授予需要访问 link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用户活动设置和警报"^] 的现有 Ransomware Resilience 管理员或查看者权限的用户。例如，具有 Ransomware Resilience 管理员角色的用户应获得 Ransomware Resilience 用户行为管理员角色，以配置用户活动代理并阻止或取消阻止用户。不应将 Ransomware Resilience 用户行为管理员角色授予 Ransomware Resilience 查看器。
 
 
 NOTE: 要激活可疑用户活动检测，您必须具有控制台组织管理员角色。

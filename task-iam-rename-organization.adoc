@@ -8,9 +8,10 @@ summary: 如果需要，您可以更改NetApp Console组织的名称。
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
-:icons: font
+:icons: 
 :linkattrs: 
 :imagesdir: ./media/
+:icontype: fontapp
 
 
 [role="lead"]
@@ -20,14 +21,14 @@ summary: 如果需要，您可以更改NetApp Console组织的名称。
 
 == 重命名您的组织
 
-您可以重命名您的组织。如果您支持的不仅仅是组织，这将很有帮助。
+您可以重命名组织。如果您支持多个组织，这将非常有用。
 
 .步骤
 . 选择*管理>身份和访问*。
 . 选择*组织*。
 . 从“组织”页面，导航到表格的第一行，选择image:icon-action.png["三个并排的点组成的图标"]然后选择*编辑组织*。
 +
-image:screenshot-iam-edit-organization.png["概览页面的屏幕截图，显示操作图标和编辑组织选项。"]
+image:screenshot-iam-edit-organization.png["显示操作图标和\"编辑组织\"选项的组织页面的屏幕截图。"]
 
 . 输入新的组织名称并选择*应用*。
 

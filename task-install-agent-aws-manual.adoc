@@ -498,7 +498,7 @@ Amazon FSx for NetApp ONTAP：
 .. 选择 *JSON* 并复制并粘贴内容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
 .. 完成剩余步骤以创建策略。
 +
-根据您计划使用的NetApp数据服务，您可能需要创建第二个策略。对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，因此需要两个策略。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"] 。
+根据您计划使用的 NetApp 数据服务，您可能需要创建第二个策略。对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，需要两个策略。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"]。
 
 
 
@@ -695,7 +695,7 @@ https://_ipaddress_[]
 
 
 
-如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何通过NetApp ConsoleP 管理 S3 存储桶"^]
+如果您在创建 Console 代理的同一 AWS 帐户中有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动显示在 *Systems* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp Console管理 S3 存储桶"^]
 
 
 

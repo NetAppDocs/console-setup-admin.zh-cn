@@ -456,7 +456,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 --
 .Azure 服务主体
 --
-向NetApp Console提供您之前设置的 Azure 服务主体的凭据。
+向 NetApp Console 提供之前设置的 Azure 服务主体的凭据。
 
 .步骤
 . 选择“*管理 > 凭证*”。
@@ -477,7 +477,7 @@ NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色�
 
 
 .结果
-NetApp Console现在具有代表您在 Azure 中执行操作所需的权限。
+NetApp Console 现在具有代表您在 Azure 中执行操作所需的权限。
 
 --
 .Google Cloud 服务帐号

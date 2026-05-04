@@ -100,7 +100,7 @@ link:task-install-agent-aws-marketplace.html["从市场在 AWS 中部署 Console
 
  a| 
 * 任何部署方法的大多数步骤。您必须准备主机，安装 Podman 或 Docker，配置网络，安装软件，并手动提供权限
-* * 部署在 NetApp Console 外部启动，因此无法使用引导工作流程
+* 部署是在 NetApp Console 外部启动的，因此引导工作流程不可用
 
 
 |===
@@ -108,9 +108,9 @@ link:task-install-agent-aws-manual.html["在 AWS 中手动安装 Console 代理"
 
 
 
-== 使用 VCenter (OVA) 手动安装本地
+== 使用 vCenter (OVA) 手动安装本地
 
-如果使用 VMware VCenter，则可以通过导入 OVA（Open Virtual Appliance）文件来部署 Console 代理。OVA 是使用 vSphere 客户端部署的预配置虚拟机映像，无需安装 Linux 或配置容器运行时。
+如果使用 VMware vCenter，则可以通过导入 OVA（Open Virtual Appliance）文件来部署 Console 代理。OVA 是使用 vSphere 客户端部署的预配置虚拟机映像，无需安装 Linux 或配置容器运行时。
 
 在以下情况下选择此方法：
 
@@ -131,24 +131,24 @@ NOTE: 无法从本地 Console 代理管理 Google Cloud 资源。要管理 Googl
 * 仅限本地；不适用于云部署
 * 包括用于代理维护任务的菜单驱动型维护控制台
 * VMware 管理员熟悉的部署工作流程
-* * 预配置的 VM 映像有助于防止错误并使维护更容易
+* 预配置的 VM 映像有助于防止错误并使维护更容易
 
  a| 
-* 需要 VCenter；无法直接安装在裸 ESXi 主机上
+* 需要 vCenter；不能直接安装在裸 ESXi 主机上
 
 
 |===
-link:task-install-agent-on-prem-ova.html["使用 VCenter 部署本地"]
+link:task-install-agent-on-prem-ova.html["使用 vCenter 部署本地"]
 
 
 
-== 手动安装本地（不使用 VCenter）
+== 手动安装本地（不使用 vCenter）
 
 您可以在任何本地 Linux 主机上手动安装 Console 代理。您必须设置 Linux 主机和容器运行时（Docker 或 Podman），然后安装 Console 代理。
 
 在以下情况下选择此方法：
 
-* 您正在本地部署，但没有 VMware VCenter 环境。
+* 您正在本地部署，但没有 VMware vCenter 环境。
 * 您熟悉 Linux 管理并希望自己管理底层主机。
 * 您希望控制何时升级 Console 代理。
 

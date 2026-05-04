@@ -27,7 +27,7 @@ NetApp Console中的身份和访问管理 (IAM) 提供了预定义的角色，�
 | 平台角色 | 职责 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["组织管理员"] | 允许用户不受限制地访问组织内的所有项目和文件夹，向任何项目或文件夹添加成员，以及执行任何任务和使用任何没有明确关联角色的数据服务。具有此角色的用户可以通过创建文件夹和项目、分配角色、添加用户以及管理系统（如果他们拥有适当的凭据）来管理您的组织。这是唯一可以创建控制台代理的访问角色。 
+| link:reference-iam-platform-roles.html#organization-admin-roles["组织管理员"] | 允许用户无限制地访问组织内的所有项目和文件夹。可以将成员添加到任何项目或文件夹，以及执行任何任务和使用任何不具有与其关联的显式角色的数据服务。具有此角色的用户通过创建文件夹和项目、分配角色、添加用户以及管理具有正确凭据的系统来管理您的组织。这是唯一可以创建 Console 代理的访问角色。 
 
 
 | link:reference-iam-platform-roles.html#organization-admin-roles["文件夹或项目管理员"] | 允许用户不受限制地访问分配的项目和文件夹。可以将成员添加到他们管理的文件夹或项目中，以及执行任何任务并在他们被分配的文件夹或项目内的资源上使用任何数据服务或应用程序。文件夹或项目管理员无法创建控制台代理。 
@@ -48,7 +48,7 @@ NetApp Console中的身份和访问管理 (IAM) 提供了预定义的角色，�
 | link:reference-iam-platform-roles.html#super-admin-roles["超级管理员"] | 为用户提供管理员角色的子集。此角色专为可能不需要在多个用户之间分配控制台职责的小型组织而设计。 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["超级观众"] | 为用户提供子集查看者角色。此角色专为可能不需要在多个用户之间分配控制台职责的小型组织而设计。 
+| link:reference-iam-platform-roles.html#super-admin-roles["超级观众"] | 为用户提供查看者角色的子集。此角色专为不需要跨多个用户分配 Console 职责的小型组织设计。 
 |===
 
 
@@ -104,10 +104,10 @@ NetApp Console中的身份和访问管理 (IAM) 提供了预定义的角色，�
 | link:reference-iam-backup-rec-roles.html["备份和恢复管理员"] | 执行本地快照备份、复制到二级存储以及备份到对象存储。 
 
 
-| link:reference-iam-backup-rec-roles.html["备份和恢复恢复管理员"] | 恢复备份和恢复中的工作负载。 
+| link:reference-iam-backup-rec-roles.html["备份和恢复恢复管理员"] | 在 Backup and Recovery 中还原工作负载。 
 
 
-| link:reference-iam-backup-rec-roles.html["备份和恢复克隆管理员"] | 在备份和恢复中克隆应用程序和数据。 
+| link:reference-iam-backup-rec-roles.html["备份和恢复克隆管理员"] | 在 Backup and Recovery 中克隆应用程序和数据。 
 
 
 | link:reference-iam-backup-rec-roles.html["备份和恢复查看器"] | 查看备份和恢复信息。 

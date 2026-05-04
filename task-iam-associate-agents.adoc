@@ -19,7 +19,7 @@ summary: 如果您组织的成员需要在另一个项目中使用控制台代�
 超级管理员和组织管理员可以创建代理，并将任何代理与任何项目或文件夹关联起来。文件夹或项目管理员只能将现有代理与他们拥有权限的文件夹和项目关联起来。link:reference-iam-predefined-roles.html["详细了解文件夹或项目管理员可以完成的操作"]。
 
 
-NOTE: 具有 Org admin 角色的用户可以将资源添加到文件夹，以将资源与项目关联的任务委托给相应文件夹的 Folder 或 project adminslink:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何将资源与文件夹关联"]。
+NOTE: 具有 Org admin 角色的用户可以向文件夹添加资源，以将资源与项目关联的任务委托给相应文件夹的 Folder 或 project admin。link:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何将资源与文件夹关联"].
 
 .步骤
 . 选择*管理>身份和访问*>*代理*。

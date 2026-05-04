@@ -30,7 +30,7 @@ NOTE: 在与其管理的 Cloud Volumes ONTAP 系统相同的 Azure 区域或在 
 
 == 步骤 1：设置网络
 
-确保您计划安装控制台代理的网络位置支持以下要求。这些要求使控制台代理能够管理混合云中的资源。
+确保计划安装 Console 代理的网络位置支持以下要求。这些要求使 Console 代理能够管理混合云中的资源。
 
 Azure 区域:: 如果您使用Cloud Volumes ONTAP，则控制台代理应部署在与其管理的Cloud Volumes ONTAP系统相同的 Azure 区域中，或者部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 区域对"^]适用于Cloud Volumes ONTAP系统。此要求确保在Cloud Volumes ONTAP及其关联的存储帐户之间使用 Azure Private Link 连接。
 +
@@ -417,7 +417,7 @@ https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-onco
 +
 link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
 
-** 身份*：在*管理*下，选择*启用系统分配的托管身份*。
+** *身份*：在*管理*下，选择*启用系统分配的托管身份*。
 +
 此设置很重要，因为托管身份允许控制台代理虚拟机向 Microsoft Entra ID 标识自己，而无需提供任何凭据。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["详细了解 Azure 资源的托管标识"^] 。
 
@@ -449,7 +449,7 @@ https://_ipaddress_[]
 
 
 .结果
-现在您已经安装了控制台代理并将其与您的控制台组织一起设置。
+您现在已安装 Console 代理并使用 Console 组织对其进行了设置。
 
 如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何从控制台管理 Azure Blob 存储"^]
 

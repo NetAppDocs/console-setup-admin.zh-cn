@@ -20,7 +20,7 @@ summary: 当 Console 代理具有出站连接时，它会自动升级。如果�
 
 == 升级控制台代理
 
-控制台代理需要在升级过程中重新启动，因此NetApp Console在升级期间将不可用。
+控制台代理需要在升级过程中重新启动，因此 NetApp Console 在升级期间将不可用。
 
 .步骤
 . 从下载控制台代理软件 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支持站点"^]。

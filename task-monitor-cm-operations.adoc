@@ -154,7 +154,7 @@ image:screenshot_notification_filters.png["屏幕截图显示了通知中心中�
 您必须具有组织管理员角色才能自定义通知设置。
 
 .步骤
-. 选择*管理>通知设置*。
+. 选择 *Administration > Notifications settings*。
 . 选择*组织用户*或*其他收件人*。
 +
 *其他收件人*页面允许您配置控制台以通知控制台组织的成员。

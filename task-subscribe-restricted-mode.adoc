@@ -28,7 +28,7 @@ summary: 从您的云提供商市场订阅NetApp Intelligent Services，以按�
 NetApp Data Classification可通过您的订阅启用，但使用分类是免费的。
 
 .开始之前
-您必须已经部署控制台代理才能订阅数据服务。您需要将市场订阅与连接到控制台代理的云凭据关联起来。
+您必须已部署 Console 代理以订阅数据服务。您需要将市场订阅与连接到 Console 代理的云凭据相关联。
 
 [role="tabbed-block"]
 ====

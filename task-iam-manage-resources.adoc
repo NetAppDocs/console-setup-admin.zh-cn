@@ -30,7 +30,7 @@ summary: 通过将用户添加到NetApp Console组织中的项目和文件夹来
 +
 --
 
-NOTE: 具有 Org admin 角色的用户可以将资源添加到文件夹，以将资源与项目关联的任务委托给相应文件夹的 Folder 或 project adminslink:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何将资源与文件夹关联"]。
+NOTE: 具有 Org admin 角色的用户可以向文件夹添加资源，以将资源与项目关联的任务委托给相应文件夹的 Folder 或 project admin。link:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何将资源与文件夹关联"].
 
 --
 控制台代理:: 如果使用 Console 代理来发现存储系统，请将该代理添加到与存储系统相同的项目中。这允许用户执行启用代理的功能，例如数据服务或 Console 本机存储管理。您可以从 Console 的 *Agents* 页面向项目添加代理。link:task-iam-associate-agents.html["了解如何将 Console 代理与项目关联"]。
@@ -86,7 +86,7 @@ NOTE: 控制台会将Amazon FSx for NetApp ONTAP资源从“资源”页面中�
 .完成后
 如果您使用控制台代理发现资源，请将控制台代理与项目关联以授予访问权限。否则，没有“组织管理员”角色的成员将无法访问控制台代理及其相关资源。
 
-link:task-iam-associate-connectors.html["了解如何将控制台代理与文件夹或项目关联"]。
+link:task-iam-associate-agents.html["了解如何将控制台代理与文件夹或项目关联"] 。
 
 
 

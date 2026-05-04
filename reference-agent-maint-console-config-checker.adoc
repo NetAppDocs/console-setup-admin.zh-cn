@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-config-checker.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
-summary: 您可以使用控制台代理维护控制台来配置控制台代理以使用透明代理服务器。 
+keywords: agent maintenance console, agent troubleshooting, network connectivity validation, agent validation, hardware requirements, deployment readiness, operational compliance, installation troubleshooting 
+summary: 您可以使用控制台代理维护控制台来验证控制台代理的安装和配置。 
 ---
 = 使用 NetApp Console 中的维护控制台进行控制台代理验证
 :hardbreaks:
@@ -20,7 +20,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 == 访问代理维护控制台
 
-您可以从控制台代理主机访问维护控制台。导航到以下目录：
+您可以从 Console 代理主机访问维护控制台。导航到以下目录：
 
 [source, cli]
 ----
@@ -41,9 +41,10 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 [role="quick-margin-para"]
 选择一个或多个要验证的服务。有效的服务名称是：
 
-*`PLATFORM` 它验证到所需 Console 端点的网络连接，以及 Console 代理所需的端口是否已打开。
+* `PLATFORM` 它验证到所需 Console 端点的网络连接，以及 Console 代理所需的端口是否已打开。
 
-`--validationTypes <comma-separated list validation types to run>` --*必填*-- 从一个或多个要运行的验证类型中进行选择。有效的验证类型为：
+
+`--validationTypes <comma-separated list of validation types to run>` --*必填*-- 从一个或多个要运行的验证类型中进行选择。有效的验证类型为：
 
 * `NETWORK` 验证到所需 Console 端点的网络连接。
 * `HARDWARE` 验证代理主机是否满足 Console 代理的最低硬件要求。

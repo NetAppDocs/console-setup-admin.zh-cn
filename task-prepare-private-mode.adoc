@@ -408,7 +408,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 * 凭据
 * HTTPS 证书
 +
-在私有模式下，NetApp Console 向您的云提供商发送出站流量的唯一时间是为了创建 Cloud Volumes ONTAP 系统。
+在私有模式下，NetApp Console 向您的云提供商发送出站流量的唯一时间是创建 Cloud Volumes ONTAP 系统。
 
 
 
@@ -497,7 +497,7 @@ HTTP (80) 和 HTTPS (443) 提供对 NetApp Console 的访问。如果您需要�
 --
 创建具有所需权限的 Azure 自定义角色。将此角色分配给 Console 代理 VM。
 
-请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤展示如何使用 Azure CLI 创建角色。如果您希望使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]
+请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤演示如何使用 Azure CLI 创建角色。如果您想使用其他方法，请参阅 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文档"^]。
 
 .步骤
 . 在计划安装 Console 代理的虚拟机上启用系统分配的托管标识，以便可以通过自定义角色提供所需的 Azure 权限。
@@ -688,7 +688,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 
 .结果
-您的服务主体现在已设置，您应该已经复制了应用程序（客户端） ID、目录（租户） ID 和客户端密钥的值。在添加 Azure 凭据时，请在 NetApp Console 中输入此信息。
+您的服务主体现已设置，您应该已经复制了应用程序（客户端） ID、目录（租户） ID 和客户端密钥的值。添加 Azure 凭据时，在 NetApp Console 中输入此信息。
 
 --
 .Google Cloud 服务帐号

@@ -20,9 +20,9 @@ summary: 您可以使用NetApp Console管理 AWS 凭证和市场订阅，通过�
 
 == 初始 AWS 凭证
 
-从控制台部署控制台代理时，您需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台代理的权限。所需权限列于表中link:task-install-agent-aws-console.html#aws-permissions-agent["AWS代理部署策略"]。
+从 Console 部署 Console 代理时，需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署 Console 代理的权限。所需的权限列在link:task-install-agent-aws-console.html#aws-permissions-agent["AWS代理部署策略"]中。
 
-当控制台在 AWS 中启动控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。link:reference-permissions-aws.html["查看代理如何使用权限"]。
+当 Console 在 AWS 中启动 Console 代理时，它会为代理创建 IAM 角色和配置文件。它还附加了一个策略，该策略为 Console 代理提供管理该 AWS 帐户内的资源和流程的权限。link:reference-permissions-aws.html["查看代理如何使用权限"]。
 
 image:diagram_permissions_initial_aws.png["显示在 AWS 账户中部署控制台代理的控制台的概念图。"]
 
@@ -30,7 +30,7 @@ image:diagram_permissions_initial_aws.png["显示在 AWS 账户中部署控制�
 
 image:screenshot_accounts_select_aws.gif["显示“详细信息和凭证”页面中的“切换帐户”选项的屏幕截图。"]
 
-使用初始 AWS 凭证部署所有Cloud Volumes ONTAP系统，或者您可以添加其他凭证。
+您可以使用初始 AWS 凭据部署所有 Cloud Volumes ONTAP 系统，也可以添加其他凭据。
 
 
 
@@ -131,7 +131,7 @@ link:task-adding-aws-accounts.html#subscribe["了解如何关联 AWS 订阅"] �
 
 === 凭证如何用于市场部署和本地部署？
 
-以上部分描述了控制台代理的推荐部署方法，即从控制台部署。您还可以从 AWS Marketplace 在 AWS 中部署代理，也可以在您自己的 Linux 主机或 VCenter 中手动安装控制台代理软件。
+以上各节介绍了 Console 代理的建议部署方法，该方法来自 Console。您还可以从 AWS Marketplace 在 AWS 中部署代理，也可以在您自己的 Linux 主机或 vCenter 中手动安装 Console 代理软件。
 
 如果您使用市场，则权限以相同的方式提供。您只需手动创建和设置 IAM 角色，然后为任何其他帐户提供权限。
 

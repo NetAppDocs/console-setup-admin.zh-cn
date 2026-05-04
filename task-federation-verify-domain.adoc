@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-verify-domain.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 您只能使用已验证的域进行联合。如果您想与不同于您的电子邮件域的域联合，您必须首先验证您拥有该域。您只能使用已验证的域进行联合。 
+summary: 如果要使用与电子邮件域不同的域进行联盟，则必须首先验证您是否拥有该域。您只能将已验证的域用于联盟。 
 ---
 = 验证联合连接的电子邮件域
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: 您只能使用已验证的域进行联合。如果您想与不同于�
 
 
 [role="lead"]
-如果您想要与不同于您的电子邮件域的域联合，您必须首先验证您拥有该域。您只能使用已验证的域进行联合。
+如果要使用与电子邮件域不同的域进行联盟，则必须首先验证您是否拥有该域。您只能将已验证的域用于联盟。
 
 .必需角色
-需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+创建和管理联合身份验证需要 Federation 管理员角色。Federation 查看器可以查看 Federation 页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 
 验证您的域名涉及向您的域名的 DNS 设置添加 TXT 记录。此记录用于证明您拥有该域并允许NetApp Console信任该域进行联合。您可能需要与您的 IT 或网络管理员协调来完成此步骤。
 
-例如，如果使用 Microsoft Entra ID，则可以按照 Microsoft 文档中的步骤进行操作link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["使用 Microsoft Entra ID 添加域"]。
+例如，如果使用 Microsoft Entra ID，则可以按照 Microsoft 文档中的步骤进行操作 https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["使用 Microsoft Entra ID 添加域"^]。
 
 .步骤
 . 选择*管理>身份和访问*。

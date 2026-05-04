@@ -14,7 +14,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp Console具有在您的 AWS �
 
 
 [role="lead"]
-添加和管理 AWS 凭证，以便您从NetApp Console部署和管理 AWS 帐户中的云资源。如果您管理多个 AWS Marketplace 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。
+添加和管理 AWS 凭据，以便您可以从 NetApp Console 部署和管理 AWS 账户中的云资源。如果您管理多个 AWS Marketplace 订阅，则可以从凭据页面将每个订阅分配给不同的 AWS 凭据。
 
 
 
@@ -99,7 +99,7 @@ NOTE: 如果您从控制台部署了控制台代理，它会自动为您部署�
 
 ==== 通过提供 AWS 密钥授予权限
 
-如果您想为 IAM 用户提供带有 AWS 密钥的控制台，则需要向该用户授予所需的权限。控制台 IAM 策略定义了控制台允许使用的 AWS 操作和资源。
+如果要为 IAM 用户提供具有 AWS 密钥的 Console，则需要向该用户授予所需的权限。Console IAM 策略定义允许 Console 使用的 AWS 操作和资源。
 
 如果本地安装了控制台代理，则必须使用此身份验证方法。您不能使用 IAM 角色。
 
@@ -189,7 +189,7 @@ image:screenshot_accounts_switch_aws.png["屏幕截图显示在“详细信息�
 }
 ----
 +
-参考link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS 身份和访问管理 (IAM) 文档"^]有关 IAM 中跨账户资源访问的更多信息。
+有关 IAM 中跨帐户资源访问的更多信息，请参见 link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management (IAM) 文档"^]。
 
 ** 创建一个包含创建控制台代理所需权限的策略。
 +
@@ -212,7 +212,7 @@ IAM 角色现在具有所需的权限。<<add-the-credentials,您现在可以将
 为 IAM 角色提供所需的权限后，将角色 ARN 添加到控制台。
 
 .开始之前
-如果您刚刚创建了 IAM 角色，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。
+如果您刚刚创建了 IAM 角色，则可能需要几分钟才能使用它。请稍等几分钟，然后将凭据添加到 Console。
 
 .步骤
 . 选择“*管理 > 凭证*”。
@@ -232,7 +232,7 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 
 == 向Amazon FSx for ONTAP控制台添加凭证
 
-有关详细信息，请参阅 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 的控制台文档"^]
+有关详细信息，请参阅  https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 控制台文档"^]
 
 
 
@@ -292,7 +292,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 
 == 将现有订阅与您的组织关联
 
-当您从 AWS Marketplace 订阅时，流程的最后一步是将订阅与您的组织关联。如果您没有完成此步骤，那么您就无法在您的组织中使用该订阅。
+从 AWS Marketplace 订阅时，流程中的最后一步是将订阅与您的组织关联。如果您未完成此步骤，则无法将订阅用于您的组织。
 
 * link:concept-modes.html["了解控制台部署模式"]
 * link:concept-identity-and-access-management.html["了解控制台身份和访问管理"]

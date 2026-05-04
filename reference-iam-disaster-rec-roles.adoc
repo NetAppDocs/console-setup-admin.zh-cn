@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-iam-disaster-rec-roles.html 
-keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
+keywords: disaster recovery, role-based access control, failover admin, replication plans, job monitoring, business continuity, compliance management, operational governance, access delegation, rbac, IAM roles 
 summary: 您可以为用户分配以下角色，以便他们访问控制台内的NetApp Disaster Recovery。灾难恢复角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。 
 ---
 = NetApp Console中的NetApp Disaster Recovery角色

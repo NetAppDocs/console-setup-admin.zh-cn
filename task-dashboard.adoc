@@ -39,7 +39,7 @@ NOTE: 主页上的准确指标需要适当大小和配置的控制台代理。
 
 如果您没有访问窗格的权限，该窗格会显示一条消息，表明您没有使用该窗格的权限。
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解NetApp Console访问角色。"] 。
+link:reference-iam-predefined-roles.html["了解NetApp Console访问角色"]。
 
 .步骤
 . 从NetApp Console菜单中，选择 *主页*。

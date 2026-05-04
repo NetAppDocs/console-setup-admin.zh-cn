@@ -981,7 +981,6 @@
   <block id="3f466a41e365e816f063997e9ea5af63" category="paragraph">如果您添加新的Cloud Volumes ONTAP系统，控制台将默认选择以下 AWS 凭证：</block>
   <block id="98c16c747c940667876d314b6eb47dba" category="inline-image-macro">显示“详细信息和凭证”页面中的“切换帐户”选项的屏幕截图。</block>
   <block id="e39fac9d22fb901a8fb8b7118de8c4e7" category="paragraph"><block ref="e4d4efd6d9bbb3c296b1c319bd5c65f5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="46483ba96fe3c90ee9ae2be631fa9be3" category="paragraph">使用初始 AWS 凭证部署所有Cloud Volumes ONTAP系统，或者您可以添加其他凭证。</block>
   <block id="59cf740f037c70fa5f9d43001aabf6b9" category="section-title">额外的 AWS 凭证</block>
   <block id="486ebb98338c3a4ed24b089d033146b2" category="paragraph">在以下情况下，您可能会向控制台添加其他 AWS 凭证：</block>
   <block id="4f792f15a23b6696cebf72dd0355d408" category="list-text">在特定 AWS 账户中创建新代理</block>
@@ -1138,13 +1137,10 @@
   <block id="c2e95c6a48fbf11a14fe5caa4ff899bc" category="paragraph">要与不同于您的电子邮件域的域联合，请验证您拥有该域。您无需任何额外步骤即可联合您的电子邮件域。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="3b7b59f484394c5f795c6658135940dc" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>配置您的 IdP 以信任NetApp作为服务提供商</block>
-  <block id="7bf56a98e829b0deb55d204390027ef0" category="paragraph">通过创建新应用程序并提供 ACS URL、实体 ID 或其他凭证信息等详细信息，将您的身份提供商配置为信任NetApp 。服务提供商信息因身份提供商而异，因此请参阅特定身份提供商的文档以了解详细信息。您需要与您的 IdP 管理员合作来完成此步骤。</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
   <block id="b00c563b9a6a566a63e04ee015b38b4e" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>在控制台中创建联合连接</block>
   <block id="d94de122053fa91189afa2bad4db2d0c" category="paragraph">提供来自身份提供商的 SAML 元数据 URL 或文件以创建连接。此信息用于建立控制台和您的身份提供者之间的信任关系。您提供的信息取决于您使用的 IdP。例如，如果您使用 Microsoft Entra ID，则需要提供客户端 ID、密钥和域。</block>
-  <block id="ac06600359e4a95bec97cb0aa7749466" category="paragraph-title"><block ref="d5b760e3b486da6aca46a9bd83d66c13" category="inline-image-macro-rx" type="image"></block>在控制台中测试您的联盟</block>
   <block id="995b0a469f6f6243977462e753ae05da" category="paragraph">在启用联合连接之前对其进行测试。使用控制台中联合页面上的测试选项来验证您的测试用户是否可以成功进行身份验证。如果测试成功，则可以启用连接。</block>
-  <block id="6350c75317bf3a6a382ca51f7f21d612" category="paragraph-title"><block ref="3fb1f11a25837416d87a2007da1d76e6" category="inline-image-macro-rx" type="image"></block>在控制台中启用您的连接</block>
   <block id="de1943b4a42a516fe3f0157be7b5952f" category="paragraph">启用连接后，用户可以使用其公司凭证登录控制台。</block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">了解NetApp Console身份和访问管理</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">_组织管理员_可以将资源与文件夹关联，以便_文件夹或项目管理员_可以将其链接到文件夹中的相应项目。</block>
@@ -1198,7 +1194,6 @@
   <block id="d6ec275d37a7d519496b7320d23bf53b" category="list-text">代理支持的位置</block>
   <block id="bd521aa973861d923b4649240bf09964" category="list-text">用户界面访问</block>
   <block id="dfc681a401aa380af2d5dd63fa34b846" category="list-text">API 调用针对以下端点：\ https://api.bluexp.netapp.com</block>
-  <block id="b2ce5bd121d305ac0ecc172108bef162" category="list-text">标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的NetApp数据服务。查看每项服务的文档以了解有关可用许可选项的更多信息。</block>
   <block id="2933440e5a2b9f3dfe1286c45aa72fbf" category="list-text">如何开始使用标准模式</block>
   <block id="caf8c4952c4000aefa6a8a822422c0b8" category="list-text">前往<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>并注册。</block>
   <block id="e9fd7484e38200d8baa6e573d1d7294a" category="inline-link-macro">了解如何开始使用标准模式</block>
@@ -1339,11 +1334,9 @@
   <block id="f76b4c57c56377745199382d59cdeed3" category="paragraph">这些服务依赖于docker运行时服务的运行</block>
   <block id="846c386cf81542225b98b6f2bb22ac66" category="summary">您可以使用控制台代理维护控制台来配置控制台代理以使用透明代理服务器。</block>
   <block id="64a20b3b93e3313beb44e4cdfaa3fc62" category="section-title">访问代理维护控制台</block>
-  <block id="54b21d666b59ebab4d006b20d3923a8a" category="paragraph">您可以从控制台代理主机访问维护控制台。导航到以下目录：</block>
   <block id="d55c6a8d11c5ba3e1a749110d08d13a0" category="paragraph">要添加透明代理服务器，请使用以下命令，其中<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block>是代理服务器证书文件的路径。证书文件必须为 PEM 格式：</block>
   <block id="2dfbed833348a18ef6acd6126802e582" category="paragraph">确保证书文件与命令位于同一目录中，或者指定证书文件的完整路径。</block>
   <block id="7e3520831eb4f49402b5e66b7de0cf9b" category="paragraph">要更新透明代理服务器的证书，请使用以下命令，其中<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block>是代理服务器的新证书文件的路径。证书文件必须为 PEM 格式：</block>
-  <block id="0bddca9be37ec136c74bc13d67a2327c" category="paragraph">要删除透明代理服务器，请使用以下命令：</block>
   <block id="e73e4a152d192531e90aca4120b4f30b" category="section-title">查看任何命令的帮助</block>
   <block id="6e59373a630740150c04aaac47bb0503" category="paragraph">要查看任何命令的帮助，请附加<block ref="0c113ca6d57519b559ba5a426be3c6b6" prefix=" " category="inline-code"></block>到命令。例如，要查看<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>命令，使用以下命令：</block>
   <block id="44f51c4ac8fa1a6f53f07c0c2f751b69" category="open-title">私人模式</block>
@@ -1383,12 +1376,7 @@
   <block id="d8242f460ba07545cc4fc280abc24dfd" category="doc">NetApp Console中的NetApp Backup and Recovery角色</block>
   <block id="451228b79a76a54f6c3a4a5d5af0ec52" category="paragraph">该服务使用特定于NetApp Backup and Recovery 的以下角色。</block>
   <block id="8522e2f14782589c21835c86cf65bebb" category="list-text">*备份和恢复超级管理员*：在NetApp Backup and Recovery中执行任何操作。</block>
-  <block id="532354fdc6bd2980f132e1d07fa7aa5f" category="list-text">*备份和恢复备份管理员*：在NetApp Backup and Recovery中执行备份到本地快照、复制到二级存储以及备份到对象存储操作。</block>
-  <block id="c0a57abfd326897381a3ffd211e0034d" category="list-text">*备份和恢复恢复管理员*：使用NetApp Backup and Recovery恢复工作负载。</block>
-  <block id="24e1202dabefe42a93a17e758a826775" category="list-text">*备份和恢复克隆管理*：使用NetApp Backup and Recovery克隆应用程序和数据。</block>
   <block id="6e4948d9a0a66aef737906595c7e8fbc" category="list-text">*备份和恢复查看器*：查看NetApp Backup and Recovery中的信息，但不执行任何操作。</block>
-  <block id="bf786b3a3016622928354c48b7225397" category="inline-link">控制台设置和管理文档</block>
-  <block id="94190d0421ea1693bd95963ed8c1d2c4" category="paragraph">有关所有NetApp Console访问角色的详细信息，请参阅<block ref="4b225699c724cb72a1654871509070eb" category="inline-link-rx"></block>。</block>
   <block id="eb6687834d18ce256e1ea40605b27891" category="section-title">用于常见操作的角色</block>
   <block id="2586127e46d382f00f4e8b5c171b6bbe" category="paragraph">下表列出了每个NetApp Backup and Recovery角色可以针对所有工作负载执行的操作。</block>
   <block id="4420e7353184ac575b539cdce1b991db" category="cell">特征和动作</block>
@@ -1484,10 +1472,8 @@
   <block id="aba6939e11f2553d21fef269ecf1b46d" category="cell">*在“作业监控”选项卡上*：</block>
   <block id="c6b984bc2ca856b4291f8e64fa30cd9a" category="cell">查看职位</block>
   <block id="295cc024728a10becfec47e1d454c4f9" category="cell">取消作业</block>
-  <block id="acc7762a38ec98833ddf199357013253" category="summary">NetApp Console身份和访问管理提供了管理员角色，您可以将其分配给需要访问Google Cloud NetApp Volumes 的组织成员。</block>
   <block id="63e309fee54093051286fe5c828adf83" category="doc">NetApp Console中的Google Cloud NetApp Volumes角色</block>
   <block id="10f98ad7535ecd2b388a08a86ca71274" category="paragraph">您可以为用户分配以下角色，以便他们能够访问NetApp Console中的Google Cloud NetApp Volumes。</block>
-  <block id="656f6fe68f4a2af975dfebecd7cca424" category="paragraph">Google Cloud NetApp Volumes使用以下角色：</block>
   <block id="a0236973e54f9f4d95ff61bb775a8b94" category="list-text">* Google Cloud NetApp Volumes管理员*：在控制台中发现和管理Google Cloud NetApp Volumes 。</block>
   <block id="833e57da5fae8b56238e7e41c8ba5a8c" category="summary">NetApp Console身份和访问管理提供了两个Keystone角色，您可以将其分配给组织成员。</block>
   <block id="252561ea020b2dfb8598526a78a88036" category="doc">NetApp Console中的Keystone访问角色</block>
@@ -1529,7 +1515,6 @@
   <block id="6a476d78ce3a8169d99c99c3285fa106" category="cell">组织管理员</block>
   <block id="08fe1197004da98b5b31b7f36eb2ecd2" category="cell">文件夹或项目管理员</block>
   <block id="7618a9fe7c4741b26b8ed60f22f99307" category="cell">创建代理</block>
-  <block id="c1c020c63ca7b32f65efefd3019d21f9" category="cell">从控制台创建、修改或删除系统（添加或发现系统）</block>
   <block id="1963c5def9c98c78ad1a24795d77fd45" category="cell">创建文件夹和项目，包括删除</block>
   <block id="3e02e95230f791e515adffdd7086123c" category="cell">重命名现有文件夹和项目</block>
   <block id="15a95a870efdd28ed28ff5a317681ee4" category="cell">分配角色并添加用户</block>
@@ -1581,7 +1566,6 @@
   <block id="3aba2887bff41f744b43940b1b82080a" category="cell">平台角色</block>
   <block id="460874c7c996eb6762b8a5b10ff2d76f" category="cell">职责</block>
   <block id="ebf2e736fadeb05a39d24aa702faf1b3" category="cell"><block ref="ebf2e736fadeb05a39d24aa702faf1b3" category="inline-link-macro-rx"></block></block>
-  <block id="f2ad52479c9d7a5dc51ed3f3ab03e45a" category="cell">允许用户不受限制地访问组织内的所有项目和文件夹，向任何项目或文件夹添加成员，以及执行任何任务和使用任何没有明确关联角色的数据服务。具有此角色的用户可以通过创建文件夹和项目、分配角色、添加用户以及管理系统（如果他们拥有适当的凭据）来管理您的组织。这是唯一可以创建控制台代理的访问角色。</block>
   <block id="b749e7fb3c856e9ce827dee8e365115c" category="cell"><block ref="b749e7fb3c856e9ce827dee8e365115c" category="inline-link-macro-rx"></block></block>
   <block id="e8df21ebe8cfc76c6960895bb0bc899b" category="cell"><block ref="e8df21ebe8cfc76c6960895bb0bc899b" category="inline-link-macro-rx"></block></block>
   <block id="f086bc5e806b733d57a2a45ac22134d5" category="cell">允许用户使用控制台创建和管理联合，从而实现单点登录 (SSO)。</block>
@@ -1594,7 +1578,6 @@
   <block id="28a8dd305b6b65d4f493ff94f897b6ce" category="cell"><block ref="28a8dd305b6b65d4f493ff94f897b6ce" category="inline-link-macro-rx"></block></block>
   <block id="27a16413542b7104d70931e409f75dcc" category="cell">为用户提供管理员角色的子集。此角色专为可能不需要在多个用户之间分配控制台职责的小型组织而设计。</block>
   <block id="ecc9f85d2f505ff9ad5fa5408a87fbe8" category="cell"><block ref="ecc9f85d2f505ff9ad5fa5408a87fbe8" category="inline-link-macro-rx"></block></block>
-  <block id="0c59885a322273fa1fb3ebe78010c852" category="cell">为用户提供子集查看者角色。此角色专为可能不需要在多个用户之间分配控制台职责的小型组织而设计。</block>
   <block id="3780f4c88e2a0b66a6db0bbed86d39da" category="section-title">应用程序角色</block>
   <block id="2f3c03a8909f3ffaeb60b4cd7c3e9687" category="paragraph">以下是应用程序类别中的角色列表。每个角色在其指定范围内授予特定的权限。没有所需应用程序或平台角色的用户无法访问相应的应用程序。</block>
   <block id="ee1afb77ea65d6282a6b2db5ef1c9599" category="cell">应用程序角色</block>
@@ -1626,9 +1609,7 @@
   <block id="bdb27c09aabf8c5792779306e5a5df9c" category="cell"><block ref="bdb27c09aabf8c5792779306e5a5df9c" category="inline-link-macro-rx"></block></block>
   <block id="7b5e23d87dc45ba5fd89c390a269d10e" category="cell">执行本地快照备份、复制到二级存储以及备份到对象存储。</block>
   <block id="aa8efeb2fdfd0a3ec078cd2942552ca8" category="cell"><block ref="aa8efeb2fdfd0a3ec078cd2942552ca8" category="inline-link-macro-rx"></block></block>
-  <block id="55a6c46602496366e85545482ddb9ca2" category="cell">恢复备份和恢复中的工作负载。</block>
   <block id="0f9a11e2e7dd3ce61f7aab21af7cdbd7" category="cell"><block ref="0f9a11e2e7dd3ce61f7aab21af7cdbd7" category="inline-link-macro-rx"></block></block>
-  <block id="65af4793a6fa01700ec78442d5b2626f" category="cell">在备份和恢复中克隆应用程序和数据。</block>
   <block id="536d9d5182ff0ef7dfb38605db0a158b" category="cell"><block ref="536d9d5182ff0ef7dfb38605db0a158b" category="inline-link-macro-rx"></block></block>
   <block id="5a6fc2a5d9c8e4addb365c82bb2f4e76" category="cell">查看备份和恢复信息。</block>
   <block id="59eece64eed3d2f0f57f45881dd7770c" category="inline-link-macro">灾难恢复管理员</block>
@@ -2119,7 +2100,6 @@
   <block id="6cd83551e6ffb01c24e4050fdce7beea" category="cell">Microsoft.Resources/标签/写入</block>
   <block id="bcbc02e34d63373cb18f0b84bea918b2" category="cell">Microsoft.Resources/标签/删除</block>
   <block id="c9c484fe908813be17fe13bbdeabfb1d" category="cell">在创建期间加密存储帐户</block>
-  <block id="d44b908365d28414a72f5b042c756f89" category="cell">在灵活编排模式下使用虚拟机规模集来为Cloud Volumes ONTAP指定特定区域</block>
   <block id="e32bb1c8b64cbfd8bf1712551cd39a15" category="cell">Microsoft.Compute/virtualMachineScaleSets/写入</block>
   <block id="da4802bef00f05ba8274ecb054d0388f" category="cell">Microsoft.Compute/virtualMachineScaleSets/读取</block>
   <block id="d1cca5c5928df2cf3cc230adb4148b49" category="cell">Microsoft.Compute/virtualMachineScaleSets/删除</block>
@@ -2250,7 +2230,6 @@
   <block id="f66493a5c1b72a6a6a675e1d79371789" category="cell">将本地ONTAP集群备份到 Azure Blob 存储</block>
   <block id="957901780fae6c72beed34248e8e252d" category="inline-link">使用备份和恢复将本地ONTAP数据备份到 Azure Blob 存储</block>
   <block id="651492a6900c9cc9941c3dd88935a740" category="cell"><block ref="651492a6900c9cc9941c3dd88935a740" category="inline-link-rx"></block></block>
-  <block id="2647d0cabcc3f6f95c50e907a499a04c" category="section-title">NetApp复制和同步</block>
   <block id="c3cccd9ce135f450a9619b57dba5e5f1" category="cell">在 Azure 中部署数据代理</block>
   <block id="05f8fb1bf008e214609328fb34b7e532" category="cell">用于部署数据代理的 Azure 用户帐户必须具有所需的权限。</block>
   <block id="c658fd4f091c10877f154fbf84fbee89" category="inline-link">在 Azure 中部署数据代理所需的权限</block>
@@ -2316,7 +2295,6 @@
   <block id="a3c775b853cb7264d143451380d3e164" category="cell">所有出站流量</block>
   <block id="d78c51305ff97e9da7f4c5cb3d1d3453" category="cell">所有 UDP</block>
   <block id="e2f58f5baabc821fa8bdc13a96184016" category="section-title">高级出站规则</block>
-  <block id="8edf9ecf485fefda483b4777e3868756" category="paragraph">如果您需要对出站流量制定严格的规则，则可以使用以下信息仅打开代理出站通信所需的端口</block>
   <block id="61e56fc6cbb735ce315b312666066e82" category="admonition">源IP地址是代理主机。</block>
   <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">目标</block>
   <block id="241b5fab8e737eaa79c543efe7307059" category="cell">API 调用和AutoSupport</block>
@@ -2331,20 +2309,16 @@
   <block id="ed5f2bdecbd4bd349d09412d1ff6a6fb" category="cell">DNS</block>
   <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
   <block id="d82c8d1619ad8176d665453cfb2e55f0" category="cell">53</block>
-  <block id="ceddeeac7372971110b28c5e1045ad77" category="cell">用于控制台的 DNS 解析</block>
-  <block id="36ac8525d689d9a82095a702ed64c01d" category="summary">代理的 Azure 安全组需要入站和出站规则。当您从控制台创建控制台代理时， NetApp Console会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。</block>
   <block id="079f3f3a9e5f3446518d4bebe9e1d5f1" category="doc">Azure 中的控制台代理安全组规则</block>
   <block id="9fcefa244d66c49cdb3c2e28234c2f42" category="cell">提供从客户端 Web 浏览器到本地用户界面的 HTTPS 访问，以及来自NetApp Data Classification实例的连接</block>
   <block id="81134f47f2ab0d8ef284a48a6aeee3db" category="inline-link">了解如何将代理用作AutoSupport消息的代理</block>
   <block id="bb34416ca2e8ac39300be2131f49574c" category="cell">为Cloud Volumes ONTAP提供互联网访问权限，以便将AutoSupport消息发送给NetApp支持。部署后您必须手动打开此端口。<block ref="f127b103d9e31ba65f5f2862c031e344" category="inline-link-rx"></block></block>
   <block id="b328da3e839d02fc907b65467b5e31ea" category="paragraph">如果您需要对出站流量制定严格的规则，则可以使用以下信息仅打开代理出站通信所需的端口。</block>
   <block id="97cd847069f6f4b5f1e2bd1c8341ab6c" category="cell">对 Azure、 ONTAP、 NetApp Data Classification的API 调用，以及向NetApp发送AutoSupport消息</block>
-  <block id="74794c3be947278b7172132c8ec473f8" category="summary">代理的 Google Cloud 防火墙规则需要入站和出站规则。当您从控制台创建控制台代理时， NetApp Console会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。</block>
   <block id="2f0c197eb73a7c6da10b03384f241025" category="cell">提供从客户端 Web 浏览器到本地用户界面的 HTTPS 访问</block>
   <block id="999a4d43e45cddcf211e4621da569ade" category="paragraph">代理的预定义防火墙规则打开所有出站流量。如果可以接受，请遵循基本出站规则，或者使用高级出站规则来满足更严格的要求。</block>
   <block id="60e74e3403a89043a113d8d28aa695a9" category="paragraph">代理的预定义防火墙规则包括以下出站规则。</block>
   <block id="972176d7bb2e469e417e90b3156a3e56" category="cell">对 Google Cloud、 ONTAP、 NetApp Data Classification 的API 调用，以及向NetApp发送AutoSupport消息</block>
-  <block id="cdf2fc30eeceb52e5535e7b963a2a0ca" category="cell">用于数据分类的 DNS 解析</block>
   <block id="8750ee5b8e03e45a2b63152d73f5465c" category="summary">当在本地 Linux 主机上手动安装时，控制台代理使用_入站_端口。请参考这些端口以进行规划。</block>
   <block id="0aa9b214cf7d679d06bdec6fba9767b7" category="doc">本地控制台代理的端口</block>
   <block id="186772c5d8658de6d80f0ce647f8b68c" category="paragraph">这些入站规则适用于所有NetApp Console部署模式。</block>
@@ -2363,13 +2337,11 @@
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link-macro">NetApp Console部署模式</block>
   <block id="d207a80d28ecc0fdd948737abee4ead7" category="paragraph"><block ref="d207a80d28ecc0fdd948737abee4ead7" category="inline-link-macro-rx"></block></block>
   <block id="b0fff5137090a82065e80b458cc6b247" category="summary">现在您已登录并以标准模式设置NetApp Console，用户可以创建和发现存储系统并使用NetApp数据服务。</block>
-  <block id="1631307de579ca654518e4c823f3a805" category="paragraph">现在您已登录并以标准模式设置NetApp Console，用户可以创建和发现存储系统并使用NetApp数据服务。</block>
   <block id="d5ac47786c5ecc4bccfda87432027f10" category="admonition">如果您在 AWS、Microsoft Azure 或 Google Cloud 中安装了控制台代理，则控制台会自动发现有关安装代理的位置中的 Amazon S3 存储桶、Azure Blob 存储或 Google Cloud Storage 存储桶的信息。这些系统会自动添加到*系统*页面。</block>
   <block id="c1c3022dcc260fbaf1dede24f4963496" category="inline-link">NetApp Console文档主页</block>
   <block id="03f3b9db548e9f42c7f235f25063891e" category="paragraph">如需帮助，请访问<block ref="735a4464f9ba83268a005dadc317bb68" category="inline-link-rx"></block>查看NetApp Console文档。</block>
   <block id="02d943e056fd84c122f270e9db3de326" category="summary">添加和管理 AWS 凭证，以便NetApp Console具有在您的 AWS 账户中部署和管理云资源所需的权限。如果您管理多个 AWS 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。</block>
   <block id="51c9eb8f2bdf1ba7a4e0dbc5ca8299bd" category="doc">管理NetApp Console的 AWS 凭证和市场订阅</block>
-  <block id="d627e8413e37270774742dd64f2f5b41" category="paragraph">添加和管理 AWS 凭证，以便您从NetApp Console部署和管理 AWS 帐户中的云资源。如果您管理多个 AWS Marketplace 订阅，则可以从“凭证”页面将每个订阅分配给不同的 AWS 凭证。</block>
   <block id="74e42084d0b29ac0e8a011bcb12c5672" category="paragraph">您可以将 AWS 凭证添加到现有的控制台代理或直接添加到控制台：</block>
   <block id="a4dca3983a39c9b590146dd24b4184da" category="list-text">向现有代理添加额外的 AWS 凭证</block>
   <block id="1d51d9fbbb17f2cb5259bda973e07b00" category="inline-xref">了解如何将 AWS 凭证添加到控制台代理</block>
@@ -2406,7 +2378,6 @@
   <block id="eeb6748fae766a2fda509aa2faa4eebe" category="inline-xref">您现在可以将凭证添加到控制台代理</block>
   <block id="4ea1cc65d2342f529ba6fad41ea0944d" category="paragraph">该帐户具有所需的权限。<block ref="2010c527e14640cc2c87e7035f3759e5" category="inline-xref-macro-rx"></block> 。</block>
   <block id="e7e95c3a4b88e02526b2bf48eb3cff3b" category="section-title">通过提供 AWS 密钥授予权限</block>
-  <block id="75d2fb5e15b0569cd1d967dc0f66671d" category="paragraph">如果您想为 IAM 用户提供带有 AWS 密钥的控制台，则需要向该用户授予所需的权限。控制台 IAM 策略定义了控制台允许使用的 AWS 操作和资源。</block>
   <block id="e83b17c7c71e741737152143938c23ae" category="paragraph">如果本地安装了控制台代理，则必须使用此身份验证方法。您不能使用 IAM 角色。</block>
   <block id="f9b4c89339bef56552bcfccc17425bcd" category="list-text">从 IAM 控制台，通过复制并粘贴以下内容来创建策略<block ref="c8909192f1938340f491d97129272ce8" category="inline-link-macro-rx"></block>。</block>
   <block id="47d50d25f4b51617534e107d21701e80" category="inline-link">AWS 文档：创建 IAM 策略</block>
@@ -2427,8 +2398,6 @@
   <block id="c0194bb9a8d34b181052f172b4a9a98f" category="list-text">选择“另一个 AWS 账户”并输入NetApp Console SaaS 的 ID：952013314444</block>
   <block id="43fcb7c92b7808baf72f1cd9eecef7a5" category="list-text">具体来说，对于Amazon FSx for NetApp ONTAP ，编辑 *信任关系* 策略以包含“AWS”：“arn:aws:iam::952013314444:root”。</block>
   <block id="f8aabc110ec9d0099e69b9276f73b751" category="paragraph">例如，该策略应如下所示：</block>
-  <block id="37747908c82600c4f83a3de02bd7dc1a" category="inline-link-macro">AWS 身份和访问管理 (IAM) 文档</block>
-  <block id="e8cffeeec612132e8c2cb2355463f31f" category="paragraph">参考<block ref="ac3530460cd18c242c3653db3709495c" category="inline-link-macro-rx"></block>有关 IAM 中跨账户资源访问的更多信息。</block>
   <block id="7770b43cc8b94c3a2a19f58dd17562a4" category="list-text">创建一个包含创建控制台代理所需权限的策略。</block>
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">查看 FSx for ONTAP所需的权限</block>
   <block id="68841948fc1b61d494dc523ccae2402a" category="list-text"><block ref="68841948fc1b61d494dc523ccae2402a" category="inline-link-rx"></block></block>
@@ -2437,13 +2406,10 @@
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">复制 IAM 角色的角色 ARN，以便您可以在下一步中将其粘贴到控制台中。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">您现在可以将其添加到控制台</block>
   <block id="75d520940839feb20c7009bf3a4913f6" category="paragraph">为 IAM 角色提供所需的权限后，将角色 ARN 添加到控制台。</block>
-  <block id="32e5fa0a32d6c9e7f8724cd4d60073b3" category="paragraph">如果您刚刚创建了 IAM 角色，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。</block>
   <block id="1e9d97942154bc8b3f30e40e88be18a1" category="inline-image-macro">显示控制台右上角的“设置”图标的屏幕截图。</block>
   <block id="18cfde7fc8c96213e5e0bea16f9f1907" category="paragraph"><block ref="18cfde7fc8c96213e5e0bea16f9f1907" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8cf335d7d3b1dd5cdac30699d20489c0" category="list-text">*定义凭证*：提供 IAM 角色的 ARN（Amazon 资源名称）。</block>
   <block id="b07bcd019d5673f40409ccc629aee309" category="section-title">向Amazon FSx for ONTAP控制台添加凭证</block>
-  <block id="0967d5014be6ea1485ad3e2ef66038b4" category="inline-link">Amazon FSx for ONTAP 的控制台文档</block>
-  <block id="acfc32e9de528d5b7c99c6756a63e918" category="paragraph">有关详细信息，请参阅<block ref="eca356f6dfda2c57cf1ad75280c32e28" category="inline-link-rx"></block></block>
   <block id="ff462988ef2bf728297fe5ed85ddc08d" category="section-title">配置 AWS 订阅</block>
   <block id="baaf3fcde87b40756b9492e5ed1f488b" category="paragraph">在添加凭证后，您可以在两种情况下配置 AWS Marketplace 订阅：</block>
   <block id="e448450e916fa912f5d4d1dee101e1cd" category="list-text">最初添加凭据时您没有配置订阅。</block>
@@ -2529,12 +2495,10 @@
   <block id="4c8a0043df6fc20c84f393cad42133de" category="section-title">获取应用程序ID和目录ID</block>
   <block id="3a1ecf20407e16f0524dacb991fefae3" category="section-title">创建客户端机密</block>
   <block id="a55a6a4d28feab91f7eafbec0d5b02ad" category="paragraph">创建客户端密钥并将其值提供给控制台以使用 Microsoft Entra ID 进行身份验证。</block>
-  <block id="2a2a08473f6b53d0fe836a3d95c7b0f7" category="paragraph">您的服务主体现已设置，您应该已经复制了应用程序（客户端）ID、目录（租户）ID 和客户端机密的值。添加 Azure 帐户时，您需要在控制台中输入此信息。</block>
   <block id="dd713f3b590ab5bec2d22f7058e33ab6" category="section-title">将凭据添加到控制台</block>
   <block id="55a1f4f70021eba45bccf8433f293097" category="paragraph">为 Azure 帐户提供所需权限后，您可以将该帐户的凭据添加到控制台。完成此步骤后，您可以使用不同的 Azure 凭据启动Cloud Volumes ONTAP 。</block>
   <block id="2b2280c2ccd1fc263667012c605a13ff" category="paragraph">如果您刚刚在云提供商中创建了这些凭据，则可能需要几分钟才能使用它们。等待几分钟，然后将凭据添加到控制台。</block>
   <block id="973a970f1b0256e7e155b0658f96de09" category="inline-link">将系统添加到控制台时</block>
-  <block id="dc626c8f4884c60a8a8e3e1710f896e4" category="paragraph">您可以从“详细信息和凭证”页面切换到另一组凭证<block ref="e81400213d37156540a01916c36ea9d7" category="inline-link-rx"></block></block>
   <block id="66f9b6c415f38768cbdd702260d9c7a4" category="inline-image-macro">屏幕截图显示在“详细信息和凭证”页面中选择“编辑凭证”后在凭证之间进行选择。</block>
   <block id="1922af752d0853834745d2867dc9424e" category="paragraph"><block ref="cfd19debd8916f54a003b71a6715eb40" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1fff95e017b67247702c9253bdce789b" category="section-title">管理现有凭证</block>
@@ -2565,7 +2529,6 @@
   <block id="3460ffc05b738d8f0d864d78d890172b" category="paragraph">当您添加了 NSS 帐户后，控制台会使用此信息进行许可证下载、软件升级验证和未来支持注册等。</block>
   <block id="1ab27891b049bfbd268d07f3911f37d5" category="paragraph">您可以将多个 NSS 帐户与您的组织关联；但是，您不能在同一个组织内拥有客户帐户和合作伙伴帐户。</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="admonition">NetApp使用 Microsoft Entra ID 作为特定于支持和许可的身份验证服务的身份提供者。</block>
-  <block id="f5efd77e423a520b802102b67d1b6a8d" category="list-text">在*管理 &gt; 支持*中。</block>
   <block id="b7d544e19d5b26255a1df1dd3e33d678" category="list-text">选择*NSS 管理*。</block>
   <block id="e2597bac25f570bb03597ba7fb9fff75" category="list-text">选择*添加 NSS 帐户*。</block>
   <block id="aa46302bfdec80cdcbdb3268e1b7a8f4" category="list-text">选择“*继续*”以重定向到 Microsoft 登录页面。</block>
@@ -2614,16 +2577,12 @@
   <block id="be38dbea6f59988a6589d264288398b4" category="inline-xref">将这些系统附加到不同的 NSS 帐户</block>
   <block id="06ea27a7eec46bbfdd0a015ee2f04fad" category="paragraph">您无法删除当前与Cloud Volumes ONTAP系统关联的帐户。你首先需要<block ref="e04e5b24908be707e70b233bed0e6acf" category="inline-xref-macro-rx"></block>。</block>
   <block id="e5db2949e66eb1e7684dd81e4145d6e3" category="list-text">对于要删除的 NSS 帐户，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*删除*。</block>
-  <block id="b7a4dc1dc516d24983e629ea4e196cad" category="summary">部署控制台代理后，您可以对现有的 VCenter 或 ESXi 主机进行更改。例如，您可以增加托管控制台代理的 VM 实例的 CPU 或 RAM。</block>
-  <block id="4fbf3c0bb858178e4e3a4a42ef21aa0a" category="doc">为控制台代理维护 VCenter 或 ESXi 主机</block>
   <block id="94e57c616c0770ea6904ed2397bb0c43" category="paragraph">使用 VM Web 控制台执行以下维护任务：</block>
   <block id="9a3ecb0cd9521bfd7a2e3a2834d9a866" category="list-text">增加磁盘大小</block>
   <block id="d556914c5d0c00a98f53b0e0d8c0dc9c" category="list-text">重启代理</block>
   <block id="eaa97a74be674590f501aafbddcdc12b" category="list-text">更新静态路由</block>
   <block id="4f366b69ce0f39237eb284d461ee957a" category="list-text">更新搜索域</block>
   <block id="3daaf6c61d0dfc25a3c29717c6dfc9ef" category="section-title">访问虚拟机维护控制台</block>
-  <block id="a148766c33a8f0d6579283c746921074" category="paragraph">您可以从 VSphere 客户端访问维护控制台。</block>
-  <block id="b215a73577f4089bdd3d6f9207da54c6" category="list-text">打开 VSphere 客户端并登录到您的 VCenter。</block>
   <block id="e2042986bf57d0b7aaeb1d92f21bc106" category="list-text">选择托管控制台代理的 VM 实例。</block>
   <block id="d6d50d7c122dd5c363dabbe49e48e4e8" category="list-text">选择*启动 Web 控制台*。</block>
   <block id="3f2967015766fef616c925fd40191e1a" category="list-text">使用创建 VM 实例时指定的用户名和密码登录 VM 实例。用户名是<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>密码是您在创建 VM 实例时指定的密码。</block>
@@ -2633,18 +2592,14 @@
   <block id="f8d68d435a716537321667f6d83873ef" category="list-text">进入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>更改维护用户密码并按照屏幕上的提示进行操作。</block>
   <block id="7bdccee6307bdfcab6b328e3b58873ac" category="section-title">增加虚拟机实例的 CPU 或 RAM</block>
   <block id="a17367c99ac3cdce03b0b1e13f4a7b4b" category="paragraph">您可以增加托管控制台代理的 VM 实例的 CPU 或 RAM。</block>
-  <block id="9c1e3b597971db8490ccfbe471a560c0" category="paragraph">在您的 VCenter 或 ESXi 主机中编辑 VM 实例设置，然后使用维护控制台应用更改。</block>
-  <block id="32011cb24074435157601af044ce5663" category="list-title">VSphere 客户端中的步骤</block>
   <block id="4cb240d37182d6c74e799680ccf1db95" category="list-text">右键单击 VM 实例并选择*编辑设置*。</block>
   <block id="888d5124c37691bc77f9fd61458331aa" category="list-text">增加用于 /opt 或 /var 分区的硬盘空间。</block>
   <block id="e4e53d6b5475fac95593fb46c84ee67f" category="list-text">选择“*硬盘 2*”以增加用于 /opt 的硬盘空间。</block>
   <block id="c12cae49029925639b6d7b94b5bd87e6" category="list-text">选择*硬盘 3* 来增加 /var 使用的硬盘空间。</block>
   <block id="345e93a96b6e66cb9274dbad975c0db2" category="list-text">保存更改。</block>
   <block id="2f263f0d1841855ba6685c895ba3db8b" category="list-title">维护控制台中的步骤</block>
-  <block id="a5527426dfe9b3215c0fe0144430c64c" category="list-text">进入<block ref="feddfc071bb4b3e59bcd10161dac21cc" prefix=" " category="inline-code"></block>菜单。</block>
   <block id="3d80ea8b1dbf4ad9b1fb81c54b3f4126" category="list-text">进入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>并按照屏幕上的提示进行操作。控制台扫描新设置并增加分区的大小。</block>
   <block id="172772305a41d2ff454b19a01b79e587" category="section-title">查看代理虚拟机的网络设置</block>
-  <block id="f2428359ed543dda18a905c7896e36ee" category="paragraph">查看 VSphere 客户端中代理 VM 的网络设置以确认或排除网络问题。您只能查看（不能更新）以下网络设置：IP 地址和 DNS 详细信息。</block>
   <block id="57bc91c2ba2fc0985ecadad76ce00906" category="list-text">进入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>查看<block ref="dce011ea921230b4e3061bb70569c598" prefix=" " category="inline-code"></block>菜单。</block>
   <block id="8ed5afbbe1327528af7b70e13b406828" category="list-text">输入 1 到 6 之间的数字来查看相应的网络设置。</block>
   <block id="b99627170aa9175f6e67c1597868eff2" category="section-title">更新代理虚拟机的静态路由</block>
@@ -2655,7 +2610,6 @@
   <block id="770cb889e6060a372a14b87fc9d61262" category="list-text">进入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block>提交您的更改。</block>
   <block id="43b51aa963dda6ddb335ae19d279086f" category="section-title">更新代理虚拟机的域搜索设置</block>
   <block id="1b97b9764bc8da3c821a4720c32a6961" category="paragraph">您可以更新代理虚拟机的搜索域设置。</block>
-  <block id="e8915b8a656f0d280dd595cae76af8a2" category="list-text">进入<block ref="3aa570da0fd618cc7611321fdce12ffb" prefix=" " category="inline-code"></block>查看<block ref="dce011ea921230b4e3061bb70569c598" prefix=" " category="inline-code"></block>菜单。</block>
   <block id="de185f7b28f262bbd2f518acf5e7adbb" category="list-text">进入<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block>更新域搜索设置并按照屏幕上的提示进行操作。</block>
   <block id="f5c7b12d59d2b69e9bb2f73dca557a58" category="section-title">访问代理诊断工具</block>
   <block id="0ad1fc23b853416c03454d7493973064" category="paragraph">访问诊断工具来解决控制台代理的问题。  NetApp支持可能会在解决问题时要求您执行此操作。</block>
@@ -2678,7 +2632,6 @@
   <block id="88a71690ae59dd980b6d776ab3fcec15" category="list-text">所有代理都支持显式代理服务器，包括管理Cloud Volumes ONTAP系统的代理和管理NetApp数据服务的代理。</block>
   <block id="8eb81fefb79eb5ed1b35cb0907801664" category="list-text">HTTP 和 HTTPS。</block>
   <block id="38ee58883a35578ed7234236199aa3f9" category="list-text">代理服务器可以位于云端或您的网络中。</block>
-  <block id="bce60150854a599bc50850785c40a10c" category="admonition">一旦配置了代理，您就无法更改代理类型。如果需要更改代理类型，请删除控制台代理并添加具有新代理类型的新代理。</block>
   <block id="4f0ef0dc360d47ebb8c326123b95abfb" category="section-title">在控制台代理上启用显式代理</block>
   <block id="262355edba26c1cbef9c3d3c83101454" category="paragraph">当您将控制台代理配置为使用代理服务器时，该代理及其管理的Cloud Volumes ONTAP系统（包括任何 HA 中介）都会使用代理服务器。</block>
   <block id="34e9d0c44fccaf46e2f78450fe00db06" category="paragraph">此操作重新启动控制台代理。在继续之前，请验证控制台代理是否空闲。</block>
@@ -2738,8 +2691,6 @@
   <block id="7a6b8361cf669546010faac41df80823" category="list-text">*勒索软件恢复力窗格*：文件夹或项目管理员、组织管理员、勒索软件恢复力管理员、勒索软件恢复力查看器、超级管理员、超级查看器</block>
   <block id="36ca9cd27ee162c45eb4f0d11a5bedf1" category="list-text">*备份和恢复窗格*：备份和恢复备份管理员、备份和恢复超级管理员、备份和恢复备份查看器、备份和恢复克隆管理员、文件夹或项目管理员、组织管理员、备份和恢复恢复管理员、超级管理员、超级查看器</block>
   <block id="5bf7104590078e66848b59d3abfaf393" category="paragraph">如果您没有访问窗格的权限，该窗格会显示一条消息，表明您没有使用该窗格的权限。</block>
-  <block id="dbbc09735940a2a21109b74dc600b92b" category="inline-link">了解NetApp Console访问角色。</block>
-  <block id="d1ec258cc5ce4fba6b5d3e68c9aab1ca" category="paragraph"><block ref="4774029bbe5da4356b2c2e71441b09af" category="inline-link-rx"></block> 。</block>
   <block id="077d73f3c40e59075dcf0eb610e4feb9" category="list-text">从NetApp Console菜单中，选择 *主页*。</block>
   <block id="dcc160a7dd43a338175d55bf5dddccf8" category="paragraph">如果您具有组织管理员角色并且未设置代理或存储系统，则主页将显示入门信息。</block>
   <block id="6aeb2d8054569fcd3a31c60c1fc2dc05" category="inline-image-macro">NetApp Console主页欢迎新用户</block>
@@ -2830,16 +2781,11 @@
   <block id="ef115e8ed0d2118ec4e8fc147ad0a789" category="summary">与您的 Active Directory 联合身份验证服务 (AD FS) 联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。</block>
   <block id="03ce0a75253f028c7b59d2e045c61730" category="doc">将NetApp Console与 Active Directory 联合服务 (AD FS) 联合起来</block>
   <block id="df279c297fab55d5f1c2bb16edd8b9c8" category="paragraph">将您的 Active Directory 联合身份验证服务 (AD FS) 与NetApp Console联合起来，以便为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录控制台。</block>
-  <block id="30ca2676358ed1c0dc2e164f9cd94011" category="paragraph">需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="7697b2ab15ca139caf17dcfd778734aa" category="admonition">您可以与您的企业 IdP 或NetApp支持站点联合。  NetApp建议选择其中一个，但不要同时选择两者。</block>
   <block id="0ceb64d3b73da84590b905906ce76e4b" category="paragraph">NetApp仅支持服务提供商发起的（SP发起的） SSO。首先，配置身份提供者以信任NetApp Console作为服务提供者。然后，使用您的身份提供商的配置在控制台中创建连接。</block>
-  <block id="366cd8906be11984a9b8b7072713a800" category="paragraph">您可以与 AD FS 服务器建立联合，以启用NetApp Console的单点登录 (SSO)。该过程涉及配置您的 AD FS 以信任控制台作为服务提供商，然后在NetApp Console中创建连接。</block>
   <block id="64e98c9f4d11b4c824be529e267876c0" category="list-text">对于您的连接方法，选择*协议*，然后选择*Active Directory 联合身份验证服务 (AD FS)*。</block>
   <block id="5770c68162757f5328fa7f88e1acbf54" category="list-text">在您的 AD FS 服务器中创建依赖方信任。您可以使用 PowerShell 或在 AD FS 服务器上手动配置它。有关如何创建信赖方信任的详细信息，请参阅 AD FS 文档。</block>
-  <block id="4cccd2f99765304da66a7c567698bcec" category="list-text">使用以下脚本通过 PowerShell 创建信任：</block>
   <block id="2404f2b9279e8b922387af7fc5b52ed2" category="list-text">或者，您可以在 AD FS 管理控制台中手动创建信任。创建信任时使用以下NetApp Console值：</block>
-  <block id="c3735d9c34fd4ed334e4dbdf6f9399bf" category="list-text">创建依赖信任标识符时，使用 **YOUR_TENANT** 值：<block ref="54abc930040d4aaee039ddb6714c161b" prefix=" " category="inline-code"></block></block>
-  <block id="5f1e9ae008e49ccbc1bb7bb997f7072d" category="list-text">当您选择 *启用对 WS-Federation 的支持* 时，请使用 **YOUR_AUTH0_DOMAIN** 值：<block ref="fe93c33621416c4736b5beefec28d44e" prefix=" " category="inline-code"></block></block>
   <block id="bc58976486a6fc9f5f357976a41a1a71" category="list-text">创建信任后，从 AD FS 服务器复制元数据 URL 或下载联合元数据文件。您需要此 URL 或文件来完成控制台中的连接。</block>
   <block id="a2624a4afa5f59df43f5cae6434ac25c" category="paragraph">NetApp建议使用元数据 URL 让NetApp Console自动检索最新的 AD FS 配置。如果您下载联合元数据文件，则每当 AD FS 配置发生更改时，都需要在NetApp Console中手动更新它。</block>
   <block id="327ed29a3a834bbaa3ac5db2da701192" category="list-text">返回控制台，然后选择“下一步”来创建连接。</block>
@@ -2848,19 +2794,15 @@
   <block id="01837b7aafcf215e45857a4153b5e495" category="list-text">选择*创建连接*。建立连接可能需要几秒钟。</block>
   <block id="767115d4804e2e5c4b1ed6c9d67713b6" category="summary">与您的 Microsoft Entra ID IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。</block>
   <block id="77d38303cd7160687fe2fe02c196459c" category="doc">将NetApp Console与 Microsoft Entra ID 联合起来</block>
-  <block id="0c2de4686289ac9bf9282b9cc3e77f01" category="paragraph">您可以与 Microsoft Entra ID 建立联合连接，以启用控制台的单点登录 (SSO)。该过程涉及配置您的 Microsoft Entra ID 以信任控制台作为服务提供商，然后在控制台中创建连接。</block>
   <block id="28cf4d06a84abdeff94c7e3b945e3c24" category="floating-title">域名详细信息</block>
   <block id="59b02558285aa326c0e9018324ed0c4f" category="floating-title">连接方法</block>
   <block id="8ca3d4649684560e5c08f9cf603361d0" category="list-text">对于您的连接方法，选择*提供商*，然后选择*Microsoft Entra ID*。</block>
   <block id="a0a8e1e653f7bb91b7ab6d83c241e1dc" category="floating-title">配置说明</block>
   <block id="997881d1c53c06605037f62f86dd8790" category="list-text">配置您的 Microsoft Entra ID 以信任NetApp作为服务提供商。您需要在 Microsoft Entra ID 服务器上执行此步骤。</block>
   <block id="3e13812b9abe77ac31e81ad90937449c" category="list-text">注册 Microsoft Entra ID 应用程序以信任控制台时，请使用以下值：</block>
-  <block id="33bbbb5ce92fa91c49a034a5d5be98b3" category="list-text">对于 *重定向 URL* ，使用<block ref="e25bfdefac2be11860d58d37d2c1d1db" prefix=" " category="inline-code"></block></block>
   <block id="f8b38a9cd27d01df2afdc10f5ccbe4a4" category="list-text">对于 *回复 URL*，使用<block ref="c002ac1f40ddbf1a78022cf964ea2c33" prefix=" " category="inline-code"></block></block>
   <block id="90d372ea34df4c38f5a63f7878ba3d6f" category="list-text">为您的 Microsoft Entra ID 应用创建客户端机密。您需要提供客户端 ID、客户端密钥和 Entra ID 域名来完成联合。</block>
   <block id="ff47af1fc999e85405521c99fe358730" category="floating-title">创建连接</block>
-  <block id="d9538bfed24787693a0ad6aacac363fb" category="list-text">使用 Microsoft Entra ID 创建连接</block>
-  <block id="a31725e5a996167aefdc67c1628c7ebf" category="list-text">输入您在上一步中创建的客户端 ID 和客户端密钥。</block>
   <block id="56195ae93f466d39ec4d363a2fb1500e" category="list-text">输入 Microsoft Entra ID 域名。</block>
   <block id="414584aec7c36f7a64ee722e65458b2f" category="list-text">选择*创建连接*。系统在几秒钟内建立连接。</block>
   <block id="f7ad98daa7023cc12c8a8312a6fb794e" category="floating-title">测试并启用连接</block>
@@ -2873,7 +2815,6 @@
   <block id="af5e5162616eb70fd66eb845ab93c3b3" category="list-text">选择*导入联合*。</block>
   <block id="4e43138f938732822b6f55e8ebc532d6" category="summary">添加联合连接后，您可以在NetApp Console中对其进行管理。您可以查看连接的状态，根据需要启用或禁用它。</block>
   <block id="3ac6d2cef0d56fa41e2cd462506f65a4" category="doc">在NetApp Console中管理联合</block>
-  <block id="ba953e551c9ecc7acec5e18af7b8cd22" category="paragraph">您可以在NetApp Console中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要它时禁用它。</block>
   <block id="6ead1a7fe0f07609f377bd234facc0ef" category="inline-link-macro">了解如何导入您的联盟</block>
   <block id="fc29dd2df36c6f92f02b69ad5460a804" category="admonition">如果您使用NetApp Cloud Central 配置了联合，请通过 *Federation* 页面导入它以在控制台中进行管理。<block ref="57d57f1ec815a326ebb31008786ac229" category="inline-link-macro-rx"></block></block>
   <block id="f18af734247953cdba78d6c868dcac9a" category="inline-link-macro">了解有关在NetApp Console中监控操作的更多信息。</block>
@@ -2895,37 +2836,29 @@
   <block id="35165f9b14f6cde03fa7f6f9b03732ba" category="list-text">选择*更新*。</block>
   <block id="f0c3a42a5f59fcf574664a16032f7f98" category="section-title">测试现有的联盟</block>
   <block id="12faa2a4477b6dac2553a35c846366ad" category="paragraph">测试现有联合的连接以验证其是否正常工作。这可以帮助您识别联盟中的任何问题并进行故障排除。</block>
-  <block id="135d787ba43d71e3bbbcf97373dc6ad7" category="list-text">选择操作菜单<block ref="bfe50e4fac5e58634c6fb748dce94758" category="inline-image-macro-rx" type="image"></block>旁边的您想要添加已验证域的联盟，然后选择*测试连接*。</block>
   <block id="8ad95e2956f469a3288e6f3a06ce0335" category="list-text">选择*测试*。系统提示您使用公司凭证登录。如果连接成功，您将被重定向到NetApp Console。如果连接失败，您会看到一条错误消息，表明联合存在问题。</block>
   <block id="f00c704f82067284063e6d08ee509d82" category="list-text">选择“*完成*”返回“*联合*”选项卡。</block>
   <block id="3104ea2b12b1bb5b1bf9e44f8a04c551" category="section-title">禁用联合</block>
   <block id="ba1d038a4ecfdd53872bffe7200c5a76" category="paragraph">如果您不再需要联合，您可以禁用它。这可以防止与联盟关联的用户使用其公司凭证登录控制台。如果需要，您可以稍后重新启用联合。</block>
   <block id="1c9978d44be5f2bb20a78c54da4432e2" category="paragraph">在删除联合之前，请先禁用它，例如在停用 IdP 或停止联合时。如果需要的话，您可以稍后重新启用它。</block>
-  <block id="ba1cad8ed3a99d167191e2e7f53a0e1d" category="list-text">选择操作菜单<block ref="bfe50e4fac5e58634c6fb748dce94758" category="inline-image-macro-rx" type="image"></block>在您要添加已验证域的联盟旁边，然后选择*禁用*。</block>
   <block id="a679ca81df887999afdb29cc812dba1a" category="section-title">删除联盟</block>
   <block id="64c68d82ced3f3d089c13dfba53ada97" category="paragraph">如果您不再需要联盟，您可以将其删除。这将删除联合并阻止与联合关联的任何用户使用其公司凭据登录控制台。例如，如果 IdP 被停用或者不再需要联合。</block>
   <block id="2823988037e13a072682051385d62f2b" category="paragraph">删除联合后，您将无法恢复它。您必须创建一个新的联盟。</block>
   <block id="adc14d4e006e24883a5c3eb87c12efaf" category="admonition">您必须先禁用联合，然后才能删除它。一旦删除联盟，就无法恢复删除。</block>
-  <block id="ebaa36e80a938638d7d184f9dd466747" category="list-text">选择“管理”&gt;“身份和访问”。</block>
   <block id="29e4553a8b926416dba85d182a8f1439" category="list-text">选择“*Federations*”以查看“*Federations*”页面。</block>
-  <block id="7c5ecbb2a844cb071e215418a86fe5f1" category="list-text">选择操作菜单<block ref="bfe50e4fac5e58634c6fb748dce94758" category="inline-image-macro-rx" type="image"></block>在您要添加已验证域的联盟旁边，然后选择*删除*。</block>
   <block id="0278733c989b850a3f49499d1362d18b" category="summary">与您的 PingFederate IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。</block>
   <block id="fbfe40cc3e6a4321a25dbaa9493dcd6b" category="doc">使用 PingFederate 联合NetApp Console</block>
-  <block id="995b00246ca70c066d8542c50bd99418" category="paragraph">您可以使用 PingFederate 设置联合连接，以启用控制台的单点登录 (SSO)。该过程涉及配置您的 PingFederate 服务器以信任控制台作为服务提供商，然后在控制台中创建连接。</block>
   <block id="8520bafcdde68f9a9114e0cd1b31d58e" category="list-text">对于您的连接方法，选择*提供商*，然后选择*PingFederate*。</block>
   <block id="5a4722f67bb86841bf53f13a98d63130" category="list-text">配置您的 PingFederate 服务器以信任NetApp作为服务提供商。您需要在 PingFederate 服务器上执行此步骤。</block>
   <block id="274f0d985ed67f3e5cfea0b226b65b4e" category="list-text">配置 PingFederate 以信任NetApp Console时，请使用以下值：</block>
   <block id="3b8a7b6e211960309919e20fd2af8a55" category="list-text">对于 *回复 URL* 或 *断言消费者服务 (ACS) URL*，使用<block ref="c002ac1f40ddbf1a78022cf964ea2c33" prefix=" " category="inline-code"></block></block>
   <block id="7c419a414c246978c344e38498caa969" category="list-text">对于*注销 URL*，使用<block ref="f718c0dec0f0628fdebb1b677a6bc4cc" prefix=" " category="inline-code"></block></block>
-  <block id="208f9262e60123af11a1c21ff109c720" category="list-text">对于*受众/实体 ID*，使用<block ref="25e27f8e22f49798e84d5191aa82c3f0" prefix=" " category="inline-code"></block>其中 &lt;fed-domain-name-pingfederate&gt; 是联合的域名。例如，如果您的域名是<block ref="5ababd603b22780302dd8d83498e5172" prefix=" " category="inline-code"></block>，受众/实体 ID 将是<block ref="84b9fa0d9af1c7fee30c33b58f5a768a" prefix=" " category="inline-code"></block>。</block>
   <block id="bdb603500b69841c5f1e21f1908b6f25" category="list-text">复制 PingFederate 服务器 URL。在控制台中创建连接时，您将需要此 URL。</block>
   <block id="a794c52ad4075c1eb416f117353e3f42" category="list-text">从您的 PingFederate 服务器下载 X.509 证书。它需要采用 Base64 编码的 PEM 格式（.pem、.crt、.cer）。</block>
-  <block id="b4e7ffa10f61184e9524006b1b2e834b" category="list-text">使用 PingFederate 创建连接</block>
   <block id="e1e152fb937382196937dfaa0f19a2ef" category="list-text">输入您在上一步中复制的 PingFederate 服务器 URL。</block>
   <block id="abe3bc577cf6b382a65d5f5bef5cf0b6" category="list-text">上传 X.509 签名证书。证书必须采用 PEM、CER 或 CRT 格式。</block>
   <block id="d5a6ecbd674e35e5f8a82824cebbdc5d" category="summary">与您的 SAML 2.0 IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。</block>
   <block id="e60ee300201ed8e5859a66f601e8ae8f" category="doc">与 SAML 身份提供商联合</block>
-  <block id="939756c03a515836397f9a8b2433a893" category="paragraph">与您的 SAML 2.0 IdP 提供商联合，为 NEtApp 控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。</block>
   <block id="40a949a81892011608bf8991d35fcf97" category="admonition">您可以与您的企业 IdP 或NetApp支持站点联合。你不能与两者结成联盟。</block>
   <block id="4b0900d52499e86b0511d77d7870be7f" category="paragraph">您可以与 SAML 2.0 提供商建立联合连接，以便为控制台启用单点登录 (SSO)。该过程涉及配置您的提供商以信任NetApp作为服务提供商，然后在控制台中创建连接。</block>
   <block id="4d44d576286fdc9d820728afe03589ba" category="list-text">对于您的连接方法，选择*协议*，然后选择*SAML 身份提供者*。</block>
@@ -2941,9 +2874,7 @@
   <block id="000363e005ffe3ed85bd5a9afcd86fe5" category="list-text">输入您的 SAML 服务器的 *登录 URL*。</block>
   <block id="0b1478ffaa7b17ef2974ea6fa7e943fc" category="list-text">上传从 SAML 提供商服务器下载的 X.509 证书。</block>
   <block id="4c45e77f7b0ce71e19ecb19d6d1452ef" category="list-text">或者，输入您的 SAML 服务器的 *退出 URL*。</block>
-  <block id="3c0ad81d9e99d1b43d67c5897de790bc" category="summary">您只能使用已验证的域进行联合。如果您想与不同于您的电子邮件域的域联合，您必须首先验证您拥有该域。您只能使用已验证的域进行联合。</block>
   <block id="33c125c7f86d4e57eda2158c5fc47107" category="doc">验证联合连接的电子邮件域</block>
-  <block id="056b83e442ea1dac657cb834bb8753cd" category="paragraph">如果您想要与不同于您的电子邮件域的域联合，您必须首先验证您拥有该域。您只能使用已验证的域进行联合。</block>
   <block id="601af67b0c46251e3baef68bebb8dac6" category="paragraph">验证您的域名涉及向您的域名的 DNS 设置添加 TXT 记录。此记录用于证明您拥有该域并允许NetApp Console信任该域进行联合。您可能需要与您的 IT 或网络管理员协调来完成此步骤。</block>
   <block id="8765b22079c54d8e9c1fc15493061acf" category="list-text">选择*验证域名所有权*。</block>
   <block id="c25e56883d4bdfca8faf4c90b860e03c" category="list-text">输入您要验证的域名并选择*继续*。</block>
@@ -3176,7 +3107,6 @@
   <block id="a55ecc4bf928da93f86f41bb1fa482cc" category="inline-image-macro">垃圾桶的图标</block>
   <block id="a4fbefb4650f29051f939c158582897d" category="list-text"><block ref="a4fbefb4650f29051f939c158582897d" category="inline-link-macro-rx"></block></block>
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">在NetApp Console中，您可以根据用户需要执行的操作和位置为用户分配角色。</block>
-  <block id="34025ad60edecbf8612a359edaca8684" category="section-title">查看分配给成员的角色</block>
   <block id="317e1169ce13ad8808ce0775bf310cef" category="paragraph">如果您具有_文件夹或项目管理员_角色，则该页面将显示组织中的所有成员。但是，您只能查看和管理您拥有权限的文件夹和项目的成员权限。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">为成员添加访问角色</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">您通常在向组织添加成员时分配角色，但您可以随时通过删除或添加角色来更新它。</block>
@@ -3188,10 +3118,7 @@
   <block id="1920da3586c2e2872f88b02997c971c3" category="doc">组织和项目 ID</block>
   <block id="d1f35fea71ad4d3c53dfce45e3c8b312" category="paragraph">您的NetApp Console组织有一个名称和一个 ID。您可以为您的组织选择一个名称以帮助识别它。您可能还需要检索某些集成的组织 ID。</block>
   <block id="902a8ce7390bb726da2910b3ec25aae6" category="section-title">重命名您的组织</block>
-  <block id="8ccc624288d9424077cafb081bf17838" category="paragraph">您可以重命名您的组织。如果您支持的不仅仅是组织，这将很有帮助。</block>
   <block id="8bf336ab115156eac88db2970ab0e70d" category="list-text">从“组织”页面，导航到表格的第一行，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*编辑组织*。</block>
-  <block id="bd0f6a5b8c74b52e8b6d378a779a799b" category="inline-image-macro">概览页面的屏幕截图，显示操作图标和编辑组织选项。</block>
-  <block id="f891b6d41b0ea20e756113027427df78" category="paragraph"><block ref="f891b6d41b0ea20e756113027427df78" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b9669849e9961b7f3f4dc1a2f6787c34" category="list-text">输入新的组织名称并选择*应用*。</block>
   <block id="48aadcc35505b6db48ac02a9ec0cc774" category="section-title">获取组织 ID</block>
   <block id="f0862351030ba681f495440a6ec15fd4" category="paragraph">组织 ID 用于与控制台的某些集成。</block>
@@ -3261,7 +3188,6 @@
   <block id="c34ab4140439856fda51871a0f20b53c" category="list-text">确保您拥有 IAM 用户的访问密钥和密钥。</block>
   <block id="bbba7638debc60d9989ee9d0b3f92713" category="paragraph">您现在应该拥有一个具有所需权限的 IAM 角色或一个具有所需权限的 IAM 用户。从控制台创建控制台代理时，您可以提供有关角色或访问密钥的信息。</block>
   <block id="a5d705a0b67c1b72cfaf22a7b055e724" category="section-title">步骤 3：创建控制台代理</block>
-  <block id="7b4df00b5341d82974a20ef2b057b05e" category="paragraph">直接从基于 Web 的控制台创建控制台代理。</block>
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">了解控制台代理的默认配置</block>
   <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">了解有关控制台代理的 IAM 策略的更多信息</block>
@@ -3271,10 +3197,7 @@
   <block id="f28438646c4a6dc83acec91c3242235c" category="inline-link-macro">网络要求</block>
   <block id="e07d32ad7020a93e690821c42ba3112e" category="list-text">设置<block ref="aeef43fcefe3ad151bacb8d8f811157c" category="inline-link-macro-rx"></block>。</block>
   <block id="74e3fd473af4965ff33c6bdccf60d41f" category="list-text">设置<block ref="24eff8afdaae8d04c3eb2e1328f5234f" category="inline-link-macro-rx"></block>。</block>
-  <block id="2bae3baab718ba3e9fdf3ef2808d347b" category="list-text">在“概览”页面上，选择“部署代理”&gt;“AWS”</block>
   <block id="f5a67c5390424014ada0320046007eec" category="list-text">按照向导中的步骤创建控制台代理：</block>
-  <block id="66a048278e9e837a6928f913a6a6d07f" category="list-text">在“简介”页面上提供了该过程的概述</block>
-  <block id="f9189027825ae123fe4a1c3a8a2c6aef" category="list-text">在 *AWS Credentials* 页面上，指定您的 AWS 区域，然后选择一种身份验证方法，该方法可以是控制台可以承担的 IAM 角色，也可以是 AWS 访问密钥和密钥。</block>
   <block id="8b8f36850755c4ac43a0df238add8748" category="inline-link-macro">了解如何添加其他凭证</block>
   <block id="a92469e7b4819b542d643764a5f08089" category="admonition">如果您选择*承担角色*，您可以从控制台代理部署向导创建第一组凭据。任何附加凭证集都必须从凭证页面创建。然后，它们将从向导的下拉列表中提供。<block ref="21eba73392ef6be6fd6da758f5bd2e93" category="inline-link-macro-rx"></block> 。</block>
   <block id="f07116b379707ffd76d2b1be3d766311" category="list-text">在“详细信息”页面上，提供有关控制台代理的详细信息。</block>
@@ -3282,7 +3205,6 @@
   <block id="603cd6f77a8d8d20e21808a8ba4480ea" category="list-text">选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色<block ref="8b098a06817becf62c06297dd76999b5" category="inline-link-macro-rx"></block>。</block>
   <block id="a7dcc75dc3cacce63a6952fff1a50f65" category="list-text">选择是否要加密控制台代理的 EBS 磁盘。您可以选择使用默认加密密钥或使用自定义密钥。</block>
   <block id="a2f078803960d5d37e3fe024b9a33315" category="paragraph">确保您拥有正确的密钥对来访问控制台代理虚拟机。如果没有密钥对，您就无法访问它。</block>
-  <block id="7d94cf454f2eac26ff84a8d1c8a89d1e" category="list-text">在“安全组”页面上，选择是否创建新的安全组或是否选择允许所需入站和出站规则的现有安全组。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">该过程完成后，即可从控制台使用控制台代理。</block>
   <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">了解如何从NetApp Console管理 S3 存储桶</block>
@@ -3299,7 +3221,6 @@
   <block id="380b440efe1d4d54168900055656ba0c" category="paragraph">按照步骤准备控制台的权限。</block>
   <block id="759d9f0fdbf1b3fe124b8de48be0485b" category="open-title">IAM 角色</block>
   <block id="1221fb6fe5b6ae0477df2d3b80a10845" category="inline-link-macro">了解有关控制台代理的 IAM 策略的更多信息</block>
-  <block id="ac3e24b8a8223b643b23a350e25032fd" category="paragraph">根据您计划使用的NetApp数据服务，您可能需要创建第二个策略。对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，因此需要两个策略。<block ref="d22d28fc84a3a60208070dc479be7a49" category="inline-link-macro-rx"></block> 。</block>
   <block id="88d0ba771acf0a03a615d9cb2b09c2e7" category="paragraph">安装控制台代理后，您现在拥有一个可以与 EC2 实例关联的 IAM 角色。</block>
   <block id="1f2b7de34bbdaf655d7cd7c95b1bbd93" category="open-title">AWS 访问密钥</block>
   <block id="6303d3eadc140573e6ee3d272ebb6a14" category="paragraph">根据您计划使用的NetApp数据服务，您可能需要创建第二个策略。</block>
@@ -3307,8 +3228,6 @@
   <block id="3a45caefb1a9ee50f62c71d359fd53ab" category="paragraph">现在，您拥有一个具有所需权限的 IAM 用户和一个可以提供给控制台的访问密钥。</block>
   <block id="6f4fb049e4655a1231a4fb0687d8b259" category="section-title">步骤 5：安装控制台代理</block>
   <block id="f20df450b1161c347a5e7eba9538eeb3" category="paragraph">前提条件完成后，您可以在自己的 Linux 主机上手动安装该软件。</block>
-  <block id="b3175a7a8c2ba73aad02f57026632d9b" category="inline-link">了解如何通过NetApp ConsoleP 管理 S3 存储桶</block>
-  <block id="cb0908023b296d7d49436ab6f97e1722" category="paragraph">如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动出现在 *系统* 页面上。<block ref="e807fcbb34e8f3cdd2199d0fc61d445e" category="inline-link-rx"></block></block>
   <block id="c38f7847f04d50ab6fcbc66333ed1e25" category="section-title">步骤 6：提供对NetApp Console的权限</block>
   <block id="0ceede4f3f6785079b421e3b767884a7" category="paragraph">前往<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>开始使用控制台代理。</block>
   <block id="478934e77aeec11eff664bb1d6c547a8" category="paragraph">向控制台提供具有所需权限的 IAM 用户的 AWS 访问密钥。</block>
@@ -3336,7 +3255,6 @@
   <block id="797bbe628ec1fb17e30cf7efe960c970" category="paragraph">保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，<block ref="a92127338ae53d774985c3d6a7c5b7c1" category="inline-link-macro-rx"></block> 。</block>
   <block id="39512c61a5619bdf30174ade15cea9a4" category="paragraph">控制台代理现已安装并设置到您的控制台组织。</block>
   <block id="f6e97ff0fb0f4979084a2738aea0b268" category="paragraph">打开 Web 浏览器并转到<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>开始将控制台代理与控制台一起使用。</block>
-  <block id="7b3336affba5ca14937818152aba2704" category="paragraph">如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="59b644c031d039c3f70028419f505a76" category="summary">要从NetApp Console在 Azure 中创建控制台代理，您需要设置网络、准备 Azure 权限，然后创建控制台代理。</block>
   <block id="76909bffdda2d34fdab18521c25be5db" category="doc">从NetApp Console在 Azure 中创建控制台代理</block>
   <block id="445d78fbb089087ac4454ded9bdb17f9" category="paragraph">确保您计划安装控制台代理的网络位置支持以下要求。这些要求允许控制台代理管理混合云资源。</block>
@@ -3389,9 +3307,7 @@
   <block id="bc3d26f932a03033b70d3ed650139a18" category="inline-link-macro">使用此页面上的政策</block>
   <block id="610a4a375433f4d8a60a0b586112af9d" category="list-text">如果您不希望控制台自动为控制台代理创建 Azure 角色，则需要创建自己的<block ref="7706b04266d0a3d170ef3034140acd41" category="inline-link-macro-rx"></block>。</block>
   <block id="6aec6179d893d2c7ec3d7b824de2d393" category="paragraph">这些权限适用于控制台代理实例本身。这与您之前为部署控制台代理虚拟机而设置的权限不同。</block>
-  <block id="d1be2018873c4406f83ecb2af1a4a1fe" category="list-text">在“概述”页面上，选择“部署代理”&gt;“Azure”</block>
   <block id="c6d0b105b615b6dcbfff1fa5591d5a9a" category="list-text">在*审核*页面上，审核部署代理的要求。这些要求也在本页上方详细说明。</block>
-  <block id="ebe0cf581e297f0bde8942fa7d72b176" category="list-text">在“虚拟机身份验证”页面上，选择与您设置 Azure 权限的方式相匹配的身份验证选项：</block>
   <block id="d012f2e33caef7df1c37a096b0d2299a" category="list-text">选择*登录*登录您的 Microsoft 帐户，该帐户应具有所需的权限。</block>
   <block id="e0f74d06e87b3ad6fc9f3b3cfc573c38" category="paragraph">该表单由 Microsoft 拥有并托管。您的凭据未提供给NetApp。</block>
   <block id="915f1b1f01b9f722b678c2286c6d6c8a" category="admonition">如果您已经登录 Azure 帐户，则控制台会自动使用该帐户。如果您有多个帐户，那么您可能需要先注销以确保您使用的是正确的帐户。</block>
@@ -3399,7 +3315,6 @@
   <block id="37653ce036b712cbc8dcc5b189d94b80" category="inline-xref">了解如何获取服务主体的这些值</block>
   <block id="2f44f891a2e61a894ccc4f30dfd7b4be" category="paragraph"><block ref="8d330a1f00fb06fce7867e682fb9a351" category="inline-xref-macro-rx"></block> 。</block>
   <block id="e287af1d2980f92ee6cef799f9d29337" category="list-text">在“虚拟机身份验证”页面上，选择 Azure 订阅、位置、新资源组或现有资源组，然后为您正在创建的控制台代理虚拟机选择一种身份验证方法。</block>
-  <block id="52f3863b6256b8ae764628f74442ca5c" category="paragraph">虚拟机的身份验证方法可以是密码或 SSH 公钥。</block>
   <block id="6d316e3761ed9316d17ae819566bc027" category="paragraph">请注意，您可以选择与此角色关联的 Azure 订阅。您选择的每个订阅都为控制台代理提供管理该订阅中的资源的权限（例如， Cloud Volumes ONTAP）。</block>
   <block id="a1b2fd3af3ae0dbe40775b47c4963c76" category="list-text">在“*网络*”页面上，选择 VNet 和子网，是否启用公共 IP 地址，并可选择指定代理配置。</block>
   <block id="efcd4e60d15be9d5ddd70201eaeb17b1" category="list-text">在“安全组”页面上，选择是否创建新的安全组或是否选择允许所需入站和出站规则的现有安全组。</block>
@@ -3425,7 +3340,6 @@
   <block id="8f2a0c4c7e2163c8a919b6e37e3386c2" category="summary">要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。</block>
   <block id="688eb22568cb7a2885fc1314da09b9df" category="paragraph">您可以直接从 Azure 市场在 Azure 中创建控制台代理。要从 Azure 市场创建控制台代理，您需要设置网络、准备 Azure 权限、查看实例要求，然后创建控制台代理。</block>
   <block id="04dd0b133843b7aa046013dee8124c80" category="list-text">审查<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block>。</block>
-  <block id="47b0e2979264bbebd5462e8184af9f51" category="paragraph">确保您计划安装控制台代理的网络位置支持以下要求。这些要求使控制台代理能够管理混合云中的资源。</block>
   <block id="fcedf5fb536b7786cacdb268581e5264" category="paragraph">创建控制台代理后实现网络要求。</block>
   <block id="08162f5d2875618589001f4ce951b82d" category="section-title">步骤 2：查看 VM 要求</block>
   <block id="ef3c595246b942bfc8215c75f05150b0" category="paragraph">创建控制台代理时，请选择满足以下要求的虚拟机类型。</block>
@@ -3444,15 +3358,12 @@
   <block id="784880161a798d3c05d73e33c5740f73" category="list-text">*VM 大小*：选择满足 CPU 和 RAM 要求的 VM 大小。我们推荐 Standard_D8s_v3。</block>
   <block id="05a1c213d2ec95c52cccc9c86340268f" category="list-text">*磁盘*：控制台代理可以通过 HDD 或 SSD 磁盘实现最佳性能。</block>
   <block id="b4e41a907c4da2fce6a54febf2e8b982" category="list-text">*网络安全组*：控制台代理需要使用 SSH、HTTP 和 HTTPS 的入站连接。</block>
-  <block id="50a995cbdd1ad73256b63620f01a1316" category="list-text">身份*：在*管理*下，选择*启用系统分配的托管身份*。</block>
   <block id="089f373f5f48b55cde8c8de1db96243c" category="inline-link">详细了解 Azure 资源的托管标识</block>
   <block id="acf7efec03a1256239d76fd79782d190" category="paragraph">此设置很重要，因为托管身份允许控制台代理虚拟机向 Microsoft Entra ID 标识自己，而无需提供任何凭据。<block ref="f91ce7faef49711445322691b4d6ac64" category="inline-link-rx"></block> 。</block>
   <block id="6b18581fd807739e0d0c13a503a419de" category="list-text">在“*审查 + 创建*”页面上，审查您的选择并选择“*创建*”以开始部署。</block>
   <block id="20907787398fc8fdc57292db76d717c2" category="paragraph">Azure 使用指定的设置部署虚拟机。您应该会在大约十分钟内看到虚拟机和控制台代理软件运行。</block>
-  <block id="e50d6e441e1244b602e047a6cb378cfc" category="list-text">指定与控制台代理关联的控制台组织。</block>
   <block id="4530a0daad790bdb92a2b471c1ae32e5" category="inline-link-macro">按照步骤开始在受限模式下使用控制台</block>
   <block id="d55576e997d11009ff244375b517ce22" category="paragraph">保持限制模式处于禁用状态以便在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，<block ref="9e5778d7dc41549f5ccd38ef2a17a342" category="inline-link-macro-rx"></block> 。</block>
-  <block id="be2c1537b29f3b27dae98461e558f47a" category="paragraph">现在您已经安装了控制台代理并将其与您的控制台组织一起设置。</block>
   <block id="08ce64c6112e5b7125fa49810e3212b8" category="inline-link">了解如何从控制台管理 Azure Blob 存储</block>
   <block id="5af1422583703a6e2e76bfd6cb41768f" category="paragraph">如果您在创建控制台代理的同一 Azure 订阅中拥有 Azure Blob 存储，您将看到 Azure Blob 存储系统自动出现在“系统”页面上。<block ref="a6629cf2125cd2e3995eb2cd4cd4f733" category="inline-link-rx"></block></block>
   <block id="287770d72fc21f25627dd52e25482a5f" category="section-title">步骤 5：向控制台代理提供权限</block>
@@ -3466,7 +3377,6 @@
   <block id="726899d9ee93e66e30292766e0c0075e" category="list-text">在 Google 平台中创建自定义角色：</block>
   <block id="98b95b176d8b51112c2de8e58e9caf10" category="list-text">创建包含以下权限的 YAML 文件：</block>
   <block id="6ac81ca97f3aef7ea1bb138a4b1cec11" category="paragraph">以下示例在项目级别创建一个名为“connectorDeployment”的角色：</block>
-  <block id="2000ac874a50a44e300c9f9eb68cc922" category="paragraph">gcloud iam 角色创建 connectorDeployment --project=myproject --file=connector-deployment.yaml</block>
   <block id="f603ec935847895eb8636f656a2ae53f" category="list-text">将此自定义角色分配给将从控制台或使用 gcloud 部署控制台代理的用户。</block>
   <block id="c548154326703417c4c911d469e12079" category="inline-link">Google Cloud 文档：授予单个角色</block>
   <block id="3570a09ca6fe90de537293b162a08dac" category="paragraph"><block ref="3570a09ca6fe90de537293b162a08dac" category="inline-link-rx"></block></block>
@@ -3677,8 +3587,6 @@
   <block id="2cf6a0aae6ce09d6da8360a1befc84a9" category="paragraph">向NetApp Console提供具有所需权限的 IAM 用户的 AWS 访问密钥。</block>
   <block id="0c8a608ccb6d8462e37f1062502116c5" category="open-title">Azure 角色</block>
   <block id="201a0e8a9a7e1b007b99b4e4c24c017d" category="open-title">Azure 服务主体</block>
-  <block id="9f843a41e376d24ba02eb4aa236b0e94" category="paragraph">向NetApp Console提供您之前设置的 Azure 服务主体的凭据。</block>
-  <block id="16d72802b5940e166d275fbe6cb48d4c" category="paragraph">NetApp Console现在具有代表您在 Azure 中执行操作所需的权限。</block>
   <block id="3612e0e7a44ec38da1e226c618526f91" category="open-title">Google Cloud 服务帐号</block>
   <block id="a87080733aad453c529e801cc597efff" category="summary">在受限模式下使用NetApp Console时，安装 CA 签名的证书以便用户访问基于 Web 的控制台。</block>
   <block id="76b215b1722d5e63e6379d518b352edf" category="doc">安装 CA 签名的证书以进行基于 Web 的控制台访问</block>
@@ -3707,7 +3615,6 @@
   <block id="ef9bdb2657b8a54fd5e6d5f9b03516c0" category="paragraph"><block ref="ef9bdb2657b8a54fd5e6d5f9b03516c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bc6c94cdefa59d05be42997e2d32947f" category="section-title">续订控制台 HTTPS 证书</block>
   <block id="9eb4aa2328626aaf57b918eeb9042186" category="paragraph">您应该在代理的 HTTPS 证书到期之前更新它，以确保安全访问。如果您未在证书到期前续订，则当用户使用 HTTPS 访问 Web 控制台时会出现警告。</block>
-  <block id="a41d7b1dc012bd6875858e000d121870" category="paragraph">显示有关证书的详细信息，包括到期日期。</block>
   <block id="56c47e4865091b4cf1fdfddb1fa57b51" category="list-text">选择*更改证书*并按照步骤生成 CSR 或安装您自己的 CA 签名证书。</block>
   <block id="6414722c7d448b33e2a69f6492ad6aee" category="paragraph">注册NetApp Console后，您可以从基于 Web 的控制台登录，开始管理您的数据和存储基础架构。</block>
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">您现有的NetApp支持站点 (NSS) 凭证</block>
@@ -3723,7 +3630,6 @@
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">监控代理</block>
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">当代理虚拟机不健康时，控制台会通知您，包括磁盘空间、RAM 和 CPU 问题。在控制台内的通知中心监控这些通知或配置电子邮件通知。磁盘空间、内存或 CPU 使用率偶尔增加是正常现象，但如果经常发生，则应采取措施解决。</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">例如，当代理资源（CPU、RAM 或磁盘空间）连续 30 分钟超过其总容量的 90% 时，控制台会通知您。之后，如果资源使用率低于该阈值，则通知中心将显示通知已解决（绿色）。</block>
-  <block id="6a84e3053bbf1efa2a6cfbd206b01ccf" category="admonition">如果您对修改代理 VM 有任何疑问，请联系NetApp支持。</block>
   <block id="96d008db67fc0b5551a926842bbb6a71" category="cell">通知</block>
   <block id="27cddd48f04c03ba2ee3de901409426c" category="cell">需要采取行动</block>
   <block id="9fd6077327da6ac541f6fd95cfffcc63" category="cell">磁盘空间过高</block>
@@ -3771,7 +3677,6 @@
   <block id="bfdc627e907d3cf7cd98aabcf00d7f3d" category="paragraph-title">无需控制台代理</block>
   <block id="b38724d5be0fd1e27cb2f48b33b593fb" category="paragraph">系统会提示用户输入其ONTAP凭据以访问集群的ONTAP系统管理器。用户可以选择将这些凭据保存在控制台中，这意味着他们不必每次都输入这些凭据。用户凭证仅对相应用户可见，并且可以从用户凭证页面进行管理。</block>
   <block id="bbfd8836af38790512652680bc39a97e" category="paragraph-title">使用控制台代理</block>
-  <block id="cad21b2f1f29d6af5059830617c87d42" category="paragraph">默认情况下，不会提示用户输入其ONTAP凭据来访问ONTAP系统管理器。但是，控制台管理员（具有组织管理员角色）可以配置控制台以提示用户输入其ONTAP凭据。启用此设置后，用户每次都需要输入其ONTAP凭据。</block>
   <block id="e6021c3af6909757e25569099fa4e00a" category="paragraph"><block ref="e6021c3af6909757e25569099fa4e00a" category="inline-link-macro-rx"></block></block>
   <block id="4cdcf6b8fd95bbaa7cf27e4443c7681b" category="section-title">NSS 凭证</block>
   <block id="8004db986a284e5dcad9f3e77eaac162" category="paragraph">与您的NetApp Console登录关联的 NSS 凭据可支持注册、案例管理和访问Digital Advisor。</block>
@@ -3858,7 +3763,6 @@
   <block id="e879b7fea6cc39a26268d3c9029be021" category="paragraph">您在通知中心设置的过滤器不会决定您通过电子邮件收到的通知类型。默认情况下，任何组织管理员都会收到所有“关键”和“建议”通知的电子邮件。这些通知涵盖所有服务 - 您不能选择仅接收某些服务的通知，例如代理或NetApp Backup and Recovery。</block>
   <block id="7fcffcce675dad706dbf53d68f1f86f2" category="paragraph">所有其他用户和收件人都配置为不接收任何通知电子邮件 - 因此您需要为任何其他用户配置通知设置。</block>
   <block id="1d3e249b6555eefc80860021fe042ffd" category="paragraph">您必须具有组织管理员角色才能自定义通知设置。</block>
-  <block id="88240b5487c8bf17e47455575ad82169" category="list-text">选择*管理&gt;通知设置*。</block>
   <block id="82a23653821ce41ba15b6f802c1429c1" category="list-text">选择*组织用户*或*其他收件人*。</block>
   <block id="b8894c3e9da3e940e1ada35ed95d18e0" category="paragraph">*其他收件人*页面允许您配置控制台以通知控制台组织的成员。</block>
   <block id="56a6277cde8cdf0fba9fd7fc4651af31" category="list-text">从“组织用户”页面或“其他收件人”页面中选择一个或多个用户，然后选择要发送的通知类型：</block>
@@ -3881,19 +3785,12 @@
   <block id="e47d9b41f27e043909b844e706663ff6" category="paragraph"><block ref="e47d9b41f27e043909b844e706663ff6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e84ada0ea0d9ef2dba3638204e7f7ea5" category="summary">您可以通过将用户添加到合作伙伴组织来将用户添加到合作伙伴关系。添加用户后，合作伙伴组织负责为他们分配组织中特定资源的角色。</block>
   <block id="fc680a19dbe963465969c8ebcf1ef266" category="doc">管理合作组织的成员</block>
-  <block id="d29873e56627c9db86e40364b9aec79d" category="paragraph">需要“合作伙伴关系管理员”角色来创建和管理合作伙伴关系。  *合作伙伴查看者*可以查看合作伙伴页面。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="c2006e8d08eb9d1785a9f7c850fdd831" category="paragraph">您可以随时从合作关系中移除用户。从合作关系中移除用户会立即撤销其对合作伙伴组织中任何资源的访问权限。</block>
   <block id="96f2ca56875739f174de05aff4f7a7be" category="section-title">向合作关系添加成员</block>
-  <block id="315f954478ca2c98e04155e6e7b73a0c" category="paragraph">当您向合作伙伴关系添加成员时，合作伙伴组织的*合作伙伴关系管理员*必须为他们分配组织中特定资源的角色，然后他们才能访问这些资源。</block>
   <block id="c689abd13ceac8b4f6baf58b3af37b7a" category="paragraph">将成员添加到合作伙伴关系后，这些成员将显示为合作伙伴组织中的成员，合作伙伴可以在其中为他们分配资源。</block>
   <block id="c7109590ea6753b11a272a56798d89ac" category="list-text">选择*合作伙伴关系*。</block>
   <block id="cc8bc2170e8baa957f05df7251aa54e8" category="list-text">选择“*已收到合作关系*”选项卡。</block>
-  <block id="4edb8a1a67f122f619e1d858e93b345e" category="list-text">选择操作菜单<block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>在您想要添加成员的已建立的合作关系旁边，选择“添加成员”。</block>
-  <block id="392f1d5c12563c7b78aab5d99cacb102" category="list-text">选择一个或多个要添加到合作关系中的成员，然后选择*添加*。</block>
   <block id="cc040653fb6cd0e482d81d2bdaf3f6ab" category="section-title">从合作关系中移除成员</block>
-  <block id="5acef618a9ac948d4394011703ff35d0" category="paragraph">您可以随时从合作关系中移除成员。从合作关系中移除用户会立即撤销其对合作伙伴组织中任何资源的访问权限。</block>
   <block id="189624fa182dbcce70f5dc9dc4bdb543" category="paragraph">如果您想调整成员拥有的角色或他们可以访问的资源，合作伙伴组织的合作伙伴管理员必须进行这些更改。</block>
-  <block id="38eda7fcfbaf548fa84d2d4f29e8d631" category="list-text">选择操作菜单<block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>在您想要删除的成员旁边，选择“删除关联”。</block>
   <block id="ce69aab235fd937d66238dc7c9eeb78f" category="list-text">通过在对话框中选择“*删除*”来确认该操作。</block>
   <block id="01545669a67e1933adcbc5b3af125d97" category="section-title">查看用户的角色信息</block>
   <block id="a59b2a8c9a4b79ad17d3269359243bb7" category="paragraph">您可以查看已分配给用户的角色以及相关资源。</block>
@@ -3913,20 +3810,15 @@
   <block id="082bc4342b465447169bfa68d0133cd8" category="paragraph">接收组织必须接受组织合作请求，合作才能继续进行。您必须具有*合作伙伴关系管理员*角色才能批准和管理合作伙伴关系。</block>
   <block id="09956200d8ef7dc79641ae7cad23bd7b" category="list-text">导航到您想要批准的合作关系并选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*批准*。</block>
   <block id="15a41c6879767e184c5980a69291c5f5" category="list-text">查看合作关系的详细信息，包括请求合作关系的组织的名称和组织 ID，然后选择“下一步”。</block>
-  <block id="0bb261b4f0c3d40e27124900602baae5" category="list-text">可选，将组织成员添加到合作伙伴关系并选择*应用*。</block>
   <block id="207bdeb71d0a2fe4660fe7ec288a4246" category="paragraph">您可以随时通过*合作伙伴*页面添加其他成员。</block>
   <block id="a87efa6bb2ffc67970007ccc421075d1" category="admonition">您添加的任何成员都会在合作伙伴的组织中可见，合作伙伴可以在其中将他们分配给资源。</block>
-  <block id="683e926e74ceb4397bc47c2bca3d1561" category="paragraph">您批准的合作关系现在显示状态为*已建立*。任一组织中具有 *Partnership admim* 或 *Partnership viewer* 角色的用户都可以查看合作关系。</block>
   <block id="7dad334d3a1b65d8296760e5ba08dd8d" category="section-title">查看合作关系状态</block>
   <block id="b22d3ad80b9039c5df822aa35cbaced0" category="paragraph">查看您的合作关系状态。</block>
   <block id="51f9083d99a7c0582c0345971c933d5a" category="paragraph">合作伙伴关系管理员、合作伙伴关系查看者。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="fb0a2f0e132594d008ad60ecc86cf724" category="list-text">选择*合作伙伴关系*。</block>
-  <block id="2a07b5c596996794d517a1005fe67649" category="list-text">选择“*已发起的合作关系*”或“*已接收的合作关系*”选项卡。</block>
   <block id="9cbf38734032460c85823dade0d84cce" category="list-text">查看显示合作关系及其状态的相应表格。</block>
   <block id="5f91b9b99bd2beda1fec42e7d2602065" category="section-title">禁用组织合作关系</block>
   <block id="3e16dacba04b55c9a4e931bfe743bbec" category="paragraph">您必须是发起组织的成员才能禁用合作关系。禁用合作关系将立即撤销您组织中与合作伙伴组织共享的任何资源的访问权限。</block>
   <block id="99c3e344f722dbf678cb3601f36deb14" category="paragraph">合伙管理员。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="cc76e48273eaa4daa5e1d7dd787abab7" category="list-text">选择“*已启动的合作伙伴关系*”选项卡。</block>
   <block id="c4949ad54642393ff8344ba3f6da6464" category="list-text">导航到您想要禁用的已启动合作关系并选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*禁用*。</block>
   <block id="3348041ee2a90208493612a853334377" category="summary">您可以通过为合作伙伴用户分配组织内文件夹和项目的特定角色来授予他们访问权限。</block>
   <block id="68c15daf4d80dc90b1515f522d8636c3" category="doc">为合作伙伴用户提供资源访问</block>
@@ -3947,7 +3839,6 @@
   <block id="653fed1e28ce0fa8c706b4ab11f41fda" category="paragraph">您可以通过向成员添加角色来提供对组织资源的访问权限。分配角色时，您指定一个资源和一个角色。您可以为一个用户分配多个角色。</block>
   <block id="d2118e453843735675146334430d4ea5" category="paragraph">例如，如果您有两个项目，并且希望同一个用户同时拥有这两个项目的备份和恢复管理员角色，则您需要为每个项目的用户提供该角色。同样，如果您想为同一个项目的用户提供两个不同的角色，则需要分别分配每个角色。</block>
   <block id="e94bec761f669d078469df6d8e681e9a" category="list-text">选择*合作伙伴关系已启动*选项卡。</block>
-  <block id="6e6d9db4b42d92579abff2c47fba093c" category="list-text">选择操作菜单<block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>在您想要查看的已建立的合作关系旁边，选择“查看详细信息”。</block>
   <block id="bd871cf2d72da8b54e1ed4fde812d549" category="paragraph">*成员*列表显示合作伙伴组织已添加到合作伙伴关系的成员。</block>
   <block id="cc6d53ade5033c714686efe2af67ddb4" category="section-title">更改或删除合作伙伴用户的角色</block>
   <block id="ccfd182116bd6f5ace157605044761a6" category="paragraph">您可以更改或删除分配给合作伙伴组织成员的角色。</block>
@@ -4006,8 +3897,6 @@
   <block id="e478bf49f8034f2197e96520fa338da6" category="inline-link">在您的项目中启用以下 Google Cloud API</block>
   <block id="dc5737502524148f78bf03ba18318700" category="list-text"><block ref="dc5737502524148f78bf03ba18318700" category="inline-link-rx"></block></block>
   <block id="99cee3b8f810202d675de978cef4f9da" category="cell">是的<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
-  <block id="e216b7a924341f796bca310d1d812baf" category="cell">复制和同步</block>
-  <block id="35ccbae2ce9b9594b9af9196a3bed361" category="cell">工作负载工厂</block>
   <block id="920d0c5e78f6b6572b89d526a296d06b" category="summary">通过准备环境和部署控制台代理，开始以受限模式使用NetApp Console。</block>
   <block id="c31816e89acef282910453c5620f26f4" category="inline-link-macro">部署模式</block>
   <block id="73766a81edee1e1df062cc59ac68494e" category="paragraph">受限模式通常由州和地方政府以及受监管的公司使用，包括在 AWS GovCloud 和 Azure Government 区域中的部署。在开始之前，请确保您了解<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>和<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
@@ -4023,11 +3912,8 @@
   <block id="08a85e7ea19b20609018d63a75a9ab37" category="list-text">向控制台代理提供您之前设置的权限。</block>
   <block id="1d682899a424ef1c9395956d4422fd8a" category="inline-link-macro">订阅NetApp Intelligent Services（可选）</block>
   <block id="e7dd7f23b1ff3326cdebf5cb759f7a6f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="60f282c89397f6d15a4ed422eccb831c" category="inline-link-macro-rx"></block></block>
-  <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">准备使用NetApp控制台的网络</block>
-  <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
   <block id="0f29bdee858adb6d973cf8db83b0a896" category="inline-link-macro">注册并创建组织</block>
   <block id="a31431c54e189487cfd625eb4abd12c5" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="10b13e3a86d0fb043f42c593114c5f97" category="inline-link-macro-rx"></block></block>
-  <block id="8859695a85afcf4d196795433a572988" category="inline-link">NetApp控制台</block>
   <block id="d1e788bf754c3b9d70eae673330792e2" category="inline-link-macro">了解没有控制台代理您可以做什么</block>
   <block id="8f012b04ed4896873993ff7252418ca4" category="paragraph">高级存储管理功能和某些NetApp数据服务要求您安装控制台代理。控制台代理使控制台能够管理混合云环境中的资源和流程。</block>
   <block id="ce207d705a8165045c7d26c1fa5fe273" category="paragraph">您可以在云或本地网络中创建控制台代理。</block>
@@ -4081,7 +3967,6 @@
   <block id="b7feb1419e39be60dd56e13eb4251594" category="list-text"><block ref="b7feb1419e39be60dd56e13eb4251594" category="inline-link-rx"></block></block>
   <block id="60d6844eb545641bb1448829af996932" category="paragraph">控制台代理实例和Cloud Volumes ONTAP实例现已配置为使用 IMDSv2。</block>
   <block id="5dbaefa65dffe1f0a37c10d0c33764b1" category="doc">注册或登录NetApp Console</block>
-  <block id="827522fc27d0b7a8a36e98a829e5c687" category="list-text">打开 Web 浏览器并转到<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block></block>
   <block id="f6400c3e909c93ba53f8281302a7ffef" category="paragraph">在这两种情况下，您都会在初始登录时注册控制台。</block>
   <block id="bf093decf90516c940874ca448e5647c" category="list-text">如果您想通过创建控制台登录来注册，请选择*注册*。</block>
   <block id="dafbc60d299b7ecf7d1bf490a178f77f" category="list-text">在*注册*页面上，输入所需信息并选择*下一步*。</block>
@@ -4091,7 +3976,6 @@
   <block id="9c127a433a6192892f397a5a7e6dcb5a" category="doc">订阅NetApp Intelligent Services（受限模式）</block>
   <block id="01d7bfce3883bfe219db559f4111d0eb" category="paragraph">市场订阅支持以受限模式对以下数据服务收费：</block>
   <block id="53408e4899de894c1e6bc5c8f7add2d4" category="paragraph">NetApp Data Classification可通过您的订阅启用，但使用分类是免费的。</block>
-  <block id="6128cb243ff25acf013f1f4b0f183a3e" category="paragraph">您必须已经部署控制台代理才能订阅数据服务。您需要将市场订阅与连接到控制台代理的云凭据关联起来。</block>
   <block id="53043f0a6d597ccfe179296cc8ded9c0" category="inline-link">管理Cloud Volumes ONTAP 的BYOL 基于容量的许可证</block>
   <block id="c258aa60bfe069555f691666bc14d520" category="list-text"><block ref="c258aa60bfe069555f691666bc14d520" category="inline-link-rx"></block></block>
   <block id="1687f999e1e3454ce506267f03218c10" category="inline-link">管理数据服务的 BYOL 许可证</block>
@@ -4180,21 +4064,15 @@
   <block id="321dc22fd01268f07631215218f7ef21" category="paragraph">无法访问NetApp代理 UI</block>
   <block id="7d5c771ad33e485a3b234583eb7dd0a5" category="paragraph">尝试访问代理的 IP 地址时会出现此消息。如果代理没有正确的网络访问权限或不稳定，则代理可能无法初始化。</block>
   <block id="88284233c147813077e6417f8a728f4e" category="list-text">连接到控制台代理。</block>
-  <block id="16b6455819befb7df9d535376b8634a4" category="list-text">验证 Service Manager 服务</block>
   <block id="a733bdcb61ca57873481992675ebf1d1" category="inline-link-macro">了解有关所需网络访问端点的更多信息。</block>
   <block id="cfb83a02e405519cde011aa4d88ddf18" category="list-text">验证代理是否具有所需的网络访问权限。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="3b30819fea042c92148d0647d057bd47" category="paragraph">无法加载代理设置</block>
-  <block id="e65ece8c4b4403a0db71fd719fa24c55" category="paragraph">当您尝试访问代理设置页面时，控制台会显示此消息。</block>
   <block id="41dd69dc7c6b4f3a269a4e72a6eedce5" category="list-text">检查 OCCM 容器是否正在运行并正常工作。</block>
   <block id="2fa1ea75814dc1fdfdc37b059a82eaea" category="paragraph">无法加载代理的支持信息。</block>
   <block id="f741099adb576ac2cebaca78923cb39c" category="paragraph">如果代理无法访问您的支持帐户，则会显示此消息。</block>
-  <block id="f1250585f9c248976b034c285b91672c" category="paragraph">使用以下命令之一来验证您的控制台代理。所有服务的状态都应为“正在运行”。如果不是这种情况，请联系NetApp支持。</block>
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">有关访问控制台代理诊断的详细信息，请参阅以下主题：</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">检查控制台代理状态（适用于 Linux 主机部署）</block>
   <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
-  <block id="bf25f8db77ad355d69bc02d42fae9f4d" category="inline-link-macro">检查控制台代理状态（针对 VCenter 部署）</block>
-  <block id="8775ad30be432ac72bc04b0163c4716f" category="list-text"><block ref="8775ad30be432ac72bc04b0163c4716f" category="inline-link-macro-rx"></block></block>
-  <block id="22e75fa70d8a01a79302df0514996aee" category="list-text">Docker（用于 Ubuntu 和 VCenter 部署）</block>
   <block id="0b73ccbc949b18b9ec9f895e07294e36" category="list-text">Podman（用于 RedHat Enterprise Linux 部署）</block>
   <block id="7456d0b67dfbe48185fc6410c811e1dc" category="section-title">查看控制台代理版本</block>
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">查看控制台代理版本以确认升级或与您的NetApp代表共享。</block>
@@ -4212,7 +4090,6 @@
   <block id="9e3e4c61d70076bf677edfc157a67761" category="list-text">保存您的文件。</block>
   <block id="92ae5258778c2fa8ece2b13c88ec0853" category="list-text">通过运行以下命令重新启动服务管理器 2 服务：</block>
   <block id="efc08f7ae120eb6ea0a122c03f686581" category="section-title">与NetApp支持部门合作</block>
-  <block id="d0bc8404c6e69b4ebc8cadb9768f40e3" category="paragraph">如果您无法解决控制台代理的问题，您可能需要联系NetApp支持。  NetApp支持人员可能会要求您提供控制台代理 ID，或者如果他们还没有控制台代理日志，则要求您将控制台代理日志发送给他们。</block>
   <block id="7a4c595a1d52f82afae3ef326e950386" category="section-title">查找控制台代理 ID</block>
   <block id="834a095a865c1f656d9dbcb4d5ea551e" category="paragraph">为了帮助您入门，您可能需要控制台代理的系统 ID。该 ID 通常用于许可和故障排除目的。</block>
   <block id="8126640b876740d7c6a34af9f2c13332" category="paragraph">您可以在页面顶部找到系统 ID。</block>
@@ -4220,7 +4097,6 @@
   <block id="4e7d49155d7b43f201198ab11c91b09f" category="paragraph"><block ref="4e7d49155d7b43f201198ab11c91b09f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9a1a261f12562d5f85479192c99752fa" category="list-text">将鼠标悬停在 ID 上并单击即可复制它。</block>
   <block id="a37f4dabe9cfbc81f6c1fb589f9a8944" category="section-title">下载或发送AutoSupport消息</block>
-  <block id="aaadf7372f5a8eb11db83bb98623962f" category="paragraph">如果您遇到问题， NetApp可能会要求您向NetApp支持发送AutoSupport消息以进行故障排除。</block>
   <block id="a3fe9181dc23b52cd2614b6bf36ef95d" category="admonition">由于负载平衡， NetApp Console最多需要五个小时才能发送AutoSupport消息。对于紧急通信，请下载文件并手动发送。</block>
   <block id="24d980f868691fec5316d23a370b1a82" category="list-text">根据您需要向NetApp支持发送信息的方式，选择以下选项之一：</block>
   <block id="b9ec9a523cf55268d71bff7e627ff5be" category="list-text">选择将AutoSupport消息下载到本地计算机的选项。然后，您可以使用首选方法将其发送给NetApp支持。</block>
@@ -4235,7 +4111,6 @@
   <block id="784d74ec26e151955a4c9657042f8469" category="section-title">从NetApp知识库获取帮助</block>
   <block id="d22ff119563c0ee5fe8dab4228074cee" category="inline-link">查看NetApp支持团队创建的故障排除信息</block>
   <block id="50442864bbf7126b7b62b75cde676ded" category="paragraph"><block ref="bb2a765d0923866ecd647a5c8b0cc5e9" category="inline-link-rx"></block> 。</block>
-  <block id="ed87b6f79acebe813c13145433f4bce1" category="summary">卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。</block>
   <block id="afb829361695f0d21025a9396659859f" category="doc">卸载并删除控制台代理</block>
   <block id="bfc66ba3b81dc2d9cc21215e84660492" category="paragraph">如果您使用的是标准模式或受限模式（换句话说，代理主机具有出站连接），那么您应该按照以下步骤卸载代理。</block>
   <block id="0f698c82e2e9c5cd1c4ae5eca5c6d189" category="list-text">连接到代理的 Linux VM。</block>
@@ -4249,7 +4124,6 @@
   <block id="592190ac81807f2097b7f4253f7b5646" category="list-text">输入代理人的姓名进行确认，然后选择*删除*。</block>
   <block id="ca901ca59322c0976d1191fbab40ddfb" category="doc">管理控制台代理升级</block>
   <block id="21b1315c6a8f0b6a7d49a8cd93ddf218" category="section-title">升级控制台代理</block>
-  <block id="aecaf1740cb5930ac7d205159eff94bc" category="paragraph">控制台代理需要在升级过程中重新启动，因此NetApp Console在升级期间将不可用。</block>
   <block id="b0f22bfeabc1c7f8e39437a374a3af0b" category="list-text">从下载控制台代理软件<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block>。</block>
   <block id="0d5d3e78379f182967772aab096aa6ac" category="list-text">将安装程序复制到 Linux 主机。</block>
   <block id="482c8088b93a78c2682279e88617ca7f" category="list-text">运行安装脚本：</block>
@@ -4273,7 +4147,6 @@
   <block id="ab589ccc40a430dac092774d52001037" category="paragraph">设置 MFA 后，控制台会在您每次登录时提示您输入来自身份验证应用程序的一次性代码。</block>
   <block id="85abfea9292794a037b216152d68a42c" category="section-title">重新生成您的 MFA 恢复代码</block>
   <block id="6487608bf6fe028f1ce57da2db423d90" category="paragraph">您只能使用一次恢复代码。如果您使用或丢失了您的，请创建一个新的。</block>
-  <block id="b055122b051aa8d9fa49873549323720" category="list-text">选择控制台右上角的配置文件图标以查看用户设置面板。</block>
   <block id="c5f7c138da6978f74df8212e9af75a79" category="list-text">选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>在“多重身份验证”标题旁边。</block>
   <block id="45c07fa99050f57de53fb4ff89fd7cab" category="list-text">选择*重新生成恢复代码*。</block>
   <block id="2332588943c47002d7d4b6b185a7aa0c" category="list-text">复制生成的恢复代码并将其保存在安全的位置。</block>
@@ -4474,16 +4347,12 @@
   <block id="669bdf1134d50e3993628c05585e5734" category="list-text">选择您想要与此订阅关联的控制台组织。</block>
   <block id="d530645223f70d357ab17787b555f381" category="list-text">在“替换现有订阅”字段中，选择是否要用这个新订阅自动替换一个组织的现有订阅。</block>
   <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">控制台将用这个新订阅替换组织中所有凭据的现有订阅。如果一组凭证从未与订阅关联，那么这个新订阅将不会与这些凭证关联。</block>
-  <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">查看代理如何使用权限</block>
   <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">如上文所述，控制台允许您通过几种方式提供 AWS 凭证：与控制台代理关联的 IAM 角色、在受信任的账户中承担 IAM 角色或提供 AWS 访问密钥。</block>
   <block id="a47f802b14f43406913307d1775681b4" category="list-text">您需要使用具有从控制台启动控制台代理权限的 Google 帐户部署控制台代理。</block>
-  <block id="2f452b0fc39f70459edce8976da308fa" category="list-text">部署控制台代理时，系统会提示您选择<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block>对于代理控制台从服务帐户获取权限来创建和管理Cloud Volumes ONTAP系统、使用NetApp备份和恢复管理备份等等。通过将自定义角色附加到服务帐户来提供权限。</block>
   <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">勒索软件恢复力提供不同的用户角色来管理对设置、操作和报告的访问。</block>
-  <block id="1f0992962e7aa72491d3ea02fc5edda4" category="paragraph">**基线角色**</block>
   <block id="170e16c6dd1a9b91467ae7129f97a1d7" category="list-text">勒索软件恢复管理员 - 配置勒索软件恢复设置；调查并响应加密警报</block>
   <block id="cdfd65d81032924213a156d66245ab10" category="list-text">勒索软件恢复力查看器 - 查看加密事件、报告和发现设置</block>
   <block id="e8664260e9d447452785abaf08b8b8f6" category="inline-link-macro">可疑用户活动检测</block>
-  <block id="04724d8f5ba2b38975c69834e3e8b920" category="paragraph">**用户行为活动角色**<block ref="885ef4a0557ed3cd017b2efccb0c3de5" category="inline-link-macro-rx"></block>警报提供对文件活动事件等数据的可见性；这些警报包括文件名和用户执行的文件操作（例如读取、写入、删除、重命名）。为了限制这些数据的可见性，只有具有这些角色的用户才能管理或查看这些警报。</block>
   <block id="eb660a2de52d250becf4703c75d4aaff" category="list-text">勒索软件恢复用户行为管理员 - 激活可疑用户活动检测，调查并响应可疑用户活动警报</block>
   <block id="fd26172aba8622db091eebe480cd7e37" category="list-text">勒索软件恢复用户行为查看器 - 查看可疑用户活动警报</block>
   <block id="e98813c3c921a36511f197fc7a9fe204" category="admonition">用户行为角色不是独立角色；它们旨在添加到勒索软件恢复管理员或查看者角色中。有关详细信息，请参阅 <block ref="97d5369167883766cc87d7bf7a5c9d91" category="inline-xref-macro-rx"></block>。</block>
@@ -4509,7 +4378,6 @@
   <block id="ef42b54359e596b7aa50418f7960a6a5" category="section-title">用户行为角色</block>
   <block id="bdd638184754634b202e21c33e499493" category="paragraph">要配置可疑用户行为设置并响应警报，用户必须具有勒索软件恢复用户行为管理员角色。要仅查看可疑用户行为警报，用户应具有勒索软件恢复用户行为查看者角色。</block>
   <block id="d8e882f82c91850fe60b139660a3451f" category="inline-link-macro">可疑用户活动设置和警报</block>
-  <block id="64873820e76b32a77a5cf79a547b9efa" category="paragraph">应将用户行为角色授予具有现有勒索软件恢复管理员或查看者权限且需要访问<block ref="dabde4cfb2462919536551734d022527" category="inline-link-macro-rx"></block>。例如，具有勒索软件恢复管理员角色的用户应该获得勒索软件恢复用户行为管理员角色来配置用户活动代理并阻止或解除阻止用户。不应将勒索软件恢复用户行为管理员角色授予勒索软件恢复查看者。</block>
   <block id="759c83e40f93cea3a1eccdc76fde4c4b" category="paragraph">下表描述了勒索软件恢复用户行为管理员和查看者角色可执行的操作。</block>
   <block id="5c34bf47745609542194c315fe2964f9" category="cell">创建、修改或删除用户活动代理</block>
   <block id="485cfdddcabc76dc28501c429282df6b" category="cell">创建或删除用户目录连接器</block>
@@ -4542,7 +4410,6 @@
   <block id="7fd1ab9f3f5fa9cac90471ec200331ee" category="list-text">*凭证位置*：选择*Amazon Web Services &gt; 控制台*。</block>
   <block id="1882d8328b6723ee413aea7b61b66303" category="paragraph">添加 AWS 凭证后，您可以使用这些凭证配置 AWS Marketplace 订阅。通过订阅，您可以按小时费率（PAYGO）或使用年度合同支付NetApp数据服务和Cloud Volumes ONTAP 的费用。</block>
   <block id="2d19d5d422219f2efe1607c76a85a329" category="section-title">将现有订阅与您的组织关联</block>
-  <block id="c0bb1a2e67d4c59ab378839c81af1fac" category="paragraph">当您从 AWS Marketplace 订阅时，流程的最后一步是将订阅与您的组织关联。如果您没有完成此步骤，那么您就无法在您的组织中使用该订阅。</block>
   <block id="6b63cf09da57249f50100278c2a1e8ea" category="paragraph">如果您从 AWS Marketplace 订阅了NetApp Intelligent Services，但错过了将订阅与您的帐户关联的步骤，请按照以下步骤操作。</block>
   <block id="ea446ce450c19b4b3a401bedaa18b458" category="list-text">确认您没有将您的订阅与您的控制台组织关联。</block>
   <block id="cabac1a22a55ac7ec7d7dcf426b3ef41" category="list-text">确认订阅与您的组织相关联。</block>
@@ -4556,11 +4423,9 @@
   <block id="318bbdd390cdff7f023b8038a3fb0070" category="list-text">当控制台创建控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。此角色包括使控制台代理能够管理 AWS 资源的权限。确保在未来版本中添加新权限时更新角色。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>。</block>
   <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">输入名称。</block>
   <block id="cc12b07ff25c8e9f0f635a74e2d22a82" category="list-text">添加自定义标签（元数据）。</block>
-  <block id="7a7b58b8b66971d14e483e486905137d" category="list-text">在*网络*页面上，为代理指定 VPC、子网和密钥对，选择是否启用公共 IP 地址，并选择性地指定代理配置。</block>
   <block id="193563612f46c81d99f9d364d74518c6" category="paragraph">控制台大约需要 10 分钟即可部署代理。停留在该页面上直到该过程完成。</block>
   <block id="0cbff45e0f71134dbbfed8f2ba0d6f76" category="paragraph">创建一个 Azure 自定义角色，您可以将其分配给您的 Azure 帐户或 Microsoft Entra 服务主体。控制台通过 Azure 进行身份验证，并使用这些权限代表您创建控制台代理。</block>
   <block id="a07294e253f6aa6ecfa69e1864aed3dc" category="paragraph">这些权限适用于控制台代理本身。这与您之前为部署控制台代理虚拟机而设置的权限不同。</block>
-  <block id="82b5105dec777bd74c2d06159a000e87" category="list-text">在“详细信息”页面上，输入代理的名称，指定标签，并选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色<block ref="b569336f779a413e2d7fa8c0ccb0306d" category="inline-link-macro-rx"></block>。</block>
   <block id="19ffcd7024175b13282f800ea3adbed2" category="paragraph">控制台大约需要 10 分钟才能准备好代理。停留在该页面上直到该过程完成。</block>
   <block id="876390ad9b0cf0f2d258d7aa2aa95113" category="paragraph">如果您在创建控制台代理的同一 Azure 帐户中拥有 Azure Blob 存储，您将看到 Azure Blob 存储自动出现在 *系统* 页面上。<block ref="3486c1e90a886b9a62eac44d0dc074c2" category="inline-link-rx"></block></block>
   <block id="19a4cd42145fb38e7327a12208fcf7d1" category="paragraph">代理大约需要 10 分钟才能准备就绪；请停留在页面上直到该过程完成。</block>
@@ -4639,10 +4504,7 @@
   <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">第三方代理和扩展程序</block>
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">代理虚拟机不支持第三方代理或虚拟机扩展。</block>
-  <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">如果您已将控制台代理配置为使用代理服务器，则可以在控制台代理上启用直接 API 流量，以便直接向云提供商服务发送 API 调用，而无需通过代理。在 AWS、Azure 或 Google Cloud 中运行的代理支持此选项。</block>
-  <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="paragraph"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block>。</block>
   <block id="b634c2786e9d7bad38c80a81b3416dd7" category="paragraph">如果您删除了代理虚拟机或卸载了代理，则应将其从控制台的代理列表中删除。删除代理虚拟机或卸载代理软件后，代理在控制台中会显示“已断开连接”的状态。</block>
-  <block id="f6b8e4c4df658aad1c40b366b5c5d259" category="list-text">在“概览”页面上，选择已断开连接的代理的操作菜单，然后选择“移除代理”。</block>
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
   <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">2025年6月9日</block>
@@ -4650,8 +4512,6 @@
   <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">2024年12月9日</block>
   <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">2024年10月7日</block>
   <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">2024年9月9日</block>
-  <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">当控制台在 AWS 中启动控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。它还附加了一项策略，为控制台代理提供管理该 AWS 账户内的资源和流程的权限。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
-  <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">以上部分描述了控制台代理的推荐部署方法，即从控制台部署。您还可以从 AWS Marketplace 在 AWS 中部署代理，也可以在您自己的 Linux 主机或 VCenter 中手动安装控制台代理软件。</block>
   <block id="7294c37d50c105bffdf0e10ac05a9beb" category="paragraph">Podman 版本 5.4.0，podman-compose 版本 1.5.0。</block>
   <block id="eaf2f97729e8d5e4d205672da8afc9a5" category="paragraph">9.6</block>
   <block id="057722eccb00723c8217ea4d2f4aa96f" category="paragraph">4.0.0 或更高版本，控制台处于标准模式或受限模式</block>
@@ -4676,7 +4536,6 @@
   <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">您可以使用NetApp Console管理 AWS 凭证和市场订阅，通过在控制台代理部署期间提供适当的 IAM 凭证，并将其与 AWS Marketplace 订阅关联，从而安全、经济高效地部署Cloud Volumes ONTAP和其他数据服务，以便在单个或多个 AWS 账户中进行计费。</block>
   <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">您可以通过NetApp Console直接管理 AWS 凭证和市场订阅，通过在控制台代理部署期间提供适当的 IAM 凭证并将其与 AWS Marketplace 订阅关联以进行计费，来确保Cloud Volumes ONTAP和其他数据服务的安全部署。</block>
   <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">AWS代理部署策略</block>
-  <block id="696095255d7c0298653c0328a018bda8" category="paragraph">从控制台部署控制台代理时，您需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台代理的权限。所需权限列于表中<block ref="90ba5e70f609b78ed2966a8cb311c96b" category="inline-link-macro-rx"></block>。</block>
   <block id="1b87d5ac2b76ff03a714cd78cd28bf3b" category="list-text">要将您现有的控制台代理与额外的 AWS 账户一起使用，请执行以下操作：</block>
   <block id="93b7ab66bd8976eacd3146faac726986" category="paragraph">要将控制台与额外的 AWS 账户一起使用，请提供 AWS 密钥或受信任账户中角色的 ARN。下图显示了两个附加账户，一个通过受信任账户中的 IAM 角色提供权限，另一个通过 IAM 用户的 AWS 密钥提供权限：</block>
   <block id="1bd60f6ffbfbe027889fb2ff7fd8f14c" category="paragraph">您可以通过指定 IAM 角色的 Amazon 资源名称 (ARN) 或 IAM 用户的 AWS 密钥，将帐户凭证添加到控制台。</block>
@@ -4843,7 +4702,6 @@
   <block id="6db60e859007b84c686f5dc3f04f4697" category="section-title">代理获取</block>
   <block id="5b9ef687e725b42e8780bea1b481641c" category="paragraph">这<block ref="6db60e859007b84c686f5dc3f04f4697" prefix=" " category="inline-code"></block>该命令显示有关当前透明代理服务器配置的信息。要查看当前透明代理服务器配置，请使用以下命令：</block>
   <block id="e08f6bee8517842a48e4ef6996aea3e0" category="section-title">代理获取示例</block>
-  <block id="73c7d09b23bd1ddf9009062714384bf3" category="paragraph">要查看当前透明代理服务器配置，请使用以下命令：</block>
   <block id="08bc9d3537a56e203564c5b4357049f4" category="section-title">添加代理</block>
   <block id="74c09d7b43cd297a5639a898e7348c8b" category="paragraph">这<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>该命令将代理配置为使用透明代理服务器。</block>
   <block id="0e2fd9178e3f3c1cede27d7b2ecab1c8" category="paragraph"><block ref="681b381a05010f3412144ddec4fb6462" prefix="" category="inline-code"></block></block>
@@ -4863,7 +4721,6 @@
   <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*灾难恢复查看器*：仅查看信息。</block>
   <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">灾难恢复故障转移管理员</block>
   <block id="49f16ca5444f519e5203bb5067957eef" category="cell">灾难恢复应用程序管理员</block>
-  <block id="7fefc96661449151a3bee08edda3e255" category="paragraph">这些限制是NetApp Console和管理设置特有的：代理、软件即服务 (SaaS) 平台等等。</block>
   <block id="332ea1ed79fb36acca4a28cb73bfb8c3" category="section-title">Google Cloud 用户帐户权限</block>
   <block id="83ad392c56898ad2bc9258551bd9dc50" category="paragraph">以下自定义角色赋予 Google Cloud 用户部署代理所需的权限。将此自定义角色分配给将要部署代理的用户。</block>
   <block id="3434c5106687454490c5ce3fd3325b7e" category="example-title">查看 Google Cloud 用户帐户权限</block>
@@ -4886,7 +4743,6 @@
   <block id="cd9c9102f061e7080ec044f1de8be60f" category="cell">创建和管理健康检查，以监控后端服务的运行状况。</block>
   <block id="60f9a4c26542d13806ebfceda41b622a" category="cell">使用虚拟机实例（启动、停止、连接操作）。</block>
   <block id="69c9360ed1f6b9f362a8bb04cc2f9976" category="cell">创建和管理资源策略，实现资源自动化管理。</block>
-  <block id="365620bda694367699a9e977c245c99d" category="cell">创建并路由日志条目，用于监控、调试和审计。</block>
   <block id="d097a5e02531e9d8606a4b9016211fb0" category="cell">storage.objects.create</block>
   <block id="18e2e5fd1011d7608a9039b76959973f" category="cell">在 Google Cloud Storage 存储桶中创建和管理对象（文件）。</block>
   <block id="877dd561e8b326f974d6649bf025cc47" category="cell">存储对象删除</block>
@@ -4993,7 +4849,6 @@
   <block id="c5edce68cac7e488fac66a004543fa61" category="paragraph">如果您的登录信息与另一个组织关联，您需要注册一个新的登录信息。否则，您将在设置屏幕上看不到启用受限模式的选项。</block>
   <block id="b32ca5cd3832e04aa3786f7647aecbcc" category="paragraph">如果您是从 Azure Marketplace 或手动安装的控制台代理，则需要授予您之前设置的权限。</block>
   <block id="124aaa31a673a34a4e59e30b752222d2" category="paragraph">必须连接控制台代理才能进行编辑。</block>
-  <block id="aa5691f6d018b3411c8082be20a4529f" category="paragraph">您可以为合作伙伴用户分配以下角色：</block>
   <block id="eaec472b7a23d9c311a78adfd10b1032" category="inline-link-macro">备份和恢复管理员</block>
   <block id="9b589496549b93bcbd645613fbd03c9c" category="list-text"><block ref="9b589496549b93bcbd645613fbd03c9c" category="inline-link-macro-rx"></block></block>
   <block id="760c54a4cb61f02dffc8c2331073ae1d" category="list-text"><block ref="760c54a4cb61f02dffc8c2331073ae1d" category="inline-link-macro-rx"></block></block>
@@ -5043,8 +4898,6 @@
   <block id="a13b8f382ebf56f2b82af89db286c5a4" category="paragraph"><block ref="a13b8f382ebf56f2b82af89db286c5a4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4159a33176d30977a2d9b1b4ff27b420" category="inline-image-macro">一张概念图，展示了另外两个账户。每个用户都有身份和访问管理 (IAM) 策略。一个与 IAM 用户关联，另一个与 IAM 角色关联。</block>
   <block id="66f249e9d83e1feff3fbdd894b518eff" category="paragraph"><block ref="66f249e9d83e1feff3fbdd894b518eff" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="30417b3c810a323e60b9866f8e6c9350" category="inline-image-macro">概念图显示了通过自定义角色和托管标识获得权限的初始 Azure 帐户，以及通过自定义角色和服务主体获得权限的两个附加帐户。</block>
-  <block id="3c3998b3724b770848f697973652cbed" category="paragraph"><block ref="3c3998b3724b770848f697973652cbed" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3ec96dde9691a6afd519c61179d8bedd" category="cell">可联系经纪人获取信息</block>
   <block id="1490f23e97090196f0b8e4be2d8742a2" category="cell">无需代理即可购买</block>
   <block id="fb97d1c8259ba6635407f1a41cf956eb" category="paragraph">是的（发现和管理功能）</block>
@@ -5057,8 +4910,6 @@
   <block id="3863a60fc30916ec3597541037025585" category="cell">*可用数据服务*：</block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">使用基于角色的访问控制 (RBAC) 管理用户对NetApp Console的访问，在组织、文件夹或项目级别分配预定义角色。每个角色都授予特定的权限，定义用户在其分配的权限范围内可以执行哪些操作。</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">了解NetApp Console基于角色的访问控制 (RBAC)</block>
-  <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp在设计控制台角色时遵循最小权限原则，因此每个角色仅包含其任务所需的权限。这种方法通过限制每个成员所需的访问权限来增强安全性。</block>
-  <block id="e8e5bdd9e757a841d4916678c54e0477" category="paragraph">将资源整理成文件夹和项目后，为组织成员分配特定文件夹或项目的角色，使他们只能履行自己的职责。</block>
   <block id="17b936d2e4829a5cf778b2c29100bb7a" category="paragraph">例如，您可以为特定项目级别的成员分配勒索软件恢复管理员角色，允许他们对该项目内的资源执行勒索软件恢复操作，而无需授予他们对整个组织的更广泛访问权限。同一用户可以被授予组织内多个项目的角色。</block>
   <block id="9b372111c3284b1c413c38133ce241b7" category="paragraph">您可以根据用户的职责，为同一范围或不同范围的用户分配多个角色。例如，规模较小的组织可能会让同一用户在组织层面管理勒索软件恢复和备份与恢复任务，而规模较大的组织可能会在项目层面为每个角色分配不同的用户。</block>
   <block id="0455998a9b4d48dfc90712f125c02594" category="section-title">控制台组织成员的类型</block>
@@ -5066,7 +4917,6 @@
   <block id="5bc06c288bf257ec517f854ffef3edce" category="paragraph"><block ref="5bc06c288bf257ec517f854ffef3edce" category="inline-link-macro-rx"></block></block>
   <block id="429804783adfb78f99dde5b7f7743fa3" category="section-title">NetApp Console中的预定义角色</block>
   <block id="03fe474c549af244d2d9ae34c36418c0" category="paragraph">NetApp Console包含预定义角色，您可以将其分配给组织成员。每个角色都包含权限，用于指定成员在其分配的范围（组织、文件夹或项目）内可以执行哪些操作。</block>
-  <block id="59f087e27ff6ff3f1db7f4c6f4bd7ed7" category="paragraph">NetApp Console角色采用最小权限原则，确保成员仅拥有完成任务所需的权限，并按角色提供的访问权限类型对其进行分类：</block>
   <block id="1614405d496cc003badc1066d7669711" category="list-text">平台角色：提供控制台管理权限</block>
   <block id="c186b521a1d693e26e360baada60a0fc" category="list-text">数据服务角色：提供管理特定数据服务的权限，例如勒索软件恢复和备份与恢复。</block>
   <block id="f815d8c404e332320043018b03d096c2" category="list-text">应用程序角色：提供管理存储以及审核控制台事件和警报的权限</block>
@@ -5125,7 +4975,6 @@
   <block id="67c9df3365a25f9273ce9359a9970d73" category="paragraph"><block ref="67c9df3365a25f9273ce9359a9970d73" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b5b8631c77766cf76c4cdf595d85709d" category="paragraph">如果您是首次使用NetApp Console(SaaS) 并拥有组织管理员角色的用户，则可以使用控制台助手来指导您完成初始设置过程。该助手可帮助您添加NetApp支持站点 (NSS) 帐户、添加控制台代理、添加集群以及添加许可证或订阅，从而更轻松地开始管理您的数据。</block>
   <block id="f4fcdc3618d224e799137c32961b66fe" category="paragraph">默认情况下，对于具有组织管理员角色的首次用户， NetApp Console会在主页上显示控制台助手。在您完成创建控制台代理和添加系统的必要任务之前，它将一直可用。</block>
-  <block id="87ce348d036c128a34f78c5571668a05" category="paragraph">使用助手完成以下任务，这些任务将为您的NetApp Console环境提供最基本的设置：</block>
   <block id="8c34b16f3206503a273a913d579a45b4" category="inline-link-macro">了解如何添加 NSS 帐户</block>
   <block id="910e5ce0d2ce921cf2d92a32f17c63cc" category="paragraph"><block ref="020d26e4890f1052d0e4c1afcac4a7ce" category="inline-link-macro-rx"></block>。</block>
   <block id="219da842ce0ea93dbe65e778848ee1ac" category="list-text">通过部署控制台代理连接到您的存储环境。</block>
@@ -5149,7 +4998,6 @@
   <block id="830042deac7cf98a9d585826bf88f527" category="inline-image-macro">屏幕截图显示只读模式开关处于开启状态。</block>
   <block id="aaa2a8206d2beaf2ad4c110435335619" category="paragraph"><block ref="aaa2a8206d2beaf2ad4c110435335619" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0946433107c0141c86e12d9acfc94eb5" category="section-title">以初始组织管理员身份注册NetApp Console</block>
-  <block id="7d49e7e93048e2c08ada8c16c7b0851f" category="paragraph">如果贵公司还没有NetApp Console组织，请注册创建一个。第一个用户是管理员，负责管理帐户和权限。您可以稍后更新角色并添加管理员。</block>
   <block id="dc346f53e29026800c3b9274294105f6" category="list-text">如果您拥有NetApp支持站点帐户，请直接在“登录”页面上输入与您的帐户关联的电子邮件地址。</block>
   <block id="b1c0e39fde6fd83a65dd3bd95142165f" category="paragraph">控制台会在您首次登录时使用您的NetApp支持站点凭据进行注册。</block>
   <block id="95f99a60f019f663b3b74472e57bd99b" category="admonition">注册表格中只允许使用英文字符。</block>
@@ -5157,32 +5005,26 @@
   <block id="9e8f3a5627d6a315be184e88407a8e4b" category="list-text">登录后，请阅读并接受最终用户许可协议。</block>
   <block id="4c93133d0f71016860e62cd5febc8888" category="list-text">在“欢迎”页面上，创建一个组织。</block>
   <block id="d7398f410905989b0cfbd7c8949dea25" category="inline-link-macro">了解如何使用控制台助手。</block>
-  <block id="fa08bac88bef3e9d26d3b95077caef72" category="paragraph">+ 作为首次担任管理员的用户，请按照引导流程添加存储、创建控制台代理等。 <block ref="bf1931d629ee75960c14ddd7c33b6738" category="inline-link-macro-rx"></block></block>
   <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="paragraph-title">下一步</block>
   <block id="11fd5297be439890aa7909ed6b065791" category="inline-link-macro">了解NetApp Console的身份和访问管理</block>
-  <block id="31d64e1aa309f3c1d129fe42fb15c550" category="paragraph">作为管理员，在完成控制台助手中包含的步骤后，您应该规划身份和访问策略，将用户添加到您的组织，并分配角色。 <block ref="c76be609c50d4552e26c26422993deb2" category="inline-link-macro-rx"></block></block>
   <block id="347778e3054043c713d65df7f9e10e01" category="section-title">如果组织已存在，请注册或登录NetApp Console。</block>
   <block id="5acfd694e6aaca7505fcdbc950ee0e38" category="paragraph">如果贵公司已有NetApp Console组织，请注册或登录以访问它。您的注册或登录方式取决于您的公司是否使用身份联合或拥有NetApp支持站点凭据。如果还没有，请创建NetApp Console登录帐户。</block>
   <block id="7db903b190082d22d5def424cfdf8da1" category="list-text">如果您拥有NetApp支持站点帐户，或者您的公司已设置单点登录 (SSO)，请在“登录”页面上输入您关联的电子邮件地址或 SSO 凭据。按照提示完成登录。</block>
   <block id="adbbbb6561b05ff5263526309e842926" category="inline-link-macro">了解如何联系组织管理员。</block>
-  <block id="209cbd371e4e73e308b346af700a9f6d" category="list-text">如果系统提示您创建组织，请关闭对话框并告知控制台管理员，以便他们可以将您添加到控制台组织并授予您访问权限。 <block ref="68ba448e5ed3d32508e199fa22eb43b6" category="inline-link-macro-rx"></block></block>
   <block id="bd2f34410185922260ac4efdf54bca8b" category="paragraph">获得组织访问权限后，即可开始管理存储和使用分配给您的数据服务。</block>
   <block id="f59f161390f1bb901c50b0444a10682d" category="paragraph">您还可以向现有联盟添加额外的已验证域，从而允许您为联盟连接使用多个域。</block>
   <block id="455eba9dac1d0bd193275dfd5a99f973" category="list-text">您可以在“审核”页面上查看联盟管理事件，例如启用、禁用和更新联盟。 <block ref="2aa37a4e40a079c9408b3b80517b92fa" category="inline-link-macro-rx"></block></block>
   <block id="95df6e616e319eb924bc933f31ac6775" category="paragraph">将控制台代理与特定项目关联起来，以实现资源管理和数据服务访问。通过控制台代理发现的资源需要资源和代理都与同一个项目关联，才能实现团队访问。</block>
   <block id="4660db74d545b9594630c648aca44dd7" category="paragraph">超级管理员和组织管理员可以创建代理，并将任何代理与任何项目或文件夹关联起来。文件夹或项目管理员只能将现有代理与他们拥有权限的文件夹和项目关联起来。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block>。</block>
-  <block id="9b569f5410f438350a839aa90af4545d" category="paragraph">您需要拥有*组织管理员*或*超级管理员*权限才能管理组织的身份和访问权限。拥有*文件夹或项目管理员*权限，您只能管理您有权访问的文件夹和项目。</block>
   <block id="fe333bbc506814f898618c6bcf114d81" category="paragraph">用户注册NetApp Console后，您必须明确地将他们添加到您的 Console 组织中。您还可以选择向您的组织添加服务帐户。</block>
   <block id="2ce957c89371cf8acad81ff68dd6e552" category="summary">添加文件夹和项目，以匹配您的业务结构。创建文件夹和项目后，您可以将资源与它们关联起来，并管理成员对这些项目的访问权限。</block>
   <block id="0b1953169659929f252b74b2fac140a4" category="doc">将文件夹和项目添加到NetApp Console组织</block>
   <block id="f2b5e92952531dba522ce88cb4c16dae" category="inline-link-macro">了解NetApp Console中的资源层次结构</block>
-  <block id="f49ccb97d62c81974bbda51cd8c77318" category="paragraph">创建新组织时，控制台会自动为您创建一个项目。大多数组织都需要多个项目，以及文件夹来保持井然有序。<block ref="3ff8a71797cdccee53e5a806a28529f8" category="inline-link-macro-rx"></block>。</block>
   <block id="f55c1cf23850cb94b20fa20bba3f1258" category="section-title">使用文件夹和项目来组织资源</block>
   <block id="f5053c5bbeed6cc022a8eb13ef974310" category="paragraph">在NetApp Console中，组织包含文件夹和项目，可帮助您组织资源。文件夹可以帮助您对相关项目进行分组，项目可以帮助您管理资源和成员访问权限。</block>
   <block id="23a84683c545992067034aebc5f5800d" category="paragraph">文件夹可以帮助您整理相关项目。您可以创建嵌套文件夹来表示组织结构的不同层级。例如，您可以为每个业务部门创建一个顶级文件夹，然后在该业务部门内为不同的团队创建子文件夹。然后，您可以在文件夹内创建项目。</block>
   <block id="0e1d4bb97fa3c0957a2102a7ad9a8a4a" category="paragraph">文件夹还可以通过角色继承更有效地管理成员访问权限。在文件夹级别为成员分配角色时，他们将继承所有子项目和文件夹的权限。</block>
   <block id="47645323d0dcf35be6cd9da50c005f91" category="admonition">文件夹是一种组织工具，对于没有 IAM 权限的成员（例如组织管理员、文件夹或项目管理员或超级管理员角色）是不可见的。成员访问的是项目，而不是文件夹。</block>
-  <block id="b0a1fc59ed55ce94ec61843746c271e3" category="paragraph">组织管理员可以通过创建文件夹来委派管理职责。创建文件夹后，组织管理员可以为特定文件夹分配文件夹管理员或项目管理员角色。这些成员无需访问整个组织即可管理该文件夹内的所有项目。</block>
   <block id="7333669681c3bfc4b872d032356ff491" category="paragraph">文件夹可以包含其他文件夹或项目作为子文件夹，但不能直接关联资源。资源必须与项目关联。</block>
   <block id="890ae0025d21eef160ace21fb3149039" category="inline-image-macro">一张图表，显示一个文件夹以及与该文件夹关联的资源。文件夹中有两个项目：项目 A 和项目 B。</block>
   <block id="d46a6083c02d984712a83d6c5b120fc1" category="paragraph"><block ref="d46a6083c02d984712a83d6c5b120fc1" category="inline-image-macro-rx" type="image"></block></block>
@@ -5203,7 +5045,6 @@
   <block id="715079a082fcf8dc70bf1c45f87994a6" category="list-text">根据您选择的资源，选择“与项目关联”或“与项目取消关联”。</block>
   <block id="48eddb9422f94db0ba1c8ab2d6959b69" category="paragraph">您可以从“组织”页面查看与文件夹或项目关联的成员。</block>
   <block id="7ec95d8b18380f61f62a5c7444edbb4d" category="paragraph">修改成员访问权限以控制资源访问。请记住，在文件夹级别分配的角色将被所有子项目和文件夹继承。</block>
-  <block id="6a070ab9c3d6306fbe1b5def78331465" category="paragraph">如果成员访问权限是从文件夹或组织级别继承的，则无法在较低级别更改成员访问权限。更改更高层级成员的权限以更改访问权限。或者，您可以 <block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>。</block>
   <block id="692fa8c1472b3f5b389ae8b229a03338" category="doc">将用户添加到NetApp Console组织</block>
   <block id="e1e51b7c8740497989d96d687d7ce641" category="paragraph">超级管理员、组织管理员或文件夹或项目管理员（对于他们管理的文件夹和项目）。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="3cbafb79babb187563c0124e2520510c" category="section-title">了解如何在NetApp Console中授予访问权限</block>
@@ -5250,15 +5091,11 @@
   <block id="56eda737c9d7f16cfc7da39c3c418546" category="list-text">选择“删除”以移除关联。</block>
   <block id="a83100154d543563bb4d5b97c5e96942" category="doc">在NetApp Console中管理成员访问权限</block>
   <block id="ba4d06d423cce106bf6535eb7db9492c" category="paragraph">管理您在控制台组织中的成员访问权限。分配角色以设置权限。成员离开时将其移除。</block>
-  <block id="b41a805ec9017f0b704697df693123e6" category="paragraph">超级管理员、组织管理员或文件夹或项目管理员（对于他们管理的文件夹和项目）。链接：reference-iam-predefined-roles.html[了解访问角色]。</block>
-  <block id="cc9490185617aa95d7b60301afe90ae1" category="paragraph">您可以按项目或文件夹分配访问角色。例如，可以为用户分配两个特定项目的角色，或者在文件夹级别分配角色，从而授予用户对文件夹中所有项目的勒索软件恢复管理员角色。</block>
   <block id="679b40124e84cc1083a162b4adbd7938" category="inline-link-macro">了解如何添加文件夹和项目。</block>
   <block id="cf91125d1c872bdab1636283bb432d86" category="admonition">请先添加文件夹和项目，然后再分配用户访问权限。 <block ref="7b716a1b87dcc74b5100e99c2831f686" category="inline-link-macro-rx"></block></block>
-  <block id="40fb7b24c380ce71145e537ff475c5e8" category="paragraph">NetApp Console使用基于角色的访问控制 (RBAC) 模型来管理用户权限。您可以单独或通过联合组为成员分配预定义的角色。您可以向服务帐户以及联合组添加和分配角色。每个角色都定义了成员可以在相关资源上执行哪些操作。</block>
   <block id="39377b079cc7298cede5e71697ef95a4" category="list-text">所有用户必须先注册NetApp Console，然后才能获得资源访问权限。</block>
   <block id="70d188d257e89b9d25c9b84daaaf414f" category="section-title">使用角色继承</block>
   <block id="cf7afbf14de8bec1f53def1143f2ceac" category="paragraph">在NetApp Console中，当您在组织、文件夹或项目级别分配角色时，所选范围内的所有资源都会自动继承该角色。例如，文件夹级角色适用于所有包含的项目，而项目级角色适用于该项目内的所有资源。</block>
-  <block id="e60016344d77f4cfca08d380f83a5ec5" category="paragraph">您可以查看他们目前被分配的角色。</block>
   <block id="312c9a6ca1ccba18340ba6f65daa444b" category="paragraph">您可以查看哪些成员有权访问特定文件夹或项目。</block>
   <block id="644ed7e725ca7a7a2108f353f403ae81" category="section-title">分配或修改成员访问权限</block>
   <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">用户注册NetApp Console后，您可以将他们添加到您的组织并分配角色，以便向他们提供资源访问权限。 <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
@@ -5279,7 +5116,6 @@
   <block id="bb06c441f91b01e38af765cd0f68f60f" category="admonition">此选项不适用于联合组织中的用户。</block>
   <block id="bc6678c9a9943f90ed06302f420dfb08" category="admonition">多因素身份验证仅适用于本地用户。联合身份验证用户无法启用多因素身份验证 (MFA)。</block>
   <block id="e3727073d591ed506f7e87126b243caa" category="paragraph">用户移除多因素身份验证后，登录时必须重新设置多因素身份验证。如果用户暂时无法访问其 MFA 设备，他们可以使用已保存的恢复代码登录。</block>
-  <block id="3ba67e9f839feac6f7f1d7812b36e256" category="paragraph">如果您丢失或需要更新服务凭证，可以创建新的凭证。</block>
   <block id="cbb983c8b2240366fdf2e6a4ca41bee0" category="paragraph">创建新凭证会删除旧凭证。您不能使用旧的凭据。</block>
   <block id="f67f980ba471dba7c5f95c824dd43bf6" category="list-text">下载或复制客户端 ID 和客户端密钥。</block>
   <block id="5e8ecdfa17ba50d83eb7b9028eeb4de9" category="paragraph">控制台只会显示一次客户端密钥。请务必复制或下载并妥善保存。</block>
@@ -5291,11 +5127,6 @@
   <block id="d80a62f674e4a96f69c2ddfcceed1b7a" category="summary">要开始使用NetApp Console(SaaS)，请先准备控制台的网络，注册并创建帐户，然后使用NetApp助手设置初始功能。</block>
   <block id="e10c2ca7a3a40579fe4240028852ed47" category="paragraph">要开始使用NetApp Console(SaaS)，请先准备控制台的网络，注册并创建帐户，然后使用控制台助手设置初始功能。</block>
   <block id="f9fd7cc1e76e4519cd46daa993179867" category="paragraph">您可以访问由NetApp提供的基于 Web 的控制台，该控制台是软件即服务 (SaaS) 产品。您可以使用控制台管理混合云存储环境并使用NetApp数据服务。</block>
-  <block id="5a7e12e086f90e07ae42b4c3c6b5121a" category="paragraph">确保访问NetApp控制台的计算机能够通过网络访问所需的端点。</block>
-  <block id="d0f2d6c9731b54e920f1ea734e746767" category="inline-link-macro">了解如何为NetApp控制台配置网络。</block>
-  <block id="742f3a58c8d5c1f7cc5a4bb3ac391412" category="paragraph"><block ref="742f3a58c8d5c1f7cc5a4bb3ac391412" category="inline-link-macro-rx"></block></block>
-  <block id="1281b5e18d123835effb54466c6c0e1e" category="paragraph">前往<block ref="193ae139051d487c450de046f6bd2645" category="inline-link-rx"></block> 并注册。如果系统提示您创建组织，而您认为您的公司已经存在组织，请关闭对话框并告知您的组织管理员。如果贵公司目前没有组织管理员，您可以认领此角色。 <block ref="3886fb7bb69eaac4d5ed416bad678dd5" category="inline-link-macro-rx"></block></block>
-  <block id="e958f6c4076ed5879c19626945716300" category="paragraph">此时，您已登录，可以使用NetApp助手开始配置控制台。首先，请将您的NetApp支持帐户与控制台代理关联，以启用全部功能。</block>
   <block id="6dc63c80f81838734d4c9f2cb014cd91" category="paragraph">如果您选择不使用NetApp助手或安装控制台代理，您可以开始管理存储并使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服务。<block ref="d15147d8429817c45cc619fa49c43b04" category="inline-link-macro-rx"></block>。</block>
   <block id="c184293a5cc8371b882a8e3ab950451d" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 关联您的NetApp支持站点 (NSS) 帐户</block>
   <block id="1c13eb1d242262739dd57d2d470f7dc8" category="paragraph">将您的NetApp支持站点 (NSS) 帐户与控制台关联，可以更轻松地管理您的许可证和订阅，并直接从控制台访问支持资源。</block>
@@ -5416,7 +5247,6 @@
   <block id="c5a4c92d61a00aa93ed0e2e91cd396e5" category="list-text">存储系统会自动与添加它们的项目关联，但您可以从*资源*页面将其与其他项目或文件夹关联。您无法将 FSx for NetApp ONTAP 存储系统与项目或文件夹关联，但您可以在*系统*页面或从工作负载中查看它们。</block>
   <block id="b21b013b17072459deed40157a28f04c" category="list-text">备份和恢复工作负载（Oracle 和 Microsoft SQL Server）</block>
   <block id="e1826278f73613e39c2eb5a5b9bc4593" category="doc">NetApp Console 中的组织伙伴关系</block>
-  <block id="566147af4c9016826e0b72e65115c15c" category="paragraph">为发起和接收组织中的一个或多个用户分配 Partnership admin 角色，以创建和管理伙伴关系。您可以将 Partnership viewer 角色分配给只需要查看伙伴关系而不需要管理的用户。</block>
   <block id="fa65dbaec8413a6f5b464ae076206d91" category="paragraph"><block ref="fa65dbaec8413a6f5b464ae076206d91" category="inline-link-macro-rx"></block></block>
   <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
   <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新流量管理的现有转发规则。</block>
@@ -5496,7 +5326,6 @@
   <block id="0d3e897c4a816e0c092c2daf64921fe7" category="paragraph">您的 Console 部署模式、存储环境和数据主权需求决定了您在何处部署代理。跨环境部署多个代理，以实现组织分离或业务需求。</block>
   <block id="1d21faf6497a388f1c21c3018f517792" category="section-title">NetApp Console SaaS 应用程序代理（标准模式）</block>
   <block id="64bd2b23107c1554c9272fddbd63de33" category="paragraph">在云或本地部署代理，以连接到云托管的 Console SaaS 应用程序。代理启用高级功能，而 Console UI 仍可从任何地方访问。</block>
-  <block id="2d99f5ff70e4995a63fd979f218ffff6" category="paragraph">使用 SaaS 应用程序（标准模式）时，您可以直接从 Console 安装代理。您可以在 AWS、Azure 或 Google Cloud 中安装，也可以在您自己的 Linux 主机或 VCenter 环境中手动安装。</block>
   <block id="d352fb6abd2321079aa6ae4cf5ccffd8" category="section-title">受限模式下的 NetApp Console 代理</block>
   <block id="39f03287943ea9024a48114d1c813c9c" category="section-title">私有模式下的 NetApp Console 代理（内部或云端，无出站连接）</block>
   <block id="174d20ad6124d3d071e1cf8db158cf81" category="section-title">在需要时使用多个代理</block>
@@ -5523,7 +5352,6 @@
   <block id="d69f745fe3dcf3077b8d5e27eafd2709" category="cell">从 Console SaaS 应用程序</block>
   <block id="ccfac6390a72ecff69edf91b3045c7c0" category="cell">从代理虚拟机本地</block>
   <block id="587b25bbebb3a458f858a5d2ed9e104a" category="cell">Console SaaS 应用程序</block>
-  <block id="f837d6fb5d0f781a54dbb27b30662546" category="cell">代理</block>
   <block id="9ad8f5b23e6ea86ce6f710e0bf3191ae" category="cell">本地用户身份验证</block>
   <block id="8bc8a1f88203ed7f28840bd663e2b355" category="cell">支持几种</block>
   <block id="91daea12159afbb582562b3dce17d996" category="cell">自带执照（BYOL）</block>
@@ -5540,7 +5368,6 @@
   <block id="c6abc2bc3f6322376797e84420db4fba" category="cell">是的，用于发现和管理。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。</block>
   <block id="d00f4e3686c8067aa63d20326ba56529" category="cell">发现和管理所必需的。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。</block>
   <block id="f03c2be9572a6e7bfa92e94fd6438322" category="cell">NetApp 分类</block>
-  <block id="9889bea33cb340a0901dd911b722736f" category="cell">NetApp 勒索软件保护</block>
   <block id="c93c9484c37313d13a6650717683186d" category="cell">*NetApp 支持合同功能*</block>
   <block id="fc5ae4b521ff6f2057073b4ce6c1fd65" category="cell">生命周期规划</block>
   <block id="6909951c7f061d5b54ce985daf4cef84" category="cell">*管理功能*</block>
@@ -5571,7 +5398,6 @@
   <block id="9fe116ba56bf2ac80436c5a339522871" category="list-text">在政府地区和商业地区支持限制模式。在限制模式的主权区域不支持。</block>
   <block id="307c8361113294df5dea27399377c5ec" category="list-text">在受限模式下，NetApp Backup and Recovery 仅支持 ONTAP 卷数据的备份和恢复。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block></block>
   <block id="d906f88b77c5d5ad1fd6cd31a6080838" category="cell">在政府地区和具有受限模式的商业地区中受支持。在具有受限模式的主权地区中不受支持。在受限模式下，NetApp Backup and Recovery 仅支持 ONTAP 卷数据的备份和恢复。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block></block>
-  <block id="34191754e8bf4b7f42d07c34ca79f160" category="cell">是*，（如果从 ONTAP 内部环境复制到 ONTAP 内部环境则不需要）</block>
   <block id="6adf97f83acf6453d4a6a4b1070f3754" category="cell">无</block>
   <block id="6e568e69f510482525f8b306b4f4130b" category="section-title">NetApp Console 在受限模式下的工作原理</block>
   <block id="f0f4f30b009784beed6ad8665e748e23" category="list-text">代理需要出站连接到 NetApp 基于云的 API，以支持数据服务、软件升级、身份验证和元数据传输。</block>
@@ -5634,7 +5460,6 @@
   <block id="29266a44516a1695ec25e51464e6ce51" category="paragraph">此表显示受限模式和私有模式支持哪些服务和功能。</block>
   <block id="aa0106ba900239b9b240117351fd31a1" category="admonition">标准模式（NetApp Console SaaS 应用程序）支持所有功能。</block>
   <block id="b04b058acf83e4616c9312ab2b951050" category="paragraph">请注意，某些服务可能会受到限制支持。有关受限模式和私有模式如何支持这些服务的更多详细信息，请参阅上述部分。</block>
-  <block id="caf4a30b20a11e01cd72ece077ed9e50" category="cell">内部部署 ONTAP 集群</block>
   <block id="68a27766c88e7a46b8cf75f317897c53" category="cell">存储和数据服务的仪表板指标</block>
   <block id="caa439279d19ace285e22f87f479e876" category="summary">NetApp Console 可帮助您管理和保护所有云和本地系统的数据。它包括保护您的数据安全和正常工作的工具。</block>
   <block id="166d58641d71e8f7701618924f6e0230" category="doc">用于统一存储管理的 NetApp Console</block>
@@ -5720,7 +5545,6 @@
   <block id="bce5cf056b28239df2bdb7b2083217ac" category="paragraph"><block ref="242e7f2f46e42a12308aa354a9159aef" category="inline-link-macro-rx"></block>。</block>
   <block id="5a52914d8d01c8e84d9a721dbf01a42b" category="paragraph">将之前创建的 IAM 角色附加到 Console 代理 EC2 实例。</block>
   <block id="e5311097ebf5eea728485c7ccebc65fa" category="paragraph">为拥有所需权限的 IAM 用户向 Console 代理提供 AWS 访问密钥。</block>
-  <block id="afb56c9ee95decb83d1800984ece9d5b" category="paragraph">为 Console 代理提供先前设置的 Azure 服务主体的凭据。</block>
   <block id="1f179958933c93a4eaefeb75f54dd63e" category="paragraph">在受限模式或专用模式下使用 NetApp Console 时，可以从部署在云区域或本地的 Console 代理虚拟机访问用户界面。默认情况下，Console 使用自签名 SSL 证书为 Console 代理上运行的基于 Web 的控制台提供安全的 HTTPS 访问。</block>
   <block id="f75f04b8a387edfb2df7d3cd5fa974a8" category="inline-link-macro">请联系您的组织管理员</block>
   <block id="fdc0e0fca606cf54a0a897572707c368" category="paragraph">注册后，您的 Console 组织管理员必须将您的用户帐户添加到某个组织中，您才能访问任何资源。如果您已登录但未看到任何资源，请联系您的组织管理员。<block ref="11d2ec2c56c0640477c61afee5dc1252" category="inline-link-macro-rx"></block>。</block>
@@ -5746,10 +5570,8 @@
   <block id="c9a43f7d176509a988903746b2cf38de" category="list-text">如果计划创建 Cloud Volumes ONTAP 系统，则 Console 代理需要连接到云提供商公共可用资源中的端点。</block>
   <block id="b2723147717f1c60a42e0b1cbdb0ad6c" category="paragraph">\https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud</block>
   <block id="8ec83edee8d0c8a3dd001c3d7e558479" category="paragraph">管理 Azure IL6 区域中的资源。</block>
-  <block id="3f0b08f17c8f7daca589267c384fa32a" category="paragraph">在私有模式下，NetApp Console 向您的云提供商发送出站流量的唯一时间是为了创建 Cloud Volumes ONTAP 系统。</block>
   <block id="fd9b6b5e37ac7c196ba7a3e572709fab" category="list-text">除非您发起，否则不会有传入 Console 代理的流量。</block>
   <block id="5cfdbaa159b57f80c3129a66dcd7322d" category="paragraph">HTTP (80) 和 HTTPS (443) 提供对 NetApp Console 的访问。如果您需要连接到主机进行故障排除，则需要 SSH (22)。</block>
-  <block id="afdfd56d4f16d6a02abb90ce36a88e3d" category="paragraph">如果 Console 代理安装在云中，并且您计划创建 Cloud Volumes ONTAP 系统，则 NetApp Console 需要云提供商权限。您需要在云提供商中设置权限，然后在安装后将这些权限与 Console 代理实例相关联。</block>
   <block id="0db5b81cf6db397c0165b2a6678ee87e" category="paragraph">要查看所需步骤，请选择要用于云提供商的身份验证选项。</block>
   <block id="54dd926042936944a27098b552f2b197" category="paragraph">使用 IAM 角色为 Console 代理提供权限。需要手动将角色附加到 Console 代理的 EC2 实例。</block>
   <block id="106a0de3116ee4c14aed3a5f62ce587c" category="paragraph">为 IAM 用户设置权限和访问密钥。在安装 Console 代理并设置 NetApp Console 后，为 NetApp Console 提供 AWS 访问密钥。</block>
@@ -5758,12 +5580,10 @@
   <block id="5a8046aa3c1f3737b68bcddf970687cf" category="paragraph">创建具有所需权限的 Azure 自定义角色。将此角色分配给 Console 代理 VM。</block>
   <block id="ee8e1b3e3a475e76f0dc83cafe4e83f0" category="list-text">在计划安装 Console 代理的虚拟机上启用系统分配的托管标识，以便可以通过自定义角色提供所需的 Azure 权限。</block>
   <block id="2b78da0be59ec8063edf260324bcf603" category="paragraph">在 Microsoft Entra ID 中创建和设置服务主体，并获取 NetApp Console 所需的 Azure 凭据。安装 Console 代理并设置 NetApp Console 后，需要向 NetApp Console 提供这些凭据。</block>
-  <block id="743fe0cac503720ec73c3536a16bdbe7" category="paragraph">您的服务主体现在已设置，您应该已经复制了应用程序（客户端） ID、目录（租户） ID 和客户端密钥的值。在添加 Azure 凭据时，请在 NetApp Console 中输入此信息。</block>
   <block id="fb743a256e003636e11c6a09e6f9f45c" category="paragraph">您需要启用多个 API 才能在 Google Cloud 中部署 Cloud Volumes ONTAP。</block>
   <block id="c5b5e04334ad1c3a88fc36eb4c450924" category="paragraph">使用从安装的 NetApp Console 代理本地提供的基于浏览器的界面。您无法从 SaaS 应用程序提供的基于 Web 的控制台访问 NetApp Console。</block>
   <block id="482b4f20ae8169fa9067887ee7c6f373" category="summary">专用模式通常用于没有互联网连接的本地环境以及安全的云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。</block>
   <block id="97159ba233bb02feaff6b3c2be05c879" category="doc">私密模式下 NetApp Console 入门工作流程</block>
-  <block id="98c53ba126696b94818d318df7c7246e" category="paragraph">您可以在本地或安全的云环境中安装 NetApp Console。私有模式通常用于没有互联网连接的本地环境以及安全的云区域，包括<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>、<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>和<block ref="360910fe60b5d1cf9b7056b9b6f46685" category="inline-link-rx"></block></block>
   <block id="86324dc19986cf024d27996fe0699e06" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="0be36da6d7a1ea4d94468b72475c7e35" category="inline-link-macro-rx"></block></block>
   <block id="8cb1247d6f1cd796c983b5b1cfbbd285" category="list-text">设置可访问目标网络的网络。</block>
   <block id="8b08d043834b2ce6cdd1276030f09b82" category="list-text">对于云部署，请在云提供商中设置权限，以便在安装此软件后将这些权限与 Console 代理关联。</block>
@@ -5821,7 +5641,6 @@
   <block id="97a1958f09e3549d62ec20510e8f7f12" category="list-text">引导式设置 — Console 在单个工作流中处理 VM 创建、软件安装和初始注册</block>
   <block id="a52750f0190c1174a32d6525dd1e21b8" category="list-text">自动应用正确的 VM 映像和配置</block>
   <block id="25fba4b8d050186c4ada6a255f487d65" category="list-text">任何云部署方法中最少的手动步骤</block>
-  <block id="334a3cf1854d658e5d1bb6da8743a33e" category="list-text">不适用于本地、受限模式或气隙环境</block>
   <block id="6d3a370481870c4cca24024b03b6e678" category="inline-link-macro">从 NetApp Console 在 AWS 部署 Console agent</block>
   <block id="dd374dfb146154c9bd0f1204a9bbd647" category="inline-link-macro">从 NetApp Console 在 Microsoft Azure 部署 Console 代理</block>
   <block id="df233a00b4dd3e4cbab6f6087c53babe" category="inline-link-macro">从 NetApp Console 在 Google Cloud 部署 Console 代理</block>
@@ -5838,19 +5657,15 @@
   <block id="2fd63b1553de7cdb8d62cc26cdf314c7" category="inline-link-macro">使用 Google Cloud 工具在 Google Cloud 中部署 Console 代理</block>
   <block id="e07e1048d9df6990833ad3fb67dac1c9" category="paragraph"><block ref="f1f839b91b4d709a258ed91266ca5a0f" category="inline-link-macro-rx"></block> <block ref="5490a9082f4fe808b2f57ad5577a239b" category="inline-link-macro-rx"></block> <block ref="eefac4b4f9842d202a1689224f842ba2" category="inline-link-macro-rx"></block></block>
   <block id="0a6e20c91b3b90bff41aac0b71010f33" category="section-title">在云中的 Linux 主机上手动安装</block>
-  <block id="c2e678bc5765a0deadc8c824f329bd84" category="paragraph">手动安装可让您直接在您在 AWS、Azure、Google Cloud 或本地提供和管理的 Linux 主机上安装 Console 代理软件。</block>
   <block id="cd0711c8d1cd587acf681abc28bf905b" category="list-text">您需要在没有出站 Internet 访问的受限模式或专用模式环境中进行部署。</block>
   <block id="66ef2cdffe9cac61636d8ce8150cbef9" category="list-text">您的组织要求将所有软件安装在预先批准的内部管理主机上。</block>
   <block id="b8b72b9335234a0da7491834cb62cf94" category="list-text">支持出站 Internet 访问受限的环境（受限模式或私有模式）</block>
   <block id="e2374b2fd1f74672bb5fa6d3c8612668" category="list-text">当 Console 代理能够访问 Internet 时，将自动处理升级</block>
   <block id="a7ed66b9c705f50336846ff5ef191d94" category="list-text">任何部署方法的大多数步骤。您必须准备主机，安装 Podman 或 Docker，配置网络，安装软件，并手动提供权限</block>
-  <block id="23fcbd289622370ba64df81e884f7e66" category="list-text">* 部署在 NetApp Console 外部启动，因此无法使用引导工作流程</block>
   <block id="9f939267e0773fb60073eb9397e269aa" category="inline-link-macro">在 AWS 中手动安装 Console 代理</block>
   <block id="a6ace19ad21eea33b105e68e43a2fa09" category="inline-link-macro">在 Azure 中手动安装 Console 代理</block>
   <block id="d4cfedeb82bf9617a64723ba87591a81" category="inline-link-macro">在 Google Cloud 中手动安装 Console 代理</block>
   <block id="94bb3f3d5596afa2ce9fd4f9a0ce5065" category="paragraph"><block ref="84e4c5822cb7118a8407917cb49ff995" category="inline-link-macro-rx"></block> <block ref="a07936a8d40c6e8fbb75930f0913dd28" category="inline-link-macro-rx"></block> <block ref="f68eae68210f07251bd0a330e990555a" category="inline-link-macro-rx"></block></block>
-  <block id="92a74ad4d7941d43571959e6aceb2b1d" category="section-title">使用 VCenter (OVA) 手动安装本地</block>
-  <block id="3dc925b1204ea08a0d28c7908f7cd21f" category="paragraph">如果使用 VMware VCenter，则可以通过导入 OVA（Open Virtual Appliance）文件来部署 Console 代理。OVA 是使用 vSphere 客户端部署的预配置虚拟机映像，无需安装 Linux 或配置容器运行时。</block>
   <block id="967fd6a608264a97516302b9074f1377" category="list-text">您正在 VMware 环境中部署本地。</block>
   <block id="0108204194025b72dec99100c458879c" category="list-text">您希望进行更简单的本地安装，需要更少的维护和 Linux 设置。</block>
   <block id="35c40d0120343b4c03fe7b22907454ae" category="admonition">无法从本地 Console 代理管理 Google Cloud 资源。要管理 Google Cloud 资源，请在 Google Cloud 中安装代理。</block>
@@ -5858,13 +5673,7 @@
   <block id="59a5b2c4cd8dc806d2b0160ef6cce2d6" category="list-text">仅限本地；不适用于云部署</block>
   <block id="aef12e23c1f1d604cdd75f9803b1aa9c" category="list-text">包括用于代理维护任务的菜单驱动型维护控制台</block>
   <block id="6a65dacf4fecb91fcbd08fba485137a8" category="list-text">VMware 管理员熟悉的部署工作流程</block>
-  <block id="9d4eafc0d1975ce31c01c9722ff25704" category="list-text">* 预配置的 VM 映像有助于防止错误并使维护更容易</block>
-  <block id="dfae738999d0d30bd2b070b2f2c332c3" category="list-text">需要 VCenter；无法直接安装在裸 ESXi 主机上</block>
-  <block id="4d57b20094505ac89a1ec5c30287b399" category="inline-link-macro">使用 VCenter 部署本地</block>
-  <block id="014b4110a1d6bcfd7360d23b515296b3" category="paragraph"><block ref="014b4110a1d6bcfd7360d23b515296b3" category="inline-link-macro-rx"></block></block>
-  <block id="31172ee207143b4133abcddf6d5c722c" category="section-title">手动安装本地（不使用 VCenter）</block>
   <block id="1235ca1452f2842499e187b4fb054629" category="paragraph">您可以在任何本地 Linux 主机上手动安装 Console 代理。您必须设置 Linux 主机和容器运行时（Docker 或 Podman），然后安装 Console 代理。</block>
-  <block id="076401621063d87cec75426d4d159932" category="list-text">您正在本地部署，但没有 VMware VCenter 环境。</block>
   <block id="f03a956fe2537a403f15ad4493a91587" category="list-text">您熟悉 Linux 管理并希望自己管理底层主机。</block>
   <block id="1c6b22af2ee4d43b97894040b8642541" category="list-text">您希望控制何时升级 Console 代理。</block>
   <block id="45cba4b64a76ef3eefafefe86789ed7c" category="list-text">适用于任何与 Linux 兼容的本地硬件或 VM 平台—无需 VMware</block>
@@ -5888,7 +5697,6 @@
   <block id="762c7a5905f9e2e1e066d46ccf563a52" category="paragraph">要管理 Google Cloud 资源，请在 Google Cloud 中部署代理。本地代理无法管理 Google Cloud 资源。</block>
   <block id="6265d84f2de108c19a3c1b8a19a22d01" category="list-text">在您的场所（仅限标准或私有模式）</block>
   <block id="3f2acb165155b9f2c13851d0a96a3f63" category="inline-link-macro">比较部署方法，选择适合您环境的方法</block>
-  <block id="027ceb508378ef5e8201ac1ede31b97b" category="paragraph">您可以直接从 Console、云市场，或在 VCenter 或本地手动部署代理。<block ref="f56b5fe23e6f6d313560173f8ee670fb" category="inline-link-macro-rx"></block>.</block>
   <block id="4d30ec0dc8488a3de78a5bd4a65493c5" category="paragraph">在受限模式下，用户直接从已安装的代理访问 NetApp Console，而不是从云托管的 SaaS 应用程序访问。您必须至少安装一个代理作为 Console 访问点。需要其他代理来启用数据服务和管理存储系统。</block>
   <block id="680309564f6bd76782e29a8b8d0d4889" category="paragraph">从云提供商的市场中安装代理，或通过在云中、本地或 VCenter 环境中的自有 Linux 主机上手动安装软件。</block>
   <block id="e2dca74da4ed1a459417acb1484581c1" category="paragraph">在专用模式下，用户直接从已安装的代理访问 NetApp Console。您必须至少安装一个代理才能用作 Console 访问点。需要其他代理来启用数据服务和管理存储系统。</block>
@@ -5967,11 +5775,8 @@
   <block id="539718583e0bd284466d28bbae39f3cb" category="paragraph">如果 MySQL 服务已关闭，则该<block ref="b3330283a07d4f62f4e4680fc88ca461" prefix=" " category="inline-code"></block>服务也已关闭。</block>
   <block id="5a90a48360bc7c6e85efaf9490987e5b" category="doc">使用 NetApp Console 中的维护控制台进行控制台代理验证</block>
   <block id="29e4d1ed6697c0060983716d9518ac7d" category="paragraph">选择一个或多个要验证的服务。有效的服务名称是：</block>
-  <block id="085479426160ce25924b6c12d5ff3798" category="paragraph"><block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> 它验证到所需 Console 端点的网络连接，以及 Console 代理所需的端口是否已打开。</block>
-  <block id="c46dbbd30b8f351b84d3ac4888362c02" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block> --*必填*-- 从一个或多个要运行的验证类型中进行选择。有效的验证类型为：</block>
   <block id="d2cd8789ebaba535a6c98419f468e081" category="list-text"><block ref="25835188a2355e9530d3a10fcbe4c65b" prefix="" category="inline-code"></block> 验证到所需 Console 端点的网络连接。</block>
   <block id="13d4dc0aba42abb3a53b4a791152bc56" category="list-text"><block ref="39e0e6e3d8f3580dbec023e0a9d76f96" prefix="" category="inline-code"></block> 验证代理主机是否满足 Console 代理的最低硬件要求。</block>
-  <block id="65a9a95671009f020b9bf7ac32aa4bdb" category="paragraph">以下示例包括验证网络连接、所需端口和硬件要求，以及使用代理服务器和自定义证书的不同组合。</block>
   <block id="80f48611c1bef55d72d46a64fc380278" category="listing-title">验证网络连接和硬件要求：</block>
   <block id="de69e8633d4ddcf1beb6e9af84080384" category="doc">NetApp Console 中 Console 代理的透明代理命令</block>
   <block id="39442b581cc52635af9cf2e5d2fe3673" category="doc">NetApp Console 中的运营支持分析师访问角色</block>
@@ -5990,14 +5795,11 @@
   <block id="e6d86121d517346d17150627d0fc1547" category="paragraph">您需要先创建 Console 代理，然后才能配置订阅。<block ref="4c719d3ce8f9711862a56581ad1ef6e2" category="inline-link-macro-rx"></block>.</block>
   <block id="1e103164ca89176649567d1032789e52" category="paragraph">您只能通过维护控制台查看（不更新）有关 IP 地址、DNS 和网关的信息。</block>
   <block id="5ecd25d455a75fde7f239100d6de877d" category="inline-link-macro">使用 Microsoft Entra ID 添加域</block>
-  <block id="f9548ac6f4d56ee31c131b0c422bd405" category="paragraph">例如，如果使用 Microsoft Entra ID，则可以按照 Microsoft 文档中的步骤进行操作<block ref="7ce09034dd873009fb4c4b1029031288" category="inline-link-macro-rx"></block>。</block>
-  <block id="9b0ac00d797170a5d11a68a9382f26a8" category="admonition">具有 Org admin 角色的用户可以将资源添加到文件夹，以将资源与项目关联的任务委托给相应文件夹的 Folder 或 project admins<block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>。</block>
   <block id="cfdc0c6d3226bf1ca74a7e7fefd85528" category="list-text">存储资源是组织中最常见的资源类型，代表本地和云存储系统。将存储系统添加到 Console 时，需要将其添加到项目中。在此之前，Console 会将其标记为未发现，并且不会在*资源*页面上显示。</block>
   <block id="ec88772127d46412abce4f0d7d7d7982" category="inline-link-macro">了解如何将 Console 代理与项目关联</block>
   <block id="e773bf9ef8fd07284aa97da5bcac5b10" category="list-text">如果使用 Console 代理来发现存储系统，请将该代理添加到与存储系统相同的项目中。这允许用户执行启用代理的功能，例如数据服务或 Console 本机存储管理。您可以从 Console 的 *Agents* 页面向项目添加代理。<block ref="9575d7837a709e4ae8a4165fa6169eb2" category="inline-link-macro-rx"></block>。</block>
   <block id="f84bc6d9d13416ccde14b675c20b3fe0" category="list-text">如果您的组织中有 Keystone 订阅，您可以在*资源*页面上查看它们。您可以将 Keystone 订阅与项目关联，以便为拥有这些项目权限的成员提供访问权限。</block>
   <block id="e828183af99bbe9f55b9edafa7e11282" category="list-text">备份和恢复工作负载</block>
-  <block id="9f10ad14238ee6185b52e10c695a3cbe" category="list-text">Backup and Recovery 工作负载也被视为资源。您可以通过将工作负载与项目关联来分配用户访问 Backup and Recovery 工作负载的权限。例如，通过将 Backup and Recovery 工作负载与用户可以访问的项目关联并授予相应的 Backup and Recovery 角色，为用户分配对 Backup and Recovery 工作负载的访问权限。</block>
   <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。在从 Console 在 AWS 中部署 Console 代理之前，您需要设置网络并准备 AWS 权限。</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">从 NetApp Console 在 AWS 中部署 Console 代理</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">在 AWS 中部署代理将在您选择的 VPC 中启动运行 Linux 和 Console 代理软件的 EC2 实例。</block>
@@ -6014,7 +5816,6 @@
   <block id="921f27265f15374a9fe7782b3f1e4497" category="paragraph">在 Google Cloud 中部署代理会启动运行 Linux 的虚拟机实例，并在您选择的 VPC 中启动 Console 代理软件。</block>
   <block id="1956f48ec510aa9e9aaa1693a61d862a" category="doc">从 Google Cloud 部署 Console 代理</block>
   <block id="269f4bb9794c23a34082aab4e7846b08" category="paragraph">要使用 Google Cloud 在 Google Cloud 中部署 Console 代理，需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后部署 Console 代理。</block>
-  <block id="b98ee0686e4120fe92ce6300afe0de81" category="list-text">您应拥有 <block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>。</block>
   <block id="f03765e7c67cd3e0afdcbb02e2df97ae" category="doc">在 Google Cloud 中手动部署 Console 代理</block>
   <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">要在自己的 Linux 主机上手动部署 Console 代理，需要查看主机要求、设置网络、准备 Google Cloud 权限、启用 Google Cloud API、安装 Console，然后提供您准备的权限。</block>
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">如果您的环境需要，请将自签名证书上传到受信任的证书。安装后更换此证书。</block>
@@ -6035,13 +5836,10 @@
   <block id="1e8b5c1d2a4e61eee5977215f7e536ff" category="paragraph">例如，在多云环境中，您的组织可能在 AWS 中有一个代理，在 Google Cloud 中有另一个代理。在这些代理之间切换，以管理各自云环境中的 Cloud Volumes ONTAP 系统。</block>
   <block id="5c7dec5267a1dccf96dd6276b683ce50" category="admonition">从代理的本地 UI 查看 NetApp Console 时，此选项不可用。</block>
   <block id="c8dd52f08fb8566417d35b03304b0cff" category="list-text">选择 *Storage* &gt; *Management* &gt; *Systems*。</block>
-  <block id="7637b8dc2dc8400e13533a4d4bd5405a" category="section-title">验证 Console 代理是否满足要求</block>
   <block id="63c741e55fcb9e1649e2141c14cc0b50" category="paragraph">Console 代理需要访问某些网络端点，需要打开多个端口，并且必须满足硬件要求。您可以从 Console 或使用代理维护控制台来验证您的 Console 代理是否满足这些要求。</block>
-  <block id="9805c5af2d15bb13cff2866178041d2b" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> 链接：</block>
   <block id="340fa7bee37b14e663d7987a8bbd375e" category="paragraph">您还可以使用代理维护控制台运行验证检查。<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
   <block id="4902d11dd0f4b0186db4b1c0ed82d690" category="summary">当网络配置发生变化时，您可能需要更新云提供商中的代理 IP 地址以及 Console 中注册的 URI。</block>
   <block id="fb908a9fb802db6efd6ee687bf0e90b1" category="doc">更新代理地址和 URI</block>
-  <block id="66fcc07184081a5dbb5153c82ad1d2ad" category="paragraph">如果您的网络要求发生变化，则更新 Console 代理的 URI。这可确保对存储基础架构进行不间断、安全且合规的管理。</block>
   <block id="5115300955106a1244bbf3c52c1a629e" category="summary">当 Console 代理具有出站连接时，它会自动升级。如果您的 Console 代理没有出站连接，您可以手动升级它。如果您的代理部署在 vCenter 中，则可以使用 ISO 对其进行升级。</block>
   <block id="e1d28aa425c88249f3fe0596a4b219ec" category="paragraph">控制台代理具有出站连接时会自动升级。如果您的控制台代理没有出站连接，您可以手动升级它。如果您的代理是在 vCenter 中使用 OVA 部署的，则可以通过将 ISO 挂载到虚拟机将其升级到新版本。</block>
   <block id="a51733d32f07dea4302c4c2b24a35371" category="paragraph">如果您的 Console 代理是在 vCenter 中使用 OVA 部署的，则可以通过将 ISO 挂载到虚拟机并从虚拟机维护控制台运行升级将其升级到新版本。</block>
@@ -6089,19 +5887,13 @@
   <block id="bbba72d665c28a50ff890f9bf258bf44" category="list-text"><block ref="af0eeb37b47edb9c09804643bac40d9c" category="inline-link-macro-rx"></block>。</block>
   <block id="90e4f94df0a9c5eb44bab6156156dfc9" category="inline-link-macro">了解何时从 AWS Marketplace 进行部署</block>
   <block id="16ed41e7d53f616b01345af5fa5bd8df" category="list-text"><block ref="2cd30ddcbcdf1f251e7b73909152be56" category="inline-link-macro-rx"></block>。</block>
-  <block id="66aa6cab05064212e5db559feb1dc39b" category="inline-link-macro">了解何时在 Azure 中手动部署</block>
-  <block id="68168baf0e09918601a7b016175f25dc" category="list-text"><block ref="51a3655f41ec4f97f4438747d212bacc" category="inline-link-macro-rx"></block>。</block>
   <block id="d1ed08857033eae041161d0cf84b5e13" category="inline-link-macro">了解何时从 Azure Marketplace 进行部署</block>
   <block id="da299adc373f6bb4f71527af1d4a5229" category="list-text"><block ref="549d9ddde85979492f18f1b01a816a1c" category="inline-link-macro-rx"></block>。</block>
-  <block id="ea8976e4bcb3a4dc4f9dbcce6a078f45" category="inline-link-macro">了解何时在 Google Cloud 中手动部署</block>
-  <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>。</block>
-  <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">可选：从云提供商的市场订阅 NetApp Intelligent Services，按小时费率（PAYGO）或通过年度合同支付数据服务费用。NetApp Intelligent Services 包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience 和 NetApp Disaster Recovery。NetApp Data Classification 包含在您的订阅中，无需额外费用。</block>
   <block id="6c842907a578805c3a54843de813b384" category="paragraph">通过您的云服务提供商注册 NetApp Intelligent Services，可选择按小时（PAYGO）或按年计费。订阅包含 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery 以及 NetApp Data Classification。</block>
   <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">发行说明</block>
   <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">选择支持专用模式的版本。检查 <block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block> 以获取受支持的最新版本。</block>
   <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">为没有 Internet 访问权限的网络下载脱机安装程序。</block>
   <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">4.0.0 版之前的 Console 代理支持不同的端点。如果您升级到 4.0.0 或更高版本，则可以从允许列表中删除旧端点。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
-  <block id="225a60e47c64c2fc93ba428341d684ac" category="list-text">*标准模式*：打开 Web 浏览器并转到<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
   <block id="391b29da4eb9ba5c6bfd16746287d54b" category="open-title">最低必需端点</block>
   <block id="eb52338366ae902611df52c8dc9e13ab" category="paragraph">所有 Console 代理部署都需要这些端点。要管理 AWS 或 Azure 中的 NetApp 资源，需要额外的端点。</block>
   <block id="166bcd00a404f81c824f309c699f8f5a" category="cell">用途 未解析的指令 &lt;stdin&gt; - include::endpoints-agent.adoc[tag=nss-endpoints] 未解析的指令 &lt;stdin&gt; - include::endpoints-agent.adoc[tag=saas-endpoints] 未解析的指令 &lt;stdin&gt; - include::endpoints-agent.adoc[tag=upgrade-endpoints]</block>
@@ -6229,4 +6021,182 @@
   <block id="4a45e858c46a20f0b12c22eb89c4bf5e" category="admonition">如果您的组织中有人已经通过您的账单账户订阅了市场，那么您将被重定向到 <block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block>。如果出现意外情况，请联系您的 NetApp 销售团队。Google 仅为每个 Google 账单帐户启用一个订阅。</block>
   <block id="ca4a244a9789951f646667ad547e7eba" category="list-text">选择要为其分配角色的成员旁边的操作菜单 <block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>，然后选择*添加角色*。</block>
   <block id="407cb118eb4c73b0358d157028082059" category="list-text">要取消分配成员的角色，请选择角色旁边的 <block ref="e7d3eb2c8040b3803a37719a0c0ad857" category="inline-image-macro-rx" type="image"></block> 以从成员中删除相应的角色。系统将提示您确认删除。</block>
+  <block id="92ebc8b88ec7bf78397ce21f44b480e5" category="paragraph">从 Console 部署 Console 代理时，需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署 Console 代理的权限。所需的权限列在<block ref="90ba5e70f609b78ed2966a8cb311c96b" category="inline-link-macro-rx"></block>中。</block>
+  <block id="b62a0502738c456bdd542e9396b92ddd" category="inline-link-macro">查看代理如何使用权限</block>
+  <block id="c4fe162c4036edff0d6ce01762682fbf" category="paragraph">当 Console 在 AWS 中启动 Console 代理时，它会为代理创建 IAM 角色和配置文件。它还附加了一个策略，该策略为 Console 代理提供管理该 AWS 帐户内的资源和流程的权限。<block ref="e912f6cf90fec29124fef634f33fedf8" category="inline-link-macro-rx"></block>。</block>
+  <block id="109a76aa4a30822be3d0a4a6162bbc73" category="paragraph">您可以使用初始 AWS 凭据部署所有 Cloud Volumes ONTAP 系统，也可以添加其他凭据。</block>
+  <block id="c78dbf5ebdf70b03a35d23a6786c648f" category="paragraph">以上各节介绍了 Console 代理的建议部署方法，该方法来自 Console。您还可以从 AWS Marketplace 在 AWS 中部署代理，也可以在您自己的 Linux 主机或 vCenter 中手动安装 Console 代理软件。</block>
+  <block id="cf39ba52c61b6ca60970ceab71ab284a" category="inline-image-macro">一个概念映像，显示通过自定义角色和托管标识接收权限的初始 Azure 帐户，以及通过自定义角色和服务主体接收权限的两个其他帐户。</block>
+  <block id="7affe5a3465deb66870c4657e753dda0" category="paragraph"><block ref="7affe5a3465deb66870c4657e753dda0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c08d6d85cdf39dd73c45f42ae91652b" category="list-text">部署 Console 代理时，系统会提示您为代理选择<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block>。Console 从服务帐户获得创建和管理 Cloud Volumes ONTAP 系统、使用 NetApp Backup and Recovery 管理备份等的权限。通过将自定义角色附加到服务帐户来提供权限。</block>
+  <block id="5ae7dadfb802ddb0677d2bbac6ae68ce" category="list-text">不适用于本地、受限模式或气隙环境</block>
+  <block id="184ae28a136bc5f24b474b70b6291e45" category="paragraph">手动安装可让您直接在您在 AWS、Azure、Google Cloud 或本地提供和管理的 Linux 主机上安装 Console 代理软件。</block>
+  <block id="772d0e14c0aa280f9ad4214fcba1708a" category="section-title">使用 vCenter (OVA) 手动安装本地</block>
+  <block id="4f5ef680f1b9195561640ca8b665e5d5" category="paragraph">如果使用 VMware vCenter，则可以通过导入 OVA（Open Virtual Appliance）文件来部署 Console 代理。OVA 是使用 vSphere 客户端部署的预配置虚拟机映像，无需安装 Linux 或配置容器运行时。</block>
+  <block id="024d47ddfad01b2ca9eff53dfa26b132" category="list-text">预配置的 VM 映像有助于防止错误并使维护更容易</block>
+  <block id="1bb5a705ed2d2f35ed0dba9f787744a4" category="list-text">需要 vCenter；不能直接安装在裸 ESXi 主机上</block>
+  <block id="218250f980cb4f79e59bcd953354ade4" category="inline-link-macro">使用 vCenter 部署本地</block>
+  <block id="5d83e1f6a5917adfeff2072276c49e3e" category="paragraph"><block ref="5d83e1f6a5917adfeff2072276c49e3e" category="inline-link-macro-rx"></block></block>
+  <block id="4083793c194efca8c9eae5a5d16d8dbf" category="section-title">手动安装本地（不使用 vCenter）</block>
+  <block id="b851e1283d404b772316894745742176" category="list-text">您正在本地部署，但没有 VMware vCenter 环境。</block>
+  <block id="55a774be71a14f830c2c5fbc4ce2006d" category="paragraph">您可以直接从 Console、云市场，或在 vCenter 或本地手动部署代理。<block ref="f56b5fe23e6f6d313560173f8ee670fb" category="inline-link-macro-rx"></block>.</block>
+  <block id="b5b6d1a85b47bc6909bceeb9e2cc6aa7" category="paragraph">使用 SaaS 应用程序（标准模式）时，您可以直接从 Console 安装代理。您可以在 AWS、Azure 或 Google Cloud 中安装，也可以在您自己的 Linux 主机或 vCenter 环境中手动安装。</block>
+  <block id="1780cbc14c436786e5c2df69652a8440" category="paragraph">通过创建新应用程序并提供详细信息（如 ACS URL、实体 ID 或其他凭据信息），将身份提供程序配置为信任 NetApp。服务提供商信息因身份提供商而异，请参阅特定身份提供商的文档以了解详细信息。您需要与 IdP 管理员一起完成此步骤。</block>
+  <block id="2e48463040fe3085b9ad35ad22aa83bc" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 在 Console 中测试您的联合</block>
+  <block id="85db8cfeec2ef0d6530041000a7b3f70" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 在 Console 中启用连接</block>
+  <block id="8238dba415f96008e75953a6d7009161" category="paragraph">NetApp 以最小权限设计 Console 角色，以便每个角色仅包含其任务所需的权限。这种方法通过限制对每个成员所需内容的访问来增强安全性。</block>
+  <block id="be4798d7b3c04ff3ec469cd05f9b79c7" category="paragraph">将资源组织到文件夹和项目中后，为成员分配特定文件夹或项目的一个或多个角色，使他们只能执行其职责。</block>
+  <block id="660c9d94f22fbbff05c82b827ea60cb5" category="paragraph">NetApp Console 角色使用最低权限原则，确保成员仅拥有其任务所需的权限，并按其提供的访问类型对角色进行分类：</block>
+  <block id="5f4ba099b1a5b568b24901aabd98f6df" category="cell">代理</block>
+  <block id="def2222a13295e8e2e02121fb66467dd" category="list-text">标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的 NetApp 数据服务。请查看每项服务的文档，详细了解可用的许可选项。</block>
+  <block id="1a5e30af0610a3ae99e5c20dcd2496f4" category="paragraph">为发起和接收组织中的一个或多个用户分配 Partnership admin 角色，以创建和管理伙伴关系。您可以将 Partnership viewer 角色分配给只需要查看伙伴关系而不需要管理伙伴关系的用户。</block>
+  <block id="e32c31636929b48cb076c2476d74c3da" category="paragraph">您可以从 Console 代理主机访问维护控制台。导航到以下目录：</block>
+  <block id="8e087f268091c979e9aedbf6b746e823" category="list-text"><block ref="8b55a44b49368262df89fd0e17b1a181" prefix="" category="inline-code"></block> 它验证到所需 Console 端点的网络连接，以及 Console 代理所需的端口是否已打开。</block>
+  <block id="06282cccabf3f4fe0527423bc2b14238" category="paragraph"><block ref="3f46c2ae444cf605790cedd4206cef92" prefix="" category="inline-code"></block> --*必填*-- 从一个或多个要运行的验证类型中进行选择。有效的验证类型为：</block>
+  <block id="b6a709e6284ca2d12a84a0330d1ddcae" category="paragraph">以下示例包括验证网络连接、所需端口和硬件要求，以及使用代理服务器和自定义证书的不同组合。</block>
+  <block id="f86164865499f6554636fb31b3741a0d" category="paragraph">要删除透明代理服务器，请使用以下命令：</block>
+  <block id="77bcf502d3acd4d929c93427c6168461" category="paragraph">NetApp Console 符合 SOC 2 Type 2 标准。</block>
+  <block id="56dccd382d065a794b1596911c42210f" category="list-text">*Backup and Recovery backup admin*：在 NetApp Backup and Recovery 中执行备份到本地快照、复制到辅助存储以及备份到对象存储的操作。</block>
+  <block id="652a5b451a605c39aa767639d0dd358d" category="list-text">*备份和恢复还原管理员*：使用 NetApp Backup and Recovery 还原工作负载。</block>
+  <block id="5fc68f233b8850a023839dbb724c0109" category="list-text">*Backup and Recovery 克隆管理员*：使用 NetApp Backup and Recovery 克隆应用程序和数据。</block>
+  <block id="f5886d019e91dd87e408bbca30bba7f6" category="inline-link-macro">访问角色</block>
+  <block id="d306101a3ba513c8c630634cd7658f1e" category="paragraph">有关所有 NetApp Console 访问角色的详细信息，请参见 <block ref="f08bc221e36f24fcb99fa019e9bb41b8" category="inline-link-macro-rx"></block>。</block>
+  <block id="04dfc56baea30e6c894320e91c84aa02" category="summary">NetApp Console 身份和访问管理提供管理员角色，您可以将其分配给需要访问 Google Cloud NetApp Volumes 的组织成员。</block>
+  <block id="c629aa034e9fdba04e68dcb224bc9576" category="paragraph">Google Cloud NetApp Volumes 使用以下角色：</block>
+  <block id="cff9a72837846d57cb2d651523721cc6" category="cell">从 Console 创建、修改或删除系统（添加或发现系统）</block>
+  <block id="62d9c2659cf0ad00c633675f8170cede" category="cell">允许用户无限制地访问组织内的所有项目和文件夹。可以将成员添加到任何项目或文件夹，以及执行任何任务和使用任何不具有与其关联的显式角色的数据服务。具有此角色的用户通过创建文件夹和项目、分配角色、添加用户以及管理具有正确凭据的系统来管理您的组织。这是唯一可以创建 Console 代理的访问角色。</block>
+  <block id="11242816a2212aaec156e393f611d6a4" category="cell">为用户提供查看者角色的子集。此角色专为不需要跨多个用户分配 Console 职责的小型组织设计。</block>
+  <block id="b73b9bb1076e1557f19d367a133b14f9" category="cell">在 Backup and Recovery 中还原工作负载。</block>
+  <block id="9bc794a51a7dec822701191ea93b64bd" category="cell">在 Backup and Recovery 中克隆应用程序和数据。</block>
+  <block id="84deda971835a8442abb48d0c88d2e97" category="paragraph">*基准角色*</block>
+  <block id="7e47bfd1d8d1b989cf845ab6724b608b" category="paragraph">*用户行为活动角色* <block ref="885ef4a0557ed3cd017b2efccb0c3de5" category="inline-link-macro-rx"></block> 警报提供对文件活动事件等数据的可见性；这些警报包括文件名和用户执行的文件操作（如读取、写入、删除、重命名）。为了限制此数据的可见性，只有具有这些角色的用户才能管理或查看这些警报。</block>
+  <block id="6f5db1c938d25fcc5e43ec9d050769ac" category="paragraph">应将用户行为角色授予需要访问 <block ref="dabde4cfb2462919536551734d022527" category="inline-link-macro-rx"></block> 的现有 Ransomware Resilience 管理员或查看者权限的用户。例如，具有 Ransomware Resilience 管理员角色的用户应获得 Ransomware Resilience 用户行为管理员角色，以配置用户活动代理并阻止或取消阻止用户。不应将 Ransomware Resilience 用户行为管理员角色授予 Ransomware Resilience 查看器。</block>
+  <block id="dceccbe9e562b7202ac801a976ca4d73" category="paragraph">这些限制特定于 NetApp Console 和管理的设置：代理、软件即服务 (SaaS) 平台等。</block>
+  <block id="02afe37ba2fe4ee90c26a8ce7874de0a" category="cell">在灵活业务流程模式下使用 Virtual Machine Scale Sets 为 Cloud Volumes ONTAP 指定特定区域</block>
+  <block id="6e5e590a854850d1f79c7974bb7d4ac2" category="cell">创建和路由用于监控、调试和审核的日志条目。</block>
+  <block id="5fcb1ab4b2b0917da62acea214b0264d" category="cell">用于 Console 的 DNS 解析</block>
+  <block id="3d5e2f94ded893cc71e665943178acdc" category="summary">该代理的 Azure 安全组需要同时设置入站和出站规则。当你从 NetApp Console 创建 Console 代理时，NetApp Console 会自动创建此安全组。对于其他安装选项，你需要手动设置此安全组。</block>
+  <block id="e2759b947670b4b9881eb669790999c6" category="summary">该代理的 Google Cloud 防火墙规则需要同时设置入站和出站规则。NetApp Console 在您从 Console 创建 Console 代理时会自动创建此安全组。对于其他安装选项，您需要手动设置此安全组。</block>
+  <block id="25fb557d95ec00b83309c30b4a9abfc4" category="cell">用于 Data Classification 的 DNS 解析</block>
+  <block id="b8f5bc8f18f0477b4e1e03bb61af63e0" category="paragraph">添加和管理 AWS 凭据，以便您可以从 NetApp Console 部署和管理 AWS 账户中的云资源。如果您管理多个 AWS Marketplace 订阅，则可以从凭据页面将每个订阅分配给不同的 AWS 凭据。</block>
+  <block id="f43c1ae4b1fd11c4408cff1eed8595ba" category="paragraph">如果要为 IAM 用户提供具有 AWS 密钥的 Console，则需要向该用户授予所需的权限。Console IAM 策略定义允许 Console 使用的 AWS 操作和资源。</block>
+  <block id="74c948005a3f6a25e23e59fb065ac31d" category="inline-link-macro">AWS Identity and Access Management (IAM) 文档</block>
+  <block id="7c6401042ce08a564ddb58f7ed2a7c76" category="paragraph">有关 IAM 中跨帐户资源访问的更多信息，请参见 <block ref="8e54b53aa0d600d13affea802291406d" category="inline-link-macro-rx"></block>。</block>
+  <block id="1d49423817552a7d1136d8a944f6aa47" category="paragraph">如果您刚刚创建了 IAM 角色，则可能需要几分钟才能使用它。请稍等几分钟，然后将凭据添加到 Console。</block>
+  <block id="be7dcfb1c101628b620840a4fffdb047" category="inline-link">Amazon FSx for ONTAP 控制台文档</block>
+  <block id="1f671527075b61262c8f2abf9563f979" category="paragraph">有关详细信息，请参阅 <block ref="138f2cc413d358b59db2ac0ccb7736e7" category="inline-link-rx"></block></block>
+  <block id="fc9f1e7a7c9880d832262b4abc72044b" category="paragraph">从 AWS Marketplace 订阅时，流程中的最后一步是将订阅与您的组织关联。如果您未完成此步骤，则无法将订阅用于您的组织。</block>
+  <block id="675cf17c3d628da16607a942e34f2ec6" category="paragraph">您可以从"详细信息和凭据"页面切换到其他凭据集<block ref="e81400213d37156540a01916c36ea9d7" category="inline-link-rx"></block>。</block>
+  <block id="fffef7d3f6ea2dc8c70c1977d7df72cf" category="list-text">选择 *Administration &gt; Support*。</block>
+  <block id="bdbe420ae669ff58f6ddfc76e934fcce" category="paragraph">使用此选项会提示您重新登录。请注意，这些帐户的令牌将在 90 天后过期。我们会向您发送通知，提醒您注意这一点。</block>
+  <block id="1a653af9db5aa75c21774ad3e0c682b2" category="summary">您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机进行更改。例如，您可以增加托管 Console 代理的 VM 实例的 CPU 或 RAM。</block>
+  <block id="0f90bce2ae7648cda1c8f5dc64f9eb4b" category="doc">为 Console 代理维护 vCenter 或 ESXi 主机</block>
+  <block id="5701e28a09f3583ad12c519e7828b4a9" category="paragraph">您可以从 vSphere 客户端访问维护控制台。</block>
+  <block id="a2cfceffec1eb22eea65cb9fce81f24f" category="list-text">打开 vSphere 客户端并登录到 vCenter。</block>
+  <block id="a81bffe28407c93287bf3f9f760bbd9f" category="paragraph">编辑您的 vCenter 或 ESXi 主机中的 VM 实例设置，然后使用维护控制台应用更改。</block>
+  <block id="7a379799abdd9de72f1da62e969ecdb9" category="list-title">vSphere 客户端中的步骤</block>
+  <block id="dafaa60bc4070aa3666db1cf3b292cc7" category="paragraph">查看 vSphere 客户端中代理虚拟机的网络设置，以确认或排除网络问题。您只能查看（不更新）以下网络设置：IP 地址和 DNS 详细信息。</block>
+  <block id="dd9fa3e95e0a414954b78d7200734559" category="admonition">配置代理后，无法更改代理类型。如果需要更改代理类型，则必须删除 Console 代理并添加具有新代理类型的新代理。</block>
+  <block id="8f05df325bba89d30699db581de1342e" category="paragraph">如果将 Console 代理配置为使用代理服务器，则可以在 Console 代理上启用直接 API 流量，以便将 API 调用直接发送到云提供商服务，而无需通过代理。在 AWS、Azure 或 Google Cloud 中运行的代理支持此选项。</block>
+  <block id="6fcd68961dfc240a8413f89dde7b540a" category="paragraph">使用助手完成这些任务，这些任务为您的 NetApp Console 环境提供最低设置：</block>
+  <block id="0c20e12ef514c2ed70e1ce69968c9f98" category="paragraph"><block ref="17f379511f4881ad036809cbced9e845" category="inline-link-macro-rx"></block>。</block>
+  <block id="8cf48b5701664cf4f5ad74d1be8da2ee" category="paragraph">创建和管理联合身份验证需要 Federation 管理员角色。Federation 查看器可以查看 Federation 页面。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
+  <block id="3bd529dc1a8d731a3ad5a199954ab794" category="paragraph">您可以设置与 AD FS 服务器的联合，以启用 NetApp Console 的单点登录 (SSO)。该过程包括将 AD FS 配置为信任 Console 作为服务提供商，然后在 NetApp Console 中创建连接。</block>
+  <block id="164396088baa331bad67379766e312b0" category="list-text">通过运行以下脚本使用 PowerShell 创建信任：</block>
+  <block id="6895a0c85b76b7610a8f1fef86f76e4b" category="list-text">创建信赖信任标识符时，请使用 *YOUR_TENANT* 值：<block ref="54abc930040d4aaee039ddb6714c161b" prefix=" " category="inline-code"></block></block>
+  <block id="02df164c19766968e5b3853dcb504ccc" category="list-text">当您选择 *Enable support for the WS-Federation* 时，请使用 *YOUR_AUTH0_DOMAIN* 值：<block ref="fe93c33621416c4736b5beefec28d44e" prefix=" " category="inline-code"></block></block>
+  <block id="abf19bc955b5dd28b2ab0935b685595d" category="paragraph">您可以设置与 Microsoft Entra ID 的联合连接，以启用 Console 的单点登录 (SSO)。该过程包括将您的 Microsoft Entra ID 配置为信任 Console 作为服务提供商，然后在 Console 中创建连接。</block>
+  <block id="c872e324106c771f9859e7f45eca3402" category="list-text">对于 *重定向 URL*，请使用<block ref="e25bfdefac2be11860d58d37d2c1d1db" prefix=" " category="inline-code"></block></block>
+  <block id="db9c5d4f71a6b354bdb95850086c575c" category="list-text">使用 Microsoft Entra ID 创建连接。</block>
+  <block id="a63fc89ff8e6482fb1e7b2401aaf0fcb" category="list-text">输入您在上一步骤中创建的客户端 ID 和客户端密码。</block>
+  <block id="f64b0973e9c24a75571edb173bbc9bb8" category="paragraph">您可以在 NetApp Console 中管理您的联合。您可以禁用它，更新过期的凭据，以及在不再需要时将其删除。</block>
+  <block id="6a971748a594e5954868f436f0d4bc80" category="list-text">选择要测试的联盟旁边的操作菜单 <block ref="bfe50e4fac5e58634c6fb748dce94758" category="inline-image-macro-rx" type="image"></block>，然后选择 *测试连接*。</block>
+  <block id="c5c1ab66996bf0283b8304c6877d1d87" category="list-text">选择要禁用的联盟旁边的操作菜单 <block ref="bfe50e4fac5e58634c6fb748dce94758" category="inline-image-macro-rx" type="image"></block>，然后选择 *禁用*。</block>
+  <block id="8b8bb8f8d16312a5c383e3f10e3f632f" category="list-text">选择要删除的联盟旁边的操作菜单 <block ref="bfe50e4fac5e58634c6fb748dce94758" category="inline-image-macro-rx" type="image"></block>，然后选择 *删除*。</block>
+  <block id="d3e75a617281a2aae259becc3b3f67f6" category="paragraph">您可以设置与 PingFederate 的联合连接，以启用 Console 的单点登录 (SSO)。该过程包括将 PingFederate 服务器配置为信任 Console 作为服务提供商，然后在 Console 中创建连接。</block>
+  <block id="5a633c3e525f599475ef4ea6113f74be" category="list-text">对于 *Audience/Entity ID*，请使用 <block ref="ff1ec8077f7c55865c93bad3fe40945b" prefix=" " category="inline-code"></block>，其中 &lt;fed-domain-name-pingfederate&gt; 是联盟的域名。例如，如果您的域是 <block ref="5ababd603b22780302dd8d83498e5172" prefix=" " category="inline-code"></block>，则 Audience/Entity ID 应为 <block ref="540f45e124483bb80ab85d2b775ce506" prefix=" " category="inline-code"></block>。</block>
+  <block id="d12dc472f3f578ea29d7b36b49751e0a" category="list-text">使用 PingFederate 创建连接。</block>
+  <block id="25683454b698bc90da1f2fefa03dde58" category="summary">如果要使用与电子邮件域不同的域进行联盟，则必须首先验证您是否拥有该域。您只能将已验证的域用于联盟。</block>
+  <block id="623692b714f82f2b0a630a03297046c6" category="paragraph">例如，如果使用 Microsoft Entra ID，则可以按照 Microsoft 文档中的步骤进行操作<block ref="9ca4b9144d0432027a208b0ecab8a2a2" category="inline-link-rx"></block>。</block>
+  <block id="e63877840c9676031621255ed59cd61f" category="paragraph">您需要 *Org admin* 或 *Super admin* 权限才能管理组织的身份和访问权限。使用 *Folder or project admin* 权限，您只能管理您具有访问权限的文件夹和项目。</block>
+  <block id="0cddfc9a2a8bbd3cbb2931ba1e7bef8c" category="paragraph">创建新组织时，Console 会自动为您创建一个项目。大多数组织需要多个项目和文件夹来保持工作井然有序。<block ref="3ff8a71797cdccee53e5a806a28529f8" category="inline-link-macro-rx"></block>。</block>
+  <block id="6c895f92da99a64429da379ae34c1022" category="paragraph">组织管理员可以通过创建文件夹来委派管理职责。创建文件夹后，组织管理员可以为成员分配特定文件夹的文件夹或项目管理员角色。然后，这些成员可以管理该文件夹中的所有项目，而无需访问整个组织。</block>
+  <block id="ccb82e9a4b2f8c0f48183f173e29e736" category="paragraph">如果成员访问权限继承自文件夹或组织级别，则无法更改较低级别的成员访问权限。更改成员在更高层次结构级别的权限以更改访问权限。或者，您也可以<block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>。</block>
+  <block id="b53e5580e7e102ab8d4fd39402d6d64f" category="list-text">Backup and Recovery 工作负载也被视为资源。您可以通过将工作负载与项目关联来分配用户访问 Backup and Recovery 工作负载的权限。例如，通过将 Backup and Recovery 工作负载与用户可以访问的项目关联并授予相应的 Backup and Recovery 角色，为用户分配对 Backup and Recovery 工作负载的访问权限。</block>
+  <block id="765a9c1d566960cf1dbd0c1dfc5a8f50" category="paragraph">您可以根据项目或文件夹分配访问角色。例如，为两个特定项目的用户分配角色，或在文件夹级别分配角色，为用户指定文件夹中所有项目的 Ransomware Resilience 管理员角色。</block>
+  <block id="16b595051191789c369f9bfaec075797" category="paragraph">NetApp Console 使用基于角色的访问控制 (RBAC) 模型来管理用户权限。您可以单独或通过联合组将预定义角色分配给成员。您可以向服务帐户以及联合组添加并分配角色。每个角色定义成员可以对关联资源执行的操作。</block>
+  <block id="135482ff04e76b79aceed4f17df51941" category="section-title">查看分配给成员的角色</block>
+  <block id="2e1ba9afd8bea654b2a72fe3eeec0fce" category="paragraph">您可以验证成员当前被分配了哪些角色。</block>
+  <block id="69366e185f46171e8f36181b2427338d" category="paragraph">您可以重命名组织。如果您支持多个组织，这将非常有用。</block>
+  <block id="91d12260d1ad1dfaf6d6d9c6451488ca" category="inline-image-macro">显示操作图标和"编辑组织"选项的组织页面的屏幕截图。</block>
+  <block id="d8d4b80e8ceacee81ae8ac803aa9544a" category="paragraph"><block ref="d8d4b80e8ceacee81ae8ac803aa9544a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3a09c67515f2086631474e15f73de6c7" category="paragraph">如果丢失或需要更新，您可以为服务帐户创建新凭据。</block>
+  <block id="d1c2b78068099b6e93f011f154246f8b" category="paragraph">直接从基于 Web 的 Console 控制台创建 Console 代理。</block>
+  <block id="ed0dd9d63bd421526bd794c04a3256c0" category="list-text">在 *概述* 页面上，选择 *部署代理 &gt; AWS*。</block>
+  <block id="127c02abe37c50ab3c73979251d93fb8" category="list-text">在 *Introduction* 页面上，查看流程概述。</block>
+  <block id="d559b433162bbc7b74a8c8dc30b08d72" category="list-text">在 *AWS Credentials* 页面上，指定您的 AWS 区域，然后选择身份验证方法，即 Console 可以承担的 IAM 角色或 AWS 访问密钥和密钥。</block>
+  <block id="30cafd7bc647a9050e47c88afcfe662c" category="list-text">在 *Network* 页面上，指定代理的 VPC、子网和密钥对，选择是否启用公有 IP 地址，并可选择指定代理配置。</block>
+  <block id="f93188ab864d6406986c3b7aaaf18c2d" category="paragraph">根据您计划使用的 NetApp 数据服务，您可能需要创建第二个策略。对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，需要两个策略。<block ref="d22d28fc84a3a60208070dc479be7a49" category="inline-link-macro-rx"></block>。</block>
+  <block id="194f8ad43e882b08a80a930a234a89ab" category="paragraph">如果您在创建 Console 代理的同一 AWS 帐户中有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动显示在 *Systems* 页面上。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
+  <block id="601b5207ae306935dd96ffd67ef100bc" category="paragraph">请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤演示如何使用 Azure CLI 创建角色。如果您想使用其他方法，请参阅<block ref="9dee1d16cb9c40964c81f1bda0fd9839" category="inline-link-rx"></block>。</block>
+  <block id="35e7a7c917406bb08b4658f79e829975" category="list-text">在*概述*页面上，选择*部署代理 &gt; Azure*。</block>
+  <block id="8e7da16e6bbaed85cb6d23f064a7d1ee" category="list-text">在 *Virtual Machine Authentication* 页面上，选择与设置 Azure 权限方式匹配的身份验证选项：</block>
+  <block id="59c67796151c195d2259098a97c2528c" category="paragraph">+ 虚拟机的身份验证方法可以是密码或 SSH 公钥。</block>
+  <block id="13892df817a3ed2d766a9475cf992176" category="paragraph">+ <block ref="51efa34484491a2cd1e24f30b14fc68a" category="inline-link-rx"></block></block>
+  <block id="4235a0bd732d6fb0a73f7f6c97198caf" category="list-text">在 *详细信息* 页面上，输入代理的名称，指定标记，并选择是要 Console 创建具有所需权限的新角色，还是要选择使用 <block ref="b569336f779a413e2d7fa8c0ccb0306d" category="inline-link-macro-rx"></block> 设置的现有角色。</block>
+  <block id="d52811c65d3f5c6bc2fbdbd4f9073a8b" category="inline-link-macro">了解何时在 Azure 中手动部署</block>
+  <block id="eadfd09e11a7bba53e89b4ded95e24ac" category="list-text"><block ref="6957be9b33ace45108b830c8e7c7efc9" category="inline-link-macro-rx"></block>。</block>
+  <block id="ed4b1c74a9b7ff952a8ce4e38047584d" category="paragraph">确保计划安装 Console 代理的网络位置支持以下要求。这些要求使 Console 代理能够管理混合云中的资源。</block>
+  <block id="dbd16f152af02ee8c1c7ca893b947041" category="paragraph">您现在已安装 Console 代理并使用 Console 组织对其进行了设置。</block>
+  <block id="a7bfdf791cd40e0ecc1b8e7cef1ca6c1" category="list-text"><block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>。</block>
+  <block id="f01e4d9790133042ca3ef0197e246854" category="inline-link-macro">了解何时在 Google Cloud 中手动部署</block>
+  <block id="5c157fb497136177306e9541713d8bb7" category="list-text"><block ref="5591461308b097e4edd20c69ee3e6cd5" category="inline-link-macro-rx"></block>。</block>
+  <block id="6c0de685dda7911975678b49e07be00d" category="paragraph">向 Console 代理提供先前设置的 Azure 服务主体的凭据。</block>
+  <block id="040f30cb18e650be7abe6bce546d298c" category="paragraph">向 NetApp Console 提供之前设置的 Azure 服务主体的凭据。</block>
+  <block id="4a3e05d4bb9c04dd64ba5b60b87fbcd2" category="paragraph">NetApp Console 现在具有代表您在 Azure 中执行操作所需的权限。</block>
+  <block id="495ac13b5708d9e9be8539d8c5cb5cb4" category="paragraph">有关证书显示的详细信息，包括到期日期。</block>
+  <block id="3d05c48a5a1ece30e2b96fe0635f99c4" category="list-text">*标准模式*：打开 Web 浏览器并转到<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>。</block>
+  <block id="a0a0ee04e1dc8568fd9dac1a15219623" category="admonition">如果您对修改代理虚拟机有疑问，请与 NetApp 支持团队合作。</block>
+  <block id="259541ba808827d4080f8a4bb09063e7" category="paragraph">默认情况下，不会提示用户输入其 ONTAP 凭据来访问 ONTAP System Manager。但是，Console 管理员（具有 Organization admin 角色）可以配置 Console，以提示用户输入其 ONTAP 凭据。启用此设置后，用户每次都需要输入其 ONTAP 凭据。</block>
+  <block id="bc01c580af40eca50499bf2819fa489c" category="list-text">选择 *Administration &gt; Notifications settings*。</block>
+  <block id="c94f61252b351a815e4213cbba0727d6" category="paragraph">要创建和管理合作伙伴关系，需要 *Partnership admin* 角色。*Partnership viewer* 可以查看 Partnerships 页面。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
+  <block id="8f28005b21a99e881a87d7492518ddfd" category="paragraph">您可以随时将用户从合作伙伴关系中删除。从合作伙伴关系中删除用户将立即撤销其对合作伙伴组织中任何资源的访问权限。</block>
+  <block id="8316bf1e0d70ee8fc3c59de71bc4706d" category="paragraph">将成员添加到合作伙伴关系时，合作伙伴组织的 *Partnership admin* 必须为其组织中的特定资源分配角色，然后才能访问这些资源。</block>
+  <block id="92ff62d399d5c20a36aa3a983f0bea91" category="list-text">选择要添加成员的已建立合作伙伴关系旁边的操作菜单 <block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>，然后选择 *添加成员*。</block>
+  <block id="4c226e788df022f2c8e1c47b18e73909" category="list-text">选择一个或多个要添加到合作伙伴关系中的成员，然后选择 *Add*。</block>
+  <block id="fe57742c0aa3d5943aba0e699979aea3" category="paragraph">您可以随时从合作伙伴关系中删除成员。从合作伙伴关系中删除用户会立即撤销其对合作伙伴组织中任何资源的访问权限。</block>
+  <block id="310efbf7b41e493fc486b8cdd914a05f" category="list-text">选择要删除的成员旁边的操作菜单 <block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>，然后选择 *删除关联*。</block>
+  <block id="25f6a8c6c9099ec32b8d68e5f611bfb3" category="list-text">（可选）将组织成员添加到合作伙伴关系中，然后选择 *Apply*。</block>
+  <block id="13109640229ab89a1d595989856ef85c" category="paragraph">您批准的合作伙伴关系现在显示为 *已建立* 状态。在任何一个组织中具有 *合作伙伴管理员* 或 *合作伙伴查看器* 角色的用户都可以查看合作伙伴关系。</block>
+  <block id="dd98bae37396927ccaf214aea9213045" category="list-text">选择 *Initiated partnerships* 或 *Received partnerships* 选项卡。</block>
+  <block id="05c5bf5c30af9bab5d6df4825facee56" category="list-text">选择 *Initiated partnerships* 选项卡。</block>
+  <block id="4c56531120cb5dd49448926a4a5fd1fd" category="paragraph">您可以将以下角色分配给合作伙伴用户：</block>
+  <block id="71e47318c89edf40f0f7930271652427" category="list-text">选择要查看的已建立合作伙伴关系旁边的操作菜单 <block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>，然后选择 *查看详细信息*。</block>
+  <block id="e190afd903799b49fe9423d7a4e3d004" category="paragraph">在私有模式下，NetApp Console 向您的云提供商发送出站流量的唯一时间是创建 Cloud Volumes ONTAP 系统。</block>
+  <block id="06041aaf97ca20674100126107cfd2ef" category="paragraph">如果 Console 代理安装在云中，并且您计划创建 Cloud Volumes ONTAP 系统，则 NetApp Console 需要云提供商权限。您需要在云提供商中设置权限，然后在安装后将这些权限与 Console 代理实例相关联。</block>
+  <block id="8a691e7454236e8721e4f6e719116dca" category="paragraph">您的服务主体现已设置，您应该已经复制了应用程序（客户端） ID、目录（租户） ID 和客户端密钥的值。添加 Azure 凭据时，在 NetApp Console 中输入此信息。</block>
+  <block id="46e0d335b5711d7a7b40c4f337ad315d" category="paragraph">您可以在本地或安全的云环境中安装 NetApp Console。专用模式通常用于没有互联网连接的本地环境以及安全的云区域，包括<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>、<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>和<block ref="360910fe60b5d1cf9b7056b9b6f46685" category="inline-link-rx"></block>。</block>
+  <block id="6074647704f0afb86531acc795696683" category="paragraph">可选：从云提供商的市场订阅 NetApp Intelligent Services，按小时费率（PAYGO）或通过年度合同支付数据服务费用。NetApp Intelligent Services 包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience 和 NetApp Disaster Recovery。NetApp Data Classification 包含在您的订阅中，无需额外费用。</block>
+  <block id="b14d1e9fbcf5759e81658284acab9efb" category="inline-link-macro">为使用 NetApp Console 做好网络准备</block>
+  <block id="729b982d74499e44e865e88a3f16ec36" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="0eed3bf574fb9602ede158d6a54bf6e3" category="inline-link-macro-rx"></block></block>
+  <block id="e73832ffd260658588b0229085807e00" category="paragraph">确保访问 NetApp Console 的计算机具有对所需端点的网络访问权限。</block>
+  <block id="a275a724bc0866f232ecd55097a2e5c0" category="inline-link-macro">了解如何为 NetApp Console 准备网络。</block>
+  <block id="ce9ee031c0fa5244fce8c09e716d782b" category="paragraph"><block ref="ce9ee031c0fa5244fce8c09e716d782b" category="inline-link-macro-rx"></block></block>
+  <block id="580e575aea65eeee7ca4a4d5e472e263" category="paragraph">转到<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>并注册。如果提示创建组织，并且您认为您的公司已经存在一个组织，请关闭该对话框并告诉您的组织管理员。如果贵公司目前没有组织管理员，您可以声明此角色。<block ref="3886fb7bb69eaac4d5ed416bad678dd5" category="inline-link-macro-rx"></block></block>
+  <block id="311f3f6314019625ca6375274522b000" category="paragraph">此时，您已登录并可以使用 NetApp 助手开始配置 Console。首先，请关联您的 NetApp Support Site 帐户和 Console 代理以启用全部功能。</block>
+  <block id="6c479e362a71650f0ec9bfca93ce7f12" category="list-text">打开 Web 浏览器并转到<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>。</block>
+  <block id="38bcedef0cbc6bb058f25fb2b71d0a78" category="paragraph">您必须已部署 Console 代理以订阅数据服务。您需要将市场订阅与连接到 Console 代理的云凭据相关联。</block>
+  <block id="165c72dc6962589a2f87668cf8c2ab52" category="paragraph">当您尝试访问 Agent 设置页面时，Console 将显示此消息。</block>
+  <block id="fb5b19ebde676562f0a587c57a7504e1" category="paragraph">使用以下命令之一验证 Console 代理。所有服务的状态应为 _Running_。如果不是这种情况，请联系 NetApp 支持。</block>
+  <block id="7afbd8f3a7be308e4955c56c98b2868d" category="inline-link-macro">检查 Console 代理状态（针对 vCenter 部署）</block>
+  <block id="fffc3b17829167ae6b45a4b144c7bad7" category="list-text"><block ref="fffc3b17829167ae6b45a4b144c7bad7" category="inline-link-macro-rx"></block></block>
+  <block id="3081a7b6bb95ec0d5cf84dc2ea835174" category="list-text">Docker（用于 Ubuntu 和 vCenter 部署）</block>
+  <block id="0128c0d35d7f984db85c5d65138fb691" category="section-title">验证 Console 代理是否符合要求</block>
+  <block id="787bde807a1a57661aeb1e9aa8557b03" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
+  <block id="c45122f09d565aa9c39277ed8a04fe96" category="paragraph">如果您无法解决 Console 代理的问题，您可能需要联系 NetApp 支持。NetApp 支持可能会要求提供 Console 代理 ID 或要求您向他们发送 Console 代理日志（如果他们还没有的话）。</block>
+  <block id="550db41d5673daf8fdbc4334a1fbff87" category="paragraph">如果您遇到问题，NetApp 可能会要求您向 NetApp 支持发送一条 AutoSupport 消息以进行故障排除。</block>
+  <block id="97c06a2bee370a00309be22a5d370be9" category="summary">卸载 Console 代理以解决问题或将其从主机中永久删除。需要使用的步骤取决于正在使用的部署模式。从环境中删除 Console 代理后，即可将其从 Console 中删除。</block>
+  <block id="42e88fe3980dba2a9d6c7e65cc1f3a04" category="list-text">在*概览*页面上，为已断开连接的代理选择操作菜单，然后选择*删除代理*。</block>
+  <block id="6b0481da6e57f7d61d264eda118c6c5b" category="paragraph">如果您的网络要求发生变化，请更新 Console 代理的 URI。这可确保对存储基础架构进行不间断、安全且合规的管理。</block>
+  <block id="55a14e6b296f723d13dead096a169722" category="paragraph">控制台代理需要在升级过程中重新启动，因此 NetApp Console 在升级期间将不可用。</block>
 </blocks>

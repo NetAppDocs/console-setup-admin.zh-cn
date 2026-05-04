@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-uninstall-agent.html 
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
-summary: 卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。 
+summary: 卸载 Console 代理以解决问题或将其从主机中永久删除。需要使用的步骤取决于正在使用的部署模式。从环境中删除 Console 代理后，即可将其从 Console 中删除。 
 ---
 = 卸载并删除控制台代理
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 卸载控制台代理以解决问题或将其从主机中永久删除�
 
 
 [role="lead"]
-卸载控制台代理以解决问题或将其从主机中永久删除。您需要使用的步骤取决于您使用的部署模式。从环境中删除控制台代理后，您可以将其从控制台中删除。
+卸载 Console 代理以解决问题或将其从主机中永久删除。需要使用的步骤取决于正在使用的部署模式。从环境中删除 Console 代理后，即可将其从 Console 中删除。
 
 
 
@@ -83,6 +83,6 @@ docker system prune -a
 
 .步骤
 . 选择“*管理 > 代理*”。
-. 在“概览”页面上，选择已断开连接的代理的操作菜单，然后选择“移除代理”。
+. 在*概览*页面上，为已断开连接的代理选择操作菜单，然后选择*删除代理*。
 . 输入代理人的姓名进行确认，然后选择*删除*。
 

@@ -14,10 +14,10 @@ summary: '与您的 SAML 2.0 IdP 提供商联合，为NetApp Console启用单点
 
 
 [role="lead"]
-与您的 SAML 2.0 IdP 提供商联合，为 NEtApp 控制台启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。
+与您的 SAML 2.0 IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。
 
 .所需角色
-需要联盟管理员角色来创建和管理联盟。联盟查看者可以查看联盟页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+创建和管理联合身份验证需要 Federation 管理员角色。Federation 查看器可以查看 Federation 页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 
 
 NOTE: 您可以与您的企业 IdP 或NetApp支持站点联合。你不能与两者结成联盟。

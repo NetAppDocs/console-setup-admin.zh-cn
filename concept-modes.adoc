@@ -140,13 +140,13 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | NetApp 分类 | 是 
 
 
-| NetApp复制和同步 | 是 
+| NetApp Copy and Sync | 是 
 
 
 | NetApp Disaster Recovery | 是 
 
 
-| NetApp 勒索软件保护 | 是 
+| NetApp Ransomware Resilience | 是 
 
 
 | NetApp Replication | 否 
@@ -188,7 +188,7 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
  a| 
 Licenses and subscriptions 管理
 
-* 标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的NetApp数据服务。查看每项服务的文档以了解有关可用许可选项的更多信息。
+* 标准模式支持市场订阅和 BYOL；但是，支持的许可选项取决于您使用的 NetApp 数据服务。请查看每项服务的文档，详细了解可用的许可选项。
 
 | 否 
 
@@ -209,9 +209,6 @@ Licenses and subscriptions 管理
 
 
 | 只读模式 | 否 
-
-
-| 通知 | 否 
 |===
 
 
@@ -306,7 +303,7 @@ NetApp Replication
 
 * 在政府区域内受限制模式支持。不支持商业区域或具有限制模式的主权区域。
 
-| 是*，（如果从 ONTAP 内部环境复制到 ONTAP 内部环境则不需要） 
+| 是* （如果从 ONTAP 本地复制到 ONTAP 本地则不需要） 
 
 
 | *NetApp 支持合同功能* | 无 | 不适用 
@@ -359,9 +356,6 @@ Licenses and subscriptions 管理
 
 
 | 只读模式 | 是 
-
-
-| 通知 | 否 
 |===
 
 
@@ -615,7 +609,7 @@ NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
 | Google Cloud Storage | 否 | 否 
 
 
-| 内部部署 ONTAP 集群 | 是 | 是 
+| 本地ONTAP集群 | 是 | 是 
 
 
 | E 系列 | 否 | 否 
@@ -624,7 +618,7 @@ NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
 | StorageGRID | 否 | 否 
 
 
-| 工作负载工厂 | 否 | 否 
+| 工作负载 | 否 | 否 
 
 
 .8+| *数据服务* | 备份和恢复 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] 
@@ -633,13 +627,13 @@ NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
 | NetApp 分类 | 是 | 是 
 
 
-| 复制和同步 | 否 | 否 
+| NetApp Copy and Sync | 否 | 否 
 
 
 | NetApp Disaster Recovery | 否 | 否 
 
 
-| NetApp 勒索软件保护 | 否 | 否 
+| NetApp Ransomware Resilience | 否 | 否 
 
 
 | NetApp Replication | 是 | 是 

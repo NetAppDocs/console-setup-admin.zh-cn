@@ -756,7 +756,7 @@ summary: 当NetApp Console在 Azure 中启动控制台代理时，它会将一�
 | 在创建期间加密存储帐户 | Microsoft.ManagedIdentity/userAssignedIdentities/分配/操作 | 是 | 是 | 否 
 
 
-.3+| 在灵活编排模式下使用虚拟机规模集来为Cloud Volumes ONTAP指定特定区域 | Microsoft.Compute/virtualMachineScaleSets/写入 | 是 | 否 | 否 
+.3+| 在灵活业务流程模式下使用 Virtual Machine Scale Sets 为 Cloud Volumes ONTAP 指定特定区域 | Microsoft.Compute/virtualMachineScaleSets/写入 | 是 | 否 | 否 
 
 
 | Microsoft.Compute/virtualMachineScaleSets/读取 | 是 | 否 | 否 
