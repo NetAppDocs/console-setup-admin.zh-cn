@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-verify-organization.html 
+keywords: verify organization, organization verification, cmat, crm id, business account, iam, digital advisor, AIQ, identity and access management 
+summary: 验证您的组织，以便将您的 NetApp Console 组织与您的 NetApp 业务账户身份关联。 
+---
+= 在 NetApp Console 中验证您的组织
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+验证您的组织将 Console 组织与您的 NetApp 业务账户身份关联。这使您可以使用 Digital Advisor 和 AIQ 建议等功能。
+
+.必需角色
+组织管理员或超级管理员。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
+
+如果您的公司拥有多个 NetApp 业务账户，则必须验证您的组织，并将其与正确的业务账户关联。如果您的公司只有一个 NetApp 业务账户，系统会自动验证您的组织，并将其关联到该业务账户。
+
+当您的 Console 组织与您的企业帐户相关联时，Digital Advisor 仅向您显示与该帐户相关联的资源。如果您有多个企业帐户，则需要选择一个帐户来与您的 Console 组织关联。如果您需要更改关联，可以重新验证您的组织并选择其他企业帐户。
+
+.步骤
+. 选择*管理>身份和访问*。
+. 选择*组织*。
+. 在 *Organization* 页面上，选择页面标题旁边的 *Verify*。
++
+image:screenshot-iam-verify-org.png["显示页面标题旁边的\"验证\"按钮的\"组织\"页面的屏幕截图。"]
+
+. 在*关联公司账号*对话框中，选择要关联到贵组织的公司账号。
+

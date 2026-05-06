@@ -10,10 +10,10 @@
 | 端点 | 目的 
 
 
-| \ https://mysupport.netapp.com |  
+| \ https://mysupport.netapp.com | 用于许可和联系NetApp支持。 
 
 
-| \ https://signin.b2c.netapp.com | （此端点是https://mysupport.netapp.com的 CNAME URL） 
+| \ https://signin.b2c.netapp.com | 用于授权和联系 NetApp 支持。（此端点是 https://mysupport.netapp.com 的 CNAME URL） 
 
 
 | \ https://cloudmanager.cloud.netapp.com/tenancy |  
@@ -23,30 +23,6 @@
 
 
 | \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
-
-
- a| 
-* 选项 1（推荐）：
-+
-** \ https://bluexpinfraprod.eastus2.data.azurecr.io
-** \ https://bluexpinfraprod.azurecr.io
-
-
-* 选项 2:
-+
-** \https://*.blob.core.windows.net
-** \ https://cloudmanagerinfraprod.azurecr.io
-
-
-
- a| 
-为了获取图像，安装程序需要访问这两组端点中的一组。 ^1^ 建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：
-
-* 从 Console 代理的 3.9.47 版本开始，支持选项 1 中列出的端点。与以前版本的 Console 代理没有向后兼容性。
-* 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。
-* 如果您将控制台代理与NetApp Backup and Recovery或NetApp Ransomware Resilience一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
-
-
 |===
 手动安装期间联系的端点:: 当您在自己的 Linux 主机上手动安装控制台代理时，控制台代理的安装程序在安装过程中需要访问多个 URL。
 
@@ -75,13 +51,7 @@
 
 
  a| 
-\https://*.blob.core.windows.net
- a| 
-
-
-
- a| 
-\ https://cloudmanagerinfraprod.azurecr.io
+\ https://occmclientinfragov.azurecr.us
  a| 
 
 
@@ -90,32 +60,12 @@
 
 
  a| 
-\https://*.blob.core.windows.net
- a| 
-
-
-
- a| 
 \ https://occmclientinfragov.azurecr.us
  a| 
 
 
 
-2+| *商业或主权区域* 如果您在商业区域或主权区域安装控制台代理，则可以在两组端点之间进行选择： 
-
-
- a| 
-**选项 1（推荐）：** * \ https://bluexpinfraprod.eastus2.data.azurecr.io * \ https://bluexpinfraprod.azurecr.io
-
-**选项 2：** * \https://*.blob.core.windows.net * \ https://cloudmanagerinfraprod.azurecr.io
- a| 
-建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：
-
-* 从 Console 代理的 3.9.47 版本开始，支持选项 1 中列出的端点。与以前版本的 Console 代理没有向后兼容性。
-* 控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。
-* 如果您将控制台代理与NetApp Backup and Recovery或NetApp Ransomware Resilience一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
-
-
+2+| *商业或主权区域* 如果您在商业区域或主权区域安装 Console 代理，安装程序需要访问以下端点： 
 |===
 建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时不允许选项 2 中列出的端点。请注意以下有关这些端点的信息： ** 从 Console 代理的 3.9.47 版本开始，支持选项 1 中列出的端点。与先前版本的 Console 代理没有向后兼容性。** Console 代理首先联系选项 2 中列出的端点。如果无法访问这些端点， Console 代理将自动联系选项 1 中列出的端点。** 如果您将 Console 代理与 NetApp Backup and Recovery 或 NetApp Ransomware Resilience 结合使用，则不支持选项 1 中的端点。在此情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。
 

@@ -491,7 +491,7 @@ Azure 环境
 
 
  a| 
-\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io
+\ https://occmclientinfragov.azurecr.us
  a| 
 获取控制台代理升级的图像。
 

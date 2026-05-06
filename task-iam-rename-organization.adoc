@@ -15,7 +15,7 @@ summary: 如果需要，您可以更改NetApp Console组织的名称。
 
 
 [role="lead"]
-您的NetApp Console组织有一个名称和一个 ID。您可以为您的组织选择一个名称以帮助识别它。您可能还需要检索某些集成的组织 ID。
+您的 NetApp Console 组织有名称和 ID。您可以为您的组织选择一个名称来帮助识别它。您可能还需要知道用于 API 调用的组织 ID。
 
 
 

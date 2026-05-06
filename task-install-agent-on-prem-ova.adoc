@@ -114,7 +114,7 @@ NOTE: 您无法使用本地安装的 Console 代理在 Google Cloud 中管理资
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （部署受限模式时需要）
  a| 
 获取控制台代理升级的图像。
 

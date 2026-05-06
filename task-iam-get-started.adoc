@@ -59,7 +59,15 @@ link:task-iam-manage-members-permissions.html["了解如何管理成员及其权
 * link:task-iam-associate-agents.html["了解如何将控制台代理与文件夹或项目关联"] 。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 验证您的组织（可选）
+[role="quick-margin-para"]
+如果您的团队使用组织验证，请将 Console 组织与 NetApp 业务账户身份关联。
+
+[role="quick-margin-para"]
+link:task-verify-organization.html["了解如何验证您的组织"]。
+
 .相关信息
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身份和访问管理"]
+* link:concept-verified-organization.html["了解 NetApp Console 中已验证的组织"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身份和访问 API"^]
 

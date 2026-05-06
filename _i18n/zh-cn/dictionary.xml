@@ -163,9 +163,7 @@
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| 管理 Azure 中国区域的资源。</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| 管理 Google Cloud 中的资源。</block>
-  <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 获取控制台代理升级的图像。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">了解如何更新终端节点列表</block>
-  <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">当您更新到防火墙中的当前端点时，您现有的代理将继续工作。</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：</block>
   <block id="7d9fb0da2a7d9c9f4e35c19e20d063fa" category="paragraph">\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io</block>
   <block id="e24963e40778134b357f4a5eac58e1f5" category="list-text">选项 2</block>
@@ -180,29 +178,18 @@
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
   <block id="d03b3625d28d43168905850da108e917" category="cell">\ https://mysupport.netapp.com</block>
   <block id="9cc9c0e125bb6d31323499f95f0c430e" category="cell">\ https://signin.b2c.netapp.com</block>
-  <block id="9989a1605407297325e31ec5b9d20c1b" category="cell">（此端点是https://mysupport.netapp.com的 CNAME URL）</block>
   <block id="648b7f3d6699305c92d33129e6ea00fe" category="cell">\ https://cloudmanager.cloud.netapp.com/tenancy</block>
   <block id="aeed9abd051a5ff37a94ee8ea302bdd8" category="cell">\ https://stream.cloudmanager.cloud.netapp.com</block>
   <block id="49fa0b884bb05dfb3678aff69fc2a90f" category="cell">\ https://production-artifacts.cloudmanager.cloud.netapp.com</block>
-  <block id="947479331852b9cc69da9bbd894654d1" category="list-text">选项 1（推荐）：</block>
   <block id="534d469c55031860cef85b868a9332d8" category="list-text">\ https://bluexpinfraprod.eastus2.data.azurecr.io</block>
   <block id="a86a33f4f6d9c203eb747987b6d104ca" category="list-text">\ https://bluexpinfraprod.azurecr.io</block>
-  <block id="eb499f7aadd76ba50d5925ea6552dcff" category="list-text">选项 2:</block>
   <block id="f55e31da35f47937201bdbf54e964315" category="list-text">\https://*.blob.core.windows.net</block>
   <block id="9dcb0a1d3281e001a6085626a264be49" category="list-text">\ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="f229192e27e1c177beb735ee19edb0e5" category="paragraph">为了获取图像，安装程序需要访问这两组端点中的一组。 ^1^ 建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：</block>
-  <block id="4049213cb8cd68d3d11532c6f66c0ae4" category="list-text">控制台代理首先联系选项 2 中列出的端点。如果这些端点不可访问，控制台代理会自动联系选项 1 中列出的端点。</block>
-  <block id="cf192a52b6f25a28eb967a03444e7da2" category="list-text">如果您将控制台代理与NetApp Backup and Recovery或NetApp Ransomware Resilience一起使用，则不支持选项 1 中的端点。在这种情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。</block>
   <block id="3af42b7f858ea75013b8facec6ca0048" category="list-text">当您在自己的 Linux 主机上手动安装控制台代理时，控制台代理的安装程序在安装过程中需要访问多个 URL。</block>
   <block id="9f116bfe192eb1d0b2c905df5d192487" category="cell">此端点是 \ https://mysupport.netapp.com的 CNAME URL</block>
   <block id="b2a31fe7605db4877c0f7d8023478b76" category="cell">*AWS 政府区域* 如果您在 AWS 政府区域安装控制台代理，则安装程序还需要访问以下端点：</block>
   <block id="130e683d238653858967a73af6293939" category="cell">*Azure 政府区域* 如果在 Azure 政府区域中安装控制台代理，则安装程序还需要访问以下端点：</block>
   <block id="1f29f58c7cdabd46095c6ad242933991" category="paragraph">\ https://occmclientinfragov.azurecr.us</block>
-  <block id="5ba19e583c755396882d30a7b2586fd7" category="cell">*商业或主权区域* 如果您在商业区域或主权区域安装控制台代理，则可以在两组端点之间进行选择：</block>
-  <block id="12e72c401fe49717131f2676bb6a8099" category="paragraph">**选项 1（推荐）：** * \ https://bluexpinfraprod.eastus2.data.azurecr.io * \ https://bluexpinfraprod.azurecr.io</block>
-  <block id="b31abacefc029dd7ae51036ddd3ad27a" category="paragraph">**选项 2：** * \https://*.blob.core.windows.net * \ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="f079ba6f508e4d8fffaecae1a59c5bf3" category="paragraph">建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时禁止选项 2 中列出的端点。请注意有关这些端点的以下事项：</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="35bd57a4dcfbd7a695f9beb7d01913c6" category="paragraph">主机可能会在安装期间尝试更新操作系统包。主机可以联系不同的镜像站点来获取这些操作系统包。</block>
   <block id="4d3e424d70b837e22ea9a110aa0a155d" category="list-text">选择*管理&gt;身份和访问*。</block>
   <block id="398721ebe5d01d65e8258e9cb90c48d2" category="list-text">选择“*Federation*”以查看“*Federations*”页面。</block>
@@ -3108,7 +3095,6 @@
   <block id="4edfdeb74f014e9408efa692c71a9d2e" category="admonition">必须为用户分配至少一个角色。您不能删除用户的所有角色。如果您需要删除所有角色，则必须从组织中删除该用户。</block>
   <block id="2be01e6baa22b9b0a4f0a2c054fe7289" category="summary">如果需要，您可以更改NetApp Console组织的名称。</block>
   <block id="1920da3586c2e2872f88b02997c971c3" category="doc">组织和项目 ID</block>
-  <block id="d1f35fea71ad4d3c53dfce45e3c8b312" category="paragraph">您的NetApp Console组织有一个名称和一个 ID。您可以为您的组织选择一个名称以帮助识别它。您可能还需要检索某些集成的组织 ID。</block>
   <block id="902a8ce7390bb726da2910b3ec25aae6" category="section-title">重命名您的组织</block>
   <block id="8bf336ab115156eac88db2970ab0e70d" category="list-text">从“组织”页面，导航到表格的第一行，选择<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然后选择*编辑组织*。</block>
   <block id="b9669849e9961b7f3f4dc1a2f6787c34" category="list-text">输入新的组织名称并选择*应用*。</block>
@@ -4850,7 +4836,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">如果仍有问题，请联系客服。</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">确认代理程序拥有对所需端点的出站访问权限。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">了解更多关于使用 config-checker validate 命令的信息。</block>
-  <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">您只能验证状态为“已连接”的代理。</block>
   <block id="2256ce9e5331fffeb7ded438ec67c9bf" category="list-title">控制台操作步骤</block>
   <block id="80ed8e269497520c11a5f07aaac10ca9" category="list-text">选择要检查的控制台代理的操作菜单，然后选择“验证”。</block>
   <block id="5dfebfd3b68f37eb76c1cbde60947384" category="inline-image-macro">屏幕截图显示了代理“操作”菜单中的“验证”选项。</block>
@@ -5213,12 +5198,6 @@
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">默认代理配置</block>
   <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">如果您的网络需要代理才能访问互联网，则需要添加代理信息。您可以在安装过程中添加显式代理。<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> 和 <block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block> 参数是可选的，系统不会提示您添加它们。如果您有显式代理服务器，则需要输入如图所示的参数。</block>
-  <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> 使用以下格式之一将 Console 代理配置为使用 HTTP 或 HTTPS 代理服务器：</block>
-  <block id="f1c3efde333f7f855c03b55ae236bf19" category="paragraph">+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port</block>
-  <block id="b968056bd5b82381c88e0c9d86ac33b7" category="paragraph">+ 注意以下事项：</block>
-  <block id="40555c907279e68c131ed885fbd297f2" category="paragraph">+ ** 用户可以是本地用户或域用户。** 对于域用户，您必须使用 \ 的 ASCII 码，如上所示。** Console 代理不支持包含 @ 字符的用户名或密码。** 如果密码包含以下任何特殊字符，则必须使用反斜杠前缀来转义该特殊字符：&amp; 或 !</block>
-  <block id="2c21faf59a15a9c898da7576148c66a6" category="paragraph">+ 例如：</block>
-  <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
   <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">仅 Cloud Volumes ONTAP 支持 SSL 解密</block>
   <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">仅支持与 Cloud Volumes ONTAP 关联的代理使用透明代理服务器。如果代理与其他 NetApp 数据服务一起使用，则不能对其使用透明代理。如果您将 NetApp 数据服务与 Cloud Volumes ONTAP 一起使用，请为 Cloud Volumes ONTAP 创建专用代理，您可以在其中使用透明代理服务器。</block>
   <block id="362cb79b6626c8ace583ce4914bc2e72" category="list-text">Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 时需要）</block>
@@ -5898,7 +5877,6 @@
   <block id="5ad41271522acbc853e7c4a84763f339" category="paragraph">| https://mysupport.netapp.com | 用于获取许可信息并向 NetApp 支持发送 AutoSupport 消息。| https://signin.b2c.netapp.com | 用于更新 NetApp 支持站点 (NSS) 凭据或将新的 NSS 凭据添加到 NetApp Console。| https://support.netapp.com | 用于获取许可信息、向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。</block>
   <block id="7aed309254b98f77dbd3d77a03d50dfd" category="list-text">3.9.47 及更高版本支持选项 1 端点。3.9.47 之前的版本不支持向后兼容。</block>
   <block id="0077f7d38869cf9790e55cbfea881bf4" category="list-text">Console 代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。</block>
-  <block id="fe419db71f7d4484d61cbf89fbff3ac3" category="paragraph">a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| 获取用于 Console 代理升级的映像。</block>
   <block id="d29ad0dfb0326845a0e0541c9a73346f" category="paragraph">+ * 从 Console 代理的 3.9.47 版本开始，系统支持选项 1 中列出的端点。先前版本的 Console 代理不支持向后兼容性。* Console 代理首先联系选项 2 中的端点。如果这些端点不可访问，它会自动联系选项 1 中的端点。* 如果您将 Console 代理与 NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，则系统不支持选项 1 端点。允许选项 2 端点，不允许选项 1。</block>
   <block id="7c196962ef71a676aa44930111ed62ec" category="paragraph">使用 NetApp Console 的身份和访问管理 (IAM) ，根据您的业务结构（按位置、部门或项目）组织 NetApp 资源并控制访问。</block>
   <block id="236a948a43c96e218fc04221bf59fe7c" category="admonition">要管理 NetApp Console 中的 IAM，您必须具有 _Super admin_、_Organization admin_ 或 _Folder or project admin_ 角色。</block>
@@ -5980,7 +5958,6 @@
   <block id="3f58924667abe02b47c4307cb9e4e753" category="paragraph">从 Web 浏览器访问 NetApp Console 的计算机必须能够联系多个端点。</block>
   <block id="b26bd0592d66bf1b967e5025cc7e96c3" category="inline-link-macro">为 NetApp Console 准备网络</block>
   <block id="9ce61524b745e886629d67ddbb08ee3e" category="paragraph"><block ref="2dfc71fdb1a842a2b8ee7de31773f262" category="inline-link-macro-rx"></block>。</block>
-  <block id="e300d744e1b89447a4e57c3fbb6b3fa0" category="list-text">从 Console 代理的 3.9.47 版本开始，支持选项 1 中列出的端点。与以前版本的 Console 代理没有向后兼容性。</block>
   <block id="59fa89c2d49dac7f3b6283af4e1b1dc3" category="paragraph">建议使用选项 1 中列出的端点，因为它们更安全。我们建议您设置防火墙以允许选项 1 中列出的端点，同时不允许选项 2 中列出的端点。请注意以下有关这些端点的信息： ** 从 Console 代理的 3.9.47 版本开始，支持选项 1 中列出的端点。与先前版本的 Console 代理没有向后兼容性。** Console 代理首先联系选项 2 中列出的端点。如果无法访问这些端点， Console 代理将自动联系选项 1 中列出的端点。** 如果您将 Console 代理与 NetApp Backup and Recovery 或 NetApp Ransomware Resilience 结合使用，则不支持选项 1 中的端点。在此情况下，您可以禁止选项 1 中列出的端点，同时允许选项 2 中列出的端点。</block>
   <block id="895fdfe24bf789e2a45f045a3443011e" category="list-text">标识要用于联合的域。您可以使用电子邮件域名或您拥有的其他域名。如果要使用电子邮件域名以外的域名，必须首先在 Console 中验证该域名。有关说明，请参阅 <block ref="a68d68e2e08ca1853c0f2263bccee217" category="inline-link-macro-rx"></block>。</block>
   <block id="45b2b872ee5cb2fa766d4ab5c4451342" category="paragraph">从 7 天到 30 天之间进行选择。系统通过电子邮件向具有以下角色的任何用户发送过期通知，并将其显示在 Console 中：Super admin、Org admin、Federation admin 和 Federation viewer。</block>
@@ -5991,10 +5968,7 @@
   <block id="9a5f3d4381ce332c8b92e567534cdb88" category="list-text"><block ref="127cc614fbbd5bfdd0ad1b9430ba08a2" prefix="" category="inline-code"></block> 和 <block ref="0a1e90fbac878c626fcbb9b711662537" prefix=" " category="inline-code"></block> 仅在您没有将防火墙规则传递给部署并选择让 Console 为您创建它们时才需要。这些权限位于 Console 帐户 .yaml 文件中。如果您使用共享 VPC 部署 HA 对，这些权限将用于为 VPC1、2 和 3 创建防火墙规则。对于所有其他部署，这些权限也将用于创建 VPC0 的规则。</block>
   <block id="5586272ca2c6ac3a947d6cccf01cb688" category="list-text">对于 Cloud Tiering，分层服务帐户必须在服务帐户上具有 <block ref="661d15e88341890f914791eec787fafe" prefix=" " category="inline-code"></block> 角色，而不仅仅是在项目级别。如果在项目级别分配 <block ref="661d15e88341890f914791eec787fafe" prefix=" " category="inline-code"></block>，则在使用 <block ref="b217a89ca684f0fb2ae2f7f82fe418d7" prefix=" " category="inline-code"></block> 查询服务帐户时不会显示权限。</block>
   <block id="f174003cd34dc666bc8120b29dba1f69" category="paragraph">您可以选择在安装后配置代理服务器，但这样做需要重新启动 Console 代理。</block>
-  <block id="885de3bc2ca310ecf49094adf9282e3e" category="list-text">NetApp Console：转到 *Agents &gt; Management &gt; Deploy agent &gt; On-prem &gt; Manual install*。</block>
-  <block id="5f2d178dade1e587f0c5b302a46d5d72" category="paragraph">选择下载代理安装程序文件或复制文件的 URL。</block>
   <block id="5c19c0b3e9745eb746921a1fc863ab91" category="list-text">NetApp 支持站点（如果您还没有 Console 的访问权限，则需要该站点）<block ref="384f9db5f56c00fd1d970f44502ee5ff" category="inline-link-rx"></block>。</block>
-  <block id="b637fd6d14e4a1c48316685c43af8a64" category="admonition">如果要配置透明代理，可以在安装代理后进行此操作。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
   <block id="0a9b0507398801ef01d10f518148ac6e" category="paragraph">以下是使用 CA 签名证书配置显式代理服务器的示例：</block>
   <block id="9afc01c988c194f02dd8ec3c4164bd92" category="list-text">当您使用基于 Web 的 NetApp Console SaaS 应用程序时，它会联系多个端点以完成数据管理任务。这包括从 Console 部署 Console 代理时联系的端点。</block>
   <block id="ffc31afe0a5232a754bf2085a6d1bf12" category="inline-link-macro">查看从 NetApp Console 联系的端点列表</block>
@@ -6191,8 +6165,65 @@
   <block id="530df3726781395191a4e890157aa779" category="list-text">\https://occmclientinfragov.azurecr.us.io （如果在受限模式环境中）</block>
   <block id="a3bf5c90fa71fd1dac8e77c19a0cae5c" category="inline-link-macro">了解更多主机要求。</block>
   <block id="ed637bdd25ff9b3d6cdb12d0b3117fd4" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> <block ref="2cf3600481d00e694d39bf1acae4604c" category="inline-link-macro-rx"></block></block>
-  <block id="51bc5a08850d61e055a088db3581d040" category="paragraph">\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io</block>
   <block id="db454f9269515bb4dec7a10f7a86bc01" category="list-text">Podman（用于 Red Hat Enterprise Linux 部署）</block>
   <block id="d92105d2e9772b92b6c636fbe0cfdf2c" category="inline-link-macro">详细了解受限模式所需的网络接入点。</block>
   <block id="befec105cd1e8a7f9d2e63f216085cb8" category="admonition">对于政府云客户（受限模式），NetApp Console 不验证受限模式升级端点。您必须手动确认防火墙规则是否允许访问此端点。<block ref="df5e5876be260d9f3642c620299197c9" category="inline-link-macro-rx"></block></block>
+  <block id="99ca42bfc6bfad2df77c5ab4bf57cb70" category="paragraph">a| https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （限制模式部署所需） a| 获取 Console 代理升级所需的映像。</block>
+  <block id="f16ca1b460c0ee9da8dd26e4cae6606e" category="paragraph">a| https://occmclientinfragov.azurecr.us a| 获取用于 Console 代理升级的映像。</block>
+  <block id="870fc4eea7b10cb55e0e6bea798136a1" category="cell">用于授权和联系 NetApp 支持。（此端点是 https://mysupport.netapp.com 的 CNAME URL）</block>
+  <block id="a2673a90bf397cfa57dd425d35f5c038" category="cell">*商业或主权区域* 如果您在商业区域或主权区域安装 Console 代理，安装程序需要访问以下端点：</block>
+  <block id="38925d58699eec7d5d74bfebcba5d84f" category="list-text">NetApp Console：转到 *Agents &gt; Management &gt; Deploy agent &gt; On-prem &gt; Manual install*。</block>
+  <block id="06f42bb69fed27c52f7bae78f3878026" category="paragraph">选择下载代理安装程序文件或文件的 URL。</block>
+  <block id="60e7ba99c48e4a33bc9667d29215abf4" category="list-text"><block ref="cc1982049b8c474853940566dc79ded1" category="inline-link-rx"></block> （如果您还没有 Console 的访问权限，则需要此选项）。</block>
+  <block id="ba56355010a4d2b7a9f84d9cd9154231" category="admonition">如果要配置透明代理，可以在安装后进行此操作。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>.</block>
+  <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block> 使用以下格式之一将 Console 代理配置为使用 HTTP 或 HTTPS 代理服务器：</block>
+  <block id="63e61b342d17ed1b9128b82afdcaa55e" category="list-text">Console 代理不支持包含 @ 字符的用户名或密码。</block>
+  <block id="c67fc0b337f1a4a940497d14b954a64b" category="inline-link-macro">了解 NetApp Console 中已验证的组织</block>
+  <block id="418740347c100d5f65ec6fdae40039ab" category="paragraph">您还可以验证您的组织，将其与您的 NetApp 企业账号身份关联，以实现跨 NetApp 系统的一致治理。<block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block>。</block>
+  <block id="a0868ee8ba25b4a31561be0443ebf933" category="summary">经过验证的组织会将您的 NetApp Console 组织链接到您的 NetApp 企业账号，以便跨系统的身份和治理保持一致。</block>
+  <block id="48cf25e26ffebb2bb495d369d230e558" category="paragraph">经过验证的组织将您在 NetApp Console 中的组织链接到您的 NetApp 业务账户身份（例如，CMAT ID）。这有助于 Console 在 NetApp 系统中应用一致的组织身份和治理模型。</block>
+  <block id="30a203cb96c50fefbc17611dc5c228ac" category="section-title">为什么要验证您的组织</block>
+  <block id="5895e55252be33d4a8c0a3f2fed70ae9" category="paragraph">验证您的组织可以帮助您：</block>
+  <block id="619827fbf7b134d07776d964ca418ef2" category="list-text">使您的 Console 组织与您的 NetApp 业务账户身份保持一致。</block>
+  <block id="ea4a402c177478c80f1fd6987232b900" category="list-text">提高管理、报告和支持工作流程的一致性。</block>
+  <block id="bbe78e0920e9bb47f8f85fdccf397e62" category="list-text">减少团队跨多个 NetApp 服务工作时的歧义。</block>
+  <block id="f1883c3d9fd07e5c6274f9c0f795b6c5" category="list-text">支持依赖于受信任组织身份的治理控制。</block>
+  <block id="62a9515152e6d7ec6e3c394287acb594" category="section-title">验证后发生了什么变化</block>
+  <block id="7c11a53e44d8f76aeb151f87a95cd80b" category="paragraph">您的组织通过验证后：</block>
+  <block id="cb56792a5e15f62a1f62723585cad786" category="list-text">组织与 NetApp 公司账号标识关联。</block>
+  <block id="cab3888d6123cd3a318da7afcbce12bd" category="list-text">Console 可以将该组织标识视为业务级映射的权威。</block>
+  <block id="bdde811059b4457d759f661bfe34084d" category="list-text">如果某些组织配置文件更改由源系统管理，则可能会在 Console 中受到限制。</block>
+  <block id="192e00466c0b488c77c731b828ab5e1e" category="section-title">在验证之前</block>
+  <block id="31862d7570d9062614fe4d5b544b3059" category="paragraph">在验证您的组织之前，请确认以下内容：</block>
+  <block id="4eee70687da5ea2684317c0660041669" category="list-text">您具有组织所需的管理角色。</block>
+  <block id="4a1b2fdd5fd46224c3cab8b448abdaf7" category="list-text">您有验证所需的组织详细信息。</block>
+  <block id="073b3141ff007e2e7c9e7770dbb5c013" category="list-text">如果企业账户映射需要验证，您已与您的 NetApp 客户团队进行了协调。</block>
+  <block id="ff79cbea9f2efa42d53fff27506cf26d" category="inline-link-macro">验证您的组织</block>
+  <block id="cd61b05fa0ea90bca24f6c4068c70af2" category="list-text"><block ref="cd61b05fa0ea90bca24f6c4068c70af2" category="inline-link-macro-rx"></block></block>
+  <block id="a813b69ac531b0701ca879b788271f1d" category="list-text"><block ref="a813b69ac531b0701ca879b788271f1d" category="inline-link-macro-rx"></block></block>
+  <block id="0ad3148d437ad1c27c46470f823dd1b5" category="paragraph">\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （部署受限模式时需要）</block>
+  <block id="10c97f048a09dcded54f8b476a81ea96" category="inline-link-macro">了解如何验证您的组织</block>
+  <block id="f56da6e3ae650bf113d86ed1707a0cd5" category="paragraph">此域验证工作流程不同于组织验证。<block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
+  <block id="35ea601a80ea7b092eea5094e5acf0bf" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 验证您的组织（可选）</block>
+  <block id="1c5b44eb32f9d12f80011dc0daf0c723" category="paragraph">如果您的团队使用组织验证，请将 Console 组织与 NetApp 业务账户身份关联。</block>
+  <block id="f628652f1454cbcdff49a07bde8f26d6" category="paragraph"><block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
+  <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
+  <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">您的 NetApp Console 组织有名称和 ID。您可以为您的组织选择一个名称来帮助识别它。您可能还需要知道用于 API 调用的组织 ID。</block>
+  <block id="155e00b589db80072de70532ce7a50ce" category="doc">验证您的 NetApp Console 组织</block>
+  <block id="70f8e756c039de370c35c76171faf5fa" category="paragraph">如果您使用的是 Digital Advisor，则如果您的公司拥有多个 NetApp 业务帐户，则需要验证您的 Console 组织。Digital Advisor 可能会显示多个与您的 Console 组织无关的 NetApp 帐户。要确保仅看到与 Console 组织关联的资源，可以验证要与 Console 组织关联的业务 ID。</block>
+  <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">了解如何关联您的 NSS 账号</block>
+  <block id="c86741a1bc67570a8cd0cbb1e0a4b533" category="paragraph">您必须拥有组织管理员角色才能验证您的组织，并且您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>.</block>
+  <block id="8035b26370273d0ee0090f65ae1d3a71" category="admonition">如果您的公司只有一个公司账号，并且您的用户与 NetApp 支持站点账号相关联，系统会自动验证您的组织。</block>
+  <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">如果用户可以访问多个组织，请从 Organization 下拉菜单中选择要验证的组织。</block>
+  <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">在 *Administration &gt; Identity and access* 中。</block>
+  <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">验证您的组织，以便将您的 NetApp Console 组织与您的 NetApp 业务账户身份关联。</block>
+  <block id="80333c8b0e0d35357d14ab44c8c5f4f9" category="doc">在 NetApp Console 中验证您的组织</block>
+  <block id="43c3b1d18eaf47add23da2905752381b" category="paragraph">验证您的组织将 Console 组织与您的 NetApp 业务账户身份关联。这使您可以使用 Digital Advisor 和 AIQ 建议等功能。</block>
+  <block id="0a2f38a239e81a08f5b837f81513a9bc" category="paragraph">组织管理员或超级管理员。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
+  <block id="45c6d1bd46ddc19876bfc91687471ea2" category="paragraph">如果您的公司拥有多个 NetApp 业务账户，则必须验证您的组织，并将其与正确的业务账户关联。如果您的公司只有一个 NetApp 业务账户，系统会自动验证您的组织，并将其关联到该业务账户。</block>
+  <block id="c6a431b7786ec48067cfa83374b99c0a" category="paragraph">当您的 Console 组织与您的企业帐户相关联时，Digital Advisor 仅向您显示与该帐户相关联的资源。如果您有多个企业帐户，则需要选择一个帐户来与您的 Console 组织关联。如果您需要更改关联，可以重新验证您的组织并选择其他企业帐户。</block>
+  <block id="8d6d948cdc13e069b613284450d2961f" category="list-text">在 *Organization* 页面上，选择页面标题旁边的 *Verify*。</block>
+  <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">显示页面标题旁边的"验证"按钮的"组织"页面的屏幕截图。</block>
+  <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="812c2b994db82152161eb7a216b75550" category="list-text">在*关联公司账号*对话框中，选择要关联到贵组织的公司账号。</block>
 </blocks>

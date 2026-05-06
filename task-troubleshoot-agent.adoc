@@ -128,15 +128,10 @@ Console 代理需要访问某些网络端点，需要打开多个端口，并且
 
 link:reference-networking-saas-console.html["了解有关所需网络接入点的更多信息。"] link:task-install-agent-on-prem.html#os-req-agent["了解更多主机要求。"]
 
-在安装过程中，NetApp 检查代理主机是否具有至少 80% 的总可用磁盘空间，其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（总共 80 GB）。安装后，它需要至少 20% 的总磁盘保持可用，其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（总共 20 GB）。
-
 您还可以使用代理维护控制台运行验证检查。link:reference-agent-maint-console-config-checker.html["了解更多关于使用 config-checker validate 命令的信息。"]
 
 
 IMPORTANT: 对于政府云客户（受限模式），NetApp Console 不验证受限模式升级端点。您必须手动确认防火墙规则是否允许访问此端点。link:task-prepare-restricted-mode.html["详细了解受限模式所需的网络接入点。"]
-
-
-NOTE: 您只能验证状态为“已连接”的代理。
 
 .控制台操作步骤
 . 选择“*管理 > 代理*”。

@@ -16,6 +16,8 @@ summary: 如果要使用与电子邮件域不同的域进行联盟，则必须�
 [role="lead"]
 如果要使用与电子邮件域不同的域进行联盟，则必须首先验证您是否拥有该域。您只能将已验证的域用于联盟。
 
+此域验证工作流程不同于组织验证。link:task-verify-organization.html["了解如何验证您的组织"]。
+
 .必需角色
 创建和管理联合身份验证需要 Federation 管理员角色。Federation 查看器可以查看 Federation 页面。link:reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 

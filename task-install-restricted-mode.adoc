@@ -247,15 +247,13 @@ unset https_proxy
 +
 ** NetApp Console：转到 *Agents > Management > Deploy agent > On-prem > Manual install*。
 +
-选择下载代理安装程序文件或复制文件的 URL。
+选择下载代理安装程序文件或文件的 URL。
 
-
-
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] （如果您还没有 Console 的访问权限，则需要此选项）。
 +
 
 NOTE: 下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。
 
-+
 ** NetApp 支持站点（如果您还没有 Console 的访问权限，则需要该站点） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^]。
 
 
@@ -278,33 +276,46 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 如果您的网络需要代理才能访问互联网，则需要添加代理信息。您可以在安装过程中添加显式代理。 `--proxy` 和  `--cacert` 参数是可选的，系统不会提示您添加它们。如果您有显式代理服务器，则需要输入如图所示的参数。
 
-
-
-
-NOTE: 如果要配置透明代理，可以在安装代理后进行此操作。link:reference-agent-maint-console-proxy.html["了解代理维护控制台"]。
-
 +
 
+NOTE: 如果要配置透明代理，可以在安装后进行此操作。link:reference-agent-maint-console-proxy.html["了解代理维护控制台"].
+
++
 以下是使用 CA 签名证书配置显式代理服务器的示例：
 
 +
-
 [source, cli]
 ----
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` 使用以下格式之一将 Console 代理配置为使用 HTTP 或 HTTPS 代理服务器：
 
-+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
++
+** \http://地址:端口
+** \http://用户名:密码@地址:端口
+** \http://域名%92用户名:密码@地址:端口
+** \https://地址:端口
+** \https://用户名:密码@地址:端口
+** \https://域名%92用户名:密码@地址:端口
++
+请注意以下事项：
 
-+ 注意以下事项：
++
+*** 用户可以是本地用户或域用户。
+*** 对于域用户，您必须使用 \ 的 ASCII 代码，如上所示。
+*** Console 代理不支持包含 @ 字符的用户名或密码。
+*** 如果密码包含以下任何特殊字符，则必须在该特殊字符前面加上反斜杠来转义该特殊字符：& 或 !
++
+例如：
 
-+ ** 用户可以是本地用户或域用户。** 对于域用户，您必须使用 \ 的 ASCII 码，如上所示。** Console 代理不支持包含 @ 字符的用户名或密码。** 如果密码包含以下任何特殊字符，则必须使用反斜杠前缀来转义该特殊字符：& 或 !
++
+\http://bxpproxyuser:netapp1\!@地址:3128
 
-+ 例如：
 
-+ \http://bxpproxyuser:netapp1\!@address:3128
+
+
 
 . 如果您使用 Podman，则需要调整 aardvark-dns 端口。
 +

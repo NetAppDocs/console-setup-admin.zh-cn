@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-organization-verify.html 
+keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
+summary: 将NetApp支持站点帐户与您的NetApp Console组织关联，以启用Cloud Volumes ONTAP 的关键工作流程。这些 NSS 凭证与整个组织相关。 
+---
+= 验证您的 NetApp Console 组织
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您使用的是 Digital Advisor，则如果您的公司拥有多个 NetApp 业务帐户，则需要验证您的 Console 组织。Digital Advisor 可能会显示多个与您的 Console 组织无关的 NetApp 帐户。要确保仅看到与 Console 组织关联的资源，可以验证要与 Console 组织关联的业务 ID。
+
+控制台还支持每个用户帐户关联一个 NSS 帐户。link:task-manage-user-credentials.html["了解如何管理用户级凭证"] 。
+
+
+
+== 开始之前
+
+您必须拥有组织管理员角色才能验证您的组织，并且您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。link:task-adding-nss-accounts["了解如何关联您的 NSS 账号"].
+
+
+NOTE: 如果您的公司只有一个公司账号，并且您的用户与 NetApp 支持站点账号相关联，系统会自动验证您的组织。
+
+
+
+== 验证您的组织
+
+.步骤
+. 如果用户可以访问多个组织，请从 Organization 下拉菜单中选择要验证的组织。
+. 在 *Administration > Identity and access* 中。
+. 选择*组织*。
+
