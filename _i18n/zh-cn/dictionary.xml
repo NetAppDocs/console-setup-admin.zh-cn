@@ -5578,7 +5578,6 @@
   <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">4.5.0 版本同时支持标准模式和受限模式。</block>
   <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">此版本的 Console 代理包括安全性改进和错误修复以及以下新功能。</block>
   <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">详细了解如何在 Console 代理上运行配置检查。</block>
-  <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">Console 管理</block>
   <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">详细了解如何将 Keystone 角色分配给合作伙伴用户。</block>
   <block id="01440d4fde4475cae0005dbb66b8f907" category="list-text"><block ref="01440d4fde4475cae0005dbb66b8f907" category="inline-link-macro-rx"></block></block>
   <block id="83c2b9a6cf87b54eb30380def11da84d" category="list-text"><block ref="83c2b9a6cf87b54eb30380def11da84d" category="inline-link-macro-rx"></block></block>
@@ -6210,10 +6209,7 @@
   <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
   <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">您的 NetApp Console 组织有名称和 ID。您可以为您的组织选择一个名称来帮助识别它。您可能还需要知道用于 API 调用的组织 ID。</block>
   <block id="155e00b589db80072de70532ce7a50ce" category="doc">验证您的 NetApp Console 组织</block>
-  <block id="70f8e756c039de370c35c76171faf5fa" category="paragraph">如果您使用的是 Digital Advisor，则如果您的公司拥有多个 NetApp 业务帐户，则需要验证您的 Console 组织。Digital Advisor 可能会显示多个与您的 Console 组织无关的 NetApp 帐户。要确保仅看到与 Console 组织关联的资源，可以验证要与 Console 组织关联的业务 ID。</block>
   <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">了解如何关联您的 NSS 账号</block>
-  <block id="c86741a1bc67570a8cd0cbb1e0a4b533" category="paragraph">您必须拥有组织管理员角色才能验证您的组织，并且您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>.</block>
-  <block id="8035b26370273d0ee0090f65ae1d3a71" category="admonition">如果您的公司只有一个公司账号，并且您的用户与 NetApp 支持站点账号相关联，系统会自动验证您的组织。</block>
   <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">如果用户可以访问多个组织，请从 Organization 下拉菜单中选择要验证的组织。</block>
   <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">在 *Administration &gt; Identity and access* 中。</block>
   <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">验证您的组织，以便将您的 NetApp Console 组织与您的 NetApp 业务账户身份关联。</block>
@@ -6226,4 +6222,19 @@
   <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">显示页面标题旁边的"验证"按钮的"组织"页面的屏幕截图。</block>
   <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="812c2b994db82152161eb7a216b75550" category="list-text">在*关联公司账号*对话框中，选择要关联到贵组织的公司账号。</block>
+  <block id="e337542e72a609caf56b5e5fdf59c9ff" category="doc">Console 代理 4.7.0</block>
+  <block id="99c4637fed7022fa029be07f2fddc9af" category="paragraph">4.7.0 版本同时支持标准模式和受限模式。</block>
+  <block id="c36716f3e716cc1af0c491f3d55d650b" category="paragraph">此版本包含以下新功能。</block>
+  <block id="2359613eeef582462b02e31edd2c83e1" category="paragraph-title">验证您的 Console 组织</block>
+  <block id="43dc49af1a8157f71040baeb30324e66" category="inline-link-macro">了解如何验证您的 Console 组织</block>
+  <block id="d1bdb7b91f1071f7a7fbbe9cc229a6cd" category="paragraph">默认情况下，Digital Advisor 显示与贵公司关联的所有 NetApp 帐户，而不仅仅是您的 Console 组织。要将 Digital Advisor 中显示的内容限制为特定帐户，请验证要用于 Console 组织的业务帐户。<block ref="804fccc7ef3790a6c6eaa859500c3cdb" category="inline-link-macro-rx"></block></block>
+  <block id="397ee69a18e46b4765d0f43baecebbd0" category="summary">默认情况下，Digital Advisor 显示与贵公司关联的所有 NetApp 帐户，而不仅仅是您的 Console 组织。要将 Digital Advisor 中显示的内容限制为特定帐户，请验证要用于 Console 组织的业务帐户。</block>
+  <block id="f64284915c2f23896843250a06524f58" category="paragraph">您必须拥有 Organization admin 角色才能验证您的组织。您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>.</block>
+  <block id="c8979336fc54afd4915c72626c1abdc0" category="admonition">如果您的公司只有一个企业帐户，并且您的用户与 NetApp 支持站点帐户相关联，则控制台会自动验证您的组织。</block>
+  <block id="6a22a47669484a4fac663dfd1d8c5cc1" category="list-text">在页面标题旁边，选择 *Verify*。</block>
+  <block id="71e0d11af7cdf3d188d279b78ad7e4e4" category="inline-image-macro">突出显示"验证"按钮的组织页面的屏幕截图。</block>
+  <block id="509fdee4d6d23c1e25c2b167682c87df" category="paragraph"><block ref="509fdee4d6d23c1e25c2b167682c87df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4b07d8c632f7928fdf0e60a617989db7" category="admonition">如果您的公司只有一个业务账户，页面标题旁边的标签将显示 *Verified*，您无需采取任何行动。</block>
+  <block id="3d07160a1a5d13a62207154073e62d4b" category="list-text">在 *Associate business account* 对话框中，从下拉菜单中选择要与 Console 组织关联的业务账户。然后选择 *Associate*。</block>
+  <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
 </blocks>

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task-iam-organization-verify.html 
+keywords: verify Console organization, associate business account, CMAT account, digital advisor, filtering, organization verification,, business account management, multi-account NetApp customers, organization governance, account ownership verification, resource visibility control 
+summary: 默认情况下，Digital Advisor 显示与贵公司关联的所有 NetApp 帐户，而不仅仅是您的 Console 组织。要将 Digital Advisor 中显示的内容限制为特定帐户，请验证要用于 Console 组织的业务帐户。 
+---
+= 验证您的 NetApp Console 组织
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+默认情况下，Digital Advisor 显示与贵公司关联的所有 NetApp 帐户，而不仅仅是您的 Console 组织。要将 Digital Advisor 中显示的内容限制为特定帐户，请验证要用于 Console 组织的业务帐户。
+
+
+
+== 开始之前
+
+您必须拥有 Organization admin 角色才能验证您的组织。您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。link:task-adding-nss-accounts["了解如何关联您的 NSS 账号"].
+
+
+NOTE: 如果您的公司只有一个企业帐户，并且您的用户与 NetApp 支持站点帐户相关联，则控制台会自动验证您的组织。
+
+
+
+== 验证您的组织
+
+.步骤
+. 如果用户可以访问多个组织，请从 Organization 下拉菜单中选择要验证的组织。
+. 在 *Administration > Identity and access* 中。
+. 选择*组织*。
+. 在页面标题旁边，选择 *Verify*。
++
+image:screenshot-iam-verify-org.png["突出显示\"验证\"按钮的组织页面的屏幕截图。"]
+
++
+
+NOTE: 如果您的公司只有一个业务账户，页面标题旁边的标签将显示 *Verified*，您无需采取任何行动。
+
+. 在 *Associate business account* 对话框中，从下拉菜单中选择要与 Console 组织关联的业务账户。然后选择 *Associate*。
+

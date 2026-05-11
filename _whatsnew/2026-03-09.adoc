@@ -15,6 +15,6 @@
 
 
 
-=== Console 管理
+=== NetApp Console管理
 
 您可以将 Keystone 角色分配给合作伙伴用户，以允许这些用户管理合作伙伴组织中的 Keystone 资源。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["详细了解如何将 Keystone 角色分配给合作伙伴用户。"]
