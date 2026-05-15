@@ -125,7 +125,10 @@ NetApp Console中的身份和访问管理 (IAM) 提供了预定义的角色，�
 | link:reference-iam-disaster-rec-roles.html["灾难恢复查看器"] | 仅查看信息。 
 
 
-| 分类查看器 | 允许用户查看 NetApp Data Classification 扫描结果。具有此角色的用户可以查看合规性信息并为其有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。Data Classification 没有管理员角色。 
+| link:reference-iam-data-classification.html["合规管理员"] | 安装 Data Classification 和在 Data Classification 中关联组织级权限所需。 
+
+
+| link:reference-iam-data-classification.html["分类查看器"] | 允许用户查看 NetApp Data Classification 扫描结果。具有此角色的用户可以查看合规性信息并为其有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。 
 
 
 | link:reference-iam-ransomware-roles.html["勒索软件抵御能力管理员"] | 管理NetApp Ransomware Resilience的“保护”、“警报”、“恢复”、“设置”和“报告”选项卡上的操作。 

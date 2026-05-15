@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-data-classification.html 
+keywords: role-based access control, IAM roles, access delegation, data classification, cloud data sense, compliance admin, classification viewer 
+summary: NetApp Data Classification 支持两个角色来管理对资产的读取和写入访问权限。 
+---
+= NetApp Data Classification 角色在 NetApp Console 中
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification 支持身份和访问管理角色，让您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。
+
+Data Classification 支持两个角色：
+
+* 合规管理员
+* 分类查看器
+
+
+
+
+== 合规管理员
+
+Compliance admin 角色仅在组织级别工作，以管理对 Data Classification 资源的访问。如果用户的职责小于 Organization admin，则他们必须具有 Compliance admin 角色才能安装 Data Classification。
+
+
+IMPORTANT: 合规管理员角色不是独立角色。具有合规管理员角色的用户还必须与至少一个 link:reference-iam-platform-roles.html["平台角色"] 相关联。
+
+
+NOTE: Compliance 管理员已添加到版本 1.54 的 Data Classification 中。如果您在此版本之前部署了 Data Classification，并且平台角色的访问权限少于组织管理员，则 Compliance 管理员角色将自动与此用户帐户关联。
+
+
+
+== 分类查看器
+
+Classification 查看器专为需要访问 Data Classification 中扫描结果但不需要访问配置资源的用户而设计。具有 Classification 查看器角色的用户可以查看映射和完整扫描的结果，以评估存储节省或潜在数据风险的区域。具有 Classification 查看器角色的用户还可以为他们有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。
+
+
+
+== 更多信息
+
+* link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["了解 NetApp Data Classification"^]
+

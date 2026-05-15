@@ -214,6 +214,8 @@ sidebar:
           entries:
           - title: 备份和恢复角色
             url: "/reference-iam-backup-rec-roles.html"
+          - title: Data Classification 角色
+            url: "/reference-iam-data-classification.html"
           - title: 灾难恢复角色
             url: "/reference-iam-disaster-rec-roles.html"
           - title: 勒索软件抵御能力角色
