@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-licenses-subscriptions.html 
+keywords: licenses, subscriptions, digital wallet, operational governance, access delegation, rbac, IAM roles 
+summary: NetApp Licenses and Subscriptions 角色允许您在 NetApp Console 中为用户分配不同的角色，以完成许可证和订阅管理的必要任务。 
+---
+= NetApp Console 中的 Licenses and subscriptions 角色
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+要在 NetApp Console 中管理 Licenses and subscriptions，您需要确保用户具有适当的权限。管理 Licenses and subscriptions 对于确保 Console 中服务的有效部署和连续性至关重要。如何分配角色取决于您自己的业务和存储管理实践。
+
+Licenses and subscriptions 使用以下角色：
+
+* *Licenses and subscriptions 管理员*
+* *Licenses and subscriptions 查看器*
+
+
+[cols="40,30,30"]
+|===
+| 功能 | Licenses and subscriptions 管理员 | Licenses and subscriptions 查看器 
+
+
+| 添加许可证 | 是 | 否 
+
+
+| 查看许可证 | 是 | 是 
+
+
+| 更新许可证 | 是 | 否 
+
+
+| 添加订阅 | 是 | 否 
+
+
+| 修改订阅 | 是 | 否 
+
+
+| 查看订阅 | 是 | 是 
+
+
+| 删除订阅 | 是 | 否 
+
+
+| 删除许可证 | 是 | 否 
+|===

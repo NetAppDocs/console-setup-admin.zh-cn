@@ -73,6 +73,12 @@ NetApp Console中的身份和访问管理 (IAM) 提供了预定义的角色，�
 | link:reference-iam-keystone-roles.html["Keystone查看器"] | 具有Keystone查看者角色的用户不能创建服务请求。允许用户监控和查看他们正在访问的Keystone租户内的消费、资产和管理信息。 
 
 
+| link:reference-iam-licenses-subscriptions.html["License 和 subscription 管理员"] | 具有 License and subscription 管理员角色的用户可以为 NetApp Console 和附属数据服务创建、更新和删除直接 licenses 和 marketplace subscriptions。 
+
+
+| link:reference-iam-licenses-subscriptions.html["License 和 subscription 查看器"] | 具有 License 和 subscription 查看器角色的用户可以查看 NetApp Console 和附属数据服务的直接 licenses 和市场 subscriptions。 
+
+
 | ONTAP调解器设置角色 | 具有ONTAP调解器设置角色的服务帐户可以创建服务请求。服务帐户中需要此角色来配置link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAP云调解器"^]。 
 
 
