@@ -243,7 +243,7 @@ API 端点:: API 调用针对以下端点：\ https://api.bluexp.netapp.com
 
 前往 https://console.netapp.com["NetApp Console"^]并注册。
 
-+ link:task-quick-start-standard-mode.html["了解如何开始使用标准模式"].
+link:task-quick-start-standard-mode.html["了解如何开始使用标准模式"]。
 
 
 
@@ -255,7 +255,7 @@ API 端点:: API 调用针对以下端点：\ https://api.bluexp.netapp.com
 
 根据您计划使用的数据服务和功能，Console 组织管理员会创建额外的 Console 代理来管理混合云环境中的数据。
 
-<<限制模式,详细了解到 NetApp Console API 的出站连接>>。
+link:task-install-restricted-mode.html["详细了解到 NetApp Console API 的出站连接"]。
 
 下图是限制模式部署的示例。
 
