@@ -125,16 +125,19 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | Google Cloud Storage | 是 
 
 
+| Keystone 订阅访问 | 是 
+
+
 | 本地ONTAP集群 | 发现和管理所必需的。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
 
 
 | StorageGRID | 是 
 
 
-| 工作负载 | 否 
+| 工作负载 | 否 .8+| *数据服务* 
 
 
-.8+| *数据服务* | NetApp Backup and Recovery | 是 
+| NetApp Backup and Recovery | 是 
 
 
 | NetApp 分类 | 是 
@@ -155,10 +158,10 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | NetApp Cloud Tiering | 是 
 
 
-| NetApp Volume Caching | 是 
+| NetApp Volume Caching | 是 .5+| *NetApp 支持合同功能* 
 
 
-.5+| *NetApp 支持合同功能* | 数字顾问 | 是 
+| 数字顾问 | 是 
 
 
 | 经济效益 | 是 
@@ -170,10 +173,10 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | 软件更新 | 否 
 
 
-| 可持续性 | 是 
+| 可持续性 | 是 .12+| *管理功能* 
 
 
-.12+| *管理功能* | 审核 | 否 
+| 审核 | 否 
 
 
 | 自动化中心 | 否 
