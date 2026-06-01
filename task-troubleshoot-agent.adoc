@@ -170,9 +170,12 @@ image:screenshot-agent-validate.png["屏幕截图显示了代理“操作”菜�
 
 === 禁用手动安装的配置检查
 
+
+
+=== 禁用手动安装的配置检查
+
 有时您可能需要禁用在安装期间验证出站连接的配置检查。例如，在政府云环境中手动安装代理时，需要禁用配置检查，否则安装将失败。
 
-.步骤
 您可以通过在 _com/opt/application/netapp/service-manager-2/config.json_ 文件中设置 _skipConfigCheck_ 标志来禁用配置检查。默认情况下，此标志设置为 false，并且配置检查会验证代理的出站访问。将此标志设置为 true 以禁用检查。在完成此步骤之前，请先熟悉 JSON 语法。
 
 要重新启用配置检查，请使用以下步骤并将_skipConfigCheck_标志设置为false。
@@ -181,8 +184,7 @@ image:screenshot-agent-validate.png["屏幕截图显示了代理“操作”菜�
 . 以 root 身份或使用 sudo 权限访问控制台代理主机。
 . 创建 _/opt/application/netapp/service-manager-2/config.json_ 文件的备份副本，以确保您可以恢复更改。
 . 通过运行以下命令停止服务管理器 2 服务：
-
-
++
 [source, cli]
 ----
 systemctl stop netapp-service-manager.service
