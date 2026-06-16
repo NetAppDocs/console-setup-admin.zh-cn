@@ -28,8 +28,8 @@ NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内
 | 控制台代理 | 4.4.0 | 转到  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["NetApp Console 页面中的新增功能"^] 并参见版本 4.4.0 包含的更改。 
 
 
-| 备份和恢复 | 5.0.3 (2026 年 3 月 2 日) | 转到  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 页面中的新增功能"^]。 
+| NetApp Backup and Recovery | 5.0.3 (2026 年 3 月 2 日) | 转到  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 页面中的新增功能"^]。 
 
 
-| 分类 | 1.5.1 (2026 年 2 月 9 日) | 转到  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 页面中的新增功能"^]。 
+| NetApp Data Classification | 1.5.1 (2026 年 2 月 9 日) | 转到  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 页面中的新增功能"^]。 
 |===
