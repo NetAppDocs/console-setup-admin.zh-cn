@@ -4,5 +4,5 @@
 
 .开始之前
 * 需要具有管理权限的 IdP 帐户。与您的 IdP 管理员协调以完成这些步骤。
-* 标识要用于联合的域。您可以使用电子邮件域名或您拥有的其他域名。如果要使用电子邮件域名以外的域名，必须首先在 Console 中验证该域名。有关说明，请参阅 link:task-federation-verify-domain.html["在NetApp Console中验证您的域"]。
+* 标识要用于联合的域。您可以使用电子邮件域名或您拥有的其他域名。如果要使用电子邮件域名以外的域名，必须首先在 Console 中验证该域名。有关说明，请参阅 link:./task-federation-verify-domain.html["在NetApp Console中验证您的域"]。
 

@@ -334,7 +334,6 @@
   <block id="6b3c54310d91533691ce16baaa9837f0" category="list-text">从与代理虚拟机有连接的主机打开 Web 浏览器并输入以下 URL：</block>
   <block id="3293e21593be380370a4f8e9a0276cf0" category="list-text">登录后，设置代理：</block>
   <block id="d3ba93ec4220d1e4a340375deaf3e56f" category="list-text">指定与代理关联的控制台组织。</block>
-  <block id="a9dfefd15be7ad32808b46019adfc86c" category="paragraph">您应该保持限制模式处于禁用状态，因为这些步骤描述了如何在标准模式下使用控制台。仅当您拥有安全的环境并希望断开此帐户与控制台后端服务的连接时，才应启用受限模式。如果真是这样的话，<block ref="8e08e3d2c03bbf8727fd164a23b99107" category="inline-link-macro-rx"></block> 。</block>
   <block id="9cf68904e16d6d689d242f4868ec6c3f" category="list-text">专用主机</block>
   <block id="a041f8c4c0a670570730d7d087d863ba" category="list-text">与其他应用程序共享的主机不支持该代理。该主机必须是专用主机。</block>
   <block id="acb3a31b8e79039416f86dfe140a002a" category="list-text">VPC 和子网</block>
@@ -6160,7 +6159,6 @@
   <block id="43dc49af1a8157f71040baeb30324e66" category="inline-link-macro">了解如何验证您的 Console 组织</block>
   <block id="d1bdb7b91f1071f7a7fbbe9cc229a6cd" category="paragraph">默认情况下，Digital Advisor 显示与贵公司关联的所有 NetApp 帐户，而不仅仅是您的 Console 组织。要将 Digital Advisor 中显示的内容限制为特定帐户，请验证要用于 Console 组织的业务帐户。<block ref="804fccc7ef3790a6c6eaa859500c3cdb" category="inline-link-macro-rx"></block></block>
   <block id="397ee69a18e46b4765d0f43baecebbd0" category="summary">默认情况下，Digital Advisor 显示与贵公司关联的所有 NetApp 帐户，而不仅仅是您的 Console 组织。要将 Digital Advisor 中显示的内容限制为特定帐户，请验证要用于 Console 组织的业务帐户。</block>
-  <block id="f64284915c2f23896843250a06524f58" category="paragraph">您必须拥有 Organization admin 角色才能验证您的组织。您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>.</block>
   <block id="c8979336fc54afd4915c72626c1abdc0" category="admonition">如果您的公司只有一个企业帐户，并且您的用户与 NetApp 支持站点帐户相关联，则控制台会自动验证您的组织。</block>
   <block id="6a22a47669484a4fac663dfd1d8c5cc1" category="list-text">在页面标题旁边，选择 *Verify*。</block>
   <block id="71e0d11af7cdf3d188d279b78ad7e4e4" category="inline-image-macro">突出显示"验证"按钮的组织页面的屏幕截图。</block>
@@ -6266,4 +6264,7 @@
   <block id="81ba052a80f6ca03940e96b958459737" category="paragraph">我们更新了 Connector 的 AWS 和 Azure 策略，以删除不再需要的权限。这些权限与 Azure 和 AWS 中的 BlueXP 边缘缓存以及 Kubernetes 集群的发现和管理相关。</block>
   <block id="8b8a789c0e7d6b190da84177b5130948" category="paragraph">这些权限是 Cloud Volumes ONTAP 支持虚拟机规模集所必需的。如果已有 Connector，并且要使用此新功能，则需要将这些权限添加到与 Azure 凭据关联的自定义策略中。</block>
   <block id="e68cc6c646a8fcaf6b506961e2280d76" category="paragraph">如果您现有的代理在RHEL 7或CentOS 7上运行，则NetApp不支持将操作系统升级或转换为RHEL 8或9。您需要在受支持的操作系统上创建新的代理。请按照以下高级步骤进行切换：</block>
+  <block id="8463984f3743dad5519ea83a4212420e" category="list-text">标识要用于联合的域。您可以使用电子邮件域名或您拥有的其他域名。如果要使用电子邮件域名以外的域名，必须首先在 Console 中验证该域名。有关说明，请参阅 <block ref="f906f28217a34b35861fd69657ab52aa" category="inline-link-macro-rx"></block>。</block>
+  <block id="0d87cc65e1228aa5387b06020c227945" category="paragraph">您应保持限制模式处于禁用状态，因为这些步骤描述了如何在标准模式下使用 Console。仅当您拥有安全环境并希望断开此帐户与 Console 后端服务的连接时，才应启用限制模式。如果是这种情况，<block ref="c0aad04133307e9daa144c5fbbd6274a" category="inline-link-macro-rx"></block>。</block>
+  <block id="783781dfce7d40d62cedb10d8445eca9" category="paragraph">您必须拥有 Organization admin 角色才能验证您的组织。您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。<block ref="e27e8a258f84be720108170f748a0bb6" category="inline-link-macro-rx"></block>.</block>
 </blocks>
