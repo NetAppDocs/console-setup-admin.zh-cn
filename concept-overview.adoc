@@ -22,6 +22,7 @@ Console 与您在环境中部署的 Console 代理一起工作，以跨本地和
 
 
 
+[[choose-how-to-access-netapp-console]]
 == 选择如何访问 NetApp Console
 
 通过注册 SaaS 应用程序（标准模式）、将其安装在云端（受限模式）或本地（私有模式）开始使用 NetApp Console。某些功能在受限或私有模式下不可用。
@@ -30,6 +31,7 @@ link:concept-modes.html["了解有关部署模式的更多信息"] 。
 
 
 
+[[extend-console-capabilities-with-console-agents]]
 == 使用 Console 代理扩展 Console 功能
 
 控制台代理是轻量级软件组件，可连接到 NetApp Console SaaS 应用程序和基于云的 API，从而实现高级功能和数据服务。
@@ -40,6 +42,7 @@ link:concept-agents.html["了解有关控制台代理的更多信息"] 。
 
 
 
+[[manage-user-access-and-permissions-in-netapp-console]]
 == 在 NetApp Console 中管理用户访问和权限
 
 控制台提供身份和访问管理 (IAM)，以提高整个数据基础设施的安全性和控制。围绕组织角色和职责组织存储和数据服务，以降低未经授权访问的风险，同时保持运营效率：
@@ -54,6 +57,7 @@ link:concept-identity-and-access-management.html["了解有关NetApp Console中�
 
 
 
+[[security-and-compliance-in-netapp-console]]
 == NetApp Console 的安全与合规性
 
 启用单点登录 (SSO) 等安全和合规性功能，以控制对存储和数据服务的访问。具有组织管理员角色的用户可以默认设置只读模式，要求用户请求提升权限以对存储系统进行更改并使用数据服务。您还可以使用 NetApp Console 监控存储管理和用户活动。NetApp Console 已通过 SOC 2 Type 2 认证，NetApp 向客户提供 SOC 2 报告。
@@ -62,12 +66,14 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/["查看 NetApp 的
 
 
 
+[[netapp-console-capabilities-and-supported-storage]]
 == NetApp Console 功能和支持的存储
 
 NetApp Console 支持跨本地和云环境的广泛存储类型、功能和数据服务。使用 Console 管理存储系统，监控其运行状况和性能，并启用数据服务以保护和优化数据。
 
 
 
+[[supported-cloud-and-on-premises-storage-in-netapp-console]]
 === NetApp Console 中支持的云和本地存储
 
 从控制台管理这些存储类型：
@@ -104,6 +110,7 @@ NetApp Console 支持跨本地和云环境的广泛存储类型、功能和数�
 
 
 
+[[storage-management-and-health-services-in-netapp-console]]
 === NetApp Console 中的存储管理和运行状况服务
 
 NetApp Console 通过单一界面提供 NetApp 存储基础架构的统一管理。
@@ -126,6 +133,7 @@ NetApp数字顾问 (Active IQ):: 使用预测分析和主动支持来优化您�
 
 
 
+[[data-security-and-protection-services-in-netapp-console]]
 === NetApp Console 中的数据安全和保护服务
 
 使用内置数据服务来保护关键数据并优化存储效率。
@@ -139,6 +147,7 @@ NetApp Replication:: 在存储系统之间复制数据以支持备份和灾难�
 
 
 
+[[cost-and-compliance-management-services-in-netapp-console]]
 === NetApp Console 中的成本和合规管理服务
 
 跟踪所有系统的合同状态，以改进成本管理、合规性和采购决策。
@@ -167,6 +176,7 @@ NetApp工作负载:: 使用 Amazon FSx for NetApp ONTAP 设计、设置和操作
 
 
 
+[[netapp-console-cost]]
 === NetApp Console 成本
 
 NetApp 不对 Console 收费。在云中部署 Console 代理或使用受限模式时会产生成本。一些 NetApp 数据服务也有相关成本。https://bluexp.netapp.com/pricing["了解NetApp数据服务定价"^]

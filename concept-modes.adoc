@@ -68,6 +68,7 @@ NOTE: NetApp Console 限制受限和私有模式的数据流，但您必须确�
 
 
 
+[[netapp-console-in-standard-mode-saas-application]]
 == 标准模式下的 NetApp Console（SaaS 应用程序）
 
 下图显示了标准模式部署。
@@ -76,6 +77,7 @@ image:diagram-standard-mode.png["一个概念图像，显示了公共互联网�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-standard-mode]]
 === 标准模式下 NetApp Console 支持的功能和服务
 
 下表列出了 NetApp Console SaaS 应用程序（标准模式）中提供的存储管理功能、数据服务和管理功能。
@@ -215,6 +217,7 @@ Licenses and subscriptions 管理
 |===
 
 
+[[how-netapp-console-works-in-standard-mode]]
 === NetApp Console 在标准模式下的工作原理
 
 控制台在标准模式下的工作方式如下：
@@ -242,6 +245,7 @@ API 端点:: API 调用针对以下端点：\ https://api.bluexp.netapp.com
 
 
 
+[[how-to-get-started-with-standard-mode]]
 === 如何开始使用标准模式
 
 前往 https://console.netapp.com["NetApp Console"^]并注册。
@@ -250,6 +254,7 @@ link:task-quick-start-standard-mode.html["了解如何开始使用标准模式"]
 
 
 
+[[netapp-console-in-restricted-mode-installed-in-your-own-public-cloud]]
 == NetApp Console 处于受限模式（安装在您自己的公共云中）
 
 您在云中（在政府、主权或商业区域）安装 Console 代理，它对 NetApp Console API 端点（托管在 SaaS 应用程序中）的出站连接有限。
@@ -266,6 +271,7 @@ image:diagram-restricted-mode.png["一个概念图像，显示可用 SaaS 应用
 
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 === 受限模式下 NetApp Console 支持的功能和服务
 
 下表列出了在受限模式下安装 NetApp Console 时可用的存储管理功能、数据服务和管理功能。
@@ -362,6 +368,7 @@ Licenses and subscriptions 管理
 |===
 
 
+[[how-netapp-console-works-in-restricted-mode]]
 === NetApp Console 在受限模式下的工作原理
 
 控制台在限制模式下的工作方式如下：
@@ -383,6 +390,7 @@ API 端点:: 对代理虚拟机进行 API 调用。
 
 
 
+[[how-to-get-started-with-restricted-mode]]
 === 如何开始使用受限模式
 
 创建 NetApp Console 帐户时，您需要启用受限模式。如果没有组织，则会在首次登录已安装的 Console 代理时提示您创建一个组织并启用受限模式。
@@ -391,6 +399,8 @@ API 端点:: 对代理虚拟机进行 API 调用。
 
 
 
+[[netapp-console-in-private-mode]]
+[[private-mode]]
 == 私密模式下的 NetApp Console
 
 在专用模式下，您可以在内部或云端安装 Console 代理，然后使用 NetApp Console 跨混合云管理数据。没有与 NetApp Console API 端点或 NetApp Console SaaS 应用程序的连接，因此您可以从 Console 代理提供的本地 UI 访问 Console。
@@ -405,6 +415,7 @@ image:diagram-private-mode-onprem.png["显示内部数据中心的概念图像�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 === 私有模式下 NetApp Console 支持的功能和服务
 
 下表列出了在专用模式下安装 NetApp Console 时可用的存储管理功能、数据服务和管理功能。当您将 NetApp Console 安装在云端而不是您的场所时，功能会有所不同。
@@ -549,6 +560,7 @@ Licenses and subscriptions 管理
 |===
 
 
+[[how-netapp-console-works-in-private-mode]]
 === NetApp Console 在私有模式下的工作原理
 
 NetApp Console 在私有模式下的工作方式如下：
@@ -563,6 +575,7 @@ API 端点:: 对控制台代理虚拟机进行 API 调用。
 
 
 
+[[how-to-get-started-with-private-mode]]
 === 如何开始使用私有模式
 
 从 NetApp 支持站点下载"离线"安装程序即可使用专用模式。
@@ -574,6 +587,7 @@ NOTE: 如果要在 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Clou
 
 
 
+[[netapp-console-service-and-feature-comparison]]
 == NetApp Console 服务和功能比较
 
 此表显示受限模式和私有模式支持哪些服务和功能。

@@ -29,6 +29,7 @@ summary: 您可以为用户分配以下角色，以便他们访问控制台内�
 
 
 
+[[roles-used-for-common-actions]]
 == 用于常见操作的角色
 
 下表列出了每个NetApp Backup and Recovery角色可以针对所有工作负载执行的操作。
@@ -291,12 +292,14 @@ summary: 您可以为用户分配以下角色，以便他们访问控制台内�
 |===
 
 
+[[roles-used-for-workload-specific-actions]]
 == 用于特定于工作负载的操作的角色
 
 下表列出了每个NetApp Backup and Recovery角色可以针对特定工作负载执行的操作。
 
 
 
+[[kubernetes-workloads]]
 === Kubernetes 工作负载
 
 该表显示了每个NetApp Backup and Recovery角色可以针对特定于 Kubernetes 工作负载的操作执行的操作。

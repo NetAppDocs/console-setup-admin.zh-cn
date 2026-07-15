@@ -28,6 +28,7 @@ NOTE: 在与其管理的 Cloud Volumes ONTAP 系统相同的 Azure 区域或在 
 
 
 
+[[step-1-set-up-networking]]
 == 步骤 1：设置网络
 
 确保计划安装 Console 代理的网络位置支持以下要求。这些要求使 Console 代理能够管理混合云中的资源。
@@ -145,6 +146,7 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 
 
 
+[[step-2-review-vm-requirements]]
 == 步骤 2：查看 VM 要求
 
 创建控制台代理时，请选择满足以下要求的虚拟机类型。
@@ -156,6 +158,7 @@ Azure VM 大小:: 满足 CPU 和 RAM 要求的实例类型。  NetApp推荐 Stan
 
 
 
+[[step-3-set-up-permissions]]
 == 步骤 3：设置权限
 
 您可以通过以下方式提供权限：
@@ -364,6 +367,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 ====
 
 
+[[step-4-create-the-console-agent]]
 == 步骤 4：创建控制台代理
 
 直接从 Azure 市场启动控制台代理。
@@ -448,6 +452,7 @@ https://_ipaddress_[]
 
 
 
+[[step-5-provide-permissions-to-the-console-agent]]
 == 步骤 5：向控制台代理提供权限
 
 现在您已经创建了控制台代理，您需要为其提供之前设置的权限。提供权限使控制台代理能够管理 Azure 中的数据和存储基础结构。

@@ -25,6 +25,7 @@ summary: 要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您�
 
 
 
+[[step-1-set-up-networking]]
 == 步骤 1：设置网络
 
 设置网络以使控制台代理能够管理资源并连接到目标网络和互联网。
@@ -135,6 +136,8 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == 步骤 2：设置权限以创建控制台代理
 
 为 Google Cloud 用户设置权限以从 Google Cloud 部署控制台代理虚拟机。
@@ -258,6 +261,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-set-up-permissions-for-the-console-agent-operations]]
+[[console-permissions-google]]
 == 步骤 3：设置控制台代理操作的权限
 
 需要一个 Google Cloud 服务帐号来向控制台代理提供控制台管理 Google Cloud 中的资源所需的权限。创建控制台代理时，您需要将此服务帐户与控制台代理 VM 关联。
@@ -317,6 +322,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == 步骤 4：设置共享 VPC 权限
 
 如果您使用共享 VPC 将资源部署到服务项目中，则需要准备好您的权限。
@@ -369,6 +375,7 @@ link:reference-permissions-gcp.html["代理服务帐户策略"]
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == 步骤 5：启用 Google Cloud API
 
 在部署控制台代理和Cloud Volumes ONTAP之前，启用多个 Google Cloud API。
@@ -393,6 +400,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
+[[step-6-create-the-console-agent]]
 == 步骤 6：创建控制台代理
 
 使用 Google Cloud 创建控制台代理。

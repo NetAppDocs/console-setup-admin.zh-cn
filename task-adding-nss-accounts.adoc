@@ -20,6 +20,7 @@ summary: 将NetApp支持站点帐户与您的NetApp Console组织关联，以启
 
 
 
+[[overview]]
 == 概述
 
 需要将NetApp支持站点凭据与您的特定控制台帐户序列号关联才能启用以下任务：
@@ -39,6 +40,7 @@ summary: 将NetApp支持站点帐户与您的NetApp Console组织关联，以启
 
 
 
+[[add-an-nss-account]]
 == 添加 NSS 帐户
 
 您可以从控制台中的支持信息板添加和管理用于控制台的NetApp支持站点帐户。
@@ -82,6 +84,7 @@ NOTE: NetApp使用 Microsoft Entra ID 作为特定于支持和许可的身份验
 
 
 
+[[update-nss-credentials]]
 == 更新 NSS 凭证
 
 出于安全原因，您必须每 90 天更新一次您的 NSS 凭据。如果您的 NSS 凭证已过期，您将在控制台通知中心收到通知。link:task-monitor-cm-operations.html#notification-center["了解通知中心"^] 。
@@ -107,6 +110,8 @@ NetApp使用 Microsoft Entra ID 作为与支持和许可相关的身份验证服
 
 
 
+[[attach-a-system-to-a-different-nss-account]]
+[[attach-system-nss-account]]
 == 将系统附加到不同的 NSS 帐户
 
 如果您的组织有多个NetApp支持站点帐户，您可以更改与Cloud Volumes ONTAP系统关联的帐户。
@@ -131,6 +136,7 @@ image:screenshot-nss-change-account.png["该屏幕截图显示了与NetApp支持
 
 
 
+[[display-the-email-address-for-an-nss-account]]
 == 显示 NSS 帐户的电子邮件地址
 
 为了安全起见，默认情况下不显示与 NSS 帐户关联的电子邮件地址。您可以查看 NSS 帐户的电子邮件地址和关联的用户名。
@@ -146,6 +152,7 @@ TIP: 当您转到 NSS 管理页面时，控制台会为表中的每个帐户生�
 
 
 
+[[remove-an-nss-account]]
 == 删除 NSS 帐户
 
 删除不再想在控制台中使用的所有 NSS 帐户。

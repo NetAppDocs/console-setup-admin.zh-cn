@@ -18,6 +18,7 @@ summary: 维护代理主机上的操作系统是您的责任。例如，您应�
 
 
 
+[[apply-operating-system-updates-to-the-agent-host]]
 == 将操作系统更新应用于代理主机
 
 无需停止代理主机服务即可应用操作系统安全补丁。
@@ -41,6 +42,7 @@ sudo apt upgrade
 ----
 
 
+[[vm-or-instance-type]]
 == VM 或实例类型
 
 如果您从控制台创建控制台代理，它会使用默认配置在您的云提供商中部署 VM 实例。创建代理后，不要切换到具有较少 CPU 或 RAM 的较小 VM 实例。
@@ -55,6 +57,8 @@ link:reference-agent-default-config.html["了解代理的默认配置"] 。
 
 
 
+[[monitor-the-agent]]
+[[monitor-disk-space]]
 == 监控代理
 
 当代理虚拟机不健康时，控制台会通知您，包括磁盘空间、RAM 和 CPU 问题。在控制台内的通知中心监控这些通知或配置电子邮件通知。磁盘空间、内存或 CPU 使用率偶尔增加是正常现象，但如果经常发生，则应采取措施解决。
@@ -81,6 +85,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 |===
 
 
+[[stopping-and-starting-the-agent-vm]]
 == 停止和启动代理虚拟机
 
 如果需要，请使用云提供商的控制台或标准内部部署程序停止并启动代理虚拟机。
@@ -89,6 +94,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["请注意，�
 
 
 
+[[connect-to-the-linux-vm]]
+[[connect-linux-host]]
 == 连接到 Linux VM
 
 如果您需要连接到代理运行的 Linux VM，请使用云提供商提供的连接选项。

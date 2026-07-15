@@ -1,0 +1,562 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-cvo-roles.html 
+keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles 
+summary: 您可以将以下角色分配给用户，以便为他们提供对控制台中 Cloud Volumes ONTAP 的访问权限。Cloud Volumes ONTAP 角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。 
+---
+= Cloud Volumes ONTAP 访问角色（位于 NetApp Console 中）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以将以下角色分配给用户，以便为他们提供对控制台中 Cloud Volumes ONTAP 的访问权限。Cloud Volumes ONTAP 角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。
+
+Cloud Volumes ONTAP 使用以下角色：
+
+* *Cloud Volumes ONTAP admin*：提供对所有 Cloud Volumes ONTAP 操作的完全访问权限。
+* *Cloud Volumes ONTAP operator*：执行重要的存储操作，例如发现和管理 Cloud Volumes ONTAP 系统，包括添加卷、聚合、快照和复制、修改某些配置以及升级 Cloud Volumes ONTAP 版本。
+* *Cloud Volumes ONTAP viewer*：提供对 Cloud Volumes ONTAP 信息的只读访问。此角色无法执行任何活动操作。某些包含配置信息的选项卡和屏幕可能无法供查看者使用。
+
+
+有关所有 NetApp Console 访问角色的详细信息，请参见 link:reference-iam-predefined-roles.html["访问角色"]。
+
+
+
+[[how-role-changes-take-effect]]
+== 角色变更如何生效
+
+Cloud Volumes ONTAP 通过使用每个角色分配的本地缓存来实施基于角色的访问控制 (RBAC)。此缓存每小时自动刷新一次。如果是新分配或更改的角色，此更改最多可能需要一个小时才能生效。刷新完成后，控制台将启用该角色允许的工作流。
+
+
+NOTE: 首次部署控制台代理或将现有控制台代理升级到 Console 4.9.0 或更高版本时，控制台将运行一次性种子设定过程，将 Cloud Volumes ONTAP 角色分配给组织中的现有用户。此过程最多可能需要 30 分钟才能完成。
+
+
+
+[[cloud-volumes-ontap-role-permissions]]
+== Cloud Volumes ONTAP 角色权限
+
+下表列出了每个角色可以执行的操作。
+
+[cols="40a,20a,20a,20a"]
+|===
+| 特征和动作 | Cloud Volumes ONTAP 查看器 | Cloud Volumes ONTAP 操作程序 | Cloud Volumes ONTAP 管理员 
+
+
+ a| 
+*系统页面*：
+
+
+
+ a| 
+输入系统
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+查看卷
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+发现系统
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+添加卷
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+使用*复制*（不适用于 FSx for ONTAP 或本地系统）
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+使用拖放进行*复制*（使用 Cloud Volumes ONTAP 作为源或目标）
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+添加系统
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+访问 *优化的成本和性能*
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+打开 System Manager
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+开启Cloud Volumes ONTAP
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+删除系统
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+*Agents page*：
+
+
+
+ a| 
+查看 Cloud Volumes ONTAP 设置
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+编辑 Cloud Volumes ONTAP 设置
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+*Overview tab*：
+
+
+
+ a| 
+添加卷
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+添加聚合
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+使用 *立即升级*
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+更新 ONTAP 版本
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+从铅笔菜单编辑 *CIFS 设置*
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+打开 System Manager
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+使用开/关按钮
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+设置密码
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+从工作区中删除系统
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+删除系统
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+使用右侧窗格上的铅笔图标编辑以下内容：
+
+* *系统标签*
+* *计划停机时间*
+* *存储类*
+* *实例类型*
+* *充电方式*
+* *写入速度*
+* *勒索软件防护*
+* *支持注册*
+* *WORM*
+
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+*Volumes tab*：
+
+
+
+ a| 
+添加卷
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+克隆卷
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+创建快照副本
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+编辑卷设置
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+删除卷
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+从快照副本还原
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+更改磁盘类型
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+更改分层策略
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+*Aggregates tab*：
+
+
+
+ a| 
+添加聚合
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+添加卷
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+增加容量
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+删除聚合
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+*复制页面*（以 Cloud Volumes ONTAP 作为源或目标）：
+
+
+
+ a| 
+中断复制
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+重新同步复制
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+反向重新同步复制
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+编辑计划
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+编辑最大传输速率
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+更新复制
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+
+
+ a| 
+删除复制
+ a| 
+否
+ a| 
+否
+ a| 
+是
+
+|===

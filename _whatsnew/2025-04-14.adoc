@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-51]]
 === 连接器 3.9.51
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -18,6 +19,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 * 必须为没有组织管理员或文件夹或项目管理员的用户分配勒索软件保护角色才能访问勒索软件保护。您可以为用户分配以下两个角色之一：勒索软件保护管理员或勒索软件保护查看者。

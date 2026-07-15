@@ -18,6 +18,7 @@ summary: '如果您是首次使用NetApp Console，控制台助手将指导您�
 
 
 
+[[required-roles-to-access-the-console-assistant]]
 == 访问控制台助手所需的角色
 
 控制台助手仅对具有组织管理员角色的用户可用。

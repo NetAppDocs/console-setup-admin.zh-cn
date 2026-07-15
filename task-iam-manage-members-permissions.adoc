@@ -21,6 +21,7 @@ summary: 管理组织的成员以提供组织资源层次结构不同级别的�
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == 了解如何在NetApp Console中授予访问权限
 
 NetApp Console 使用基于角色的访问控制 (RBAC) 来管理权限。单独或通过联合组将角色分配给用户。每个角色都定义了特定资源的允许操作。
@@ -35,6 +36,8 @@ NetApp Console 使用基于角色的访问控制 (RBAC) 来管理权限。单独
 
 
 
+[[add-members-to-your-organization]]
+[[add-members]]
 == 向您的组织添加成员
 
 NetApp Console支持三种类型的成员：用户帐户、服务帐户和联合组。
@@ -47,6 +50,7 @@ NetApp Console支持三种类型的成员：用户帐户、服务帐户和联合
 
 
 
+[[add-a-user]]
 === 添加用户
 
 用户注册NetApp Console，但组织管理员、文件夹管理员或项目管理员必须将他们添加到组织、文件夹或项目中，以便他们能够访问资源。
@@ -86,6 +90,8 @@ NOTE: 如果要添加属于联合组的用户，请确保该用户已注册 NetA
 
 
 
+[[add-a-service-account]]
+[[service-account]]
 === 添加服务帐户
 
 服务帐户允许您自动执行任务并安全地连接到控制台 API。对于简单的设置，可以选择客户端 ID 和密钥；对于自动化或云原生环境，可以选择 JWT（JSON Web Token）以获得更强的安全性。选择符合您安全要求的方法。
@@ -132,6 +138,7 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[add-a-federated-group-to-your-organization]]
 == 向您的组织添加联合组
 
 您可以将身份提供商 (IdP) 中的联合组添加到您的组织，并为其分配一个或多个角色。联合组的成员将继承您在控制台中分配给该组的角色。
@@ -171,6 +178,7 @@ IMPORTANT: 将联合组添加到 Console 并为其分配角色时，只有作为
 
 
 
+[[related-information]]
 == 相关信息
 
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身份和访问管理"]

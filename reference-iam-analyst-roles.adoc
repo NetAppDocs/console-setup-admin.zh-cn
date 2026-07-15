@@ -18,6 +18,7 @@ summary: 您可以将运营支持分析师角色分配给用户，以便他们�
 
 
 
+[[operational-support-analyst]]
 == 运营支持分析师
 
 [cols="1,2"]

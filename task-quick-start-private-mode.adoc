@@ -32,12 +32,14 @@ summary: 专用模式通常用于没有互联网连接的本地环境以及安�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 == 私有模式下 NetApp Console 支持的功能和服务
 
 下表列出了在专用模式下安装 NetApp Console 时可用的存储管理功能、数据服务和管理功能。当您将 NetApp Console 安装在云端而不是您的场所时，功能会有所不同。
 
 
 
+[[private-mode-installed-in-the-cloud]]
 === 云中已安装专用模式
 
 [cols="3*"]
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 |===
 
 
+[[private-mode-installed-on-premises]]
 === 本地安装的私有模式
 
 [cols="3*"]

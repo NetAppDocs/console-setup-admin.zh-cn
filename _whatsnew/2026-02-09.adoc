@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-4-0]]
 === Console 代理 4.4.0
 
 4.4.0 版本同时支持标准模式和受限模式。
@@ -12,6 +13,7 @@
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本次发布包含以下内容：

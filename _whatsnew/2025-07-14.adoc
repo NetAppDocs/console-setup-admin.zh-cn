@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-54]]
 === 连接器 3.9.54
 
 此版本的BlueXP Connector 包括安全性改进、错误修复以及以下新功能：
@@ -17,6 +18,7 @@
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 BlueXP中的身份和访问管理现在提供以下功能：

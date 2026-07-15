@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-identity-and-access-management]]
 === BlueXP身份和访问管理
 
 BlueXP身份和访问管理 (IAM) 是一种新的资源和访问管理模型，它取代并增强了在标准模式下使用BlueXP时BlueXP帐户提供的先前功能。
@@ -57,6 +58,7 @@ BlueXP IAM 提供更精细的资源和权限管理：
 
 
 
+[[connector-3-9-45]]
 === 连接器 3.9.45
 
 此版本包括扩展的操作系统支持和错误修复。
@@ -70,6 +72,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 
 
+[[support-for-selinux-with-rhel-hosts]]
 === RHEL 主机支持 SELinux
 
 BlueXP现在支持在强制模式或许可模式下启用 SELinux 的 Red Hat Enterprise Linux 主机的连接器。

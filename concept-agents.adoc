@@ -18,6 +18,7 @@ Console 代理是您在网络中安装的轻量级软件组件，用于将存储
 
 
 
+[[what-a-console-agent-does]]
 == Console 代理的作用
 
 Console 代理弥合了存储系统和 NetApp Console 之间的连接缺口。它将您的基础架构安全地连接到 NetApp API 和 Console，使您可以：
@@ -30,6 +31,7 @@ Console 代理弥合了存储系统和 NetApp Console 之间的连接缺口。�
 
 
 
+[[console-agent-architecture]]
 === Console Agent 架构
 
 代理使用的轻量级流程具有以下特性：
@@ -42,6 +44,8 @@ Console 代理弥合了存储系统和 NetApp Console 之间的连接缺口。�
 
 
 
+[[console-agent-availability-and-operational-requirements]]
+[[agents-must-be-operational-at-all-times]]
 === Console 代理可用性和操作要求
 
 Console 代理对 NetApp Console 至关重要。代理必须保持可操作性和可访问性，以实现不间断的管理和数据服务。您有责任确保：
@@ -54,6 +58,7 @@ Console 代理对 NetApp Console 至关重要。代理必须保持可操作性�
 
 
 
+[[when-you-need-a-console-agent]]
 == 何时需要 Console 代理
 
 如果要执行以下操作，则需要部署至少一个 Console 代理：
@@ -290,6 +295,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何时需要�
 
 
 
+[[deployment-options-for-console-agents]]
 == Console 代理的部署选项
 
 可以在以下位置部署 Console 代理：
@@ -309,6 +315,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何时需要�
 
 
 
+[[agents-for-the-netapp-console-saas-application-standard-mode]]
 === NetApp Console SaaS 应用程序代理（标准模式）
 
 在云或本地部署代理，以连接到云托管的 Console SaaS 应用程序。代理启用高级功能，而 Console UI 仍可从任何地方访问。
@@ -317,6 +324,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何时需要�
 
 
 
+[[agents-for-netapp-console-in-restricted-mode]]
 === 受限模式下的 NetApp Console 代理
 
 在受限模式下，用户直接从已安装的代理访问 NetApp Console，而不是从云托管的 SaaS 应用程序访问。您必须至少安装一个代理作为 Console 访问点。需要其他代理来启用数据服务和管理存储系统。
@@ -325,6 +333,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何时需要�
 
 
 
+[[agents-for-netapp-console-in-private-mode-on-premises-or-in-the-cloud-with-no-outbound-connectivity]]
 === 私有模式下的 NetApp Console 代理（内部或云端，无出站连接）
 
 在专用模式下，用户直接从已安装的代理访问 NetApp Console。您必须至少安装一个代理才能用作 Console 访问点。需要其他代理来启用数据服务和管理存储系统。
@@ -333,6 +342,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何时需要�
 
 
 
+[[use-multiple-agents-when-needed]]
 === 在需要时使用多个代理
 
 每个代理独立运行，可以管理多个存储系统和数据服务。在需要时部署多个代理：
@@ -349,6 +359,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何时需要�
 
 
 
+[[console-agent-upgrades]]
 == 控制台代理升级
 
 云中的代理在具有出站互联网访问权限时会自动升级。对于无法访问互联网的代理（专用模式），请参阅 link:task-upgrade-agent.html["管理控制台代理升级"] 手动升级说明。

@@ -26,6 +26,7 @@ NOTE: 当 NetApp Console 处于私有模式时，只读模式不可用。link:co
 
 
 
+[[enable-read-only-mode-for-your-console-organization]]
 == 为您的控制台组织启用只读模式
 
 启用只读模式以限制对控制台组织的更改。所有用户仍然可以查看资源。拥有管理员角色的用户，如果不手动提升权限，则无法在控制台中执行任何操作。

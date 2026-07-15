@@ -27,6 +27,7 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 
 
 
+[[endpoints-contacted-by-netapp-console-and-console-agents]]
 == NetApp Console和控制台代理联系的端点
 
 您部署的每个代理和访问NetApp Console的每台计算机都必须连接到下面列出的端点。
@@ -58,6 +59,7 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 |===
 
 
+[[cloud-provider-endpoints-contacted-the-console-agent]]
 == 云提供商端点联系了控制台代理
 
 如果控制台代理部署在您的云提供商中，则它们必须能够访问其他端点。
@@ -71,12 +73,14 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == 控制台代理联系的数据服务端点
 
 一些NetApp数据服务以及Cloud Volumes ONTAP要求代理具有额外的出站互联网访问权限。
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAP的端点
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS 中的Cloud Volumes ONTAP端点"]
@@ -86,6 +90,7 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 
 
 
+[[endpoints-for-workloads]]
 === 工作负载端点
 
 控制台代理必须能够访问以下NetApp工作负载端点。

@@ -20,6 +20,7 @@ summary: '您可以修改您的控制台配置文件，包括更改您的密码�
 
 
 
+[[change-your-display-name]]
 == 更改您的显示名称
 
 您可以更改控制台显示名称，以便其他用户识别您的身份。您无法更改用户名或电子邮件地址。
@@ -32,6 +33,7 @@ summary: '您可以修改您的控制台配置文件，包括更改您的密码�
 
 
 
+[[elevate-your-role-in-read-only-mode]]
 == 提升您在只读模式下的角色
 
 在某些情况下，您的组织管理员可能会将您的组织设置为只读模式。如果您拥有管理员角色，则必须提升权限才能进行更改。这样可以确保变更都是有意为之且获得授权的。
@@ -50,6 +52,8 @@ image:screenshot-user-elevated.png["屏幕截图显示了“只读模式”滑�
 
 
 
+[[configure-multi-factor-authentication]]
+[[task-user-mfa]]
 == 配置多重身份验证
 
 配置多重身份验证 (MFA)，通过要求第二种验证方法来提高安全性。
@@ -78,6 +82,7 @@ NOTE: 如果您无法访问身份验证应用程序或丢失恢复代码，请�
 
 
 
+[[regenerate-your-mfa-recovery-code]]
 == 重新生成您的 MFA 恢复代码
 
 您只能使用一次恢复代码。如果您使用或丢失了您的，请创建一个新的。
@@ -91,6 +96,7 @@ NOTE: 如果您无法访问身份验证应用程序或丢失恢复代码，请�
 
 
 
+[[delete-your-mfa-configuration]]
 == 删除您的 MFA 配置
 
 
@@ -104,6 +110,8 @@ NOTE: 如果您无法访问您的身份验证应用程序或恢复代码，您�
 
 
 
+[[contact-your-organization-administrator]]
+[[contact-admin]]
 == 联系您的组织管理员
 
 如果您需要联系您的组织管理员，您可以直接从控制台向他们发送电子邮件。管理员管理组织内的用户帐户和权限。
@@ -120,6 +128,7 @@ NOTE: 您必须为浏览器配置默认电子邮件应用程序才能使用“�
 
 
 
+[[configure-dark-mode-dark-theme]]
 == 配置暗黑模式（暗黑主题）
 
 您可以将控制台设置为以暗模式显示。

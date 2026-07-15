@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-46]]
 === 连接器 3.9.46
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -12,6 +13,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[id-for-iam-projects]]
 === IAM 项目的 ID
 
 您现在可以从BlueXP身份和访问管理中查看项目的 ID。您可能需要在进行 API 调用时使用该 ID。

@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-52]]
 === 连接器 3.9.52
 
 BlueXP Connector 的此版本包括一些小的安全改进和错误修复，以及一些额外的更新。
@@ -24,12 +25,14 @@ BlueXP Connector 的此版本包括一些小的安全改进和错误修复，以
 
 
 
+[[keystone-administration-available-in-bluexp]]
 === BlueXP中提供Keystone管理
 
 BlueXP中的NetApp Keystone测试版增加了对Keystone管理的访问权限。您可以从BlueXP左侧导航栏访问NetApp Keystone测试版的注册页面。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 

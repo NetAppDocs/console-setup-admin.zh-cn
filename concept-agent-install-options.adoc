@@ -20,6 +20,8 @@ summary: 使用 NetApp Console、云提供商的市场或在 Linux 主机上手�
 
 
 
+[[deploy-from-the-netapp-console]]
+[[agent-console-deploy]]
 == 从 NetApp Console 部署
 
 NetApp 建议在使用标准模式时从 NetApp Console 进行部署。NetApp Console 将引导您完成网络和权限设置，然后自动在您的云提供商中启动 VM 或实例。Console 将引导您完成网络和权限设置，然后自动在您的云提供商中启动 VM 或实例。
@@ -49,6 +51,8 @@ link:task-install-agent-aws-console.html["从 NetApp Console 在 AWS 部署 Cons
 
 
 
+[[deploy-from-a-cloud-provider-marketplace]]
+[[agent-marketplace-deploy]]
 == 从云提供商市场进行部署
 
 从 AWS Marketplace 或 Azure Marketplace 进行部署将直接从市场而不是从 NetApp Console 启动代理安装。
@@ -79,6 +83,8 @@ link:task-install-agent-aws-marketplace.html["从市场在 AWS 中部署 Console
 
 
 
+[[manually-install-on-a-linux-host-in-the-cloud]]
+[[agent-cloud-manual-deploy]]
 == 在云中的 Linux 主机上手动安装
 
 手动安装可让您直接在您在 AWS、Azure、Google Cloud 或本地提供和管理的 Linux 主机上安装 Console 代理软件。
@@ -108,6 +114,8 @@ link:task-install-agent-aws-manual.html["在 AWS 中手动安装 Console 代理"
 
 
 
+[[manually-install-on-premises-using-vcenter-ova]]
+[[agent-ova-on-prem-deploy]]
 == 使用 vCenter (OVA) 手动安装本地
 
 如果使用 VMware vCenter，则可以通过导入 OVA（Open Virtual Appliance）文件来部署 Console 代理。OVA 是使用 vSphere 客户端部署的预配置虚拟机映像，无需安装 Linux 或配置容器运行时。
@@ -142,6 +150,8 @@ link:task-install-agent-on-prem-ova.html["使用 vCenter 部署本地"]
 
 
 
+[[manually-install-on-premises-without-vcenter]]
+[[agent-manual-on-prem-deploy]]
 == 手动安装本地（不使用 vCenter）
 
 您可以在任何本地 Linux 主机上手动安装 Console 代理。您必须设置 Linux 主机和容器运行时（Docker 或 Podman），然后安装 Console 代理。

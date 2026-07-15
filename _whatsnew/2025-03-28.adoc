@@ -4,6 +4,7 @@
 
 
 
+[[private-mode-release-3-9-50]]
 === 私人模式发布（3.9.50）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]

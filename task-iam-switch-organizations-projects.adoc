@@ -21,6 +21,7 @@ TIP: 如果其他组织邀请您加入或者您自己创建一个组织，那么
 
 
 
+[[switch-between-organizations]]
 == 在组织之间切换
 
 如果您是多个组织的成员，您可以随时在它们之间切换。
@@ -39,6 +40,7 @@ image:screenshot-iam-switch-organizations.png["顶部横幅的屏幕截图，您
 
 
 
+[[switch-between-projects]]
 == 在项目之间切换
 
 如果您的组织包含多个项目并且您有权访问这些项目，则您可以随时在它们之间切换。
@@ -56,6 +58,7 @@ image:screenshot-iam-switch-projects-select.png["范围菜单的屏幕截图，�
 
 
 
+[[switch-between-console-agents]]
 == 在控制台代理之间切换
 
 如果您有多个控制台代理，您可以在它们之间切换以查看与特定代理关联的系统。
@@ -70,6 +73,7 @@ link:task-iam-associate-agents.html["将代理与文件夹和项目关联"] 。
 
 
 
+[[related-information]]
 == 相关信息
 
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身份和访问权限"]

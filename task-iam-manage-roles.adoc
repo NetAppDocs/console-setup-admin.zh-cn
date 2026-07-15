@@ -26,6 +26,7 @@ NOTE: 请先添加文件夹和项目，然后再分配用户访问权限。 link
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == 了解如何在NetApp Console中授予访问权限
 
 NetApp Console 使用基于角色的访问控制 (RBAC) 模型来管理用户权限。您可以单独或通过联合组将预定义角色分配给成员。您可以向服务帐户以及联合组添加并分配角色。每个角色定义成员可以对关联资源执行的操作。
@@ -39,12 +40,15 @@ NetApp Console 使用基于角色的访问控制 (RBAC) 模型来管理用户权
 
 
 
+[[using-role-inheritance]]
+[[role-inheritance]]
 === 使用角色继承
 
 在NetApp Console中，当您在组织、文件夹或项目级别分配角色时，所选范围内的所有资源都会自动继承该角色。例如，文件夹级角色适用于所有包含的项目，而项目级角色适用于该项目内的所有资源。
 
 
 
+[[view-organization-members]]
 == 查看组织成员
 
 要了解成员可用的资源和权限，您可以查看在组织资源层次结构的不同级别分配给该成员的角色。link:task-iam-manage-roles.html["了解如何使用角色来控制对控制台资源的访问。"^]
@@ -60,6 +64,8 @@ NetApp Console 使用基于角色的访问控制 (RBAC) 模型来管理用户权
 
 
 
+[[view-roles-assigned-to-a-member]]
+[[manage-permissions]]
 == 查看分配给成员的角色
 
 您可以验证成员当前被分配了哪些角色。
@@ -72,6 +78,7 @@ NetApp Console 使用基于角色的访问控制 (RBAC) 模型来管理用户权
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == 查看与文件夹或项目关联的成员
 
 您可以查看哪些成员有权访问特定文件夹或项目。
@@ -91,6 +98,7 @@ image:screenshot-iam-member-access.png["编辑项目页面的屏幕截图，显�
 
 
 
+[[assign-or-modify-member-access]]
 == 分配或修改成员访问权限
 
 用户注册NetApp Console后，您可以将他们添加到您的组织并分配角色，以便向他们提供资源访问权限。 link:task-iam-manage-members-permissions.html#add-members["了解如何向您的组织添加成员。"^]
@@ -99,6 +107,7 @@ image:screenshot-iam-member-access.png["编辑项目页面的屏幕截图，显�
 
 
 
+[[add-an-access-role-to-a-member]]
 == 为成员添加访问角色
 
 您通常在向组织添加成员时分配角色，但您可以随时通过删除或添加角色来更新它。
@@ -130,6 +139,7 @@ image:screenshot-iam-member-access.png["编辑项目页面的屏幕截图，显�
 
 
 
+[[change-a-members-assigned-role]]
 == 更改成员的指定角色
 
 更改成员角色以更新其访问权限。
@@ -153,6 +163,7 @@ NOTE: 必须为用户分配至少一个角色。您不能删除用户的所有�
 
 
 
+[[remove-a-member-from-your-organization]]
 == 从您的组织中移除成员
 
 如果成员离开您的组织，则将其从组织中移除。

@@ -21,12 +21,14 @@ NOTE: 使用 vCenter 工具部署 Console 代理时，您可以使用 VM Web 控
 
 
 
+[[prepare-to-install-the-console-agent]]
 == 准备安装控制台代理
 
 安装之前，请确保您的 VM 主机满足要求并且控制台代理可以访问互联网和目标网络。要使用NetApp数据服务或Cloud Volumes ONTAP，请为控制台代理创建云提供商凭据以代表您执行操作。
 
 
 
+[[review-console-agent-host-requirements]]
 === 查看控制台代理主机要求
 
 在安装控制台代理之前，请确保您的主机满足安装要求。
@@ -43,6 +45,8 @@ NOTE: 在 vCenter 环境中安装代理，而不是直接在 ESXi 主机上安�
 
 
 
+[[set-up-network-access-for-the-console-agent]]
+[[network-access-agent]]
 === 为控制台代理设置网络访问
 
 与您的网络管理员合作，确保控制台代理具有对所需端点的出站访问权限以及与目标网络的连接。
@@ -208,6 +212,8 @@ Amazon FSx for NetApp ONTAP：
 
 
 
+[[create-console-agent-cloud-permissions-for-aws-or-azure]]
+[[agent-permission-aws-azure]]
 === 为 AWS 或 Azure 创建控制台代理云权限
 
 如果您想将 AWS 或 Azure 中的NetApp数据服务与本地控制台代理一起使用，则需要在云提供商中设置权限，以便在安装控制台代理后将凭据添加到控制台代理。
@@ -400,12 +406,14 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 ====
 
 
+[[install-a-console-agent-in-your-vcenter-environment]]
 == 在您的 vCenter 环境中安装 Console 代理
 
 NetApp 支持在您的 vCenter 环境中安装 Console 代理。OVA 文件包含一个预配置的 VM 映像，您可以在 VMware 环境中部署该映像。文件下载或 URL 部署可直接从 NetApp Console 获得。它包括 Console 代理软件和自签名证书。
 
 
 
+[[download-the-ova-or-copy-the-url]]
 === 下载 OVA 或复制 URL
 
 直接从NetApp Console下载 OVA 或复制 OVA URL。
@@ -418,6 +426,7 @@ NetApp 支持在您的 vCenter 环境中安装 Console 代理。OVA 文件包含
 
 
 
+[[deploy-the-agent-in-your-vcenter-environment]]
 === 在您的 vCenter 环境中部署代理
 
 登录到您的 vCenter 环境以部署代理。
@@ -483,6 +492,7 @@ NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志�
 
 
 
+[[register-the-console-agent-with-netapp-console]]
 == 使用NetApp Console注册控制台代理
 
 登录到 Console 并将 Console 代理与您的组织关联。登录方式取决于使用 Console 的模式。如果在标准模式下使用 Console，请通过 SaaS 网站登录。如果以受限或专用模式使用 Console，则可以从 Console 代理主机本地登录。
@@ -508,6 +518,7 @@ NOTE: 如果部署失败，您可以从代理主机访问验证报告和日志�
 
 
 
+[[add-cloud-provider-credentials-to-the-console]]
 == 将云提供商凭据添加到控制台
 
 安装并设置控制台代理后，添加您的云凭据，以便控制台代理具有在 AWS 或 Azure 中执行操作所需的权限。

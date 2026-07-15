@@ -18,10 +18,36 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[15-july-2026]]
+== 2026年7月15日
+
+
+
+[[console-agent-4-9-0]]
+=== Console 代理 4.9.0
+
+4.9.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+.支持对 Cloud Volumes ONTAP 进行基于角色的访问控制
+控制台支持基于角色的访问 Cloud Volumes ONTAP。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["详细了解 Cloud Volumes ONTAP 基于角色的访问"^]。
+
+
+
+[[15-june-2026]]
 == 2026 年 6 月 15 日
 
 
 
+[[private-mode-release-4-7-0]]
 === 私有模式版本 (4.7.0)
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -43,10 +69,12 @@ summary: 了解 NetApp Console 管理的新功能。
 |===
 
 
+[[8-june-2026]]
 == 2026 年 6 月 8 日
 
 
 
+[[console-agent-4-8-0]]
 === Console 代理 4.8.0
 
 4.8.0 版本同时支持标准模式和受限模式。
@@ -55,16 +83,19 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 此版本包括安全性改进和错误修复。
 
 
 
+[[11-may-2026]]
 == 2026 年 5 月 11 日
 
 
 
+[[console-agent-4-7-0]]
 === Console 代理 4.7.0
 
 4.7.0 版本同时支持标准模式和受限模式。
@@ -73,6 +104,7 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 此版本包含以下新功能。
@@ -82,10 +114,12 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[13-april-2026]]
 == 2026 年 4 月 13 日
 
 
 
+[[console-agent-4-6-0]]
 === Console 代理 4.6.0
 
 4.6.0 版本同时支持标准模式和受限模式。
@@ -100,10 +134,12 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[10-march-2026]]
 == 2026 年 3 月 10 日
 
 
 
+[[console-agent-4-5-0]]
 === Console 代理 4.5.0
 
 4.5.0 版本同时支持标准模式和受限模式。
@@ -115,16 +151,19 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 您可以将 Keystone 角色分配给合作伙伴用户，以允许这些用户管理合作伙伴组织中的 Keystone 资源。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["详细了解如何将 Keystone 角色分配给合作伙伴用户。"]
 
 
 
+[[26-february-2026]]
 == 2026 年 2 月 26 日
 
 
 
+[[private-mode-release-4-4-0]]
 === 私有模式版本 (4.4.0)
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -156,10 +195,12 @@ NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内
 |===
 
 
+[[09-february-2026]]
 == 2026 年 2 月 09 日
 
 
 
+[[console-agent-4-4-0]]
 === Console 代理 4.4.0
 
 4.4.0 版本同时支持标准模式和受限模式。
@@ -168,6 +209,7 @@ NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本次发布包含以下内容：
@@ -179,10 +221,12 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.h
 
 
 
+[[13-january-2026]]
 == 2026年1月13日
 
 
 
+[[console-agent-4-3-0]]
 === 控制台代理 4.3.0
 
 4.3.0 版本同时支持标准模式和受限模式。
@@ -196,6 +240,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本次发布包含以下内容：
@@ -217,10 +262,12 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html["
 
 
 
+[[10-december-2025]]
 == 2025年12月10日
 
 
 
+[[console-agent-4-2-0]]
 === 控制台代理 4.2.0
 
 4.2.0 版本同时支持标准模式和受限模式。
@@ -244,6 +291,7 @@ NetApp现在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Clo
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本次发布包含以下内容：
@@ -262,10 +310,12 @@ NetApp现在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Clo
 
 
 
+[[10-november-2025]]
 == 2025年11月10日
 
 
 
+[[console-agent-4-1-0]]
 === 控制台代理 4.1.0
 
 此版本的控制台代理包含安全改进、错误修复以及以下功能：
@@ -280,6 +330,7 @@ NetApp现在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Clo
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本次发布包含以下内容：
@@ -289,16 +340,19 @@ NetApp现在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Clo
 
 
 
+[[06-october-2025]]
 == 2025年10月6日
 
 
 
+[[bluexp-is-now-netapp-console]]
 == BlueXP现在是NetApp Console
 
 NetApp Console建立在增强和重组的BlueXP基础之上，可在企业级内部和云环境中集中管理NetApp存储和NetApp Data Services，提供实时洞察、更快的工作流程以及高度安全且合规的简化管理。
 
 
 
+[[navigation-menus-and-pages]]
 === 导航菜单和页面
 
 NetApp将大多数菜单选项移至左侧导航窗格，并重新组织菜单以便在NetApp Console中更轻松地导航。
@@ -347,6 +401,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-governa
 
 
 
+[[more-intuitive-naming-of-elements-data-services-and-features]]
 === 元素、数据服务和功能的命名更加直观
 
 NetApp重命名了几个元素、数据服务和功能以明确其用途。主要变化包括：
@@ -401,6 +456,7 @@ Licenses and subscriptions
 |===
 
 
+[[console-agents]]
 === 控制台代理
 
 从*管理>代理*菜单访问和管理您的控制台代理。  NetApp已更改了为“*系统*”页面（以前称为“Canvas”）选择控制台代理的方式。  NetApp已将连接器菜单名称替换为图标image:icon-agent.png["代理图标"]，允许您选择要查看系统的控制台代理。
@@ -411,6 +467,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 
 
+[[console-agent-4-0-0]]
 == 控制台代理 4.0.0
 
 此版本的控制台代理包括安全改进、错误修复和以下新功能。
@@ -419,6 +476,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 
 
+[[consolidation-and-reduction-of-required-network-endpoints]]
 === 整合并减少所需的网络端点
 
 NetApp减少了控制台和控制台代理所需的网络端点，增强了安全性并简化了部署。重要的是，4.0.0 版本之前的所有部署都将继续得到全面支持。虽然以前的端点仍然可供现有代理使用，但NetApp强烈建议在确认代理升级成功后将防火墙规则更新到当前端点。
@@ -429,6 +487,7 @@ NetApp减少了控制台和控制台代理所需的网络端点，增强了安�
 
 
 
+[[support-for-vcenter-deployment-of-console-agents]]
 === 支持 VCenter 部署控制台代理
 
 您可以使用 OVA 文件在 VMware 环境中部署控制台代理。 OVA 文件包含一个预配置的 VM 映像，其中包含控制台代理软件和用于连接到NetApp Console的设置。可直接从NetApp Console下载文件或部署 URL。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["了解如何在 VMware 环境中部署控制台代理。"]
@@ -437,76 +496,89 @@ VMware 的控制台代理 OVA 提供了预配置的 VM 映像以便快速部署�
 
 
 
+[[validation-reports-for-failed-agent-deployments]]
 === 失败代理部署的验证报告
 
 当您从NetApp Console部署控制台代理时，您现在可以选择验证代理配置。如果控制台无法部署代理，它会提供可下载的报告来帮助您排除故障。
 
 
 
+[[improved-troubleshooting-for-console-agents]]
 === 改进了控制台代理的故障排除
 
 控制台代理已改进错误消息，可帮助您更好地了解问题。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["了解如何排除控制台代理故障。"]
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 NetApp Console管理包括以下新功能：
 
 
 
+[[home-page-dashboard]]
 === 主页仪表板
 
 NetApp控制台的主页仪表板提供存储基础设施的实时可见性，包括健康状况、容量、许可证状态和数据服务等指标。link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html["了解有关主页的更多信息。"]
 
 
 
+[[netapp-assistant]]
 === NetApp助手
 
 具有组织管理员角色的新用户可以使用NetApp助手配置控制台，包括添加代理、链接NetApp支持帐户以及添加存储系统。link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html["了解NetApp助手。"]
 
 
 
+[[service-account-authentication]]
 === 服务帐户身份验证
 
 NetApp Console支持使用系统生成的客户端 ID 和密钥或客户管理的 JWT 进行服务帐户身份验证，从而允许组织选择最适合其安全要求和集成工作流程的方法。私钥 JWT 客户端身份验证使用非对称加密，比传统的客户端 ID 和秘密方法提供更强的安全性。私钥 JWT 客户端身份验证使用非对称加密，在客户环境中保证私钥的安全，降低凭证被盗风险，并提高自动化堆栈和客户端应用程序的安全性。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["了解如何添加服务帐户。"]
 
 
 
+[[session-timeouts]]
 === 会话超时
 
 系统会在 24 小时后或用户关闭网络浏览器时注销用户。
 
 
 
+[[support-for-partnerships-between-organizations]]
 === 支持组织之间的伙伴关系
 
 您可以在NetApp Console中创建合作伙伴关系，让合作伙伴跨组织边界安全地管理NetApp资源，从而使协作更轻松、安全性更强。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["学习如何管理合作关系"] 。
 
 
 
+[[super-admin-and-super-viewer-roles]]
 === 超级管理员和超级查看者角色
 
 添加了*超级管理员*和*超级查看者*角色。  *超级管理员*授予对控制台功能、存储和数据服务的完全管理访问权限。 *超级查看器*为审计员和利益相关者提供只读可见性。这些角色对于高级成员较少、访问权限较广的小型团队很有用。为了提高安全性和可审计性，鼓励组织谨慎使用*超级管理员*访问权限，并尽可能分配细粒度的角色。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 
 
 
+[[additional-role-for-ransomware-resilience]]
 === 勒索软件抵御能力的额外作用
 
 添加了*Ransomware Resilience 用户行为管理员*角色和*Ransomware Resilience 用户行为查看器*角色。这些角色分别允许用户配置和查看用户行为和分析数据。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解有关访问角色的更多信息。"]
 
 
 
+[[removed-support-chat]]
 === 删除了支持聊天
 
 NetApp已从NetApp Console中删除了支持聊天功能。使用“管理”>“支持”页面来创建和管理支持案例。
 
 
 
+[[11-august-2025]]
 == 2025年8月11日
 
 
 
+[[connector-3-9-55]]
 === 连接器 3.9.55
 
 BlueXP Connector 的此版本包括安全性改进和错误修复。
@@ -515,24 +587,28 @@ BlueXP Connector 的此版本包括安全性改进和错误修复。
 
 
 
+[[japanese-language-support]]
 === 日语支持
 
 BlueXP UI 现已提供日语版本。如果您的浏览器语言是日语， BlueXP会以日语显示。要访问日语文档，请使用文档网站上的语言菜单。
 
 
 
+[[operational-resiliency-feature]]
 === 运营弹性功能
 
 操作弹性功能已从BlueXP中删除。如果遇到问题，请联系NetApp支持。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 BlueXP中的身份和访问管理现在提供以下功能。
 
 
 
+[[new-access-role-for-operational-support]]
 === 运营支持的新访问角色
 
 BlueXP现在支持运营支持分析师角色。此角色授予用户监控存储警报、查看BlueXP审计时间线以及输入和跟踪NetApp支持案例的权限。
@@ -541,10 +617,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[31-july-2025]]
 == 2025年7月31日
 
 
 
+[[private-mode-release-3-9-54]]
 === 私人模式发布（3.9.54）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -573,16 +651,19 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[21-july-2025]]
 == 2025年7月21日
 
 
 
+[[support-for-google-cloud-netapp-volumes]]
 === 支持Google Cloud NetApp Volumes
 
 您现在可以在BlueXP中查看Google Cloud NetApp Volumes 。link:https://docs.netapp.com/us-en//bluexp-google-cloud-netapp-volumes/index.html["了解有关Google Cloud NetApp Volumes 的更多信息。"]
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 
@@ -598,10 +679,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[14-july-2025]]
 == 2025年7月14日
 
 
 
+[[connector-3-9-54]]
 === 连接器 3.9.54
 
 此版本的BlueXP Connector 包括安全性改进、错误修复以及以下新功能：
@@ -615,6 +698,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 BlueXP中的身份和访问管理现在提供以下功能：
@@ -666,10 +750,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[09-june-2025]]
 == 2025年6月9日
 
 
 
+[[connector-3-9-53]]
 === 连接器 3.9.53
 
 BlueXP Connector 的此版本包括安全性改进和错误修复。
@@ -678,18 +764,21 @@ BlueXP Connector 的此版本包括安全性改进和错误修复。
 
 
 
+[[disk-space-usage-alerts]]
 === 磁盘空间使用情况警报
 
 通知中心现在包含连接器上磁盘空间使用情况的警报。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["了解更多信息。"^]
 
 
 
+[[audit-improvements]]
 === 审计改进
 
 时间线现在包括用户的登录和注销事件。您可以看到登录活动的时间，这有助于审计和安全监控。具有组织管理员角色的 API 用户可以通过添加以下信息来查看登录用户的电子邮件地址 `includeUserData=true``参数如下： `/audit/<account_id>?includeUserData=true` 。
 
 
 
+[[keystone-subscription-management-available-in-bluexp]]
 === BlueXP中提供Keystone订阅管理
 
 您可以从BlueXP管理您的NetApp Keystone订阅。
@@ -698,6 +787,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["了解BlueXP中的
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 
@@ -710,16 +800,19 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#ta
 
 
 
+[[workloads]]
 === 工作负载
 
 您现在可以从BlueXP中的凭证页面查看和删除Amazon FSx for NetApp ONTAP凭证。
 
 
 
+[[29-may-2025]]
 == 2025年5月29日
 
 
 
+[[private-mode-release-3-9-52]]
 === 私人模式发布（3.9.52）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -748,10 +841,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#ta
 
 
 
+[[12-may-2025]]
 == 2025年5月12日
 
 
 
+[[connector-3-9-52]]
 === 连接器 3.9.52
 
 BlueXP Connector 的此版本包括一些小的安全改进和错误修复，以及一些额外的更新。
@@ -772,12 +867,14 @@ BlueXP Connector 的此版本包括一些小的安全改进和错误修复，以
 
 
 
+[[keystone-administration-available-in-bluexp]]
 === BlueXP中提供Keystone管理
 
 BlueXP中的NetApp Keystone测试版增加了对Keystone管理的访问权限。您可以从BlueXP左侧导航栏访问NetApp Keystone测试版的注册页面。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 
@@ -825,10 +922,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[14-april-2025]]
 == 2025年4月14日
 
 
 
+[[connector-3-9-51]]
 === 连接器 3.9.51
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -843,6 +942,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 * 必须为没有组织管理员或文件夹或项目管理员的用户分配勒索软件保护角色才能访问勒索软件保护。您可以为用户分配以下两个角色之一：勒索软件保护管理员或勒索软件保护查看者。
@@ -855,10 +955,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[28-march-2025]]
 == 2025年3月28日
 
 
 
+[[private-mode-release-3-9-50]]
 === 私人模式发布（3.9.50）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -887,10 +989,12 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
+[[10-march-2025]]
 == 2025年3月10日
 
 
 
+[[connector-3-9-50]]
 === 连接器 3.9.50
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -905,16 +1009,19 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 
 
 
+[[netapp-keystone-beta-available-in-bluexp]]
 === NetApp Keystone测试版现已在BlueXP中推出
 
 NetApp Keystone即将由BlueXP推出，目前处于测试阶段。您可以从BlueXP左侧导航栏访问NetApp Keystone测试版的注册页面。
 
 
 
+[[06-march-2025]]
 == 2025年3月6日
 
 
 
+[[connector-3-9-49-update]]
 === 连接器 3.9.49 更新
 
 
@@ -927,10 +1034,12 @@ BlueXP管理员（具有组织管理员角色的用户）可以配置BlueXP以�
 
 
 
+[[18-february-2025]]
 == 2025年2月18日
 
 
 
+[[private-mode-release-3-9-48]]
 === 私人模式发布（3.9.48）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -952,10 +1061,12 @@ BlueXP管理员（具有组织管理员角色的用户）可以配置BlueXP以�
 |===
 
 
+[[10-february-2025]]
 == 2025年2月10日
 
 
 
+[[connector-3-9-49]]
 === 连接器 3.9.49
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -964,6 +1075,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身份和访问管理 (IAM)
 
 * 支持为BlueXP用户分配多个角色。
@@ -1028,6 +1140,7 @@ BlueXP IAM 提供更精细的资源和权限管理：
 
 
 
+[[private-mode-release-3-9-48]]
 === 私人模式发布（3.9.48）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -1049,10 +1162,12 @@ BlueXP IAM 提供更精细的资源和权限管理：
 |===
 
 
+[[13-january-2025]]
 == 2025年1月13日
 
 
 
+[[connector-3-9-48]]
 === 连接器 3.9.48
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -1061,6 +1176,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[bluexp-identity-and-access-management]]
 === BlueXP身份和访问管理
 
 * 资源页面现在显示未发现的资源。未发现的资源是BlueXP知道但您尚未为其创建工作环境的存储资源。例如，数字顾问中显示的尚未具有工作环境的资源在资源页面上显示为未发现的资源。
@@ -1069,6 +1185,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[create-a-support-case-for-additional-bluexp-services]]
 === 为其他BlueXP服务创建支持案例
 
 注册BlueXP以获得支持后，您可以直接从BlueXP基于 Web 的控制台创建支持案例。创建案例时，您需要选择与该问题相关的服务。
@@ -1083,10 +1200,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["了解有�
 
 
 
+[[16-december-2024]]
 == 2024年12月16日
 
 
 
+[[new-secure-endpoints-to-obtain-connector-images]]
 === 用于获取连接器图像的新安全端点
 
 当您安装连接器或发生自动升级时，连接器会联系存储库来下载用于安装或升级的映像。默认情况下，连接器始终联系以下端点：
@@ -1124,10 +1243,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["了解有�
 
 
 
+[[09-december-2024]]
 == 2024年12月9日
 
 
 
+[[connector-3-9-47]]
 === 连接器 3.9.47
 
 此版本的BlueXP连接器包括错误修复和对连接器安装期间联系的端点的更改。
@@ -1141,16 +1262,19 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["了解有�
 
 
 
+[[bluexp-identity-and-access-management]]
 === BlueXP身份和访问管理
 
 连接器页面仅列出当前可用的连接器。它不再显示您已删除的连接器。
 
 
 
+[[26-november-2024]]
 == 2024年11月26日
 
 
 
+[[private-mode-release-3-9-46]]
 === 私人模式发布（3.9.46）
 
 新的私人模式版本现已可从 https://mysupport.netapp.com/site/downloads["NetApp 支持站点"^]
@@ -1187,10 +1311,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["了解有�
 
 
 
+[[11-november-2024]]
 == 2024年11月11日
 
 
 
+[[connector-3-9-46]]
 === 连接器 3.9.46
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -1199,6 +1325,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[id-for-iam-projects]]
 === IAM 项目的 ID
 
 您现在可以从BlueXP身份和访问管理中查看项目的 ID。您可能需要在进行 API 调用时使用该 ID。
@@ -1207,20 +1334,25 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-rename-organization.ht
 
 
 
+[[10-october-2024]]
 == 2024年10月10日
 
 
 
+[[connector-3-9-45-patch]]
 === 连接器 3.9.45 补丁
 
 此补丁包括错误修复。
 
 
 
+[[07-october-2024]]
 == 2024年10月7日
 
 
 
+[[bluexp-identity-and-access-management]]
+[[iam]]
 === BlueXP身份和访问管理
 
 BlueXP身份和访问管理 (IAM) 是一种新的资源和访问管理模型，它取代并增强了在标准模式下使用BlueXP时BlueXP帐户提供的先前功能。
@@ -1274,6 +1406,7 @@ BlueXP IAM 提供更精细的资源和权限管理：
 
 
 
+[[connector-3-9-45]]
 === 连接器 3.9.45
 
 此版本包括扩展的操作系统支持和错误修复。
@@ -1287,6 +1420,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 
 
+[[support-for-selinux-with-rhel-hosts]]
 === RHEL 主机支持 SELinux
 
 BlueXP现在支持在强制模式或许可模式下启用 SELinux 的 Red Hat Enterprise Linux 主机的连接器。
@@ -1303,10 +1437,12 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 
 
 
+[[30-september-2024]]
 == 2024年9月30日
 
 
 
+[[private-mode-release-3-9-44]]
 === 私人模式发布（3.9.44）
 
 现在可以从NetApp支持站点下载新的私有模式版本。
@@ -1358,10 +1494,12 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 
 
 
+[[09-september-2024]]
 == 2024年9月9日
 
 
 
+[[connector-3-9-44]]
 === 连接器 3.9.44
 
 此版本包括对 Docker Engine 26 的支持、对 SSL 证书的增强以及错误修复。
@@ -1386,6 +1524,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 
 
+[[support-for-rhel-9-4]]
 === 支持 RHEL 9.4
 
 现在，在标准模式或受限模式下使用BlueXP时， BlueXP支持在 Red Hat Enterprise Linux 9.4 主机上安装连接器。
@@ -1402,6 +1541,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[support-for-podman-4-9-4-with-all-rhel-versions]]
 === 所有 RHEL 版本均支持 Podman 4.9.4
 
 Podman 4.9.4 现已支持所有受支持的 Red Hat Enterprise Linux 版本。版本 4.9.4 之前仅支持 RHEL 8.10。
@@ -1414,6 +1554,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[updated-aws-and-azure-permissions]]
 === 更新了 AWS 和 Azure 权限
 
 我们更新了 Connector 的 AWS 和 Azure 策略，以删除不再需要的权限。这些权限与 Azure 和 AWS 中的 BlueXP 边缘缓存以及 Kubernetes 集群的发现和管理相关。
@@ -1424,10 +1565,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[22-august-2024]]
 == 2024年8月22日
 
 
 
+[[connector-3-9-43-patch]]
 === 连接器 3.9.43 补丁
 
 我们更新了连接器以支持Cloud Volumes ONTAP 9.15.1 版本。
@@ -1448,10 +1591,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[8-august-2024]]
 == 2024年8月8日
 
 
 
+[[connector-3-9-43]]
 === 连接器 3.9.43
 
 此版本包含一些小的改进和错误修复。
@@ -1460,6 +1605,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[updated-cpu-and-ram-requirements]]
 === 更新了 CPU 和 RAM 要求
 
 为了提供更高的可靠性并提高BlueXP和 Connector 的性能，我们现在需要为 Connector 虚拟机提供额外的 CPU 和 RAM：
@@ -1479,22 +1625,26 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[support-for-podman-4-9-4-with-rhel-8-10]]
 === 支持 RHEL 8.10 的 Podman 4.9.4
 
 现在，在 Red Hat Enterprise Linux 8.10 主机上安装连接器时支持 Podman 版本 4.9.4。
 
 
 
+[[user-validation-for-identity-federation]]
 === 身份联合的用户验证
 
 如果您将身份联合与BlueXP结合使用，则每个首次登录BlueXP 的用户都需要填写一份快速表格来验证其身份。
 
 
 
+[[31-july-2024]]
 == 2024年7月31日
 
 
 
+[[private-mode-release-3-9-42]]
 === 私人模式发布（3.9.42）
 
 现在可以从NetApp支持站点下载新的私有模式版本。
@@ -1552,10 +1702,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[15-july-2024]]
 == 2024年7月15日
 
 
 
+[[support-for-rhel-8-10]]
 === 支持 RHEL 8.10
 
 BlueXP现在支持在使用标准模式或受限模式时在 Red Hat Enterprise Linux 8.10 主机上安装连接器。
@@ -1566,10 +1718,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[8-july-2024]]
 == 2024年7月8日
 
 
 
+[[connector-3-9-42]]
 === 连接器 3.9.42
 
 此版本包括一些小改进、错误修复以及对 AWS 加拿大西部（卡尔加里）地区连接器的支持。
@@ -1578,6 +1732,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 
 
+[[updated-docker-engine-requirements]]
 === 更新了 Docker Engine 要求
 
 当连接器安装在 Ubuntu 主机上时，Docker Engine 的最低支持版本现在为 23.0.6。之前是 19.3.1。
@@ -1588,16 +1743,19 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 
 
+[[email-verification-now-required]]
 === 现在需要电子邮件验证
 
 现在，注册BlueXP 的新用户需要验证他们的电子邮件地址才能登录。
 
 
 
+[[12-june-2024]]
 == 2024年6月12日
 
 
 
+[[connector-3-9-41]]
 === 连接器 3.9.41
 
 BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
@@ -1606,6 +1764,7 @@ BlueXP Connector 的此版本包含一些小的安全改进和错误修复。
 
 
 
+[[end-of-support-for-rhel-7-and-centos-7]]
 === 终止对 RHEL 7 和 CentOS 7 的支持
 
 2024 年 6 月 30 日，RHEL 7 达到维护终止 (EOM)，而 CentOS 7 达到生命周期终止 (EOL)。  NetApp将于 2024 年 6 月 30 日停止对这些 Linux 发行版上的代理的支持。
@@ -1635,10 +1794,12 @@ https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-e
 
 
 
+[[4-june-2024]]
 == 2024年6月4日
 
 
 
+[[private-mode-release-3-9-40]]
 === 私人模式发布（3.9.40）
 
 现在可以从NetApp支持站点下载新的私有模式版本。此版本包括支持私人模式的以下版本的BlueXP服务。

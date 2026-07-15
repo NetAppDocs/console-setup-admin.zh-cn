@@ -28,6 +28,7 @@ NOTE: 在与其管理的 Cloud Volumes ONTAP 系统相同的 Azure 区域或在 
 
 
 
+[[step-1-review-host-requirements]]
 == 步骤 1：查看主机要求
 
 控制台代理软件必须在满足特定操作系统要求、RAM 要求、端口要求等的主机上运行。
@@ -154,6 +155,8 @@ Docker Engine 23.0.6 至 28.0.0。
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == 步骤 2：安装 Podman 或 Docker Engine
 
 根据您的操作系统，安装代理之前需要 Podman 或 Docker Engine。
@@ -339,6 +342,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == 步骤 3：设置网络
 
 确保您计划安装控制台代理的网络位置支持以下要求。满足这些要求使控制台代理能够管理混合云环境中的资源和流程。
@@ -458,6 +462,7 @@ link:reference-networking-saas-console.html["为 NetApp Console 准备网络"]�
 
 
 
+[[step-4-set-up-console-agent-deployment-permissions]]
 == 步骤 4：设置控制台代理部署权限
 
 您需要使用以下选项之一向控制台代理提供 Azure 权限：
@@ -669,6 +674,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 ====
 
 
+[[step-5-install-the-console-agent]]
 == 步骤 5：安装控制台代理
 
 前提条件完成后，您可以在自己的 Linux 主机上手动安装该软件。
@@ -835,6 +841,7 @@ https://_ipaddress_[]
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == 步骤 6：提供对NetApp Console的权限
 
 现在您已经安装了控制台代理，您需要为控制台代理提供您之前设置的 Azure 权限。提供权限使控制台能够管理 Azure 中的数据和存储基础结构。

@@ -20,12 +20,14 @@ summary: 添加文件夹和项目，以匹配您的业务结构。创建文件�
 
 
 
+[[using-folders-and-projects-to-organize-resources]]
 == 使用文件夹和项目来组织资源
 
 在NetApp Console中，组织包含文件夹和项目，可帮助您组织资源。文件夹可以帮助您对相关项目进行分组，项目可以帮助您管理资源和成员访问权限。
 
 
 
+[[folders]]
 === 文件夹
 
 文件夹可以帮助您整理相关项目。您可以创建嵌套文件夹来表示组织结构的不同层级。例如，您可以为每个业务部门创建一个顶级文件夹，然后在该业务部门内为不同的团队创建子文件夹。然后，您可以在文件夹内创建项目。
@@ -64,6 +66,7 @@ image:diagram-iam-resource-association-folder-3.png["一张图表，显示一个
 ====
 
 
+[[projects]]
 === 项目
 
 将资源与项目关联起来，以便成员进行管理。资源必须与项目关联才能进行管理和用户访问。
@@ -74,6 +77,7 @@ image:diagram-iam-resource-association-folder-3.png["一张图表，显示一个
 
 
 
+[[add-a-folder-or-project]]
 == 添加文件夹或项目
 
 添加项目以管理资源，添加文件夹以对相关项目进行分组。创建新组织时，控制台会包含一个项目。
@@ -107,6 +111,7 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[rename-a-folder-or-project]]
 == 重命名文件夹或项目
 
 根据需要重命名文件夹或项目。重命名不会影响相关资源或成员访问权限。
@@ -118,6 +123,7 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[delete-a-folder-or-project]]
 == 删除文件夹或项目
 
 删除不再需要的文件夹和项目，例如团队重组或项目完成后。
@@ -131,6 +137,8 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[view-the-resources-associated-with-a-folder-or-project]]
+[[view-associated-resources-members]]
 == 查看与文件夹或项目关联的资源
 
 查看哪些资源和成员与文件夹或项目相关联。
@@ -152,6 +160,8 @@ image:screenshot-iam-allocated-resources.png["编辑项目页面的屏幕截图�
 
 
 
+[[change-the-resources-associated-with-a-folder-or-project]]
+[[modify-resources]]
 == 更改与文件夹或项目关联的资源
 
 您可以根据组织的需求变化更改与文件夹或项目关联的资源。
@@ -172,6 +182,7 @@ image:screenshot-iam-associate-resources.png["编辑项目页面的屏幕截图�
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == 查看与文件夹或项目关联的成员
 
 您可以从“组织”页面查看与文件夹或项目关联的成员。
@@ -190,6 +201,8 @@ image:screenshot-iam-member-access.png["编辑项目页面的屏幕截图，显�
 
 
 
+[[modify-member-access-to-a-folder-or-project]]
+[[modify-members]]
 == 修改成员对文件夹或项目的访问权限
 
 修改成员访问权限以控制资源访问。请记住，在文件夹级别分配的角色将被所有子项目和文件夹继承。
@@ -211,6 +224,7 @@ image:screenshot-iam-member-access.png["编辑项目页面的屏幕截图，显�
 
 
 
+[[related-information]]
 == 相关信息
 
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身份和访问权限"]

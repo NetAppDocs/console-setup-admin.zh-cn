@@ -20,6 +20,7 @@ summary: 在受限模式下使用NetApp Console时，安装 CA 签名的证书�
 
 
 
+[[install-an-https-certificate]]
 == 安装 HTTPS 证书
 
 安装由 CA 签名的证书，以便安全访问在控制台代理上运行的基于 Web 的控制台。
@@ -82,6 +83,7 @@ image:screenshot_https_cert.gif["屏幕截图：显示安装签名证书后的 H
 
 
 
+[[renew-the-console-https-certificate]]
 == 续订控制台 HTTPS 证书
 
 您应该在代理的 HTTPS 证书到期之前更新它，以确保安全访问。如果您未在证书到期前续订，则当用户使用 HTTPS 访问 Web 控制台时会出现警告。

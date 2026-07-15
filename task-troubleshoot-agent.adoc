@@ -20,6 +20,7 @@ summary: 要解决控制台代理的问题，您可以与NetApp支持人员合�
 
 
 
+[[common-error-messages-and-resolutions]]
 == 常见错误消息和解决方法
 
 此表列出了常见的错误信息以及解决方法：
@@ -76,6 +77,8 @@ summary: 要解决控制台代理的问题，您可以与NetApp支持人员合�
 |===
 
 
+[[check-the-console-agent-status]]
+[[check-agent-status]]
 == 检查控制台代理状态
 
 使用以下命令之一验证 Console 代理。所有服务的状态应为 _Running_。如果不是这种情况，请联系 NetApp 支持。
@@ -109,6 +112,7 @@ podman ps -a
 
 
 
+[[view-the-console-agent-version]]
 == 查看控制台代理版本
 
 查看控制台代理版本以确认升级或与您的NetApp代表共享。
@@ -122,6 +126,7 @@ podman ps -a
 
 
 
+[[validate-that-the-console-agent-meets-requirements]]
 == 验证 Console 代理是否符合要求
 
 Console 代理需要访问某些网络端点，需要打开多个端口，并且必须满足硬件要求。您可以从 Console 或使用代理维护控制台来验证您的 Console 代理是否满足这些要求。
@@ -146,6 +151,8 @@ image:screenshot-agent-validate.png["屏幕截图显示了代理“操作”菜�
 
 
 
+[[console-agent-installation-issues]]
+[[troubleshoot-installation]]
 == 控制台代理安装问题
 
 如果安装失败，请查看报告和日志以解决问题。
@@ -168,10 +175,13 @@ image:screenshot-agent-validate.png["屏幕截图显示了代理“操作”菜�
 ====
 
 
+[[disable-configuration-checks-for-manual-installations]]
+[[disable-config-check]]
 === 禁用手动安装的配置检查
 
 
 
+[[disable-configuration-checks-for-manual-installations]]
 === 禁用手动安装的配置检查
 
 有时您可能需要禁用在安装期间验证出站连接的配置检查。例如，在政府云环境中手动安装代理时，需要禁用配置检查，否则安装将失败。
@@ -206,12 +216,14 @@ systemctl restart netapp-service-manager.service
 
 
 
+[[work-with-netapp-support]]
 == 与NetApp支持部门合作
 
 如果您无法解决 Console 代理的问题，您可能需要联系 NetApp 支持。NetApp 支持可能会要求提供 Console 代理 ID 或要求您向他们发送 Console 代理日志（如果他们还没有的话）。
 
 
 
+[[find-the-console-agent-id]]
 === 查找控制台代理 ID
 
 为了帮助您入门，您可能需要控制台代理的系统 ID。该 ID 通常用于许可和故障排除目的。
@@ -232,6 +244,7 @@ image:screenshot-system-id.png["显示支持仪表板中出现的系统 ID 的�
 
 
 
+[[download-or-send-an-autosupport-message]]
 === 下载或发送AutoSupport消息
 
 如果您遇到问题，NetApp 可能会要求您向 NetApp 支持发送一条 AutoSupport 消息以进行故障排除。
@@ -251,6 +264,7 @@ NOTE: 由于负载平衡， NetApp Console最多需要五个小时才能发送Au
 
 
 
+[[fix-download-failures-when-using-a-google-cloud-nat-gateway]]
 == 修复使用 Google Cloud NAT 网关时下载失败的问题
 
 控制台代理会自动下载Cloud Volumes ONTAP 的软件更新。如果您的配置使用 Google Cloud NAT 网关，则可能导致下载失败。您可以通过限制软件映像划分的部分数来解决此问题。此步骤必须使用 API 完成。
@@ -276,6 +290,7 @@ https://docs.netapp.com/us-en/console-automation/cm/api_ref_resources.html#occmc
 
 
 
+[[get-help-from-the-netapp-knowledge-base]]
 == 从NetApp知识库获取帮助
 
 https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki["查看NetApp支持团队创建的故障排除信息"] 。

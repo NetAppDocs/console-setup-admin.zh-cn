@@ -18,6 +18,7 @@ summary: 您可以使用NetApp Console管理 AWS 凭证和市场订阅，通过�
 
 
 
+[[initial-aws-credentials]]
 == 初始 AWS 凭证
 
 从 Console 部署 Console 代理时，需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署 Console 代理的权限。所需的权限列在link:task-install-agent-aws-console.html#aws-permissions-agent["AWS代理部署策略"]中。
@@ -34,6 +35,7 @@ image:screenshot_accounts_select_aws.gif["显示“详细信息和凭证”页�
 
 
 
+[[additional-aws-credentials]]
 == 额外的 AWS 凭证
 
 在以下情况下，您可能会向控制台添加其他 AWS 凭证：
@@ -47,6 +49,7 @@ image:screenshot_accounts_select_aws.gif["显示“详细信息和凭证”页�
 
 
 
+[[add-aws-credentials-to-use-a-console-agent-with-another-aws-account]]
 === 添加 AWS 凭证以将控制台代理与另一个 AWS 账户一起使用
 
 要将控制台与额外的 AWS 账户一起使用，请提供 AWS 密钥或受信任账户中角色的 ARN。下图显示了两个附加账户，一个通过受信任账户中的 IAM 角色提供权限，另一个通过 IAM 用户的 AWS 密钥提供权限：
@@ -63,6 +66,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何将 AW
 
 
 
+[[add-aws-credentials-to-create-a-console-agent]]
 === 添加 AWS 凭证以创建控制台代理
 
 添加 AWS 凭证即可获得创建控制台代理的权限。
@@ -71,6 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何将 AW
 
 
 
+[[add-aws-credentials-for-fsx-for-ontap]]
 === 为 FSx for ONTAP添加 AWS 凭证
 
 将 AWS 凭证添加到控制台以提供创建和管理 FSx for ONTAP系统所需的权限。
@@ -79,6 +84,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == 凭证和市场订阅
 
 您必须将添加到控制台代理的凭证与 AWS Marketplace 订阅关联起来，才能按小时费率 (PAYGO) 支付Cloud Volumes ONTAP费用，并通过年度合同支付其他NetApp数据服务费用。link:task-adding-aws-accounts.html#subscribe["了解如何关联 AWS 订阅"]。
@@ -91,12 +97,14 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 
 
+[[faq]]
 == 常见问题解答
 
 以下问题与凭证和订阅有关。
 
 
 
+[[how-can-i-securely-rotate-my-aws-credentials]]
 === 如何安全地轮换我的 AWS 凭证？
 
 如上文所述，控制台允许您通过几种方式提供 AWS 凭证：与控制台代理关联的 IAM 角色、在受信任的账户中承担 IAM 角色或提供 AWS 访问密钥。
@@ -107,6 +115,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 
 
+[[can-i-change-the-aws-marketplace-subscription-for-cloud-volumes-ontap-systems]]
 === 我可以更改Cloud Volumes ONTAP系统的 AWS Marketplace 订阅吗？
 
 是的，你可以。当您更改与一组凭证关联的 AWS Marketplace 订阅时，所有现有和新的Cloud Volumes ONTAP系统都将根据新订阅收费。
@@ -115,6 +124,7 @@ link:task-adding-aws-accounts.html#subscribe["了解如何关联 AWS 订阅"] �
 
 
 
+[[can-i-add-multiple-aws-credentials-each-with-different-marketplace-subscriptions]]
 === 我可以添加多个 AWS 凭证，每个凭证都有不同的市场订阅吗？
 
 属于同一 AWS 账户的所有 AWS 凭证都将与同一个 AWS Marketplace 订阅相关联。
@@ -123,12 +133,14 @@ link:task-adding-aws-accounts.html#subscribe["了解如何关联 AWS 订阅"] �
 
 
 
+[[can-i-move-existing-cloud-volumes-ontap-systems-to-a-different-aws-account]]
 === 我可以将现有的Cloud Volumes ONTAP系统移动到不同的 AWS 账户吗？
 
 不可以，无法将与您的Cloud Volumes ONTAP系统关联的 AWS 资源移动到其他 AWS 账户。
 
 
 
+[[how-do-credentials-work-for-marketplace-deployments-and-on-premises-deployments]]
 === 凭证如何用于市场部署和本地部署？
 
 以上各节介绍了 Console 代理的建议部署方法，该方法来自 Console。您还可以从 AWS Marketplace 在 AWS 中部署代理，也可以在您自己的 Linux 主机或 vCenter 中手动安装 Console 代理软件。

@@ -18,6 +18,7 @@ summary: 以受限模式部署控制台代理，以便您可以在有限的出�
 
 
 
+[[step-1-install-the-console-agent]]
 == 步骤 1：安装控制台代理
 
 从云提供商的市场安装控制台代理或在 Linux 主机上手动安装。
@@ -354,6 +355,7 @@ dns_bind_port = 54
 ====
 
 
+[[step-2-set-up-netapp-console]]
 == 第 2 步：设置NetApp Console
 
 首次访问控制台时，系统会提示您为控制台代理选择一个组织，并需要启用受限模式。
@@ -391,6 +393,7 @@ dns_bind_port = 54
 
 
 
+[[step-3-provide-permissions-to-the-console-agent]]
 == 步骤 3：向控制台代理提供权限
 
 如果您是从 Azure Marketplace 或手动安装的控制台代理，则需要授予您之前设置的权限。

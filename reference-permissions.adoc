@@ -18,12 +18,14 @@ summary: 要使用NetApp Console功能和服务，您需要提供权限，以便
 
 
 
+[[aws-permissions]]
 == AWS 权限
 
 NetApp Console需要控制台代理和各个服务的 AWS 权限。
 
 
 
+[[console-agents]]
 === 控制台代理
 
 [cols="20,60,20"]
@@ -35,6 +37,7 @@ NetApp Console需要控制台代理和各个服务的 AWS 权限。
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -46,6 +49,7 @@ NetApp Console需要控制台代理和各个服务的 AWS 权限。
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 [cols="20,60,20"]
@@ -57,6 +61,7 @@ NetApp Console需要控制台代理和各个服务的 AWS 权限。
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -74,6 +79,7 @@ NetApp Console需要控制台代理和各个服务的 AWS 权限。
 |===
 
 
+[[fsx-for-ontap]]
 === 适用于ONTAP的 FSx
 
 [cols="20,60,20"]
@@ -85,6 +91,7 @@ NetApp Console需要控制台代理和各个服务的 AWS 权限。
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]
@@ -109,12 +116,14 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 |===
 
 
+[[azure-permissions]]
 == Azure 权限
 
 控制台需要控制台代理和各个服务的 Azure 权限。
 
 
 
+[[console-agent]]
 === 控制台代理
 
 [cols="20,60,20"]
@@ -137,6 +146,7 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -160,6 +170,7 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -171,12 +182,14 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[google-cloud-permissions]]
 == Google Cloud 权限
 
 控制台需要控制台代理和各个服务的 Google Cloud 权限。
 
 
 
+[[console-agents]]
 === 控制台代理
 
 [cols="20,60,20"]
@@ -191,6 +204,7 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -215,6 +229,7 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -229,12 +244,14 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[storagegrid-permissions]]
 == StorageGRID权限
 
 控制台需要两项服务的StorageGRID权限。
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -246,6 +263,7 @@ link:reference-permissions-azure.html["控制台代理的 Azure 权限"]
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]

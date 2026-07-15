@@ -18,6 +18,7 @@ summary: 有关 NetApp Console 中身份和访问管理以及基于角色的访�
 
 
 
+[[getting-started]]
 == 入门指南
 
 .创建新的 NetApp Console 组织后，设置 IAM 的第一步是什么？
@@ -31,6 +32,7 @@ summary: 有关 NetApp Console 中身份和访问管理以及基于角色的访�
 
 
 
+[[resource-hierarchy-organizations-folders-and-projects]]
 == 资源层次结构：组织、文件夹和项目
 
 .NetApp Console IAM 中的文件夹和项目有什么区别？
@@ -56,6 +58,7 @@ summary: 有关 NetApp Console 中身份和访问管理以及基于角色的访�
 
 
 
+[[roles-and-permissions]]
 == 角色和权限
 
 .组织管理员与文件夹或项目管理员有什么区别？
@@ -72,6 +75,7 @@ summary: 有关 NetApp Console 中身份和访问管理以及基于角色的访�
 
 
 
+[[managing-members-and-access]]
 == 管理成员和访问
 
 .在将用户添加到我的 NetApp Console 组织之前必须执行哪些操作？
@@ -88,6 +92,7 @@ NetApp 建议为这些用户分配最低访问角色，例如 Organization viewe
 
 
 
+[[console-agents]]
 == 控制台代理
 
 .Console 代理创建后会发生什么，它可以用于其他项目吗？
@@ -95,6 +100,7 @@ Console 代理最初绑定到创建它们的项目。创建后，管理员可以
 
 
 
+[[related-information]]
 == 相关信息
 
 * link:concept-identity-and-access-management.html["了解NetApp Console身份和访问管理"]

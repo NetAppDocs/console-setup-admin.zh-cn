@@ -19,6 +19,7 @@ summary: 如果需要，您可以更改NetApp Console组织的名称。
 
 
 
+[[rename-your-organization]]
 == 重命名您的组织
 
 您可以重命名组织。如果您支持多个组织，这将非常有用。
@@ -35,6 +36,7 @@ image:screenshot-iam-edit-organization.png["显示操作图标和\"编辑组织\
 
 
 
+[[get-the-organization-id]]
 == 获取组织 ID
 
 组织 ID 用于与控制台的某些集成。
@@ -48,6 +50,8 @@ image:screenshot-iam-edit-organization.png["显示操作图标和\"编辑组织\
 
 
 
+[[obtain-the-id-for-a-project]]
+[[project-id]]
 == 获取项目ID
 
 如果您使用 API，则需要获取项目的 ID。例如，创建Cloud Volumes ONTAP系统时。

@@ -29,6 +29,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[access-the-vm-maintenance-console]]
 == 访问虚拟机维护控制台
 
 您可以从 vSphere 客户端访问维护控制台。
@@ -42,6 +43,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[change-the-maint-user-password]]
 === 修改主用户密码
 
 您可以更改 `maint`用户。
@@ -57,6 +59,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[increase-the-cpu-or-ram-of-the-vm-instance]]
 === 增加虚拟机实例的 CPU 或 RAM
 
 您可以增加托管控制台代理的 VM 实例的 CPU 或 RAM。
@@ -87,6 +90,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[view-network-settings-for-the-agent-vm]]
 === 查看代理虚拟机的网络设置
 
 查看 vSphere 客户端中代理虚拟机的网络设置，以确认或排除网络问题。您只能查看（不更新）以下网络设置：IP 地址和 DNS 详细信息。
@@ -102,6 +106,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[update-the-static-routes-for-the-agent-vm]]
 === 更新代理虚拟机的静态路由
 
 根据需要添加、更新或删除代理虚拟机的静态路由。
@@ -120,6 +125,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[update-domain-search-settings-for-the-agent-vm]]
 === 更新代理虚拟机的域搜索设置
 
 您可以更新代理虚拟机的搜索域设置。
@@ -138,6 +144,8 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[access-the-agent-diagnostic-tools]]
+[[connect-vcenter-host]]
 === 访问代理诊断工具
 
 访问诊断工具来解决控制台代理的问题。  NetApp支持可能会在解决问题时要求您执行此操作。
@@ -153,6 +161,7 @@ summary: 您可以在部署 Console 代理后对现有 vCenter 或 ESXi 主机�
 
 
 
+[[access-the-agent-diagnostic-tools-remotely]]
 === 远程访问代理诊断工具
 
 您可以使用 Putty 等工具远程访问诊断工具。通过分配一次性密码启用对代理 VM 的 SSH 访问。

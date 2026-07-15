@@ -22,6 +22,7 @@ Data Classification 支持两个角色：
 
 
 
+[[compliance-admin]]
 == 合规管理员
 
 Compliance admin 角色仅在组织级别工作，以管理对 Data Classification 资源的访问。如果用户的职责小于 Organization admin，则他们必须具有 Compliance admin 角色才能安装 Data Classification。
@@ -34,12 +35,14 @@ NOTE: Compliance 管理员已添加到版本 1.54 的 Data Classification 中。
 
 
 
+[[classification-viewer]]
 == 分类查看器
 
 Classification 查看器专为需要访问 Data Classification 中扫描结果但不需要访问配置资源的用户而设计。具有 Classification 查看器角色的用户可以查看映射和完整扫描的结果，以评估存储节省或潜在数据风险的区域。具有 Classification 查看器角色的用户还可以为他们有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。
 
 
 
+[[more-information]]
 == 更多信息
 
 * link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["了解 NetApp Data Classification"^]

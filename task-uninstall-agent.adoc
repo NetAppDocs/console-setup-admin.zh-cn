@@ -18,6 +18,7 @@ summary: 卸载 Console 代理以解决问题或将其从主机中永久删除�
 
 
 
+[[uninstall-the-agent-when-it-has-outbound-connectivity]]
 == 当代理具有出站连接时将其卸载
 
 如果您使用的是标准模式或受限模式（换句话说，代理主机具有出站连接），那么您应该按照以下步骤卸载代理。
@@ -35,6 +36,7 @@ _silent_ 运行脚本而不提示您确认。
 
 
 
+[[uninstall-the-agent-when-it-has-no-outbound-connectivity]]
 == 在没有出站连接时卸载代理
 
 如果代理没有出站连接（例如，在专用模式下），则必须从主机中手动删除代理软件。
@@ -71,6 +73,7 @@ docker system prune -a
 
 
 
+[[remove-console-agents-from-the-console]]
 == 从控制台中删除控制台代理
 
 如果您删除了代理虚拟机或卸载了代理，则应将其从控制台的代理列表中删除。删除代理虚拟机或卸载代理软件后，代理在控制台中会显示“已断开连接”的状态。

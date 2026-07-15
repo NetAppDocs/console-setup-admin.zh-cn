@@ -18,6 +18,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp Console具有在您的 AWS �
 
 
 
+[[overview]]
 == 概述
 
 您可以将 AWS 凭证添加到现有的控制台代理或直接添加到控制台：
@@ -38,6 +39,7 @@ summary: 添加和管理 AWS 凭证，以便NetApp Console具有在您的 AWS �
 
 
 
+[[how-to-rotate-credentials]]
 == 如何轮换凭证
 
 NetApp Console允许您通过几种方式提供 AWS 凭证：与代理实例关联的 IAM 角色、在受信任的帐户中承担 IAM 角色或提供 AWS 访问密钥。link:concept-accounts-aws.html["了解有关 AWS 凭证和权限的更多信息"] 。
@@ -48,6 +50,8 @@ NetApp Console允许您通过几种方式提供 AWS 凭证：与代理实例关�
 
 
 
+[[add-additional-credentials-to-a-console-agent]]
+[[add-credentials-agent-aws]]
 == 向控制台代理添加附加凭据
 
 向控制台代理添加额外的 AWS 凭证，以便它具有管理公共云环境中的资源和流程所需的权限。您可以提供另一个账户中的 IAM 角色的 ARN，也可以提供 AWS 访问密钥。
@@ -56,6 +60,7 @@ link:concept-accounts-aws.html["了解NetApp Console如何使用 AWS 凭证和�
 
 
 
+[[grant-permissions]]
 === 授予权限
 
 在将 AWS 凭证添加到控制台代理之前授予权限。这些权限允许控制台代理管理该 AWS 账户内的资源和流程。您可以使用受信任账户或 AWS 密钥中角色的 ARN 来提供权限。
@@ -118,6 +123,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 
 
+[[add-the-credentials-to-an-existing-agent]]
 === 将凭证添加到现有代理
 
 为 AWS 账户提供所需权限后，您可以将该账户的凭证添加到现有代理。这使您可以使用相同的代理在该帐户中启动Cloud Volumes ONTAP系统。
@@ -148,12 +154,15 @@ image:screenshot_accounts_switch_aws.png["屏幕截图显示在“详细信息�
 
 
 
+[[add-credentials-to-the-console-for-creating-a-console-agent]]
+[[add-aws-credentials-agent-creation]]
 == 将凭据添加到控制台以创建控制台代理
 
 通过提供 IAM 角色的 ARN 来添加 AWS 凭证，该角色授予创建控制台代理所需的权限。您可以在创建新代理时选择这些凭据。
 
 
 
+[[set-up-the-iam-role]]
 === 设置 IAM 角色
 
 设置 IAM 角色，使 NetApp Console 软件即服务 (SaaS) 应用程序能够承担该角色。
@@ -207,6 +216,7 @@ IAM 角色现在具有所需的权限。<<add-the-credentials,您现在可以将
 
 
 
+[[add-the-credentials]]
 === 添加凭据
 
 为 IAM 角色提供所需的权限后，将角色 ARN 添加到控制台。
@@ -230,12 +240,15 @@ image:screenshot-settings-icon-organization.png["显示控制台右上角的“�
 
 
 
+[[add-credentials-to-the-console-for-amazon-fsx-for-ontap]]
 == 向Amazon FSx for ONTAP控制台添加凭证
 
 有关详细信息，请参阅  https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 控制台文档"^]
 
 
 
+[[configure-an-aws-subscription]]
+[[subscribe]]
 == 配置 AWS 订阅
 
 添加 AWS 凭证后，您可以使用这些凭证配置 AWS Marketplace 订阅。通过订阅，您可以按小时费率（PAYGO）或使用年度合同支付NetApp数据服务和Cloud Volumes ONTAP 的费用。
@@ -290,6 +303,7 @@ image:screenshot_aws_configure_subscription.png["一组现有凭证的操作菜�
 
 
 
+[[associate-an-existing-subscription-with-your-organization]]
 == 将现有订阅与您的组织关联
 
 从 AWS Marketplace 订阅时，流程中的最后一步是将订阅与您的组织关联。如果您未完成此步骤，则无法将订阅用于您的组织。
@@ -368,6 +382,7 @@ image:screenshot-credentials-with-subscription.png["控制台帐户凭证页面�
 
 
 
+[[edit-credentials]]
 == 编辑凭据
 
 通过更改帐户类型（AWS 密钥或承担角色）、编辑名称或更新凭证本身（密钥或角色 ARN）来编辑您的 AWS 凭证。
@@ -383,6 +398,7 @@ NOTE: 您无法编辑与控制台代理实例或Amazon FSx for ONTAP实例关联
 
 
 
+[[delete-credentials]]
 == 删除凭据
 
 如果您不再需要一组凭证，您可以删除它们。您只能删除与系统无关的凭据。

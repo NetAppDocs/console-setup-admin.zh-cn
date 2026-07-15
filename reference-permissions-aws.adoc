@@ -18,6 +18,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
 
 
 
+[[iam-policies]]
 == IAM 策略
 
 下面提供的 IAM 策略提供了控制台代理根据您的 AWS 区域管理公共云环境内的资源和流程所需的权限。
@@ -745,12 +746,14 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
 ====
 
 
+[[how-the-aws-permissions-are-used]]
 == 如何使用 AWS 权限
 
 以下部分介绍了如何使用每个NetApp Console管理或数据服务的权限。如果您的公司政策规定仅在需要时提供权限，则此信息会很有帮助。
 
 
 
+[[amazon-fsx-for-ontap]]
 === 适用于ONTAP 的Amazon FSx
 
 控制台代理发出以下 API 请求来管理Amazon FSx for ONTAP文件系统：
@@ -785,6 +788,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
 
 
 
+[[amazon-s3-bucket-discovery]]
 === Amazon S3 存储桶发现
 
 控制台代理发出以下 API 请求来发现 Amazon S3 存储桶：
@@ -793,6 +797,7 @@ s3:获取加密配置
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 该代理发出以下 API 请求来管理 Amazon S3 中的备份：
@@ -886,6 +891,7 @@ s3:获取加密配置
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 代理发出以下 API 请求来部署NetApp Data Classification：
@@ -939,6 +945,7 @@ s3:获取加密配置
 
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 该代理发出以下 API 请求以在 AWS 中部署和管理Cloud Volumes ONTAP 。
@@ -1198,12 +1205,14 @@ s3:获取加密配置
 |===
 
 
+[[change-log]]
 == 更改日志
 
 当添加和删除权限时，我们会在下面的部分中注明。
 
 
 
+[[24-february-2026]]
 === 2026 年 2 月 24 日
 
 数据分类现在需要以下权限：
@@ -1212,6 +1221,7 @@ cloudformation：ListStacks
 
 
 
+[[11-november-2025]]
 === 2025年11月11日
 
 除非您使用旧版索引，否则NetApp Backup and Recovery不再需要以下权限。这些权限已从本页面的策略中移除：
@@ -1229,6 +1239,7 @@ cloudformation：ListStacks
 
 
 
+[[9-september-2024]]
 === 2024年9月9日
 
 由于NetApp Console不再支持NetApp边缘缓存以及 Kubernetes 集群的发现和管理，因此从标准区域的策略 #2 中删除了权限。
@@ -1280,6 +1291,7 @@ cloudformation：ListStacks
 ====
 
 
+[[9-may-2024]]
 === 2024年5月9日
 
 Cloud Volumes ONTAP现在需要以下权限：
@@ -1288,6 +1300,7 @@ ec2：描述可用区域
 
 
 
+[[6-june-2023]]
 === 2023年6月6日
 
 Cloud Volumes ONTAP现在需要以下权限：
@@ -1296,6 +1309,7 @@ kms:生成不带明文的数据密钥
 
 
 
+[[14-february-2023]]
 === 2023年2月14日
 
 NetApp Cloud Tiering现在需要以下权限：

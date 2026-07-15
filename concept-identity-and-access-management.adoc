@@ -29,12 +29,14 @@ image:diagram-iam-resource-hierarchy.png["资源管理组成部分的概念图"]
 
 
 
+[[identity-and-access-management-components]]
 == 身份和访问管理组件
 
 NetApp Console IAM 基于三种类型的组件：定义层次结构的组织组件、在该层次结构中分配的资源以及控制谁可以访问什么的成员和角色。
 
 
 
+[[netapp-console-organizational-components]]
 === NetApp Console 组织组件
 
 组织组件（组织、文件夹和项目）形成一个层次结构，用于确定资源的分组方式和访问权限的委派方式。
@@ -56,6 +58,7 @@ NOTE: 具有 Org admin 角色的用户可以向文件夹添加资源，以将资
 
 
 
+[[resources]]
 === 资源
 
 _resource_ 是 NetApp Console 知道并可以分配给项目的实体。_Resources_ 包括存储系统、Keystone 订阅、某些 NetApp Backup and Recovery 工作负载以及 NetApp Console 代理。
@@ -87,6 +90,7 @@ link:task-iam-associate-agents.html["了解如何将代理商与项目关联起�
 
 
 
+[[members-and-roles]]
 === 成员及角色
 
 成员是组织中的用户和服务帐户。角色定义他们可以执行的操作以及层次结构的哪个级别（组织、文件夹或项目）。
@@ -115,12 +119,14 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[iam-strategy-examples]]
 == IAM 策略示例
 
 正确的 IAM 结构取决于组织的规模和团队的组织方式。以下示例演示了不同的组织如何使用 IAM 层次结构有效地管理访问权限。
 
 
 
+[[small-organization-strategy]]
 === 小型组织战略
 
 对于用户少于 50 人且采用集中式存储管理的组织，可以考虑使用超级管理员和超级查看者角色的简化方法。
@@ -140,6 +146,7 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[multi-regional-enterprise-strategy]]
 === 多区域企业战略
 
 对于拥有区域运营和专业团队的大型组织，应采用层级式方法，用文件夹表示地理或业务单元边界。
@@ -173,6 +180,7 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[departmental-specialization-strategy]]
 === 部门专业化战略
 
 对于拥有需要特定数据服务访问权限的专业团队的组织，应根据职能职责进行有针对性的角色分配。
@@ -194,6 +202,7 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
+[[next-steps-with-iam-in-netapp-console]]
 == NetApp Console中 IAM 的后续步骤
 
 * link:task-iam-get-started.html["开始使用NetApp Console中的 IAM"]

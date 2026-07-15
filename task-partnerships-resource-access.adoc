@@ -23,6 +23,7 @@ summary: 您可以通过为合作伙伴用户分配组织内文件夹和项目�
 
 
 
+[[understand-roles-for-partnership-users]]
 == 了解合作伙伴用户的角色
 
 您可以按照管理自己的角色的方式来管理合作伙伴组织成员的角色。然而，并非所有角色都适合合作伙伴用户。特别是，您不能授予合作伙伴用户允许软件更新的角色。更新ONTAP软件通常需要直接网络访问。
@@ -51,6 +52,7 @@ link:reference-iam-predefined-roles.html["了解有关预定义角色的更多�
 
 
 
+[[add-a-role-to-a-partner-user]]
 == 向合作伙伴用户添加角色
 
 您可以通过向成员添加角色来提供对组织资源的访问权限。分配角色时，您指定一个资源和一个角色。您可以为一个用户分配多个角色。
@@ -82,6 +84,7 @@ link:reference-iam-predefined-roles.html["了解有关预定义角色的更多�
 
 
 
+[[change-or-remove-a-role-from-a-partner-user]]
 == 更改或删除合作伙伴用户的角色
 
 您可以更改或删除分配给合作伙伴组织成员的角色。

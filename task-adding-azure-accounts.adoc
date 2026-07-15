@@ -18,6 +18,7 @@ summary: 添加和管理 Azure 凭据，以便NetApp Console具有在 Azure 订�
 
 
 
+[[overview]]
 == 概述
 
 有两种方法可以在控制台中添加额外的 Azure 订阅和凭据。
@@ -28,6 +29,7 @@ summary: 添加和管理 Azure 凭据，以便NetApp Console具有在 Azure 订�
 
 
 
+[[associate-additional-azure-subscriptions-with-a-managed-identity]]
 == 将其他 Azure 订阅与托管标识关联Associate additional Azure subscriptions with a managed identity
 
 控制台使您能够选择要部署Cloud Volumes ONTAP 的Azure 凭据和 Azure 订阅。除非关联 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["托管标识"^]通过这些订阅。
@@ -65,6 +67,8 @@ image:screenshot_accounts_switch_azure_subscription.gif["屏幕截图显示了�
 
 
 
+[[add-additional-azure-credentials-to-netapp-console]]
+[[add-credentials-azure]]
 == 向NetApp Console添加其他 Azure 凭据
 
 从控制台部署控制台代理时，控制台会在具有所需权限的虚拟机上启用系统分配的托管标识。当您为Cloud Volumes ONTAP创建新系统时，控制台会默认选择这些 Azure 凭据。
@@ -76,6 +80,7 @@ TIP: 如果您在现有系统上手动安装了控制台代理软件，则不会
 
 
 
+[[grant-azure-permissions-using-a-service-principal]]
 === 使用服务主体授予 Azure 权限
 
 控制台需要权限才能在 Azure 中执行操作。您可以通过在 Microsoft Entra ID 中创建和设置服务主体并获取控制台所需的 Azure 凭据来向 Azure 帐户授予所需的权限。
@@ -231,6 +236,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 门户的屏幕截图，
 
 
 
+[[ids]]
 ==== 获取应用程序ID和目录ID
 
 将 Azure 帐户添加到控制台时，您需要提供应用程序（客户端）ID 和应用程序的目录（租户）ID。控制台使用 ID 以编程方式登录。
@@ -269,6 +275,7 @@ image:screenshot_azure_client_secret.gif["Azure 门户的屏幕截图，显示�
 
 
 
+[[add-the-credentials-to-the-console]]
 === 将凭据添加到控制台
 
 为 Azure 帐户提供所需权限后，您可以将该帐户的凭据添加到控制台。完成此步骤后，您可以使用不同的 Azure 凭据启动Cloud Volumes ONTAP 。
@@ -303,12 +310,15 @@ image:screenshot_accounts_switch_azure.gif["屏幕截图显示在“详细信息
 
 
 
+[[manage-existing-credentials]]
 == 管理现有凭证
 
 通过关联 Marketplace 订阅、编辑凭据和删除凭据来管理已添加到控制台的 Azure 凭据。
 
 
 
+[[associate-an-azure-marketplace-subscription-to-credentials]]
+[[subscribe]]
 === 将 Azure 市场订阅关联到凭据
 
 将 Azure 凭据添加到控制台后，您可以将 Azure 市场订阅与这些凭据关联。您可以使用订阅来创建按使用量付费的Cloud Volumes ONTAP系统并访问NetApp数据服务。
@@ -358,6 +368,7 @@ image:screenshot_accounts_switch_azure.gif["屏幕截图显示在“详细信息
 
 
 
+[[edit-credentials]]
 === 编辑凭据
 
 在控制台中编辑您的 Azure 凭据。例如，如果为服务主体应用程序创建了新的密钥，您可以更新客户端密钥。
@@ -371,6 +382,7 @@ image:screenshot_accounts_switch_azure.gif["屏幕截图显示在“详细信息
 
 
 
+[[delete-credentials]]
 === 删除凭据
 
 如果您不再需要一组凭证，您可以删除它们。您只能删除与系统无关的凭据。

@@ -18,6 +18,7 @@ summary: 默认情况下，Digital Advisor 显示与贵公司关联的所有 Net
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 您必须拥有 Organization admin 角色才能验证您的组织。您的用户还必须关联到一个 NetApp 支持站点（NSS）账户。link:task-adding-nss-accounts.html["了解如何关联您的 NSS 账号"].
@@ -27,6 +28,7 @@ NOTE: 如果您的公司只有一个企业帐户，并且您的用户与 NetApp 
 
 
 
+[[verify-your-organization]]
 == 验证您的组织
 
 .步骤

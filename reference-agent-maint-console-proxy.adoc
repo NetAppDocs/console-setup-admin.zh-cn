@@ -18,6 +18,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 
 
+[[access-the-agent-maintenance-console]]
 == 访问代理维护控制台
 
 您可以从 Console 代理主机访问维护控制台。导航到以下目录：
@@ -28,6 +29,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 ----
 
 
+[[view-help-for-any-command]]
 === 查看任何命令的帮助
 
 要查看任何命令的帮助，请附加 `--help`到命令。例如，要查看 `proxy add`命令，使用以下命令：
@@ -38,12 +40,14 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 ----
 
 
+[[proxy-get]]
 == 代理获取
 
 这 `proxy get`该命令显示有关当前透明代理服务器配置的信息。要查看当前透明代理服务器配置，请使用以下命令：
 
 
 
+[[proxy-get-example]]
 === 代理获取示例
 
 [source, cli]
@@ -52,12 +56,14 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 ----
 
 
+[[proxy-add]]
 == 添加代理
 
 这 `proxy add`该命令将代理配置为使用透明代理服务器。
 
 
 
+[[parameters]]
 === 参数
 
 `-c <certificate file>`
@@ -67,6 +73,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 
 
+[[proxy-add-example]]
 === 代理添加示例
 
 要添加透明代理服务器，请使用以下命令，其中 `/home/ubuntu/myCA1.pem`是代理服务器证书文件的路径。证书文件必须为 PEM 格式：
@@ -77,12 +84,14 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 ----
 
 
+[[proxy-update]]
 == 代理更新
 
 这 `proxy update`该命令允许您更新透明代理的证书。
 
 
 
+[[parameters]]
 === 参数
 
 `-c <certificate file>`指定代理服务器证书文件的路径。证书文件必须为PEM格式。
@@ -91,6 +100,7 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 
 
 
+[[proxy-update-example]]
 === 代理更新示例
 
 要更新透明代理服务器的证书，请使用以下命令，其中 `/home/ubuntu/myCA1.pem`是代理服务器的新证书文件的路径。证书文件必须为 PEM 格式：
@@ -101,12 +111,14 @@ summary: 您可以使用控制台代理维护控制台来配置控制台代理�
 ----
 
 
+[[proxy-remove]]
 == 代理移除
 
 这 `proxy remove`该命令从代理中移除透明代理服务器配置。
 
 
 
+[[proxy-remove-example]]
 === 代理移除示例
 
 要删除透明代理服务器，请使用以下命令：

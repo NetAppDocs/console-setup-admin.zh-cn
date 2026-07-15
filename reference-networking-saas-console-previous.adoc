@@ -27,6 +27,8 @@ NOTE: 本主题记录了NetApp Console标准模式 3.9.55 及以下版本所需�
 
 
 
+[[update-your-endpoint-list-to-the-revised-list-for-4-0-0-and-higher]]
+[[update-endpoint-list]]
 == 将您的终端列表更新为 4.0.0 及更高版本的修订列表
 
 从 4.0.0 版本开始，控制台代理需要的端点更少。 4.0.0 之前的现有部署仍然受支持。升级到 4.0.0 或更高版本后，您可以在方便时从允许列表中删除旧端点。
@@ -106,6 +108,7 @@ systemctl status netapp-service-manager.service
 
 
 
+[[endpoints-for-netapp-console-and-console-agents-for-3-9-55-and-below]]
 == 3.9.55 及以下版本的NetApp Console和控制台代理的端点
 
 这些端点用于控制台代理 3.9.55 及以下版本。
@@ -152,6 +155,7 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 |===
 
 
+[[cloud-provider-endpoints-contacted-by-the-console-agent]]
 == 控制台代理联系的云提供商端点
 
 如果控制台代理部署在您的云提供商中，则它们必须能够访问其他端点。
@@ -167,12 +171,14 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == 控制台代理联系的数据服务端点
 
 控制台代理需要额外的出站互联网访问来支持某些NetApp数据服务和Cloud Volumes ONTAP。
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAP的端点
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS 中的Cloud Volumes ONTAP端点"]

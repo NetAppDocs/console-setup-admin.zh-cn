@@ -18,6 +18,7 @@ summary: 了解NetApp Console如何使用 Google Cloud 凭证代表您执行操�
 
 
 
+[[project-and-permissions-for-netapp-console]]
 == NetApp Console的项目和权限
 
 您必须先部署控制台代理，然后才能使用控制台管理 Google Cloud 项目中的资源。代理不能在您的场所或不同的云提供商中运行。
@@ -41,6 +42,7 @@ image:diagram_permissions_gcp.png["概念图描绘了 Google 和服务帐户部�
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == 凭证和市场订阅
 
 当您在 Google Cloud 中部署控制台代理时，控制台会为控制台代理所在项目中的 Google Cloud 服务帐号创建一组默认凭据。这些凭证必须与 Google Cloud Marketplace 订阅相关联，以便您可以支付Cloud Volumes ONTAP和NetApp数据服务的费用。
@@ -56,6 +58,7 @@ link:task-adding-gcp-accounts.html["了解如何关联 Google Cloud Marketplace 
 
 
 
+[[project-for-cloud-volumes-ontap]]
 == Cloud Volumes ONTAP项目
 
 Cloud Volumes ONTAP可以与控制台代理位于同一项目中，也可以位于不同的项目中。要在不同的项目中部署Cloud Volumes ONTAP ，您需要首先将控制台代理服务帐户和角色添加到该项目。
