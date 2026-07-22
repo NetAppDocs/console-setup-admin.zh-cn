@@ -185,15 +185,6 @@ rm /var/run/docker.sock
 您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。
 
 +
-.. 对于 Red Hat Enterprise Linux 9.6：
-+
-[source, cli]
-----
-sudo dnf install podman-5:<version>
-----
-+
-其中 <version> 是您正在安装的 Podman 支持的版本。<<podman-versions,查看支持的 Podman 版本>> 。
-
 .. 适用于 Red Hat Enterprise Linux 9.1 至 9.4：
 +
 [source, cli]

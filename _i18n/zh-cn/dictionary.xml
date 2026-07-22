@@ -5223,9 +5223,7 @@
   <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
   <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">Licenses and subscriptions 文档</block>
   <block id="3dc73d95873fb59ed12df54318d70e6a" category="list-text"><block ref="3dc73d95873fb59ed12df54318d70e6a" category="inline-link-rx"></block></block>
-  <block id="a68eedcba6dbed6fbce0d0156a08917b" category="paragraph">| https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | 在 NetApp Console 中提供功能和服务。</block>
   <block id="a143379fbf8aa8c70a83e2cc997686c2" category="list-text">\https://*.console.netapp.com/cn</block>
-  <block id="d27d491b9a6f2946384b1068e83e3176" category="list-text">\https://components.console.netapp.com</block>
   <block id="d83123cbb0ef00805b8ecdc02f91f2f6" category="list-text">Cloud Build API （使用 Infrastructure Manager 进行私有模式 Cloud Volumes ONTAP 部署时需要）</block>
   <block id="b103df8373177b93ba350f7123e02ddb" category="admonition">下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。</block>
   <block id="e2a0e249f352de2ea956157df300d5c0" category="paragraph">4.4.1 版本同时支持标准模式和受限模式。</block>
@@ -5447,7 +5445,6 @@
   <block id="46152e594769d440fdd2271b8eef67cc" category="list-text">使用 Amazon FSx for NetApp ONTAP 设计、设置和操作关键工作负载，以优化特定应用程序的性能和成本。</block>
   <block id="a84b7ef1efa1290691ba2982da6b70e2" category="section-title">NetApp Console 成本</block>
   <block id="c61697a1a0ac5f10a9f125c5e79f83a1" category="paragraph">NetApp 不对 Console 收费。在云中部署 Console 代理或使用受限模式时会产生成本。一些 NetApp 数据服务也有相关成本。<block ref="737ad53c0691d6484be24092d035e183" category="inline-link-rx"></block></block>
-  <block id="2bfcaebb03e23620a28efcaf5c485bb5" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com</block>
   <block id="b366c1901726ed94faabaca293b342ab" category="cell">cloudbuild.workerpools.get</block>
   <block id="7b28e5df245493d70a91ad50a3ca876a" category="cell">使用 Infrastructure Manager 在 Cloud Volumes ONTAP 系统的专用模式部署和转换期间访问工作池信息。</block>
   <block id="a5bb5562c6a74b17ab2426705833048f" category="cell">cloudbuild.workerpools.list</block>
@@ -6357,4 +6354,8 @@
   <block id="6f9b7785bb9c36940a328cc9b5ee0194" category="cell">提供对 Cloud Volumes ONTAP 信息的只读访问。此角色无法执行任何活动操作。</block>
   <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">2026年7月15日</block>
   <block id="82ee751249da8a12693a499bea6987f2" category="sidebar">Cloud Volumes ONTAP 角色</block>
+  <block id="c642b24062280a73e940087788371986" category="paragraph">| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在 NetApp Console 中提供功能和服务。</block>
+  <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\https://components.console.bluexp.netapp.com</block>
+  <block id="e4f459430f502d8d3158a4b206057282" category="paragraph">NetApp Console 4.9.0 管理包含以下新功能。</block>
+  <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
 </blocks>

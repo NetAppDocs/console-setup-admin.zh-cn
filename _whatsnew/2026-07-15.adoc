@@ -16,6 +16,8 @@
 [[netapp-console-administration]]
 === NetApp Console管理
 
+NetApp Console 4.9.0 管理包含以下新功能。
+
 .支持对 Cloud Volumes ONTAP 进行基于角色的访问控制
 控制台支持基于角色的访问 Cloud Volumes ONTAP。
 
