@@ -29,9 +29,6 @@ NOTE: 当 NetApp Console 处于私有模式时，联盟不可用。link:concept-
 
 与NetApp支持站点联合允许用户使用相同的凭据登录控制台、 Active IQ Digital Advisor和其他相关应用程序。
 
-
-NOTE: 如果您与NetApp支持站点联合，则您不能与您的企业身份管理提供商联合。选择最适合您组织的一种。
-
 .步骤
 . 下载并完成 https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetApp联合申请表"^]。
 . 将表格提交至表格中指定的电子邮件地址。
