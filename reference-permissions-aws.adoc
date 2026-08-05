@@ -124,6 +124,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
@@ -362,6 +363,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -558,6 +560,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -678,6 +681,7 @@ summary: 当NetApp Console在 AWS 中启动代理时，它会将一个策略附�
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -955,7 +959,7 @@ s3:获取加密配置
 | 目的 | 操作 | 用于部署？ | 用于日常运营？ | 用于删除？ 
 
 
-.13+| 为Cloud Volumes ONTAP实例创建和管理 IAM 角色和实例配置文件 | iam:列出实例配置文件 | 是 | 是 | 否 
+.14+| 为Cloud Volumes ONTAP实例创建和管理 IAM 角色和实例配置文件 | iam:列出实例配置文件 | 是 | 是 | 否 
 
 
 | iam：创建角色 | 是 | 否 | 否 
@@ -965,6 +969,9 @@ s3:获取加密配置
 
 
 | iam:PutRolePolicy | 是 | 否 | 否 
+
+
+| iam：TagRole | 是 | 否 | 否 
 
 
 | iam:创建实例配置文件 | 是 | 否 | 否 
