@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-modes.html 
-keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
+keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private, gove 
 summary: 您可以通过 SaaS 应用程序使用 NetApp Console，也可以自己在自己的环境中（云或本地）安装它。 
 ---
 = 了解NetApp Console部署模式

@@ -17,6 +17,8 @@ indexpage:
       url: concept-identity-and-access-management.html
     - title: 了解部署模式
       url: concept-modes.html
+    - title: 比较 NetApp Console 和 NetApp Console 本地部署
+      url: console-differences.html
   - title: 开始使用
     links:
     - title: NetApp Console (SaaS) 入门指南

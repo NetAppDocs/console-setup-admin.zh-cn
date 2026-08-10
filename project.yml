@@ -20,6 +20,8 @@ sidebar:
       url: "/whats-new.html"
     - title: 已知限制
       url: "/reference-limitations.html"
+    - title: 比较 NetApp Console 和 NetApp Console 本地部署
+      url: "/console-differences.html"
   - title: 开始使用
     entries:
     - title: 学习基础知识

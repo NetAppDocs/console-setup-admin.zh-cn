@@ -6358,4 +6358,6 @@
   <block id="e4f459430f502d8d3158a4b206057282" category="paragraph">NetApp Console 4.9.0 管理包含以下新功能。</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
   <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam：TagRole</block>
+  <block id="ac63bb5663971c98e9ad66f59e257a30" category="summary">NetApp Console 是一款 SaaS 应用程序，使用 Console 代理来管理云和本地存储系统。NetApp Console 本地部署是一种自托管的无代理虚拟机，用于企业级 ONTAP 机群管理，具有策略实施、偏差修复和完整的数据主权功能。</block>
+  <block id="e9136b652dc2f76f18a9d738127bb6a3" category="doc">比较 NetApp Console 和 NetApp Console 本地部署</block>
 </blocks>
