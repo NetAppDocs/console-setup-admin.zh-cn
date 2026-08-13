@@ -1,0 +1,25 @@
+= Console 代理 4.10.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-10-0]]
+=== Console 代理 4.10.0
+
+4.10.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复。
+
+
+
+==== 提高云中介的响应速度和可靠性
+
+该服务现在能够更高效地处理集群状态更新，减少间歇性超时和停机时间，并加强 SMaS 关系的自动计划外故障转移中介。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+NetApp Console 4.10.0 管理包括安全修复和错误修复。

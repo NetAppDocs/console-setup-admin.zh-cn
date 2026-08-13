@@ -4,7 +4,7 @@ permalink: reference-ports-azure.html
 keywords: ports, security group, http, https, inbound, outbound 
 summary: 该代理的 Azure 安全组需要同时设置入站和出站规则。当你从 NetApp Console 创建 Console 代理时，NetApp Console 会自动创建此安全组。对于其他安装选项，你需要手动设置此安全组。 
 ---
-= Azure 中的控制台代理安全组规则
+= Azure 中的 NetApp Console 代理安全组规则
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

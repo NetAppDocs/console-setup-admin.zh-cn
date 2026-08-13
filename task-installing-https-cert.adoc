@@ -4,7 +4,7 @@ permalink: task-installing-https-cert.html
 keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
 summary: 在受限模式下使用NetApp Console时，安装 CA 签名的证书以便用户访问基于 Web 的控制台。 
 ---
-= 安装 CA 签名的证书以进行基于 Web 的控制台访问
+= 安装用于 NetApp Console 访问的 CA 签名证书
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

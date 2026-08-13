@@ -4,7 +4,7 @@ permalink: task-partnerships-work.html
 keywords: partner organizations, create partnership, MSPs, service provider access 
 summary: 一旦您在合作伙伴组织中被赋予角色，您就可以切换到该组织并执行您有权执行的操作。 
 ---
-= 在合作组织工作
+= 在 NetApp Console 中的合作伙伴组织中工作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

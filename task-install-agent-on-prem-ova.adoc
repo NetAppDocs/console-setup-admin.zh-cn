@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem-ova.html
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
 summary: 如果您是 VMware 用户，您可以使用 OVA 在 vCenter 中安装 Console 代理。OVA 下载或 URL 可通过 NetApp Console 获得。 
 ---
-= 使用 vCenter 在本地安装 Console 代理
+= 使用 vCenter 在本地安装 NetApp Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-install-agent-google-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: 要使用 Google Cloud 在 Google Cloud 中创建控制台代理，您需要设置网络、准备 Google Cloud 权限、启用 Google Cloud API，然后创建控制台代理。 
 ---
-= 从 Google Cloud 部署 Console 代理
+= 从 Google Cloud 部署 NetApp Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

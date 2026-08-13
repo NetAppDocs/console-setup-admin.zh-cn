@@ -4,7 +4,7 @@ permalink: task-uninstall-agent.html
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
 summary: 卸载 Console 代理以解决问题或将其从主机中永久删除。需要使用的步骤取决于正在使用的部署模式。从环境中删除 Console 代理后，即可将其从 Console 中删除。 
 ---
-= 卸载并删除控制台代理
+= 卸载和删除 NetApp Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

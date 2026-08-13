@@ -4,7 +4,7 @@ permalink: task-federation-saml.html
 keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
 summary: '与您的 SAML 2.0 IdP 提供商联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
 ---
-= 与 SAML 身份提供商联合
+= 将 NetApp Console 与 SAML 身份提供程序联合
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

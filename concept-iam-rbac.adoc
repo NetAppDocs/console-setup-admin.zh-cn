@@ -4,7 +4,7 @@ permalink: concept-iam-rbac.html
 keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console access, organization access, folder access, project access, resource access 
 summary: '使用基于角色的访问控制 (RBAC) 管理用户对NetApp Console的访问，在组织、文件夹或项目级别分配预定义角色。每个角色都授予特定的权限，定义用户在其分配的权限范围内可以执行哪些操作。' 
 ---
-= 了解NetApp Console基于角色的访问控制 (RBAC)
+= 了解 NetApp Console 基于角色的访问控制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

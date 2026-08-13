@@ -4,7 +4,7 @@ permalink: console-differences.html
 keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, autonomous, active directory, bring-your-own-license, local 
 summary: NetApp Console 是一款 SaaS 应用程序，使用 Console 代理来管理云和本地存储系统。NetApp Console 本地部署是一种自托管的无代理虚拟机，用于企业级 ONTAP 机群管理，具有策略实施、偏差修复和完整的数据主权功能。 
 ---
-= 比较 NetApp Console 和 NetApp Console 本地部署
+= NetApp Console 与 NetApp Console 本地部署的区别
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,3 +13,141 @@ summary: NetApp Console 是一款 SaaS 应用程序，使用 Console 代理来�
 :imagesdir: ./media/
 
 
+
+NOTE: 如果您管理云和本地环境并希望由 NetApp 处理平台基础架构，请选择 NetApp Console。如果您管理大型本地 ONTAP 环境并需要完整的数据主权和策略驱动的存储管理，请选择 NetApp Console 本地部署。
+
+
+
+[[netapp-console]]
+== NetApp Console
+
+NetApp 将 NetApp Console 作为 SaaS 应用程序进行托管和维护。您注册后即可立即开始管理存储。要管理存储系统，请在云或本地环境中部署轻量级 Console 代理。代理以出站方式连接到 NetApp Console 平台，NetApp 自动处理平台身份验证、升级和可用性。
+
+NetApp Console 还支持受限模式（安装在您自己的公共云中，出站连接受限）和私有模式（安装在本地或云中，无需连接到 NetApp Console 平台，包括气隙环境）。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解NetApp Console部署模式"]。
+
+NetApp Console 支持最广泛的的存储系统，包括 Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、E-Series、StorageGRID 等云存储以及本地 ONTAP 集群。它提供了对全套 NetApp 数据服务的访问，包括 NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync 以及 NetApp Data Classification。NetApp Console 还提供支持合同功能，例如 Digital Advisor、Lifecycle Planning 和 Sustainability 仪表板。
+
+NetApp Console 最适合管理混合云环境的组织，这些组织需要最多的功能、更少的工作量来保持运行以及灵活的许可。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["了解 NetApp Console^。"]
+
+
+
+[[netapp-console-local-deployment]]
+== NetApp Console 本地部署
+
+NetApp Console 本地部署允许您完全在自己的本地基础架构中运行 NetApp Console 控制平面，管理流量不会离开您的环境。您可以使用虚拟设备映像将 Console 部署为虚拟机，并像 vCenter 环境中的任何其他虚拟机一样对其进行管理。无需 Console 代理。虚拟机直接与您的 ONTAP 集群通信。
+
+虽然 NetApp Console 私有模式也支持气隙和本地部署，但 Console 本地部署专为企业级 ONTAP 机群管理而设计。它增加了在任何 NetApp Console 部署模式下均不可用的功能：
+
+存储类别策略:: 将存储标准一次性定义为可重用的模板，捆绑性能、容量和分层要求。所有配置均使用已批准的类，Console 本地部署持续监控工作负载的合规性并识别偏差。
+设备群管理:: 将集群组织成反映业务结构的文件夹和队列，然后在组织、文件夹或队列范围内委派管理。
+Workload Analyzer:: 将延迟、吞吐量、每秒输入/输出操作数和配置更改随时间进行关联，以便在影响工作负载之前发现性能问题。
+大型语言模型集成:: 连接到您自己的大型语言模型，使用自然语言配置存储、调查警报并获取有关存储环境的上下文答案。
+引导式和自动修复:: 当工作负载偏离其存储类或触发警报时，Console 本地部署会提供 Fix-It 建议。使用引导步骤或一键式自动修复措施，无需手动步骤即可恢复合规性。
+通过电子邮件和 Webhook 发送警报:: 配置电子邮件和 Webhook 通知渠道，以便在存储条件发生变化时向正确的团队发送警报。Webhook 与您现有的监控和事件管理工具集成。
+
+
+控制台本地部署支持本地 ONTAP 集群和 NetApp Backup and Recovery。它与 Active Directory 集成以进行联合身份验证，并支持本地用户的多因素身份验证。
+
+控制台本地部署最适合需要策略驱动的配置、自动合规性检查和完整数据主权的大型本地 ONTAP 环境的组织。
+
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本地部署^。"]
+
+
+
+[[feature-comparison]]
+== 功能对比
+
+
+
+[[storage-management]]
+=== 存储管理
+
+[cols="3,2,2"]
+|===
+| 功能 | NetApp Console | NetApp Console 本地部署 
+
+
+| 本地ONTAP集群 | 是（需要 Console 代理） | 是（来自 Console 虚拟机的直接通信） 
+
+
+| 云存储系统（Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3 及其他） | 是 | 否 
+
+
+| E-Series 和 StorageGRID | 是 | 否 
+
+
+| NetApp Backup and Recovery | 是 | 是 
+
+
+| NetApp Disaster Recovery | 是 | 否 
+
+
+| NetApp Ransomware Resilience | 是 | 否 
+
+
+| NetApp Copy and Sync | 是 | 否 
+
+
+| NetApp Data Classification | 是 | 否 
+
+
+| Digital Advisor，生命周期规划，可持续性 | 是 | 否 
+
+
+| 存储类策略和合规性监控 | 否 | 是 
+
+
+| 引导式和自动修复 | 否 | 是 
+
+
+| 队列管理（文件夹和队列） | 否 | 是 
+
+
+| Workload Analyzer | 否 | 是 
+
+
+| 用于 AI 辅助操作的大型语言模型集成 | 否 | 是 
+|===
+
+
+[[console-setup-and-security]]
+=== Console 设置和安全性
+
+[cols="3,2,2"]
+|===
+| 功能 | NetApp Console | NetApp Console 本地部署 
+
+
+| 部署模式 | 软件即服务，由 NetApp 托管（提供不同的部署模式） | 您自己的基础架构中的自托管虚拟机 
+
+
+| 需要 Console 代理 | 是 | 否 
+
+
+| 软件升级 | 自动，由 NetApp 管理 | 手动 
+
+
+| 用户界面访问 | NetApp Console 应用程序（互联网或虚拟机访问） | 控制台虚拟机（本地，无需互联网） 
+
+
+| 数据主权 | 管理流量流向 NetApp Console 平台 | 没有数据或管理流量离开您的环境 
+
+
+| Active Directory 集成 | 否 | 是 
+
+
+| 身份联合 | 是 | 否 
+
+
+| 多重身份验证（本地用户） | 是 | 是 
+
+
+| 审核日志记录 | 是 | 是 
+
+
+| 许可 | Marketplace 订阅和自带许可证 | 自带许可证 
+|===

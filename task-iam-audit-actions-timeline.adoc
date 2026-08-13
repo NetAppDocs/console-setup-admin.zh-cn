@@ -4,7 +4,7 @@ permalink: task-iam-audit-actions-timeline.html
 keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
 summary: 从审计页面监控或审计NetApp Console身份和访问管理操作。 
 ---
-= 监控或审计 IAM 活动
+= 监控或审核 NetApp Console 中的 IAM 活动
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

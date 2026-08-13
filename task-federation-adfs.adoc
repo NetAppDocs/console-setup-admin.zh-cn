@@ -4,7 +4,7 @@ permalink: task-federation-adfs.html
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
 summary: '与您的 Active Directory 联合身份验证服务 (AD FS) 联合，为NetApp Console启用单点登录 (SSO)。这允许用户使用他们的公司凭证登录。' 
 ---
-= 将NetApp Console与 Active Directory 联合服务 (AD FS) 联合起来
+= 将 NetApp Console 与 Active Directory Federation Services 联合
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

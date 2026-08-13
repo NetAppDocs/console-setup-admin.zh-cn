@@ -4,7 +4,7 @@ permalink: task-maintain-agents.html
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
 summary: 维护代理主机上的操作系统是您的责任。例如，您应该按照公司的操作系统分发标准程序，对控制台代理主机上的操作系统应用安全更新。 
 ---
-= 维护手动安装的 Console 代理的 VM
+= 维护手动安装的 NetApp Console 代理的 VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

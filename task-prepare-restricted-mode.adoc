@@ -4,7 +4,7 @@ permalink: task-prepare-restricted-mode.html
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
 summary: 在受限模式下部署NetApp Console之前，请准备好您的环境。您需要查看主机要求、准备网络、设置权限等。 
 ---
-= 准备在受限模式下部署
+= 准备在 NetApp Console 受限模式下部署
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-configuring-proxy.html
 keywords: proxy, proxy server, proxy, internet, HTTP, http, https, bluexp 
 summary: 如果您的公司政策要求您使用代理服务器进行所有与互联网的通信，那么您需要配置您的代理以使用该代理服务器。如果您在安装期间没有将控制台代理配置为使用代理服务器，那么您可以随时将控制台代理配置为使用该代理服务器。 
 ---
-= 配置控制台代理以使用代理服务器
+= 配置 NetApp Console 代理以使用代理服务器
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

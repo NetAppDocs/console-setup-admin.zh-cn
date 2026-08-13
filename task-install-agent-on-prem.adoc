@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem.html
 keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
 summary: 在本地部署 Console 代理，然后登录并将其设置为与您的 Console 组织配合使用。 
 ---
-= 在本地手动安装控制台代理
+= 在本地手动安装 NetApp Console 代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

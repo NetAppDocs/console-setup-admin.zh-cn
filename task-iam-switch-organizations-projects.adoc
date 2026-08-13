@@ -4,7 +4,7 @@ permalink: task-iam-switch-organizations-projects.html
 keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
 summary: 您可能属于多个控制台组织，或者有权访问组织内的多个项目或代理。需要时，您可以轻松地在组织、项目和控制台代理之间切换，以访问与该组织、项目或代理相关的资源。 
 ---
-= 在控制台组织、项目和代理之间切换
+= 在 NetApp Console 组织、项目和代理之间切换
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

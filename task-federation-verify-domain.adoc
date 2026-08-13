@@ -4,7 +4,7 @@ permalink: task-federation-verify-domain.html
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
 summary: 如果要使用与电子邮件域不同的域进行联盟，则必须首先验证您是否拥有该域。您只能将已验证的域用于联盟。 
 ---
-= 验证联合连接的电子邮件域
+= 在 NetApp Console 中验证联盟的电子邮件域
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

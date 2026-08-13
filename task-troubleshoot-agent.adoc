@@ -4,7 +4,7 @@ permalink: task-troubleshoot-agent.html
 keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot connector, download failure, cloud volumes ontap download failure, agent 
 summary: 要解决控制台代理的问题，您可以与NetApp支持人员合作，他们可能会询问您的系统 ID、代理版本或最新的AutoSupport消息。您还可以查看NetApp知识库来自行解决问题。 
 ---
-= 控制台代理故障排除
+= 对 NetApp Console agent 进行故障排除
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
