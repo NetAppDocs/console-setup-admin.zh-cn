@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: concept-securing-netapp-console.html 
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa 
+summary: 了解如何保护 NetApp Console 部署、用户访问、Console 代理和存储管理操作。 
+---
+= 保护 NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过限制 NetApp Console 访问、保护 Console 代理以及监控未经授权或意外更改的活动来保护存储操作。
+
+安全是一项共同责任。NetApp 负责保护 Console 服务，而您负责选择适当的部署模式、控制用户和服务帐户访问、保护部署 Console 代理的环境以及监控组织中的活动。
+
+
+
+[[choose-the-appropriate-deployment-mode]]
+== 选择适当的部署模式
+
+根据您的连接、隔离和操作要求选择部署模式：
+
+* 标准模式使用云托管的 SaaS 应用程序。
+* 受限模式将控制台安装在公有云环境中，且与 NetApp API 的出站连接受限。
+* 专用模式将 Console 安装在本地或与 NetApp 没有出站连接的气隙环境中。
+
+
+每种模式都有不同的功能可用性和安全性要求。link:concept-modes.html["了解NetApp Console部署模式"].
+
+
+
+[[control-identity-and-access]]
+== 控制身份和访问
+
+使用身份和访问管理(IAM)仅为用户和服务帐户提供执行任务所需的访问权限：
+
+* 在项目中组织资源，并在适当情况下组织反映业务或运营边界的文件夹。
+* 在提供所需访问权限的组织层次结构的最低级别分配预定义角色。
+* 定期审查组织成员、服务帐户及其角色。删除不再需要的访问权限。
+* 在满足组织要求时，使用身份联合进行单点登录。联合在私有模式下不可用。
+* 要求本地用户使用多重身份验证 (MFA)，并将服务帐户凭据作为机密加以保护。当服务帐户凭据丢失或需要轮换时，请重新创建这些凭据。
+
+
+link:concept-identity-and-access-management.html["了解 NetApp Console 中的 IAM"]。
+
+
+
+[[secure-console-agents]]
+== 安全控制台代理
+
+控制台代理将 Console 与存储系统和云或本地环境连接起来。代理启动与 Console 的通信；Console 不启动与代理的连接。
+
+将以下控件应用于每个代理：
+
+* 在满足组织的主机、网络和访问控制要求的环境中部署代理。
+* 仅允许所需的出站网络连接和所需的云权限。部署前检查特定于提供商的权限和端口要求。
+* 当出站流量必须通过代理服务器时，请使用受支持的代理配置。
+* 当用户通过 HTTPS 访问代理 Web 控制台时，请安装 CA 签名的证书。
+* 请及时更新代理软件。专用模式代理必须手动升级。
+* 在 AWS 上，请考虑要求托管 Console 代理的 EC2 实例使用 IMDSv2。
+
+
+link:concept-agents.html["了解控制台代理"]。
+
+
+
+[[reduce-unintended-changes]]
+== 减少意外更改
+
+组织管理员可以为组织启用只读模式。只读模式有助于防止用户在请求提升权限之前对存储系统进行更改或使用数据服务。
+
+link:task-enable-read-only-mode.html["了解如何启用只读模式"]。
+
+
+
+[[monitor-and-review-activity]]
+== 监控和审核活动
+
+使用操作时间表在 Console 中查看存储管理和用户活动。作为组织安全流程的一部分，定期检查成员访问权限、角色分配、服务帐户凭据、代理状态和最近的操作。
+
+link:task-monitor-cm-operations.html["了解如何监控控制台操作"]。
+
+
+
+[[related-security-topics]]
+== 相关安全主题
+
+* link:task-iam-user-security.html["管理用户安全"]，包括 MFA 和服务帐户凭据。
+* link:concept-iam-rbac.html["了解基于角色的访问控制 (RBAC)"]。
+* link:concept-federation.html["了解身份联合"]。
+* link:reference-networking-saas-console.html["查看 SaaS 应用程序的网络访问要求"]。
+* link:reference-permissions.html["查看云提供商权限和网络要求"]。
+* link:reference-compliance.html["了解 NetApp Console 的安全合规性"]。
+

@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: task-secure-netapp-console.html 
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa, read-only mode, ontap system manager 
+summary: 按照建议的步骤来保护 NetApp Console、IAM、身份联合、只读模式、服务帐户、Console 代理和 ONTAP System Manager 访问权限。 
+---
+= 安全 NetApp 控制台
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过限制 NetApp Console 访问、保护 Console 代理以及监控未经授权或意外更改的活动来保护存储操作。
+
+采取以下步骤为您的组织设置安全基线。在应用下面列出的安全控制之前，请按照部署模式的安装工作流程操作。link:concept-modes.html["了解NetApp Console部署模式"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 选择 NetApp Console 部署模式并完成初始设置
+[role="quick-margin-para"]
+创建组织并建立第一个组织管理员。完成与部署相匹配的设置工作流程。
+
+[role="quick-margin-list"]
+* link:task-quick-start-standard-mode.html["在标准模式下开始使用 NetApp Console"]
+* link:task-quick-start-restricted-mode.html["在受限模式下开始使用 NetApp Console"]
+* link:task-quick-start-private-mode.html["在私密模式下开始使用 NetApp Console"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 安全控制台代理权限、网络访问和主机
+[role="quick-margin-para"]
+将每个 Console 代理的云权限和网络访问权限限制在所需的最低限度。保护 Web 控制台流量，并维护 Console 代理软件。
+
+[role="quick-margin-list"]
+* link:reference-permissions.html["查看云提供商权限和网络要求"]
+* link:reference-networking-saas-console.html["查看网络访问要求"]
+* link:task-installing-https-cert.html["安装 CA 签名的证书"]
+* link:task-configuring-proxy.html["配置代理服务器"]
+* link:task-upgrade-agent.html["升级控制台代理"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 组织 NetApp Console IAM 层次结构
+[role="quick-margin-para"]
+设置组织层次结构以匹配您的团队工作方式。将存储系统、数据服务和 Console 代理的范围设置为管理它们的项目。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-folders-projects.html["创建文件夹和项目。"]
+* link:task-iam-manage-resources.html["将资源与项目相关联。"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] 配置 NetApp Console 身份联合和联合组
+[role="quick-margin-para"]
+将 NetApp Console 连接到您的企业身份提供商 (IdP)，以便用户使用企业凭据登录，您的 IdP 可以强制执行其身份验证策略。NetApp Console 支持 AD FS、Microsoft Entra ID、PingFederate 和通用 SAML 身份提供商。
+
+[role="quick-margin-para"]
+将联合用户和组添加到 Console 组织并为其分配 Console 角色。联合身份验证不会替换 Console 成员身份或角色分配。link:task-iam-manage-members-permissions.html#add-members["了解如何添加联合组"].
+
+[role="quick-margin-list"]
+* link:task-federation-verify-domain.html["验证您的域名"]
+* link:task-federation-adfs.html["与 AD FS 联合"]
+* link:task-federation-entra-id.html["与 Microsoft Entra ID 联合"]
+* link:task-federation-ping.html["与 PingFederate 联合"]
+* link:task-federation-saml.html["与 SAML 身份提供商联合"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 添加 NetApp Console 成员并分配最小特权角色
+[role="quick-margin-para"]
+仅为每个用户、服务帐户和联合组授予其职责所需的访问权限。在支持工作的最窄组织、文件夹或项目范围内分配角色。为本地用户启用多因素身份验证。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-members-permissions.html["将成员添加到控制台组织"]
+* link:concept-iam-rbac.html["了解基于角色的访问控制"]
+* link:reference-iam-predefined-roles.html["查看预定义角色"]
+* link:task-iam-user-security.html["管理成员安全"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] 使用服务帐户实现安全的 NetApp Console 自动化
+[role="quick-margin-para"]
+将自动化与人工账号分开。为每个服务帐户分配所需的最低角色和范围。安全地存储凭据，并在丢失或轮换时重新创建凭据。
+
+link:task-iam-manage-members-permissions.html#service-account["了解如何添加服务账号"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七"] 为 NetApp Console 组织启用只读模式
+[role="quick-margin-para"]
+要求管理员在进行更改之前提升其角色。此控制可减少对存储系统和数据服务的意外更改。
+
+link:task-enable-read-only-mode.html["了解如何启用只读模式"]
+
+
+NOTE: 当 NetApp Console 处于私有模式时，只读模式不可用。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["八个"] 强制执行 ONTAP System Manager 的 ONTAP 权限
+[role="quick-margin-para"]
+在管理生产 ONTAP 系统的活动 Console 代理上启用 *Force Credentials*。用户在打开 ONTAP System Manager 时提供其 ONTAP 集群凭据，ONTAP 将应用其权限。
+
+link:task-ontap-access-agent.html["了解如何为 ONTAP System Manager 强制执行 ONTAP 权限"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["九"] 查看 NetApp Console 审核活动和安全控制
+[role="quick-margin-para"]
+为成员、组映射、角色、凭据、代理和最近的操作建立定期审阅流程。删除不再需要的访问权限，并调查意外活动。
+
+[role="quick-margin-list"]
+* link:task-iam-audit-actions-timeline.html["了解如何审核控制台操作"]
+* link:task-monitor-cm-operations.html["了解如何监控控制台操作"]
+

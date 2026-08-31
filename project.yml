@@ -236,6 +236,8 @@ sidebar:
           url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
     - title: 安全与合规
       entries:
+      - title: 安全 NetApp 控制台
+        url: "/task-secure-netapp-console.html"
       - title: 身份联合
         entries:
         - title: 了解身份联合

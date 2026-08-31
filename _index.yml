@@ -53,14 +53,14 @@ indexpage:
       url: "/task-maintain-agents.html"
   - title: 安全与合规
     links:
+    - title: 安全 NetApp 控制台
+      url: task-secure-netapp-console.html
     - title: 与您的身份提供商联合
       url: "/concept-federation.html"
     - title: 启用只读模式
       url: task-enable-read-only-mode.html
     - title: 监控控制台活动
       url: "/task-monitor-cm-operations.html"
-    - title: 以受限模式部署NetApp Console（主权云部署）
-      url: "/task-quick-start-restricted-mode.html"
     - title: SOC-2 合规性
       url: https://www.netapp.com/company/trust-center/compliance/soc-2/
   - title: 主机平台合作伙伴关系

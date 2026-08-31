@@ -5104,7 +5104,6 @@
   <block id="f19aee9e6e2e5954d2de8e30cbe4751d" category="sidebar">与您的身份提供商联合</block>
   <block id="444cf9807eaf5ac0945edfce9108c729" category="sidebar">启用只读模式</block>
   <block id="320b734c12631424ce316d6953d1dedc" category="sidebar">监控控制台活动</block>
-  <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">以受限模式部署NetApp Console（主权云部署）</block>
   <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">SOC-2 合规性</block>
   <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">主机平台合作伙伴关系</block>
   <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">NetApp支持帐户</block>
@@ -6441,4 +6440,118 @@
   <block id="1ffdd70508b45fa8740a4e5db3fed667" category="doc">升级 NetApp Console 代理</block>
   <block id="88119fcc4c91e2769610d7732f2d8876" category="doc">NetApp Console 新增功能</block>
   <block id="01b8b50c6af6a26d04385207f4b3c02e" category="section-title">2026年8月13日</block>
+  <block id="1058dc5369c0908359aaf95158dd0d0f" category="summary">了解如何保护 NetApp Console 部署、用户访问、Console 代理和存储管理操作。</block>
+  <block id="5d7fcd9743b1dc5a7dfb8167192a0a56" category="doc">保护 NetApp Console</block>
+  <block id="bdd077838c93e11800ec4f06eb3a835b" category="paragraph">通过限制 NetApp Console 访问、保护 Console 代理以及监控未经授权或意外更改的活动来保护存储操作。</block>
+  <block id="f89e189eab4b0a84dde6088f4027e6e1" category="paragraph">安全是一项共同责任。NetApp 负责保护 Console 服务，而您负责选择适当的部署模式、控制用户和服务帐户访问、保护部署 Console 代理的环境以及监控组织中的活动。</block>
+  <block id="3173168275b216d053bdec7a280ec461" category="section-title">选择适当的部署模式</block>
+  <block id="0e73d1e9e7747b1b1b4b3b143c68f576" category="paragraph">根据您的连接、隔离和操作要求选择部署模式：</block>
+  <block id="26c0fd0d76bb5a678c4cca1b2ab14d60" category="list-text">标准模式使用云托管的 SaaS 应用程序。</block>
+  <block id="7dd7f9cd8bdd5ebb53ba16dcb7ec7947" category="list-text">受限模式将控制台安装在公有云环境中，且与 NetApp API 的出站连接受限。</block>
+  <block id="94671ddee001ed58f550c5dec055e5ae" category="list-text">专用模式将 Console 安装在本地或与 NetApp 没有出站连接的气隙环境中。</block>
+  <block id="9c1615767d701966b45379b7c58e3d62" category="paragraph">每种模式都有不同的功能可用性和安全性要求。<block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>.</block>
+  <block id="466fe6a37480f459dfb29f33029949a8" category="section-title">控制身份和访问</block>
+  <block id="ec8357a35950f72e7cf816a40f21b7be" category="paragraph">使用身份和访问管理(IAM)仅为用户和服务帐户提供执行任务所需的访问权限：</block>
+  <block id="8356ca0d1248293dffe430b44a9dc8aa" category="list-text">在项目中组织资源，并在适当情况下组织反映业务或运营边界的文件夹。</block>
+  <block id="dabb178434082180a8558f051e774a03" category="list-text">在提供所需访问权限的组织层次结构的最低级别分配预定义角色。</block>
+  <block id="54ff18ce569c4f91f21af8d6abcef91b" category="list-text">定期审查组织成员、服务帐户及其角色。删除不再需要的访问权限。</block>
+  <block id="81dc9345250f1f6289b7a8cc34fef322" category="list-text">在满足组织要求时，使用身份联合进行单点登录。联合在私有模式下不可用。</block>
+  <block id="1ddb29d678b51b4e086a8e3bba08b740" category="list-text">要求本地用户使用多重身份验证 (MFA)，并将服务帐户凭据作为机密加以保护。当服务帐户凭据丢失或需要轮换时，请重新创建这些凭据。</block>
+  <block id="8abf9a466e4c9494ea94af378cf41efe" category="inline-link-macro">了解 NetApp Console 中的 IAM</block>
+  <block id="0ff7aecca234ce48c5524a55697a2ab4" category="paragraph"><block ref="8f4dacc1355f6b0f32454c70c7a5554f" category="inline-link-macro-rx"></block>。</block>
+  <block id="20d82496be37603c3aa358f272b228b8" category="section-title">安全控制台代理</block>
+  <block id="93f61e19d062d5546ce06f1a3d7b08e0" category="paragraph">控制台代理将 Console 与存储系统和云或本地环境连接起来。代理启动与 Console 的通信；Console 不启动与代理的连接。</block>
+  <block id="2dbde24776bdf42975eef846402c2bbc" category="paragraph">将以下控件应用于每个代理：</block>
+  <block id="5442403e707d9578ed32c3be54184634" category="list-text">在满足组织的主机、网络和访问控制要求的环境中部署代理。</block>
+  <block id="8cfb226c3d3449da4e7e84f027c3ab24" category="list-text">仅允许所需的出站网络连接和所需的云权限。部署前检查特定于提供商的权限和端口要求。</block>
+  <block id="34a1e4720a42b92622003bfb676aabe2" category="list-text">当出站流量必须通过代理服务器时，请使用受支持的代理配置。</block>
+  <block id="85214b639a9dc16f16c9fff3b343aad4" category="list-text">当用户通过 HTTPS 访问代理 Web 控制台时，请安装 CA 签名的证书。</block>
+  <block id="5d079d8b3bdd2a21cd919b281144297c" category="list-text">请及时更新代理软件。专用模式代理必须手动升级。</block>
+  <block id="1284c01df79967e9a9cb0fa34a8fc1d0" category="list-text">在 AWS 上，请考虑要求托管 Console 代理的 EC2 实例使用 IMDSv2。</block>
+  <block id="510c458f335c9e63f10ead0565bc2160" category="section-title">减少意外更改</block>
+  <block id="9cdb404f81065f4fe2888a384f99999e" category="paragraph">组织管理员可以为组织启用只读模式。只读模式有助于防止用户在请求提升权限之前对存储系统进行更改或使用数据服务。</block>
+  <block id="5a883dfb4caaaf143ab7d8771e1a98f4" category="inline-link-macro">了解如何启用只读模式</block>
+  <block id="734b33d0a32bbd9e142a6daf22f123b0" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block>。</block>
+  <block id="802ad0d8de017224a428aaf6dc70e614" category="section-title">监控和审核活动</block>
+  <block id="46aaf6874279db1f02b13d9345965a72" category="paragraph">使用操作时间表在 Console 中查看存储管理和用户活动。作为组织安全流程的一部分，定期检查成员访问权限、角色分配、服务帐户凭据、代理状态和最近的操作。</block>
+  <block id="acf4d569e85ba4f07dee65d868e312db" category="inline-link-macro">了解如何监控控制台操作</block>
+  <block id="8c87e344e1cb6ec1fa88a41d9b58b050" category="paragraph"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="dde081281e2bc1099c59a3a9abd2ab3b" category="section-title">相关安全主题</block>
+  <block id="0d16e0fa8385f4ecca48c87b54700eff" category="inline-link-macro">管理用户安全</block>
+  <block id="c0dc5bcd7d24bdf49727fa822a80ff00" category="list-text"><block ref="3b3467491ef8ae505b09e60553381f2c" category="inline-link-macro-rx"></block>，包括 MFA 和服务帐户凭据。</block>
+  <block id="3ea31604ad2a4d3b7cfe571d0fc5b898" category="list-text"><block ref="484813cc457e81afea222e9c4c55417e" category="inline-link-macro-rx"></block>。</block>
+  <block id="bace6dfef8b8b6bdc38f380797a8ac13" category="list-text"><block ref="c231010d3250b37fefa79e49c7fac573" category="inline-link-macro-rx"></block>。</block>
+  <block id="114871ac953b22269534be5463d5bed4" category="inline-link-macro">查看 SaaS 应用程序的网络访问要求</block>
+  <block id="e48c9dcd823413ddca6e3e2dceabdf12" category="list-text"><block ref="acba60e5cc3ccbd1da8e2e4daa0251aa" category="inline-link-macro-rx"></block>。</block>
+  <block id="66ea689c24dc9ab9ecf7b3dcbdf2d2bb" category="inline-link-macro">查看云提供商权限和网络要求</block>
+  <block id="1772f0b91f03cc431bd437e649681bdc" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block>。</block>
+  <block id="f8866b2b7454ef2769d5caa0375ad400" category="inline-link-macro">了解 NetApp Console 的安全合规性</block>
+  <block id="838ed343eb419ca177b29290cfa5cea7" category="list-text"><block ref="7de827dce0dc8582e4b10f433db46dd9" category="inline-link-macro-rx"></block>。</block>
+  <block id="50e8f64941e4c6ae32b514644df19767" category="summary">按照建议的步骤来保护 NetApp Console、IAM、身份联合、只读模式、服务帐户、Console 代理和 ONTAP System Manager 访问权限。</block>
+  <block id="fa6cced3b6fa7ad524a13722716b4e25" category="doc">安全 NetApp 控制台</block>
+  <block id="91d6f99841f27c7d4ae8a576545136e3" category="paragraph">采取以下步骤为您的组织设置安全基线。在应用下面列出的安全控制之前，请按照部署模式的安装工作流程操作。<block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>.</block>
+  <block id="ca77259f0411c49133e28233f7e0a594" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 选择 NetApp Console 部署模式并完成初始设置</block>
+  <block id="6643f0fc063b73ae7cb00644017cef4a" category="paragraph">创建组织并建立第一个组织管理员。完成与部署相匹配的设置工作流程。</block>
+  <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">在标准模式下开始使用 NetApp Console</block>
+  <block id="1b04b04eae157b7a2e94f5fe3a41ed68" category="list-text"><block ref="1b04b04eae157b7a2e94f5fe3a41ed68" category="inline-link-macro-rx"></block></block>
+  <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">在受限模式下开始使用 NetApp Console</block>
+  <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
+  <block id="43a0f032817197132c98b19efcb2283f" category="inline-link-macro">在私密模式下开始使用 NetApp Console</block>
+  <block id="894324cb3dad3c4c463e07e85ea7dc44" category="list-text"><block ref="894324cb3dad3c4c463e07e85ea7dc44" category="inline-link-macro-rx"></block></block>
+  <block id="4ca59768f21f1460981bd735f1baac9d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安全控制台代理权限、网络访问和主机</block>
+  <block id="35da275a1ecec991e7323642d414234d" category="paragraph">将每个 Console 代理的云权限和网络访问权限限制在所需的最低限度。保护 Web 控制台流量，并维护 Console 代理软件。</block>
+  <block id="ac7ed8f265c73428987eae567f5a25a0" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block></block>
+  <block id="487d3f01749236f4a1c63ceebd697397" category="inline-link-macro">查看网络访问要求</block>
+  <block id="1c05e14c7de8a7f8cd966ad66b4b3e01" category="list-text"><block ref="1c05e14c7de8a7f8cd966ad66b4b3e01" category="inline-link-macro-rx"></block></block>
+  <block id="b56591a52f1058d1f87b24f5b185e077" category="inline-link-macro">安装 CA 签名的证书</block>
+  <block id="739a0d5d95bf9c38769b463ca19accaa" category="list-text"><block ref="739a0d5d95bf9c38769b463ca19accaa" category="inline-link-macro-rx"></block></block>
+  <block id="72e9c60a82606c5e5b157cc82e336351" category="inline-link-macro">配置代理服务器</block>
+  <block id="8d296f5cd8486485175e81f9eb156ece" category="list-text"><block ref="8d296f5cd8486485175e81f9eb156ece" category="inline-link-macro-rx"></block></block>
+  <block id="dbfecc969c3a84fbdcd91e50bdd86a68" category="list-text"><block ref="dbfecc969c3a84fbdcd91e50bdd86a68" category="inline-link-macro-rx"></block></block>
+  <block id="35bf205af05d718bb2b7b145e4c400fa" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 组织 NetApp Console IAM 层次结构</block>
+  <block id="902e832c587f1279a5acf65feaf1211e" category="paragraph">设置组织层次结构以匹配您的团队工作方式。将存储系统、数据服务和 Console 代理的范围设置为管理它们的项目。</block>
+  <block id="0e6ece2237e7f9e1f9a0aa6ba9e9b5d9" category="inline-link-macro">创建文件夹和项目。</block>
+  <block id="04c98a584416c40d70b3f74fc101a548" category="list-text"><block ref="04c98a584416c40d70b3f74fc101a548" category="inline-link-macro-rx"></block></block>
+  <block id="5cab9254ce355b5c287938249b28816e" category="inline-link-macro">将资源与项目相关联。</block>
+  <block id="df91e596a0ec0af0359838f6f8db8c62" category="list-text"><block ref="df91e596a0ec0af0359838f6f8db8c62" category="inline-link-macro-rx"></block></block>
+  <block id="839425f36147da7d1cc666e9089039b1" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 配置 NetApp Console 身份联合和联合组</block>
+  <block id="9a52c08293d409a842184acb141eb8de" category="paragraph">将 NetApp Console 连接到您的企业身份提供商 (IdP)，以便用户使用企业凭据登录，您的 IdP 可以强制执行其身份验证策略。NetApp Console 支持 AD FS、Microsoft Entra ID、PingFederate 和通用 SAML 身份提供商。</block>
+  <block id="01ad1d46d1fca1a4c36d506b90b391ec" category="inline-link-macro">了解如何添加联合组</block>
+  <block id="420464487a0edfeb41fd919551a6272d" category="paragraph">将联合用户和组添加到 Console 组织并为其分配 Console 角色。联合身份验证不会替换 Console 成员身份或角色分配。<block ref="c0efbcf589f6ac5b125ed3ce815ba603" category="inline-link-macro-rx"></block>.</block>
+  <block id="2b765ea4ff3da54728d8447c5c6571b8" category="list-text"><block ref="2b765ea4ff3da54728d8447c5c6571b8" category="inline-link-macro-rx"></block></block>
+  <block id="1fa77426337802b6d8934e569c4ca014" category="inline-link-macro">与 AD FS 联合</block>
+  <block id="b027d5096fb538387f89c4209d60f160" category="list-text"><block ref="b027d5096fb538387f89c4209d60f160" category="inline-link-macro-rx"></block></block>
+  <block id="390ed3aa4df4a47d3c0287b8903016f5" category="inline-link-macro">与 Microsoft Entra ID 联合</block>
+  <block id="73b73bc1a7e29b791c85daa4e26a58bb" category="list-text"><block ref="73b73bc1a7e29b791c85daa4e26a58bb" category="inline-link-macro-rx"></block></block>
+  <block id="5cfe4565ad097684341bd371674bcb66" category="list-text"><block ref="5cfe4565ad097684341bd371674bcb66" category="inline-link-macro-rx"></block></block>
+  <block id="f76ee8d03e827ecd67d8fd3a7f399659" category="list-text"><block ref="f76ee8d03e827ecd67d8fd3a7f399659" category="inline-link-macro-rx"></block></block>
+  <block id="7f267bf56eb86142c609448d2b6fa486" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 添加 NetApp Console 成员并分配最小特权角色</block>
+  <block id="0adafca284bb085118cee75938fe8cf1" category="paragraph">仅为每个用户、服务帐户和联合组授予其职责所需的访问权限。在支持工作的最窄组织、文件夹或项目范围内分配角色。为本地用户启用多因素身份验证。</block>
+  <block id="73af05182f26c2bb0c80203ab811f740" category="inline-link-macro">将成员添加到控制台组织</block>
+  <block id="d9e6b511fcd1aac84cc476d56001fce8" category="list-text"><block ref="d9e6b511fcd1aac84cc476d56001fce8" category="inline-link-macro-rx"></block></block>
+  <block id="22f29f8030a62c2c0af6b4e6b6f606e4" category="inline-link-macro">了解基于角色的访问控制</block>
+  <block id="3b2e25af1bea98c2b0ae625453e6f096" category="list-text"><block ref="3b2e25af1bea98c2b0ae625453e6f096" category="inline-link-macro-rx"></block></block>
+  <block id="195648ee3edf3d90376eb60ce8982563" category="inline-link-macro">查看预定义角色</block>
+  <block id="b727bb2ef69c2fcbbd990168c72ee6ca" category="list-text"><block ref="b727bb2ef69c2fcbbd990168c72ee6ca" category="inline-link-macro-rx"></block></block>
+  <block id="a1a6242d2d072d6e6fdd57f576b606ed" category="list-text"><block ref="a1a6242d2d072d6e6fdd57f576b606ed" category="inline-link-macro-rx"></block></block>
+  <block id="2d44ec90fe255157950694f5d9085d23" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> 使用服务帐户实现安全的 NetApp Console 自动化</block>
+  <block id="79f7a42800700476b37ddd6e61cfe43e" category="paragraph">将自动化与人工账号分开。为每个服务帐户分配所需的最低角色和范围。安全地存储凭据，并在丢失或轮换时重新创建凭据。</block>
+  <block id="3f507ae6cfa9c8dd23848c7ac6318097" category="inline-link-macro">了解如何添加服务账号</block>
+  <block id="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="paragraph"><block ref="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="inline-link-macro-rx"></block></block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七</block>
+  <block id="d3d636e2f07c73c47ceb409e33a007f6" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> 为 NetApp Console 组织启用只读模式</block>
+  <block id="916b3d0ae2a38a356dac81b21f0aadb9" category="paragraph">要求管理员在进行更改之前提升其角色。此控制可减少对存储系统和数据服务的意外更改。</block>
+  <block id="de3e3793ad80a364bdc4648dc1cedccd" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block></block>
+  <block id="4a03ba8153e8c5adf50924eb1148e173" category="admonition">当 NetApp Console 处于私有模式时，只读模式不可用。</block>
+  <block id="baca0ca6729684fd54206793ae4b5bd5" category="inline-image-macro">八个</block>
+  <block id="b65c76d2d63a4b6eda425db31ce4a506" category="paragraph-title"><block ref="430057c670c01688e904ed2ba129a0b5" category="inline-image-macro-rx" type="image"></block> 强制执行 ONTAP System Manager 的 ONTAP 权限</block>
+  <block id="077e2c69447d026f0fd6df0117d66f5a" category="paragraph">在管理生产 ONTAP 系统的活动 Console 代理上启用 *Force Credentials*。用户在打开 ONTAP System Manager 时提供其 ONTAP 集群凭据，ONTAP 将应用其权限。</block>
+  <block id="7956c3d473c153fa708c836ff115cf1f" category="inline-link-macro">了解如何为 ONTAP System Manager 强制执行 ONTAP 权限</block>
+  <block id="183e4774dd06af5ef46d71d3a6f8b5bf" category="paragraph"><block ref="183e4774dd06af5ef46d71d3a6f8b5bf" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">九</block>
+  <block id="d09dec5c2df9a4ff4cb80a7d3198cc65" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block> 查看 NetApp Console 审核活动和安全控制</block>
+  <block id="d1a2ee8ff075a4679389e2746373a22a" category="paragraph">为成员、组映射、角色、凭据、代理和最近的操作建立定期审阅流程。删除不再需要的访问权限，并调查意外活动。</block>
+  <block id="03e21ac1acdd1f03c79cf52cd9cf7e75" category="inline-link-macro">了解如何审核控制台操作</block>
+  <block id="e64d42268f0853ee74265280546a395b" category="list-text"><block ref="e64d42268f0853ee74265280546a395b" category="inline-link-macro-rx"></block></block>
+  <block id="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="list-text"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block></block>
 </blocks>
