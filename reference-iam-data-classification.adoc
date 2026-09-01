@@ -12,7 +12,7 @@ summary: NetApp Data Classification 支持两个角色来管理对资产的读�
 
 
 [role="lead"]
-NetApp Data Classification 支持身份和访问管理角色，让您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。
+NetApp Data Classification 支持身份和访问管理 (IAM) 角色，因此您可以针对用户需要完成的任务定制访问权限。如何分配角色取决于您自己的业务和存储管理实践。
 
 Data Classification 支持两个角色：
 
@@ -38,7 +38,7 @@ NOTE: Compliance 管理员已添加到版本 1.54 的 Data Classification 中。
 [[classification-viewer]]
 == 分类查看器
 
-Classification 查看器专为需要访问 Data Classification 中扫描结果但不需要访问配置资源的用户而设计。具有 Classification 查看器角色的用户可以查看映射和完整扫描的结果，以评估存储节省或潜在数据风险的区域。具有 Classification 查看器角色的用户还可以为他们有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。
+分类查看器专为需要访问 Data Classification 中扫描结果但不需要访问配置资源的用户而设计。具有分类查看器角色的用户可以查看映射和完整扫描的结果，以评估存储节省或潜在数据风险的区域。具有分类查看器角色的用户还可以为他们有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。
 
 
 
