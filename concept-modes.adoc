@@ -100,7 +100,7 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | 产品领域 | NetApp 服务或功能 | 需要 Console 代理 
 
 
-.12+| *存储系统管理* 此表显示您可以从 NetApp Console 管理哪些存储系统。它不列出 NetApp Backup and Recovery 的备份目标。 | 警报 | 是 
+.13+| *存储系统管理* 此表显示您可以从 NetApp Console 管理哪些存储系统。它不列出 NetApp Backup and Recovery 的备份目标。 | 警报 | 是 
 
 
 | 适用于ONTAP 的Amazon FSx | 是的，用于发现和管理。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
@@ -136,10 +136,10 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | StorageGRID | 是 
 
 
-| 工作负载 | 否 .8+| *数据服务* 
+| 工作负载 | 否 
 
 
-| NetApp Backup and Recovery | 是 
+.8+| *数据服务* | NetApp Backup and Recovery | 是 
 
 
 | NetApp 分类 | 是 
@@ -160,10 +160,10 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | NetApp Cloud Tiering | 是 
 
 
-| NetApp Volume Caching | 是 .5+| *NetApp 支持合同功能* 
+| NetApp Volume Caching | 是 
 
 
-| 数字顾问 | 是 
+.5+| *NetApp 支持合同功能* | 数字顾问 | 是 
 
 
 | 经济效益 | 是 
@@ -175,10 +175,10 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | 软件更新 | 否 
 
 
-| 可持续性 | 是 .12+| *管理功能* 
+| 可持续性 | 是 
 
 
-| 审核 | 否 
+.11+| *管理功能* | 审核 | 否 
 
 
 | 自动化中心 | 否 
@@ -318,7 +318,7 @@ NetApp Replication
 | *NetApp 支持合同功能* | 无 | 不适用 
 
 
-.12+| *管理功能* | 审核 | 否 
+.11+| *管理功能* | 审核 | 否 
 
 
 | 自动化中心 | 否 
@@ -674,7 +674,7 @@ NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
 | 可持续性 | 否 | 否 
 
 
-.9+| *管理功能* | 存储和数据服务的仪表板指标 | 否 | 否 
+.11+| *管理功能* | 存储和数据服务的仪表板指标 | 否 | 否 
 
 
 | 身份和访问管理 | 是 | 是 
@@ -701,5 +701,8 @@ NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
 | 只读模式 | 是 | 否 
 
 
-| 通知 | 是 | 否 | 审核 
+| 通知 | 是 | 否 
+
+
+| 审核 | 是 | 是 
 |===
