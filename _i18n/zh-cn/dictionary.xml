@@ -5511,7 +5511,6 @@
   <block id="1b2b35b59eb889c82041c85d020846da" category="list-text">从 Linux 主机中删除旧的、未使用的容器映像文件，以释放 /var 目录中的空间以进行重新安装。</block>
   <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="open-title">Docker</block>
   <block id="3b240599579798c1fd8c4e7b4aa36e0e" category="sidebar">在私密模式下部署 NetApp Console</block>
-  <block id="754dab26f37da0666d18d084eeb9cac1" category="sidebar">NetApp Console (SaaS) 入门</block>
   <block id="fc2bd25c4501ebc9670b599a0996c243" category="sidebar">受限模式入门工作流程</block>
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">开始使用 NetApp Console（专用模式）</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">私人模式入门工作流程</block>
@@ -6240,14 +6239,9 @@
   <block id="ea256e0ef091d570fc3443bfdb29b124" category="paragraph"><block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>。</block>
   <block id="e0bcb2ebdbad366327cfe5a2bb3842af" category="summary">您可以将以下角色分配给用户，以便为他们提供对控制台中 Cloud Volumes ONTAP 的访问权限。Cloud Volumes ONTAP 角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。</block>
   <block id="38231d7ab948e14954505c434dbc3406" category="doc">Cloud Volumes ONTAP 访问角色（位于 NetApp Console 中）</block>
-  <block id="cf1bb4e2b95630bcd705b5ed0583a3f6" category="paragraph">您可以将以下角色分配给用户，以便为他们提供对控制台中 Cloud Volumes ONTAP 的访问权限。Cloud Volumes ONTAP 角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。如何分配角色取决于您自己的业务和存储管理实践。</block>
-  <block id="0ef7f8c52a11ca17c940eb122edda23d" category="paragraph">Cloud Volumes ONTAP 使用以下角色：</block>
   <block id="ccb8cf6de876397f5af5fd2969199a4c" category="list-text">*Cloud Volumes ONTAP admin*：提供对所有 Cloud Volumes ONTAP 操作的完全访问权限。</block>
-  <block id="f89da74408fedae3ccfafd61cfb7bbd0" category="list-text">*Cloud Volumes ONTAP operator*：执行重要的存储操作，例如发现和管理 Cloud Volumes ONTAP 系统，包括添加卷、聚合、快照和复制、修改某些配置以及升级 Cloud Volumes ONTAP 版本。</block>
   <block id="0d01873a225e72f3074f310aae6b4cd1" category="list-text">*Cloud Volumes ONTAP viewer*：提供对 Cloud Volumes ONTAP 信息的只读访问。此角色无法执行任何活动操作。某些包含配置信息的选项卡和屏幕可能无法供查看者使用。</block>
   <block id="e612ed3cf7a0977aec6f993000cc46f1" category="section-title">角色变更如何生效</block>
-  <block id="283d45b1cce5ad68028d1e4ccf0bbb68" category="paragraph">Cloud Volumes ONTAP 通过使用每个角色分配的本地缓存来实施基于角色的访问控制 (RBAC)。此缓存每小时自动刷新一次。如果是新分配或更改的角色，此更改最多可能需要一个小时才能生效。刷新完成后，控制台将启用该角色允许的工作流。</block>
-  <block id="99f9bec3d41eefb18e9b6540df4c9630" category="admonition">首次部署控制台代理或将现有控制台代理升级到 Console 4.9.0 或更高版本时，控制台将运行一次性种子设定过程，将 Cloud Volumes ONTAP 角色分配给组织中的现有用户。此过程最多可能需要 30 分钟才能完成。</block>
   <block id="fee3007030dccd80255a7211926472b7" category="section-title">Cloud Volumes ONTAP 角色权限</block>
   <block id="04133a29798abb95ff37ba8c50cf2155" category="cell">Cloud Volumes ONTAP 查看器</block>
   <block id="eddfc9398b9966908680fb984db5a4af" category="cell">Cloud Volumes ONTAP 操作程序</block>
@@ -6555,4 +6549,64 @@
   <block id="733d9ddc09fa607fb9b3bbef86e35834" category="paragraph">Compliance admin 角色仅在组织级别工作，以管理对 Data Classification 资源的访问。如果用户的职责小于 Organization admin，则他们必须具有 Compliance admin 角色才能安装 Data Classification。</block>
   <block id="59ac75cc0e747987fa0f0c6397dcfd96" category="paragraph">分类查看器专为需要访问 Data Classification 中扫描结果但不需要访问配置资源的用户而设计。具有分类查看器角色的用户可以查看映射和完整扫描的结果，以评估存储节省或潜在数据风险的区域。具有分类查看器角色的用户还可以为他们有权访问的资源生成报告。这些用户无法启用或禁用卷、存储桶或数据库架构的扫描。</block>
   <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
+  <block id="713c4ed0e52a1fe2c5526d82611b299d" category="paragraph">您可以将以下角色分配给用户，以便为他们提供对 NetApp Console 中 Cloud Volumes ONTAP 的访问权限。</block>
+  <block id="e4a3525277e1b4371bb89478f9422b67" category="list-text">*Cloud Volumes ONTAP operator*：执行重要的存储操作，例如发现和管理 Cloud Volumes ONTAP 系统，包括添加卷、聚合、快照和复制、修改某些配置以及升级 Cloud Volumes ONTAP 版本。</block>
+  <block id="769bcb1b917e9456afc908e3923e871d" category="inline-link-macro">为 Cloud Volumes ONTAP 设置基于角色的访问</block>
+  <block id="460200b9d3d05ac8165deb4aceb3eee1" category="paragraph">在包含系统的组织、文件夹或项目级别分配 Cloud Volumes ONTAP 角色。平台角色使用户能够管理 NetApp Console 资源，而 Cloud Volumes ONTAP 角色使用户能够管理 Cloud Volumes ONTAP 系统。有关规划角色分配的指导，请参阅 <block ref="4fa2aa48d2bde5e7446b8c98acc74eca" category="inline-link-macro-rx"></block>。</block>
+  <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">现有用户的角色迁移</block>
+  <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">当您将 Console 代理升级到 4.9.0 或更高版本时，Console 将根据现有用户的平台角色为其分配额外的 Cloud Volumes ONTAP 角色。</block>
+  <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">升级控制台代理后查看角色</block>
+  <block id="4935d39c33b785da4c7add3d08807c1b" category="admonition">当现有 Console 代理升级到 Console 4.9.0 或更高版本时，Console 将运行一次性种子设定过程，将 Cloud Volumes ONTAP 角色分配给组织中的现有用户。此过程最多可能需要 30 分钟才能完成。要查看和调整种子角色，请参阅 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
+  <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">以下映射仅适用于此一次性迁移进程。</block>
+  <block id="9426ecd2d551af7bd95369b07facce3c" category="cell">现有平台角色</block>
+  <block id="996d0510bc51c1b8c7ecf1631282579f" category="cell">播种期间分配的 Cloud Volumes ONTAP 角色</block>
+  <block id="b04e504847ef6b67f0727b490728c90b" category="cell">文件夹或项目查看器</block>
+  <block id="a5177570255a467a81cc5b270323bf23" category="cell">任何其他平台角色</block>
+  <block id="bdb1e832e4cad8743cbdc77c5df5a31f" category="paragraph">Console 在与现有平台角色相同的层次结构级别上分配 Cloud Volumes ONTAP 角色。这些映射不适用于新角色分配。要查看和调整种子角色，请参阅 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f7ab73d3f47101c9e838bfe8c2a50d2" category="admonition">一个已知问题当前阻止 *Organization viewer* 和 *Cloud Volumes ONTAP viewer* 角色组合在组织范围内工作。使用 *Organization admin* 或 *Folder or project admin* 角色作为临时解决方法。</block>
+  <block id="d60cbf1b12a9509c3a6fb176c7c8123b" category="paragraph">新的或更新的角色分配最多需要一小时才能生效。Cloud Volumes ONTAP 每小时刷新一次角色分配。</block>
+  <block id="d568a44ac338b3ea56bc14cb36214438" category="summary">通过组织项目、添加 Console 成员并分配 Cloud Volumes ONTAP 角色，为 Cloud Volumes ONTAP 设置基于角色的访问权限。</block>
+  <block id="07ee22b21ec2682df904eeff73509ddc" category="doc">在 NetApp Console 中为 Cloud Volumes ONTAP 设置基于角色的访问控制</block>
+  <block id="142e9620e2aacfc60d7561bde28567c0" category="paragraph">设置对 Cloud Volumes ONTAP 的访问权限，以便现有 Console 用户保留所需的访问权限，新订阅者可以添加具有适当权限的用户。</block>
+  <block id="a5920babebe582015da790ccc67be5bf" category="paragraph">使用以下部分之一：</block>
+  <block id="0c46210548ea7cc3e40ed04b862f53db" category="list-text">*初次使用 NetApp Console 和 Cloud Volumes ONTAP*：为新用户和 Cloud Volumes ONTAP 系统设置基于角色的访问权限。</block>
+  <block id="158466de67fff7e0b90ec8e9e87b13c7" category="list-text">*升级到支持角色的 Console 代理版本*：查看自动分配给现有用户的角色，并根据需要进行调整。</block>
+  <block id="2341e1cc07b0106e2056a8af81fb8a1b" category="section-title">在初始配置 Cloud Volumes ONTAP 后为用户设置访问权限</block>
+  <block id="e5ad8424726cd3ef5ad94078b728fe5f" category="paragraph">新订阅者从创建 Console 组织开始。第一个订阅者被赋予组织管理员的角色。<block ref="374de56592e527dd57d0a643704cfd56" category="inline-link-macro-rx"></block>。</block>
+  <block id="e98f776839d9f87f3b210fb6ac4d0340" category="section-title">规划 Cloud Volumes ONTAP 角色分配</block>
+  <block id="5ad3e14437f822dcd072b98cf44a0577" category="paragraph">在包含系统的组织、文件夹或项目级别分配 Cloud Volumes ONTAP 角色。平台角色使用户能够管理 NetApp Console 资源，例如组织、文件夹、项目、成员和资源访问。Cloud Volumes ONTAP 角色使用户能够管理 Cloud Volumes ONTAP 系统。</block>
+  <block id="322d7aefe31d726cf13f102053d1df5f" category="paragraph">仅分配每个用户需要的角色。当用户管理控制台资源和管理 Cloud Volumes ONTAP 系统时，请同时分配平台角色和 Cloud Volumes ONTAP 角色。平台角色不会替换 Cloud Volumes ONTAP 操作的 Cloud Volumes ONTAP 角色。</block>
+  <block id="f24b1735a3176a7ad1fbba21c7388a1e" category="list-text">例如，将*文件夹或项目管理员*和*Cloud Volumes ONTAP 管理员*角色分配给管理项目访问权限和管理该项目中 Cloud Volumes ONTAP 系统的用户。</block>
+  <block id="439d5037841a1298b4bfa06e8ee9018e" category="list-text">将*组织管理员*和*Cloud Volumes ONTAP 操作员*角色分配给在整个组织中管理 Console 代理设置和 Cloud Volumes ONTAP 系统的用户。</block>
+  <block id="b040657c933d705e3125a1feba70b2b5" category="list-text">如果用户不需要管理 Console 资源，则仅分配与其管理 Cloud Volumes ONTAP 系统所需的访问级别相匹配的 Cloud Volumes ONTAP 角色。</block>
+  <block id="351c8850d75e0b32f3d24c9257b1eb10" category="section-title">当用户还需要管理 Console 资源时，推荐的角色分配</block>
+  <block id="9591e478e33e1de6226ea625992365dd" category="paragraph">当用户需要在仅使用 NetApp Console 管理 Cloud Volumes ONTAP 的组织中管理 Console 资源和 Cloud Volumes ONTAP 系统时，请使用这些角色分配。</block>
+  <block id="5d113f2038d289f391614c39043629e8" category="cell">范围</block>
+  <block id="e9ab643bb6c260c4f19bf4a811b9c8b3" category="cell">Cloud Volumes ONTAP 角色</block>
+  <block id="8fb5d7210dd422a7e9e0f471d0a39cf1" category="cell">当用户必须管理 Console 资源（包括 Console 代理设置）和管理 Cloud Volumes ONTAP 系统时</block>
+  <block id="fcb3814409d2682ae50017c18f3b14dd" category="cell">文件夹或项目</block>
+  <block id="52d2dc16d6a4a8f511f37815cb33c180" category="cell">当用户必须管理特定文件夹或项目中的 Console 资源并管理 Cloud Volumes ONTAP 系统时</block>
+  <block id="effd7d5fd7d2cac2f3d0d95b98f17ea1" category="cell">当用户必须在特定文件夹或项目中管理 Console 资源并管理 Cloud Volumes ONTAP 系统时</block>
+  <block id="a08b8cf4df5b3c6fda96a1fb4906297e" category="cell">当用户必须在特定文件夹或项目中管理 Console 资源，并且只需要对 Cloud Volumes ONTAP 系统进行只读访问时</block>
+  <block id="8098ec6f5787193792e961bb2ba74d3f" category="list-text">注册 NetApp Console 并创建您的组织。</block>
+  <block id="b4d1c3b934af48fc44bcf78aa4fd3811" category="list-text">使用默认项目或创建与组织 Cloud Volumes ONTAP 系统的方式匹配的文件夹和项目。</block>
+  <block id="1cc65e4e48091f8ea1b9e212f32611c3" category="list-text">配置或关联 Cloud Volumes ONTAP 订阅。</block>
+  <block id="27bc211be7d783bfcd5b8d9ce7a7eb6c" category="inline-link-macro">了解如何将成员添加到 NetApp Console 组织</block>
+  <block id="6eefbd6ca18934d45ca4ce0afe585f26" category="list-text">将用户、服务帐户或联合组添加到组织。<block ref="97aa6b5098386082207e66769bcc9b4e" category="inline-link-macro-rx"></block>。</block>
+  <block id="6cff925d59f6f8a9fa840fe3bac1e2b6" category="list-text">在将要管理系统的组织、文件夹或项目级别，为用户分配 Cloud Volumes ONTAP 角色。如果成员还需要管理 Console 资源并将访问权限分配给其他人，请分配适当的平台角色。</block>
+  <block id="2386e129e4fecc93195657ea4dc87101" category="list-text">在将要管理该系统的项目中添加或发现 Cloud Volumes ONTAP 系统。了解<block ref="b68463f6d3bf4cfc966dc5504bb09dac" category="inline-link-rx"></block>。</block>
+  <block id="1b6d320c6cc19b18ed20adf7b7cc1588" category="inline-link-macro">了解如何将资源与文件夹和项目关联</block>
+  <block id="28ced76b7b3a01b510c263591f1042c0" category="list-text">如果系统或其控制台代理必须在其他项目中可用，请将资源与这些项目相关联。<block ref="3a0f5c999f52d199bd3e8bda7f8df4b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="1ae34a1a97c96fb501df108f0ccaaa50" category="paragraph">将 Console 代理升级到 4.9.0 或更高版本后，Console 将根据现有用户的平台角色自动为其分配 Cloud Volumes ONTAP 角色。这种称为 Seeding 的一次性分配可帮助用户保留适当的 Cloud Volumes ONTAP 访问权限，而无需管理员手动分配每个角色。Seeding 根据用户现有的平台角色分配 Cloud Volumes ONTAP 管理员或查看者角色。映射仅适用于迁移期间；平台角色不会替换新分配的显式 Cloud Volumes ONTAP 角色。查看已种子化的角色，以确认用户仅保留其所需的访问权限。</block>
+  <block id="87a572687e882fc98097f9c9f4575d8d" category="list-text">标识包含每个 Cloud Volumes ONTAP 系统的组织、文件夹或项目。</block>
+  <block id="9e3d1d8d81f1830befbef42ebbb854bf" category="inline-link-macro">为现有用户设定种子映射</block>
+  <block id="124f3b8b4925d1f284c981a3d0766bbc" category="list-text">查看分配给每个用户的 Cloud Volumes ONTAP 角色，并确认它是在包含系统的组织、文件夹或项目级别分配的。有关预期的种子角色，请参阅 <block ref="45c304ee1ade93cf85129ebc868db872" category="inline-link-macro-rx"></block>。</block>
+  <block id="7bd571056c71556ed1cf73ce3020ca53" category="list-text">当种子角色与用户的职责不匹配时，分配或更改 Cloud Volumes ONTAP 角色。种子设定过程根据用户现有的平台角色分配 Cloud Volumes ONTAP 管理员或查看者角色。如果用户需要操作员级别的权限，请在播种后明确分配 Cloud Volumes ONTAP 操作员角色。</block>
+  <block id="5774c29530ef3d00986577fe09901f16" category="list-text">让用户访问 Cloud Volumes ONTAP 系统，并确认可用操作与分配的角色匹配。</block>
+  <block id="a065f8eda24e666f32ca8b894d69f8fd" category="paragraph">如果用户无法访问系统，请验证用户在组织、文件夹或项目级别具有 Cloud Volumes ONTAP 角色。</block>
+  <block id="39790cbad3274fc855ec89bb7a2570da" category="inline-link-macro">Cloud Volumes ONTAP 访问角色</block>
+  <block id="f9e99a029007c22da4c2ef4b0a4878b5" category="list-text"><block ref="f9e99a029007c22da4c2ef4b0a4878b5" category="inline-link-macro-rx"></block></block>
+  <block id="7f9913169b42b8f5d52af4ca9c8717f1" category="list-text"><block ref="7f9913169b42b8f5d52af4ca9c8717f1" category="inline-link-macro-rx"></block></block>
+  <block id="0482ab4442a9ba22f7c194297a8cb1f2" category="list-text"><block ref="0482ab4442a9ba22f7c194297a8cb1f2" category="inline-link-macro-rx"></block></block>
+  <block id="0b4dbf2063bf2cee842f6213a668ca13" category="sidebar">开始使用 NetApp Console（标准模式）</block>
 </blocks>

@@ -36,7 +36,7 @@ sidebar:
         url: "/concept-agents.html"
       - title: 身份和访问管理
         url: "/concept-identity-and-access-management.html"
-    - title: NetApp Console (SaaS) 入门
+    - title: 开始使用 NetApp Console（标准模式）
       entries:
       - title: 入门工作流程
         url: "/task-quick-start-standard-mode.html"
@@ -221,7 +221,11 @@ sidebar:
           - title: 备份和恢复角色
             url: "/reference-iam-backup-rec-roles.html"
           - title: Cloud Volumes ONTAP 角色
-            url: "/reference-iam-cvo-roles.html"
+            entries:
+            - title: Cloud Volumes ONTAP 角色
+              url: "/reference-iam-cvo-roles.html"
+            - title: 为 Cloud Volumes ONTAP 设置基于角色的访问
+              url: "/task-cvo-rbac-setup.html"
           - title: Data Classification 角色
             url: "/reference-iam-data-classification.html"
           - title: 灾难恢复角色
@@ -236,8 +240,6 @@ sidebar:
           url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
     - title: 安全与合规
       entries:
-      - title: 安全 NetApp 控制台
-        url: "/task-secure-netapp-console.html"
       - title: 身份联合
         entries:
         - title: 了解身份联合
