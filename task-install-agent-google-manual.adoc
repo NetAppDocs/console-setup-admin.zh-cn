@@ -309,6 +309,7 @@ podman info | grep networkBackend
 
 
 
+. 如果将此代理与 Cloud Volumes ONTAP 系统关联，请考虑增加与代理关联的线程数，以提高性能。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["了解如何增加代理的容器线程限制"^]。
 
 
 --

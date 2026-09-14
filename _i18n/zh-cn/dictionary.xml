@@ -6556,10 +6556,8 @@
   <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">现有用户的角色迁移</block>
   <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">当您将 Console 代理升级到 4.9.0 或更高版本时，Console 将根据现有用户的平台角色为其分配额外的 Cloud Volumes ONTAP 角色。</block>
   <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">升级控制台代理后查看角色</block>
-  <block id="4935d39c33b785da4c7add3d08807c1b" category="admonition">当现有 Console 代理升级到 Console 4.9.0 或更高版本时，Console 将运行一次性种子设定过程，将 Cloud Volumes ONTAP 角色分配给组织中的现有用户。此过程最多可能需要 30 分钟才能完成。要查看和调整种子角色，请参阅 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
   <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">以下映射仅适用于此一次性迁移进程。</block>
   <block id="9426ecd2d551af7bd95369b07facce3c" category="cell">现有平台角色</block>
-  <block id="996d0510bc51c1b8c7ecf1631282579f" category="cell">播种期间分配的 Cloud Volumes ONTAP 角色</block>
   <block id="b04e504847ef6b67f0727b490728c90b" category="cell">文件夹或项目查看器</block>
   <block id="a5177570255a467a81cc5b270323bf23" category="cell">任何其他平台角色</block>
   <block id="bdb1e832e4cad8743cbdc77c5df5a31f" category="paragraph">Console 在与现有平台角色相同的层次结构级别上分配 Cloud Volumes ONTAP 角色。这些映射不适用于新角色分配。要查看和调整种子角色，请参阅 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
@@ -6597,10 +6595,7 @@
   <block id="2386e129e4fecc93195657ea4dc87101" category="list-text">在将要管理该系统的项目中添加或发现 Cloud Volumes ONTAP 系统。了解<block ref="b68463f6d3bf4cfc966dc5504bb09dac" category="inline-link-rx"></block>。</block>
   <block id="1b6d320c6cc19b18ed20adf7b7cc1588" category="inline-link-macro">了解如何将资源与文件夹和项目关联</block>
   <block id="28ced76b7b3a01b510c263591f1042c0" category="list-text">如果系统或其控制台代理必须在其他项目中可用，请将资源与这些项目相关联。<block ref="3a0f5c999f52d199bd3e8bda7f8df4b1" category="inline-link-macro-rx"></block>。</block>
-  <block id="1ae34a1a97c96fb501df108f0ccaaa50" category="paragraph">将 Console 代理升级到 4.9.0 或更高版本后，Console 将根据现有用户的平台角色自动为其分配 Cloud Volumes ONTAP 角色。这种称为 Seeding 的一次性分配可帮助用户保留适当的 Cloud Volumes ONTAP 访问权限，而无需管理员手动分配每个角色。Seeding 根据用户现有的平台角色分配 Cloud Volumes ONTAP 管理员或查看者角色。映射仅适用于迁移期间；平台角色不会替换新分配的显式 Cloud Volumes ONTAP 角色。查看已种子化的角色，以确认用户仅保留其所需的访问权限。</block>
   <block id="87a572687e882fc98097f9c9f4575d8d" category="list-text">标识包含每个 Cloud Volumes ONTAP 系统的组织、文件夹或项目。</block>
-  <block id="9e3d1d8d81f1830befbef42ebbb854bf" category="inline-link-macro">为现有用户设定种子映射</block>
-  <block id="124f3b8b4925d1f284c981a3d0766bbc" category="list-text">查看分配给每个用户的 Cloud Volumes ONTAP 角色，并确认它是在包含系统的组织、文件夹或项目级别分配的。有关预期的种子角色，请参阅 <block ref="45c304ee1ade93cf85129ebc868db872" category="inline-link-macro-rx"></block>。</block>
   <block id="7bd571056c71556ed1cf73ce3020ca53" category="list-text">当种子角色与用户的职责不匹配时，分配或更改 Cloud Volumes ONTAP 角色。种子设定过程根据用户现有的平台角色分配 Cloud Volumes ONTAP 管理员或查看者角色。如果用户需要操作员级别的权限，请在播种后明确分配 Cloud Volumes ONTAP 操作员角色。</block>
   <block id="5774c29530ef3d00986577fe09901f16" category="list-text">让用户访问 Cloud Volumes ONTAP 系统，并确认可用操作与分配的角色匹配。</block>
   <block id="a065f8eda24e666f32ca8b894d69f8fd" category="paragraph">如果用户无法访问系统，请验证用户在组织、文件夹或项目级别具有 Cloud Volumes ONTAP 角色。</block>
@@ -6609,4 +6604,11 @@
   <block id="7f9913169b42b8f5d52af4ca9c8717f1" category="list-text"><block ref="7f9913169b42b8f5d52af4ca9c8717f1" category="inline-link-macro-rx"></block></block>
   <block id="0482ab4442a9ba22f7c194297a8cb1f2" category="list-text"><block ref="0482ab4442a9ba22f7c194297a8cb1f2" category="inline-link-macro-rx"></block></block>
   <block id="0b4dbf2063bf2cee842f6213a668ca13" category="sidebar">开始使用 NetApp Console（标准模式）</block>
+  <block id="54383aac445d39de2e8c245040d07b5f" category="inline-link-macro">了解如何增加代理的容器线程限制</block>
+  <block id="d2c88e74d3861db30d07ea7d5b32f8b4" category="list-text">如果将此代理与 Cloud Volumes ONTAP 系统关联，请考虑增加与代理关联的线程数，以提高性能。<block ref="19d35f1710aa989f7c51ec017381d272" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f5270815134250876b4de79ab285ee2" category="admonition">当现有控制台代理升级到 Console 4.9.0 或更高版本时，控制台将运行一次性迁移过程，将 Cloud Volumes ONTAP 角色分配给组织中的现有用户。此过程最多可能需要 30 分钟才能完成。要查看和调整迁移期间分配的角色，请参阅 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
+  <block id="43caa104b2be33274574693f687b3b8a" category="cell">升级期间分配的 Cloud Volumes ONTAP 角色</block>
+  <block id="867f6306ad030ade00b2b5d1be06a297" category="paragraph">将控制台代理升级到 4.9.0 或更高版本后，控制台将根据现有用户的平台角色自动为其分配 Cloud Volumes ONTAP 角色。此一次性分配可帮助用户保留适当的 Cloud Volumes ONTAP 访问权限，而无需管理员手动分配每个角色。系统将根据用户现有的平台角色自动为其分配 Cloud Volumes ONTAP 角色。映射仅适用于迁移期间；平台角色不会替换新分配的显式 Cloud Volumes ONTAP 角色。查看新角色，确认用户仅保留其所需的访问权限。</block>
+  <block id="acbaf21f08d26739d3a0e3645fd4f7c1" category="inline-link-macro">了解升级后自动分配的Cloud Volumes ONTAP角色</block>
+  <block id="a7f237db4808db8f7d7e3569c4c90eba" category="list-text">查看分配给每个用户的 Cloud Volumes ONTAP 角色，并确认它是在包含系统的组织、文件夹或项目级别分配的。<block ref="943ee494db9e9617f80c85c45c5ec678" category="inline-link-macro-rx"></block>。</block>
 </blocks>

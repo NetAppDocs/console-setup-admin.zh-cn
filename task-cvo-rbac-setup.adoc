@@ -83,11 +83,11 @@ NOTE: 一个已知问题当前阻止 *Organization viewer* 和 *Cloud Volumes ON
 [[review-roles-after-upgrading-the-console-agent]]
 == 升级控制台代理后查看角色
 
-将 Console 代理升级到 4.9.0 或更高版本后，Console 将根据现有用户的平台角色自动为其分配 Cloud Volumes ONTAP 角色。这种称为 Seeding 的一次性分配可帮助用户保留适当的 Cloud Volumes ONTAP 访问权限，而无需管理员手动分配每个角色。Seeding 根据用户现有的平台角色分配 Cloud Volumes ONTAP 管理员或查看者角色。映射仅适用于迁移期间；平台角色不会替换新分配的显式 Cloud Volumes ONTAP 角色。查看已种子化的角色，以确认用户仅保留其所需的访问权限。
+将控制台代理升级到 4.9.0 或更高版本后，控制台将根据现有用户的平台角色自动为其分配 Cloud Volumes ONTAP 角色。此一次性分配可帮助用户保留适当的 Cloud Volumes ONTAP 访问权限，而无需管理员手动分配每个角色。系统将根据用户现有的平台角色自动为其分配 Cloud Volumes ONTAP 角色。映射仅适用于迁移期间；平台角色不会替换新分配的显式 Cloud Volumes ONTAP 角色。查看新角色，确认用户仅保留其所需的访问权限。
 
 .步骤
 . 标识包含每个 Cloud Volumes ONTAP 系统的组织、文件夹或项目。
-. 查看分配给每个用户的 Cloud Volumes ONTAP 角色，并确认它是在包含系统的组织、文件夹或项目级别分配的。有关预期的种子角色，请参阅 link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["为现有用户设定种子映射"]。
+. 查看分配给每个用户的 Cloud Volumes ONTAP 角色，并确认它是在包含系统的组织、文件夹或项目级别分配的。link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["了解升级后自动分配的Cloud Volumes ONTAP角色"]。
 . 当种子角色与用户的职责不匹配时，分配或更改 Cloud Volumes ONTAP 角色。种子设定过程根据用户现有的平台角色分配 Cloud Volumes ONTAP 管理员或查看者角色。如果用户需要操作员级别的权限，请在播种后明确分配 Cloud Volumes ONTAP 操作员角色。
 . 新的或更新的角色分配最多需要一小时才能生效。Cloud Volumes ONTAP 每小时刷新一次角色分配。
 . 让用户访问 Cloud Volumes ONTAP 系统，并确认可用操作与分配的角色匹配。
