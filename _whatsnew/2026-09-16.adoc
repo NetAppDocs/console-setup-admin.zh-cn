@@ -1,0 +1,23 @@
+= Console 代理 4.11.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-11-0]]
+=== Console 代理 4.11.0
+
+4.11.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+
+
+==== AWS Marketplace 中 Cloud Volumes ONTAP 订阅者的简化代理部署流程
+
+如果您是 link:https://us-east-1.console.aws.amazon.com/marketplace/search/listing/prodview-yi43o6oz7bf32?sr=0-2&ref_=ucaf&applicationId=AWS-Marketplace-Console["AWS Marketplace 中的独立 Cloud Volumes ONTAP 订阅"] 的新订阅者，NetApp Console 现在可以简化代理部署。您可以通过更少的步骤配置 AWS 角色、策略和凭据，在单个页面上自动使用默认值，并更快地完成设置。

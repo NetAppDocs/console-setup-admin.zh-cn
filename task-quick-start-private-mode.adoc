@@ -92,9 +92,6 @@ NetApp 分类
 Licenses and subscriptions 管理
 
 * 私密模式仅支持 BYOL。
-+
-对于 Cloud Volumes ONTAP BYOL，仅支持基于节点的许可。不支持基于容量的许可。由于出站 Internet 连接不可用，因此需要在 Console 中手动上载 Cloud Volumes ONTAP 许可文件。
-
 
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["了解如何添加 licenses"^]
