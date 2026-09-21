@@ -1423,10 +1423,7 @@
   <block id="05d21d5a33096194ae80a609c95e316b" category="paragraph">下表列出了每个角色可以执行的操作。</block>
   <block id="df2d943b4d0652d322ec6b3cb52e3036" category="cell">灾难恢复管理员</block>
   <block id="ba4b33592d18613c28d684c20110e152" category="cell">灾难恢复查看器</block>
-  <block id="20f0d287f3a16854279c9e5960c749e1" category="cell">*在“站点”选项卡上*：</block>
   <block id="24f9533e942cbf2b6f6f10572e7060a3" category="cell">查看网站</block>
-  <block id="3e8a9a8e5a257cee36226ed2012c6b3c" category="cell">添加、修改或删除站点</block>
-  <block id="0aab6b477ac055b9392a6ec5ce7034b9" category="cell">*在复制计划选项卡上*：</block>
   <block id="735da8d6e9fa3b588537574c24f9dcf0" category="cell">查看复制计划</block>
   <block id="7b84a7ee34168bfbf6886ef0061658cc" category="cell">查看复制计划详细信息</block>
   <block id="baee89c048bf90468e3ec3f5606cf60b" category="cell">创建或修改复制计划</block>
@@ -1435,10 +1432,8 @@
   <block id="c5bcd887212759ab57c8af218b99eb31" category="cell">执行故障转移</block>
   <block id="322e135616f19e459c874a724520fa1e" category="cell">执行故障回复</block>
   <block id="e8ad725b85c41308339b4a07a358115b" category="cell">执行迁移</block>
-  <block id="8370ef7559cb3ec9c98d0635143042bb" category="cell">*在资源组选项卡上*：</block>
   <block id="e413f3ae098a2b13a5631e34e8843bd1" category="cell">查看资源组</block>
   <block id="007c91bf4efbb78277d4ee064ec28f3a" category="cell">创建、修改或删除资源组</block>
-  <block id="aba6939e11f2553d21fef269ecf1b46d" category="cell">*在“作业监控”选项卡上*：</block>
   <block id="c6b984bc2ca856b4291f8e64fa30cd9a" category="cell">查看职位</block>
   <block id="295cc024728a10becfec47e1d454c4f9" category="cell">取消作业</block>
   <block id="63e309fee54093051286fe5c828adf83" category="doc">NetApp Console中的Google Cloud NetApp Volumes角色</block>
@@ -4648,8 +4643,6 @@
   <block id="7aa5255fb9f7e29b797e1c6816a0d999" category="section-title">代理移除示例</block>
   <block id="e1c2619e19fc02c38aacafc93d795901" category="summary">您可以将运营支持分析师角色分配给用户，以便他们能够访问警报和监控功能。具有此角色的用户还可以打开支持案例。</block>
   <block id="3db89b44d26706e71a450352c7c5a1da" category="list-text">*灾难恢复管理员*：执行任何操作。</block>
-  <block id="1e732ca66bd89df595b8e795e5dfa4ac" category="list-text">*灾难恢复故障转移管理*：执行故障转移和迁移。</block>
-  <block id="014b84d038553d60cf09cbddcb4e7d08" category="list-text">*灾难恢复应用程序管理员*：创建复制计划。修改复制计划。开始测试故障转移。</block>
   <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*灾难恢复查看器*：仅查看信息。</block>
   <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">灾难恢复故障转移管理员</block>
   <block id="49f16ca5444f519e5203bb5067957eef" category="cell">灾难恢复应用程序管理员</block>
@@ -6628,4 +6621,19 @@
   <block id="1e464951e7ffdbf5ba8f20ee5038f44f" category="section-title">2026年9月17日</block>
   <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026年9月16日</block>
   <block id="9bb8a5cf038a4165b497e11d9718970b" category="cell">5.6.2（2026 年 8 月 31 日）</block>
+  <block id="c106c41d583d26b59b787289271a8fd4" category="list-text">*Disaster recovery failover admin*：执行故障转移和迁移。</block>
+  <block id="b86d1760c0186df3ef9b68853bbb2a8b" category="list-text">*Disaster recovery application admin*：创建和修改复制计划；启动测试故障转移。</block>
+  <block id="8e412232315ec950f91f163ede767def" category="cell">*激活和发现*</block>
+  <block id="3bac713603d50e003fd6f03f9b7beac7" category="cell">开始免费试用</block>
+  <block id="ec017699d35d3fd81ecb93391e661bbf" category="cell">查看凭据</block>
+  <block id="b50b46c3491c77777162de8f909e1942" category="cell">创建、更新或删除凭据</block>
+  <block id="fc2a46d68d6373042ea3d78e47943405" category="cell">*站点*</block>
+  <block id="e9a84fe6a60485e2bad3176067f0a9f2" category="cell">添加、修改或删除站点或集群</block>
+  <block id="152d2b3e9e295df0f6e9f3cc4460b946" category="cell">查看集群</block>
+  <block id="458855e85a7d6cf780ac5d7aebbf98b3" category="cell">*复制计划*</block>
+  <block id="9f5a5e8a88218c7d2979132b77545d9f" category="cell">*设置*</block>
+  <block id="c14a96aba3ee750ceec912bb60222c01" category="cell">创建或修改 AppVaults</block>
+  <block id="7a9f450627f543cbbf6905a038ee81e9" category="cell">创建或修改资源转换</block>
+  <block id="79c41e65b3e3fb5093fc621f469ff380" category="cell">*资源组*</block>
+  <block id="96c0a395cdcf92a7d93eb46b049601ad" category="cell">*作业监控*</block>
 </blocks>
