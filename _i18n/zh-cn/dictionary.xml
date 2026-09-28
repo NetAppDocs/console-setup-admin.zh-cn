@@ -392,7 +392,6 @@
   <block id="9156858ddc064ea9e8b1cad5a7866d77" category="list-text">仅限英语版本。</block>
   <block id="1be928fabd45691f13e3586545b02c3e" category="list-text">主机必须在 Red Hat 订阅管理中注册。如果未注册，主机将无法在代理安装期间访问存储库来更新所需的第三方软件。</block>
   <block id="e44d9eacbf65213e16b5bcf9aded9506" category="paragraph">3.9.50 或更高版本，控制台处于标准模式或受限模式</block>
-  <block id="4a7c3449c74a5d09f39518a207c28558" category="paragraph">Podman 版本 4.6.1 或 4.9.4</block>
   <block id="98119697a8c596d6a586655f867a2cda" category="inline-xref">查看 Podman 配置要求</block>
   <block id="a4facfb2d16d1ed97d33467440808582" category="paragraph"><block ref="70e106a4b5e10c3f8e254a047f7ddb34" category="inline-xref-macro-rx"></block> 。</block>
   <block id="80626b31c22fa123b11c56011b1f23b6" category="paragraph">在强制模式或宽容模式下受支持</block>
@@ -6636,4 +6635,8 @@
   <block id="7a9f450627f543cbbf6905a038ee81e9" category="cell">创建或修改资源转换</block>
   <block id="79c41e65b3e3fb5093fc621f469ff380" category="cell">*资源组*</block>
   <block id="96c0a395cdcf92a7d93eb46b049601ad" category="cell">*作业监控*</block>
+  <block id="97f185bdb4d83a1c34a87fc7edc58f9c" category="paragraph">4.10.0 或更高版本，Console 处于私有模式</block>
+  <block id="ffc6d9152a780992794d0684b51c6723" category="section-title">私有模式 4.10.0 支持 Red Hat Enterprise Linux (RHEL) 9.6</block>
+  <block id="e8df4a2f18a880c577818fb8618fed77" category="inline-link-macro">了解私有模式的主机要求</block>
+  <block id="a40f09cfdf03cc6659d4d7e08024fda0" category="paragraph">私有模式现在可以在 Red Hat Enterprise Linux （RHEL） 9.6 上安装和运行，为用户提供最新支持的操作系统，以增强安全性和性能。 <block ref="0ce7e93392d1f71f6b7bb5b508ff4113" category="inline-link-macro-rx"></block></block>
 </blocks>

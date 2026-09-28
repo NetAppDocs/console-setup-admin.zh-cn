@@ -45,6 +45,13 @@ summary: 了解 NetApp Console 管理的新功能。
 |===
 
 
+[[private-mode-4-10-0-supports-red-hat-enterprise-linux-rhel-9-6]]
+=== 私有模式 4.10.0 支持 Red Hat Enterprise Linux (RHEL) 9.6
+
+私有模式现在可以在 Red Hat Enterprise Linux （RHEL） 9.6 上安装和运行，为用户提供最新支持的操作系统，以增强安全性和性能。 link:https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["了解私有模式的主机要求"^]
+
+
+
 [[16-september-2026]]
 == 2026年9月16日
 
