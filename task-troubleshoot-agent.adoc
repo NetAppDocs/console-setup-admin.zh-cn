@@ -179,11 +179,6 @@ image:screenshot-agent-validate.png["屏幕截图显示了代理“操作”菜�
 [[disable-config-check]]
 === 禁用手动安装的配置检查
 
-
-
-[[disable-configuration-checks-for-manual-installations]]
-=== 禁用手动安装的配置检查
-
 有时您可能需要禁用在安装期间验证出站连接的配置检查。例如，在政府云环境中手动安装代理时，需要禁用配置检查，否则安装将失败。
 
 您可以通过在 _com/opt/application/netapp/service-manager-2/config.json_ 文件中设置 _skipConfigCheck_ 标志来禁用配置检查。默认情况下，此标志设置为 false，并且配置检查会验证代理的出站访问。将此标志设置为 true 以禁用检查。在完成此步骤之前，请先熟悉 JSON 语法。

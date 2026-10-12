@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
-summary: 维护代理主机上的操作系统是您的责任。例如，您应该按照公司的操作系统分发标准程序，对控制台代理主机上的操作系统应用安全更新。 
+summary: 了解如何维护 NetApp Console 代理虚拟机，包括手动安装代理的操作系统安全更新、推荐的 CPU 和 RAM 大小调整、资源运行状况通知以及虚拟机启动和停止过程。 
 ---
-= 维护手动安装的 NetApp Console 代理的 VM
+= 维护 NetApp Console agent VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,19 @@ summary: 维护代理主机上的操作系统是您的责任。例如，您应�
 
 
 [role="lead"]
+通过对手动安装的代理应用操作系统安全更新、响应 CPU、RAM 和磁盘空间警报，以及在需要时调整虚拟机大小或停止和启动虚拟机，来维护 NetApp Console 代理虚拟机。
+
 当您手动安装 Console 代理时，维护代理主机上的操作系统是您（客户）的责任。例如，您（客户）应按照贵公司的操作系统分发标准程序对代理主机上的操作系统应用安全更新。
 
+如果代理虚拟机配置不足或遇到性能问题，则应采取适当措施升级虚拟机资源。
 
 
-[[apply-operating-system-updates-to-the-agent-host]]
-== 将操作系统更新应用于代理主机
+NOTE: 如果在 vCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。link:task-agent-vm-config.html["了解如何在 vCenter 中维护代理虚拟机"^]。
+
+
+
+[[apply-operating-system-updates-to-the-manually-installed-agent-hosts]]
+== 将操作系统更新应用于手动安装的代理主机
 
 无需停止代理主机服务即可应用操作系统安全补丁。
 
@@ -42,19 +49,33 @@ sudo apt upgrade
 ----
 
 
-[[vm-or-instance-type]]
-== VM 或实例类型
+[[resizing-the-vm-or-instance-type]]
+== 调整 VM 或实例类型的大小
 
 如果您从控制台创建控制台代理，它会使用默认配置在您的云提供商中部署 VM 实例。创建代理后，不要切换到具有较少 CPU 或 RAM 的较小 VM 实例。
 
-下表列出了 CPU 和 RAM 要求：
+如果收到代理 VM 配置不足的通知，请考虑升级到具有更多 CPU 或 RAM 的更大 VM 实例，以确保最佳性能。
 
-CPU:: 8 个核心或 8 个 vCPU
-RAM:: 32 GB
 
+NOTE: 如果在 VCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。link:task-agent-vm-config.html["了解如何在 VCenter 中调整代理 VM 的大小"^]。
 
 link:reference-agent-default-config.html["了解代理的默认配置"] 。
 
+如果需要增加代理 VM 的 CPU 或 RAM，请按照云提供商或本地虚拟化平台提供的说明调整 VM 实例的大小。NetApp 建议将当前 CPU 和 RAM 分配增加一倍，以确保最佳性能。下表显示了推荐的大小层级，每个层级的 CPU 和 RAM 是上一层级的两倍。
+
+[cols="1,1,1"]
+|===
+| 层 | CPU（内核或 vCPU） | RAM 
+
+
+| 最低 | 8 | 32 GB 
+
+
+| 中 | 16 | 64 GB 
+
+
+| 大型 | 32 | 128 GB 
+|===
 
 
 [[monitor-the-agent]]
@@ -78,10 +99,30 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 | 磁盘空间过高 | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM["查看NetApp知识库文章"^] 。 
 
 
-| CPU 使用率过高 | 根据安装位置，增加云提供商或本地代理 VM 的 CPU 大小。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。 
+ a| 
+CPU 使用率过高
+ a| 
+根据安装位置，增加云提供商或本地代理 VM 的 CPU 大小。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。
+
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["了解如何在 AWS 中增加代理 VM 的大小"^]。
+* link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["了解如何在 Azure 中增加代理 VM 的大小"^]。
+* link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["了解如何在 Google Cloud 中增加代理虚拟机的大小"^]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["了解如何增加在 VCenter 中运行的本地代理的大小"]。
 
 
-| RAM 使用率过高 | 根据安装位置，增加云提供商或本地代理虚拟机的 RAM。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。 
+
+
+ a| 
+RAM 使用率过高
+ a| 
+根据安装位置，增加云提供商或本地代理虚拟机的 RAM。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。
+
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["了解如何在 AWS 中增加代理 VM 的大小"^]。
+* link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["了解如何在 Azure 中增加代理 VM 的大小"^]。
+* link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["了解如何在 Google Cloud 中增加代理虚拟机的大小"^]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["了解如何增加在 VCenter 中运行的本地代理的大小"]。
+
+
 |===
 
 
