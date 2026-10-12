@@ -6534,7 +6534,6 @@
   <block id="e4a3525277e1b4371bb89478f9422b67" category="list-text">*Cloud Volumes ONTAP operator*：执行重要的存储操作，例如发现和管理 Cloud Volumes ONTAP 系统，包括添加卷、聚合、快照和复制、修改某些配置以及升级 Cloud Volumes ONTAP 版本。</block>
   <block id="769bcb1b917e9456afc908e3923e871d" category="inline-link-macro">为 Cloud Volumes ONTAP 设置基于角色的访问</block>
   <block id="460200b9d3d05ac8165deb4aceb3eee1" category="paragraph">在包含系统的组织、文件夹或项目级别分配 Cloud Volumes ONTAP 角色。平台角色使用户能够管理 NetApp Console 资源，而 Cloud Volumes ONTAP 角色使用户能够管理 Cloud Volumes ONTAP 系统。有关规划角色分配的指导，请参阅 <block ref="4fa2aa48d2bde5e7446b8c98acc74eca" category="inline-link-macro-rx"></block>。</block>
-  <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">现有用户的角色迁移</block>
   <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">当您将 Console 代理升级到 4.9.0 或更高版本时，Console 将根据现有用户的平台角色为其分配额外的 Cloud Volumes ONTAP 角色。</block>
   <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">升级控制台代理后查看角色</block>
   <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">以下映射仅适用于此一次性迁移进程。</block>
@@ -6663,4 +6662,6 @@
   <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">了解如何增加在 VCenter 中运行的本地代理的大小</block>
   <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>。</block>
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">维护 vCenter 安装的代理</block>
+  <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 Cloud Volumes ONTAP 的访问角色。</block>
+  <block id="7be2d306061e806c6a2cf1ac2026ea93" category="section-title">升级到控制台代理版本 4.9.0 或更高版本后，现有用户的角色迁移</block>
 </blocks>

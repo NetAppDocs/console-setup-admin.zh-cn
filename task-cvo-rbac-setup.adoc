@@ -16,6 +16,9 @@ summary: 通过组织项目、添加 Console 成员并分配 Cloud Volumes ONTAP
 [role="lead"]
 设置对 Cloud Volumes ONTAP 的访问权限，以便现有 Console 用户保留所需的访问权限，新订阅者可以添加具有适当权限的用户。
 
+
+NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 Cloud Volumes ONTAP 的访问角色。
+
 使用以下部分之一：
 
 * *初次使用 NetApp Console 和 Cloud Volumes ONTAP*：为新用户和 Cloud Volumes ONTAP 系统设置基于角色的访问权限。

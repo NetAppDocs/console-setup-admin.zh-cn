@@ -16,6 +16,9 @@ summary: 您可以将以下角色分配给用户，以便为他们提供对控�
 [role="lead"]
 您可以将以下角色分配给用户，以便为他们提供对 NetApp Console 中 Cloud Volumes ONTAP 的访问权限。
 
+
+NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 Cloud Volumes ONTAP 的访问角色。
+
 * *Cloud Volumes ONTAP admin*：提供对所有 Cloud Volumes ONTAP 操作的完全访问权限。
 * *Cloud Volumes ONTAP operator*：执行重要的存储操作，例如发现和管理 Cloud Volumes ONTAP 系统，包括添加卷、聚合、快照和复制、修改某些配置以及升级 Cloud Volumes ONTAP 版本。
 * *Cloud Volumes ONTAP viewer*：提供对 Cloud Volumes ONTAP 信息的只读访问。此角色无法执行任何活动操作。某些包含配置信息的选项卡和屏幕可能无法供查看者使用。
@@ -27,9 +30,9 @@ link:reference-iam-predefined-roles.html["了解访问角色"] 。
 
 
 
-[[role-migrations-for-existing-users]]
+[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
 [[seeding-mappings-for-existing-users]]
-== 现有用户的角色迁移
+== 升级到控制台代理版本 4.9.0 或更高版本后，现有用户的角色迁移
 
 当您将 Console 代理升级到 4.9.0 或更高版本时，Console 将根据现有用户的平台角色为其分配额外的 Cloud Volumes ONTAP 角色。
 
