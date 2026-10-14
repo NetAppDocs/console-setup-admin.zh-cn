@@ -31,7 +31,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联�
 如果您从 Console 或 AWS Marketplace 部署了 Console 代理，请注意以下几点：
 
 * EC2 实例类型为 t3.2xlarge。
-* 该图像的操作系统是 Ubuntu 22.04 LTS。
+* 该映像的操作系统是 Ubuntu 24.04 LTS。
 +
 该操作系统不包含 GUI。您必须使用终端来访问系统。
 
@@ -48,7 +48,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联�
 如果您从 Console 或 Azure 市场部署了 Console 代理，请注意以下事项：
 
 * VM 类型为 Standard_D8s_v3。
-* 该图像的操作系统是 Ubuntu 22.04 LTS。
+* 该映像的操作系统是 Ubuntu 24.04 LTS。
 +
 该操作系统不包含 GUI。您必须使用终端来访问系统。
 
@@ -64,7 +64,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上标准部署（可访问互联�
 如果您从控制台或 Google Cloud marketplace 部署了控制台代理，请注意以下几点：
 
 * VM 实例是 n2-standard-8。
-* 该图像的操作系统是 Ubuntu 22.04 LTS。
+* 该映像的操作系统是 Ubuntu 24.04 LTS。
 +
 该操作系统不包含 GUI。您必须使用终端来访问系统。
 
