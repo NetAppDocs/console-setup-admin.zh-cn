@@ -18,6 +18,13 @@ summary: 了解 NetApp Console 管理的新功能。
 
 
 
+[[15-october-2026]]
+== 2026年10月15日
+
+<stdin> 中的未解析指令 - include::_whatsnew/2026-10-13.adoc[]
+
+
+
 [[17-september-2026]]
 == 2026年9月17日
 

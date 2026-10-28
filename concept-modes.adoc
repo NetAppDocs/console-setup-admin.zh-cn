@@ -19,7 +19,7 @@ summary: 您可以通过 SaaS 应用程序使用 NetApp Console，也可以自�
 NetApp 将这些用例称为_部署模式_。每种模式都可为您的业务和安全需求提供不同的连接、功能和服务。
 
 标准模式 (SaaS):: NetApp Console SaaS（软件即服务）应用程序允许访问所有 NetApp 数据服务、自动更新和灵活的身份验证选项，如身份联合和 NetApp Support Site 登录。此模式支持市场订阅和 BYOL 许可。此模式非常适合大多数用户和组织，尤其是那些希望使用 NetApp Console 获得最多功能和服务的用户和组织。
-受限模式（安装在您自己的公共云中）:: 受限模式适用于需要增强安全性和有限连接的组织，例如政府和受监管公司。您将 NetApp Console 安装在自己的公共云中（在政府、主权或商业区域），并且它对 NetApp Console API 端点（托管在 SaaS 应用程序中）的出站连接有限。受限模式提供对关键数据服务的访问，包括 Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（在政府和商业区域）和数据分类，以及自动软件升级和身份联合。
+受限模式（安装在您自己的公共云中）:: 受限模式适用于需要增强安全性和有限连接的组织，例如政府和受监管公司。您将 NetApp Console 安装在自己的公共云中（在政府、主权或商业区域），并且它对 NetApp Console API 端点（托管在 SaaS 应用程序中）的出站连接受到限制。受限模式提供对关键数据服务的访问，包括 AI Data Engine、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（在政府和商业区域）和数据分类，以及自动软件升级和身份联合。
 私有模式（安装在您的场所或云中）:: 专用模式适用于具有严格安全需求的组织，例如 AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 或 air-gapped 环境中的组织。它不会连接到 NetApp Console SaaS 应用程序或 NetApp 基于云的 API，让您完全控制并阻止外部通信。支持的数据服务包括 NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication 和 Cloud Volumes ONTAP。所有存储和身份验证都保留在本地，将数据保留在您的环境中。对于国防承包商、具有严格数据驻留规则的金融机构以及具有机密系统的政府机构，请使用此模式。
 
 
@@ -139,7 +139,10 @@ NetApp 建议客户与其 NetApp 代表合作，将其现有分层许可证转�
 | 工作负载 | 否 
 
 
-.8+| *数据服务* | NetApp Backup and Recovery | 是 
+.9+| *数据服务* | NetApp AI Data Engine | 是 
+
+
+| NetApp Backup and Recovery | 是 
 
 
 | NetApp 分类 | 是 
@@ -290,7 +293,10 @@ image:diagram-restricted-mode.png["一个概念图像，显示可用 SaaS 应用
 | 本地ONTAP集群 | 发现和管理所必需的。您可以在没有 Console 代理的情况下使用直接发现，但需要代理才能使用管理功能。 
 
 
-.3+| *Data Services* （受限模式支持的数据服务比标准模式少）  a| 
+.4+| *Data Services* （受限模式支持的数据服务比标准模式少） | AI Data Engine | 是 
+
+
+ a| 
 备份和恢复
 
 * 在政府地区和商业地区支持限制模式。在限制模式的主权区域不支持。
@@ -638,7 +644,10 @@ NOTE: 标准模式（NetApp Console SaaS 应用程序）支持所有功能。
 | 工作负载 | 否 | 否 
 
 
-.8+| *数据服务* | 备份和恢复 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] 
+.9+| *数据服务* | AI Data Engine | 是 | 否 
+
+
+| 备份和恢复 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP卷数据支持的备份目标列表"^] 
 
 
 | NetApp 分类 | 是 | 是 

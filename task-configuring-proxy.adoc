@@ -54,7 +54,7 @@ IMPORTANT: 配置代理后，无法更改代理类型。如果需要更改代理
 . 选择*HTTP 代理配置*。
 . 在配置类型字段中选择*显式代理*。
 . 选择*启用代理*。
-. 使用语法指定服务器 http://_address:port_[]或者 https://_address:port_[]
+. 使用语法 \http://<address>:<port> 或 \https://<address>:<port> 指定服务器。
 . 如果服务器需要基本身份验证，请指定用户名和密码。
 +
 请注意以下事项：

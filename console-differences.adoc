@@ -54,7 +54,7 @@ Workload Analyzer:: 将延迟、吞吐量、每秒输入/输出操作数和配�
 
 控制台本地部署最适合需要策略驱动的配置、自动合规性检查和完整数据主权的大型本地 ONTAP 环境的组织。
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本地部署^。"]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本地部署。"^]
 
 
 
