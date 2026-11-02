@@ -20,16 +20,22 @@ summary: 通过准备环境和部署控制台代理，开始以受限模式使�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] link:task-prepare-restricted-mode.html["准备部署"]
 [role="quick-margin-list"]
-. 准备一个满足 CPU、RAM、磁盘空间、容器编排工具等要求的专用 Linux 主机。
+. 查看主机要求。如果是手动安装，请准备符合 CPU、RAM、磁盘空间和容器编排工具要求的专用 Linux 主机。link:task-prepare-restricted-mode.html#step-3-review-host-requirements["查看主机要求"]。
 . 设置提供对目标网络的访问、用于手动安装的出站互联网访问以及用于日常访问的出站互联网的网络。
-. 在您的云提供商中设置权限，以便您可以在部署控制台代理实例后将这些权限与控制台代理实例关联。
+. 准备您的提供商和部署方法所需的云权限。
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] link:task-install-restricted-mode.html["部署控制台代理"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 部署 Console 代理
 [role="quick-margin-list"]
-. 从云提供商的市场安装控制台代理，或者在您自己的 Linux 主机上手动安装该软件。
+. 为您的云环境选择部署说明：
++
+** AWS：link:task-install-restricted-mode-aws.html["在 AWS 中部署"]
+** Azure： link:task-install-restricted-mode-azure.html["在 Azure 中部署"]
+** 手动安装：link:task-install-restricted-mode-manual.html["在 AWS、Azure 或 Google Cloud 中手动部署"]
+
+
 . 通过打开 Web 浏览器并输入 Linux 主机的 IP 地址来设置NetApp Console。
-. 向控制台代理提供您之前设置的权限。
+. 按照特定于提供商的说明，将所需的权限与 Console 代理相关联。对于 AWS Marketplace 部署，请在启动 EC2 实例时选择 IAM 角色。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:task-subscribe-restricted-mode.html["订阅NetApp Intelligent Services（可选）"]

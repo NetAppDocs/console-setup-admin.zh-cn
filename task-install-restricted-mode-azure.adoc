@@ -1,0 +1,330 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-azure.html 
+keywords: restricted mode, Azure, Azure Government, Azure Marketplace, Console agent 
+summary: 从市场在 Azure 中以受限模式部署控制台代理，或遵循 AWS、Azure 或 Google Cloud 主机的手动安装主题。 
+---
+= 在 Azure 中以受限模式部署 NetApp Console 代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+以受限模式部署控制台代理，以便您可以在有限的出站连接下使用NetApp Console。首先，安装控制台代理，通过访问控制台代理上运行的用户界面来设置控制台，然后提供您之前设置的云权限。
+
+
+
+[[step-1-prepare-cloud-permissions]]
+== 步骤 1：准备云权限
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何准备云权限"] 。
+
+
+
+[[step-2-prepare-network-access]]
+== 步骤 2：准备网络访问
+
+允许以下出站终结点，以便 Console 代理可以管理 Azure 资源并访问 NetApp Console 服务。
+
+
+
+[[azure-endpoints]]
+=== Azure 端点
+
+允许适用于您的 Azure 区域的终结点：公共、政府或中国。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
+ a| 
+管理 Azure 公共区域中的资源。
+
+
+
+ a| 
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
+ a| 
+管理 Azure 政府区域中的资源。
+
+
+
+ a| 
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
+ a| 
+管理 Azure 中国区域的资源。
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Console 端点
+
+允许 NetApp 支持、控制台功能以及控制台代理部署和升级的共享端点。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+* \ https://mysupport.netapp.com
+
+ a| 
+获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。
+
+
+
+ a| 
+* \ https://signin.b2c.netapp.com
+
+ a| 
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服务。
+
+
+
+ a| 
+对于非政府区域，请使用以下端点：
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+对于政府区域，请改用以下端点：
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+获取用于 Console 代理部署和升级的映像。
+
+|===
+有关浏览器访问和其他网络要求，请参见 link:task-prepare-restricted-mode.html#step-5-prepare-network-access["为受限模式准备网络访问"]。
+
+
+
+[[step-3-deploy-the-netapp-console-in-restricted-mode-in-azure]]
+== 步骤 3：在 Azure 中以受限模式部署 NetApp Console
+
+如何部署控制台代理取决于是使用 Azure Marketplace 还是在 Azure 环境中的 Linux 主机上手动安装。
+
+
+
+[[install-netapp-console-restricted-mode-from-the-azure-marketplace]]
+=== 从 Azure Marketplace 安装 NetApp Console 受限模式
+
+.开始之前
+您应该具有以下内容：
+
+* 满足网络要求的 VNet 和子网。
++
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access["了解网络要求"]
+
+* 包含控制台代理所需权限的 Azure 自定义角色。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何设置 Azure 权限"]
+
+
+
+.步骤
+. 转到 Azure 市场中的NetApp Console代理 VM 页面。
++
+** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商业区域的 Azure 市场页面"^]
+** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure 政府区域的 Azure 市场页面"^]
+
+
+. 选择*立即获取*，然后选择*继续*。
+. 从 Azure 门户中，选择“*创建*”并按照步骤配置虚拟机。
++
+配置虚拟机时请注意以下事项：
+
++
+** *VM 大小*：选择满足 CPU 和 RAM 要求的 VM 大小。我们推荐 Standard_D8s_v3。
+** *磁盘*：控制台代理可以通过 HDD 或 SSD 磁盘实现最佳性能。
+** *公网 IP*：要将公网 IP 地址与控制台代理 VM 一起使用，请选择基本 SKU。
++
+image:screenshot-azure-sku.png["Azure 中创建新 IP 地址的屏幕截图，可让您在 SKU 字段下选择“基本”。"]
+
+
+
++
+如果您使用标准 SKU IP 地址，则控制台将使用控制台代理的_私有_ IP 地址，而不是公共 IP。如果用于访问控制台的计算机无法访问私有 IP 地址，则控制台将无法工作。
+
++
++ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文档：公共 IP SKU"^]
+
++
+** *网络安全组*：控制台代理需要使用 SSH、HTTP 和 HTTPS 的入站连接。
++
+link:reference-ports-azure.html["查看 Azure 的安全组规则"] 。
+
+** *身份*：在*管理*下，选择*启用系统分配的托管身份*。
++
+托管标识允许控制台代理虚拟机无需凭据即可向 Microsoft Entra ID 进行身份验证。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["详细了解 Azure 资源的托管标识"^] 。
+
+
+
+. 在“*审查 + 创建*”页面上，审查您的选择并选择“*创建*”以开始部署。
+
+
+.结果
+Azure 使用指定的设置部署虚拟机。虚拟机和控制台代理软件应在大约五分钟内运行。
+
+.下一步是什么？
+设置NetApp Console。
+
+
+
+[[manually-install-netapp-console-restricted-mode-in-azure]]
+=== 在 Azure 中手动安装 NetApp Console 受限模式
+
+有关手动安装步骤，请参见 link:task-install-restricted-mode-manual.html["在受限模式下手动安装 Console 代理"]。
+
+
+
+[[step-4-set-up-netapp-console]]
+== 步骤 4：设置 NetApp Console
+
+首次访问控制台时，系统会提示您为控制台代理选择一个组织，并需要启用受限模式。
+
+.开始之前
+设置控制台代理的人员必须使用尚不属于控制台组织的登录名登录控制台。
+
+如果您的登录信息与另一个组织关联，您需要注册一个新的登录信息。否则，您将在设置屏幕上看不到启用受限模式的选项。
+
+.步骤
+. 从与控制台代理实例有连接的主机打开 Web 浏览器，然后输入您安装的控制台代理的以下 URL。
+. 注册或登录NetApp Console。
+. 登录后，设置控制台：
++
+.. 输入控制台代理的名称。
+.. 输入新控制台组织的名称。
+.. 选择*您是否在安全环境中运行？*
+.. 选择*在此帐户上启用受限模式*。
++
+请注意，帐户创建后您无法更改此设置。您以后无法启用受限模式，也无法禁用它。
+
++
+如果您在政府区域部署了控制台代理，则该复选框已启用且无法更改。这是因为限制模式是政府区域唯一支持的模式。
+
+.. 选择*让我们开始吧*。
+
+
+
+
+.结果
+控制台代理现已安装并设置到您的控制台组织。所有用户都需要使用控制台代理实例的 IP 地址访问控制台。
+
+.下一步是什么？
+向控制台提供您之前设置的权限。
+
+
+
+[[step-5-provide-permissions-to-the-console-agent]]
+== 步骤 5：向控制台代理提供权限
+
+如果您是从 Azure Marketplace 或手动安装的控制台代理，则需要授予您之前设置的权限。
+
+可以通过分配 Azure 角色或提供 Azure 服务主体的凭据，向控制台代理授予权限。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何准备云权限"] 。
+
+[role="tabbed-block"]
+====
+.Azure 角色
+--
+转到 Azure 门户并将 Azure 自定义角色分配给一个或多个订阅的控制台代理虚拟机。
+
+.步骤
+. 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
++
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp Console内完成操作的能力将受到影响。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
+
+. 选择*访问控制 (IAM)* > *添加* > *添加角色分配*。
+. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
++
+
+NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色选择了不同的名称，则选择该名称。
+
+. 在“*成员*”选项卡中，完成以下步骤：
++
+.. 分配对*托管身份*的访问权限。
+.. 选择“选择成员”，选择创建控制台代理虚拟机的订阅，在“托管标识”下，选择“虚拟机”，然后选择控制台代理虚拟机。
+.. 选择*选择*。
+.. 选择“下一步”。
+.. 选择*审阅+分配*。
+.. 如果要管理其他 Azure 订阅中的资源，请切换到该订阅，然后重复这些步骤。
+
+
+
+
+--
+.Azure 服务主体
+--
+向 NetApp Console 提供之前设置的 Azure 服务主体的凭据。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Microsoft Azure > 代理*。
+.. *定义凭据*：输入有关授予所需权限的 Microsoft Entra 服务主体的信息：
++
+*** 应用程序（客户端）ID
+*** 目录（租户）ID
+*** 客户端密钥
+
+
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+.结果
+NetApp Console 现在具有代表您在 Azure 中执行操作所需的权限。
+
+--
+====

@@ -24,58 +24,7 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 * *Cloud Volumes ONTAP viewer*：提供对 Cloud Volumes ONTAP 信息的只读访问。此角色无法执行任何活动操作。某些包含配置信息的选项卡和屏幕可能无法供查看者使用。
 
 
-link:reference-iam-predefined-roles.html["了解访问角色"] 。
-
-在包含系统的组织、文件夹或项目级别分配 Cloud Volumes ONTAP 角色。平台角色使用户能够管理 NetApp Console 资源，而 Cloud Volumes ONTAP 角色使用户能够管理 Cloud Volumes ONTAP 系统。有关规划角色分配的指导，请参阅 link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments["为 Cloud Volumes ONTAP 设置基于角色的访问"]。
-
-
-
-[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
-[[seeding-mappings-for-existing-users]]
-== 升级到控制台代理版本 4.9.0 或更高版本后，现有用户的角色迁移
-
-当您将 Console 代理升级到 4.9.0 或更高版本时，Console 将根据现有用户的平台角色为其分配额外的 Cloud Volumes ONTAP 角色。
-
-
-NOTE: 当现有控制台代理升级到 Console 4.9.0 或更高版本时，控制台将运行一次性迁移过程，将 Cloud Volumes ONTAP 角色分配给组织中的现有用户。此过程最多可能需要 30 分钟才能完成。要查看和调整迁移期间分配的角色，请参阅 link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["升级控制台代理后查看角色"]。
-
-以下映射仅适用于此一次性迁移进程。
-
-[cols="50,50"]
-|===
-| 现有平台角色 | 升级期间分配的 Cloud Volumes ONTAP 角色 
-
-
-| 超级管理员 | Cloud Volumes ONTAP 管理员 
-
-
-| 组织管理员 | Cloud Volumes ONTAP 管理员 
-
-
-| 联盟管理员 | Cloud Volumes ONTAP 管理员 
-
-
-| 文件夹或项目管理员 | Cloud Volumes ONTAP 管理员 
-
-
-| 超级观众 | Cloud Volumes ONTAP 查看器 
-
-
-| 组织查看器 | Cloud Volumes ONTAP 查看器 
-
-
-| 联邦查看器 | Cloud Volumes ONTAP 查看器 
-
-
-| 文件夹或项目查看器 | Cloud Volumes ONTAP 查看器 
-
-
-| 任何其他平台角色 | Cloud Volumes ONTAP 查看器 
-|===
-Console 在与现有平台角色相同的层次结构级别上分配 Cloud Volumes ONTAP 角色。这些映射不适用于新角色分配。要查看和调整种子角色，请参阅 link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["升级控制台代理后查看角色"]。
-
-
-NOTE: 一个已知问题当前阻止 *Organization viewer* 和 *Cloud Volumes ONTAP viewer* 角色组合在组织范围内工作。使用 *Organization admin* 或 *Folder or project admin* 角色作为临时解决方法。
+有关所有 NetApp Console 访问角色的详细信息，请参见 link:reference-iam-predefined-roles.html["访问角色"]。
 
 
 

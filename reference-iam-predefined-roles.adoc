@@ -28,10 +28,20 @@ NetApp Console 中的身份和访问管理 (IAM) 提供预定义的角色，您�
 | 平台角色 | API 名称* *API 名称是 API 中使用的角色标识符。完全按照所示复制值（包括大写字母和下划线）。 | 模式可用性 | 职责 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["组织管理员"] | 组织管理员 | 标准、受限、私密 | 允许用户无限制地访问组织内的所有项目和文件夹，将成员添加到任何项目或文件夹，以及执行任何任务和使用任何未关联明确角色的数据服务。具有此角色的用户通过创建文件夹和项目、分配角色、添加用户以及管理具有正确凭据的系统来管理您的组织。这是唯一可以创建 Console 代理的访问角色。 
+| link:reference-iam-platform-roles.html#organization-admin-roles["组织管理员"] | 组织管理员 | 标准、受限、私密  a| 
+允许用户无限制地访问组织内的所有项目和文件夹，将成员添加到任何项目或文件夹，以及执行任何任务和使用任何未关联明确角色的数据服务。
+
+具有此角色的用户通过创建文件夹和项目、分配角色、添加用户以及管理具有正确凭据的系统来管理您的组织。
+
+这是唯一可以创建 Console 代理的访问角色。
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["文件夹或项目管理员"] | FOLDER_OR_PROJECT_ADMIN | 标准、受限、私密 | 允许用户不受限制地访问分配的项目和文件夹。可以将成员添加到他们管理的文件夹或项目中，以及执行任何任务并在他们被分配的文件夹或项目内的资源上使用任何数据服务或应用程序。文件夹或项目管理员无法创建控制台代理。 
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["文件夹或项目管理员"] | FOLDER_OR_PROJECT_ADMIN | 标准、受限、私密  a| 
+允许用户无限制地访问分配的项目和文件夹。可以将成员添加到其管理的文件夹或项目中，也可以在分配给他们的文件夹或项目中的资源上执行任何任务并使用任何数据服务或应用程序。
+
+文件夹或项目管理员无法创建 Console 代理。
+
 
 
 | link:reference-iam-platform-roles.html#federation-roles["联盟管理员"] | FEDERATION_ADMIN | 标准，受限 | 允许用户使用控制台创建和管理联合，从而实现单点登录 (SSO)。 

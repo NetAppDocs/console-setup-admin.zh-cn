@@ -21,7 +21,21 @@ summary: 了解 NetApp Console 管理的新功能。
 [[15-october-2026]]
 == 2026年10月15日
 
-<stdin> 中的未解析指令 - include::_whatsnew/2026-10-13.adoc[]
+
+
+[[console-agent-4-12-0]]
+=== Console 代理 4.12.0
+
+4.12.0 版本同时支持标准模式和受限模式。
+
+此版本的 Console 代理包括安全性改进和错误修复。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+此版本包括安全性改进和错误修复。
 
 
 

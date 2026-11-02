@@ -62,51 +62,70 @@ VNet 和子网:: 创建控制台代理时，您需要指定它所在的 VNet 和
 
 
  a| 
-\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
  a| 
 管理 Azure 公共区域中的资源。
 
 
 
  a| 
-\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
  a| 
 管理 Azure 中国区域的资源。
 
 
 
  a| 
-\ https://mysupport.netapp.com
+* \ https://mysupport.netapp.com
+
  a| 
 获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。
 
 
 
  a| 
-\ https://signin.b2c.netapp.com
+* \ https://signin.b2c.netapp.com
+
  a| 
 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
 
 
 
  a| 
-\ https://support.netapp.com
+* \ https://support.netapp.com
+
  a| 
 获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
 
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
  a| 
 在NetApp Console中提供功能和服务。
 
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （部署受限模式时需要）
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
  a| 
-获取控制台代理升级的图像。
+获取用于 Console 代理部署和升级的映像。
 
 |===
 --

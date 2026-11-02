@@ -10,7 +10,7 @@
 
 [cols="2a,1a"]
 |===
-| 端点 | 用途 未解析的指令 <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] 未解析的指令 <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] 未解析的指令 <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+| 端点 | 用途 <stdin> 中的未解析指令 - include::endpoints-agent.adoc[tag=nss-endpoints] <stdin> 中的未解析指令 - include::endpoints-agent.adoc[tag=saas-endpoints] <stdin> 中的未解析指令 - include::endpoints-agent.adoc[tag=upgrade-endpoints-saas] 
 |===
 --
 .AWS 资源的其他端点

@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
 summary: NetApp Console、 NetApp Console代理和NetApp数据服务需要出站互联网访问以及联系必要端点的能力。 
 ---
-= NetApp Console 的网络访问
+= 标准模式下 NetApp Console 的网络访问
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ NetApp Console、 NetApp Console代理和NetApp数据服务需要出站互联网
 您需要为以下操作设置网络访问：
 
 * 以软件即服务 (SaaS) 形式访问NetApp Console的计算机
-* 您在本地或云端安装的控制台代理。控制台代理。
+* 您在本地或云端安装的控制台代理。
 
 
 
@@ -39,22 +39,49 @@ NOTE: 在 4.0.0 中， NetApp减少了控制台和控制台代理所需的网络
 | 端点 | 目的 
 
 
-| \ https://mysupport.netapp.com | 获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。 
+ a| 
+* \ https://mysupport.netapp.com
 
+ a| 
+获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。
 
-| \ https://signin.b2c.netapp.com | 更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。 
-
-
-| \ https://support.netapp.com | 获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服务。 
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （部署受限模式时需要）
+* \ https://signin.b2c.netapp.com
+
  a| 
-获取控制台代理升级的图像。
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服务。
+
+
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+ a| 
+获取用于 Console 代理部署和升级的映像。
 
 |===
 

@@ -20,38 +20,38 @@
 * 简单存储服务（S3）
 
 
-| 管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
+a| 管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
 
 | Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
 
-| 基于 Web 的控制台联系此端点以与 Workload Factory API 进行交互，以管理和操作基于 FSx for ONTAP 的工作负载。
+a| 基于 Web 的控制台联系此端点以与 Workload Factory API 进行交互，以管理和操作基于 FSx for ONTAP 的工作负载。
 
-| \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+a| * \https://management.azure.com * \https://login.microsoftonline.com * \https://blob.core.windows.net * \https://core.windows.net
 
-| 管理 Azure 公共区域中的资源。
+a| 用于管理 Azure 公共区域中的资源。
 
-| \ https://management.azure.microsoft.scloud \ https://login.microsoftonline.microsoft.scloud \ https://blob.core.microsoft.scloud \ https://core.microsoft.scloud
+a| * \https://management.azure.microsoft.scloud * \https://login.microsoftonline.microsoft.scloud * \https://blob.core.microsoft.scloud * \https://core.microsoft.scloud
 
-| 管理 Azure IL6 区域中的资源。
+a| 管理 Azure IL6 区域中的资源。
 
-| \ https://management.usgovcloudapi.net \ https://login.microsoftonline.us \ https://blob.core.usgovcloudapi.net \ https://core.usgovcloudapi.net
+a| * \https://management.usgovcloudapi.net * \https://login.microsoftonline.us * \https://*.blob.core.usgovcloudapi.net * \https://core.usgovcloudapi.net
 
-| 管理 Azure 政府区域中的资源。
+a| 管理 Azure Government 区域中的资源。
 
-| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+a| * \https://management.chinacloudapi.cn * \https://login.chinacloudapi.cn * \https://blob.core.chinacloudapi.cn * \https://core.chinacloudapi.cn
 
-| 管理 Azure 中国区域的资源。
+a| 用于管理 Azure 中国区域中的资源。
 
-| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://config.googleapis.com/v1/projects
+a| * \https://www.googleapis.com/compute/v1/ * \https://compute.googleapis.com/compute/v1 * \https://cloudresourcemanager.googleapis.com/v1/projects * \https://www.googleapis.com/compute/beta * \https://storage.googleapis.com/storage/v1 * \https://www.googleapis.com/storage/v1 * \https://iam.googleapis.com/v1 * \https://cloudkms.googleapis.com/v1 * \https://config.googleapis.com/v1/projects
 
-| 管理 Google Cloud 中的资源。
+a| 在 Google Cloud 中管理资源。
 
-| https://mysupport.netapp.com | 用于获取许可信息并向 NetApp 支持发送 AutoSupport 消息。| https://signin.b2c.netapp.com | 用于更新 NetApp 支持站点 (NSS) 凭据或将新的 NSS 凭据添加到 NetApp Console。| https://support.netapp.com | 用于获取许可信息、向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
+a| * \https://mysupport.netapp.com a| 用于获取许可信息以及向 NetApp 支持发送 AutoSupport 消息。a| * \https://signin.b2c.netapp.com a| 用于更新 NetApp 支持站点 （NSS） 凭据或向 NetApp Console 添加新的 NSS 凭据。a| * \https://support.netapp.com a| 用于获取许可信息、向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在 NetApp Console 中提供功能和服务。
+a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.bluexp.netapp.com * \https://cdn.auth0.com a| 在 NetApp Console 中提供功能和服务。
 
 [cols="2*"]
 |===
@@ -59,28 +59,38 @@
 
 
  a| 
-\ https://support.netapp.com \ https://mysupport.netapp.com
+* \ https://support.netapp.com
+* \ https://mysupport.netapp.com
+
  a| 
 获取许可信息并向NetApp支持发送AutoSupport消息。
 
 
 
  a| 
-\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com
+* \https://*.api.bluexp.netapp.com
+* \ https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \ https://cloudmanager.cloud.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+
 | 在NetApp Console中提供功能和服务。 
 
 
  a| 
 在两组端点之间进行选择：
 
-* 选项 1（推荐）
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+选项 1（推荐）
 
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
 
+
+选项 2
+
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
 
  a| 
 获取控制台代理升级的图像。
@@ -93,9 +103,20 @@ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，并�
 
 
 |===
-a| https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （限制模式部署所需） a| 获取 Console 代理升级所需的映像。
+a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io
 
-a| https://occmclientinfragov.azurecr.us a| 获取用于 Console 代理升级的映像。
+a| 获取用于 Console 代理部署和升级的映像。
+
+a| 对于非政府区域，请使用以下端点：
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+对于政府区域，请改用以下端点：
+
+* \https://occmclientinfragov.azurecr.us a| 获取用于 Console 代理部署和升级的映像。
+
 
 ^1^ NetApp建议在防火墙中允许选项 1 端点，因为它们更安全，而不允许选项 2 端点。请注意有关这些端点的以下事项：
 
@@ -148,9 +169,17 @@ a| https://occmclientinfragov.azurecr.us a| 获取用于 Console 代理升级的
 * \ https://cloudmanagerinfraprod.azurecr.io
 
  a| 
+对于标准模式和受限模式非政府区域，请使用以下端点：
+
 * \ https://bluexpinfraprod.eastus2.data.azurecr.io
 * \ https://bluexpinfraprod.azurecr.io
-* \https://occmclientinfragov.azurecr.us.io （如果在受限模式环境中）
 
-| 获取控制台代理升级的图像。 
+
+对于处于受限模式的政府区域，请改用以下端点：
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+获取用于 Console 代理部署和升级的映像。
+
 |===

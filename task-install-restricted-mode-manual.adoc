@@ -1,0 +1,721 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-manual.html 
+keywords: restricted mode, manual install, AWS, Azure, Google Cloud, Linux host, Console agent 
+summary: 在 AWS、Azure 或 Google Cloud 中的专用 Linux 主机上以受限模式手动安装控制台代理，然后配置控制台并分配云权限。 
+---
+= 在受限模式下手动部署 NetApp Console 代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您要使用具有有限出站连接的 NetApp Console，则需要在受限模式下手动部署 Console 代理。
+
+如果您不想使用市场订阅或正在部署 Google Cloud，则需要手动安装控制台代理。
+
+
+
+[[step-1-prepare-cloud-permissions]]
+== 步骤 1：准备云权限
+
+在安装 Console 代理之前，请准备其管理资源所需的云提供商权限。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何准备云权限"] 。
+
+
+
+[[step-2-enable-google-cloud-apis-google-cloud-only]]
+[[restricted-mode-google-cloud-apis]]
+== 步骤 2：启用 Google Cloud API（仅限 Google Cloud）
+
+如果要在 Google Cloud 中安装控制台代理，请在安装之前在项目中启用所需的 API。特定的 Cloud Volumes ONTAP 功能需要这些 API。
+
+.步骤
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis["在您的 Google Cloud 项目中启用 API"^]
++
+** Cloud Build API （使用 Infrastructure Manager 进行私有模式 Cloud Volumes ONTAP 部署时需要）
+** 云部署管理器 V2 API
+** 云基础设施管理器 API
+** 云日志 API
+** 云资源管理器 API
+** 计算引擎 API
+** 身份和访问管理 (IAM) API
+** 云密钥管理服务 (KMS) API（仅当您计划使用客户管理的加密密钥 (CMEK) 进行 NetApp Backup and Recovery 时才需要）
+** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 时需要）
+
+
+
+
+
+
+[[step-3-prepare-network-access]]
+== 步骤 3：准备网络访问
+
+允许安装控制台代理的云提供商所需的出站端点。
+
+
+
+[[cloud-provider-endpoints]]
+=== 云提供商端点
+
+
+
+==== AWS 环境
+
+允许这些 AWS 服务端点管理 AWS 资源，包括 FSx for ONTAP。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+AWS 服务（amazonaws.com）：
+
+* 云形成
+* 弹性计算云（EC2）
+* 身份和访问管理 (IAM)
+* 密钥管理服务（KMS）
+* 安全令牌服务 (STS)
+* 简单存储服务（S3）
+
+ a| 
+管理 AWS 资源。端点取决于您的 AWS 区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档"^]
+
+
+
+ a| 
+Amazon FSx for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作基于ONTAP 的FSx 工作负载。
+
+|===
+
+
+==== Azure 环境
+
+允许适用于您的 Azure 区域的终结点：公共、政府或中国。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
+ a| 
+管理 Azure 公共区域中的资源。
+
+
+
+ a| 
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
+ a| 
+管理 Azure 政府区域中的资源。
+
+
+
+ a| 
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
+ a| 
+管理 Azure 中国区域的资源。
+
+|===
+
+
+==== Google Cloud 环境
+
+允许这些 Google Cloud API 端点管理项目中的资源。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+管理 Google Cloud 中的资源。
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Console 端点
+
+允许 NetApp 支持、控制台功能以及控制台代理部署和升级的共享端点。
+
+[cols="2a,1a"]
+|===
+| 端点 | 目的 
+
+
+ a| 
+* \ https://mysupport.netapp.com
+
+ a| 
+获取许可信息并将 AutoSupport 消息发送到 NetApp 支持。
+
+
+
+ a| 
+* \ https://signin.b2c.netapp.com
+
+ a| 
+更新NetApp支持站点 (NSS) 凭据或将新的 NSS 凭据添加到NetApp Console。
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+获取许可信息并向 NetApp 支持发送 AutoSupport 消息，以及接收 Cloud Volumes ONTAP 的软件更新。
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服务。
+
+
+
+ a| 
+对于非政府区域，请使用以下端点：
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+对于政府区域，请改用以下端点：
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+获取用于 Console 代理部署和升级的映像。
+
+|===
+有关浏览器访问和其他网络要求，请参见 link:task-prepare-restricted-mode.html#step-5-prepare-network-access["为受限模式准备网络访问"]。
+
+
+
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
+== 步骤 4：安装 Podman 或 Docker Engine
+
+根据您的操作系统，安装代理之前需要 Podman 或 Docker Engine。
+
+* Red Hat Enterprise Linux 8 和 9 需要 Podman。
++
+<<podman-versions,查看支持的 Podman 版本>> 。
+
+* Ubuntu 需要 Docker 引擎。
++
+<<podman-versions,查看支持的 Docker Engine 版本>> 。
+
+
+
+.步骤
+[role="tabbed-block"]
+====
+.Podman
+--
+按照以下步骤安装和配置 Podman：
+
+* 启用并启动 podman.socket 服务
+* 安装python3
+* 安装 podman-compose 包（因 Red Hat 版本而异）
+* 将 podman-compose 添加到 PATH 环境变量
+* 如果使用 Red Hat Enterprise Linux，请验证您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
+
+
+
+NOTE: 安装代理后调整 aardvark-dns 端口（默认值：53），以避免 DNS 端口冲突。按照说明配置端口。
+
+.步骤
+. 如果主机上安装了 podman-docker 包，请将其删除。
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. 安装 Podman。
++
+您可以从官方 Red Hat Enterprise Linux 存储库获取 Podman。
+
++
+.. 对于 Red Hat Enterprise Linux 9.6：
++
+[source, cli]
+----
+sudo dnf install podman-5:<version>
+----
++
+其中 <version> 是您正在安装的 Podman 支持的版本。<<podman-versions,查看支持的 Podman 版本>> 。
+
+.. 适用于 Red Hat Enterprise Linux 9.1 至 9.4：
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+其中 <version> 是您正在安装的 Podman 支持的版本。<<podman-versions,查看支持的 Podman 版本>> 。
+
+.. 对于 Red Hat Enterprise Linux 8：
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+其中 <version> 是您正在安装的 Podman 支持的版本。<<podman-versions,查看支持的 Podman 版本>> 。
+
+
+
+. 启用并启动 podman.socket 服务。
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. 安装 python3。
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. 如果您的系统上还没有 EPEL 存储库包，请安装它。
++
+此步骤是必需的，因为 podman-compose 可从 Extra Packages for Enterprise Linux (EPEL) 存储库中获得。
+
+. 如果使用 Red Hat Enterprise 9：
++
+.. 安装EPEL存储库软件包。
+
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+.. 安装 podman-compose 包 1.5.0。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
+
+
+. 如果使用的是 Red Hat Enterprise Linux 8：
++
+.. 安装EPEL存储库软件包。
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+.. 安装 podman-compose 包 1.0.6。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: 使用 `dnf install`命令满足将 podman-compose 添加到 PATH 环境变量的要求。安装命令将 podman-compose 添加到 /usr/bin，它已经包含在 `secure_path`主机上的选项。
+
+.. 如果使用 Red Hat Enterprise Linux 8，请验证您的 Podman 版本是否使用带有 Aardvark DNS 的 NetAvark 而不是 CNI。
++
+... 通过运行以下命令检查您的 networkBackend 是否设置为 CNI：
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+... 如果 networkBackend 设置为 `CNI`，你需要将其更改为 `netavark`。
+... 安装 `netavark`和 `aardvark-dns`使用以下命令：
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+... 打开 `/etc/containers/containers.conf`文件并修改 network_backend 选项以使用“netavark”而不是“cni”。
++
+如果 `/etc/containers/containers.conf`不存在，请将配置更改为 `/usr/share/containers/containers.conf`。
+
+... 重新启动 podman。
++
+[source, cli]
+----
+systemctl restart podman
+----
+... 使用以下命令确认 networkBackend 现在已更改为“netavark”：
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+
+
+. 如果将此代理与 Cloud Volumes ONTAP 系统关联，请考虑增加与代理关联的线程数，以提高性能。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["了解如何增加代理的容器线程限制"^]。
+
+
+--
+.Docker 引擎
+--
+按照 Docker 的文档安装 Docker Engine。
+
+.步骤
+. https://docs.docker.com/engine/install/["查看 Docker 的安装说明"^]
++
+按照步骤安装受支持的 Docker Engine 版本。请勿安装最新版本，因为控制台不支持它。
+
+. 验证 Docker 是否已启用并正在运行。
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+[[step-5-manually-install-the-netapp-console-restricted-mode-in-your-cloud-environment-must-use-for-google-cloud]]
+== 第 5 步：在云环境中手动安装 NetApp Console 受限模式（必须用于 Google Cloud）
+
+您可以将控制台代理手动安装到运行在 AWS、Azure 或 Google Cloud 上的 Linux 主机上。
+
+.开始之前
+您应该具有以下内容：
+
+* 安装控制台代理的 root 权限。
+* 如果控制台代理需要代理才能访问互联网，则提供有关代理服务器的详细信息。
++
+您可以选择在安装后配置代理服务器，但这样做需要重新启动 Console 代理。
+
+* 如果代理服务器使用 HTTPS 或代理是拦截代理，则需要 CA 签名的证书。
+
+
+
+NOTE: 手动安装控制台代理时，无法为透明代理服务器设置证书。如果需要为透明代理服务器设置证书，则必须在安装后使用维护控制台。详细了解link:reference-agent-maint-console-proxy.html["代理维护控制台"]。
+
+* 您需要禁用安装期间验证出站连接的配置检查。如果未禁用此检查，手动安装将失败。link:task-troubleshoot-agent.html["了解如何禁用手动安装的配置检查。"]
+
+
+.关于此任务
+安装后，如果有新版本可用，控制台代理会自动更新。
+
+.步骤
+. 如果主机上设置了 _http_proxy_ 或 _https_proxy_ 系统变量，请将其删除：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+如果不删除这些系统变量，安装将失败。
+
+. 下载控制台代理软件，然后将其复制到 Linux 主机。您可以从NetApp Console或NetApp支持网站下载。
++
+** NetApp Console：转到 *Agents > Management > Deploy agent > On-prem > Manual install*。
++
+选择下载代理安装程序文件或文件的 URL。
+
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^] （如果您还没有 Console 的访问权限，则需要此选项）。
++
+
+NOTE: 下载适用于您的网络或云端的"在线"代理安装程序。Console 代理可使用单独的"脱机"安装程序，但它仅受专用模式部署支持。
+
+** NetApp 支持站点（如果您还没有 Console 的访问权限，则需要该站点） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp 支持站点"^]。
+
+
+. 分配运行脚本的权限。
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+其中 <version> 是您下载的控制台代理的版本。
+
+. 如果在政府云环境中安装，请禁用配置检查。link:task-troubleshoot-agent.html#disable-config-check["了解如何禁用手动安装的配置检查。"]
+. 运行安装脚本。
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+如果您的网络需要代理才能访问互联网，则需要添加代理信息。您可以在安装过程中添加显式代理。 `--proxy` 和  `--cacert` 参数是可选的，系统不会提示您添加它们。如果您有显式代理服务器，则需要输入如图所示的参数。
+
++
+
+NOTE: 如果要配置透明代理，可以在安装后进行此操作。link:reference-agent-maint-console-proxy.html["了解代理维护控制台"].
+
++
+以下是使用 CA 签名证书配置显式代理服务器的示例：
+
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy` 使用以下格式之一将 Console 代理配置为使用 HTTP 或 HTTPS 代理服务器：
+
++
+** \http://地址:端口
+** \http://用户名:密码@地址:端口
+** \http://域名%92用户名:密码@地址:端口
+** \https://地址:端口
+** \https://用户名:密码@地址:端口
+** \https://域名%92用户名:密码@地址:端口
++
+请注意以下事项：
+
++
+*** 用户可以是本地用户或域用户。
+*** 对于域用户，您必须使用 \ 的 ASCII 代码，如上所示。
+*** Console 代理不支持包含 @ 字符的用户名或密码。
+*** 如果密码包含以下任何特殊字符，则必须在该特殊字符前面加上反斜杠来转义该特殊字符：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@地址:3128
+
+
+
+
+
+. 如果您使用 Podman，则需要调整 aardvark-dns 端口。
++
+.. 通过 SSH 连接到控制台代理虚拟机。
+.. 打开 podman _/usr/share/containers/containers.conf_ 文件并修改 Aardvark DNS 服务的选定端口。例如，将其更改为54。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+----
++
+例如：
+
++
+[source, text]
+----
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+----
+.. 重新启动控制台代理虚拟机。
+
+
+
+
+.结果
+控制台代理现已安装。安装结束时，如果您指定了代理服务器，控制台代理服务 (occm) 将重新启动两次。
+
+.下一步是什么？
+设置NetApp Console。
+
+
+
+[[step-6-set-up-netapp-console]]
+== 第 6 步：设置 NetApp Console
+
+首次访问控制台时，系统会提示您为控制台代理选择一个组织，并需要启用受限模式。
+
+.开始之前
+设置控制台代理的人员必须使用尚不属于控制台组织的登录名登录控制台。
+
+如果您的登录信息与另一个组织关联，您需要注册一个新的登录信息。否则，您将在设置屏幕上看不到启用受限模式的选项。
+
+.步骤
+. 从与控制台代理实例有连接的主机打开 Web 浏览器，然后输入您安装的控制台代理的以下 URL。
+. 注册或登录NetApp Console。
+. 登录后，设置控制台：
++
+.. 输入控制台代理的名称。
+.. 输入新控制台组织的名称。
+.. 选择*您是否在安全环境中运行？*
+.. 选择*在此帐户上启用受限模式*。
++
+请注意，帐户创建后您无法更改此设置。您以后无法启用受限模式，也无法禁用它。
+
++
+如果您在政府区域部署了控制台代理，则该复选框已启用且无法更改。这是因为限制模式是政府区域唯一支持的模式。
+
+.. 选择*让我们开始吧*。
+
+
+
+
+.结果
+控制台代理现已安装并设置到您的控制台组织。所有用户都需要使用控制台代理实例的 IP 地址访问控制台。
+
+.下一步是什么？
+向控制台提供您之前设置的权限。
+
+
+
+[[step-7-provide-permissions-to-the-console-agent]]
+== 步骤 7：向控制台代理提供权限
+
+如果您手动安装了 Console 代理，则需要授予之前设置的权限。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何准备云权限"] 。
+
+[role="tabbed-block"]
+====
+.AWS IAM 角色
+--
+将您之前创建的 IAM 角色附加到安装了控制台代理的 EC2 实例。
+
+仅当您在 AWS 中手动安装了控制台代理时，这些步骤才适用。对于 AWS Marketplace 部署，您已将控制台代理实例与包含所需权限的 IAM 角色关联。
+
+.步骤
+. 转到 Amazon EC2 控制台。
+. 选择*实例*。
+. 选择控制台代理实例。
+. 选择*操作 > 安全 > 修改 IAM 角色*。
+. 选择 IAM 角色并选择 *更新 IAM 角色*。
+
+
+--
+.AWS 访问密钥
+--
+向NetApp Console提供具有所需权限的 IAM 用户的 AWS 访问密钥。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择*组织凭证*。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Amazon Web Services > 代理*。
+.. *定义凭证*：输入 AWS 访问密钥和密钥。
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+--
+.Azure 角色
+--
+转到 Azure 门户并将 Azure 自定义角色分配给一个或多个订阅的控制台代理虚拟机。
+
+.步骤
+. 从 Azure 门户打开“*订阅*”服务并选择您的订阅。
++
+从*订阅*服务分配角色很重要，因为这指定了订阅级别的角色分配范围。 _范围_定义了访问适用的资源集。如果您在不同级别（例如，虚拟机级别）指定范围，则您在NetApp Console内完成操作的能力将受到影响。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文档：了解 Azure RBAC 的范围"^]
+
+. 选择*访问控制 (IAM)* > *添加* > *添加角色分配*。
+. 在*角色*选项卡中，选择*控制台操作员*角色并选择*下一步*。
++
+
+NOTE: 控制台操作员是策略中提供的默认名称。如果您为角色选择了不同的名称，则选择该名称。
+
+. 在“*成员*”选项卡中，完成以下步骤：
++
+.. 分配对*托管身份*的访问权限。
+.. 选择“选择成员”，选择创建控制台代理虚拟机的订阅，在“托管标识”下，选择“虚拟机”，然后选择控制台代理虚拟机。
+.. 选择*选择*。
+.. 选择“下一步”。
+.. 选择*审阅+分配*。
+.. 如果要管理其他 Azure 订阅中的资源，请切换到该订阅，然后重复这些步骤。
+
+
+
+
+--
+.Azure 服务主体
+--
+向 NetApp Console 提供之前设置的 Azure 服务主体的凭据。
+
+.步骤
+. 选择“*管理 > 凭证*”。
+. 选择“*添加凭据*”并按照向导中的步骤操作。
++
+.. *凭证位置*：选择*Microsoft Azure > 代理*。
+.. *定义凭据*：输入有关授予所需权限的 Microsoft Entra 服务主体的信息：
++
+*** 应用程序（客户端）ID
+*** 目录（租户）ID
+*** 客户端密钥
+
+
+.. *市场订阅*：通过立即订阅或选择现有订阅将市场订阅与这些凭证关联。
+.. *审核*：确认有关新凭证的详细信息并选择*添加*。
+
+
+
+
+.结果
+NetApp Console 现在具有代表您在 Azure 中执行操作所需的权限。
+
+--
+.Google Cloud 服务帐号
+--
+将服务帐户与控制台代理 VM 关联。
+
+.步骤
+. 转到 Google Cloud 门户并将服务帐户分配给控制台代理 VM 实例。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文档：更改实例的服务帐户和访问范围"^]
+
+. 如果您想管理其他项目中的资源，请通过将具有控制台代理角色的服务帐户添加到该项目来授予访问权限。您需要对每个项目重复此步骤。
+
+
+--
+====

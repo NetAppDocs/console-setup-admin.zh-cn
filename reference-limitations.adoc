@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations.html 
-keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, Cloud Volumes ONTAP, days, running,  imdsv2, https tokens, Console agent 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, Cloud Volumes ONTAP, days, running,  imdsv2, https tokens, Console agent, thirdparty agents, extensions, shared Linux hosts, 
 summary: 已知限制标识了该产品的此版本不支持或不能与其正确互操作的平台、设备或功能。仔细审查这些限制。 
 ---
 = NetApp Console的已知限制

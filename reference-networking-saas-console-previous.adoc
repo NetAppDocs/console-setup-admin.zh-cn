@@ -82,11 +82,19 @@ NetApp建议更新防火墙规则以使用修订后的端点列表，该列表�
 * \ https://cloudmanagerinfraprod.azurecr.io
 
  a| 
+对于标准模式和受限模式非政府区域，请使用以下端点：
+
 * \ https://bluexpinfraprod.eastus2.data.azurecr.io
 * \ https://bluexpinfraprod.azurecr.io
-* \https://occmclientinfragov.azurecr.us.io （如果在受限模式环境中）
 
-| 获取控制台代理升级的图像。 
+
+对于处于受限模式的政府区域，请改用以下端点：
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+获取用于 Console 代理部署和升级的映像。
+
 |===
 .步骤
 . 验证您的代理是否为 4.0.0 或更高版本。link:task-troubleshoot-agent.html#view-the-console-agent-version["查看代理版本。"]
@@ -119,28 +127,38 @@ systemctl status netapp-service-manager.service
 
 
  a| 
-\ https://support.netapp.com \ https://mysupport.netapp.com
+* \ https://support.netapp.com
+* \ https://mysupport.netapp.com
+
  a| 
 获取许可信息并向NetApp支持发送AutoSupport消息。
 
 
 
  a| 
-\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com
+* \https://*.api.bluexp.netapp.com
+* \ https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \ https://cloudmanager.cloud.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+
 | 在NetApp Console中提供功能和服务。 
 
 
  a| 
 在两组端点之间进行选择：
 
-* 选项 1（推荐）
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+选项 1（推荐）
 
-* 选项 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
 
+
+选项 2
+
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
 
  a| 
 获取控制台代理升级的图像。
