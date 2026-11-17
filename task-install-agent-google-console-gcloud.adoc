@@ -483,7 +483,28 @@ link:reference-ports-gcp.html["Google Cloud 中的防火墙规则"]
 .结果
 该过程完成后，控制台代理即可使用。
 
-
-NOTE: 如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
-
 如果您在创建 Console 代理的同一个 Google Cloud 帐户中有 Google Cloud Storage 存储桶，则 Google Cloud Storage 系统会自动显示在*系统*页面上 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何通过控制台管理 Google 云端存储"^]。
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== 排除失败的控制台代理部署故障
+
+使用部署报告查找阻止 Console 代理部署的原因，然后重试。
+
+仅当选中*验证代理配置*复选框时，控制台才会提供报告。如果部署成功，则没有报告。
+
+.步骤
+. 在*代理部署失败*对话框中，选择*下载报告*。
++
+控制台下载包含此验证报告的 PDF 文件。
+
+. 查看报告并修复其列出的问题。
+. 在对话框中，选择*重新开始*，然后再次完成部署。
++
+您必须重新开始整个过程才能重试。
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]

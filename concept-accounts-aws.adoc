@@ -21,7 +21,7 @@ summary: 您可以使用NetApp Console管理 AWS 凭证和市场订阅，通过�
 [[initial-aws-credentials]]
 == 初始 AWS 凭证
 
-从 Console 部署 Console 代理时，需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署 Console 代理的权限。所需的权限列在link:task-install-agent-aws-console.html#aws-permissions-agent["AWS代理部署策略"]中。
+当您从控制台部署控制台代理时，您可以让控制台为您创建 IAM 角色，也可以提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台代理的权限。所需的权限列在 link:task-install-agent-aws-console.html#aws-permissions-agent["AWS 的代理部署权限"] 中。
 
 当 Console 在 AWS 中启动 Console 代理时，它会为代理创建 IAM 角色和配置文件。它还附加了一个策略，该策略为 Console 代理提供管理该 AWS 帐户内的资源和流程的权限。link:reference-permissions-aws.html["查看代理如何使用权限"]。
 

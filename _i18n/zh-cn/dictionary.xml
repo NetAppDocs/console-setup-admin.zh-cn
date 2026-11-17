@@ -516,12 +516,6 @@
   <block id="9a3441a99feefccc201b51666c68d0d2" category="inline-image-macro">类似垃圾桶的图标</block>
   <block id="d63f1c66d83451eade374ce0e602a4b4" category="list-text">在表格中，展开您想要查看成员分配角色的组织、文件夹或项目的相应行，然后在“角色”列中选择“查看”。</block>
   <block id="45e27b9fcac7d60b4663ab56a2bac350" category="paragraph">您还可以直接从以下目录中的控制台代理主机访问 JSON 格式的验证报告和配置日志：</block>
-  <block id="647fa610609fa01d971d4fbb3656f443" category="paragraph">如果您在*审核*页面上选中了*验证代理配置*复选框，则控制台会在创建控制台代理后验证其配置。如果控制台无法部署代理，它会提供可下载的报告来帮助您排除故障。</block>
-  <block id="86ca8a8c90ac1b3bb3ee0781703dca27" category="admonition">如果控制台成功部署代理，则它不会生成报告，并且会出现一个确认对话框来验证部署是否成功。</block>
-  <block id="9dbc3a54bc2b38732d8c2b0c483d6cfa" category="list-text">在*代理部署失败*对话框中，选择*下载报告*以下载包含验证报告的 PDF 文件。</block>
-  <block id="6eefca337b8d129a6a60a608481b8fa0" category="list-text">或者，您可以选择*重新开始*返回*部署代理*向导并重试。</block>
-  <block id="796a270bf063faafbf314a64bc6d45dc" category="paragraph">如果您想再次尝试部署代理，则必须重新开始整个过程。</block>
-  <block id="1f40a959293314118eb6cd9e626b48d6" category="paragraph">从控制台代理主机访问报告和日志</block>
   <block id="3dcf5c663cbfb598f8a710902a7eb120" category="paragraph">维护控制台代理主机上的操作系统是您（客户）的责任。例如，您（客户）应按照贵公司的操作系统分发标准程序，对控制台代理主机上的操作系统应用安全更新。</block>
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">如果您（客户）需要停止然后启动控制台代理虚拟机，您应该从云提供商的控制台或使用标准的内部管理程序来执行此操作。</block>
   <block id="0beb94109608ff82d313b33947162f96" category="doc">私人模式发布（3.9.44）</block>
@@ -2341,7 +2335,6 @@
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">查看 FSx for ONTAP所需的权限</block>
   <block id="68841948fc1b61d494dc523ccae2402a" category="list-text"><block ref="68841948fc1b61d494dc523ccae2402a" category="inline-link-rx"></block></block>
   <block id="c19d1741d0fa79c8b012a7f8b068bc6c" category="inline-link-macro">查看代理部署策略</block>
-  <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">复制 IAM 角色的角色 ARN，以便您可以在下一步中将其粘贴到控制台中。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">您现在可以将其添加到控制台</block>
   <block id="75d520940839feb20c7009bf3a4913f6" category="paragraph">为 IAM 角色提供所需的权限后，将角色 ARN 添加到控制台。</block>
@@ -3093,14 +3086,9 @@
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> 。</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">通过NetApp Console在 AWS 中创建控制台代理</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">你应该回顾一下<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block>。</block>
-  <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">步骤 1：设置网络以在 AWS 中部署控制台代理</block>
-  <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">确保您计划安装控制台代理的网络位置支持以下要求。这些要求使控制台代理能够管理混合云中的资源和流程。</block>
   <block id="b3f4a5004c2a10094d2af8bd28589cbf" category="paragraph">AWS 服务（amazonaws.com）：</block>
   <block id="46db632d39e89f845984f05056817700" category="paragraph">管理 AWS 资源。端点取决于您的 AWS 区域。<block ref="04572646466baf6f86d09965eb5c3c86" category="inline-link-rx"></block></block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">创建控制台代理后，您需要实现此网络要求。</block>
-  <block id="fe34c82f62d8c19159528f702fa22a96" category="section-title">步骤 2：为控制台代理设置 AWS 权限</block>
-  <block id="eeda2f4307e522dfb736cc96eb303e27" category="list-text">让控制台承担具有所需权限的 IAM 角色</block>
-  <block id="4964e9eef6df2fe316a2618afd8cd963" category="list-text">为具有所需权限的 IAM 用户提供 AWS 访问密钥和密钥</block>
   <block id="15f7c3376619ce497205d543fd1d7767" category="paragraph">如果需要，您可以使用 IAM 限制 IAM 策略<block ref="9e2941b3c81256fac10392aaca4ccfde" prefix=" " category="inline-code"></block>元素。<block ref="19ffef022087e160f1e54b9948795943" category="inline-link-rx"></block></block>
   <block id="1e71ce7defc90d8f5a2c46c08ba968df" category="list-text">转到 AWS IAM 控制台。</block>
   <block id="d36ec2dc8acd5ade1fda1b4397ccc99a" category="list-text">选择 *JSON*。</block>
@@ -3109,38 +3097,25 @@
   <block id="01de2e1a7f136c3eeda419bfb07814da" category="list-text">选择*下一步*并输入名称和描述。</block>
   <block id="db92c743d97601150bbdfa11bf3cf66b" category="list-text">选择*创建策略*。</block>
   <block id="1829da9b52c1f3e7152aa60a47e70046" category="list-text">将策略附加到控制台可以承担的 IAM 角色或 IAM 用户，以便您可以为控制台提供访问密钥：</block>
-  <block id="5d2e64dfdb803f8ad6ebad1af3e82afb" category="list-text">（选项 1）设置控制台可以承担的 IAM 角色：</block>
   <block id="0e78dc7220ea8b6abafe6ef7aaad9998" category="list-text">转到目标账户中的 AWS IAM 控制台。</block>
   <block id="83786519cfff82cadf61b5802dbc3e96" category="list-text">选择*另一个 AWS 账户*并输入控制台 SaaS 账户的 ID：952013314444</block>
   <block id="dbab690717fb052924566c13e8768748" category="list-text">选择您在上一节中创建的策略。</block>
   <block id="077eba020cf13e24bf6f5121e9f6be99" category="list-text">创建角色后，复制角色 ARN，以便在创建控制台代理时将其粘贴到控制台中。</block>
-  <block id="3aa44d82675acc53c059d6b7f6d5b53c" category="list-text">（选项 2）为 IAM 用户设置权限，以便您可以向控制台提供访问密钥：</block>
   <block id="ab9ad001a35a833243a30f3acf6417eb" category="list-text">从 AWS IAM 控制台中，选择 *用户*，然后选择用户名。</block>
   <block id="93583a9b95fb527997b95ba8db57df14" category="list-text">选择*添加权限&gt;直接附加现有策略*。</block>
   <block id="8bcbf62e98416780ffe2095559aba87a" category="list-text">选择您创建的策略。</block>
   <block id="0a6bca3addac2684ad319713b9fb22ed" category="list-text">选择*下一步*，然后选择*添加权限*。</block>
   <block id="c34ab4140439856fda51871a0f20b53c" category="list-text">确保您拥有 IAM 用户的访问密钥和密钥。</block>
-  <block id="bbba7638debc60d9989ee9d0b3f92713" category="paragraph">您现在应该拥有一个具有所需权限的 IAM 角色或一个具有所需权限的 IAM 用户。从控制台创建控制台代理时，您可以提供有关角色或访问密钥的信息。</block>
-  <block id="a5d705a0b67c1b72cfaf22a7b055e724" category="section-title">步骤 3：创建控制台代理</block>
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">了解控制台代理的默认配置</block>
   <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">了解有关控制台代理的 IAM 策略的更多信息</block>
-  <block id="aca02eea323174e41d57225a762eb959" category="list-text">AWS 身份验证方法：具有所需权限的 IAM 角色或 IAM 用户的访问密钥。</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">满足组网需求的VPC及子网。</block>
   <block id="b16e9971e18d4e63cd90cc2dc398c39e" category="list-text">EC2 实例的密钥对。</block>
-  <block id="f28438646c4a6dc83acec91c3242235c" category="inline-link-macro">网络要求</block>
-  <block id="e07d32ad7020a93e690821c42ba3112e" category="list-text">设置<block ref="aeef43fcefe3ad151bacb8d8f811157c" category="inline-link-macro-rx"></block>。</block>
-  <block id="74e3fd473af4965ff33c6bdccf60d41f" category="list-text">设置<block ref="24eff8afdaae8d04c3eb2e1328f5234f" category="inline-link-macro-rx"></block>。</block>
   <block id="f5a67c5390424014ada0320046007eec" category="list-text">按照向导中的步骤创建控制台代理：</block>
-  <block id="8b8f36850755c4ac43a0df238add8748" category="inline-link-macro">了解如何添加其他凭证</block>
-  <block id="a92469e7b4819b542d643764a5f08089" category="admonition">如果您选择*承担角色*，您可以从控制台代理部署向导创建第一组凭据。任何附加凭证集都必须从凭证页面创建。然后，它们将从向导的下拉列表中提供。<block ref="21eba73392ef6be6fd6da758f5bd2e93" category="inline-link-macro-rx"></block> 。</block>
-  <block id="f07116b379707ffd76d2b1be3d766311" category="list-text">在“详细信息”页面上，提供有关控制台代理的详细信息。</block>
   <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-link-macro">所需的权限</block>
-  <block id="603cd6f77a8d8d20e21808a8ba4480ea" category="list-text">选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色<block ref="8b098a06817becf62c06297dd76999b5" category="inline-link-macro-rx"></block>。</block>
   <block id="a7dcc75dc3cacce63a6952fff1a50f65" category="list-text">选择是否要加密控制台代理的 EBS 磁盘。您可以选择使用默认加密密钥或使用自定义密钥。</block>
   <block id="a2f078803960d5d37e3fe024b9a33315" category="paragraph">确保您拥有正确的密钥对来访问控制台代理虚拟机。如果没有密钥对，您就无法访问它。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">该过程完成后，即可从控制台使用控制台代理。</block>
-  <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">了解如何从NetApp Console管理 S3 存储桶</block>
   <block id="68105c97320cc4f91ac35396075a2ebb" category="paragraph">如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="3b46ada3c2c8fc9685f33a61ccf996e6" category="summary">您可以在 AWS 中运行的 Linux 主机上手动安装控制台代理。要在您自己的 Linux 主机上手动安装控制台代理，您需要查看主机要求、设置网络、准备 AWS 权限、安装控制台代理，然后提供您准备好的权限。</block>
@@ -3552,10 +3527,6 @@
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">您现有的NetApp支持站点 (NSS) 凭证</block>
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">使用您的电子邮件地址和密码的NetApp Console帐户</block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">在*登录*页面上，输入与您的登录关联的电子邮件地址。</block>
-  <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">无需停止代理主机服务即可应用操作系统安全补丁。</block>
-  <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">如果您从控制台创建控制台代理，它会使用默认配置在您的云提供商中部署 VM 实例。创建代理后，不要切换到具有较少 CPU 或 RAM 的较小 VM 实例。</block>
-  <block id="a97c9ede934c84f0e97d896b05cd1ae0" category="inline-link-macro">了解代理的默认配置</block>
-  <block id="4203742da4cdc7c1dd82452f22078923" category="paragraph"><block ref="6644ee05b73ff616838ce63980e80332" category="inline-link-macro-rx"></block> 。</block>
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">监控代理</block>
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">当代理虚拟机不健康时，控制台会通知您，包括磁盘空间、RAM 和 CPU 问题。在控制台内的通知中心监控这些通知或配置电子邮件通知。磁盘空间、内存或 CPU 使用率偶尔增加是正常现象，但如果经常发生，则应采取措施解决。</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">例如，当代理资源（CPU、RAM 或磁盘空间）连续 30 分钟超过其总容量的 90% 时，控制台会通知您。之后，如果资源使用率低于该阈值，则通知中心将显示通知已解决（绿色）。</block>
@@ -3565,10 +3536,8 @@
   <block id="373df0df4c9bf458b635c60e6bd81875" category="inline-link-macro">查看NetApp知识库文章</block>
   <block id="8ca3660780f744c30c74aa618432df0d" category="cell"><block ref="f6f7f11517faa4caaf22eb279fe6cff9" category="inline-link-macro-rx"></block> 。</block>
   <block id="72200965fbc3c379905f503caa91b909" category="cell">CPU 使用率过高</block>
-  <block id="bf18babce135cfcba99582e4e84f2f5c" category="cell">根据安装位置，增加云提供商或本地代理 VM 的 CPU 大小。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。</block>
   <block id="d77ff27143770c407f290ec9ffcbc917" category="cell">RAM 使用率过高</block>
   <block id="988964edbbb2132f905be0d293cd66c4" category="cell">根据安装位置，增加云提供商或本地代理虚拟机的 RAM。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。</block>
-  <block id="0d75592eefb72eac4699a1f49bd7769a" category="section-title">停止和启动代理虚拟机</block>
   <block id="665e5fcb7c888a6273d0761790d05ed5" category="paragraph">如果需要，请使用云提供商的控制台或标准内部部署程序停止并启动代理虚拟机。</block>
   <block id="fab2977be6b57a804b266fd2b7996179" category="inline-link-macro">请注意，控制台代理必须始终处于运行状态</block>
   <block id="d9ae58af06fdcaab9da3f43fe827c682" category="paragraph"><block ref="b4ea7ed3eae261783526e5f0a6706763" category="inline-link-macro-rx"></block> 。</block>
@@ -4299,14 +4268,8 @@
   <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">您无法编辑与控制台代理实例或Amazon FSx for ONTAP实例关联的实例配置文件的凭证。您只能重命名 FSx for ONTAP实例的凭据。</block>
   <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">在*组织凭证*页面上，选择一组凭证的操作菜单，然后选择*编辑凭证*。</block>
   <block id="76f673856509040ebe6f53809741b891" category="admonition">您无法删除与控制台代理关联的实例配置文件的凭据。</block>
-  <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">控制台需要通过 AWS 进行身份验证，然后才能在您的 VPC 中部署控制台代理。您可以选择以下身份验证方法之一：</block>
-  <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">无论选择哪种方式，第一步都是创建 IAM 策略。此策略仅包含从控制台启动 AWS 中的控制台代理所需的权限。</block>
-  <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">查看控制台代理本身所需的权限</block>
-  <block id="f09d39b62bcd3db5dbab86ed9186dad9" category="paragraph">此策略仅包含从控制台启动 AWS 中的控制台代理所需的权限。当控制台创建控制台代理时，它会将一组新权限应用于控制台代理，使控制台代理能够管理 AWS 资源。<block ref="909ec4de2b545730e300a321f5abea2f" category="inline-link-macro-rx"></block>。</block>
-  <block id="318bbdd390cdff7f023b8038a3fb0070" category="list-text">当控制台创建控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。此角色包括使控制台代理能够管理 AWS 资源的权限。确保在未来版本中添加新权限时更新角色。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>。</block>
   <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">输入名称。</block>
   <block id="cc12b07ff25c8e9f0f635a74e2d22a82" category="list-text">添加自定义标签（元数据）。</block>
-  <block id="193563612f46c81d99f9d364d74518c6" category="paragraph">控制台大约需要 10 分钟即可部署代理。停留在该页面上直到该过程完成。</block>
   <block id="0cbff45e0f71134dbbfed8f2ba0d6f76" category="paragraph">创建一个 Azure 自定义角色，您可以将其分配给您的 Azure 帐户或 Microsoft Entra 服务主体。控制台通过 Azure 进行身份验证，并使用这些权限代表您创建控制台代理。</block>
   <block id="a07294e253f6aa6ecfa69e1864aed3dc" category="paragraph">这些权限适用于控制台代理本身。这与您之前为部署控制台代理虚拟机而设置的权限不同。</block>
   <block id="19ffcd7024175b13282f800ea3adbed2" category="paragraph">控制台大约需要 10 分钟才能准备好代理。停留在该页面上直到该过程完成。</block>
@@ -4417,7 +4380,6 @@
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">以下权限已移至“其他备份和恢复权限”部分，因为最小配置不需要这些权限：</block>
   <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">您可以使用NetApp Console管理 AWS 凭证和市场订阅，通过在控制台代理部署期间提供适当的 IAM 凭证，并将其与 AWS Marketplace 订阅关联，从而安全、经济高效地部署Cloud Volumes ONTAP和其他数据服务，以便在单个或多个 AWS 账户中进行计费。</block>
   <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">您可以通过NetApp Console直接管理 AWS 凭证和市场订阅，通过在控制台代理部署期间提供适当的 IAM 凭证并将其与 AWS Marketplace 订阅关联以进行计费，来确保Cloud Volumes ONTAP和其他数据服务的安全部署。</block>
-  <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">AWS代理部署策略</block>
   <block id="1b87d5ac2b76ff03a714cd78cd28bf3b" category="list-text">要将您现有的控制台代理与额外的 AWS 账户一起使用，请执行以下操作：</block>
   <block id="93b7ab66bd8976eacd3146faac726986" category="paragraph">要将控制台与额外的 AWS 账户一起使用，请提供 AWS 密钥或受信任账户中角色的 ARN。下图显示了两个附加账户，一个通过受信任账户中的 IAM 角色提供权限，另一个通过 IAM 用户的 AWS 密钥提供权限：</block>
   <block id="1bd60f6ffbfbe027889fb2ff7fd8f14c" category="paragraph">您可以通过指定 IAM 角色的 Amazon 资源名称 (ARN) 或 IAM 用户的 AWS 密钥，将帐户凭证添加到控制台。</block>
@@ -5649,7 +5611,6 @@
   <block id="e773bf9ef8fd07284aa97da5bcac5b10" category="list-text">如果使用 Console 代理来发现存储系统，请将该代理添加到与存储系统相同的项目中。这允许用户执行启用代理的功能，例如数据服务或 Console 本机存储管理。您可以从 Console 的 *Agents* 页面向项目添加代理。<block ref="9575d7837a709e4ae8a4165fa6169eb2" category="inline-link-macro-rx"></block>。</block>
   <block id="f84bc6d9d13416ccde14b675c20b3fe0" category="list-text">如果您的组织中有 Keystone 订阅，您可以在*资源*页面上查看它们。您可以将 Keystone 订阅与项目关联，以便为拥有这些项目权限的成员提供访问权限。</block>
   <block id="e828183af99bbe9f55b9edafa7e11282" category="list-text">备份和恢复工作负载</block>
-  <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。在从 Console 在 AWS 中部署 Console 代理之前，您需要设置网络并准备 AWS 权限。</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">从 NetApp Console 在 AWS 中部署 Console 代理</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">在 AWS 中部署代理将在您选择的 VPC 中启动运行 Linux 和 Console 代理软件的 EC2 实例。</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">您可以在 AWS 中运行的 Linux 主机上手动部署 Console 代理。要在自己的 Linux 主机上手动部署 Console 代理，需要查看主机要求、设置网络、准备 AWS 权限、部署 Console 代理，然后提供准备的权限。</block>
@@ -5665,8 +5626,6 @@
   <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">要在自己的 Linux 主机上手动部署 Console 代理，需要查看主机要求、设置网络、准备 Google Cloud 权限、启用 Google Cloud API、安装 Console，然后提供您准备的权限。</block>
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">如果您的环境需要，请将自签名证书上传到受信任的证书。安装后更换此证书。</block>
   <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">在本地部署 Console 代理，然后登录并将其设置为与您的 Console 组织配合使用。</block>
-  <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">当您手动安装 Console 代理时，维护代理主机上的操作系统是您（客户）的责任。例如，您（客户）应按照贵公司的操作系统分发标准程序对代理主机上的操作系统应用安全更新。</block>
-  <block id="3ce4474c24a93038aca82b41eaebbafa" category="paragraph">为了保持与支持的配置的兼容性，您应该防止 Docker 或 Podman 在常规操作系统修补过程中升级。您可以通过在更新期间暂时排除 Docker 或 Podman，或者通过永久配置包管理器以跳过 Docker 或 Podman 更新来实现此目的。</block>
   <block id="1df03cb601702d6a5780de5b5b3fad56" category="paragraph">以下是如何排除不同 Linux 发行版的 Docker 或 Podman 更新的示例。有关如何从更新中排除软件包的最新说明，请参阅 Linux 发行版的文档。</block>
   <block id="63fc7b8ffa3779963d0e9e15f3827fb1" category="listing-title">Podman 示例</block>
   <block id="3402ff8bffa8ff62a7a411640fbf9267" category="listing-title">Docker 示例</block>
@@ -5853,7 +5812,6 @@
   <block id="4a45e858c46a20f0b12c22eb89c4bf5e" category="admonition">如果您的组织中有人已经通过您的账单账户订阅了市场，那么您将被重定向到 <block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block>。如果出现意外情况，请联系您的 NetApp 销售团队。Google 仅为每个 Google 账单帐户启用一个订阅。</block>
   <block id="ca4a244a9789951f646667ad547e7eba" category="list-text">选择要为其分配角色的成员旁边的操作菜单 <block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>，然后选择*添加角色*。</block>
   <block id="407cb118eb4c73b0358d157028082059" category="list-text">要取消分配成员的角色，请选择角色旁边的 <block ref="e7d3eb2c8040b3803a37719a0c0ad857" category="inline-image-macro-rx" type="image"></block> 以从成员中删除相应的角色。系统将提示您确认删除。</block>
-  <block id="92ebc8b88ec7bf78397ce21f44b480e5" category="paragraph">从 Console 部署 Console 代理时，需要提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署 Console 代理的权限。所需的权限列在<block ref="90ba5e70f609b78ed2966a8cb311c96b" category="inline-link-macro-rx"></block>中。</block>
   <block id="b62a0502738c456bdd542e9396b92ddd" category="inline-link-macro">查看代理如何使用权限</block>
   <block id="c4fe162c4036edff0d6ce01762682fbf" category="paragraph">当 Console 在 AWS 中启动 Console 代理时，它会为代理创建 IAM 角色和配置文件。它还附加了一个策略，该策略为 Console 代理提供管理该 AWS 帐户内的资源和流程的权限。<block ref="e912f6cf90fec29124fef634f33fedf8" category="inline-link-macro-rx"></block>。</block>
   <block id="109a76aa4a30822be3d0a4a6162bbc73" category="paragraph">您可以使用初始 AWS 凭据部署所有 Cloud Volumes ONTAP 系统，也可以添加其他凭据。</block>
@@ -5958,11 +5916,7 @@
   <block id="91d12260d1ad1dfaf6d6d9c6451488ca" category="inline-image-macro">显示操作图标和"编辑组织"选项的组织页面的屏幕截图。</block>
   <block id="d8d4b80e8ceacee81ae8ac803aa9544a" category="paragraph"><block ref="d8d4b80e8ceacee81ae8ac803aa9544a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3a09c67515f2086631474e15f73de6c7" category="paragraph">如果丢失或需要更新，您可以为服务帐户创建新凭据。</block>
-  <block id="d1c2b78068099b6e93f011f154246f8b" category="paragraph">直接从基于 Web 的 Console 控制台创建 Console 代理。</block>
   <block id="ed0dd9d63bd421526bd794c04a3256c0" category="list-text">在 *概述* 页面上，选择 *部署代理 &gt; AWS*。</block>
-  <block id="127c02abe37c50ab3c73979251d93fb8" category="list-text">在 *Introduction* 页面上，查看流程概述。</block>
-  <block id="d559b433162bbc7b74a8c8dc30b08d72" category="list-text">在 *AWS Credentials* 页面上，指定您的 AWS 区域，然后选择身份验证方法，即 Console 可以承担的 IAM 角色或 AWS 访问密钥和密钥。</block>
-  <block id="30cafd7bc647a9050e47c88afcfe662c" category="list-text">在 *Network* 页面上，指定代理的 VPC、子网和密钥对，选择是否启用公有 IP 地址，并可选择指定代理配置。</block>
   <block id="f93188ab864d6406986c3b7aaaf18c2d" category="paragraph">根据您计划使用的 NetApp 数据服务，您可能需要创建第二个策略。对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，需要两个策略。<block ref="d22d28fc84a3a60208070dc479be7a49" category="inline-link-macro-rx"></block>。</block>
   <block id="194f8ad43e882b08a80a930a234a89ab" category="paragraph">如果您在创建 Console 代理的同一 AWS 帐户中有 Amazon S3 存储桶，您将看到 Amazon S3 存储系统自动显示在 *Systems* 页面上。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="601b5207ae306935dd96ffd67ef100bc" category="paragraph">请注意，您可以使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API 创建 Azure 自定义角色。以下步骤演示如何使用 Azure CLI 创建角色。如果您想使用其他方法，请参阅<block ref="9dee1d16cb9c40964c81f1bda0fd9839" category="inline-link-rx"></block>。</block>
@@ -6563,17 +6517,7 @@
   <block id="d936096dffa04e3124e5d4c80196d9de" category="paragraph">如果您从 Console 或 AWS Marketplace 部署了 Console 代理，请注意以下几点：</block>
   <block id="0fa3a8f00ba3b038c62aebffe253e28f" category="paragraph">如果您从 Console 或 Azure 市场部署了 Console 代理，请注意以下事项：</block>
   <block id="a2323952e590356476553107e2abe98c" category="paragraph">如果您从控制台或 Google Cloud marketplace 部署了控制台代理，请注意以下几点：</block>
-  <block id="21de1b13e5efe0020aa6cdbb1d2b61d2" category="summary">了解如何维护 NetApp Console 代理虚拟机，包括手动安装代理的操作系统安全更新、推荐的 CPU 和 RAM 大小调整、资源运行状况通知以及虚拟机启动和停止过程。</block>
   <block id="035e92b8aeea6fa24a0517bf7366d1b5" category="doc">维护 NetApp Console agent VM</block>
-  <block id="881c784605961fd632d1b333ae2b94d3" category="paragraph">通过对手动安装的代理应用操作系统安全更新、响应 CPU、RAM 和磁盘空间警报，以及在需要时调整虚拟机大小或停止和启动虚拟机，来维护 NetApp Console 代理虚拟机。</block>
-  <block id="a5acc2e9f80d7968826410eb8d90176a" category="paragraph">如果代理虚拟机配置不足或遇到性能问题，则应采取适当措施升级虚拟机资源。</block>
-  <block id="a0b87bad7f7c6fb7b05dad4b5379c7f4" category="inline-link-macro">了解如何在 vCenter 中维护代理虚拟机</block>
-  <block id="f4be3684a7c70d65bbde755040eb5341" category="admonition">如果在 vCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。<block ref="580222f1768f95a45a989516898619e7" category="inline-link-macro-rx"></block>。</block>
-  <block id="faeff01d1eb32a62718670db7485bac5" category="section-title">将操作系统更新应用于手动安装的代理主机</block>
-  <block id="914d0fb4e5278e862bac0a1144be9e3a" category="section-title">调整 VM 或实例类型的大小</block>
-  <block id="5026ee94a3844739b7b98e26eb0afa69" category="paragraph">如果收到代理 VM 配置不足的通知，请考虑升级到具有更多 CPU 或 RAM 的更大 VM 实例，以确保最佳性能。</block>
-  <block id="680b19ee1d758b71ac801931567484fa" category="inline-link-macro">了解如何在 VCenter 中调整代理 VM 的大小</block>
-  <block id="82286d11ad0d72c2f4444465cfc607f8" category="admonition">如果在 VCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。<block ref="60222936a5c51d9355b2bdeed0ba0625" category="inline-link-macro-rx"></block>。</block>
   <block id="429d13a19800a749f805f159f0d1f48b" category="paragraph">如果需要增加代理 VM 的 CPU 或 RAM，请按照云提供商或本地虚拟化平台提供的说明调整 VM 实例的大小。NetApp 建议将当前 CPU 和 RAM 分配增加一倍，以确保最佳性能。下表显示了推荐的大小层级，每个层级的 CPU 和 RAM 是上一层级的两倍。</block>
   <block id="9483f17a69bd0b52dbc44f9106718634" category="cell">层</block>
   <block id="686a4be8c9228f8a3b2888584052a87d" category="cell">CPU（内核或 vCPU）</block>
@@ -6591,8 +6535,6 @@
   <block id="347d20ed7ad2270153e63a9dbfe44620" category="list-text"><block ref="de92966e3a85c9672341001f96935512" category="inline-link-macro-rx"></block>。</block>
   <block id="adc4a092d7d7c679e76d2c12eaf31f06" category="inline-link-macro">了解如何在 Google Cloud 中增加代理虚拟机的大小</block>
   <block id="7aa535f489b823f460c3cb01996a277c" category="list-text"><block ref="eaf540623fa9cd9c0c91c8db62cef688" category="inline-link-macro-rx"></block>。</block>
-  <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">了解如何增加在 VCenter 中运行的本地代理的大小</block>
-  <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>。</block>
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">维护 vCenter 安装的代理</block>
   <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 Cloud Volumes ONTAP 的访问角色。</block>
   <block id="ecfb18572af1acc83bcc04e648fd570d" category="paragraph">4.0.0 或更高版本，且 NetApp Console 处于专用模式</block>
@@ -6750,4 +6692,102 @@
   <block id="fad937fde933fc3f4eb6f492e83e25f7" category="sidebar">在 Azure 市场中部署 NetApp Console 受限模式</block>
   <block id="ab3aa42abeac29b26d4ae086a0bd858d" category="sidebar">手动安装 NetApp Console 受限模式（Google Cloud 需要）</block>
   <block id="0e5ef03889d1ef7ccf4da7c7c07d046d" category="list-text">查看分配给每个用户的 Cloud Volumes ONTAP 角色，并确认它是在包含系统的组织、文件夹或项目级别分配的。<block ref="bba8a3e7de854a3d39018c92690eeeb3" category="inline-link-macro-rx"></block>。</block>
+  <block id="0d84bfbf8029ade908132f76f14e831b" category="doc">排除失败的控制台代理部署故障</block>
+  <block id="713b3eb46227b1661f5e6ebedf8c97e2" category="paragraph">使用部署报告查找阻止 Console 代理部署的原因，然后重试。</block>
+  <block id="94c779a7a4679f68a7e4c31292d5a8f3" category="paragraph">仅当选中*验证代理配置*复选框时，控制台才会提供报告。如果部署成功，则没有报告。</block>
+  <block id="bf9f9e6ca72a1145b43d126aa42854de" category="list-text">在*代理部署失败*对话框中，选择*下载报告*。</block>
+  <block id="d4ef26c88a59b925e78f907c5b94a046" category="paragraph">控制台下载包含此验证报告的 PDF 文件。</block>
+  <block id="cea25356482aea58e7922fb2bfede059" category="list-text">查看报告并修复其列出的问题。</block>
+  <block id="f77a98f3b38ecb318dd504ab4c2e58ad" category="list-text">在对话框中，选择*重新开始*，然后再次完成部署。</block>
+  <block id="6d48a0a0b0ba105d16dc85da600d8c7f" category="paragraph">您必须重新开始整个过程才能重试。</block>
+  <block id="61c0b8f4aae5855ed1c7905138f2dd94" category="paragraph"><block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="9bdb3ee516d1e515bfeeccf1df40576e" category="doc">Console 代理 4.13.0</block>
+  <block id="d3b38c9d33046f2e3c185918b58a83ca" category="paragraph">4.13.0 版本同时支持标准模式和受限模式。</block>
+  <block id="6ca1b90cd272b2a7ade71c2fc662e45c" category="paragraph-title">部署 Console 代理时自动创建 AWS 部署角色</block>
+  <block id="d6591183e410cea7db23b6baa5d1dea3" category="inline-link-macro">了解如何从 Console 在 AWS 中部署 Console 代理</block>
+  <block id="71567bfcfb6d698d6ccd52f047c0bbf4" category="paragraph">在开始之前，您不再需要为在 AWS 中部署 Console 代理创建 IAM 角色。NetApp Console 可以为您创建该角色。 <block ref="64e2803082978c21df13de1f40aff9c6" category="inline-link-macro-rx"></block></block>
+  <block id="1b5c39ac6df8c341d7385e1bee9d23db" category="inline-link-macro">AWS 的代理部署权限</block>
+  <block id="90cd2b0314c00d85e4f9d7be2c8909f4" category="paragraph">当您从控制台部署控制台代理时，您可以让控制台为您创建 IAM 角色，也可以提供 IAM 角色的 ARN 或 IAM 用户的访问密钥。身份验证方法必须具有在 AWS 中部署控制台代理的权限。所需的权限列在 <block ref="154a306387318bdf412bffca3215a542" category="inline-link-macro-rx"></block> 中。</block>
+  <block id="ce04d046ff28aa8daa5816b86e857f8d" category="list-text"><block ref="ce04d046ff28aa8daa5816b86e857f8d" category="inline-link-macro-rx"></block></block>
+  <block id="bd479677918347de969ad8ecb6f4f77d" category="summary">使用 Create role for me、Assume role 或 AWS keys 从 NetApp Console 在 AWS 中部署 Console 代理。请先设置网络和权限。</block>
+  <block id="d24a8c902edf3bbc111726f6e333b162" category="paragraph">无需离开 NetApp Console 即可在 AWS 中部署 Console 代理，以便您可以开始管理您的 AWS 资源和数据服务。</block>
+  <block id="9cbd10be121785ecc43be4bdfdd7f1de" category="paragraph">在 AWS 中部署控制台代理将在您选择的 VPC 中启动运行 Linux 和控制台代理软件的 EC2 实例。</block>
+  <block id="7411fa92d12638c448ef207962591bfd" category="section-title">步骤 1：设置网络以在 AWS 中部署 Console 代理</block>
+  <block id="237745129b92b17dccca58f0ad5744fc" category="paragraph">请确保计划部署 Console 代理的网络位置支持以下要求。这些要求使 Console 代理能够管理混合云中的资源和流程。</block>
+  <block id="8c6293af17a10a6d96ece4fe7b21794b" category="section-title">步骤 2：设置 AWS 权限以部署 Console 代理</block>
+  <block id="d7e488db2483a357393631e5b14d990d" category="paragraph">根据您选择的身份验证方法，仅向控制台提供在 VPC 中部署控制台代理所需的 AWS 权限。</block>
+  <block id="df6a8d10af17f7e54fa683d0bb242ac1" category="paragraph">从这些身份验证方法中选择一种，并仅设置其所需的内容：</block>
+  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
+  <block id="b12c51b935d86f01d092fb23a1fa4f9f" category="cell">它的作用</block>
+  <block id="e7781f3bb99b46118388d761b97e92fa" category="cell">您设置的内容</block>
+  <block id="4061b186661bd3fd0f37384a4fae946f" category="paragraph">*为我创建角色*</block>
+  <block id="51727ed8d41f1fa22cab6d7d6127582e" category="paragraph">控制台打开 AWS CloudFormation 快速创建，创建控制台代入的部署角色。</block>
+  <block id="afbae31f70b1a3185e8e93d03365f690" category="paragraph">提交堆栈的 AWS 身份的权限。</block>
+  <block id="6d8e334d4827af36dffcd7e52ab6d06a" category="paragraph">*代入角色*</block>
+  <block id="2d0904cede0655a943f92ad45a4c5382" category="paragraph">控制台将担任您帐户中现有的 IAM 角色。</block>
+  <block id="07a9e3d48efc84d68abf04df418b0f36" category="paragraph">策略和 IAM 角色。</block>
+  <block id="0cc5c59c164e5f759e4d1002c32bbba3" category="paragraph">*AWS 密钥*</block>
+  <block id="4dc7188d08f83aae067e7836a7ec29b3" category="paragraph">控制台使用 AWS 访问密钥和私有密钥。</block>
+  <block id="4ae53682de66d0721635eb1a4cd487b3" category="paragraph">策略和 IAM 用户。</block>
+  <block id="e2e1b56fd184a92e24fa99f6587f7eab" category="inline-link-macro">了解如何使用自己的代理角色</block>
+  <block id="68d9a0350458b9c34dcccfa81bb65730" category="paragraph">使用 *为我创建角色* 和 *代入角色*，控制台将代入一个名为 *部署角色* 的 IAM 角色来部署控制台代理。部署后，控制台代理将使用附加到其 EC2 实例的单独 IAM 角色，称为 *代理角色*。默认情况下，控制台将为您创建代理角色。<block ref="24a48228b3e573c533b7c2f3136461e2" category="inline-link-macro-rx"></block>。</block>
+  <block id="645c86b8e0271431d87daa9ee66c462e" category="section-title">设置“为我创建角色”的权限（CloudFormation 快速创建）</block>
+  <block id="b82075a3b798f2fef46d0afc25adf10c" category="paragraph">使用可以创建 CloudFormation 堆栈和部署角色的 AWS 身份，以便堆栈在没有权限错误的情况下完成。</block>
+  <block id="50f698706c0c21b8040884f3ac9e0a31" category="paragraph">提交 CloudFormation 快速创建堆栈的身份需要管理员权限或以下最低权限。这些权限允许 CloudFormation 创建部署角色。它们不是代理角色的权限。</block>
+  <block id="e0528e41495ccc63324c86085d8d84a3" category="section-title">设置 Assume 角色或 AWS 密钥的权限</block>
+  <block id="631ea36fac949b666b0cacbd0784b2a8" category="paragraph">如果选择 *Assume role* 或 *AWS keys*，请创建一个仅包含部署 Console 代理所需权限的策略，并将其附加到 Console 使用的角色或用户。</block>
+  <block id="2c86ddacb479ba245d17cdf2209a478b" category="inline-link-macro">查看代理角色的权限</block>
+  <block id="e6f68df2e365f5ac4300347384c90199" category="paragraph">此策略仅包含从控制台在 AWS 中启动控制台代理所需的权限<block ref="48c929a88734384c46aa5d9a6ef49894" category="inline-link-macro-rx"></block>。</block>
+  <block id="0524bf84f37b3268ebecdd96249f91bb" category="list-text">*承担角色*：设置 Console 可以承担的 IAM 角色：</block>
+  <block id="5d7999c23e9c86d76c43ff4a2c93587f" category="list-text">*AWS 密钥*：为 IAM 用户设置权限，以便您可以为控制台提供访问密钥：</block>
+  <block id="8f978fd18a307a24790c4fa59fc260b4" category="paragraph">您现在拥有具备所需权限的部署角色或 IAM 用户。部署 Console 代理时，您需要提供角色 ARN 或访问密钥。</block>
+  <block id="4babbcac9ad228f3dbcbef5366b8bd36" category="section-title">步骤 3：为控制台代理设置您自己的 IAM 角色（可选）</block>
+  <block id="52ccff51d6e83d755c0013ce9a2a6892" category="paragraph">如果您想选择自己的代理角色，而不是 Console 默认创建的角色，请创建自己的代理角色。在部署 Console 代理之前创建该角色。</block>
+  <block id="c1311701b5fea93e50ab40c8dc97e66f" category="paragraph">现在，您拥有一个代理角色，可以在部署 Console 代理时在*代理部署详细信息*中选择该角色。</block>
+  <block id="f651a3f0594fbae084422818f82b38d0" category="section-title">步骤 4：部署控制台代理</block>
+  <block id="7eb86e5d1fc93e57377ab8eb5f3e53d2" category="paragraph">提供您的身份验证、部署、网络和安全组详细信息，以便 Console 在您的 VPC 中启动 Console 代理。</block>
+  <block id="15a6bc94fa7f909ca8c64c2821890a9c" category="list-text">默认情况下，控制台将创建代理角色及其配置文件。如果提供自己的代理角色，请确保在未来版本中添加新权限时对其进行更新。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>。</block>
+  <block id="8206f3a187e53cca39bdaa5cd96f4535" category="list-text">一种 AWS 身份验证方法：*为我创建角色*、*代入角色*或 *AWS 密钥*。</block>
+  <block id="6f4a225b29c0975663d0e4b9e1f4547f" category="inline-link-macro">第 1 步</block>
+  <block id="b0a8dd2142da0b8b022400e6ac62d642" category="list-text">已完成 <block ref="e2994d912d436fe40da18544a7526d5a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e31ad1284b7618a9c10777ed99b12e64" category="inline-link-macro">第 2 步</block>
+  <block id="e6fa5cb5e8a15fee834567f80d81bc93" category="list-text">已完成 <block ref="34575509f0193a6fa750fdfa092b5a55" category="inline-link-macro-rx"></block>。</block>
+  <block id="ef59a512cfcb9656276397261f27e3f1" category="list-text">在*代理部署的 AWS 凭据*部分中，选择以下身份验证方法之一：</block>
+  <block id="07eba5ef45a6cafc51c7decc428715d1" category="list-text">*为我创建角色*：</block>
+  <block id="c688fb8dc62a6c6f0cb734deefbfa380" category="list-text">选择您的 AWS 区域并输入您的 AWS 帐户 ID。（可选）输入外部 ID。</block>
+  <block id="15640fe1eda1ab1476d294aff63b245a" category="list-text">选择*打开 CloudFormation 快速创建*。</block>
+  <block id="763ff38204e7e0d506c1758fb5eb61e6" category="list-text">在 AWS 中，确认条款并选择*创建堆栈*。</block>
+  <block id="24228bcfb55ce738f6eeadf2834908f0" category="list-text">AWS 完成角色创建后，返回控制台并确认角色。</block>
+  <block id="97422a1c59e5c2c1328f27aca0f6bc9c" category="list-text">*代入角色*：输入 IAM 角色的 ARN，然后选择 *验证凭据*。</block>
+  <block id="4400e26b83b69d691b0c562a37c8d9e7" category="list-text">*AWS 密钥*：输入访问密钥和机密密钥，然后选择*验证凭据*。</block>
+  <block id="f964530e35352fd4119491068fe4a4a8" category="list-text">在*代理部署详细信息*部分，提供有关 Console 代理的详细信息。</block>
+  <block id="b6f96d584ec9e27436e11a87833c8151" category="inline-link-macro">自行设置</block>
+  <block id="5ac3e84b6d8b6552d4d10a47768109c5" category="list-text">选择是由控制台创建代理角色，还是选择您 <block ref="d7ceee608428f8f482000c613f8a9166" category="inline-link-macro-rx"></block> 的代理角色。</block>
+  <block id="6228b37bb0fc2f7fd4d51778a3837e15" category="list-text">在*网络配置*部分，指定 Console 代理的 VPC、子网和密钥对，选择是否启用公共 IP 地址，并可选择指定代理配置。</block>
+  <block id="7843f0cd1218bc75c32d06106bb8ea0d" category="list-text">在*安全组*部分，选择是创建新的安全组，还是选择允许所需入站和出站规则的现有安全组。</block>
+  <block id="d919de4ad2c5c37c921fbdd95b3a2d3e" category="paragraph">Console 在大约 10 分钟内部署 Console 代理。在此过程完成之前，请停留在该页面上。</block>
+  <block id="267bfd7dc3651781bb44db5df04378a5" category="summary">了解如何维护 NetApp Console 代理虚拟机，包括操作系统更新、推荐的 CPU 和 RAM 大小、资源运行状况通知以及虚拟机启动和停止过程。</block>
+  <block id="ce9ac031b680338838833b14732d22e4" category="paragraph">确保您的 Console 代理虚拟机已安装补丁、大小合适且运行状况良好，以便代理始终保持正常运行。</block>
+  <block id="611e1867e5bba6c8303410feeb281e94" category="section-title">将操作系统更新应用于代理主机</block>
+  <block id="8b25f989c2c9684662af40bc1af0d027" category="paragraph">将安全更新应用于代理主机上的操作系统和相关程序包，以便主机保持安全。</block>
+  <block id="c645d3182af28e7cce3e171f59a1f1ce" category="paragraph">这是您作为客户的责任。Console 代理软件可以自行升级，但它不会升级操作系统或相关软件包。</block>
+  <block id="2fcc5bf978e7d194ed14f4c79a896ec1" category="inline-link-macro">使用 ISO 升级代理</block>
+  <block id="7043a5a6f81b9bc03cf95efe67df1d63" category="admonition">如果在 vCenter 中使用 OVA 部署了控制台代理，则操作系统是代理映像的一部分。<block ref="e1089ca8cce620a89c37d64d468f6955" category="inline-link-macro-rx"></block> 以更新操作系统。</block>
+  <block id="1cee14ffed0f3f27a79d1fcfca2f42f2" category="paragraph">遵循贵公司的操作系统分发标准程序。应用操作系统安全修补程序时，无需停止代理主机服务。</block>
+  <block id="2f0659efc4a255f7afa0b5bfbfec4ad4" category="paragraph">对于未从 OVA 部署的代理，请防止在例行 OS 修补期间升级 Docker 或 Podman，以保持与受支持配置的兼容性。您可以通过在更新期间暂时排除 Docker 或 Podman，或者通过永久配置包管理器以跳过 Docker 或 Podman 更新来实现此目的。</block>
+  <block id="aefd948377a328657246c968c90b8615" category="section-title">调整 VM 或实例类型的大小</block>
+  <block id="e27ffaf3640d8fc28273da853969c62f" category="paragraph">增加配置不足的代理虚拟机的 CPU 或 RAM，以便代理保持良好的性能。</block>
+  <block id="6f4a807d18adcacc0f8252e6d5e8e7c3" category="inline-link-macro">详细了解代理的默认设置</block>
+  <block id="ded20d9ce93b9931d00f43770bbaef6e" category="paragraph">如果您从 Console 创建 Console 代理，它将使用默认配置在您的云提供商中部署虚拟机实例。<block ref="0d4177c8f8926d5e9aa2fabe1afbc89c" category="inline-link-macro-rx"></block>。创建代理后，请勿切换到 CPU 或 RAM 较小的虚拟机实例。</block>
+  <block id="2544bcfcb2d7e3f39fe93d79ea8a7bc4" category="paragraph">如果收到代理 VM 配置不足的通知，请考虑升级到具有更多 CPU 或 RAM 的更大 VM 实例。</block>
+  <block id="6386880b4c233814221a0ec6e2778b92" category="inline-link-macro">了解如何在 vCenter 中调整代理虚拟机的大小</block>
+  <block id="ed6f3fca7c7a0c244038828824074ecb" category="admonition">如果在 vCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。<block ref="253298fadead80ed9ff2f3ea8c9cd4ab" category="inline-link-macro-rx"></block>。</block>
+  <block id="804c4273d064b5c047930d27abef5a03" category="paragraph">随时了解代理虚拟机上的磁盘空间、 RAM 和 CPU 问题，以便解决这些问题。</block>
+  <block id="2cfac13585404933609bdd1993b9860c" category="paragraph">根据安装位置，增加云提供商或本地代理虚拟机的 CPU 大小。或者，创建其他代理并将工作负载分配给多个代理。</block>
+  <block id="9bcbfa45d81610532c10cdf8e33562d0" category="inline-link-macro">了解如何增加在 vCenter 中运行的本地代理的大小</block>
+  <block id="1b4283b531174f869b1e0cdef983d6e3" category="list-text"><block ref="ca6737d7570eb6f4ce48adf81eac58a5" category="inline-link-macro-rx"></block>。</block>
+  <block id="2cf7a5d26ce7d4d99d4c91d9a7be62a2" category="section-title">停止并启动代理 VM</block>
+  <block id="b4c95a42ca3d365982b8e5cd0c5f9a12" category="paragraph">停止并启动代理虚拟机时，请限制停机时间，因为管理和数据服务依赖于代理保持运行。</block>
+  <block id="4a818b70467076c03f2c14237204886a" category="paragraph">从其 Linux 虚拟机检查 Console 代理的状态，以便确认其是否正在运行。</block>
+  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">2026年11月9日</block>
 </blocks>

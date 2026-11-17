@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
-keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console 
-summary: 您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。在从 Console 在 AWS 中部署 Console 代理之前，您需要设置网络并准备 AWS 权限。 
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console, Create role for me, CloudFormation Quick Create, IAM role, IAM policy, Assume role, AWS keys, deployment role, external ID 
+summary: 使用 Create role for me、Assume role 或 AWS keys 从 NetApp Console 在 AWS 中部署 Console 代理。请先设置网络和权限。 
 ---
 = 从 NetApp Console 在 AWS 中部署 Console 代理
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: 您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。�
 
 
 [role="lead"]
-您可以直接从 NetApp Console 在 AWS 中部署 Console 代理。在从 Console 在 AWS 中部署 Console 代理之前，您需要设置网络并准备 AWS 权限。
+无需离开 NetApp Console 即可在 AWS 中部署 Console 代理，以便您可以开始管理您的 AWS 资源和数据服务。
 
-在 AWS 中部署代理将在您选择的 VPC 中启动运行 Linux 和 Console 代理软件的 EC2 实例。
+在 AWS 中部署控制台代理将在您选择的 VPC 中启动运行 Linux 和控制台代理软件的 EC2 实例。
 
 .开始之前
 * link:concept-agent-install-options.html#agent-console-deploy["了解何时从 Console 进行部署"]。
-* 你应该回顾一下link:reference-limitations.html["控制台代理限制"]。
+* 审查link:reference-limitations.html["控制台代理限制"]。
 
 
 
 
-[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[step-1-set-up-networking-to-deploy-a-console-agent-in-aws]]
 [[networking-aws-agent]]
-== 步骤 1：设置网络以在 AWS 中部署控制台代理
+== 步骤 1：设置网络以在 AWS 中部署 Console 代理
 
-确保您计划安装控制台代理的网络位置支持以下要求。这些要求使控制台代理能够管理混合云中的资源和流程。
+请确保计划部署 Console 代理的网络位置支持以下要求。这些要求使 Console 代理能够管理混合云中的资源和流程。
 
 VPC 和子网:: 创建控制台代理时，您需要指定它所在的 VPC 和子网。
 
@@ -166,17 +166,95 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 
 
 
-[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[step-2-set-up-aws-permissions-to-deploy-the-console-agent]]
 [[aws-permissions-agent]]
-== 步骤 2：为控制台代理设置 AWS 权限
+== 步骤 2：设置 AWS 权限以部署 Console 代理
 
-控制台需要通过 AWS 进行身份验证，然后才能在您的 VPC 中部署控制台代理。您可以选择以下身份验证方法之一：
+根据您选择的身份验证方法，仅向控制台提供在 VPC 中部署控制台代理所需的 AWS 权限。
 
-* 让控制台承担具有所需权限的 IAM 角色
-* 为具有所需权限的 IAM 用户提供 AWS 访问密钥和密钥
+从这些身份验证方法中选择一种，并仅设置其所需的内容：
+
+[cols="1a,2a,2a"]
+|===
+| 方法 | 它的作用 | 您设置的内容 
 
 
-无论选择哪种方式，第一步都是创建 IAM 策略。此策略仅包含从控制台启动 AWS 中的控制台代理所需的权限。
+ a| 
+*为我创建角色*
+ a| 
+控制台打开 AWS CloudFormation 快速创建，创建控制台代入的部署角色。
+ a| 
+提交堆栈的 AWS 身份的权限。
+
+
+
+ a| 
+*代入角色*
+ a| 
+控制台将担任您帐户中现有的 IAM 角色。
+ a| 
+策略和 IAM 角色。
+
+
+
+ a| 
+*AWS 密钥*
+ a| 
+控制台使用 AWS 访问密钥和私有密钥。
+ a| 
+策略和 IAM 用户。
+
+|===
+使用 *为我创建角色* 和 *代入角色*，控制台将代入一个名为 *部署角色* 的 IAM 角色来部署控制台代理。部署后，控制台代理将使用附加到其 EC2 实例的单独 IAM 角色，称为 *代理角色*。默认情况下，控制台将为您创建代理角色。link:#aws-agent-role["了解如何使用自己的代理角色"]。
+
+
+
+[[set-up-permissions-for-create-role-for-me-cloudformation-quick-create]]
+[[aws-permissions-quick-create]]
+=== 设置“为我创建角色”的权限（CloudFormation 快速创建）
+
+使用可以创建 CloudFormation 堆栈和部署角色的 AWS 身份，以便堆栈在没有权限错误的情况下完成。
+
+提交 CloudFormation 快速创建堆栈的身份需要管理员权限或以下最低权限。这些权限允许 CloudFormation 创建部署角色。它们不是代理角色的权限。
+
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:GetTemplateSummary",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:GetRolePolicy",
+        "iam:PassRole",
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+
+[[set-up-permissions-for-assume-role-or-aws-keys]]
+[[aws-permissions-assume-role-keys]]
+=== 设置 Assume 角色或 AWS 密钥的权限
+
+如果选择 *Assume role* 或 *AWS keys*，请创建一个仅包含部署 Console 代理所需权限的策略，并将其附加到 Console 使用的角色或用户。
 
 如果需要，您可以使用 IAM 限制 IAM 策略 `Condition`元素。 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["AWS 文档：条件元素"^]
 
@@ -186,7 +264,7 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 . 选择 *JSON*。
 . 复制并粘贴以下策略：
 +
-此策略仅包含从控制台启动 AWS 中的控制台代理所需的权限。当控制台创建控制台代理时，它会将一组新权限应用于控制台代理，使控制台代理能够管理 AWS 资源。link:reference-permissions-aws.html["查看控制台代理本身所需的权限"]。
+此策略仅包含从控制台在 AWS 中启动控制台代理所需的权限link:reference-permissions-aws.html["查看代理角色的权限"]。
 
 +
 [source, json]
@@ -269,7 +347,7 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 . 选择*创建策略*。
 . 将策略附加到控制台可以承担的 IAM 角色或 IAM 用户，以便您可以为控制台提供访问密钥：
 +
-** （选项 1）设置控制台可以承担的 IAM 角色：
+** *承担角色*：设置 Console 可以承担的 IAM 角色：
 +
 ... 转到目标账户中的 AWS IAM 控制台。
 ... 在访问管理下，选择*角色>创建角色*并按照步骤创建角色。
@@ -279,7 +357,7 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 ... 创建角色后，复制角色 ARN，以便在创建控制台代理时将其粘贴到控制台中。
 
 
-** （选项 2）为 IAM 用户设置权限，以便您可以向控制台提供访问密钥：
+** *AWS 密钥*：为 IAM 用户设置权限，以便您可以为控制台提供访问密钥：
 +
 ... 从 AWS IAM 控制台中，选择 *用户*，然后选择用户名。
 ... 选择*添加权限>直接附加现有策略*。
@@ -293,56 +371,98 @@ link:reference-networking-saas-console.html["查看从 NetApp Console 联系的�
 
 
 .结果
-您现在应该拥有一个具有所需权限的 IAM 角色或一个具有所需权限的 IAM 用户。从控制台创建控制台代理时，您可以提供有关角色或访问密钥的信息。
+您现在拥有具备所需权限的部署角色或 IAM 用户。部署 Console 代理时，您需要提供角色 ARN 或访问密钥。
 
 
 
-[[step-3-create-the-console-agent]]
-== 步骤 3：创建控制台代理
+[[step-3-set-up-your-own-iam-role-for-the-console-agent-optional]]
+[[aws-agent-role]]
+== 步骤 3：为控制台代理设置您自己的 IAM 角色（可选）
 
-直接从基于 Web 的 Console 控制台创建 Console 代理。
+如果您想选择自己的代理角色，而不是 Console 默认创建的角色，请创建自己的代理角色。在部署 Console 代理之前创建该角色。
+
+.步骤
+. 登录 AWS 控制台并导航到 IAM 服务。
+. 创建策略：
++
+.. 选择“策略”>“创建策略”。
+.. 选择 *JSON* 并复制并粘贴内容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+.. 完成剩余步骤以创建策略。
++
+对于标准区域，权限分布在两个策略中。由于 AWS 中托管策略的最大字符大小限制，因此需要两个策略。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"] 。
+
+
+
+. 创建 IAM 角色：
++
+.. 选择*角色 > 创建角色*。
+.. 选择 *AWS 服务 > EC2*。
+.. 通过附加刚刚创建的策略来添加权限。
+.. 完成剩余步骤以创建角色。
+
+
+
+
+.结果
+现在，您拥有一个代理角色，可以在部署 Console 代理时在*代理部署详细信息*中选择该角色。
+
+
+
+[[step-4-deploy-the-console-agent]]
+== 步骤 4：部署控制台代理
+
+提供您的身份验证、部署、网络和安全组详细信息，以便 Console 在您的 VPC 中启动 Console 代理。
 
 .关于此任务
 * 从控制台创建控制台代理使用默认配置在 AWS 中部署 EC2 实例。创建控制台代理后，请勿切换到具有较少 CPU 或较少 RAM 的较小 EC2 实例。link:reference-agent-default-config.html["了解控制台代理的默认配置"] 。
-* 当控制台创建控制台代理时，它会为代理创建一个 IAM 角色和一个配置文件。此角色包括使控制台代理能够管理 AWS 资源的权限。确保在未来版本中添加新权限时更新角色。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"]。
+* 默认情况下，控制台将创建代理角色及其配置文件。如果提供自己的代理角色，请确保在未来版本中添加新权限时对其进行更新。link:reference-permissions-aws.html["了解有关控制台代理的 IAM 策略的更多信息"]。
 
 
 .开始之前
 您应该具有以下内容：
 
-* AWS 身份验证方法：具有所需权限的 IAM 角色或 IAM 用户的访问密钥。
+* 一种 AWS 身份验证方法：*为我创建角色*、*代入角色*或 *AWS 密钥*。
 * 满足组网需求的VPC及子网。
 * EC2 实例的密钥对。
 * 如果控制台代理需要代理才能访问互联网，则提供有关代理服务器的详细信息。
-* 设置link:#networking-aws-agent["网络要求"]。
-* 设置link:#aws-permissions-agent["AWS 权限"]。
+* 已完成 link:#networking-aws-agent["第 1 步"]。
+* 已完成 link:#aws-permissions-agent["第 2 步"]。
 
 
 .步骤
 . 选择“*管理 > 代理*”。
 . 在 *概述* 页面上，选择 *部署代理 > AWS*。
-. 按照向导中的步骤创建控制台代理：
-. 在 *Introduction* 页面上，查看流程概述。
-. 在 *AWS Credentials* 页面上，指定您的 AWS 区域，然后选择身份验证方法，即 Console 可以承担的 IAM 角色或 AWS 访问密钥和密钥。
+. 在*代理部署的 AWS 凭据*部分中，选择以下身份验证方法之一：
 +
+** *为我创建角色*：
++
+... 选择您的 AWS 区域并输入您的 AWS 帐户 ID。（可选）输入外部 ID。
+... 选择*打开 CloudFormation 快速创建*。
+... 在 AWS 中，确认条款并选择*创建堆栈*。
+... AWS 完成角色创建后，返回控制台并确认角色。
 
-TIP: 如果您选择*承担角色*，您可以从控制台代理部署向导创建第一组凭据。任何附加凭证集都必须从凭证页面创建。然后，它们将从向导的下拉列表中提供。link:task-adding-aws-accounts.html["了解如何添加其他凭证"] 。
 
-. 在“详细信息”页面上，提供有关控制台代理的详细信息。
+** *代入角色*：输入 IAM 角色的 ARN，然后选择 *验证凭据*。
+** *AWS 密钥*：输入访问密钥和机密密钥，然后选择*验证凭据*。
+
+
+. 在*代理部署详细信息*部分，提供有关 Console 代理的详细信息。
 +
 ** 输入名称。
 ** 添加自定义标签（元数据）。
-** 选择是否希望控制台创建具有所需权限的新角色，或者是否要选择您设置的现有角色link:reference-permissions-aws.html["所需的权限"]。
+** 选择是由控制台创建代理角色，还是选择您 link:#aws-agent-role["自行设置"] 的代理角色。
 ** 选择是否要加密控制台代理的 EBS 磁盘。您可以选择使用默认加密密钥或使用自定义密钥。
 
 
-. 在 *Network* 页面上，指定代理的 VPC、子网和密钥对，选择是否启用公有 IP 地址，并可选择指定代理配置。
+. 在*网络配置*部分，指定 Console 代理的 VPC、子网和密钥对，选择是否启用公共 IP 地址，并可选择指定代理配置。
 +
 确保您拥有正确的密钥对来访问控制台代理虚拟机。如果没有密钥对，您就无法访问它。
 
-. 在“安全组”页面上，选择是否创建新的安全组或是否选择允许所需入站和出站规则的现有安全组。
+. 在*安全组*部分，选择是创建新的安全组，还是选择允许所需入站和出站规则的现有安全组。
 +
 link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
+
+
 
 . 查看您的选择，确认您的设置正确无误。
 +
@@ -359,14 +479,35 @@ link:reference-ports-aws.html["查看 AWS 的安全组规则"] 。
 ====
 . 选择“*添加*”。
 +
-控制台大约需要 10 分钟即可部署代理。停留在该页面上直到该过程完成。
+Console 在大约 10 分钟内部署 Console 代理。在此过程完成之前，请停留在该页面上。
 
 
 
 .结果
 该过程完成后，即可从控制台使用控制台代理。
 
-
-NOTE: 如果部署失败，您可以从控制台下载报告和日志来帮助您解决问题。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]
-
 如果您在创建控制台代理的同一 AWS 账户中拥有 Amazon S3 存储桶，您将看到 Amazon S3 工作环境自动出现在 *系统* 页面上。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["了解如何从NetApp Console管理 S3 存储桶"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== 排除失败的控制台代理部署故障
+
+使用部署报告查找阻止 Console 代理部署的原因，然后重试。
+
+仅当选中*验证代理配置*复选框时，控制台才会提供报告。如果部署成功，则没有报告。
+
+.步骤
+. 在*代理部署失败*对话框中，选择*下载报告*。
++
+控制台下载包含此验证报告的 PDF 文件。
+
+. 查看报告并修复其列出的问题。
+. 在对话框中，选择*重新开始*，然后再次完成部署。
++
+您必须重新开始整个过程才能重试。
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解决安装问题。"]

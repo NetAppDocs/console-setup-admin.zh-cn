@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
-summary: 了解如何维护 NetApp Console 代理虚拟机，包括手动安装代理的操作系统安全更新、推荐的 CPU 和 RAM 大小调整、资源运行状况通知以及虚拟机启动和停止过程。 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, os patching, security updates, ova, marketplace, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
+summary: 了解如何维护 NetApp Console 代理虚拟机，包括操作系统更新、推荐的 CPU 和 RAM 大小、资源运行状况通知以及虚拟机启动和停止过程。 
 ---
 = 维护 NetApp Console agent VM
 :hardbreaks:
@@ -14,23 +14,23 @@ summary: 了解如何维护 NetApp Console 代理虚拟机，包括手动安装�
 
 
 [role="lead"]
-通过对手动安装的代理应用操作系统安全更新、响应 CPU、RAM 和磁盘空间警报，以及在需要时调整虚拟机大小或停止和启动虚拟机，来维护 NetApp Console 代理虚拟机。
-
-当您手动安装 Console 代理时，维护代理主机上的操作系统是您（客户）的责任。例如，您（客户）应按照贵公司的操作系统分发标准程序对代理主机上的操作系统应用安全更新。
-
-如果代理虚拟机配置不足或遇到性能问题，则应采取适当措施升级虚拟机资源。
-
-
-NOTE: 如果在 vCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。link:task-agent-vm-config.html["了解如何在 vCenter 中维护代理虚拟机"^]。
+确保您的 Console 代理虚拟机已安装补丁、大小合适且运行状况良好，以便代理始终保持正常运行。
 
 
 
-[[apply-operating-system-updates-to-the-manually-installed-agent-hosts]]
-== 将操作系统更新应用于手动安装的代理主机
+[[apply-operating-system-updates-to-agent-hosts]]
+== 将操作系统更新应用于代理主机
 
-无需停止代理主机服务即可应用操作系统安全补丁。
+将安全更新应用于代理主机上的操作系统和相关程序包，以便主机保持安全。
 
-为了保持与支持的配置的兼容性，您应该防止 Docker 或 Podman 在常规操作系统修补过程中升级。您可以通过在更新期间暂时排除 Docker 或 Podman，或者通过永久配置包管理器以跳过 Docker 或 Podman 更新来实现此目的。
+这是您作为客户的责任。Console 代理软件可以自行升级，但它不会升级操作系统或相关软件包。
+
+
+NOTE: 如果在 vCenter 中使用 OVA 部署了控制台代理，则操作系统是代理映像的一部分。link:task-upgrade-agent.html#upgrade-a-vcenter-deployed-console-agent-using-an-iso["使用 ISO 升级代理"^] 以更新操作系统。
+
+遵循贵公司的操作系统分发标准程序。应用操作系统安全修补程序时，无需停止代理主机服务。
+
+对于未从 OVA 部署的代理，请防止在例行 OS 修补期间升级 Docker 或 Podman，以保持与受支持配置的兼容性。您可以通过在更新期间暂时排除 Docker 或 Podman，或者通过永久配置包管理器以跳过 Docker 或 Podman 更新来实现此目的。
 
 以下是如何排除不同 Linux 发行版的 Docker 或 Podman 更新的示例。有关如何从更新中排除软件包的最新说明，请参阅 Linux 发行版的文档。
 
@@ -49,17 +49,17 @@ sudo apt upgrade
 ----
 
 
-[[resizing-the-vm-or-instance-type]]
+[[resize-the-vm-or-instance-type]]
 == 调整 VM 或实例类型的大小
 
-如果您从控制台创建控制台代理，它会使用默认配置在您的云提供商中部署 VM 实例。创建代理后，不要切换到具有较少 CPU 或 RAM 的较小 VM 实例。
+增加配置不足的代理虚拟机的 CPU 或 RAM，以便代理保持良好的性能。
 
-如果收到代理 VM 配置不足的通知，请考虑升级到具有更多 CPU 或 RAM 的更大 VM 实例，以确保最佳性能。
+如果您从 Console 创建 Console 代理，它将使用默认配置在您的云提供商中部署虚拟机实例。link:reference-agent-default-config.html["详细了解代理的默认设置"]。创建代理后，请勿切换到 CPU 或 RAM 较小的虚拟机实例。
+
+如果收到代理 VM 配置不足的通知，请考虑升级到具有更多 CPU 或 RAM 的更大 VM 实例。
 
 
-NOTE: 如果在 VCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。link:task-agent-vm-config.html["了解如何在 VCenter 中调整代理 VM 的大小"^]。
-
-link:reference-agent-default-config.html["了解代理的默认配置"] 。
+NOTE: 如果在 vCenter 中安装了代理，请使用控制台维护工具调整 VM 实例的大小。link:task-agent-vm-config.html["了解如何在 vCenter 中调整代理虚拟机的大小"^]。
 
 如果需要增加代理 VM 的 CPU 或 RAM，请按照云提供商或本地虚拟化平台提供的说明调整 VM 实例的大小。NetApp 建议将当前 CPU 和 RAM 分配增加一倍，以确保最佳性能。下表显示了推荐的大小层级，每个层级的 CPU 和 RAM 是上一层级的两倍。
 
@@ -82,6 +82,8 @@ link:reference-agent-default-config.html["了解代理的默认配置"] 。
 [[monitor-disk-space]]
 == 监控代理
 
+随时了解代理虚拟机上的磁盘空间、 RAM 和 CPU 问题，以便解决这些问题。
+
 当代理虚拟机不健康时，控制台会通知您，包括磁盘空间、RAM 和 CPU 问题。在控制台内的通知中心监控这些通知或配置电子邮件通知。磁盘空间、内存或 CPU 使用率偶尔增加是正常现象，但如果经常发生，则应采取措施解决。
 
 例如，当代理资源（CPU、RAM 或磁盘空间）连续 30 分钟超过其总容量的 90% 时，控制台会通知您。之后，如果资源使用率低于该阈值，则通知中心将显示通知已解决（绿色）。
@@ -102,12 +104,12 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
  a| 
 CPU 使用率过高
  a| 
-根据安装位置，增加云提供商或本地代理 VM 的 CPU 大小。或者，创建额外的代理并将工作负载分配给多个代理。  RAM 利用率可能因您的环境、 ONTAP工作负载、 Cloud Volumes ONTAP系统的数量以及您正在使用的数据服务而异。
+根据安装位置，增加云提供商或本地代理虚拟机的 CPU 大小。或者，创建其他代理并将工作负载分配给多个代理。
 
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["了解如何在 AWS 中增加代理 VM 的大小"^]。
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["了解如何在 Azure 中增加代理 VM 的大小"^]。
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["了解如何在 Google Cloud 中增加代理虚拟机的大小"^]。
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["了解如何增加在 VCenter 中运行的本地代理的大小"]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["了解如何增加在 vCenter 中运行的本地代理的大小"]。
 
 
 
@@ -120,14 +122,16 @@ RAM 使用率过高
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["了解如何在 AWS 中增加代理 VM 的大小"^]。
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["了解如何在 Azure 中增加代理 VM 的大小"^]。
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["了解如何在 Google Cloud 中增加代理虚拟机的大小"^]。
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["了解如何增加在 VCenter 中运行的本地代理的大小"]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["了解如何增加在 vCenter 中运行的本地代理的大小"]。
 
 
 |===
 
 
-[[stopping-and-starting-the-agent-vm]]
-== 停止和启动代理虚拟机
+[[stop-and-start-the-agent-vm]]
+== 停止并启动代理 VM
+
+停止并启动代理虚拟机时，请限制停机时间，因为管理和数据服务依赖于代理保持运行。
 
 如果需要，请使用云提供商的控制台或标准内部部署程序停止并启动代理虚拟机。
 
@@ -138,6 +142,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["请注意，�
 [[connect-to-the-linux-vm]]
 [[connect-linux-host]]
 == 连接到 Linux VM
+
+从其 Linux 虚拟机检查 Console 代理的状态，以便确认其是否正在运行。
 
 如果您需要连接到代理运行的 Linux VM，请使用云提供商提供的连接选项。
 
