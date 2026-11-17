@@ -57,10 +57,13 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 | 范围 | 平台角色 | Cloud Volumes ONTAP 角色 | 建议 
 
 
-| 组织 | 组织管理员 | Cloud Volumes ONTAP 操作程序 | 当用户必须管理 Console 资源（包括 Console 代理设置）和管理 Cloud Volumes ONTAP 系统时 
+| 组织 | 组织管理员 | Cloud Volumes ONTAP 管理员 | 当用户必须管理 Console 资源（包括 Console 代理设置）和管理 Cloud Volumes ONTAP 系统时 
 
 
 | 文件夹或项目 | 文件夹或项目管理员 | Cloud Volumes ONTAP 管理员 | 当用户必须管理特定文件夹或项目中的 Console 资源并管理 Cloud Volumes ONTAP 系统时 
+
+
+| 文件夹或项目 | 文件夹或项目管理员 | Cloud Volumes ONTAP 贡献者 | 当用户必须在特定文件夹或项目中管理 Console 资源并管理 Cloud Volumes ONTAP 系统时 
 
 
 | 文件夹或项目 | 文件夹或项目管理员 | Cloud Volumes ONTAP 操作程序 | 当用户必须在特定文件夹或项目中管理 Console 资源并管理 Cloud Volumes ONTAP 系统时 

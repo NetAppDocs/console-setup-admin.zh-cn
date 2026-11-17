@@ -132,6 +132,9 @@ NetApp Console 中的身份和访问管理 (IAM) 提供预定义的角色，您�
 | link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 管理员"] | CVO_ADMIN | 标准、受限、私密 | 提供对所有 Cloud Volumes ONTAP 操作的完全访问权限。 
 
 
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 贡献者"] | CVO_CONTRIBUTOR | 标准、受限、私密 | 提供与 Cloud Volumes ONTAP 管理员角色类似的访问权限，但删除或移除资源或开启或关闭系统的操作除外。 
+
+
 | link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 操作程序"] | CVO_OPERATOR | 标准、受限、私密 | 支持日常管理任务，包括添加卷、配置复制和管理存储。 
 
 

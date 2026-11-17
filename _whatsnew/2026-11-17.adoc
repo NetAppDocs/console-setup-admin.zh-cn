@@ -1,0 +1,31 @@
+= Console 代理 4.13.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-13-0]]
+=== Console 代理 4.13.0
+
+4.13.0 版本同时支持标准模式和受限模式。
+
+此版本的控制台代理包括安全性改进和错误修复以及以下新功能。使用 ISO 将 vCenter 部署的控制台代理升级到 4.13.0 时，请确保在升级完成后重新启动虚拟机。虚拟机可能会自动重新启动。
+
+
+
+==== 部署 Console 代理时自动创建 AWS 部署角色
+
+在开始之前，您不再需要为在 AWS 中部署 Console 代理创建 IAM 角色。NetApp Console 可以为您创建该角色。 link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-console.html["了解如何从 Console 在 AWS 中部署 Console 代理"^]
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+此版本包括安全性改进和错误修复以及以下新功能。
+
+
+
+==== 分配 Cloud Volumes ONTAP 贡献者角色
+
+现在，您可以分配 Cloud Volumes ONTAP 贡献者角色，为成员提供管理 Cloud Volumes ONTAP 系统的广泛访问权限，而不允许他们删除系统、卷、聚合或复制关系link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["详细了解 Cloud Volumes ONTAP 基于角色的访问"^]。

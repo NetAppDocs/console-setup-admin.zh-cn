@@ -74,9 +74,9 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 . 输入 `1` 以打开 *System Configuration* 菜单。
 . 输入 `3`以选择 *Upgrade* 并按照屏幕上的提示进行操作。
 +
-升级将安装更新的 OS、Docker 运行时和 Console 代理服务。如果内核已更新，VM 将自动重新启动。
+升级将就地安装更新的操作系统、Docker 运行时和 Console agent 服务。升级到 Console agent 4.13.0 时，请确保在升级完成后重新启动虚拟机。虚拟机可能会自动重新启动。在重新启动完成之前，Console agent 不可用。对于其他版本，如果内核已更新，虚拟机将自动重新启动。
 
-. 升级完成后，验证 Console 代理是否正确运行：
+. 升级完成且重新启动完成后，请验证 Console 代理是否正确运行：
 +
 .. 在 vSphere 客户端中，确认虚拟机已开机且 Web 控制台可访问。
 .. 在 NetApp Console 中，转到 *Administration > Support > Agents*，并确认代理版本反映了新版本。

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-iam-cvo-roles.html 
-keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles 
+keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator, contributor, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles 
 summary: 您可以将以下角色分配给用户，以便为他们提供对控制台中 Cloud Volumes ONTAP 的访问权限。Cloud Volumes ONTAP 角色使您可以灵活地为用户分配特定于他们需要在组织内完成的任务的角色。 
 ---
 = Cloud Volumes ONTAP 访问角色（位于 NetApp Console 中）
@@ -20,6 +20,7 @@ summary: 您可以将以下角色分配给用户，以便为他们提供对控�
 NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 Cloud Volumes ONTAP 的访问角色。
 
 * *Cloud Volumes ONTAP admin*：提供对所有 Cloud Volumes ONTAP 操作的完全访问权限。
+* *Cloud Volumes ONTAP 贡献者*：提供与 Cloud Volumes ONTAP 管理员角色类似的访问权限，但删除或移除资源、开启或关闭系统等操作除外。贡献者可以执行添加系统、管理复制以及编辑卷和系统设置等操作，但不能删除系统、卷、聚合或复制关系。
 * *Cloud Volumes ONTAP operator*：执行重要的存储操作，例如发现和管理 Cloud Volumes ONTAP 系统，包括添加卷、聚合、快照和复制、修改某些配置以及升级 Cloud Volumes ONTAP 版本。
 * *Cloud Volumes ONTAP viewer*：提供对 Cloud Volumes ONTAP 信息的只读访问。此角色无法执行任何活动操作。某些包含配置信息的选项卡和屏幕可能无法供查看者使用。
 
@@ -40,9 +41,9 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
 下表列出了每个角色可以执行的操作。
 
-[cols="40a,20a,20a,20a"]
+[cols="28a,18a,18a,18a,18a"]
 |===
-| 特征和动作 | Cloud Volumes ONTAP 管理员 | Cloud Volumes ONTAP 操作程序 | Cloud Volumes ONTAP 查看器 
+| 特征和动作 | Cloud Volumes ONTAP 管理员 | Cloud Volumes ONTAP 贡献者 | Cloud Volumes ONTAP 操作程序 | Cloud Volumes ONTAP 查看器 
 
 
  a| 
@@ -52,6 +53,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
  a| 
 输入系统
+ a| 
+是
  a| 
 是
  a| 
@@ -69,11 +72,15 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 是
  a| 
 是
+ a| 
+是
 
 
 
  a| 
 发现系统
+ a| 
+是
  a| 
 是
  a| 
@@ -90,12 +97,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 使用*复制*（不适用于 FSx for ONTAP 或本地系统）
+ a| 
+是
  a| 
 是
  a| 
@@ -112,12 +123,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 添加系统
+ a| 
+是
  a| 
 是
  a| 
@@ -129,6 +144,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
  a| 
 访问 *优化的成本和性能*
+ a| 
+是
  a| 
 是
  a| 
@@ -146,6 +163,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
@@ -157,6 +176,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
@@ -164,6 +185,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 删除系统
  a| 
 是
+ a| 
+否
  a| 
 否
  a| 
@@ -184,11 +207,15 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 是
  a| 
 是
+ a| 
+是
 
 
 
  a| 
 编辑 Cloud Volumes ONTAP 设置
+ a| 
+是
  a| 
 是
  a| 
@@ -210,12 +237,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 添加聚合
+ a| 
+是
  a| 
 是
  a| 
@@ -232,6 +263,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
@@ -243,12 +276,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 从铅笔菜单编辑 *CIFS 设置*
+ a| 
+是
  a| 
 是
  a| 
@@ -266,6 +303,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
@@ -273,6 +312,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 使用开/关按钮
  a| 
 是
+ a| 
+否
  a| 
 否
  a| 
@@ -288,6 +329,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
@@ -299,6 +342,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
@@ -306,6 +351,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 删除系统
  a| 
 是
+ a| 
+否
  a| 
 否
  a| 
@@ -329,6 +376,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
  a| 
 否
@@ -347,12 +396,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 克隆卷
+ a| 
+是
  a| 
 是
  a| 
@@ -369,12 +422,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 编辑卷设置
+ a| 
+是
  a| 
 是
  a| 
@@ -392,11 +449,15 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
  a| 
 从快照副本还原
+ a| 
+是
  a| 
 是
  a| 
@@ -411,6 +472,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
  a| 
 否
@@ -419,6 +482,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
  a| 
 更改分层策略
+ a| 
+是
  a| 
 是
  a| 
@@ -440,6 +505,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
@@ -451,12 +518,16 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
 
 
 
  a| 
 增加容量
+ a| 
+是
  a| 
 是
  a| 
@@ -474,6 +545,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 否
  a| 
 否
+ a| 
+否
 
 
 
@@ -484,6 +557,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
  a| 
 中断复制
+ a| 
+是
  a| 
 是
  a| 
@@ -498,6 +573,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
  a| 
 否
@@ -506,6 +583,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
  a| 
 反向重新同步复制
+ a| 
+是
  a| 
 是
  a| 
@@ -520,6 +599,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
  a| 
 否
@@ -528,6 +609,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 
  a| 
 编辑最大传输速率
+ a| 
+是
  a| 
 是
  a| 
@@ -542,6 +625,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
  a| 
 是
  a| 
+是
+ a| 
 否
  a| 
 否
@@ -552,6 +637,8 @@ NOTE: 当您运行控制台代理版本 4.9.0 或更高版本时，可以使用 
 删除复制
  a| 
 是
+ a| 
+否
  a| 
 否
  a| 
